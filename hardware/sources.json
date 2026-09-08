@@ -1,0 +1,138 @@
+[
+  {
+    "path": "cad/vendor/NF-A12x25_G2_Public-CAD.zip",
+    "url": "https://cdn.noctua.at/media/a7b1158c/NF-A12x25_G2_Public-CAD.zip?download=true",
+    "bytes": 968486,
+    "sha256": "896dabc5e957ac6ea210df4b0be4c33b9cfbe8a266a6a8a3e9243041837b85c6",
+    "status": "downloaded",
+    "date": "2026-09-08"
+  },
+  {
+    "path": "cad/vendor/Pico-R3-step.zip",
+    "url": "https://datasheets.raspberrypi.com/pico/Pico-R3-step.zip",
+    "bytes": 266009,
+    "sha256": "4008e557bd80d75119872d10460d9f30f2e0faf210606d058bbe78cd6598c931",
+    "status": "downloaded",
+    "date": "2026-09-08"
+  },
+  {
+    "path": "cad/vendor/D24V22Fx.step",
+    "url": "https://www.pololu.com/file/0J1413/d24v22fx-step-down-voltage-regulator.step",
+    "bytes": 4426225,
+    "sha256": "f887d4ee47b068fcd9935b71d46f82366295e2eb7c5a464b5db8aac8bf2ac266",
+    "status": "downloaded",
+    "date": "2026-09-08"
+  },
+  {
+    "path": "cad/vendor/SDP810.step",
+    "url": "https://sensirion.com/media/documents/80D8D41F/63D0F25B/Sensirion_Differential_Pressure_Sensors_SDP810_STEP_file.step",
+    "bytes": 2441109,
+    "sha256": "f85a4739285e9f3c12d7ef18b2bfbbcb73c9ed5f515501ca697934685111c993",
+    "status": "downloaded",
+    "date": "2026-09-08"
+  },
+  {
+    "path": "hardware/datasheets/SDP800.pdf",
+    "url": "https://sensirion.com/media/documents/90500156/6167E43B/Sensirion_Differential_Pressure_Datasheet_SDP8xx_Digital.pdf",
+    "bytes": 734427,
+    "sha256": "dbcbad9c96a414903676b160715a082126f0a5f6fe37441114965aebebbf9835",
+    "status": "downloaded",
+    "date": "2026-09-08"
+  },
+  {
+    "path": "hardware/datasheets/FS90.pdf",
+    "url": "https://www.pololu.com/file/0J1435/FS90-specs.pdf",
+    "bytes": 68526,
+    "sha256": "35410b5c4c28f5e4a766ed73465127f523fa057903a43d43562eb5656d2dd282",
+    "status": "downloaded",
+    "date": "2026-09-08"
+  },
+  {
+    "path": "hardware/datasheets/D24V22Fx.pdf",
+    "url": "https://www.pololu.com/file/0J1031/d24v22fx-step-down-voltage-regulator-dimension-diagram.pdf",
+    "bytes": 204312,
+    "sha256": "ca164460513e33883f64903912e460eb4ca7e68359a7f824f651d8d7bfcf0e1e",
+    "status": "downloaded",
+    "date": "2026-09-08"
+  },
+  {
+    "path": "hardware/datasheets/PEC11H.pdf",
+    "url": "https://www.bourns.com/docs/product-datasheets/pec11h.pdf",
+    "bytes": 582762,
+    "sha256": "bf7cd10e676fa2be14ace1d6dc671b1d05a77b2fc6639c701316fe4180bffdac",
+    "status": "downloaded",
+    "date": "2026-09-08"
+  },
+  {
+    "path": "hardware/datasheets/Noctua-PWM.pdf",
+    "url": "https://cdn.noctua.at/media/Noctua_PWM_specifications_white_paper.pdf",
+    "bytes": 699708,
+    "sha256": "a0817e99540ba4e9319381902ba16443847a08474b0fc5306b1543675abf34a7",
+    "status": "downloaded",
+    "date": "2026-09-08"
+  },
+  {
+    "path": "hardware/datasheets/Pico.pdf",
+    "url": "https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf",
+    "bytes": 18176869,
+    "sha256": "757ff485227493b9fcc0c2c96c4dea9de020e1d8b2b11e2aa4f9ee8b25aa89eb",
+    "status": "downloaded",
+    "date": "2026-09-08"
+  },
+  {
+    "path": "hardware/datasheets/HUSB238.pdf",
+    "url": "https://cdn-learn.adafruit.com/assets/assets/000/125/150/original/husb238_datasheet_full.pdf",
+    "bytes": 1340878,
+    "sha256": "f6fb03b7218e726583a7989c1927432e45504b8f1145bc5b8c6fbcbd285feedc",
+    "status": "downloaded",
+    "date": "2026-09-08"
+  },
+  {
+    "path": "hardware/reference/Adafruit_HUSB238.cpp",
+    "url": "https://raw.githubusercontent.com/adafruit/Adafruit_HUSB238/main/Adafruit_HUSB238.cpp",
+    "bytes": 15025,
+    "sha256": "e68f3bedb2ba8469e76f1d097ffe30fa04927272cd1f824c864c4a012e670597",
+    "status": "downloaded",
+    "date": "2026-09-08"
+  },
+  {
+    "path": "hardware/reference/Adafruit_HUSB238.h",
+    "url": "https://raw.githubusercontent.com/adafruit/Adafruit_HUSB238/main/Adafruit_HUSB238.h",
+    "bytes": 4545,
+    "sha256": "33bc104bd93ae1158e31698cee11e1c559df37d87a9dcf7275b3d7bce741473d",
+    "status": "downloaded",
+    "date": "2026-09-08"
+  },
+  {
+    "path": "hardware/datasheets/TPS22810.pdf",
+    "url": "https://www.ti.com/lit/ds/symlink/tps22810.pdf",
+    "bytes": 2320958,
+    "sha256": "10450eedecbc454291088e3c8cf0e177555814ac83be021448d1d16cba126c98",
+    "status": "downloaded",
+    "date": "2026-09-08"
+  },
+  {
+    "path": "cad/vendor/1426.step",
+    "url": "https://raw.githubusercontent.com/adafruit/Adafruit_CAD_Parts/main/1426%208x%20NeoPixel%20Stick/1426%208x%20NeoPixel%20Stick.step",
+    "bytes": 116195,
+    "sha256": "d3066e01e96644b0990469cf4450ab909ef0c8b034a12bd8151320fa33f98522",
+    "status": "downloaded",
+    "date": "2026-09-08"
+  },
+  {
+    "path": "cad/vendor/1782.step",
+    "url": "https://raw.githubusercontent.com/adafruit/Adafruit_CAD_Parts/main/1782%20MCP9808/1782%20MCP9808.step",
+    "bytes": 299588,
+    "sha256": "d8d37273efdb4e3e3d69a77262799033aa1628f2b9f39a4fcaab5c1f3be756ca",
+    "status": "downloaded",
+    "date": "2026-09-08"
+  },
+  {
+    "path": "cad/vendor/5807.step",
+    "url": "https://raw.githubusercontent.com/adafruit/Adafruit_CAD_Parts/main/5807%20HUSB238%20Breakout/5807%20HUSB238%20Breakout.step",
+    "bytes": 1350120,
+    "sha256": "5538138aa8907d1b5956e85393a1923ab10c448f4be64a35878c30b784c5b1d2",
+    "status": "downloaded",
+    "date": "2026-09-08"
+  }
+]

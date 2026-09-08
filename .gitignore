@@ -1,0 +1,17 @@
+.tools/
+build/
+__pycache__/
+*.tmp
+*.log
+
+# Reproducible downloaded dependencies and vendor references.
+# Public download URLs and SHA-256 hashes are kept in hardware/sources.json.
+cad/vendor/
+hardware/datasheets/
+hardware/reference/
+
+# Local continuation bookkeeping and compiler intermediates.
+docs/continuation-state.md
+firmware/dist/*.elf
+firmware/dist/*.map
+firmware/dist/*.bin

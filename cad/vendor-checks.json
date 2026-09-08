@@ -1,0 +1,107 @@
+[
+  {
+    "file": "1426.step",
+    "valid": true,
+    "solids": 1,
+    "bounds_mm": {
+      "x": 50.8,
+      "y": 10.16,
+      "z": 2.6
+    },
+    "origin_min_mm": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "file": "1782.step",
+    "valid": true,
+    "solids": 18,
+    "bounds_mm": {
+      "x": 20.32,
+      "y": 12.7,
+      "z": 3.07
+    },
+    "origin_min_mm": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "file": "5807.step",
+    "valid": true,
+    "solids": 34,
+    "bounds_mm": {
+      "x": 20.32,
+      "y": 24.608,
+      "z": 12.1
+    },
+    "origin_min_mm": [
+      0.0,
+      0.0,
+      -1.9201765120200502
+    ]
+  },
+  {
+    "file": "D24V22Fx.step",
+    "valid": true,
+    "solids": 1,
+    "bounds_mm": {
+      "x": 17.78,
+      "y": 17.78,
+      "z": 8.2192
+    },
+    "origin_min_mm": [
+      -1e-07,
+      -1e-07,
+      -1.1000000000000008
+    ]
+  },
+  {
+    "file": "NF-A12x25_G2_Public-CAD.stp",
+    "valid": true,
+    "solids": 11,
+    "bounds_mm": {
+      "x": 120.0,
+      "y": 120.0,
+      "z": 27.0
+    },
+    "origin_min_mm": [
+      -60.000000100000015,
+      -60.00000010000004,
+      -1.0000001000005352
+    ]
+  },
+  {
+    "file": "Pico-R3.step",
+    "valid": true,
+    "solids": 17,
+    "bounds_mm": {
+      "x": 21.0,
+      "y": 3.73,
+      "z": 52.3
+    },
+    "origin_min_mm": [
+      -4.1685405127722674e-15,
+      -0.5,
+      -52.300000000000004
+    ]
+  },
+  {
+    "file": "SDP810.step",
+    "valid": true,
+    "solids": 1,
+    "bounds_mm": {
+      "x": 29.0,
+      "y": 27.05,
+      "z": 17.95
+    },
+    "origin_min_mm": [
+      -14.5000001,
+      -13.5,
+      -8.975000100000003
+    ]
+  }
+]
