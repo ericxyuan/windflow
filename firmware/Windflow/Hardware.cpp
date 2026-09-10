@@ -59,6 +59,9 @@ void Hardware::poll(uint32_t now,const Settings& s){
  }
  if(now-goodTemp_>400)in.tempsValid=false;
  if(now-goodPressure_>100)in.pressureValid=false;
+ // A sensor supply interruption exits continuous mode. Reissue the bounded
+ // stop/start sequence after stale data, instead of requiring a system reboot.
+ if(pressureState_==2&&now-pressureStart_>1000&&now-goodPressure_>1000)pressureState_=0;
  if(now-goodPd_>250)in.pd15v=false;
 }
 void Hardware::apply(const Outputs& o){

@@ -9,7 +9,7 @@ bool valid(const Settings& s){
  if(s.minPwm<.2f||s.minPwm>.4f||s.maxPwm<.6f||s.maxPwm>1||s.minPwm>=s.maxPwm)return false;
  if(s.rpmAtMax<1000||s.rpmAtMax>2100||s.pressureSoft<8||s.pressureHard>26||s.pressureHard<s.pressureSoft+3)return false;
  if(s.warnC<40||s.warnC>58||s.tripC<s.warnC+5||s.tripC>70||fabsf(s.pressureZero)>2)return false;
- if(s.busScale<7||s.busScale>8.6f||s.logicScale<1.8f||s.logicScale>2.2f)return false;
+ if(s.busScale<10||s.busScale>12.2f||s.logicScale<1.9f||s.logicScale>2.3f)return false;
  if(!s.mainCount||s.mainCount>kMainCapacity||!s.ambientCount||s.ambientCount>kAmbientCapacity)return false;
  if(s.mainBrightness>80||s.ambientBrightness>60||s.nightMain>4||s.nightAmbient>4)return false;
  if(maxPanelAngle(s)>kMechanicalMaxAngle)return false;
@@ -37,8 +37,8 @@ Mapping mapSetting(const Settings& s){
 }
 void Control::resetOutputs(){out=Outputs{};out.servoUs=settings.servoUs[0];}
 void Control::transition(State s,uint32_t now){state=s;entered_=now;servoErrorMs_=0;}
-void Control::begin(uint32_t now,bool watchdogReset){last_=now;entered_=now;resetOutputs();if(watchdogReset)trip(Fault::Watchdog,now);}
-void Control::trip(Fault f,uint32_t now){fault=f;transition(State::Fault,now);resetOutputs();}
+void Control::begin(uint32_t now,bool watchdogReset){last_=now;entered_=now;liveFan_=false;resetOutputs();if(watchdogReset)trip(Fault::Watchdog,now);}
+void Control::trip(Fault f,uint32_t now){fault=f;transition(State::Fault,now);liveFan_=false;resetOutputs();}
 void Control::rotate(int detents){
  if(state==State::Service)return;
  if(settings.encoderReverse)detents=-detents;
@@ -48,13 +48,13 @@ void Control::rotate(int detents){
 }
 void Control::shortPress(){settings.on=!settings.on;settingsDirty=true;}
 void Control::longPress(){settings.night=!settings.night;settingsDirty=true;}
-void Control::enterService(uint32_t now){resetOutputs();serviceFan_=0;servicePulse_=1500;serviceUntil_=now;transition(State::Service,now);}
-void Control::exitService(uint32_t now){serviceFan_=0;fault=Fault::None;resetOutputs();powerStable_=0;transition(State::WaitPower,now);}
-bool Control::testFan(float duty,uint32_t now){if(state!=State::Service||!isfinite(duty)||duty<0||duty>1)return false;serviceFan_=duty;serviceUntil_=now+10000;serviceLast_=now;return true;}
-bool Control::jogServo(int delta,uint32_t now){if(state!=State::Service||abs(delta)>10)return false;serviceFan_=0;servicePulse_=(uint16_t)clamp(servicePulse_+delta,900,2100);serviceUntil_=now+800;serviceLast_=now;return true;}
+void Control::enterService(uint32_t now){resetOutputs();serviceFan_=0;serviceServo_=false;liveFan_=false;servicePulse_=settings.commissioned?settings.servoUs[0]:1500;serviceUntil_=now;transition(State::Service,now);}
+void Control::exitService(uint32_t now){serviceFan_=0;serviceServo_=false;liveFan_=false;fault=Fault::None;resetOutputs();powerStable_=0;transition(State::WaitPower,now);}
+bool Control::testFan(float duty,uint32_t now){if(state!=State::Service||!isfinite(duty)||duty<0||duty>settings.maxPwm)return false;serviceFan_=duty;serviceServo_=false;serviceUntil_=now+10000;serviceLast_=now;return true;}
+bool Control::jogServo(int delta,uint32_t now){if(state!=State::Service||abs(delta)>10)return false;serviceFan_=0;serviceServo_=true;servicePulse_=(uint16_t)clamp(servicePulse_+delta,900,2100);serviceUntil_=now+800;serviceLast_=now;return true;}
 bool Control::acknowledge(uint32_t now,const Inputs& in){
- if(state!=State::Fault||!in.pd15v||in.busV<14||in.busV>16||!in.tempsValid||!in.guardClosed||in.tempPower>settings.warnC-5||in.tempMotor>settings.warnC-5)return false;
- fault=Fault::None;settings.on=0;boostCeiling_=1;resetOutputs();powerStable_=0;transition(State::WaitPower,now);return true;
+ if(state!=State::Fault||!in.pd15v||!isfinite(in.busV)||in.busV<14||in.busV>16||!isfinite(in.logicV)||in.logicV<4.65f||in.logicV>5.35f||!in.tempsValid||!isfinite(in.tempPower)||!isfinite(in.tempMotor)||!in.guardClosed||in.tempPower>settings.warnC-5||in.tempMotor>settings.warnC-5)return false;
+ fault=Fault::None;settings.on=0;markChanged(now);liveFan_=false;boostCeiling_=1;resetOutputs();powerStable_=0;transition(State::WaitPower,now);return true;
 }
 float Control::feedbackTarget()const{return tableValue(settings.feedback,out.closure);}
 void Control::tick(uint32_t now,const Inputs& in){
@@ -83,7 +83,7 @@ void Control::tick(uint32_t now,const Inputs& in){
  if(state==State::Service){
   bool active=int32_t(serviceUntil_-now)>0;
   out.pwm=active?serviceFan_:0;out.fanEnable=out.pwm>0;
-  out.servoEnable=active&&serviceFan_==0;out.servoUs=servicePulse_;
+  out.servoEnable=active&&serviceServo_;out.servoUs=servicePulse_;
   if(out.thermal||!in.pressureValid||fabsf(in.pressurePa-settings.pressureZero)>settings.pressureSoft){out.pwm=0;out.servoEnable=false;out.fanEnable=false;}
   // Tests expire without keepalive, and need temperature/pressure/guard protection.
  }else{
@@ -106,14 +106,14 @@ void Control::tick(uint32_t now,const Inputs& in){
    out.servoUs=settings.servoUs[0];out.closure=0;out.pwm=0;out.fanEnable=false;out.animation=0;
    bool home=abs(int(in.servoAdc)-int(settings.feedback[0]))<60&&in.servoPowerGood;
    if(now-entered_>=400&&home){
-    if(settings.night||out.thermal||pressureBad)transition(State::Live,now);
+    if(settings.night||out.thermal||pressureBad||!settings.on||settings.setting==0)transition(State::Live,now);
     else transition(State::RampUp,now);
    }else if(now-entered_>1500){trip(Fault::Servo,now);return;}
    return;
   }
   if(state==State::RampUp){
    targetClosure=0;
-   if(settings.night||out.thermal||pressureBad||!settings.on){transition(State::Live,now);targetPwm=fminf(targetPwm,.5f);}
+   if(settings.night||out.thermal||pressureBad||!settings.on||settings.setting==0){transition(State::Live,now);targetPwm=fminf(targetPwm,.5f);}
    else{targetPwm=settings.maxPwm*smooth((now-entered_)/float(kRampUpMs));out.animation=targetPwm/settings.maxPwm;
     if(now-entered_>=kRampUpMs){returnFrom_=targetPwm;transition(State::RampDown,now);}}
   }else if(state==State::RampDown){
@@ -122,13 +122,14 @@ void Control::tick(uint32_t now,const Inputs& in){
    if(settings.night||out.thermal||pressureBad||now-entered_>=kRampDownMs)transition(State::Live,now);
   }
   // Safety caps apply AFTER animation calculations; input off always wins.
-  if(!settings.on)targetPwm=0;
+  if(!settings.on||settings.setting==0)targetPwm=0;
   if(out.thermal||pressureBad)targetPwm=fminf(targetPwm,.5f);
   if(in.pressureValid&&pressure>settings.pressureHard)targetPwm=fminf(targetPwm,.4f);
   float rate=targetClosure<out.closure?1.2f:.35f;
   out.closure=approach(out.closure,targetClosure,rate*dt);
   out.servoUs=(uint16_t)lroundf(tableValue(settings.servoUs,out.closure));
-  if(state==State::RampUp||state==State::RampDown)out.pwm=targetPwm;
+  if(!settings.on||settings.setting==0)out.pwm=0;
+  else if(state==State::RampUp||state==State::RampDown)out.pwm=targetPwm;
   else out.pwm=approach(out.pwm,targetPwm,(targetPwm<out.pwm?2.0f:1.0f)*dt);
   out.fanEnable=out.pwm>.001f;
   if(now-entered_>600&&(!in.servoPowerGood||abs(int(in.servoAdc)-int(feedbackTarget()))>90))servoErrorMs_+=ms;else servoErrorMs_=0;

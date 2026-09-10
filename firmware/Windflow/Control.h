@@ -40,7 +40,7 @@ private:
  uint32_t serviceUntil_=0,serviceLast_=0;
  float boostCeiling_=1,returnFrom_=0,serviceFan_=0;
  uint16_t servicePulse_=1500;
- bool liveFan_=false;
+ bool liveFan_=false,serviceServo_=false;
  void transition(State s,uint32_t now);
  void trip(Fault f,uint32_t now);
  void resetOutputs();

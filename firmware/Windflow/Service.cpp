@@ -17,8 +17,9 @@ void Service::command(char* line,uint32_t now,Control& c,const Hardware& hw,Ligh
   if(Serial.availableForWrite()>=int(strlen(b)))Serial.print(b);return;
  }
  if(!strcmp(cmd,"ack")){reply(c.acknowledge(now,hw.in)?"OK fault acknowledged; fan off":"ERR unsafe to acknowledge");return;}
- if(!strcmp(cmd,"help")){reply("status ack; service: set KEY VALUE, fan 0..100, jog -10..10, capture 0..4, zero, led 0..23 R G B, format ERASE, commit MEASURED, exit");return;}
+ if(!strcmp(cmd,"help")){reply("status ack; service: evidence, set KEY VALUE, fan 0..100, jog -10..10, capture 0..4, zero, measure fan-min|fan-max, led 0..23 R G B, format ERASE, commit MEASURED, exit");return;}
  if(c.state!=State::Service){reply("ERR fit service jumper and hold encoder during boot for 4s");return;}
+ if(!strcmp(cmd,"evidence")){char b[96];snprintf(b,sizeof(b),"captures=0x%02x zero=%u fanMin=%u fanMax=%u",calibration_.captures,calibration_.zeroed,calibration_.fanMin,calibration_.fanMax);reply(b);return;}
  if(!strcmp(cmd,"exit")){c.exitService(now);reply("OK");return;}
  if(!strcmp(cmd,"set")){
   char* key=strtok(nullptr," ");float value;
@@ -29,34 +30,41 @@ void Service::command(char* line,uint32_t now,Control& c,const Hardware& hw,Ligh
    else *(float*)((uint8_t*)&proposed+f.offset)=value;found=true;break;
   }
   if(!found||!valid(proposed)){reply("ERR unknown key or unsafe value");return;}
-  proposed.commissioned=0;c.settings=proposed;c.markChanged(now);reply("OK recommission required");return;
+  proposed.commissioned=0;c.settings=proposed;calibration_.reset();c.markChanged(now);reply("OK evidence cleared; recommission required");return;
  }
- if(!strcmp(cmd,"fan")){float v;bool ok=number(strtok(nullptr," "),v)&&v>=0&&v<=100&&c.testFan(v/100,now);reply(ok?"OK fan test expires in 10s":"ERR range");return;}
- if(!strcmp(cmd,"jog")){float v;bool ok=number(strtok(nullptr," "),v)&&floorf(v)==v&&v>=-10&&v<=10&&c.jogServo(int(v),now);reply(ok?"OK servo powered for 0.8s":"ERR max 10us per jog");return;}
+ if(!strcmp(cmd,"fan")){float v;bool ok=number(strtok(nullptr," "),v)&&!strtok(nullptr," ")&&v>=0&&v<=100&&(v==0||((calibration_.captures&1)&&abs(int(hw.in.servoAdc)-int(c.settings.feedback[0]))<60))&&c.testFan(v/100,now);reply(ok?"OK fan test expires in 10s; zero stops both loads":"ERR range or panels not calibrated/open");return;}
+ if(!strcmp(cmd,"jog")){float v;bool ok=number(strtok(nullptr," "),v)&&!strtok(nullptr," ")&&floorf(v)==v&&v>=-10&&v<=10&&c.jogServo(int(v),now);reply(ok?"OK servo powered for 0.8s":"ERR max 10us per jog");return;}
  if(!strcmp(cmd,"capture")){
-  float v;if(!number(strtok(nullptr," "),v)||v<0||v>4||floorf(v)!=v||!c.out.servoEnable||c.out.fanEnable){reply("ERR jog and hold at measured angle first");return;}
-  int i=int(v);c.settings.servoUs[i]=c.out.servoUs;c.settings.feedback[i]=hw.in.servoAdc;c.settings.commissioned=0;c.markChanged(now);reply("OK captured pulse/feedback; all five points required");return;
+  float v;if(!number(strtok(nullptr," "),v)||strtok(nullptr," ")||v<0||v>4||floorf(v)!=v||!calibration_.capture(int(v),c.settings,c.out,hw.in)){reply("ERR jog; measure angle; wait 0.3s for stable feedback; capture before timeout");return;}
+  c.markChanged(now);reply("OK captured pulse/feedback; all five points required");return;
  }
  if(!strcmp(cmd,"zero")){
-  if(c.out.fanEnable||hw.in.rpm>60||!hw.in.pressureValid||fabsf(hw.in.pressurePa)>2){reply("ERR fan must stop, pressure valid and within 2Pa");return;}
-  c.settings.pressureZero=hw.in.pressurePa;c.settings.commissioned=0;c.markChanged(now);reply("OK");return;
+  if(strtok(nullptr," ")||!calibration_.zero(c.settings)){reply("ERR stop both loads; wait for stable pressure within 2Pa for 1s");return;}
+  c.markChanged(now);reply("OK pressure zero recorded");return;
+ }
+ if(!strcmp(cmd,"measure")){
+  char* which=strtok(nullptr," ");bool maximum=which&&!strcmp(which,"fan-max");
+  if(!which||(!maximum&&strcmp(which,"fan-min"))||strtok(nullptr," ")||!calibration_.measureFan(maximum,c.settings)){reply("ERR test exact min/max PWM for 5s with stable tach first");return;}
+  c.markChanged(now);reply(maximum?"OK measured maximum RPM saved in RAM":"OK minimum PWM stability recorded");return;
  }
  if(!strcmp(cmd,"led")){
   float v[4];for(int i=0;i<4;i++)if(!number(strtok(nullptr," "),v[i])||floorf(v[i])!=v[i]){reply("ERR syntax");return;}
-  reply(lights.test(int(v[0]),int(v[1]),int(v[2]),int(v[3]),now)?"OK":"ERR bounds");return;
+  reply(!strtok(nullptr," ")&&lights.test(int(v[0]),int(v[1]),int(v[2]),int(v[3]),now)?"OK":"ERR bounds");return;
  }
  if(!strcmp(cmd,"format")){
-  char* yes=strtok(nullptr," ");if(!yes||strcmp(yes,"ERASE")||c.out.fanEnable||c.out.servoEnable){reply("ERR loads must be off; format ERASE");return;}
-  reply(storage.format()?"OK blank settings filesystem":"ERR format");c.settings.commissioned=0;return;
+  char* yes=strtok(nullptr," ");if(!yes||strcmp(yes,"ERASE")||strtok(nullptr," ")||c.out.fanEnable||c.out.servoEnable){reply("ERR loads must be off; format ERASE");return;}
+  reply(storage.format()?"OK blank settings filesystem":"ERR format");c.settings.commissioned=0;calibration_.reset();return;
  }
  if(!strcmp(cmd,"commit")){
   char* yes=strtok(nullptr," ");Settings proposed=c.settings;proposed.commissioned=1;
-  if(!yes||strcmp(yes,"MEASURED")||!valid(proposed)||c.out.fanEnable||c.out.servoEnable||!hw.in.pd15v||!hw.in.tempsValid||!hw.in.pressureValid||!hw.in.guardClosed||hw.in.tempPower>proposed.warnC-5||hw.in.tempMotor>proposed.warnC-5){reply("ERR finish measurements; stop loads; check sensors");return;}
+  if(!yes||strcmp(yes,"MEASURED")||strtok(nullptr," ")||!calibration_.complete()||!valid(proposed)||c.out.fanEnable||c.out.servoEnable||!hw.in.pd15v||!hw.in.tempsValid||!hw.in.pressureValid||!hw.in.guardClosed||!hw.in.fanPowerGood||!hw.in.servoPowerGood||!isfinite(hw.in.busV)||hw.in.busV<14.5f||hw.in.busV>16||!isfinite(hw.in.logicV)||hw.in.logicV<4.65f||hw.in.logicV>5.35f||!isfinite(hw.in.tempPower)||!isfinite(hw.in.tempMotor)||hw.in.tempPower>proposed.warnC-5||hw.in.tempMotor>proposed.warnC-5){reply("ERR require 5 captures, zero, min/max RPM evidence; stop loads; check sensors");return;}
   if(storage.save(proposed)){c.settings=proposed;c.settingsDirty=false;reply("OK calibrated settings saved and verified");}else reply("ERR storage; format only on first commissioning");return;
  }
  reply("ERR command");
 }
 void Service::poll(uint32_t now,Control& c,const Hardware& hw,Lighting& lights,Storage& storage){
+ bool active=c.state==State::Service;if(active&&!wasService_)calibration_.reset();wasService_=active;
+ calibration_.observe(now,c,hw.in);
  // Bounded work per loop; a flooded USB console cannot starve safety.
  for(int n=0;n<24&&Serial.available();n++){
   char b=Serial.read();if(b=='\r')continue;

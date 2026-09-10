@@ -11,7 +11,7 @@ void Lighting::poll(uint32_t now,const Control& c){
  digitalWrite(pin::statusG,!fault&&!waiting&&!setup&&(!c.settings.night||flash));
  digitalWrite(pin::statusB,(waiting||setup||c.out.boostLimited)&&flash);
  if(!c.out.ledEnable){main_.clear();ambient_.clear();digitalWrite(pin::mainLed,LOW);digitalWrite(pin::ambientLed,LOW);wasPowered_=false;return;}
- if(!wasPowered_){poweredAt_=now;wasPowered_=true;}if(now-poweredAt_<5)return;
+ if(!wasPowered_){poweredAt_=now;wasPowered_=true;}if(now-poweredAt_<50)return;
  main_.clear();ambient_.clear();const Settings& s=c.settings;
  uint8_t b=s.night?s.nightMain:s.mainBrightness,a=s.night?s.nightAmbient:s.ambientBrightness;
  bool animation=!s.night&&(c.state==State::RampUp||c.state==State::RampDown);

@@ -3,7 +3,7 @@
 #include <math.h>
 #include <initializer_list>
 namespace wf {
-constexpr uint16_t kSchema=1;
+constexpr uint16_t kSchema=2; // ADC isolation/dividers changed: require new calibration.
 constexpr uint8_t kMainCapacity=16,kAmbientCapacity=8;
 constexpr uint32_t kTickMs=10,kRampUpMs=1800,kRampDownMs=900;
 constexpr float kOutletWidth=104.0f,kOutletHeight=94.0f,kPanelLength=55.0f;
@@ -25,7 +25,7 @@ struct Settings {
  float boostThreshold=.75f,minAreaRatio=.75f,minPwm=.20f,maxPwm=1.0f;
  float rpmAtMax=1800.0f,pressureSoft=18.0f,pressureHard=24.0f;
  float warnC=55.0f,tripC=65.0f,pressureZero=0.0f;
- float busScale=7.8f,logicScale=2.0f;
+ float busScale=11.1f,logicScale=2.1f;
  uint16_t servoUs[5]={1100,1200,1300,1400,1500};
  uint16_t feedback[5]={600,750,900,1050,1200};
  uint8_t mainCount=16,ambientCount=8,mainBrightness=36,ambientBrightness=12;

@@ -7,6 +7,9 @@ __pycache__/
 # Reproducible downloaded dependencies and vendor references.
 # Public download URLs and SHA-256 hashes are kept in hardware/sources.json.
 cad/vendor/
+cad/rev_b/*-vendor.step
+cad/rev_b/electronics-layout-development.step
+cad/rev_b/full-development-assembly.step
 hardware/datasheets/
 hardware/reference/
 
