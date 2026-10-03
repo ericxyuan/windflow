@@ -1,0 +1,338 @@
+{
+  "parts": [
+    {
+      "name": "head-left-integral-outlet",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        71.12846189800192,
+        150.206623779236,
+        143.70089533543302
+      ],
+      "volume_mm3": 190864.53336988314,
+      "material": "PETG"
+    },
+    {
+      "name": "head-right-integral-outlet",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        107.90830729181192,
+        150.206623779236,
+        143.70089533543302
+      ],
+      "volume_mm3": 226622.9220737059,
+      "material": "PETG"
+    },
+    {
+      "name": "linkage-service-cover",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        50.750738686732255,
+        96.00338459934244,
+        165.00143241669284
+      ],
+      "volume_mm3": 93976.9132375552,
+      "material": "PETG"
+    },
+    {
+      "name": "tpu-servo-cable-grommet",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        8.403892861434002,
+        8.403247257148294,
+        3.2035092585020806
+      ],
+      "volume_mm3": 76.35002720303937,
+      "material": "TPU 95A"
+    },
+    {
+      "name": "bellmouth-rear-inlet",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        142.04764648337147,
+        16.46506215859077,
+        142.06353424830155
+      ],
+      "volume_mm3": 36186.56408291835,
+      "material": "PETG"
+    },
+    {
+      "name": "radial-straightener-trial",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        113.43806512433575,
+        18.050754379050744,
+        113.42537728952539
+      ],
+      "volume_mm3": 13860.016409669148,
+      "material": "PETG"
+    },
+    {
+      "name": "tpu-stator-axial-shim",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        113.2379979904304,
+        1.0506648655074429,
+        113.22533253275374
+      ],
+      "volume_mm3": 457.00748331770865,
+      "material": "TPU 95A"
+    },
+    {
+      "name": "fixed-inner-finger-guard",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        113.43806512433575,
+        2.4507543790507427,
+        113.42537728952539
+      ],
+      "volume_mm3": 6936.80677263468,
+      "material": "PETG"
+    },
+    {
+      "name": "rear-inlet-finger-guard",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        148.00000020000004,
+        26.63352602400508,
+        148.00000020000004
+      ],
+      "volume_mm3": 16969.281307434176,
+      "material": "PETG"
+    },
+    {
+      "name": "REF-head-magnet--56.1--51.1",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        6.349999999999994,
+        3.1750000000000114,
+        6.349999999999994
+      ],
+      "volume_mm3": 100.54976538340979,
+      "material": "N42 magnet"
+    },
+    {
+      "name": "REF-grille-magnet--56.1--51.1",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        6.349999999999994,
+        3.1750000000000114,
+        6.349999999999994
+      ],
+      "volume_mm3": 100.54976538340979,
+      "material": "N42 magnet"
+    },
+    {
+      "name": "REF-head-magnet--56.1-51.1",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        6.349999999999994,
+        3.1750000000000114,
+        6.349999999999994
+      ],
+      "volume_mm3": 100.54976538340979,
+      "material": "N42 magnet"
+    },
+    {
+      "name": "REF-grille-magnet--56.1-51.1",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        6.349999999999994,
+        3.1750000000000114,
+        6.349999999999994
+      ],
+      "volume_mm3": 100.54976538340979,
+      "material": "N42 magnet"
+    },
+    {
+      "name": "REF-head-magnet-56.1--51.1",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        6.349999999999994,
+        3.1750000000000114,
+        6.349999999999994
+      ],
+      "volume_mm3": 100.54976538340979,
+      "material": "N42 magnet"
+    },
+    {
+      "name": "REF-grille-magnet-56.1--51.1",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        6.349999999999994,
+        3.1750000000000114,
+        6.349999999999994
+      ],
+      "volume_mm3": 100.54976538340979,
+      "material": "N42 magnet"
+    },
+    {
+      "name": "REF-head-magnet-56.1-51.1",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        6.349999999999994,
+        3.1750000000000114,
+        6.349999999999994
+      ],
+      "volume_mm3": 100.5497653834098,
+      "material": "N42 magnet"
+    },
+    {
+      "name": "REF-grille-magnet-56.1-51.1",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        6.349999999999994,
+        3.1750000000000114,
+        6.349999999999994
+      ],
+      "volume_mm3": 100.5497653834098,
+      "material": "N42 magnet"
+    },
+    {
+      "name": "head-magnet-retaining-rim",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        122.00507679901361,
+        0.6050767990136023,
+        112.00507679901361
+      ],
+      "volume_mm3": 2283.607432302842,
+      "material": "PETG"
+    },
+    {
+      "name": "grille-magnet-retaining-rim",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        122.00507679901361,
+        0.8050767990135625,
+        112.00507679901361
+      ],
+      "volume_mm3": 3077.3819423698073,
+      "material": "PETG"
+    },
+    {
+      "name": "magnetic-front-grille",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        122.00507679901361,
+        3.805076799013591,
+        112.00507679901361
+      ],
+      "volume_mm3": 20723.032240436907,
+      "material": "PETG"
+    },
+    {
+      "name": "tpu-fan-pad-m3",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        14.004699573374783,
+        2.006266148030953,
+        14.003133174015478
+      ],
+      "volume_mm3": 289.7176745140507,
+      "material": "TPU 95A"
+    },
+    {
+      "name": "fan-compression-limiter-reference",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        4.0,
+        29.0,
+        4.0
+      ],
+      "volume_mm3": 131.1929092139097,
+      "material": "stainless tube"
+    }
+  ],
+  "checks": {
+    "head_halves_overlap_mm3": 0.0,
+    "bellmouth_inner_radius_mm": 14.0,
+    "inlet_mouth_diameter_mm": 142.0,
+    "throat_area_mm2": 10207.034531513238,
+    "normal_outlet_gross_area_mm2": 9776.0,
+    "minimum_outlet_gross_area_mm2": 7332.0,
+    "max_panel_angle_deg": 12.335538050940592,
+    "structural_seam_screws": 6,
+    "grille_magnet_pairs": 4,
+    "magnet_retention": "front-loaded pockets with screw-retained cover rims; adhesive removes rattle",
+    "nominal_magnet_face_gap_mm": 1.424999999999983,
+    "rear_guard_to_fan_rear_mm": 26.6,
+    "cover_screw_axes_local_yz_mm": [
+      [
+        37.0,
+        -58.0
+      ],
+      [
+        112.0,
+        -58.0
+      ],
+      [
+        37.0,
+        58.0
+      ],
+      [
+        112.0,
+        58.0
+      ]
+    ],
+    "head_center_height_mm": 10.0,
+    "cover_fasteners": "4 x M3x8 into Ruthex RX-M3x5.7; verify insertion depth on coupon"
+  },
+  "build": {
+    "completed_utc": "2026-10-03T09:38:59.007846+00:00",
+    "script_sha256": "48e427c959fa807b7c9876a72d578360f8043637c26d9991115b00a6149ef4b5",
+    "parameters_sha256": "6f86731c3123d8d15c025a0b34fb400919749b0227dfb576a218ed821d70c8ee"
+  },
+  "status": "development, not print release",
+  "assembly_files": [
+    "head-left-integral-outlet.step",
+    "head-right-integral-outlet.step",
+    "linkage-service-cover.step",
+    "tpu-servo-cable-grommet.step",
+    "bellmouth-rear-inlet.step",
+    "radial-straightener-trial.step",
+    "tpu-stator-axial-shim.step",
+    "fixed-inner-finger-guard.step",
+    "rear-inlet-finger-guard.step",
+    "REF-head-magnet--56.1--51.1.step",
+    "REF-grille-magnet--56.1--51.1.step",
+    "REF-head-magnet--56.1-51.1.step",
+    "REF-grille-magnet--56.1-51.1.step",
+    "REF-head-magnet-56.1--51.1.step",
+    "REF-grille-magnet-56.1--51.1.step",
+    "REF-head-magnet-56.1-51.1.step",
+    "REF-grille-magnet-56.1-51.1.step",
+    "head-magnet-retaining-rim.step",
+    "grille-magnet-retaining-rim.step",
+    "magnetic-front-grille.step"
+  ],
+  "remaining": [
+    "carrier PCB and wire/pressure-hose integration",
+    "whole-product interference and mechanism insertion checks",
+    "grille interlock mounting",
+    "guard deflection and magnet pull testing",
+    "full assembly sequence/tool clearance and physical trials",
+    "native Onshape feature regeneration and integration"
+  ]
+}

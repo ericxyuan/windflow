@@ -1,0 +1,294 @@
+{
+  "completed_utc": "2026-10-03T09:44:07.203488+00:00",
+  "status": "passed sampled paths",
+  "coordinate_system": "head local, airflow +Y, Z centre 0; product height from parameters.json",
+  "maximum_translation_step_mm": 1,
+  "steps": [
+    {
+      "part": "yoke",
+      "waypoints_translation_mm": [
+        [
+          0,
+          0,
+          180
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "samples": 181,
+      "max_overlap_mm3": 0.0,
+      "collisions": []
+    },
+    {
+      "part": "upper_retaining_spacer",
+      "waypoints_translation_mm": [
+        [
+          -15.2,
+          100,
+          0
+        ],
+        [
+          -15.2,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "samples": 118,
+      "max_overlap_mm3": 0.0,
+      "collisions": []
+    },
+    {
+      "part": "upper_crank",
+      "waypoints_translation_mm": [
+        [
+          0,
+          0,
+          100
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "samples": 101,
+      "max_overlap_mm3": 0.0,
+      "collisions": []
+    },
+    {
+      "part": "upper_panel",
+      "waypoints_translation_mm": [
+        [
+          -140,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "samples": 141,
+      "max_overlap_mm3": 0.0,
+      "collisions": []
+    },
+    {
+      "part": "lower_retaining_spacer",
+      "waypoints_translation_mm": [
+        [
+          -15.2,
+          100,
+          0
+        ],
+        [
+          -15.2,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "samples": 118,
+      "max_overlap_mm3": 0.0,
+      "collisions": []
+    },
+    {
+      "part": "lower_crank",
+      "waypoints_translation_mm": [
+        [
+          0,
+          0,
+          -100
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "samples": 101,
+      "max_overlap_mm3": 0.0,
+      "collisions": []
+    },
+    {
+      "part": "lower_panel",
+      "waypoints_translation_mm": [
+        [
+          -140,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "samples": 141,
+      "max_overlap_mm3": 0.0,
+      "collisions": []
+    },
+    {
+      "part": "left_head",
+      "waypoints_translation_mm": [
+        [
+          -140,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "samples": 141,
+      "max_overlap_mm3": 0.0,
+      "collisions": []
+    },
+    {
+      "part": "upper_shaft",
+      "waypoints_translation_mm": [
+        [
+          -160,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "samples": 161,
+      "max_overlap_mm3": 0.0,
+      "collisions": []
+    },
+    {
+      "part": "upper_left_collar",
+      "waypoints_translation_mm": [
+        [
+          -30,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "samples": 31,
+      "max_overlap_mm3": 0.0,
+      "collisions": []
+    },
+    {
+      "part": "upper_right_collar",
+      "waypoints_translation_mm": [
+        [
+          30,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "samples": 31,
+      "max_overlap_mm3": 0.0,
+      "collisions": []
+    },
+    {
+      "part": "lower_shaft",
+      "waypoints_translation_mm": [
+        [
+          -160,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "samples": 161,
+      "max_overlap_mm3": 0.0,
+      "collisions": []
+    },
+    {
+      "part": "lower_left_collar",
+      "waypoints_translation_mm": [
+        [
+          -30,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "samples": 31,
+      "max_overlap_mm3": 0.0,
+      "collisions": []
+    },
+    {
+      "part": "lower_right_collar",
+      "waypoints_translation_mm": [
+        [
+          30,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "samples": 31,
+      "max_overlap_mm3": 0.0,
+      "collisions": []
+    }
+  ],
+  "issues": [],
+  "input_sha256": {
+    "rev_b\\head-right-integral-outlet.step": "f2c226227c899018ed9b1f0489063ef3f5148440f2156851f8de30b9d481a783",
+    "prototypes\\installed-yoke-open.step": "656fb8a86c812558032f0679e4faebc654107a8331e7b5445d52cc1a855aa6e5",
+    "prototypes\\installed-upper_retaining_spacer.step": "27ded18cf0712c6d58572026ac6e3a5c8e95de8e7e91b2ef227a56081dbd4ad5",
+    "prototypes\\installed-upper_crank-open.step": "625df87c51e623ed0c15ff8e9f677b9aa8d5ded049c87c5f933ea693c4322eaf",
+    "prototypes\\installed-upper_panel-open.step": "2feaf2285e3adfd4f711727a478f46680b732621e3891134f9f6ce511e544cc5",
+    "prototypes\\installed-lower_retaining_spacer.step": "cae0268ffe9cd1a24dc7d1e6da6a97cbb1241a58070a9fdbd21698221007a676",
+    "prototypes\\installed-lower_crank-open.step": "e392a50ca39e86184cd79975d94ce52e927ee499fe8d0d89c65498ac4e317f8c",
+    "prototypes\\installed-lower_panel-open.step": "7bc4e17fad10a0a943e0d25eb99056ad08756aad7c5604ee8486a3f8e9af4fb9",
+    "rev_b\\head-left-integral-outlet.step": "f94152a8e4bde0b5ffee4ffaa1b1281c1bcf54db4d0a35ef3645d539d1e6f832",
+    "prototypes\\installed-upper_shaft.step": "96385c224bbd71a724231b71a0335fc65f6401d33b226f8ad5706979f7eacfe7",
+    "prototypes\\installed-upper_left_collar.step": "10d3a78b629285bc66faa36f3cd43dc2df38812988f93c55c9b3e58e658f62f1",
+    "prototypes\\installed-upper_right_collar.step": "192cc917912b1744ddc9c373551500efd01930409a2c7a00595007882af9c922",
+    "prototypes\\installed-lower_shaft.step": "85625d76229401987cb0b418846c123f7b6e6d7a594c885d2b55ead32acdac9a",
+    "prototypes\\installed-lower_left_collar.step": "64a77c1e4cfba215b1d77112d8b9614e82e2c11213ebeda093dd04d3f90056aa",
+    "prototypes\\installed-lower_right_collar.step": "926404fae6318d29a40df698c4e87620da3e340bbf520b839197baa9dd4aa3f1"
+  },
+  "script_sha256": "6b1a73500c37216b768b629253382bb06e8e64404a21bdfa8aa6bcd0049dfb9f",
+  "limitations": [
+    "Nominal rigid solids at sampled points, not a continuous collision proof or tolerance study.",
+    "Servo, rod, pins, clamp hardware, guards, screw tools and wiring are installed later; their insertion remains to check.",
+    "No physical assembly, friction or printed-fit test has been performed."
+  ]
+}

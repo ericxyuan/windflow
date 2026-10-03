@@ -112,7 +112,7 @@ The following numbered positions define the **carrier header** nets; mark pin1 o
 | J8 XH4 | GND, A, B, push | Encoder daughterboard; C and second push contact toGND |
 | J9 XH4 | GND,3.3 V,SDA,SCL | TEMP1 |
 | J10 XH4 | GND,3.3 V,SDA,SCL | TEMP2 |
-| J11 XH4 | GND,3.3 V,SDA,SCL | SDP socket board; sensor native pins1/2/3/4=SCL/VDD/GND/SDA |
+| J11 XH4 | GND,3.3 V,SDA,SCL | SDP soldered daughterboard, 2 mm sensor pitch; sensor native pins1/2/3/4=SCL/VDD/GND/SDA |
 | J12 XH2 | GND, guard | Omron COM/NO; NC unused |
 | J13 XH4 | GND, limitedR, limitedG, limitedB | Status LED pins2/1/4/3 respectively |
 | J14 Samtec2 | GND,GP17 | Removable calibration jumper |

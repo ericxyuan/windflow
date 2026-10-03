@@ -1,8 +1,10 @@
-# Implementation plan — provisional until existing CAD is inspected
+# Implementation plan — revised after Onshape inspection, 2026-09-08
 
-## Inspection gate
+## Existing design and decision
 
-Obtain the existing Onshape document in an accessible authenticated browser. Record document/workspace/element URLs, existing features and variables, part and assembly structure, dimensions, fan envelope, air path, print splits, and current mechanism. Create an Onshape version before major changes. Revise this plan from those observations before changing geometry. Do not treat the architecture below as a review of the unseen model.
+Inspected the authenticated Windflow Main workspace in Chrome. The Base has 28 features and one part; its starting profile is 240 x 150 mm, R7.5 corners, extruded 120 mm. Two tilted P12 Pro fan instances feed a central divided plenum. The separate Duct has 21 features, a turning passage and a contracted rectangular exit; its outer-end sketch is underconstrained. The Full Fan Assembly has 12 instances, including eight 8 x 3 mm magnets, and 16 mate features. A separate 30-instance Iris Nozzle assembly uses planar overlapping blades and slotted plates. It is not a smooth converging nozzle and is not integrated in the full assembly. The visible full assembly has no encoder, power electronics or actuating servo.
+
+Save the original as **Baseline - original dual fan and iris - 2026-09-08**. Develop the replacement in clearly named new parametric studios in the same document. Use a straight axial path instead of merging two tilted streams into a turning duct. This removes the central obstruction and bend, reduces size and motor count, and provides a practical location for progressive converging panels. One fan has a lower free-air rating than two fans combined; improved delivered airflow or noise must be measured, not assumed. Retain the original version as the comparison baseline. Replace the planar iris with opposing panels rather than refining an inherently abrupt restriction.
 
 ## Mechanical architecture
 
@@ -14,11 +16,11 @@ Use a rounded inlet and a gradual circle-to-rounded-rectangle transition without
 
 ## Progressive nozzle
 
-Investigate two opposing broad panels forming a rectangular converging jet, driven by one feedback servo via equal opposite crank motions and a cross-shaft outside the air path. A linked pair is easier to align and seal than four overlapping petals. Initial clear outlet 104 x 94 mm, panel length 55 mm, minimum area ratio 0.75, giving approximately 12.3 degrees maximum inward rotation of each panel. Verify geometry and safe operating point before enabling boost. Use overlaps along sidewalls, supported metal hinge pins, accessible linkage cover and hard stops. The linkage must remain backdrivable enough for a tested opening spring; do not assume an unpowered hobby servo springs open.
+Use two opposing broad panels forming a rectangular converging jet, driven by one feedback servo through equal cranks and a translating slotted yoke outside the air path. The local mechanism fixture passes 61 nominal sampled positions; whole-product and insertion checks have separate reports. Separate keyed cranks permit assembly through the split housing, and a removable external cover protects the linkage. Initial clear outlet 104 x 94 mm, panel length 55 mm, minimum area ratio 0.75, giving 12.3355 degrees maximum inward rotation and 5.1273 mm yoke stroke with 24 mm cranks. Verify the fan operating point before enabling boost. Use sidewall overlaps, supported metal hinge pins, accessible linkage cover and hard stops. Do not assume an unpowered hobby servo springs open; loss of tracking must stop the fan.
 
 ## Electronics and power
 
-Use a Raspberry Pi Pico, a Bourns PEC11H encoder with horizontal shaft and edge-operated thumbwheel, addressable speed/ambient LEDs, separate power/fault indication, two temperature sensors, fan tach and differential-pressure sensor. Use a FEETECH FS90-FB position-feedback servo; measure linkage friction and required torque before committing the mount. USB-C PD requests 15 V; convert to regulated 12 V for the fan, 5 V for servo/lighting and a separate housekeeping rail. No battery. Size rails for unthrottled LED current and servo stall current. Load enables default off, with voltage/temperature/current supervision and a watchdog.
+Use a Raspberry Pi Pico, a Bourns PEC11H encoder with horizontal shaft and edge-operated thumbwheel, addressable speed/ambient LEDs, separate power/fault indication, two MCP9808 sensors, fan tach and an SDP810-125Pa differential-pressure sensor. Use a FEETECH FS90-FB position-feedback servo; measure linkage friction and required torque before committing the mount. USB-C PD requests 15 V / 2 A; convert to regulated 12 V for the fan and separate 5 V servo and logic/lighting rails. No battery. Size rails for unthrottled LED current and servo stall current. Load enables default off, with voltage/temperature/position supervision, branch fuses and a watchdog. There is no electronic current measurement in this revision.
 
 ## Firmware
 

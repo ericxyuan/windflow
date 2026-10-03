@@ -1,0 +1,23 @@
+# Purchased CAD register
+
+Manufacturer files are in `vendor/`; download URLs and SHA-256 hashes are in `../hardware/sources.json`. `vendor-checks.json` records seven loaded, valid B-reps. Purchased models are integrated in the 81-instance Onshape assembly dated 2026-10-03. The first import's faulty housings were repaired, separately verified with faulty parts disabled, and included in a successful fresh assembly import. See `onshape-inspection.md`.
+
+| Component | Exact source/model | Measured bounding box, mm | Design allowance and discrepancy |
+|---|---|---|---|
+| NF-A12x25 G2 PWM | Noctua public CAD | 120 x 120 x 27 | Includes silicone pads. Bare frame is 25 deep. Reserve at least 120.6 x 120.6 x 27.6 before additional isolators. Mounting centres 105 square from manufacturer specs. Public impeller is modified; **do not use it for CFD**. |
+| Raspberry Pi Pico SC0915 | Raspberry Pi Pico-R3 | 21 x 3.73 x 52.3, in vendor axes | Board is 51 x 21; micro-USB overhang makes full envelope longer. Add pin/header and cable volumes separately. |
+| Adafruit HUSB238 #5807 | Adafruit CAD | 20.32 x 24.608 x 12.10 | Includes terminal block and pins; reserve 21 x 26 x 14 plus C-plug insertion, cable bend and screw access. |
+| D24V22Fx regulator family | Pololu family STEP | 17.78 x 17.78 x 8.219 | Published board 17.8 square, nominal height 8.0; use 9.0 height allowance. Both mounting holes 2.18, centres 13.2 square diagonally. Family model covers #2855 and #2858. |
+| Adafruit #1426 NeoPixel stick | Adafruit CAD | 50.8 x 10.16 x 2.6 | Product page specifies 51.10 x 10.22 x 3.19. **Use the larger product dimensions**, with channel 51.6 x 10.8 x 3.7 minimum. Measure current supplied board revision. |
+| Adafruit MCP9808 #1782 | Adafruit CAD | 20.32 x 12.7 x 3.07 | The selected 1782 is the original non-STEMMA product. [Manufacturer revision history](https://www.adafruit.com/product/1782) confirms the 2023 change was silkscreen only; 5027 is the larger STEMMA product. Mount axes (2.54,10.16) and (17.78,10.16), diameter 2.5 mm. Allow 21.6 x 13.6 x 3.7 and confirm actual sample/pigtail clearance. |
+| Sensirion SDP810-125Pa | Sensirion SDP810 STEP | 29 x 27.05 x 17.95, in vendor axes | Matches published 29 x 18 x 27.05. Pins have **2 mm pitch** and short projection; direct-soldered daughterboard with independent housing and PCB support replaces the incompatible original socket. Tubing bends and strain relief remain to integrate. |
+
+## Attempts without a verified exact 3D model
+
+- FEETECH FS90-FB / Pololu #3436: Pololu resources provide the FS90-C family drawing, not an exact FB STEP. The case body is 23.2 x 12.5 x 22; lugs, output spline/horn and fourth wire need a measured sample. A generic SG90 model is not an acceptable exact substitution. [Source](https://www.pololu.com/product/3436/resources).
+- Bourns PEC11H-4215F-S0024: exact part listed by SnapMagic and manufacturer drawing obtained. Download access/model verification is pending; do not relabel another EC11 body as this part. Shaft 6 mm with flat at 4.5 mm, length 15 mm from mounting face, M7 x 0.75 bushing, 0.5 +/- 0.3 mm press travel. [Drawing](https://www.bourns.com/docs/product-datasheets/pec11h.pdf), [exact library listing](https://www.snapeda.com/parts/PEC11H-4215F-S0024/Bourns/view-part/).
+- Large power and USB-C hardware: actual HUSB238 and regulator CAD downloaded as above. The custom carrier, load-switch circuits and wiring are not yet a fabricated PCB or an integrated CAD model.
+
+## Onshape integration and remaining checks
+
+The original design is preserved in its named baseline. Native parametric bell-mouth, straightener and progressive-nozzle study regenerate as five parts. STEP imports use millimetres and Z-up. The local 81-component assembly passes 6,121 pair checks and 183 outward cover-removal samples across three boost positions, with zero unintended intersections (2026-10-03, source hashes recorded). The fresh Onshape assembly shows 81 instances; its native interference tool reports six overlaps within the supplied HUSB238 model and the intentional encoder/wheel engagement, with no further findings. Assembly motion/mates, fasteners, wiring/tubing and tool sweeps remain to complete. This does not establish physical assembly fit.

@@ -4,7 +4,7 @@ Use the E2 [BOM](../hardware/BOM.md), [wiring specification](../hardware/wiring.
 
 ## Build prerequisites
 
-The next fabrication artifact is a90 x65 mm maximum main carrier, with a22 mm assembled-height allowance including connectors and components. Pico, PD board and the three regulator modules are separately mounted and plugged into it. The exact carrier mounting-hole positions must be coordinated with CAD before fabrication. Also fabricate the small encoder daughterboard and pressure-sensor socket board. Leave room for plugs, removal tools and wiring bends outside the bare board outline.
+The next fabrication artifact is a90 x65 mm maximum main carrier, with a22 mm assembled-height allowance including connectors and components. Pico, PD board and the three regulator modules are separately mounted and plugged into it. The exact carrier mounting-hole positions must be coordinated with CAD before fabrication. Also fabricate the small encoder daughterboard and pressure-sensor direct-solder daughterboard. Leave room for plugs, removal tools and wiring bends outside the bare board outline.
 
 Create schematic symbols and footprints from the exact manufacturer package drawings listed in the circuit review, then run ERC/DRC and a schematic-to-BOM reference check. EF1 has a thermal pad: use stencil/reflow assembly and inspect the pad/thermal-via process. A general-purpose SOIC adapter or solderless breadboard does not provide the documented thermal design. Have the carrier fabricated and SMD-populated by a PCB assembly service if suitable reflow equipment and inspection are unavailable. No Gerbers or assembly service order are implied by this project state.
 

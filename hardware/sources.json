@@ -134,5 +134,13 @@
     "sha256": "5538138aa8907d1b5956e85393a1923ab10c448f4be64a35878c30b784c5b1d2",
     "status": "downloaded",
     "date": "2026-09-08"
+  },
+  {
+    "path": "hardware/datasheets/D2F.pdf",
+    "url": "https://omronfs.omron.com/en_US/ecb/products/pdf/en-d2f.pdf",
+    "bytes": 850668,
+    "sha256": "d3f2ed08101cf7ec6f57577643225f73faa5475026dda0072bcddf2d99fb04db",
+    "status": "downloaded",
+    "date": "2026-10-03"
   }
 ]

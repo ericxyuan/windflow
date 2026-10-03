@@ -1,6 +1,6 @@
 # Windflow prototype BOM — selected architecture, not an enclosure release
 
-2026-09-09, electrical revision E2. Quantities of mounting hardware remain provisional until the final CAD fastener schedule is frozen. Manufacturer ratings and engineering allowances are distinguished below. No components have been purchased. The electrical population below is fixed for the documented prototype netlist; a **90 x 65 x 22 mm carrier allowance is not a finished PCB**. See [circuit review](circuit-review.md) and [electronics assembly](../docs/electronics-assembly.md).
+Updated 2026-10-03, electrical revision E2. Quantities of mounting hardware remain provisional until the final CAD fastener schedule is frozen. Manufacturer ratings and engineering allowances are distinguished below. No components have been purchased. The electrical population below is fixed for the documented prototype netlist; a **90 x 65 x 22 mm carrier allowance is not a finished PCB**. See [circuit review](circuit-review.md) and [electronics assembly](../docs/electronics-assembly.md).
 
 ## Major electrical and electromechanical components
 
@@ -12,7 +12,7 @@
 | ENC1 / 1 | **Bourns PEC11H-4215F-S0024** | Passive quadrature contacts, 24 pulses / 24 detents, momentary push | 11.8 mm body width, 6 mm D-shaft, 15 mm from mounting face, M7 x 0.75 bushing. Contact limit 10 mA / 5 V; use 3.3 V / 10k pullups. High detent force, nominal 0.0206 Nm and 100k rotations; switch force nominal about 6 N means a well-supported wheel and stable base are required. [Datasheet](https://www.bourns.com/docs/product-datasheets/pec11h.pdf). |
 | LED1–3 / 3 | **Adafruit 1426 NeoPixel Stick**, 8 RGB pixels each | 5 V, 800 kHz GRB addressable; two chained for main bar, one downward ambient | Design for 51.10 x 10.22 x 3.19 each; CAD is smaller. Budget 60 mA per pixel = 0.48 A each full white; normal brightness is much lower. Current lot may be WS2812B/SK6812 compatible. [Product](https://www.adafruit.com/product/1426). |
 | LED4 / 1 | **Kingbright WP154A4SUREQBFZGC** | Common-cathode RGB status lamp, three buffered on/off signals | 5 mm lens, 5.9 mm flange, 8.6 mm body length; under 7 mA total using specified resistors at 5 V. Illuminate a short 22 x 4 mm diffuser bar. Pin 2 cathode; 1 red, 3 blue, 4 green. [Datasheet](https://www.kingbrightusa.com/images/catalog/spec/WP154A4SUREQBFZGC.pdf). |
-| TEMP1,2 / 2 | **Adafruit 1782 MCP9808 breakout**, Microchip MCP9808 | 3.3 V I2C, 0x18 / 0x19 (A0 high on second) | MCU board allowance 0.15 A includes sensors. Chip roughly 0.2 mA typical active; allocate 1 mA each. Actual current board geometry needs revision verification: local older CAD 20.32 x 12.7 x 3.07; reserve 26 x 19 x 7. Sense regulator hot region and fan/base air respectively. [Product](https://www.adafruit.com/product/1782). |
+| TEMP1,2 / 2 | **Adafruit 1782 MCP9808 breakout**, Microchip MCP9808 | 3.3 V I2C, 0x18 / 0x19 (A0 high on second) | Non-STEMMA board, manufacturer rounded size 21 x 13 x 2; CAD 20.32 x 12.7 x 3.07. Two 2.5 mm holes, 15.24 mm pitch. Reserve 21.6 x 13.6 x 3.7. Manufacturer says the 2023 revision changed silkscreen only; product 5027 is the different STEMMA board. Chip roughly 0.2 mA typical active; allocate 1 mA each. Sense regulator region and base air; characterize lag. [Product and revision history](https://www.adafruit.com/product/1782). |
 | DP1 / 1 | **Sensirion SDP810-125Pa**, order **1-101597-01** | 3.3 V, I2C 0x25; two pressure tubes | 29 x 18 x 27.05, maximum 5.5 mA. +/-125 Pa, low-pressure resolution suited to a 31 Pa fan. Adds meaningful restriction sensing because regulated RPM is not airflow. [Manufacturer](https://sensirion.com/products/catalog/SDP810-125Pa). |
 | PD1 / 1 | **Adafruit 5807 HUSB238 USB-C PD sink** | Configure jumpers **15 V / 2 A**; I2C 0x08 reports contract | PCB/USB about 24.6 x 20.3; supplied terminal block reaches 12.1 mm overall height in CAD. Request fixed PDO; verify measured bus and negotiated current before enabling loads. [Guide](https://learn.adafruit.com/adafruit-husb238-usb-type-c-power-delivery-breakout/pinouts). |
 | REG1 / 1 | **Pololu D24V22F12 #2855** | 15 V to 12 V fan rail; PG to MCU | 17.8 square, allow 9 high. Typical max 2.2 A at stated test conditions; our load is 0.15 A. Fixed voltage avoids accidental fan overvoltage. [Product](https://www.pololu.com/product/2855). |
@@ -67,10 +67,10 @@ All resistors are 1%, unless noted. Quantities are populated quantities, not ree
 | J14 / 1 each | Samtec **TSW-102-07-G-S**, **SNT-100-BK-G** | Recessed service jumper |
 | 3 | Samtec **SSW-105-02-G-S** | Regulator sockets; modules include male header; label all five nets |
 | 2 each | Samtec **SSW-120-02-G-S**, **TSW-120-07-G-S** | Removable Pico socket/header rows |
-| 1 | Samtec **SSW-104-02-G-S** | SDP810 socket on small carrier; do not strain sensor pins with tubing |
+| 1 fabricated | SDP810 daughterboard, **18 x 12 x 1.6 mm**, four 0.8 mm plated holes at **2 mm pitch** | Sensor soldered directly; two M2 PCB holes and independent housing screws take harness/tubing loads. The earlier 2.54 mm socket was incompatible. The reviewed 2 mm sockets also needed more insertion depth than the sensor's shortest allowed pins. |
 | 2 x 150 mm initial | **Tygon S3 E-3603**, 2 mm ID / 4 mm OD | Equal short pressure tubes; fit must be verified on actual nipples |
 | 2 m power, 3 m signal initial | **Alpha Wire 3051** 22 AWG stranded, **3050** 24 AWG stranded | Use red/black for power, identifiable signal colors; cut list follows installed routing, keep spare service length |
-| 1 fabricated set | Windflow E2 main carrier + encoder daughterboard + SDP socket board | FR4, plated through holes; this is a fabrication requirement, **design files are not yet released** |
+| 1 fabricated set | Windflow E2 main carrier + encoder daughterboard + SDP soldered daughterboard | FR4, plated through holes; mechanical interfaces exist, **PCB design files are not yet released** |
 
 The above is a complete electrical population for E2. It does not imply that every MPN is currently in stock. Use authorized distributors and confirm the orderable packaging suffix and board revision. The regional/color power-supply model is selected but its distributor-specific stock code remains to be recorded at purchase. Connector numbering is electrical, not a claim about an existing PCB silkscreen.
 
@@ -83,7 +83,14 @@ The above is a complete electrical population for E2. It does not imply that eve
 | 16 / 8 / 4 | **ISO 4762 A2-70 M3x8 / M3x12 / M3x35** socket head screws | Enclosure, carrier and fan mounts; final lengths selected after stack is measured, never bottom screws in inserts |
 | 32 / 8 | **ISO 7089 A2 M3 washers / ISO 10511 A2 M3 nyloc nuts** | Mechanical joints and through-bolt mounting |
 | 8 | **ISO 4762 A2-70 M2x8** + matching **ISO 4032 M2** nuts | Regulator boards and servo mounting, subject to actual lug hole verification |
-| 2 | **DIN 7 stainless h8 dowel pin, 3 x 120 mm**, deburred | Full-width boost-panel hinge shafts; use metal bushings as testing determines |
+| 2 | **Stainless steel ground rod, 3 mm diameter, cut to 155 mm**, deburred | Full-width boost-panel hinge shafts, installed X=-60.5..94.5 mm. Confirm sliding fit with bore coupon. |
+| 4 | **Mädler 62300300**, DIN 705 A shaft collar, 3 mm bore, 7 mm OD, 5 mm width, supplied M2x3 set screw | One collar at each shaft end; accessible with linkage cover removed. |
+| 2 | Stainless tube **7 mm OD / 3.3 mm ID**, cut to **7.6 mm** | Right-side hinge spacers, installed X=77.2..84.8 mm. Deburr square. |
+| 4 | Stainless tube **3 mm OD / 2.1 mm ID**, cut **2 x 9.1 mm, 1 x 9.6 mm, 1 x 8.6 mm** | Crank/yoke, rod/yoke and horn/rod pivot sleeves; screws clamp the metal stacks, allowing printed parts to rotate. |
+| 4 sets | **Accu SSC-M2-14-A2** cap screws, **HNN-M2-A2** nyloc nuts, **HPW-M2-A2** plain washers | Four sleeved pivots. CAD uses washer maximum **0.35 mm** and nut maximum **2.8 mm**; minimum one 0.4 mm thread pitch protrusion. Verify supplied dimensions. |
+| 2 sets | **ISO 4762 A2 M2x16**, **ISO 10511 M2 nyloc nut**, M2 washers | Split keyed crank clamps; tighten with shaft installed and confirm no binding. |
+| 2 / 2 sets | **ISO 4762 A2 M2x20 / M2x6**, matching **ISO 4032 M2** nuts | SDP810 housing / daughterboard mounts, plus two 0.4 mm washers on housing screws. |
+| 4 sets | **ISO 4762 A2 M2x14**, **ISO 4032 M2** nuts and 0.4 mm washers | Two mounts per Adafruit 1782 temperature board. |
 | 4 | Stainless spacer tube **4 mm OD / 3.2 mm ID**, cut to measured fan mount stack | Compression limiter around M3 bolts; never preload/crush the fan frame with TPU |
 | 1 set | Included FEETECH 20T servo horn and retaining screw | Use real splined horn; bolt printed crank adapter to horn |
 | as needed | **3M Scotch-Weld DP100 Plus Clear** epoxy | Magnet adhesive space plus mechanical cover; keep adhesive away from rotor/hinges |

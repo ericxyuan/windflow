@@ -1,5 +1,6 @@
 """Download cited public vendor data with a local provenance/hash manifest."""
 import urllib.request, urllib.parse, hashlib, json, zipfile, io
+from datetime import date
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor
 ROOT=Path(__file__).resolve().parents[1]
@@ -18,6 +19,7 @@ ASSETS={
  'hardware/reference/Adafruit_HUSB238.cpp':'https://raw.githubusercontent.com/adafruit/Adafruit_HUSB238/main/Adafruit_HUSB238.cpp',
  'hardware/reference/Adafruit_HUSB238.h':'https://raw.githubusercontent.com/adafruit/Adafruit_HUSB238/main/Adafruit_HUSB238.h',
  'hardware/datasheets/TPS22810.pdf':'https://www.ti.com/lit/ds/symlink/tps22810.pdf',
+ 'hardware/datasheets/D2F.pdf':'https://omronfs.omron.com/en_US/ecb/products/pdf/en-d2f.pdf',
 }
 for folder in ['1426 8x NeoPixel Stick','1782 MCP9808','5807 HUSB238 Breakout']:
  ASSETS['cad/vendor/'+folder.split(' ')[0]+'.step']='https://raw.githubusercontent.com/adafruit/Adafruit_CAD_Parts/main/'+urllib.parse.quote(folder+'/'+folder+'.step')
@@ -31,10 +33,18 @@ def fetch(item):
    if name.endswith('.pdf') and not data.startswith(b'%PDF'):raise ValueError('Not PDF')
    if name.endswith('.step') and b'ISO-10303-21' not in data[:200]:raise ValueError('Not STEP')
    p.write_bytes(data)
-  return {'path':name,'url':url,'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest(),'status':'downloaded','date':'2026-09-08'}
+  digest=hashlib.sha256(data).hexdigest()
+  old=PREVIOUS.get(name,{})
+  recorded=old.get('date') if old.get('sha256')==digest else date.today().isoformat()
+  return {'path':name,'url':url,'bytes':len(data),'sha256':digest,'status':'downloaded','date':recorded or date.today().isoformat()}
  except Exception as e:return {'path':name,'url':url,'status':'failed','error':str(e)}
+PREVIOUS={r['path']:r for r in json.loads((ROOT/'hardware/sources.json').read_text())} if (ROOT/'hardware/sources.json').exists() else {}
 if __name__=='__main__':
- rows=list(ThreadPoolExecutor(max_workers=6).map(fetch,ASSETS.items()))
+ # Preserve supplementary sources added by later engineering work. Re-fetch
+ # every recorded URL if its local cache is absent; do not drop manifest rows.
+ assets={r['path']:r['url'] for r in PREVIOUS.values() if 'url' in r}
+ assets.update(ASSETS)
+ rows=list(ThreadPoolExecutor(max_workers=6).map(fetch,assets.items()))
  (ROOT/'hardware/sources.json').write_text(json.dumps(rows,indent=2))
  for r in rows:print(r['path'],r['status'],r.get('bytes',r.get('error')))
  for p in (ROOT/'cad/vendor').glob('*.zip'):

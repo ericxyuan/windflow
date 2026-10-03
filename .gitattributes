@@ -1,0 +1,12 @@
+# Preserve the bytes used by CAD source/input provenance hashes on every host.
+# Keep readable diffs even though automatic line-ending conversion is disabled.
+*.py -text diff
+*.fs -text diff
+*.json -text diff
+# STEP writers use continuation-line padding; validity is checked geometrically.
+*.step -text diff -whitespace
+*.stp -text diff -whitespace
+*.stl -text
+*.uf2 -text
+*.png -text
+*.jpg -text
