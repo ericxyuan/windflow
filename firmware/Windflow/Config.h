@@ -3,16 +3,23 @@
 #include <math.h>
 #include <initializer_list>
 namespace wf {
-constexpr uint16_t kSchema=2; // ADC isolation/dividers changed: require new calibration.
-constexpr uint8_t kMainCapacity=16,kAmbientCapacity=8;
+constexpr uint16_t kSchema=3; // Screen/rotary interaction changed: recommission after migration.
+constexpr uint8_t kMainCapacity=16,kAmbientCapacity=8; // mainCount is a legacy reserved field, not LEDs.
+constexpr uint16_t kEncoderDetentsPerRev=24,kBoostEntryDetents=24,kBoostControlDetents=24;
+constexpr uint16_t kNormalSettingStep=10;
+constexpr uint16_t kScreenWidth=320,kScreenHeight=240,kScreenStatusHeight=64;
+constexpr uint16_t kScreenRenderRows=16;
+constexpr uint32_t kScreenSpiHz=24000000,kScreenRefreshMs=100,kScreenSliceMs=6;
 constexpr uint32_t kTickMs=10,kRampUpMs=1800,kRampDownMs=900;
 constexpr float kOutletWidth=104.0f,kOutletHeight=94.0f,kPanelLength=55.0f;
 constexpr float kMechanicalMaxAngle=15.0f;
 namespace pin {
 constexpr uint8_t encoderA=0,encoderB=1,button=2,tach=3,sda=4,scl=5;
-constexpr uint8_t fanPwm=6,servoPwm=8,mainLed=10,ambientLed=11;
+constexpr uint8_t fanPwm=6,servoPwm=8,ambientLed=11;
+constexpr uint8_t screenRst=7,screenDc=10,screenBacklight=16;
+constexpr uint8_t screenSck=18,screenMosi=19,screenCs=20;
 constexpr uint8_t fanEnable=12,servoEnable=13,ledEnable=14,guard=15;
-constexpr uint8_t service=17,statusR=18,statusG=19,statusB=20;
+constexpr uint8_t service=17;
 constexpr uint8_t servoPowerGood=21,fanPowerGood=22;
 constexpr uint8_t busAdc=26,servoFeedback=27,logicAdc=28;
 }
@@ -28,7 +35,9 @@ struct Settings {
  float busScale=11.1f,logicScale=2.1f;
  uint16_t servoUs[5]={1100,1200,1300,1400,1500};
  uint16_t feedback[5]={600,750,900,1050,1200};
- uint8_t mainCount=16,ambientCount=8,mainBrightness=36,ambientBrightness=12;
+ // Preserve the storage field names: mainBrightness/nightMain now control TFT backlight.
+ // mainCount is reserved at 16; the only addressable strip contains eight ambient LEDs.
+ uint8_t mainCount=16,ambientCount=8,mainBrightness=60,ambientBrightness=12;
  uint8_t nightMain=0,nightAmbient=0;
  uint16_t reserved=0;
 };

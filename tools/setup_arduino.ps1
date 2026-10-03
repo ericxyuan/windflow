@@ -28,3 +28,5 @@ if ($LASTEXITCODE -ne 0) { throw 'Index update failed' }
 if ($LASTEXITCODE -ne 0) { throw 'Core install failed' }
 & $cli --config-file $config lib install 'Adafruit NeoPixel@1.15.2'
 if ($LASTEXITCODE -ne 0) { throw 'NeoPixel install failed' }
+& $cli --config-file $config lib install 'Adafruit ST7735 and ST7789 Library@1.11.0' 'Adafruit GFX Library@1.12.6' 'Adafruit BusIO@1.17.4' 'Adafruit seesaw Library@1.7.9' 'SD@1.3.0'
+if ($LASTEXITCODE -ne 0) { throw 'Pinned ST7789 display library installation failed' }

@@ -1,8 +1,13 @@
 # Preserve the bytes used by CAD source/input provenance hashes on every host.
 # Keep readable diffs even though automatic line-ending conversion is disabled.
-*.py -text diff
+*.py -text diff whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 *.fs -text diff
-*.json -text diff
+*.json -text diff whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+# Firmware validation records hash source bytes as well as the compiled UF2.
+*.cpp -text diff whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+*.h -text diff whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+*.ino -text diff whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+*.ps1 -text diff whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 # STEP writers use continuation-line padding; validity is checked geometrically.
 *.step -text diff -whitespace
 *.stp -text diff -whitespace

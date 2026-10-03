@@ -142,5 +142,45 @@
     "sha256": "d3f2ed08101cf7ec6f57577643225f73faa5475026dda0072bcddf2d99fb04db",
     "status": "downloaded",
     "date": "2026-10-03"
+  },
+  {
+    "path": "cad/vendor/4311.step",
+    "url": "https://raw.githubusercontent.com/adafruit/Adafruit_CAD_Parts/main/4311%202in%20TFT%20IPS%20Display/4311%202in%20TFT%20IPS%20Display.step",
+    "bytes": 2000708,
+    "sha256": "80019f5ddc6301c0648360c8ad18083b08007f0323ef5937f0d72361e9dade70",
+    "status": "downloaded",
+    "date": "2026-10-03"
+  },
+  {
+    "path": "hardware/reference/Adafruit-4311-EYESPI.brd",
+    "url": "https://raw.githubusercontent.com/adafruit/Adafruit-2.0-inch-240x320-TFT-PCB/master/Adafruit%20EYESPI%202.0%20Inch%20240x320%20IPS%20TFT.brd",
+    "bytes": 1294909,
+    "sha256": "7747d0234e04c21be8dd7f28bbb2556b879dd4c64d06d7770222075fd02edc0a",
+    "status": "downloaded",
+    "date": "2026-10-03"
+  },
+  {
+    "path": "hardware/reference/Adafruit-4311-EYESPI.sch",
+    "url": "https://raw.githubusercontent.com/adafruit/Adafruit-2.0-inch-240x320-TFT-PCB/master/Adafruit%20EYESPI%202.0%20Inch%20240x320%20IPS%20TFT.sch",
+    "bytes": 452895,
+    "sha256": "293d087264aa6faf609988dad10865e44c307b22c31ddd1bce4b879468717578",
+    "status": "downloaded",
+    "date": "2026-10-03"
+  },
+  {
+    "path": "cad/vendor/ruthex-RX-M2x4.step",
+    "url": "https://cdn.shopify.com/s/files/1/0567/7019/9760/files/ruthex_RX-M2x4.step?v=1621264078",
+    "bytes": 1231150,
+    "sha256": "4fe0b584d0f9473ff9dc4afbf08bf6a3c951bf32e81e595a912bb1f1f71dd3ce",
+    "status": "downloaded",
+    "date": "2026-10-03"
+  },
+  {
+    "path": "hardware/datasheets/Ruthex-RX.pdf",
+    "url": "https://www.igo3d.com/mediafiles/Sonstiges/Ruthex/ruthex_Datenblatt_RX-Serie.pdf",
+    "bytes": 342196,
+    "sha256": "6bfc05690afce95e31ad652a8c1860ea9d8781373cf34f5730c935f703bf1fde",
+    "status": "downloaded",
+    "date": "2026-10-03"
   }
 ]

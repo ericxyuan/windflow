@@ -37,7 +37,7 @@ def overlap(a,b):
  aa,bb=a.BoundingBox(),b.BoundingBox()
  if any(getattr(aa,k+'max')<=getattr(bb,k+'min')+1e-5 or getattr(bb,k+'max')<=getattr(aa,k+'min')+1e-5 for k in 'xyz'):return 0.
  return max(0.,a.intersect(b).Volume())
-issues=[];pairs=0;cover_removal=[]
+issues=[];pairs=0;cover_removal=[];static_cover_cache={}
 items=list(parts.items())
 for i,(name,s) in enumerate(items):
  for other,t in items[i+1:]:
@@ -87,12 +87,19 @@ for state in (mechanism['kinematics'][0],mechanism['kinematics'][30],mechanism['
    shifted=varied[moving].translate((dx,0,0))
    for other,t in varied.items():
     if other in ('linkage-service-cover','tpu-servo-cable-grommet'):continue
-    v=overlap(shifted,t);worst=max(worst,v)
+    # The cover and all stationary parts have exactly the same solids in every
+    # pose. Reuse that result, retaining a separate check for every moving part.
+    key=(moving,dx,other)
+    if other not in moving_names and key in static_cover_cache:v=static_cover_cache[key]
+    else:
+     v=overlap(shifted,t)
+     if other not in moving_names:static_cover_cache[key]=v
+    worst=max(worst,v)
     if v>.01:issues.append({'pose':pose+' cover removal','a':moving,'b':other,'outward_mm':dx,'overlap_mm3':round(v,4)})
   cover_removal.append({'pose':pose,'outward_x_mm':dx,'maximum_overlap_mm3':worst})
 report={'part_count':len(parts),'pairs_checked':pairs,'poses':['open','halfway','maximum boost'],
  'completed_utc':datetime.now(timezone.utc).isoformat(),
- 'source_sha256':{n:hashlib.sha256((ROOT/n).read_bytes()).hexdigest() for n in ('build_head.py','build_base.py','build_prototypes.py','check_assembly.py','parameters.json')},
+ 'source_sha256':{n:hashlib.sha256((ROOT/n).read_bytes()).hexdigest() for n in ('build_head.py','build_base.py','display_layout.py','build_prototypes.py','check_assembly.py','parameters.json')},
  'cover_removal_samples':cover_removal,
  'input_sha256':{str(path.relative_to(ROOT)):hashlib.sha256(path.read_bytes()).hexdigest()
   for path in [OUT/'validation.json',OUT/'base-validation.json',ROOT/'prototypes/validation.json']},
@@ -110,7 +117,7 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d.art3d import Poly3DCollection
 fig=plt.figure(figsize=(15,10),facecolor='#eef2f5')
 ax=fig.add_axes((0,.07,.80,.82),projection='3d')
-hidden={'head-left-integral-outlet','electronics-base-shell','magnetic-front-grille','main-led-retaining-frame','encoder-rim-shroud'}
+hidden={'head-left-integral-outlet','electronics-base-shell','magnetic-front-grille','display-front-bezel','encoder-rim-shroud'}
 for name,s in parts.items():
  if name in hidden:continue
  vertices,tris=s.tessellate(.45,.4);xyz=[(v.x,v.y,v.z) for v in vertices]
@@ -121,7 +128,7 @@ ax.set_box_aspect((205,185,210));ax.view_init(elev=24,azim=135);ax.grid(False);a
 fig.text(.045,.94,'WINDFLOW / integrated development CAD',fontsize=23,weight='bold',color='#17394a')
 fig.text(.045,.903,'Actual B-reps and manufacturer component models. Left shell and front grille hidden for inspection.',fontsize=11,color='#526a78')
 fig.text(.79,.66,'142 mm bell-mouth\n114 mm throat\n120 mm PWM fan\n7 trial radial vanes\n104 × 94 mm outlet\n75% minimum gross area',fontsize=12,linespacing=1.8,color='#17394a')
-fig.text(.79,.37,'Horizontal thumbwheel\n16-pixel main display\n8-pixel downward light\nUSB-C PD / no battery\nRemovable service tray',fontsize=11,linespacing=1.8,color='#526a78')
+fig.text(.79,.37,'Horizontal thumbwheel\n320 x 240 IPS screen\n8-pixel downward light\nUSB-C PD / no battery\nRemovable service tray',fontsize=11,linespacing=1.8,color='#526a78')
 fig.text(.045,.025,'DEVELOPMENT — not a manufacturing release. See assembly-interference.json; physical airflow, noise, retention and fit remain untested.',fontsize=10,color='#78582b')
 fig.savefig(OUT/'assembly-cutaway.png',dpi=140);plt.close(fig)
 assert (OUT/'assembly-cutaway.png').stat().st_size>10000

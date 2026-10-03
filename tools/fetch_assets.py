@@ -20,6 +20,11 @@ ASSETS={
  'hardware/reference/Adafruit_HUSB238.h':'https://raw.githubusercontent.com/adafruit/Adafruit_HUSB238/main/Adafruit_HUSB238.h',
  'hardware/datasheets/TPS22810.pdf':'https://www.ti.com/lit/ds/symlink/tps22810.pdf',
  'hardware/datasheets/D2F.pdf':'https://omronfs.omron.com/en_US/ecb/products/pdf/en-d2f.pdf',
+ 'cad/vendor/4311.step':'https://raw.githubusercontent.com/adafruit/Adafruit_CAD_Parts/main/4311%202in%20TFT%20IPS%20Display/4311%202in%20TFT%20IPS%20Display.step',
+ 'hardware/reference/Adafruit-4311-EYESPI.brd':'https://raw.githubusercontent.com/adafruit/Adafruit-2.0-inch-240x320-TFT-PCB/master/Adafruit%20EYESPI%202.0%20Inch%20240x320%20IPS%20TFT.brd',
+ 'hardware/reference/Adafruit-4311-EYESPI.sch':'https://raw.githubusercontent.com/adafruit/Adafruit-2.0-inch-240x320-TFT-PCB/master/Adafruit%20EYESPI%202.0%20Inch%20240x320%20IPS%20TFT.sch',
+ 'cad/vendor/ruthex-RX-M2x4.step':'https://cdn.shopify.com/s/files/1/0567/7019/9760/files/ruthex_RX-M2x4.step?v=1621264078',
+ 'hardware/datasheets/Ruthex-RX.pdf':'https://www.igo3d.com/mediafiles/Sonstiges/Ruthex/ruthex_Datenblatt_RX-Serie.pdf',
 }
 for folder in ['1426 8x NeoPixel Stick','1782 MCP9808','5807 HUSB238 Breakout']:
  ASSETS['cad/vendor/'+folder.split(' ')[0]+'.step']='https://raw.githubusercontent.com/adafruit/Adafruit_CAD_Parts/main/'+urllib.parse.quote(folder+'/'+folder+'.step')

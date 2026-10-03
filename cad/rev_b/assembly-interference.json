@@ -1,17 +1,18 @@
 {
-  "part_count": 81,
-  "pairs_checked": 6121,
+  "part_count": 76,
+  "pairs_checked": 5536,
   "poses": [
     "open",
     "halfway",
     "maximum boost"
   ],
-  "completed_utc": "2026-10-03T10:20:24.357315+00:00",
+  "completed_utc": "2026-10-03T17:54:46.714829+00:00",
   "source_sha256": {
     "build_head.py": "48e427c959fa807b7c9876a72d578360f8043637c26d9991115b00a6149ef4b5",
-    "build_base.py": "636f19e2bf739e73b5cd9f5fc8a35d84dbe6680271c73e0a7b256856356debba",
+    "build_base.py": "6dc44c84dcdc084d2560fee898633ec606226fbd5dce098f943a4e4742d6c2b0",
+    "display_layout.py": "06db882559464d5c2411cd3d325f358a8b61b509414a40df668be44bb4737392",
     "build_prototypes.py": "e6527fbc5b8d9fc9245b078549fde6d021774c2e23f2ce0988abbde89dd5f0d9",
-    "check_assembly.py": "f0c8a2a47d98e93d7013b29ed53b3cfbd443025d1e134b19a5811c1ebf72e585",
+    "check_assembly.py": "59f486b575dd15ed59b4ae9062e59f787ccf3fbda74fe45da35474227fe0ee5d",
     "parameters.json": "6f86731c3123d8d15c025a0b34fb400919749b0227dfb576a218ed821d70c8ee"
   },
   "cover_removal_samples": [
@@ -933,12 +934,28 @@
   ],
   "input_sha256": {
     "rev_b\\validation.json": "7bca05d0bc76f90b461c83821311c3d33166d641db53f59f7851a9eb5048ba69",
-    "rev_b\\base-validation.json": "58c05414416d00d49d9cc9cb1b737963843188154cbc5d6dfd682227b04fcf59",
+    "rev_b\\base-validation.json": "cdcf4c2cf21181bf945c2fafb8a12a95237da884606a4e7de9110cfc24927450",
     "prototypes\\validation.json": "7b7e47c2fa2f839a47fde4bf7347e63709d08bb2de3a500cabbf0188d947310b"
   },
   "intersections_to_resolve": [],
   "limitations": [
     "Unrouted carrier and servo/encoder envelopes are marked approximate",
     "Sampled static nominal solid check, not tolerance stack, wiring sweep or assembly insertion test"
+  ],
+  "export_sha256": {
+    "full-development-assembly.step": "9e377ef335463d43efa9764526675d6dbd54f98391e9d279571e6ecb914d7159"
+  },
+  "metadata_amendments": [
+    {
+      "utc": "2026-10-03T17:59:47.313412+00:00",
+      "scope": "Descriptive service-sequence correction only; geometry, STEP/STL bytes and validation results unchanged",
+      "source": "display_layout.py",
+      "previous_source_sha256": "1cff0df7b300d946e92c16051e7ea9b7b34158a7fa6fdd44d01bbcdafac75b24",
+      "current_source_sha256": "06db882559464d5c2411cd3d325f358a8b61b509414a40df668be44bb4737392",
+      "AST_proof": "Exactly one string constant changed; all remaining AST nodes identical",
+      "previous_text": "Unplug display pigtail and undo four rear screws; withdraw cradle rearward before pulling service tray",
+      "current_text": "Unplug display pigtail; remove front bezel/window and service tray; undo four rear screws; withdraw cradle rearward 2 mm then lower through open bottom",
+      "previous_base_manifest_sha256": "910b7c26981d3c1d1f32f0abe242a570a060f397526c1450791b4ace9b7e2e13"
+    }
   ]
 }

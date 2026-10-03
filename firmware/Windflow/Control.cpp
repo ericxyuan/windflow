@@ -1,6 +1,7 @@
 #include "Control.h"
 #include <stdlib.h>
 namespace wf {
+static_assert(kEncoderDetentsPerRev>0&&kBoostEntryDetents>0&&kBoostControlDetents>0&&kNormalSettingStep>0,"Encoder control increments must be positive");
 bool valid(const Settings& s){
  const float f[]={s.boostThreshold,s.minAreaRatio,s.minPwm,s.maxPwm,s.rpmAtMax,s.pressureSoft,s.pressureHard,s.warnC,s.tripC,s.pressureZero,s.busScale,s.logicScale};
  for(float v:f)if(!isfinite(v))return false;
@@ -37,29 +38,107 @@ Mapping mapSetting(const Settings& s){
 }
 void Control::resetOutputs(){out=Outputs{};out.servoUs=settings.servoUs[0];}
 void Control::transition(State s,uint32_t now){state=s;entered_=now;servoErrorMs_=0;}
-void Control::begin(uint32_t now,bool watchdogReset){last_=now;entered_=now;liveFan_=false;resetOutputs();if(watchdogReset)trip(Fault::Watchdog,now);}
-void Control::trip(Fault f,uint32_t now){fault=f;transition(State::Fault,now);liveFan_=false;resetOutputs();}
-void Control::rotate(int detents){
- if(state==State::Service)return;
- if(settings.encoderReverse)detents=-detents;
- settings.setting=(uint16_t)clamp(settings.setting+detents*10,0,1000);
- // Rotation changes the remembered setting; only the press changes on/off.
- settingsDirty=true;
+uint16_t Control::normalSettingLimit()const{
+ // Invalid stored/calibration values still go through the commissioning gate;
+ // do not pass NaN to integer conversion while presenting its safe UI fallback.
+ return isfinite(settings.boostThreshold)?uint16_t(lroundf(clamp(settings.boostThreshold,0,1)*1000)):750;
 }
-void Control::shortPress(){settings.on=!settings.on;settingsDirty=true;}
+RotaryMode Control::rotaryMode()const{
+ if(state==State::Fault||state==State::Service)return RotaryMode::Normal;
+ if(boostControl_)return RotaryMode::Boost;
+ return settings.on&&settings.setting>=normalSettingLimit()?RotaryMode::BoostEntry:RotaryMode::Normal;
+}
+uint16_t Control::entryDetentsRemaining()const{return boostControl_?0:kBoostEntryDetents-entryDetents_;}
+float Control::normalPowerFraction()const{
+ uint16_t limit=normalSettingLimit();
+ return limit?clamp(settings.setting/float(limit),0,1):0;
+}
+bool Control::boostEntryReady()const{
+ return state==State::Live&&settings.on&&settings.setting>=normalSettingLimit()&&
+        out.fanEnable&&out.pwm>=settings.maxPwm-.02f&&out.closure<=.001f&&servoOpenConfirmed_&&
+        !out.thermal&&!out.boostLimited;
+}
+void Control::resetRotaryControl(){
+ boostControl_=false;entryDetents_=0;boostDetents_=0;
+ uint16_t limit=normalSettingLimit();
+ if(settings.setting>limit){settings.setting=limit;settingsDirty=true;}
+}
+void Control::begin(uint32_t now,bool watchdogReset){
+ state=State::WaitPower;fault=Fault::None;last_=now;entered_=now;
+ powerStable_=0;stallMs_=0;servoErrorMs_=0;pressureMs_=0;rpmErrorMs_=0;
+ liveFan_=false;servoOpenConfirmed_=false;encoderPosition_=0;boostCeiling_=1;resetRotaryControl();
+ // Saved boost restores full NORMAL power, with the panels open. A fresh full
+ // turn must explicitly authorize boost again after homing/startup completes.
+ changedAt=now;resetOutputs();if(watchdogReset)trip(Fault::Watchdog,now);
+}
+void Control::trip(Fault f,uint32_t now){fault=f;transition(State::Fault,now);liveFan_=false;resetRotaryControl();resetOutputs();}
+void Control::rotate(int detents){
+ if(state==State::Service||state==State::Fault||detents==0)return;
+ // Widen before direction reversal, multiplication or batching: INT_MIN and
+ // very large accumulated input batches must behave like individual detents.
+ int64_t steps=int64_t(detents)*(settings.encoderReverse?-1:1);
+ int64_t phase=int64_t(encoderPosition_)+steps%kEncoderDetentsPerRev;
+ encoderPosition_=uint16_t((phase+kEncoderDetentsPerRev)%kEncoderDetentsPerRev);
+ uint16_t before=settings.setting,limit=normalSettingLimit();
+ if(!settings.on){resetRotaryControl();}
+ if(!boostControl_&&settings.setting>limit)settings.setting=limit;
+ while(steps){
+  if(boostControl_){
+   if(steps>0){
+    int64_t amount=steps<kBoostControlDetents-boostDetents_?steps:kBoostControlDetents-boostDetents_;
+    boostDetents_+=uint16_t(amount);steps=0; // Extra travel at maximum never accumulates.
+   }else{
+    int64_t amount=-steps<boostDetents_?-steps:boostDetents_;
+    boostDetents_-=uint16_t(amount);steps+=amount;
+    if(!boostDetents_){boostControl_=false;entryDetents_=0;}
+   }
+   settings.setting=uint16_t(limit+lroundf((1000-limit)*boostFraction()));
+   if(!boostControl_)settings.setting=limit;
+   continue;
+  }
+  if(steps<0){
+   int64_t undo=-steps<entryDetents_?-steps:entryDetents_;
+   entryDetents_-=uint16_t(undo);steps+=undo;
+   if(steps){
+    int64_t value=int64_t(settings.setting)+steps*kNormalSettingStep;
+    settings.setting=uint16_t(value>0?value:0);steps=0;
+   }
+  }else{
+   if(settings.setting<limit){
+    int64_t normalSteps=(limit-settings.setting+kNormalSettingStep-1)/kNormalSettingStep;
+    int64_t amount=steps<normalSteps?steps:normalSteps;
+    int64_t value=int64_t(settings.setting)+amount*kNormalSettingStep;
+    settings.setting=uint16_t(value<limit?value:limit);steps-=amount;
+   }
+   if(!steps)break;
+   if(!boostEntryReady()){entryDetents_=0;break;}
+   int64_t amount=steps<kBoostEntryDetents-entryDetents_?steps:kBoostEntryDetents-entryDetents_;
+   entryDetents_+=uint16_t(amount);steps-=amount;
+   if(entryDetents_==kBoostEntryDetents){boostControl_=true;boostDetents_=0;entryDetents_=0;}
+  }
+ }
+ // The arming turn and relative phase are volatile. Only an actual setting
+ // change needs persistence; only a press changes whether the fan is on.
+ if(settings.setting!=before)settingsDirty=true;
+}
+void Control::shortPress(){settings.on=!settings.on;if(!settings.on)resetRotaryControl();settingsDirty=true;}
 void Control::longPress(){settings.night=!settings.night;settingsDirty=true;}
-void Control::enterService(uint32_t now){resetOutputs();serviceFan_=0;serviceServo_=false;liveFan_=false;servicePulse_=settings.commissioned?settings.servoUs[0]:1500;serviceUntil_=now;transition(State::Service,now);}
-void Control::exitService(uint32_t now){serviceFan_=0;serviceServo_=false;liveFan_=false;fault=Fault::None;resetOutputs();powerStable_=0;transition(State::WaitPower,now);}
+void Control::enterService(uint32_t now){resetRotaryControl();resetOutputs();serviceFan_=0;serviceServo_=false;liveFan_=false;servicePulse_=settings.commissioned?settings.servoUs[0]:1500;serviceUntil_=now;transition(State::Service,now);}
+void Control::exitService(uint32_t now){resetRotaryControl();serviceFan_=0;serviceServo_=false;liveFan_=false;fault=Fault::None;resetOutputs();powerStable_=0;transition(State::WaitPower,now);}
 bool Control::testFan(float duty,uint32_t now){if(state!=State::Service||!isfinite(duty)||duty<0||duty>settings.maxPwm)return false;serviceFan_=duty;serviceServo_=false;serviceUntil_=now+10000;serviceLast_=now;return true;}
 bool Control::jogServo(int delta,uint32_t now){if(state!=State::Service||abs(delta)>10)return false;serviceFan_=0;serviceServo_=true;servicePulse_=(uint16_t)clamp(servicePulse_+delta,900,2100);serviceUntil_=now+800;serviceLast_=now;return true;}
 bool Control::acknowledge(uint32_t now,const Inputs& in){
  if(state!=State::Fault||!in.pd15v||!isfinite(in.busV)||in.busV<14||in.busV>16||!isfinite(in.logicV)||in.logicV<4.65f||in.logicV>5.35f||!in.tempsValid||!isfinite(in.tempPower)||!isfinite(in.tempMotor)||!in.guardClosed||in.tempPower>settings.warnC-5||in.tempMotor>settings.warnC-5)return false;
- fault=Fault::None;settings.on=0;markChanged(now);liveFan_=false;boostCeiling_=1;resetOutputs();powerStable_=0;transition(State::WaitPower,now);return true;
+ fault=Fault::None;settings.on=0;resetRotaryControl();markChanged(now);liveFan_=false;boostCeiling_=1;resetOutputs();powerStable_=0;transition(State::WaitPower,now);return true;
 }
 float Control::feedbackTarget()const{return tableValue(settings.feedback,out.closure);}
 void Control::tick(uint32_t now,const Inputs& in){
  uint32_t elapsed=now-last_;last_=now;float dt=clamp(elapsed*.001f,0,.05f);uint32_t ms=(uint32_t)(dt*1000);
+ servoOpenConfirmed_=in.servoPowerGood&&abs(int(in.servoAdc)-int(settings.feedback[0]))<60;
  bool power=in.pd15v&&isfinite(in.busV)&&in.busV>=14&&in.busV<=16&&in.logicV>=4.65f&&in.logicV<=5.35f;
+ if(!settings.on)resetRotaryControl();
+ // Programmatic changes (service/imported settings) cannot bypass the gesture.
+ if(!boostControl_&&settings.setting>normalSettingLimit())resetRotaryControl();
  if(state==State::Fault){resetOutputs();return;}
  if(state==State::WaitPower){
   resetOutputs();
@@ -87,8 +166,16 @@ void Control::tick(uint32_t now,const Inputs& in){
   if(out.thermal||!in.pressureValid||fabsf(in.pressurePa-settings.pressureZero)>settings.pressureSoft){out.pwm=0;out.servoEnable=false;out.fanEnable=false;}
   // Tests expire without keepalive, and need temperature/pressure/guard protection.
  }else{
-  Mapping m=mapSetting(settings);
-  if(settings.setting/1000.f<=settings.boostThreshold)boostCeiling_=1;
+  Mapping m;
+  if(settings.on&&settings.setting){
+   if(boostControl_){
+    m.pwm=settings.maxPwm;
+    m.areaRatio=1-boostFraction()*(1-settings.minAreaRatio);
+    m.angle=asinf(kOutletHeight*(1-m.areaRatio)/(2*kPanelLength))*180/3.14159265359f;
+    m.closure=m.angle/maxPanelAngle(settings);
+   }else m.pwm=settings.minPwm+(settings.maxPwm-settings.minPwm)*normalPowerFraction();
+  }
+  if(!boostControl_||boostDetents_==0)boostCeiling_=1;
   bool pressureBad=!in.pressureValid||!isfinite(in.pressurePa)||in.pressurePa-settings.pressureZero< -2;
   float pressure=in.pressurePa-settings.pressureZero;
   if(pressureBad||out.thermal)boostCeiling_=0;
@@ -105,10 +192,10 @@ void Control::tick(uint32_t now,const Inputs& in){
    out.ledEnable=false;
    out.servoUs=settings.servoUs[0];out.closure=0;out.pwm=0;out.fanEnable=false;out.animation=0;
    bool home=abs(int(in.servoAdc)-int(settings.feedback[0]))<60&&in.servoPowerGood;
-   if(now-entered_>=400&&home){
+   if(now-entered_>=400&&home&&in.displayReady){
     if(settings.night||out.thermal||pressureBad||!settings.on||settings.setting==0)transition(State::Live,now);
     else transition(State::RampUp,now);
-   }else if(now-entered_>1500){trip(Fault::Servo,now);return;}
+   }else if(now-entered_>1500&&!home){trip(Fault::Servo,now);return;}
    return;
   }
   if(state==State::RampUp){
@@ -149,5 +236,6 @@ void Control::tick(uint32_t now,const Inputs& in){
   if(rpmErrorMs_>=800){boostCeiling_=0;out.boostLimited=true;}
   if(rpmErrorMs_>=4000){trip(Fault::Stall,now);return;}
  }else rpmErrorMs_=0;
+ if(!boostControl_&&!boostEntryReady())entryDetents_=0;
 }
 }

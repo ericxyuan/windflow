@@ -9,15 +9,15 @@ static void reply(const char* s){if(Serial.availableForWrite()>int(strlen(s)+2))
 struct Field{const char* name;size_t offset;uint8_t kind;};
 #define WF_FLOAT_FIELD(name) {#name,offsetof(Settings,name),0}
 #define WF_BYTE_FIELD(name) {#name,offsetof(Settings,name),1}
-static const Field fields[]={WF_FLOAT_FIELD(boostThreshold),WF_FLOAT_FIELD(minAreaRatio),WF_FLOAT_FIELD(minPwm),WF_FLOAT_FIELD(maxPwm),WF_FLOAT_FIELD(rpmAtMax),WF_FLOAT_FIELD(pressureSoft),WF_FLOAT_FIELD(pressureHard),WF_FLOAT_FIELD(warnC),WF_FLOAT_FIELD(tripC),WF_FLOAT_FIELD(busScale),WF_FLOAT_FIELD(logicScale),WF_BYTE_FIELD(encoderReverse),WF_BYTE_FIELD(mainCount),WF_BYTE_FIELD(ambientCount),WF_BYTE_FIELD(mainBrightness),WF_BYTE_FIELD(ambientBrightness),WF_BYTE_FIELD(nightMain),WF_BYTE_FIELD(nightAmbient)};
+static const Field fields[]={WF_FLOAT_FIELD(boostThreshold),WF_FLOAT_FIELD(minAreaRatio),WF_FLOAT_FIELD(minPwm),WF_FLOAT_FIELD(maxPwm),WF_FLOAT_FIELD(rpmAtMax),WF_FLOAT_FIELD(pressureSoft),WF_FLOAT_FIELD(pressureHard),WF_FLOAT_FIELD(warnC),WF_FLOAT_FIELD(tripC),WF_FLOAT_FIELD(busScale),WF_FLOAT_FIELD(logicScale),WF_BYTE_FIELD(encoderReverse),WF_BYTE_FIELD(ambientCount),WF_BYTE_FIELD(mainBrightness),WF_BYTE_FIELD(ambientBrightness),WF_BYTE_FIELD(nightMain),WF_BYTE_FIELD(nightAmbient)};
 void Service::command(char* line,uint32_t now,Control& c,const Hardware& hw,Lighting& lights,Storage& storage){
  char* cmd=strtok(line," ");if(!cmd)return;
  if(!strcmp(cmd,"status")){
-  char b[250];snprintf(b,sizeof(b),"state=%u fault=%u u=%u pwm=%.3f close=%.3f rpm=%.0f dp=%.2f temp=%.1f/%.1f bus=%.2f logic=%.2f servo=%u adc=%u pd=%u tempOK=%u dpOK=%u guard=%u commissioned=%u fs=%u\n",unsigned(c.state),unsigned(c.fault),c.settings.setting,c.out.pwm,c.out.closure,hw.in.rpm,hw.in.pressurePa,hw.in.tempPower,hw.in.tempMotor,hw.in.busV,hw.in.logicV,c.out.servoUs,hw.in.servoAdc,hw.in.pd15v,hw.in.tempsValid,hw.in.pressureValid,hw.in.guardClosed,c.settings.commissioned,storage.available());
+  char b[320];snprintf(b,sizeof(b),"state=%u fault=%u u=%u mode=%u entry=%u left=%u dial=%u pwm=%.3f close=%.3f rpm=%.0f dp=%.2f temp=%.1f/%.1f bus=%.2f logic=%.2f servo=%u adc=%u pd=%u tempOK=%u dpOK=%u guard=%u commissioned=%u fs=%u\n",unsigned(c.state),unsigned(c.fault),c.settings.setting,unsigned(c.rotaryMode()),c.entryDetents(),c.entryDetentsRemaining(),c.encoderPositionDetents(),c.out.pwm,c.out.closure,hw.in.rpm,hw.in.pressurePa,hw.in.tempPower,hw.in.tempMotor,hw.in.busV,hw.in.logicV,c.out.servoUs,hw.in.servoAdc,hw.in.pd15v,hw.in.tempsValid,hw.in.pressureValid,hw.in.guardClosed,c.settings.commissioned,storage.available());
   if(Serial.availableForWrite()>=int(strlen(b)))Serial.print(b);return;
  }
  if(!strcmp(cmd,"ack")){reply(c.acknowledge(now,hw.in)?"OK fault acknowledged; fan off":"ERR unsafe to acknowledge");return;}
- if(!strcmp(cmd,"help")){reply("status ack; service: evidence, set KEY VALUE, fan 0..100, jog -10..10, capture 0..4, zero, measure fan-min|fan-max, led 0..23 R G B, format ERASE, commit MEASURED, exit");return;}
+ if(!strcmp(cmd,"help")){reply("status ack; service: evidence, set KEY VALUE, fan 0..100, jog -10..10, capture 0..4, zero, measure fan-min|fan-max, led 0..7 R G B (ambient), screen 1..5 (R/G/B/white/grid), format ERASE, commit MEASURED, exit");return;}
  if(c.state!=State::Service){reply("ERR fit service jumper and hold encoder during boot for 4s");return;}
  if(!strcmp(cmd,"evidence")){char b[96];snprintf(b,sizeof(b),"captures=0x%02x zero=%u fanMin=%u fanMax=%u",calibration_.captures,calibration_.zeroed,calibration_.fanMin,calibration_.fanMax);reply(b);return;}
  if(!strcmp(cmd,"exit")){c.exitService(now);reply("OK");return;}
@@ -50,6 +50,10 @@ void Service::command(char* line,uint32_t now,Control& c,const Hardware& hw,Ligh
  if(!strcmp(cmd,"led")){
   float v[4];for(int i=0;i<4;i++)if(!number(strtok(nullptr," "),v[i])||floorf(v[i])!=v[i]){reply("ERR syntax");return;}
   reply(!strtok(nullptr," ")&&lights.test(int(v[0]),int(v[1]),int(v[2]),int(v[3]),now)?"OK":"ERR bounds");return;
+ }
+ if(!strcmp(cmd,"screen")){
+  float v;bool ok=number(strtok(nullptr," "),v)&&!strtok(nullptr," ")&&floorf(v)==v&&v>=1&&v<=5&&lights.screenTest(uint8_t(v),now);
+  reply(ok?"OK screen test expires in 2s":"ERR screen 1..5 (R/G/B/white/grid)");return;
  }
  if(!strcmp(cmd,"format")){
   char* yes=strtok(nullptr," ");if(!yes||strcmp(yes,"ERASE")||strtok(nullptr," ")||c.out.fanEnable||c.out.servoEnable){reply("ERR loads must be off; format ERASE");return;}

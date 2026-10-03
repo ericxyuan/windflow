@@ -3,7 +3,10 @@
 namespace wf {
 enum class State:uint8_t {WaitPower,Uncommissioned,Homing,RampUp,RampDown,Live,Service,Fault};
 enum class Fault:uint8_t {None,Power,TemperatureSensor,Overtemperature,Stall,Servo,Pressure,Guard,Watchdog};
+enum class RotaryMode:uint8_t {Normal,BoostEntry,Boost};
 struct Inputs {
+ // Software transport handshake, not a physical LCD health measurement.
+ bool displayReady=true;
  bool pd15v=false,tempsValid=false,pressureValid=false,guardClosed=false;
  bool fanPowerGood=false,servoPowerGood=false;
  float busV=0,logicV=0,tempPower=0,tempMotor=0,pressurePa=0,rpm=0;
@@ -31,6 +34,17 @@ public:
  bool jogServo(int delta,uint32_t now);
  bool acknowledge(uint32_t now,const Inputs& in);
  float feedbackTarget()const;
+ // Encoder phase is relative to boot, not an absolute shaft position. Entry and
+ // boost turns are deliberate runtime gestures and are never restored from flash.
+ RotaryMode rotaryMode()const;
+ uint16_t entryDetents()const{return entryDetents_;}
+ uint16_t entryDetentsRemaining()const;
+ uint16_t encoderPositionDetents()const{return encoderPosition_;}
+ float encoderPositionTurns()const{return encoderPosition_/float(kEncoderDetentsPerRev);}
+ uint16_t normalSettingLimit()const;
+ float normalPowerFraction()const;
+ float boostFraction()const{return boostDetents_/float(kBoostControlDetents);}
+ bool boostEntryReady()const;
  bool settingsDirty=false;
  uint32_t changedAt=0;
  void markChanged(uint32_t now){settingsDirty=true;changedAt=now;}
@@ -41,6 +55,9 @@ private:
  float boostCeiling_=1,returnFrom_=0,serviceFan_=0;
  uint16_t servicePulse_=1500;
  bool liveFan_=false,serviceServo_=false;
+ bool boostControl_=false,servoOpenConfirmed_=false;
+ uint16_t entryDetents_=0,boostDetents_=0,encoderPosition_=0;
+ void resetRotaryControl();
  void transition(State s,uint32_t now);
  void trip(Fault f,uint32_t now);
  void resetOutputs();

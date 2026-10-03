@@ -1,0 +1,1599 @@
+{
+  "completed_utc": "2026-10-03T17:15:49.192471+00:00",
+  "source_sha256": {
+    "display_layout.py": "06db882559464d5c2411cd3d325f358a8b61b509414a40df668be44bb4737392",
+    "build_base.py": "6dc44c84dcdc084d2560fee898633ec606226fbd5dce098f943a4e4742d6c2b0",
+    "check_display.py": "657ea69ac03b23e12fdce95015a8a6b0f867a6016db6ae9bb5f947bb9ad4e4fa"
+  },
+  "input_sha256": {
+    "electronics-base-shell": "841d3388ee27e40ed4fb78ae77177bf4f40194b08ae28a7d5c4b64ef9363a695",
+    "display-front-bezel": "553404636d577e9ce32b804f34f534140dd38c1afe2aea31ae9a6aa84226850b",
+    "REF-display-clear-window-45x34p4x1": "7c5ff586dff7ec325c0671504e382038348bf827060b444227cf12ff8dbcad2c",
+    "display-removable-cradle": "9caf54797e08acf7e5685ce5ac4db5b06ed84d8a62247b2e7a12755d9a2603a0",
+    "Adafruit-ST7789-4311-display-vendor": "e62cc79add7c191588fbc44f9623f6d332c34f9daf61b2b14b16694b50b40d13"
+  },
+  "samples": [
+    {
+      "part": "display-front-bezel",
+      "translation_mm": [
+        0,
+        0,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "REF-display-clear-window-45x34p4x1",
+      "translation_mm": [
+        0,
+        0,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-front-bezel",
+      "translation_mm": [
+        0,
+        1,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "REF-display-clear-window-45x34p4x1",
+      "translation_mm": [
+        0,
+        1,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-front-bezel",
+      "translation_mm": [
+        0,
+        2,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "REF-display-clear-window-45x34p4x1",
+      "translation_mm": [
+        0,
+        2,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-front-bezel",
+      "translation_mm": [
+        0,
+        3,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "REF-display-clear-window-45x34p4x1",
+      "translation_mm": [
+        0,
+        3,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-front-bezel",
+      "translation_mm": [
+        0,
+        4,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "REF-display-clear-window-45x34p4x1",
+      "translation_mm": [
+        0,
+        4,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-front-bezel",
+      "translation_mm": [
+        0,
+        5,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "REF-display-clear-window-45x34p4x1",
+      "translation_mm": [
+        0,
+        5,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-front-bezel",
+      "translation_mm": [
+        0,
+        6,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "REF-display-clear-window-45x34p4x1",
+      "translation_mm": [
+        0,
+        6,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-front-bezel",
+      "translation_mm": [
+        0,
+        7,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "REF-display-clear-window-45x34p4x1",
+      "translation_mm": [
+        0,
+        7,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-front-bezel",
+      "translation_mm": [
+        0,
+        8,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "REF-display-clear-window-45x34p4x1",
+      "translation_mm": [
+        0,
+        8,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-front-bezel",
+      "translation_mm": [
+        0,
+        9,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "REF-display-clear-window-45x34p4x1",
+      "translation_mm": [
+        0,
+        9,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-front-bezel",
+      "translation_mm": [
+        0,
+        10,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "REF-display-clear-window-45x34p4x1",
+      "translation_mm": [
+        0,
+        10,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-front-bezel",
+      "translation_mm": [
+        0,
+        11,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "REF-display-clear-window-45x34p4x1",
+      "translation_mm": [
+        0,
+        11,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-front-bezel",
+      "translation_mm": [
+        0,
+        12,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "REF-display-clear-window-45x34p4x1",
+      "translation_mm": [
+        0,
+        12,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-front-bezel",
+      "translation_mm": [
+        0,
+        13,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "REF-display-clear-window-45x34p4x1",
+      "translation_mm": [
+        0,
+        13,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-front-bezel",
+      "translation_mm": [
+        0,
+        14,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "REF-display-clear-window-45x34p4x1",
+      "translation_mm": [
+        0,
+        14,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-front-bezel",
+      "translation_mm": [
+        0,
+        15,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "REF-display-clear-window-45x34p4x1",
+      "translation_mm": [
+        0,
+        15,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-front-bezel",
+      "translation_mm": [
+        0,
+        16,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "REF-display-clear-window-45x34p4x1",
+      "translation_mm": [
+        0,
+        16,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-front-bezel",
+      "translation_mm": [
+        0,
+        17,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "REF-display-clear-window-45x34p4x1",
+      "translation_mm": [
+        0,
+        17,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-front-bezel",
+      "translation_mm": [
+        0,
+        18,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "REF-display-clear-window-45x34p4x1",
+      "translation_mm": [
+        0,
+        18,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-front-bezel",
+      "translation_mm": [
+        0,
+        19,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "REF-display-clear-window-45x34p4x1",
+      "translation_mm": [
+        0,
+        19,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-front-bezel",
+      "translation_mm": [
+        0,
+        20,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "REF-display-clear-window-45x34p4x1",
+      "translation_mm": [
+        0,
+        20,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        0,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        0,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -0.5,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -0.5,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -1,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -1,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -1.5,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -1.5,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        0
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -1
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -1
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -2
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -2
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -3
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -3
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -4
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -4
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -5
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -5
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -6
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -6
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -7
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -7
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -8
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -8
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -9
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -9
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -10
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -10
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -11
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -11
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -12
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -12
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -13
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -13
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -14
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -14
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -15
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -15
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -16
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -16
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -17
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -17
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -18
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -18
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -19
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -19
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -20
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -20
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -21
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -21
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -22
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -22
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -23
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -23
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -24
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -24
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -25
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -25
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -26
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -26
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -27
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -27
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -28
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -28
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -29
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -29
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -30
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -30
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -31
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -31
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -32
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -32
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -33
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -33
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -34
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -34
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -35
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -35
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -36
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -36
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -37
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -37
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -38
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -38
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -39
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -39
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -40
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -40
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -41
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -41
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -42
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -42
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -43
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -43
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -44
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -44
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -45
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -45
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -46
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -46
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -47
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -47
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -48
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -48
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -49
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -49
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -50
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -50
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -51
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -51
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -52
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -52
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -53
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -53
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -54
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -54
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -55
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -55
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -56
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -56
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -57
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -57
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -58
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -58
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -59
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -59
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "display-removable-cradle",
+      "translation_mm": [
+        0,
+        -2,
+        -60
+      ],
+      "overlap_mm3": 0
+    },
+    {
+      "part": "Adafruit-ST7789-4311-display-vendor",
+      "translation_mm": [
+        0,
+        -2,
+        -60
+      ],
+      "overlap_mm3": 0
+    }
+  ],
+  "intersections_to_resolve": [],
+  "sequence": "Unplug screen; remove service tray and front bezel/window; undo cradle screws; pull cradle rearward 2 mm then lower through open bottom.",
+  "limits": "Nominal B-rep/sampled path; excludes screws, harness, tools, tolerance stack and physical printed fit.",
+  "metadata_amendments": [
+    {
+      "utc": "2026-10-03T17:59:47.313412+00:00",
+      "scope": "Descriptive service-sequence correction only; geometry, STEP/STL bytes and validation results unchanged",
+      "source": "display_layout.py",
+      "previous_source_sha256": "1cff0df7b300d946e92c16051e7ea9b7b34158a7fa6fdd44d01bbcdafac75b24",
+      "current_source_sha256": "06db882559464d5c2411cd3d325f358a8b61b509414a40df668be44bb4737392",
+      "AST_proof": "Exactly one string constant changed; all remaining AST nodes identical",
+      "previous_text": "Unplug display pigtail and undo four rear screws; withdraw cradle rearward before pulling service tray",
+      "current_text": "Unplug display pigtail; remove front bezel/window and service tray; undo four rear screws; withdraw cradle rearward 2 mm then lower through open bottom",
+      "previous_base_manifest_sha256": "910b7c26981d3c1d1f32f0abe242a570a060f397526c1450791b4ace9b7e2e13"
+    }
+  ]
+}

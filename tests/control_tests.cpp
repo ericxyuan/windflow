@@ -2,6 +2,7 @@
 #include "SensorCodec.h"
 #include "Calibration.h"
 #include "SettingsRecord.h"
+#include "EncoderDecoder.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits>
@@ -13,8 +14,27 @@ struct Rig{
  Rig(){c.settings.commissioned=1;in.pd15v=true;in.tempsValid=true;in.pressureValid=true;in.guardClosed=true;in.fanPowerGood=true;in.servoPowerGood=true;in.busV=15;in.logicV=5;in.tempPower=25;in.tempMotor=25;in.pressurePa=3;in.servoAdc=600;c.begin(0);}
  void step(uint32_t duration,bool follow=true,bool tach=true){for(uint32_t t=0;t<duration;t+=10){now+=10;if(follow)in.servoAdc=(uint16_t)c.feedbackTarget();if(tach)in.rpm=c.out.pwm*c.settings.rpmAtMax;c.tick(now,in);}}
  void live(){step(7000);CHECK(c.state==State::Live);}
+ void boosted(){c.settings.setting=c.normalSettingLimit();live();CHECK(c.boostEntryReady());c.rotate(kBoostEntryDetents);CHECK(c.rotaryMode()==RotaryMode::Boost);c.rotate(kBoostControlDetents);step(3500);CHECK(c.out.closure>.95);}
 };
 int main(){
+ {Rig r;r.in.displayReady=false;r.step(2000);CHECK(r.c.state==State::Homing);CHECK(!r.c.out.fanEnable&&r.c.out.pwm==0);r.in.displayReady=true;r.step(10);CHECK(r.c.state==State::RampUp);r.step(3500);CHECK(r.c.state==State::Live);}
+ {Rig r;r.in.displayReady=false;r.step(1200);r.in.tempPower=66;r.step(10);CHECK(r.c.fault==Fault::Overtemperature);CHECK(!r.c.out.fanEnable&&!r.c.out.servoEnable);}
+ // A complete physical encoder turn is 24 complete four-edge detents. Capture
+ // all edges while the main loop is busy, then deliver one signed batch.
+ {EncoderDecoder d;int32_t pending=0;const uint8_t up[]={1,0,2,3},down[]={2,0,1,3};
+  for(int turn=0;turn<24;turn++)for(uint8_t edge:up)pending=accumulateEncoderDetent(pending,d.transition(edge));
+  CHECK(pending==24);for(int turn=0;turn<24;turn++)for(uint8_t edge:down)pending=accumulateEncoderDetent(pending,d.transition(edge));CHECK(pending==0);
+  for(int turn=0;turn<24;turn++)for(uint8_t edge:down)pending=accumulateEncoderDetent(pending,d.transition(edge));CHECK(pending==-24);
+  int delivered=pending;pending=0;CHECK(delivered==-24);CHECK(d.transition(3)==0);CHECK(pending==0);
+ }
+ {EncoderDecoder d;int sum=0;const uint8_t bounce[]={1,3,1,0,1,0,2,0,2,3,2,3};for(uint8_t edge:bounce)sum+=d.transition(edge);CHECK(sum==1);for(int i=0;i<100;i++){sum+=d.transition(3);CHECK(sum==1);}}
+ {EncoderDecoder d;int sum=0;const uint8_t bounce[]={2,3,2,0,2,0,1,0,1,3,1,3};for(uint8_t edge:bounce)sum+=d.transition(edge);CHECK(sum==-1);}
+ {EncoderDecoder d;CHECK(d.transition(1)==0);CHECK(d.transition(0)==0);CHECK(d.transition(1)==0);CHECK(d.transition(3)==0);const uint8_t down[]={2,0,1,3};int sum=0;for(uint8_t edge:down)sum+=d.transition(edge);CHECK(sum==-1);}
+ {EncoderDecoder d;CHECK(d.transition(1)==0);CHECK(d.transition(2)==0);CHECK(d.transition(3)==0);CHECK(d.transition(1)==0);CHECK(d.transition(0)==0);CHECK(d.transition(2)==1);CHECK(d.transition(3)==0);}
+ {EncoderDecoder d;for(int i=0;i<100;i++){CHECK(d.transition(0)==0);CHECK(d.transition(3)==0);}d.reset(0);CHECK(d.transition(2)==0);CHECK(d.transition(3)==0);CHECK(d.transition(1)==0);CHECK(d.transition(0)==1);}
+ // Alternating forward/backward motion inside an unpolled batch has no drift.
+ {EncoderDecoder d;int32_t pending=0;const uint8_t up[]={1,0,2,3},down[]={2,0,1,3};for(int i=0;i<127;i++){for(uint8_t edge:up)pending=accumulateEncoderDetent(pending,d.transition(edge));for(uint8_t edge:down)pending=accumulateEncoderDetent(pending,d.transition(edge));CHECK(pending==0);}for(int i=0;i<17;i++)for(uint8_t edge:up)pending=accumulateEncoderDetent(pending,d.transition(edge));CHECK(pending==17);}
+ CHECK(accumulateEncoderDetent(INT32_MAX,1)==INT32_MAX);CHECK(accumulateEncoderDetent(INT32_MAX,-1)==INT32_MAX-1);CHECK(accumulateEncoderDetent(INT32_MIN,-1)==INT32_MIN);CHECK(accumulateEncoderDetent(INT32_MIN,1)==INT32_MIN+1);CHECK(accumulateEncoderDetent(17,0)==17);
  Settings s;CHECK(valid(s));CHECK(maxPanelAngle(s)>12&&maxPanelAngle(s)<13);
  float prevP=0,prevC=0;
  for(int i=0;i<=1000;i++){s.setting=i;Mapping m=mapSetting(s);CHECK(m.pwm>=prevP-.00001f);CHECK(m.closure>=prevC-.00001f);CHECK(m.areaRatio>=.74999f);CHECK(m.closure<=1.00001f);if(i<=750)CHECK(m.closure==0);else CHECK(m.pwm==1);prevP=m.pwm;prevC=m.closure;}
@@ -29,11 +49,11 @@ int main(){
  {Rig r;r.c.settings.on=0;r.step(4000);CHECK(r.c.out.pwm==0&&!r.c.out.fanEnable);}
  {Rig r;r.c.settings.setting=0;for(int i=0;i<500;i++){r.step(10);CHECK(!r.c.out.fanEnable);CHECK(r.c.out.pwm==0);}CHECK(r.c.state==State::Live);}
  {Rig r;r.step(1500);r.c.settings.setting=0;r.step(10);CHECK(r.c.out.pwm==0&&!r.c.out.fanEnable);CHECK(r.c.state==State::Live);}
- {Rig r;r.c.settings.setting=1000;r.live();CHECK(r.c.out.closure>.95);CHECK(r.c.out.pwm>.99);}
- {Rig r;r.c.settings.setting=1000;r.live();r.in.pressurePa=20;r.step(1400);CHECK(r.c.out.closure<.05);CHECK(r.c.out.boostLimited);r.in.pressurePa=4;r.step(2000);CHECK(r.c.out.closure<.05);r.c.settings.setting=700;r.step(100);r.c.settings.setting=1000;r.step(3500);CHECK(r.c.out.closure>.95);}
- {Rig r;r.c.settings.setting=1000;r.live();r.in.pressureValid=false;r.step(1000);CHECK(r.c.out.closure<.05);CHECK(r.c.out.pwm<=.5001);CHECK(r.c.state==State::Live);}
+ {Rig r;r.boosted();CHECK(r.c.out.pwm>.99);}
+ {Rig r;r.boosted();r.in.pressurePa=20;r.step(1400);CHECK(r.c.out.closure<.05);CHECK(r.c.out.boostLimited);r.in.pressurePa=4;r.step(2000);CHECK(r.c.out.closure<.05);r.c.rotate(-kBoostControlDetents);r.step(100);CHECK(r.c.boostEntryReady());r.c.rotate(kBoostEntryDetents+kBoostControlDetents);r.step(3500);CHECK(r.c.out.closure>.95);}
+ {Rig r;r.boosted();r.in.pressureValid=false;r.step(1000);CHECK(r.c.out.closure<.05);CHECK(r.c.out.pwm<=.5001);CHECK(r.c.state==State::Live);}
  {Rig r;r.live();r.in.pressurePa=30;r.step(1500);CHECK(r.c.fault==Fault::Pressure);CHECK(!r.c.out.fanEnable);}
- {Rig r;r.c.settings.setting=1000;r.live();r.in.tempPower=56;r.step(1100);CHECK(r.c.out.thermal);CHECK(r.c.out.closure<.05);CHECK(r.c.out.pwm<=.5001);CHECK(!r.c.out.ledEnable);r.in.tempPower=53;r.step(100);CHECK(r.c.out.thermal);r.in.tempPower=49;r.step(100);CHECK(!r.c.out.thermal);}
+ {Rig r;r.boosted();r.in.tempPower=56;r.step(1100);CHECK(r.c.out.thermal);CHECK(r.c.out.closure<.05);CHECK(r.c.out.pwm<=.5001);CHECK(!r.c.out.ledEnable);r.in.tempPower=53;r.step(100);CHECK(r.c.out.thermal);r.in.tempPower=49;r.step(100);CHECK(!r.c.out.thermal);}
  {Rig r;r.step(1500);CHECK(r.c.state==State::RampUp);r.in.tempPower=56;r.step(50);CHECK(r.c.out.pwm<=.5);CHECK(r.c.state==State::Live);}
  {Rig r;r.live();r.in.tempPower=66;r.step(10);CHECK(r.c.fault==Fault::Overtemperature);CHECK(!r.c.out.fanEnable&&!r.c.out.servoEnable);CHECK(!r.c.acknowledge(r.now,r.in));r.in.tempPower=25;CHECK(r.c.acknowledge(r.now,r.in));CHECK(r.c.settings.on==0);}
  {Rig r;r.live();r.in.tempsValid=false;r.step(10);CHECK(r.c.fault==Fault::TemperatureSensor);}
@@ -49,6 +69,30 @@ int main(){
  {Rig r;r.c.enterService(0);CHECK(r.c.testFan(0,0));r.step(200);CHECK(!r.c.out.fanEnable&&!r.c.out.servoEnable);CHECK(r.c.jogServo(5,r.now));r.step(100);CHECK(r.c.out.servoEnable);CHECK(r.c.testFan(0,r.now));r.step(10);CHECK(!r.c.out.fanEnable&&!r.c.out.servoEnable);r.c.settings.maxPwm=.8f;CHECK(!r.c.testFan(1,r.now));}
  {Rig r;r.c.begin(0,true);r.step(1000);CHECK(r.c.fault==Fault::Watchdog);CHECK(!r.c.out.fanEnable);}
  {Rig r;r.now=0xfffff000;r.c.begin(r.now);r.step(7000);CHECK(r.c.state==State::Live);}
+ // A full arming turn is distinct from the subsequent progressive boost turn.
+ {Rig r;r.c.settings.setting=r.c.normalSettingLimit();r.live();CHECK(r.c.rotaryMode()==RotaryMode::BoostEntry);CHECK(r.c.entryDetentsRemaining()==24);CHECK(r.c.normalPowerFraction()==1);r.c.settingsDirty=false;
+  for(int i=1;i<24;i++){r.c.rotate(1);r.step(10);CHECK(r.c.rotaryMode()==RotaryMode::BoostEntry);CHECK(r.c.entryDetents()==i);CHECK(r.c.entryDetentsRemaining()==24-i);CHECK(r.c.settings.setting==750);CHECK(r.c.out.pwm>.99);CHECK(r.c.out.closure==0);CHECK(!r.c.settingsDirty);}
+  r.c.rotate(1);r.step(10);CHECK(r.c.rotaryMode()==RotaryMode::Boost);CHECK(r.c.boostFraction()==0);CHECK(r.c.entryDetentsRemaining()==0);CHECK(r.c.encoderPositionDetents()==0);CHECK(r.c.encoderPositionTurns()==0);CHECK(r.c.out.closure==0);
+  r.c.rotate(1);CHECK(r.c.boostFraction()==1/24.f);CHECK(r.c.settings.setting>750);r.step(300);CHECK(r.c.out.closure>0);CHECK(r.c.out.pwm>.99);
+  r.c.rotate(-1);CHECK(r.c.rotaryMode()==RotaryMode::BoostEntry);CHECK(r.c.entryDetents()==0);CHECK(r.c.entryDetentsRemaining()==24);CHECK(r.c.boostFraction()==0);r.step(300);CHECK(r.c.out.closure==0);
+  r.c.rotate(23);CHECK(r.c.rotaryMode()==RotaryMode::BoostEntry);CHECK(r.c.entryDetentsRemaining()==1);r.c.rotate(1);CHECK(r.c.rotaryMode()==RotaryMode::Boost);CHECK(r.c.boostFraction()==0);
+ }
+ {Rig r;r.c.settings.setting=750;r.live();r.c.rotate(10);CHECK(r.c.entryDetents()==10);r.c.rotate(-4);CHECK(r.c.entryDetents()==6);CHECK(r.c.settings.setting==750);r.c.rotate(-6);CHECK(r.c.entryDetents()==0);CHECK(r.c.settings.setting==750);r.c.rotate(-1);CHECK(r.c.rotaryMode()==RotaryMode::Normal);CHECK(r.c.settings.setting==740);CHECK(r.c.encoderPositionDetents()==23);}
+ // Startup cannot replay saved boost or accumulate an arming turn while homing.
+ {Rig r;r.c.settings.setting=1000;r.c.begin(0);CHECK(r.c.settings.setting==750);CHECK(r.c.settingsDirty);CHECK(r.c.entryDetents()==0);r.c.rotate(100);CHECK(r.c.entryDetents()==0);CHECK(r.c.rotaryMode()==RotaryMode::BoostEntry);r.live();CHECK(r.c.out.closure==0);CHECK(r.c.out.pwm>.99);r.c.rotate(23);CHECK(r.c.entryDetentsRemaining()==1);}
+ {Rig r;r.c.settings.setting=1000;r.live();CHECK(r.c.settings.setting==750);CHECK(r.c.out.closure==0);CHECK(r.c.boostFraction()==0);}
+ // A batched turn is equivalent to individual detents, including crossing both boundaries.
+ {Rig a,b;a.c.settings.setting=750;b.c.settings.setting=750;a.live();b.live();a.c.rotate(41);for(int i=0;i<41;i++)b.c.rotate(1);CHECK(a.c.settings.setting==b.c.settings.setting);CHECK(a.c.boostFraction()==b.c.boostFraction());CHECK(a.c.encoderPositionDetents()==b.c.encoderPositionDetents());CHECK(a.c.boostFraction()==17/24.f);a.c.rotate(-20);for(int i=0;i<20;i++)b.c.rotate(-1);CHECK(a.c.settings.setting==720);CHECK(a.c.settings.setting==b.c.settings.setting);CHECK(a.c.rotaryMode()==RotaryMode::Normal);CHECK(a.c.entryDetents()==0);}
+ {Rig r;r.c.settings.setting=750;r.live();r.c.rotate(std::numeric_limits<int>::max());CHECK(r.c.settings.setting==1000);CHECK(r.c.boostFraction()==1);CHECK(r.c.encoderPositionDetents()==std::numeric_limits<int>::max()%24);r.c.rotate(std::numeric_limits<int>::min());CHECK(r.c.settings.setting==0);CHECK(r.c.rotaryMode()==RotaryMode::Normal);CHECK(r.c.encoderPositionDetents()==23);}
+ {Rig r;r.c.settings.encoderReverse=1;r.c.settings.setting=750;r.live();r.c.rotate(-24);CHECK(r.c.rotaryMode()==RotaryMode::Boost);r.c.rotate(-12);CHECK(r.c.boostFraction()==.5f);CHECK(r.c.encoderPositionDetents()==12);r.c.rotate(12);CHECK(r.c.rotaryMode()==RotaryMode::BoostEntry);CHECK(r.c.entryDetentsRemaining()==24);r.c.rotate(std::numeric_limits<int>::min());CHECK(r.c.boostFraction()==1);r.c.rotate(std::numeric_limits<int>::max());CHECK(r.c.settings.setting==0);}
+ {Rig r;r.c.settings.setting=750;r.live();r.c.rotate(12);r.c.shortPress();CHECK(!r.c.settings.on);CHECK(r.c.entryDetents()==0);r.c.rotate(100);CHECK(r.c.boostFraction()==0);CHECK(r.c.entryDetents()==0);r.c.shortPress();r.step(100);CHECK(r.c.rotaryMode()==RotaryMode::BoostEntry);CHECK(r.c.entryDetentsRemaining()==24);}
+ {Rig r;r.boosted();r.c.shortPress();CHECK(r.c.settings.setting==750);CHECK(r.c.boostFraction()==0);CHECK(r.c.entryDetents()==0);r.c.shortPress();r.step(1500);CHECK(r.c.out.closure==0);CHECK(r.c.entryDetentsRemaining()==24);}
+ {Rig r;r.c.settings.setting=750;r.live();r.c.rotate(12);r.c.enterService(r.now);CHECK(r.c.entryDetents()==0);r.c.rotate(100);CHECK(r.c.entryDetents()==0);r.c.exitService(r.now);r.live();CHECK(r.c.entryDetentsRemaining()==24);}
+ {Rig r;r.boosted();r.in.guardClosed=false;r.step(10);CHECK(r.c.state==State::Fault);CHECK(r.c.boostFraction()==0);CHECK(r.c.settings.setting==750);r.c.rotate(100);CHECK(r.c.entryDetents()==0);r.in.guardClosed=true;CHECK(r.c.acknowledge(r.now,r.in));r.step(1500);r.c.shortPress();r.step(1500);CHECK(r.c.entryDetentsRemaining()==24);CHECK(r.c.out.closure==0);}
+ {Rig r;r.c.settings.boostThreshold=.7555f;r.c.settings.setting=r.c.normalSettingLimit();r.live();CHECK(r.c.out.closure==0);CHECK(r.c.out.pwm>.99);r.c.rotate(24);r.step(100);CHECK(r.c.out.closure==0);r.c.rotate(24);r.step(3500);CHECK(r.c.out.closure>.95);}
+ {Rig r;r.boosted();r.c.rotate(-24);r.c.rotate(24);CHECK(r.c.rotaryMode()==RotaryMode::BoostEntry);CHECK(r.c.entryDetents()==0);CHECK(!r.c.boostEntryReady());r.step(1000);CHECK(r.c.out.closure==0);CHECK(r.c.boostEntryReady());r.c.rotate(24);CHECK(r.c.rotaryMode()==RotaryMode::Boost);}
+ {Rig r;r.c.settings.boostThreshold=.7555f;r.c.settings.setting=r.c.normalSettingLimit();r.live();r.c.rotate(12);CHECK(r.c.entryDetents()==12);r.in.pressureValid=false;r.step(10);CHECK(r.c.entryDetents()==0);CHECK(!r.c.boostEntryReady());r.c.rotate(24);CHECK(r.c.entryDetents()==0);CHECK(r.c.boostFraction()==0);r.in.pressureValid=true;r.step(1000);CHECK(r.c.boostEntryReady());CHECK(r.c.entryDetentsRemaining()==24);r.c.rotate(24);CHECK(r.c.rotaryMode()==RotaryMode::Boost);}
+ {Rig r;r.c.settings.setting=750;r.live();r.c.rotate(12);r.in.servoAdc=3000;r.step(10,false);CHECK(r.c.state==State::Live);CHECK(!r.c.boostEntryReady());CHECK(r.c.entryDetents()==0);r.c.rotate(24);CHECK(r.c.rotaryMode()==RotaryMode::BoostEntry);CHECK(r.c.entryDetents()==0);r.step(100);CHECK(r.c.boostEntryReady());}
  CHECK(decodePd(0x46,0x40));CHECK(!decodePd(0x36,0x40));CHECK(!decodePd(0x44,0x40));CHECK(!decodePd(0x46,0));
  CHECK(fabsf(decodeMcp(0x0190)-25)<.01);CHECK(fabsf(decodeMcp(0x1ff0)+1)<.01);
  uint8_t b[9]={0x09,0x60,0,0x13,0x88,0,0,240,0};for(int j=0;j<9;j+=3)b[j+2]=crc8(b+j,2);float pa=0;CHECK(decodePressure(b,pa));CHECK(fabsf(pa-10)<.001);b[0]^=1;CHECK(!decodePressure(b,pa));
@@ -75,5 +119,5 @@ int main(){
   r.c.out.pwm=r.c.settings.maxPwm;r.in.rpm=1775;observe(5200);CHECK(proof.measureFan(true,r.c.settings));CHECK(fabsf(r.c.settings.rpmAtMax-1775)<.001f);CHECK(proof.complete());proof.reset();CHECK(!proof.complete()&&proof.captures==0);
   r.c.out.fanEnable=false;r.c.out.servoEnable=false;r.in.rpm=0;r.in.pressurePa=1;observe(600);r.in.pressurePa=-1;observe(600);CHECK(!proof.zero(r.c.settings));
  }
- printf("PASS %d assertions; mapping, startup, fault recovery, pressure, tach, servo, service, calibration evidence, storage corruption/partial records, rollover, codecs\n",checks);
+ printf("PASS %d assertions; mapping, rotary full-turn entry/reentry/reversal/batches, saved-boost safety, startup, fault recovery, pressure, tach, servo, service, calibration evidence, storage corruption/partial records, rollover, codecs\n",checks);
 }

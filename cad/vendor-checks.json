@@ -103,5 +103,22 @@
       -13.5,
       -8.975000100000003
     ]
+  },
+  {
+    "file": "4311.step",
+    "valid": true,
+    "solids": 15,
+    "bounds_mm": {
+      "x": 35.56,
+      "y": 59.055,
+      "z": 6.0808977985432
+    },
+    "origin_min_mm": [
+      0,
+      0,
+      -2.6308977985432
+    ],
+    "source": "Adafruit manufacturer CAD; measured during current build_base.py import",
+    "limit": "Older pre-EYESPI rear connector revision; verify supplied EYESPI rear connector and pigtail"
   }
 ]

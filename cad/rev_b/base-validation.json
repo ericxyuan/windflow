@@ -1,80 +1,36 @@
 {
   "parts": [
     {
-      "name": "main-led-retaining-frame",
+      "name": "REF-display-clear-window-45x34p4x1",
+      "valid": true,
+      "solids": 1,
+      "material": "clear acrylic sheet, cut to drawing",
+      "bounds_mm": [
+        45.0,
+        1.0,
+        34.400000000000006
+      ]
+    },
+    {
+      "name": "display-removable-cradle",
       "valid": true,
       "solids": 1,
       "material": "PETG",
       "bounds_mm": [
-        120.00000020000039,
-        8.402506579212428,
-        15.000000200000386
+        81.00000020000004,
+        9.442173937965535,
+        39.20000020000012
       ]
     },
     {
-      "name": "main-led-diffuser",
-      "valid": true,
-      "solids": 1,
-      "material": "translucent PETG",
-      "bounds_mm": [
-        107.40000020000004,
-        0.8000002000000563,
-        8.800000200000056
-      ]
-    },
-    {
-      "name": "main-light-front-bezel",
+      "name": "display-front-bezel",
       "valid": true,
       "solids": 1,
       "material": "PETG",
       "bounds_mm": [
-        121.00000020000004,
-        1.2014771734644683,
-        14.000000200000045
-      ]
-    },
-    {
-      "name": "status-light-diffuser",
-      "valid": true,
-      "solids": 1,
-      "material": "translucent PETG",
-      "bounds_mm": [
-        19.000000200000017,
-        0.8000002000000563,
-        5.100000200000011
-      ]
-    },
-    {
-      "name": "status-light-front-bezel",
-      "valid": true,
-      "solids": 1,
-      "material": "PETG",
-      "bounds_mm": [
-        32.000000200000045,
-        1.2014771734644683,
-        9.000000200000045
-      ]
-    },
-    {
-      "name": "status-led-rear-saddle",
-      "valid": true,
-      "solids": 1,
-      "material": "PETG",
-      "bounds_mm": [
-        32.000000200000045,
-        5.000738686732248,
-        9.000000200000045
-      ]
-    },
-    {
-      "name": "REF-Kingbright-WP154A4-body-drawing-envelope",
-      "valid": true,
-      "solids": 1,
-      "material": "purchased lamp; drawing envelope",
-      "bounds_mm": [
-        5.900000000000006,
-        8.599999999999994,
-        5.900000000000006
+        78.00000020000006,
+        1.6009848489763385,
+        39.60000020000007
       ]
     },
     {
@@ -222,13 +178,10 @@
     }
   ],
   "assembly_files": [
-    "main-led-retaining-frame.step",
-    "main-led-diffuser.step",
-    "main-light-front-bezel.step",
-    "status-light-diffuser.step",
-    "status-light-front-bezel.step",
-    "status-led-rear-saddle.step",
-    "REF-Kingbright-WP154A4-body-drawing-envelope.step",
+    "Adafruit-ST7789-4311-display-vendor.step",
+    "REF-display-clear-window-45x34p4x1.step",
+    "display-removable-cradle.step",
+    "display-front-bezel.step",
     "ambient-light-diffuser.step",
     "ambient-diffuser-keeper.step",
     "tpu-desk-foot-1.step",
@@ -250,8 +203,6 @@
     "Pololu-D24V22-5V-servo-vendor.step",
     "Sensirion-SDP810-125Pa-vendor.step",
     "Adafruit-HUSB238-5807-vendor.step",
-    "Adafruit-NeoPixel-1426-main-A-vendor.step",
-    "Adafruit-NeoPixel-1426-main-B-vendor.step",
     "Adafruit-NeoPixel-1426-ambient-vendor.step",
     "MCP9808-temp1-Adafruit1782-vendor.step",
     "MCP9808-temp2-Adafruit1782-vendor.step"
@@ -336,100 +287,100 @@
     ]
   ],
   "build": {
-    "completed_utc": "2026-10-03T09:39:07.528575+00:00",
-    "script_sha256": "636f19e2bf739e73b5cd9f5fc8a35d84dbe6680271c73e0a7b256856356debba",
+    "completed_utc": "2026-10-03T17:11:39.693016+00:00",
+    "script_sha256": "6dc44c84dcdc084d2560fee898633ec606226fbd5dce098f943a4e4742d6c2b0",
     "parameters_sha256": "6f86731c3123d8d15c025a0b34fb400919749b0227dfb576a218ed821d70c8ee"
   },
   "fasteners": [
     {
-      "location": "main NeoPixel PCB",
+      "location": "4311 display PCB",
       "axis_mm": [
-        -28.4,
-        129,
-        -88.078
+        40.0427509537852,
+        136.5088022014568,
+        -79.2605345602586
       ],
-      "hardware": "M2x10 screw and DIN 934 M2 hex nut; 4.2 mm AF rear pocket"
+      "hardware": "M2x12 screw and DIN934 M2 nut; screw through PCB, nut loaded from rear"
     },
     {
-      "location": "main NeoPixel PCB",
+      "location": "4311 display PCB",
       "axis_mm": [
-        -3.0,
-        129,
-        -88.078
+        40.0427509537852,
+        136.5088022014568,
+        -109.7405345602586
       ],
-      "hardware": "M2x10 screw and DIN 934 M2 hex nut; 4.2 mm AF rear pocket"
+      "hardware": "M2x12 screw and DIN934 M2 nut; screw through PCB, nut loaded from rear"
     },
     {
-      "location": "main NeoPixel PCB",
+      "location": "display removable cradle",
       "axis_mm": [
-        23.9,
-        129,
-        -88.078
+        -23,
+        125.5,
+        -80.6
       ],
-      "hardware": "M2x10 screw and DIN 934 M2 hex nut; 4.2 mm AF rear pocket"
+      "hardware": "M3x8 screw and Ruthex RX-M3x5.7 insert, installed from rear"
     },
     {
-      "location": "main NeoPixel PCB",
+      "location": "display removable cradle",
       "axis_mm": [
-        49.3,
-        129,
-        -88.078
+        -23,
+        125.5,
+        -108.4
       ],
-      "hardware": "M2x10 screw and DIN 934 M2 hex nut; 4.2 mm AF rear pocket"
+      "hardware": "M3x8 screw and Ruthex RX-M3x5.7 insert, installed from rear"
     },
     {
-      "location": "main diffuser bezel",
+      "location": "display removable cradle",
       "axis_mm": [
-        -47,
-        141.2,
-        -85
+        49,
+        125.5,
+        -80.6
       ],
-      "hardware": "M3x8 screw and Ruthex RX-M3x5.7 insert"
+      "hardware": "M3x8 screw and Ruthex RX-M3x5.7 insert, installed from rear"
     },
     {
-      "location": "main diffuser bezel",
+      "location": "display removable cradle",
       "axis_mm": [
-        67,
-        141.2,
-        -85
+        49,
+        125.5,
+        -108.4
       ],
-      "hardware": "M3x8 screw and Ruthex RX-M3x5.7 insert"
+      "hardware": "M3x8 screw and Ruthex RX-M3x5.7 insert, installed from rear"
     },
     {
-      "location": "status diffuser bezel",
+      "location": "display front bezel",
       "axis_mm": [
-        72,
-        141.2,
-        -101
+        -23,
+        141.6,
+        -85.5
       ],
-      "hardware": "M3x8 screw and Ruthex RX-M3x5.7 insert"
+      "hardware": "M2x6 screw and Ruthex RX-M2x4 insert, 3.2 mm initial pilot; clear sheet retained with 3M467MP perimeter film"
     },
     {
-      "location": "status diffuser bezel",
+      "location": "display front bezel",
       "axis_mm": [
-        98,
-        141.2,
-        -101
+        -23,
+        141.6,
+        -103.5
       ],
-      "hardware": "M3x8 screw and Ruthex RX-M3x5.7 insert"
+      "hardware": "M2x6 screw and Ruthex RX-M2x4 insert, 3.2 mm initial pilot; clear sheet retained with 3M467MP perimeter film"
     },
     {
-      "location": "status LED flange saddle",
+      "location": "display front bezel",
       "axis_mm": [
-        72,
-        120.1,
-        -101
+        49,
+        141.6,
+        -85.5
       ],
-      "hardware": "M3x8 screw and Ruthex RX-M3x5.7 insert"
+      "hardware": "M2x6 screw and Ruthex RX-M2x4 insert, 3.2 mm initial pilot; clear sheet retained with 3M467MP perimeter film"
     },
     {
-      "location": "status LED flange saddle",
+      "location": "display front bezel",
       "axis_mm": [
-        98,
-        120.1,
-        -101
+        49,
+        141.6,
+        -103.5
       ],
-      "hardware": "M3x8 screw and Ruthex RX-M3x5.7 insert"
+      "hardware": "M2x6 screw and Ruthex RX-M2x4 insert, 3.2 mm initial pilot; clear sheet retained with 3M467MP perimeter film"
     },
     {
       "location": "ambient diffuser keeper",
@@ -785,6 +736,43 @@
   },
   "mounting_interfaces": [
     {
+      "component": "Adafruit 4311 ST7789 IPS display",
+      "source": "Manufacturer STEP and EYESPI Eagle board; current product page confirms unchanged size/pinout",
+      "vendor_bounds_mm": [
+        59.05500000000001,
+        6.080897798543276,
+        35.56000000000002
+      ],
+      "active_area_mm": [
+        40.8,
+        30.6
+      ],
+      "active_center_xz_mm": [
+        15,
+        -94.5
+      ],
+      "pcb_hole_axes_xyz_mm": [
+        [
+          40.0427509537852,
+          136.5088022014568,
+          -79.2605345602586
+        ],
+        [
+          40.0427509537852,
+          136.5088022014568,
+          -109.7405345602586
+        ]
+      ],
+      "cover_mm": [
+        45,
+        34.4,
+        1
+      ],
+      "lens_to_module_nominal_gap_mm": 0.7602999999998872,
+      "cradle_removal": "Unplug display pigtail; remove front bezel/window and service tray; undo four rear screws; withdraw cradle rearward 2 mm then lower through open bottom",
+      "remaining_test": "Check current EYESPI rear connector, right-angle solder pigtail, optical alignment, clear-sheet fit and screw pilots on coupon"
+    },
+    {
       "component": "unrouted carrier",
       "required_pcb_outline_mm": [
         90,
@@ -924,5 +912,18 @@
     "physical USB plug/insertion-load test",
     "sensor pigtail strain relief and safe pin clearance",
     "complete populated-tray removal and harness service paths"
+  ],
+  "metadata_amendments": [
+    {
+      "utc": "2026-10-03T17:59:47.313412+00:00",
+      "scope": "Descriptive service-sequence correction only; geometry, STEP/STL bytes and validation results unchanged",
+      "source": "display_layout.py",
+      "previous_source_sha256": "1cff0df7b300d946e92c16051e7ea9b7b34158a7fa6fdd44d01bbcdafac75b24",
+      "current_source_sha256": "06db882559464d5c2411cd3d325f358a8b61b509414a40df668be44bb4737392",
+      "AST_proof": "Exactly one string constant changed; all remaining AST nodes identical",
+      "previous_text": "Unplug display pigtail and undo four rear screws; withdraw cradle rearward before pulling service tray",
+      "current_text": "Unplug display pigtail; remove front bezel/window and service tray; undo four rear screws; withdraw cradle rearward 2 mm then lower through open bottom",
+      "previous_base_manifest_sha256": "910b7c26981d3c1d1f32f0abe242a570a060f397526c1450791b4ace9b7e2e13"
+    }
   ]
 }

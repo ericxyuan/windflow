@@ -1,4 +1,4 @@
-"""Parametric service base, LED channels, horizontal encoder and board layout.
+"""Parametric service base, IPS screen, ambient channel, encoder and board layout.
 
 The carrier is an explicit reserved envelope, not a fabricated PCB. All purchased
 models keep provenance names. Outputs are development geometry, not print release.
@@ -36,74 +36,19 @@ inside=cq.Workplane('XY').box(185.2,145.2,44).edges('|Z').fillet(4.6).val().tran
 base=base.cut(inside) # leaves 2.4mm ceiling at -74.4..-72, open underside
 base=base.cut(box(250,220,30,15,65,-129.4)) # bottom plane -114.4; lid top -114.6
 lid=cq.Workplane('XY').box(189.4,149.4,2.4).edges('|Z').fillet(6.7).val().translate((15,65,-115.8))
-fix=[(-72,-2),(-72,132),(102,-2),(102,132),(15,-3),(15,133)]
-for x,y in fix:
- base=base.fuse(cz(7 if x!=15 else 4.8,-114.4,10,x,y)).cut(cz(2,-114.5,6.9,x,y))
+# Front central fixing moves to the right so the display can lower out through
+# the bottom. Keeping the old (15,133) post trapped its glass during service.
+fix=[(-72,-2),(-72,132),(102,-2),(102,132),(15,-3),(75,133)]
+for index,(x,y) in enumerate(fix):
+ base=base.fuse(cz(7 if index<4 else 4.8,-114.4,10,x,y)).cut(cz(2,-114.5,6.9,x,y))
  lid=lid.cut(cz(1.65,-117.1,2.6,x,y))
 for x in (-44,44):
  for y in (20,72):
   base=base.fuse(cz(6,-72,HEAD_Z,x,y)).cut(cz(1.65,-75,4+HEAD_Z,x,y))
 
-# Front main bar has 16 physical LEDs, a recessed optical cavity and end clips.
-# Bar centre X=10, height Z=-85; component face toward +Y.
-channel=box(120,13.2,15,10,131,-85).cut(box(108,12,10.8,10,132,-85))
-base=base.fuse(channel).cut(box(106,6,7.4,10,139,-85))
-base=base.cut(box(107.8,2.7,9.2,10,138.85,-85))
-base=base.cut(box(7,8,6,66,128,-85)) # cable exit to service volume
-for x in (-47,67):
- base=base.fuse(cy(3.7,124.4,5,x,-85)).cut(cy(2,124.3,5.2,x,-85))
-clip=box(120,1.6,15,10,123.2,-85).cut(box(104,3,8,10,123.2,-85))
-for x in (-47,67):clip=clip.cut(cy(1.65,122,3,x,-85))
-# Real 1426 PCB mounting holes, transformed from the supplier STEP. Nuts enter
-# from the removable frame's rear; LED-side screws do not load LED packages.
-for x in (-28.4,-3.0,23.9,49.3):
- z=-88.078
- base=base.cut(cy(3.0,124.3,4.8,x,z)) # clearance around removable PCB supports
- clip=clip.fuse(cy(2.8,120.6,8.4,x,z)).cut(cy(1.1,120.5,8.6,x,z))
- nut=cq.Workplane('XZ').polygon(6,4.2/math.cos(math.pi/6)).extrude(-2.2).val().translate((x,120.5,z))
- clip=clip.cut(nut)
- fasteners.append({'location':'main NeoPixel PCB','axis_mm':[x,129,z],
-                   'hardware':'M2x10 screw and DIN 934 M2 hex nut; 4.2 mm AF rear pocket'})
-save('main-led-retaining-frame',clip)
-save('main-led-diffuser',box(107.4,.8,8.8,10,139.6,-85),'translucent PETG')
-bezel=box(121,1.2,14,10,140.6,-85).cut(box(106,1.4,7.4,10,140.6,-85))
-for x in (-47,67):
- base=base.fuse(cy(3.7,133.3,6.7,x,-85)).cut(cy(2,133.2,6.9,x,-85))
- bezel=bezel.cut(cy(1.65,139.9,1.4,x,-85))
- fasteners.append({'location':'main diffuser bezel','axis_mm':[x,141.2,-85],
-                   'hardware':'M3x8 screw and Ruthex RX-M3x5.7 insert'})
-save('main-light-front-bezel',bezel)
-# Added bezel bosses must respect the diffuser seat cut made earlier.
-base=base.cut(box(107.8,2.7,9.2,10,138.85,-85))
-
-# Separate power/fault light window with opaque separation from cosmetic bar.
-base=base.cut(box(18,6,4.5,85,139,-101))
-status_well=box(24,10,10,85,132.6,-101).cut(box(19.2,10,5.2,85,134,-101))
-base=base.fuse(status_well).cut(cy(2.6,126,3,85,-101))
-base=base.cut(box(19.4,4.1,5.5,85,138.05,-101))
-save('status-light-diffuser',box(19,.8,5.1,85,139.6,-101),'translucent PETG')
-status_bezel=box(32,1.2,9,85,140.6,-101).cut(box(18,1.4,4.5,85,140.6,-101))
-for x in (72,98):
- base=base.fuse(cy(3.5,133.3,6.7,x,-101)).cut(cy(2,133.2,6.9,x,-101))
- status_bezel=status_bezel.cut(cy(1.65,139.9,1.4,x,-101))
- fasteners.append({'location':'status diffuser bezel','axis_mm':[x,141.2,-101],
-                   'hardware':'M3x8 screw and Ruthex RX-M3x5.7 insert'})
-save('status-light-front-bezel',status_bezel)
-# A separately screwed rear saddle traps the 5.9 mm lamp flange. Its 6 x 4 mm
-# lead window clears four sleeved leads; the lens has no press fit in PETG.
-status_saddle=box(32,1.2,9,85,120.7,-101).cut(box(6,8,4,85,122,-101))
-status_saddle=status_saddle.fuse(box(8,3.8,1.5,85,123.2,-104.75))
-status_saddle=status_saddle.fuse(box(8,3.8,1.5,85,123.2,-97.25))
-status_saddle=status_saddle.fuse(box(8,1.2,9,85,124.5,-101).cut(box(6,1.4,4,85,124.5,-101)))
-for x in (72,98):
- base=base.fuse(cy(3.7,121.5,12.5,x,-101)).cut(cy(2,121.4,6.9,x,-101))
- status_saddle=status_saddle.cut(cy(1.65,120,1.4,x,-101))
- fasteners.append({'location':'status LED flange saddle','axis_mm':[x,120.1,-101],
-                   'hardware':'M3x8 screw and Ruthex RX-M3x5.7 insert'})
-save('status-led-rear-saddle',status_saddle)
-lamp=cy(2.95,125.4,1,85,-101).fuse(cy(2.5,126.4,5.1,85,-101))
-lamp=lamp.fuse(cq.Solid.makeSphere(2.5,cq.Vector(85,131.5,-101)).intersect(box(6,3,6,85,133,-101)))
-save('REF-Kingbright-WP154A4-body-drawing-envelope',lamp,'purchased lamp; drawing envelope',False)
+# A single IPS screen replaces both front light bars. Desk lighting stays below.
+from display_layout import integrate as integrate_display
+base=integrate_display(base,parts,save,vendor,box,cy,fasteners,mounts)
 
 # Downward light channel recessed in bottom lid, with six-millimetre mixing space.
 ambient=box(60,16,10.2,15,45,-111.9).cut(box(55,10.8,9,15,45,-112.7))
@@ -283,8 +228,6 @@ for name,x in [('12V',-53),('5V-logic',-27),('5V-servo',-1)]:
  vendor('Pololu-D24V22-'+name+'-vendor','D24V22Fx.step',[],(x,18,-106))
 vendor('Sensirion-SDP810-125Pa-vendor','SDP810.step',[],(40,8,-106))
 vendor('Adafruit-HUSB238-5807-vendor','5807.step',[((0,0,1),180)],(72,-8.2,-106))
-vendor('Adafruit-NeoPixel-1426-main-A-vendor','1426.step',[((1,0,0),-90)],(-41.1,129,-90.11))
-vendor('Adafruit-NeoPixel-1426-main-B-vendor','1426.step',[((1,0,0),-90)],(11.2,129,-90.11))
 vendor('Adafruit-NeoPixel-1426-ambient-vendor','1426.step',[((1,0,0),180)],(-10.55,39.89,-111.6))
 # Temp modules placed on separate insulating mounts near power region and air.
 vendor('MCP9808-temp1-Adafruit1782-vendor','1782.step',[],(-53,42,-103))
