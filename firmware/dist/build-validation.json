@@ -1,15 +1,15 @@
 {
-  "recorded_utc": "2026-10-03T17:28:14.366265+00:00",
-  "scope": "E3 screen and deliberate full-turn boost revision; host tests and Pico compilation only",
+  "recorded_utc": "2026-10-04T06:52:58.0413433Z",
+  "scope": "E3 IPS screen, 24-detent normal range and deliberate full-turn boost, cosmetic calibration retention; host/render tests and Pico compilation only",
   "validation": [
     {
       "name": "control and encoder host assertions",
-      "assertions": 7112,
+      "assertions": 41311,
       "exit_code": 0
     },
     {
       "name": "display view assertions",
-      "assertions": 163,
+      "assertions": 185,
       "exit_code": 0
     },
     {
@@ -21,22 +21,27 @@
     {
       "name": "Raspberry Pi Pico compile",
       "exit_code": 0,
-      "program_bytes": 120852,
+      "program_bytes": 121460,
       "static_ram_bytes": 11112,
       "additional_canvas_heap_bytes": 10240
+    },
+    {
+      "name": "production service command host assertions",
+      "assertions": 227,
+      "exit_code": 0
     }
   ],
   "source_sha256": {
     "firmware/Windflow/Calibration.h": "5d5a527f46835881dc840835a020ded49ddd0de390b2e5c4ab4b0d68cf1c5fc8",
-    "firmware/Windflow/Config.h": "1cfb6ed59279674f22429ff0faec843957e02894ff016f00c41d1e12304a049f",
-    "firmware/Windflow/Control.cpp": "9b18e13fbd05f8c7b0bc8d77aeee8c6100e8f0805f950c4f5a0e410605978120",
-    "firmware/Windflow/Control.h": "653db236a6ca779e7cc0848fe19478f9b82e09d0f27c1e5917f47e17f0768218",
+    "firmware/Windflow/Config.h": "c8c74e10364cbc8355454059438e996262b7cfb9dcb516d67a4d31fdc4072121",
+    "firmware/Windflow/Control.cpp": "c672a765a13bad46dc3fb61954031a582bffb2075c6c5cc0b337b8def0284514",
+    "firmware/Windflow/Control.h": "12675779ad11603d69163996983453db61b70a8bb11fb45d8709209bbbf2e8f7",
     "firmware/Windflow/Display.cpp": "782c7f036323a0de6458b35e69ac76fe0638b72cfe24592eaa40ef625132e1b2",
     "firmware/Windflow/Display.h": "f0f0f86b093b21a9dc0d043ab70f157673196de97377a5dd74d0109643febbaa",
-    "firmware/Windflow/DisplayLayout.cpp": "0791ad37414b6dc00aec6ee1759dadc96f1171689b19a415f4ec94572510d354",
+    "firmware/Windflow/DisplayLayout.cpp": "50249b72fff79fe2a3eac99b962e547dba0e1431d7347339185c99aa8304e000",
     "firmware/Windflow/DisplayLayout.h": "bcc2efa3db180b350b47283872047541f852d4188f0f31216904300147516dff",
-    "firmware/Windflow/DisplayView.cpp": "a28f8b1e14f0f8a931a00202e2daa5fd9e7e99bc5b1f8185445adadb153d21bb",
-    "firmware/Windflow/DisplayView.h": "9115eefcb56488917c198f89d04cfefba022b42872c9ac56caf7fad76587c48d",
+    "firmware/Windflow/DisplayView.cpp": "4f237e07815db36652a1eb1baebc2598167e6dcda2a682f1387a2cd3a05e0ac3",
+    "firmware/Windflow/DisplayView.h": "81a7b31da51358cf1a8eb95e3d10e2228f25a6b5e8bc409d89e6177a35b5f6aa",
     "firmware/Windflow/EncoderDecoder.h": "330200d36536f84a7187f73353fc6b9389e43c3829874c7a25b487ba1f0fb63d",
     "firmware/Windflow/Hardware.cpp": "5a2dd1330b92ebd31c4d2dcd58269c988e072990fa74ed88347ea08aeaed18ac",
     "firmware/Windflow/Hardware.h": "4ad20dd329964155110bbb3302fa5ef87fcf600ae530bc5f3689937a41291773",
@@ -44,26 +49,33 @@
     "firmware/Windflow/Lighting.cpp": "cb11b656aadc2aa2b42e05dbe77446532378ade95aec6aef0c2c32ee551de95f",
     "firmware/Windflow/Lighting.h": "7e1e2b427c61370082f03e865d5f028dfb9a0e53115a76cd3dd220549887dd12",
     "firmware/Windflow/SensorCodec.h": "66b8e40888da99069e1284736c420a2fa7509e13454ad522c913b8132e5fe689",
-    "firmware/Windflow/Service.cpp": "1ca1c9dc33e790e93a037740882cd4f7f557e31d55bea341a4c59e59489d3d5a",
+    "firmware/Windflow/Service.cpp": "4c69824172c0cf03fcd78942025f3a37d272abde3f38f5504838ababea436d25",
     "firmware/Windflow/Service.h": "8098084b9130130ca0e2596073d1b145b6f5b88fb0a40f550ffd81b00c25f33b",
     "firmware/Windflow/SettingsRecord.h": "2af0c861558a9dd5bd86a6cdd4cb639a92e63e46c274c9726add29fc45929c56",
     "firmware/Windflow/Storage.cpp": "8b8179bbaab1846de5175eaf59a4787898c085debd12b3074ad88c06f130d62c",
     "firmware/Windflow/Storage.h": "d33fbe1b1319cc636893d8d2245d8ad78e0c519c8123938809da501c945655a6",
     "firmware/Windflow/Windflow.ino": "6846402d6b6f9ab5bfa6730610a6d654e1ab41da511be4a81fd5e795ecb2e887",
-    "tests/control_tests.cpp": "03c97eca5c3d7203a4717679ea41a7f5d7769f841195ed02b8cf0b6f07e4e592",
+    "tests/control_tests.cpp": "41059f7f67fbfa933eceb6c6c7e8f92b0bb6a18671ea48f3f3a60bfa549a43e3",
+    "tests/display_preview.cpp": "6e2a712f236be15db53b5407aea5b97c58243ed0acbb15312fe3d8bea1c1ece2",
+    "tests/display_tests.cpp": "faa2211d8f504e7e9e049176cb903bfc44447c8653c29944fa456f612e69aee7",
+    "tests/service_tests.cpp": "6d5a5570966d8c72940411160096b7890446f9f497c1ef7d2368abb9e1e234a2",
     "tests/display_platform/Adafruit_I2CDevice.h": "a3048b5296726b713e1bfda730e6b6a711a5cc7d13945b87d623335046739ae9",
     "tests/display_platform/Adafruit_SPIDevice.h": "bb1ebc2df8b104f39f2c5e99d0dfc989a291b824fc5df9caf48897ea26ed3272",
     "tests/display_platform/Arduino.h": "84027a55d2eef5394635e0d7fbc0a3c3557aacf37b22efca7861f0a0324138a2",
     "tests/display_platform/Print.h": "5cc284548c4547708a64d936d3aa5b619ecbe768b63e8ddbd4aea6533a123a00",
-    "tests/display_preview.cpp": "79de80295ae491fc18618327afed1c81417baac2f8d9904a0fc59e8624da9574",
-    "tests/display_tests.cpp": "8e7f437a9c305716cdc4eec92d78546092171ae33d64adef75cc897d19d66471",
+    "tests/service_platform/Adafruit_GFX.h": "b8436e8690186ee1c0f00aae807081c49f8b35fd247f363f639e5484ebea7a5b",
+    "tests/service_platform/Adafruit_NeoPixel.h": "9384a51f7564752396d6891f732165e78d5a9e71de3c39bbd881360cfa00e820",
+    "tests/service_platform/Adafruit_ST7789.h": "0c7c892786fd67e2ccc085a1acc719f6a36fd8342db2e58ca5ff0f4ea1bda2f9",
+    "tests/service_platform/Arduino.h": "c2e7cf15e2fa9638c38e05cee0cba9fafaaf2ceeda5fc60b190b150e2fa31ce4",
+    "tests/service_platform/SPI.h": "7585aba72d702fca8cad723b5ff30ea09236a2e203faeb64193be7f3c5eb9384",
+    "tools/build_firmware.ps1": "aa0debfe4d567e73bcb8cd5c87fb71c2b16041874a0a799decb799742981bc24",
+    "tools/test_firmware.ps1": "d3fc007c842816406d323f8ee9cb7e9ecafc4fff3b6c629bbe31ffefbf5ffa2e",
     "tools/render_display.ps1": "0a642bf6394f860cccd5f739ab9590859194fce273829bb70242b61cc71badd0",
     "tools/render_display.py": "6c1050abc962321689d3ac7a4aa4753ea0994406ab16bf6604933fc730ee5a1f",
-    "tools/setup_arduino.ps1": "d8be34550093f6387b39be0968cb6dbc22fd555447376e23e0d748b1868645e0",
-    "tools/test_firmware.ps1": "4d16abf154219f451ef27696c1c1b5efa85e206092034c35bf4dce7ef41e5200"
+    "tools/setup_arduino.ps1": "d8be34550093f6387b39be0968cb6dbc22fd555447376e23e0d748b1868645e0"
   },
   "production_gfx_sha256": "5afa8ca16241a9a0cb354012dd00780c6c00620c345b810a9504cb77bfc698d5",
-  "uf2_sha256": "9774d4db4dcc3af18f16b7e06c2c05ba21445974ccbb6de105fc6fb3d496867f",
+  "uf2_sha256": "fcd2bdb04f12762f16adf088b0b08ec04ebd434b2525532203b535efaaf6e01c",
   "limits": [
     "No hardware flashed or operated",
     "Pixel equivalence tests rendering only, not SPI/controller timing or physical LCD readability",

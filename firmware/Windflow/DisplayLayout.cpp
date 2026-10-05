@@ -29,7 +29,7 @@ void renderDisplay(Adafruit_GFX& g,const DisplayFrame& f,int16_t off,uint8_t pat
  snprintf(line,sizeof(line),"BOOST %u%%",boostShown?f.boostPercent:0);text(g,220,29,off,line,1,purple);
  bar(g,10,41,off,199,8,powerShown?f.normalPercent:0,accent);
  bar(g,220,41,off,90,8,boostShown?f.boostPercent:0,purple);
- snprintf(line,sizeof(line),"PWM %u%%  |  NOZZLE CMD %u%% OPEN",f.pwmPercent,f.nozzlePercent);text(g,10,54,off,line,1,muted);
+ snprintf(line,sizeof(line),"PWM %u%%  |  OUTLET %u%% OPEN",f.pwmPercent,f.nozzlePercent);text(g,10,54,off,line,1,muted);
  if(fault){
   text(g,12,78,off,displayFaultName(f.fault),2,red);
   text(g,12,115,off,"Fan and servo loads disabled.",1,white);
@@ -43,7 +43,7 @@ void renderDisplay(Adafruit_GFX& g,const DisplayFrame& f,int16_t off,uint8_t pat
   else if(f.state==State::WaitPower){text(g,12,116,off,"Connect a 15V / 2A USB-C PD source.",1,muted);text(g,12,135,off,"Screen available; fan remains off.",1,muted);}
   else{text(g,12,116,off,"Opening panels, then smooth fan ramp.",1,muted);text(g,12,135,off,"Restoring saved NORMAL power.",1,muted);}
  }else{
-  const char* title=!f.on?"FAN OFF":f.mode==RotaryMode::Boost?"BOOST CONTROL":f.mode==RotaryMode::BoostEntry?"TURN TO ARM BOOST":"NORMAL CONTROL";
+  const char* title=!f.on?"FAN OFF":f.mode==RotaryMode::Boost?"BOOST CONTROL":f.mode==RotaryMode::BoostEntry?"TURN TO ENTER BOOST":"NORMAL POWER";
   text(g,12,78,off,title,2,f.mode==RotaryMode::BoostEntry?yellow:accent);
   // Dial pointer shows incremental wheel phase; ring tick completion shows the separate arming turn.
   const int cx=53,cy=155,r=34;
@@ -56,23 +56,28 @@ void renderDisplay(Adafruit_GFX& g,const DisplayFrame& f,int16_t off,uint8_t pat
   float a=f.dialDegrees*3.14159265359f/180-1.57079632679f;
   g.drawLine(cx,cy-off,cx+int(lroundf(cosf(a)*(r-7))),cy-off+int(lroundf(sinf(a)*(r-7))),blue);
   g.fillCircle(cx,cy-off,3,blue);
-  snprintf(line,sizeof(line),"%u deg",f.dialDegrees);text(g,30,199,off,line,1,white);
-  text(g,15,111,off,"DIAL PHASE",1,muted);
+  snprintf(line,sizeof(line),"%u deg",f.dialDegrees);text(g,12,196,off,line,2,white);
+  text(g,15,111,off,"WHEEL POSITION",1,muted);
   if(!f.on){text(g,105,117,off,"Press to start",2,white);text(g,105,147,off,"Full turn at max power",1,muted);text(g,105,163,off,"arms boost each time.",1,muted);}
   else if(f.mode==RotaryMode::Boost){
-   snprintf(line,sizeof(line),"Boost %u%%",f.boostPercent);text(g,105,117,off,line,2,purple);
-   snprintf(line,sizeof(line),"Nozzle cmd: %u%% open",f.nozzlePercent);text(g,105,146,off,line,1,white);
+   snprintf(line,sizeof(line),"Boost %u%%",f.boostPercent);text(g,105,117,off,line,3,purple);
+   snprintf(line,sizeof(line),"Outlet: %u%% open",f.nozzlePercent);text(g,105,146,off,line,1,white);
    bar(g,105,165,off,201,9,f.boostPercent,purple);
    text(g,105,184,off,f.limited?"Safety is opening nozzle.":"Turn down to zero to exit.",1,f.limited?yellow:muted);
    text(g,105,200,off,"Re-entry needs a fresh turn.",1,muted);
   }else{
    uint16_t totalDegrees=f.entryDegreesLeft+uint16_t(f.normalDetentsLeft*360/kEncoderDetentsPerRev);
-   snprintf(line,sizeof(line),"%u deg left",totalDegrees);text(g,105,117,off,line,2,f.mode==RotaryMode::BoostEntry?yellow:white);
-   if(f.normalDetentsLeft){snprintf(line,sizeof(line),"%u detents to max + 1 turn",f.normalDetentsLeft);text(g,105,147,off,line,1,muted);}
-   else{snprintf(line,sizeof(line),"Arm turn: %u / %u detents",f.entryDetents,kBoostEntryDetents);text(g,105,147,off,line,1,muted);}
+   if(f.mode==RotaryMode::BoostEntry){
+    snprintf(line,sizeof(line),"%u deg",totalDegrees);text(g,105,117,off,line,3,yellow);
+    text(g,105,147,off,"left to boost",2,white);
+   }else{
+    snprintf(line,sizeof(line),"Power %u%%",f.normalPercent);text(g,105,117,off,line,3,white);
+    snprintf(line,sizeof(line),"Boost in %u deg",totalDegrees);text(g,105,147,off,line,2,muted);
+   }
    bar(g,105,166,off,201,9,int(f.entryDetents*100/kBoostEntryDetents),yellow);
-   text(g,105,184,off,f.normalDetentsLeft?"Raise normal power to max.":f.entryReady?"Turn UP to enter boost.":"Wait for full power/open.",1,muted);
-   text(g,105,200,off,"Turn DOWN to undo progress.",1,muted);
+   text(g,105,184,off,displayEntryInstruction(f),1,f.thermal||f.limited?yellow:muted);
+   if(f.normalDetentsLeft){snprintf(line,sizeof(line),"%u steps to max + 1 turn",f.normalDetentsLeft);text(g,105,200,off,line,1,muted);}
+   else text(g,105,200,off,"Turn DOWN to undo progress.",1,muted);
   }
  }
  g.drawFastHLine(10,215-off,300,track);

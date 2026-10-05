@@ -1,7 +1,8 @@
 #include "Control.h"
 #include <stdlib.h>
 namespace wf {
-static_assert(kEncoderDetentsPerRev>0&&kBoostEntryDetents>0&&kBoostControlDetents>0&&kNormalSettingStep>0,"Encoder control increments must be positive");
+static_assert(kEncoderDetentsPerRev>0&&kBoostEntryDetents>0&&kBoostControlDetents>0&&kNormalControlDetents>0,"Encoder control increments must be positive");
+static_assert(kNormalControlDetents<=600,"Normal grid must have distinct steps at every valid threshold");
 bool valid(const Settings& s){
  const float f[]={s.boostThreshold,s.minAreaRatio,s.minPwm,s.maxPwm,s.rpmAtMax,s.pressureSoft,s.pressureHard,s.warnC,s.tripC,s.pressureZero,s.busScale,s.logicScale};
  for(float v:f)if(!isfinite(v))return false;
@@ -43,6 +44,16 @@ uint16_t Control::normalSettingLimit()const{
  // do not pass NaN to integer conversion while presenting its safe UI fallback.
  return isfinite(settings.boostThreshold)?uint16_t(lroundf(clamp(settings.boostThreshold,0,1)*1000)):750;
 }
+uint16_t Control::normalGridValue(uint16_t position)const{
+ if(position>kNormalControlDetents)position=kNormalControlDetents;
+ return uint16_t((uint32_t(normalSettingLimit())*position+kNormalControlDetents/2)/kNormalControlDetents);
+}
+uint16_t Control::normalGridAtOrBelow()const{
+ uint16_t position=0;
+ while(position<kNormalControlDetents&&normalGridValue(position+1)<=settings.setting)position++;
+ return position;
+}
+uint16_t Control::normalDetentsRemaining()const{return kNormalControlDetents-normalGridAtOrBelow();}
 RotaryMode Control::rotaryMode()const{
  if(state==State::Fault||state==State::Service)return RotaryMode::Normal;
  if(boostControl_)return RotaryMode::Boost;
@@ -100,15 +111,18 @@ void Control::rotate(int detents){
    int64_t undo=-steps<entryDetents_?-steps:entryDetents_;
    entryDetents_-=uint16_t(undo);steps+=undo;
    if(steps){
-    int64_t value=int64_t(settings.setting)+steps*kNormalSettingStep;
-    settings.setting=uint16_t(value>0?value:0);steps=0;
+    // A legacy/service value between grid points moves to the strictly adjacent
+    // point in the chosen direction. Exact grid points never repeat a detent.
+    uint16_t position=normalGridAtOrBelow();
+    if(normalGridValue(position)<settings.setting)position++;
+    settings.setting=normalGridValue(-steps<position?position-uint16_t(-steps):0);steps=0;
    }
   }else{
    if(settings.setting<limit){
-    int64_t normalSteps=(limit-settings.setting+kNormalSettingStep-1)/kNormalSettingStep;
+    uint16_t position=normalGridAtOrBelow();
+    int64_t normalSteps=kNormalControlDetents-position;
     int64_t amount=steps<normalSteps?steps:normalSteps;
-    int64_t value=int64_t(settings.setting)+amount*kNormalSettingStep;
-    settings.setting=uint16_t(value<limit?value:limit);steps-=amount;
+    settings.setting=normalGridValue(position+uint16_t(amount));steps-=amount;
    }
    if(!steps)break;
    if(!boostEntryReady()){entryDetents_=0;break;}

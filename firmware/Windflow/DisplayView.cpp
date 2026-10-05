@@ -5,7 +5,7 @@ bool DisplayFrame::operator==(const DisplayFrame& b)const{
  entryDegreesLeft==b.entryDegreesLeft&&entryDetents==b.entryDetents&&normalDetentsLeft==b.normalDetentsLeft&&
  normalPercent==b.normalPercent&&boostPercent==b.boostPercent&&nozzlePercent==b.nozzlePercent&&
  pwmPercent==b.pwmPercent&&rpm==b.rpm&&temperatureTenths==b.temperatureTenths&&pressureTenths==b.pressureTenths&&
- busTenths==b.busTenths&&on==b.on&&night==b.night&&entryReady==b.entryReady&&limited==b.limited&&thermal==b.thermal&&
+ busTenths==b.busTenths&&on==b.on&&night==b.night&&entryReady==b.entryReady&&outletReady==b.outletReady&&powerReady==b.powerReady&&limited==b.limited&&thermal==b.thermal&&
  temperaturesValid==b.temperaturesValid&&pressureValid==b.pressureValid&&pdReady==b.pdReady;
 }
 DisplayFrame displayFrame(const Control& c,const Inputs& in){
@@ -13,9 +13,9 @@ DisplayFrame displayFrame(const Control& c,const Inputs& in){
  f.state=c.state;f.fault=c.fault;f.mode=c.rotaryMode();f.on=c.settings.on;f.night=c.settings.night;
  f.dialDegrees=uint16_t(c.encoderPositionDetents()*360/kEncoderDetentsPerRev);
  f.entryDetents=c.entryDetents();f.entryReady=c.boostEntryReady();
+ f.outletReady=c.outletOpenConfirmed();f.powerReady=c.out.fanEnable&&c.out.pwm>=c.settings.maxPwm-.02f;
  f.entryDegreesLeft=uint16_t(c.entryDetentsRemaining()*360/kEncoderDetentsPerRev);
- uint16_t limit=c.normalSettingLimit();
- f.normalDetentsLeft=c.settings.setting<limit?(limit-c.settings.setting+kNormalSettingStep-1)/kNormalSettingStep:0;
+ f.normalDetentsLeft=c.normalDetentsRemaining();
  f.normalPercent=uint16_t(lroundf(c.normalPowerFraction()*100));
  f.boostPercent=uint16_t(lroundf(c.boostFraction()*100));
  float area=1-2*kPanelLength*sinf(c.out.closure*maxPanelAngle(c.settings)*3.14159265359f/180)/kOutletHeight;
@@ -56,5 +56,16 @@ const char* displaySystemName(const DisplayFrame& f){
  if(!f.on)return "FAN OFF";
  if(f.night&&f.pdReady)return "NIGHT / USB-C READY";
  return f.pdReady?"15V USB-C READY":"CHECK POWER";
+}
+const char* displayEntryInstruction(const DisplayFrame& f){
+ if(f.state==State::Fault)return "Clear fault before boost.";
+ if(f.state==State::Service||f.state==State::Uncommissioned)return "Commission before boost.";
+ if(!f.on)return "Press to start.";
+ if(f.state!=State::Live)return "Wait for startup.";
+ if(f.thermal||f.limited)return "Boost paused by safety.";
+ if(f.normalDetentsLeft)return "Raise normal power to max.";
+ if(f.entryReady)return "Turn UP to enter boost.";
+ if(!f.outletReady)return "Opening outlet; wait.";
+ return !f.powerReady?"Reaching full power.":"Checking boost readiness.";
 }
 }

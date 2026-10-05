@@ -19,7 +19,7 @@ int main(int argc,char** argv){
  int checks=0;
  for(int i=0;i<5;i++){
   DisplayFrame f;f.state=State::Live;f.on=true;f.pdReady=true;f.temperaturesValid=true;f.pressureValid=true;
-  f.temperatureTenths=312;f.pressureTenths=35;f.rpm=1220;f.normalPercent=53;f.pwmPercent=63;f.normalDetentsLeft=35;
+  f.temperatureTenths=312;f.pressureTenths=35;f.rpm=1220;f.normalPercent=53;f.pwmPercent=63;f.normalDetentsLeft=12;
   if(i>0){f.normalPercent=100;f.pwmPercent=100;f.normalDetentsLeft=0;f.mode=RotaryMode::BoostEntry;f.entryReady=true;f.rpm=1800;}
   if(i==2){f.entryDetents=12;f.entryDegreesLeft=180;f.dialDegrees=180;}
   if(i==3){f.mode=RotaryMode::Boost;f.boostPercent=50;f.entryDegreesLeft=0;f.nozzlePercent=87;f.dialDegrees=180;}

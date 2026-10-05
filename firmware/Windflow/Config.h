@@ -6,7 +6,7 @@ namespace wf {
 constexpr uint16_t kSchema=3; // Screen/rotary interaction changed: recommission after migration.
 constexpr uint8_t kMainCapacity=16,kAmbientCapacity=8; // mainCount is a legacy reserved field, not LEDs.
 constexpr uint16_t kEncoderDetentsPerRev=24,kBoostEntryDetents=24,kBoostControlDetents=24;
-constexpr uint16_t kNormalSettingStep=10;
+constexpr uint16_t kNormalControlDetents=kEncoderDetentsPerRev; // One physical turn from normal zero to maximum.
 constexpr uint16_t kScreenWidth=320,kScreenHeight=240,kScreenStatusHeight=64;
 constexpr uint16_t kScreenRenderRows=16;
 constexpr uint32_t kScreenSpiHz=24000000,kScreenRefreshMs=100,kScreenSliceMs=6;

@@ -12,3 +12,8 @@ $displayExe=Join-Path $taskRoot 'build\display-tests.exe'
 if($LASTEXITCODE -ne 0){throw 'Host display test compilation failed'}
 & $displayExe
 if($LASTEXITCODE -ne 0){throw 'Host display tests failed'}
+$serviceExe=Join-Path $taskRoot 'build\service-tests.exe'
+& $python -m ziglang c++ -std=c++17 -Wall -Wextra -Werror -O1 "-I$(Join-Path $taskRoot 'tests\service_platform')" "-I$(Join-Path $taskRoot 'firmware\Windflow')" (Join-Path $taskRoot 'tests\service_tests.cpp') (Join-Path $taskRoot 'firmware\Windflow\Service.cpp') (Join-Path $taskRoot 'firmware\Windflow\Control.cpp') -o $serviceExe
+if($LASTEXITCODE -ne 0){throw 'Host service test compilation failed'}
+& $serviceExe
+if($LASTEXITCODE -ne 0){throw 'Host service tests failed'}

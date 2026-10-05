@@ -77,12 +77,12 @@ int main(){
   r.c.rotate(-1);CHECK(r.c.rotaryMode()==RotaryMode::BoostEntry);CHECK(r.c.entryDetents()==0);CHECK(r.c.entryDetentsRemaining()==24);CHECK(r.c.boostFraction()==0);r.step(300);CHECK(r.c.out.closure==0);
   r.c.rotate(23);CHECK(r.c.rotaryMode()==RotaryMode::BoostEntry);CHECK(r.c.entryDetentsRemaining()==1);r.c.rotate(1);CHECK(r.c.rotaryMode()==RotaryMode::Boost);CHECK(r.c.boostFraction()==0);
  }
- {Rig r;r.c.settings.setting=750;r.live();r.c.rotate(10);CHECK(r.c.entryDetents()==10);r.c.rotate(-4);CHECK(r.c.entryDetents()==6);CHECK(r.c.settings.setting==750);r.c.rotate(-6);CHECK(r.c.entryDetents()==0);CHECK(r.c.settings.setting==750);r.c.rotate(-1);CHECK(r.c.rotaryMode()==RotaryMode::Normal);CHECK(r.c.settings.setting==740);CHECK(r.c.encoderPositionDetents()==23);}
+ {Rig r;r.c.settings.setting=750;r.live();r.c.rotate(10);CHECK(r.c.entryDetents()==10);r.c.rotate(-4);CHECK(r.c.entryDetents()==6);CHECK(r.c.settings.setting==750);r.c.rotate(-6);CHECK(r.c.entryDetents()==0);CHECK(r.c.settings.setting==750);r.c.rotate(-1);CHECK(r.c.rotaryMode()==RotaryMode::Normal);CHECK(r.c.settings.setting==719);CHECK(r.c.encoderPositionDetents()==23);}
  // Startup cannot replay saved boost or accumulate an arming turn while homing.
  {Rig r;r.c.settings.setting=1000;r.c.begin(0);CHECK(r.c.settings.setting==750);CHECK(r.c.settingsDirty);CHECK(r.c.entryDetents()==0);r.c.rotate(100);CHECK(r.c.entryDetents()==0);CHECK(r.c.rotaryMode()==RotaryMode::BoostEntry);r.live();CHECK(r.c.out.closure==0);CHECK(r.c.out.pwm>.99);r.c.rotate(23);CHECK(r.c.entryDetentsRemaining()==1);}
  {Rig r;r.c.settings.setting=1000;r.live();CHECK(r.c.settings.setting==750);CHECK(r.c.out.closure==0);CHECK(r.c.boostFraction()==0);}
  // A batched turn is equivalent to individual detents, including crossing both boundaries.
- {Rig a,b;a.c.settings.setting=750;b.c.settings.setting=750;a.live();b.live();a.c.rotate(41);for(int i=0;i<41;i++)b.c.rotate(1);CHECK(a.c.settings.setting==b.c.settings.setting);CHECK(a.c.boostFraction()==b.c.boostFraction());CHECK(a.c.encoderPositionDetents()==b.c.encoderPositionDetents());CHECK(a.c.boostFraction()==17/24.f);a.c.rotate(-20);for(int i=0;i<20;i++)b.c.rotate(-1);CHECK(a.c.settings.setting==720);CHECK(a.c.settings.setting==b.c.settings.setting);CHECK(a.c.rotaryMode()==RotaryMode::Normal);CHECK(a.c.entryDetents()==0);}
+ {Rig a,b;a.c.settings.setting=750;b.c.settings.setting=750;a.live();b.live();a.c.rotate(41);for(int i=0;i<41;i++)b.c.rotate(1);CHECK(a.c.settings.setting==b.c.settings.setting);CHECK(a.c.encoderPositionDetents()==b.c.encoderPositionDetents());CHECK(a.c.boostFraction()==b.c.boostFraction());CHECK(a.c.boostFraction()==17/24.f);a.c.rotate(-20);for(int i=0;i<20;i++)b.c.rotate(-1);CHECK(a.c.settings.setting==656);CHECK(a.c.settings.setting==b.c.settings.setting);CHECK(a.c.rotaryMode()==RotaryMode::Normal);CHECK(a.c.entryDetents()==0);}
  {Rig r;r.c.settings.setting=750;r.live();r.c.rotate(std::numeric_limits<int>::max());CHECK(r.c.settings.setting==1000);CHECK(r.c.boostFraction()==1);CHECK(r.c.encoderPositionDetents()==std::numeric_limits<int>::max()%24);r.c.rotate(std::numeric_limits<int>::min());CHECK(r.c.settings.setting==0);CHECK(r.c.rotaryMode()==RotaryMode::Normal);CHECK(r.c.encoderPositionDetents()==23);}
  {Rig r;r.c.settings.encoderReverse=1;r.c.settings.setting=750;r.live();r.c.rotate(-24);CHECK(r.c.rotaryMode()==RotaryMode::Boost);r.c.rotate(-12);CHECK(r.c.boostFraction()==.5f);CHECK(r.c.encoderPositionDetents()==12);r.c.rotate(12);CHECK(r.c.rotaryMode()==RotaryMode::BoostEntry);CHECK(r.c.entryDetentsRemaining()==24);r.c.rotate(std::numeric_limits<int>::min());CHECK(r.c.boostFraction()==1);r.c.rotate(std::numeric_limits<int>::max());CHECK(r.c.settings.setting==0);}
  {Rig r;r.c.settings.setting=750;r.live();r.c.rotate(12);r.c.shortPress();CHECK(!r.c.settings.on);CHECK(r.c.entryDetents()==0);r.c.rotate(100);CHECK(r.c.boostFraction()==0);CHECK(r.c.entryDetents()==0);r.c.shortPress();r.step(100);CHECK(r.c.rotaryMode()==RotaryMode::BoostEntry);CHECK(r.c.entryDetentsRemaining()==24);}
@@ -93,6 +93,30 @@ int main(){
  {Rig r;r.boosted();r.c.rotate(-24);r.c.rotate(24);CHECK(r.c.rotaryMode()==RotaryMode::BoostEntry);CHECK(r.c.entryDetents()==0);CHECK(!r.c.boostEntryReady());r.step(1000);CHECK(r.c.out.closure==0);CHECK(r.c.boostEntryReady());r.c.rotate(24);CHECK(r.c.rotaryMode()==RotaryMode::Boost);}
  {Rig r;r.c.settings.boostThreshold=.7555f;r.c.settings.setting=r.c.normalSettingLimit();r.live();r.c.rotate(12);CHECK(r.c.entryDetents()==12);r.in.pressureValid=false;r.step(10);CHECK(r.c.entryDetents()==0);CHECK(!r.c.boostEntryReady());r.c.rotate(24);CHECK(r.c.entryDetents()==0);CHECK(r.c.boostFraction()==0);r.in.pressureValid=true;r.step(1000);CHECK(r.c.boostEntryReady());CHECK(r.c.entryDetentsRemaining()==24);r.c.rotate(24);CHECK(r.c.rotaryMode()==RotaryMode::Boost);}
  {Rig r;r.c.settings.setting=750;r.live();r.c.rotate(12);r.in.servoAdc=3000;r.step(10,false);CHECK(r.c.state==State::Live);CHECK(!r.c.boostEntryReady());CHECK(r.c.entryDetents()==0);r.c.rotate(24);CHECK(r.c.rotaryMode()==RotaryMode::BoostEntry);CHECK(r.c.entryDetents()==0);r.step(100);CHECK(r.c.boostEntryReady());}
+ // Normal power covers exactly one physical turn, independently of its stored
+ // compatibility threshold. None of this travel is reused as the arming turn.
+ CHECK(kNormalControlDetents==24);
+ {const uint16_t expected[]={0,31,63,94,125,156,188,219,250,281,313,344,375,406,438,469,500,531,563,594,625,656,688,719,750};
+  Control c;c.settings.setting=0;c.begin(0);
+  for(int i=0;i<=24;i++){CHECK(c.settings.setting==expected[i]);CHECK(c.normalDetentsRemaining()==24-i);CHECK(c.entryDetents()==0);CHECK(c.boostFraction()==0);if(i<24)c.rotate(1);}
+  CHECK(c.encoderPositionDetents()==0);for(int i=23;i>=0;i--){c.rotate(-1);CHECK(c.settings.setting==expected[i]);CHECK(c.normalDetentsRemaining()==24-i);}CHECK(c.encoderPositionDetents()==0);
+ }
+ for(int threshold=600;threshold<=900;threshold++){
+  Control c;c.settings.boostThreshold=threshold/1000.f;c.settings.setting=0;c.begin(0);CHECK(valid(c.settings));uint16_t prev=0;
+  for(int i=1;i<=24;i++){c.rotate(1);CHECK(c.settings.setting>prev);CHECK(c.settings.setting<=threshold);CHECK(c.normalDetentsRemaining()==24-i);CHECK(c.entryDetents()==0);prev=c.settings.setting;}
+  CHECK(c.settings.setting==threshold);CHECK(c.normalPowerFraction()==1);c.rotate(-24);CHECK(c.settings.setting==0);CHECK(c.normalDetentsRemaining()==24);c.rotate(24);CHECK(c.settings.setting==threshold);CHECK(c.boostFraction()==0);
+ }
+ for(float threshold:{.6005f,.7555f,.8995f}){
+  Control c;c.settings.boostThreshold=threshold;c.settings.setting=0;c.begin(0);CHECK(valid(c.settings));uint16_t limit=c.normalSettingLimit();c.rotate(23);CHECK(c.settings.setting<limit);CHECK(c.normalDetentsRemaining()==1);c.rotate(1);CHECK(c.settings.setting==limit);CHECK(c.normalDetentsRemaining()==0);c.rotate(-24);CHECK(c.settings.setting==0);
+ }
+ {Control c;c.settings.setting=400;c.begin(0);CHECK(c.settings.setting==400);CHECK(c.normalDetentsRemaining()==12);c.rotate(1);CHECK(c.settings.setting==406);CHECK(c.normalDetentsRemaining()==11);c.settings.setting=400;c.rotate(-1);CHECK(c.settings.setting==375);CHECK(c.normalDetentsRemaining()==12);c.settings.setting=625;c.rotate(1);CHECK(c.settings.setting==656);c.settings.setting=625;c.rotate(-1);CHECK(c.settings.setting==594);c.settings.setting=1;c.rotate(-1);CHECK(c.settings.setting==0);c.settings.setting=749;c.rotate(1);CHECK(c.settings.setting==750);}
+ // Across every possible saved normal setting, batches choose the same adjacent
+ // grid and saturated endpoint as individual calls, including encoder reversal.
+ for(uint16_t saved=0;saved<=750;saved++){
+  Control a,b;a.settings.setting=saved;b.settings.setting=saved;a.begin(0);b.begin(0);a.rotate(7);for(int i=0;i<7;i++)b.rotate(1);CHECK(a.settings.setting==b.settings.setting);CHECK(a.normalDetentsRemaining()==b.normalDetentsRemaining());a.rotate(-11);for(int i=0;i<11;i++)b.rotate(-1);CHECK(a.settings.setting==b.settings.setting);CHECK(a.encoderPositionDetents()==b.encoderPositionDetents());
+ }
+ {Control c;c.settings.encoderReverse=1;c.settings.setting=0;c.begin(0);c.rotate(-24);CHECK(c.settings.setting==750);CHECK(c.normalDetentsRemaining()==0);c.rotate(24);CHECK(c.settings.setting==0);c.rotate(std::numeric_limits<int>::min());CHECK(c.settings.setting==750);CHECK(c.entryDetents()==0);c.rotate(std::numeric_limits<int>::max());CHECK(c.settings.setting==0);}
+ {Rig r;r.c.settings.setting=0;r.live();r.c.rotate(48);CHECK(r.c.settings.setting==750);CHECK(r.c.entryDetents()==0);CHECK(r.c.boostFraction()==0);r.step(1200);CHECK(r.c.boostEntryReady());r.c.rotate(24);CHECK(r.c.rotaryMode()==RotaryMode::Boost);CHECK(r.c.boostFraction()==0);}
  CHECK(decodePd(0x46,0x40));CHECK(!decodePd(0x36,0x40));CHECK(!decodePd(0x44,0x40));CHECK(!decodePd(0x46,0));
  CHECK(fabsf(decodeMcp(0x0190)-25)<.01);CHECK(fabsf(decodeMcp(0x1ff0)+1)<.01);
  uint8_t b[9]={0x09,0x60,0,0x13,0x88,0,0,240,0};for(int j=0;j<9;j+=3)b[j+2]=crc8(b+j,2);float pa=0;CHECK(decodePressure(b,pa));CHECK(fabsf(pa-10)<.001);b[0]^=1;CHECK(!decodePressure(b,pa));

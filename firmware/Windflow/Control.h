@@ -42,9 +42,11 @@ public:
  uint16_t encoderPositionDetents()const{return encoderPosition_;}
  float encoderPositionTurns()const{return encoderPosition_/float(kEncoderDetentsPerRev);}
  uint16_t normalSettingLimit()const;
+ uint16_t normalDetentsRemaining()const;
  float normalPowerFraction()const;
  float boostFraction()const{return boostDetents_/float(kBoostControlDetents);}
  bool boostEntryReady()const;
+ bool outletOpenConfirmed()const{return out.closure<=.001f&&servoOpenConfirmed_;}
  bool settingsDirty=false;
  uint32_t changedAt=0;
  void markChanged(uint32_t now){settingsDirty=true;changedAt=now;}
@@ -58,6 +60,8 @@ private:
  bool boostControl_=false,servoOpenConfirmed_=false;
  uint16_t entryDetents_=0,boostDetents_=0,encoderPosition_=0;
  void resetRotaryControl();
+ uint16_t normalGridValue(uint16_t position)const;
+ uint16_t normalGridAtOrBelow()const;
  void transition(State s,uint32_t now);
  void trip(Fault f,uint32_t now);
  void resetOutputs();
