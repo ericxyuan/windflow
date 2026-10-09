@@ -1,0 +1,579 @@
+{
+  "result": "PASS",
+  "generated_utc": "2026-10-09T20:07:39.981353+00:00",
+  "physical_qualification": false,
+  "parts": [
+    {
+      "name": "REF-mechanism-upper_panel-open",
+      "result": "PASS",
+      "sha256": "cfe8874f70bfdfbc1d84b117ec363a4011bd5f44406e75835488a11b8297475e",
+      "step_sha256": "fe815b602ecf9903bc7147f8d6ee912b2ef66bb6535e986bd99b52295d122a14",
+      "mesh": {
+        "triangles": 870,
+        "connected_components": 1,
+        "expected_components": 1,
+        "nonmanifold_or_boundary_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume_mm3": 10715.517115980529,
+        "component_signed_volumes_mm3": [
+          10715.517115980534
+        ],
+        "boundary_edge_examples_mm": [],
+        "watertight": true
+      }
+    },
+    {
+      "name": "REF-mechanism-lower_panel-open",
+      "result": "PASS",
+      "sha256": "eba93a9bcbea9949b8e49b151c02a8c418a944eea717b60cceaa0ec26d5b2979",
+      "step_sha256": "64949e6c5892dad299ff34fb65454d4a8631dd8ea7bf88058493e281dea56d53",
+      "mesh": {
+        "triangles": 870,
+        "connected_components": 1,
+        "expected_components": 1,
+        "nonmanifold_or_boundary_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume_mm3": 10715.517115980343,
+        "component_signed_volumes_mm3": [
+          10715.517115980301
+        ],
+        "boundary_edge_examples_mm": [],
+        "watertight": true
+      }
+    },
+    {
+      "name": "REF-mechanism-upper_crank-open",
+      "result": "PASS",
+      "sha256": "f87099bb614118fefd0dee0cb0af012896b363db27a4f05b2dccbe879d7e19f3",
+      "step_sha256": "ec0fb48ac636aaa4b7c91b43cdef49f082707a3e7552f8457b49c674668884e3",
+      "mesh": {
+        "triangles": 1988,
+        "connected_components": 1,
+        "expected_components": 1,
+        "nonmanifold_or_boundary_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume_mm3": 1142.3266150991096,
+        "component_signed_volumes_mm3": [
+          1142.3266150990967
+        ],
+        "boundary_edge_examples_mm": [],
+        "watertight": true
+      }
+    },
+    {
+      "name": "REF-mechanism-lower_crank-open",
+      "result": "PASS",
+      "sha256": "4f0886a19b03d5a43268a7f4f706fc4328402775882a831b4437980bfd6ece10",
+      "step_sha256": "0adce50a032b331461bf3d3fb06c964dc9d0d9745e738ec7004881dc073711aa",
+      "mesh": {
+        "triangles": 1988,
+        "connected_components": 1,
+        "expected_components": 1,
+        "nonmanifold_or_boundary_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume_mm3": 1142.326615097891,
+        "component_signed_volumes_mm3": [
+          1142.3266150978943
+        ],
+        "boundary_edge_examples_mm": [],
+        "watertight": true
+      }
+    },
+    {
+      "name": "REF-mechanism-yoke-open",
+      "result": "PASS",
+      "sha256": "5d090b8473aeda8fd12ce8cb598fbdd9f9814a300f8c3a321c873953432c3319",
+      "step_sha256": "27a9b2d68b94ea49f3a6f4ef6115dba7eefb177da0805ced3b44b550af7fc8a9",
+      "mesh": {
+        "triangles": 1788,
+        "connected_components": 1,
+        "expected_components": 1,
+        "nonmanifold_or_boundary_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume_mm3": 5959.543855087892,
+        "component_signed_volumes_mm3": [
+          5959.543855087929
+        ],
+        "boundary_edge_examples_mm": [],
+        "watertight": true
+      }
+    },
+    {
+      "name": "REF-mechanism-rod-open",
+      "result": "PASS",
+      "sha256": "6c94ec4d05bb832a05d7db42eaf38d278c6f371657702b032f98840613006ff7",
+      "step_sha256": "f6dd336e7956b95897c109742d9818550cdf30a39bfd42403ac281a723c64cdb",
+      "mesh": {
+        "triangles": 1276,
+        "connected_components": 1,
+        "expected_components": 1,
+        "nonmanifold_or_boundary_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume_mm3": 1252.5610766015768,
+        "component_signed_volumes_mm3": [
+          1252.5610766015802
+        ],
+        "boundary_edge_examples_mm": [],
+        "watertight": true
+      }
+    },
+    {
+      "name": "servo-slotted-bracket-development",
+      "result": "PASS",
+      "sha256": "f8ee9bc3b431b245cc40e666a4a464051e40153e49fc3b64adb171896ed2e726",
+      "step_sha256": "7516b3195e9204999693145fe61d342d8a675de578178164dde2b95b13dd64b2",
+      "mesh": {
+        "triangles": 1360,
+        "connected_components": 1,
+        "expected_components": 1,
+        "nonmanifold_or_boundary_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume_mm3": 2909.0946218388335,
+        "component_signed_volumes_mm3": [
+          2909.0946218387944
+        ],
+        "boundary_edge_examples_mm": [],
+        "watertight": true
+      }
+    },
+    {
+      "name": "P2-rigid-motor-carrier-PCD16",
+      "result": "PASS",
+      "sha256": "3dff430f4f945bea68a62c472acdfb747dd142e035a8d1e313dc22e26e5a1b18",
+      "step_sha256": "3c9b8cc3252a1a4b34996b0bf7490e292696a7446d3aa7ddc6e83786c75e6de0",
+      "mesh": {
+        "triangles": 3384,
+        "connected_components": 1,
+        "expected_components": 1,
+        "nonmanifold_or_boundary_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume_mm3": 22159.929716692073,
+        "component_signed_volumes_mm3": [
+          22159.929716692182
+        ],
+        "boundary_edge_examples_mm": [],
+        "watertight": true
+      }
+    },
+    {
+      "name": "P2-TPU-carrier-isolation-ring",
+      "result": "PASS",
+      "sha256": "b64c63766e6cdd0ac978abe2c3a0fe71305e57194d3f7751515c2324e0fe804e",
+      "step_sha256": "b573b61fa4471c3f371ab7947b64a7134fe1f13821465660fd1593599ba4cafe",
+      "mesh": {
+        "triangles": 840,
+        "connected_components": 1,
+        "expected_components": 1,
+        "nonmanifold_or_boundary_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume_mm3": 2152.888898372315,
+        "component_signed_volumes_mm3": [
+          2152.888898372251
+        ],
+        "boundary_edge_examples_mm": [],
+        "watertight": true
+      }
+    },
+    {
+      "name": "P2-seven-curved-vane-stator-TRIAL",
+      "result": "PASS",
+      "sha256": "3eef411b0b09073a1efc9f885aed1448d11b69a7647af3dbb5ed34cf7b416878",
+      "step_sha256": "f66115bbb6e621e5b1a8077d4c551018e7db46adf52a5fa696e546c37b0d8e45",
+      "mesh": {
+        "triangles": 13162,
+        "connected_components": 1,
+        "expected_components": 1,
+        "nonmanifold_or_boundary_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume_mm3": 45843.93557168768,
+        "component_signed_volumes_mm3": [
+          45843.93557168773
+        ],
+        "boundary_edge_examples_mm": [],
+        "watertight": true
+      }
+    },
+    {
+      "name": "P2-stator-open-comparison-spacer",
+      "result": "PASS",
+      "sha256": "29448a059cdfa504595f128b6102a547d841c71d86cccccc8e9e1018b0df3acc",
+      "step_sha256": "ee35e473a4463a952cdd319a70828c30933f6f0aa668185efa335e1e1db850f0",
+      "mesh": {
+        "triangles": 840,
+        "connected_components": 1,
+        "expected_components": 1,
+        "nonmanifold_or_boundary_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume_mm3": 28916.81515447931,
+        "component_signed_volumes_mm3": [
+          28916.815154479194
+        ],
+        "boundary_edge_examples_mm": [],
+        "watertight": true
+      }
+    },
+    {
+      "name": "P2-R12-bellmouth-insert",
+      "result": "PASS",
+      "sha256": "bb478fc2ec13ce685ebffdc4f5baeeb691abd7587fcf3ee93a5ce9009d881bd0",
+      "step_sha256": "eff6c7b6017ce863232af339cb4941a03ee87d79f6503f8a1df79baaf08c956e",
+      "mesh": {
+        "triangles": 68040,
+        "connected_components": 1,
+        "expected_components": 1,
+        "nonmanifold_or_boundary_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume_mm3": 29296.587346147764,
+        "component_signed_volumes_mm3": [
+          29296.587346144344
+        ],
+        "boundary_edge_examples_mm": [],
+        "watertight": true
+      }
+    },
+    {
+      "name": "P2-fixed-rear-inlet-guard",
+      "result": "PASS",
+      "sha256": "d365b2248e1786ac5791fe76c186376c2db035bee00c2feeb1c4f7e576d5f738",
+      "step_sha256": "58e04d69d6f4f7b0060bcb9d67c31f3f62be4bc8c8d5a32ec286b6c060d13c42",
+      "mesh": {
+        "triangles": 2096,
+        "connected_components": 1,
+        "expected_components": 1,
+        "nonmanifold_or_boundary_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume_mm3": 16357.727549759751,
+        "component_signed_volumes_mm3": [
+          16357.727549759693
+        ],
+        "boundary_edge_examples_mm": [],
+        "watertight": true
+      }
+    },
+    {
+      "name": "P2-fixed-front-finger-guard",
+      "result": "PASS",
+      "sha256": "837470e6b29e8711876af8c638111af963c2a8f68fa93edfaed540391246d14f",
+      "step_sha256": "0c8e79c87bab706826f751b33ff01a507027798ce97d249321b439ca4c4502e6",
+      "mesh": {
+        "triangles": 1596,
+        "connected_components": 1,
+        "expected_components": 1,
+        "nonmanifold_or_boundary_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume_mm3": 8149.390396932533,
+        "component_signed_volumes_mm3": [
+          8149.390396932624
+        ],
+        "boundary_edge_examples_mm": [],
+        "watertight": true
+      }
+    },
+    {
+      "name": "P2-fixed-magnet-seat-frame",
+      "result": "PASS",
+      "sha256": "31253e5ea12d5c5e5551201d2a6c63d18296a53f398def573a81869d42c03976",
+      "step_sha256": "ed93d9c187e6687cef71509aaec48cc77288bf3ecb5b2f2d14aa768b929c2cfe",
+      "mesh": {
+        "triangles": 7392,
+        "connected_components": 1,
+        "expected_components": 1,
+        "nonmanifold_or_boundary_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume_mm3": 13790.377868434025,
+        "component_signed_volumes_mm3": [
+          13790.377868434069
+        ],
+        "boundary_edge_examples_mm": [],
+        "watertight": true
+      }
+    },
+    {
+      "name": "head-magnet-retaining-ring-development",
+      "result": "PASS",
+      "sha256": "a3042c538373f09097604ab615a7b33aea47840d447e1e1b1b15521b9c7427cd",
+      "step_sha256": "eeec87c16c86fe30658a042bd17c0ac1766e0d02dbe88c65094373cdf15f1293",
+      "mesh": {
+        "triangles": 4288,
+        "connected_components": 1,
+        "expected_components": 1,
+        "nonmanifold_or_boundary_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume_mm3": 1705.3740569528554,
+        "component_signed_volumes_mm3": [
+          1705.3740569527724
+        ],
+        "boundary_edge_examples_mm": [],
+        "watertight": true
+      }
+    },
+    {
+      "name": "grille-magnet-retaining-ring-development",
+      "result": "PASS",
+      "sha256": "016a648feea1da898c713e1d3768fa8959347d9fa280082f26a58b18d0a98618",
+      "step_sha256": "ace483fcfd9b5730f0c2056e5c8c467a026d9b67c1eae0ca7cbc8e190211af3b",
+      "mesh": {
+        "triangles": 2592,
+        "connected_components": 1,
+        "expected_components": 1,
+        "nonmanifold_or_boundary_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume_mm3": 1745.6273793208672,
+        "component_signed_volumes_mm3": [
+          1745.6273793209564
+        ],
+        "boundary_edge_examples_mm": [],
+        "watertight": true
+      }
+    },
+    {
+      "name": "magnetic-front-cleaning-grille-development",
+      "result": "PASS",
+      "sha256": "be06ac5f49d901fd562c22398aab9c18d9bd4122f760c0f4b6841e85b9040a68",
+      "step_sha256": "c9a8f248d768cb9989f3f25e17dc18af68324c8f58689274976dcd984bf08019",
+      "mesh": {
+        "triangles": 4740,
+        "connected_components": 1,
+        "expected_components": 1,
+        "nonmanifold_or_boundary_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume_mm3": 18296.320653200328,
+        "component_signed_volumes_mm3": [
+          18296.320653199426
+        ],
+        "boundary_edge_examples_mm": [],
+        "watertight": true
+      }
+    },
+    {
+      "name": "display-removable-cradle-development",
+      "result": "PASS",
+      "sha256": "2f57ee58acd1677a1dd6df60dff7b485c661353329dfcc42659e970514361c16",
+      "step_sha256": "c73391c3cec737492cbbb8ace50ae717b5abbb96401a663ff7cb0ef9d14acb83",
+      "mesh": {
+        "triangles": 3842,
+        "connected_components": 1,
+        "expected_components": 1,
+        "nonmanifold_or_boundary_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume_mm3": 1400.2086351949076,
+        "component_signed_volumes_mm3": [
+          1400.2086351949504
+        ],
+        "boundary_edge_examples_mm": [],
+        "watertight": true
+      }
+    },
+    {
+      "name": "display-front-bezel-development",
+      "result": "PASS",
+      "sha256": "503946cb1649c10ad3c6c0cee4117ddd2c77cf7725aea0ced4db148417798e61",
+      "step_sha256": "ed91286363508c0c4b18eae4f4e3cc7630c7b2e0e6db770641be8e0aa6f4f402",
+      "mesh": {
+        "triangles": 1744,
+        "connected_components": 1,
+        "expected_components": 1,
+        "nonmanifold_or_boundary_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume_mm3": 3872.9244884098657,
+        "component_signed_volumes_mm3": [
+          3872.924488409776
+        ],
+        "boundary_edge_examples_mm": [],
+        "watertight": true
+      }
+    },
+    {
+      "name": "horizontal-encoder-thumbwheel-development",
+      "result": "PASS",
+      "sha256": "b9d565a415ec951177afb86daac74e3e40cbce004f1f17d24994230553834043",
+      "step_sha256": "188060ea2df17f3cce545ad42a78b06d86f46d41f0e789a6341d95de6edb8847",
+      "mesh": {
+        "triangles": 5328,
+        "connected_components": 1,
+        "expected_components": 1,
+        "nonmanifold_or_boundary_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume_mm3": 5393.211123218942,
+        "component_signed_volumes_mm3": [
+          5393.21112321895
+        ],
+        "boundary_edge_examples_mm": [],
+        "watertight": true
+      }
+    },
+    {
+      "name": "horizontal-encoder-mount-development",
+      "result": "PASS",
+      "sha256": "47adf9a039889112f6195d9dfc45fd2e44ec9d715c157d1699771214a2b87997",
+      "step_sha256": "a374c2ed5b2e0beccb0b755154c726e09d539428d8fd4d6fb145af2dec376dca",
+      "mesh": {
+        "triangles": 3020,
+        "connected_components": 1,
+        "expected_components": 1,
+        "nonmanifold_or_boundary_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume_mm3": 2506.4238690554166,
+        "component_signed_volumes_mm3": [
+          2506.423869055375
+        ],
+        "boundary_edge_examples_mm": [],
+        "watertight": true
+      }
+    },
+    {
+      "name": "P2-low-structural-plinth",
+      "result": "PASS",
+      "sha256": "1d39ccdaff0e000bd88fa9f2fc2bd0ad3229851eb6fd5240376e05d269eb7163",
+      "step_sha256": "e7e6ec04fbf25ac3d0574fd28f7cbf2b9313a6df188a45531e8602b3dc841f83",
+      "mesh": {
+        "triangles": 356,
+        "connected_components": 1,
+        "expected_components": 1,
+        "nonmanifold_or_boundary_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume_mm3": 163622.50784653603,
+        "component_signed_volumes_mm3": [
+          163622.50784653565
+        ],
+        "boundary_edge_examples_mm": [],
+        "watertight": true
+      }
+    },
+    {
+      "name": "P2-bottom-electronics-service-tray",
+      "result": "PASS",
+      "sha256": "2b7bde57c1b20e1ea5964d8729936d35ac3697a2124ce49d2bd279ece4bf74de",
+      "step_sha256": "8029cb9eae5889212e95d7d1d57258f5ac505193a99c75c5eee37f55832b46d8",
+      "mesh": {
+        "triangles": 484,
+        "connected_components": 1,
+        "expected_components": 1,
+        "nonmanifold_or_boundary_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume_mm3": 44366.35718724006,
+        "component_signed_volumes_mm3": [
+          44366.35718723972
+        ],
+        "boundary_edge_examples_mm": [],
+        "watertight": true
+      }
+    },
+    {
+      "name": "P2-downward-ambient-diffuser",
+      "result": "PASS",
+      "sha256": "0ca9cbedff1bb1f101779baff760833c5a8cdf026d595012aa7d833c1992db33",
+      "step_sha256": "68d4d235dbed9a0a8ad01149fe23fdb4a7ba64d181b8d86c2b3f6d1b80e5734c",
+      "mesh": {
+        "triangles": 12,
+        "connected_components": 1,
+        "expected_components": 1,
+        "nonmanifold_or_boundary_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume_mm3": 487.0079999999398,
+        "component_signed_volumes_mm3": [
+          487.0079999999382
+        ],
+        "boundary_edge_examples_mm": [],
+        "watertight": true
+      }
+    },
+    {
+      "name": "P2-replaceable-TPU-desk-feet",
+      "result": "PASS",
+      "sha256": "3d27d50dafa0bd1e1fa4e291c75c68f0b32212b67554466a933e9465c6561e45",
+      "step_sha256": "dcc3372c6e6f06548581ccc14ae1cf781e547704d49a233650b18b9b06c7445a",
+      "mesh": {
+        "triangles": 1664,
+        "connected_components": 4,
+        "expected_components": 4,
+        "nonmanifold_or_boundary_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume_mm3": 2461.539060120708,
+        "component_signed_volumes_mm3": [
+          615.3847959863512,
+          615.384734073722,
+          615.3847959866627,
+          615.3847340739741
+        ],
+        "boundary_edge_examples_mm": [],
+        "watertight": true
+      }
+    },
+    {
+      "name": "P2-flowing-head-left-INTEGRAL-OUTLET",
+      "result": "PASS",
+      "sha256": "80659d7bace9fa4396c60100f4b366e0d04f99e1926d812375d01bcc466b07f6",
+      "step_sha256": "fcb160b20cd83d650dae7eaf66bd3cd511c8fdcb124e2423b72be83342f1fa99",
+      "mesh": {
+        "triangles": 1991762,
+        "connected_components": 1,
+        "expected_components": 1,
+        "nonmanifold_or_boundary_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume_mm3": 391485.0562484664,
+        "component_signed_volumes_mm3": [
+          391485.0562484067
+        ],
+        "boundary_edge_examples_mm": [],
+        "watertight": true
+      }
+    },
+    {
+      "name": "P2-flowing-head-right-INTEGRAL-OUTLET",
+      "result": "PASS",
+      "sha256": "d0e47b7fba56d889fd8007d9e81e06e3040b950511fffe0680cfdab22bc0edb8",
+      "step_sha256": "25c345a9ce2caea5bbab375ead7e6e81feddf422315964abbf6bcd0353a777b5",
+      "mesh": {
+        "triangles": 69226,
+        "connected_components": 1,
+        "expected_components": 1,
+        "nonmanifold_or_boundary_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume_mm3": 392432.6953964865,
+        "component_signed_volumes_mm3": [
+          392432.6953964866
+        ],
+        "boundary_edge_examples_mm": [],
+        "watertight": true
+      }
+    }
+  ],
+  "input_sha256": {
+    "cad\\rev_d_meshes.py": "52ddb4ef42db642fdbdfff5fbafe0baad14ee0144ee421979d262bc70343cee6",
+    "cad\\rev_d\\stage-validation.json": "614bd693b12eff3113aa81d384297961dffd92ff30c08794240d92e5d4046124",
+    "cad\\rev_d\\stl-refinements.json": "246a0db487d1feaedf6015980f5bc5159648c15c95070e13012f9d390b84ae1f"
+  },
+  "limits": [
+    "Binary STL shared-edge topology, orientation and connectivity only.",
+    "No support, slicer, dimensional tolerance, printed strength or operating permission is established."
+  ]
+}

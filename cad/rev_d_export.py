@@ -15,8 +15,10 @@ def main():
     stage=json.loads((OUT/'stage-validation.json').read_text())
     motion=json.loads((OUT/'motion-validation.json').read_text())
     rotor=json.loads((OUT/'rotor-validation.json').read_text())
+    mesh=json.loads((OUT/'mesh-validation.json').read_text())
     assert json.loads((OUT/'stage-build-state.json').read_text())['status']=='PASS'
-    verify(stage);verify(motion);verify(rotor)
+    verify(stage);verify(motion);verify(rotor);verify(mesh)
+    for r in mesh['parts']:assert digest(OUT/(r['name']+'.stl'))==r['sha256'],('Stale STL',r['name'])
     excluded=set(stage['excluded_alternative_and_reserves'])
     assembly=cq.Assembly(name='Windflow-Rev-D-150mm-development')
     components=[]
@@ -48,7 +50,7 @@ def main():
             'bytes':target.stat().st_size,'named_part_groups':len(components),
             'round_trip_solids':len(restored.Solids()),'round_trip_volume_difference_mm3':delta,
             'components':components,'excluded_alternative_and_reserves':sorted(excluded),
-            'input_sha256':{str(p.relative_to(ROOT)):digest(p) for p in [Path(__file__),OUT/'stage-validation.json',OUT/'motion-validation.json',OUT/'rotor-validation.json']},
+            'input_sha256':{str(p.relative_to(ROOT)):digest(p) for p in [Path(__file__),OUT/'stage-validation.json',OUT/'motion-validation.json',OUT/'rotor-validation.json',OUT/'mesh-validation.json']},
             'limits':['Development STEP hierarchy has no native assembly mates.',
                       'Main PCB, connected harness, pressure plumbing, interlock and all fasteners are unfinished integration.',
                       'Rotor/servo/ESC physical qualification remains required; this is not an operating or production release.']}

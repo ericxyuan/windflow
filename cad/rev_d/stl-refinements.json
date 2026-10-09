@@ -1,0 +1,572 @@
+{
+  "P2-R12-bellmouth-insert": {
+    "step_sha256": "eff6c7b6017ce863232af339cb4941a03ee87d79f6503f8a1df79baaf08c956e",
+    "original_stl_sha256": "34af580adbc9b0bdef0e07fe6b1953bd5908a410bfb795505b396700c2843527",
+    "final_stl_sha256": "bb478fc2ec13ce685ebffdc4f5baeeb691abd7587fcf3ee93a5ce9009d881bd0",
+    "original_mesh": {
+      "triangles": 14795,
+      "connected_components": 1,
+      "expected_components": 1,
+      "nonmanifold_or_boundary_edges": 105,
+      "inconsistent_winding_edges": 105,
+      "degenerate_faces": 0,
+      "signed_volume_mm3": 29394.36821572609,
+      "component_signed_volumes_mm3": [
+        29394.368215726692
+      ],
+      "boundary_edge_examples_mm": [
+        [
+          [
+            -0.0,
+            -0.02,
+            76.0
+          ],
+          [
+            4.54512,
+            -0.02,
+            75.86397
+          ]
+        ],
+        [
+          [
+            4.54512,
+            -0.02,
+            75.86397
+          ],
+          [
+            9.07396,
+            -0.02,
+            75.45637
+          ]
+        ],
+        [
+          [
+            9.07396,
+            -0.02,
+            75.45637
+          ],
+          [
+            13.57032,
+            -0.02,
+            74.77865
+          ]
+        ],
+        [
+          [
+            13.57032,
+            -0.02,
+            74.77865
+          ],
+          [
+            18.01811,
+            -0.02,
+            73.83324
+          ]
+        ],
+        [
+          [
+            18.01811,
+            -0.02,
+            73.83324
+          ],
+          [
+            22.40139,
+            -0.02,
+            72.62354
+          ]
+        ],
+        [
+          [
+            22.40139,
+            -0.02,
+            72.62354
+          ],
+          [
+            26.70449,
+            -0.02,
+            71.15385
+          ]
+        ],
+        [
+          [
+            26.70449,
+            -0.02,
+            71.15385
+          ],
+          [
+            30.91199,
+            -0.02,
+            69.42945
+          ]
+        ],
+        [
+          [
+            30.91199,
+            -0.02,
+            69.42945
+          ],
+          [
+            35.00883,
+            -0.02,
+            67.45652
+          ]
+        ]
+      ],
+      "watertight": false
+    },
+    "cad_volume_mm3": 29301.5644289123,
+    "cleanup_volume_difference_mm3": 5.820766091346741e-10,
+    "trials": [
+      {
+        "settings": {
+          "linear_tolerance_mm": 0.002,
+          "angular_tolerance_rad": 0.05,
+          "relative_deflection": true,
+          "parallel": false
+        },
+        "mesh": {
+          "triangles": 68040,
+          "connected_components": 1,
+          "expected_components": 1,
+          "nonmanifold_or_boundary_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "degenerate_faces": 0,
+          "signed_volume_mm3": 29296.587346147764,
+          "component_signed_volumes_mm3": [
+            29296.587346144344
+          ],
+          "boundary_edge_examples_mm": [],
+          "watertight": true
+        },
+        "relative_volume_error": 0.00016985723668822545
+      }
+    ],
+    "accepted_settings": {
+      "linear_tolerance_mm": 0.002,
+      "angular_tolerance_rad": 0.05,
+      "relative_deflection": true,
+      "parallel": false
+    },
+    "method": "Fresh tessellation of unchanged STEP; no vertex welding."
+  },
+  "P2-flowing-head-left-INTEGRAL-OUTLET": {
+    "step_sha256": "fcb160b20cd83d650dae7eaf66bd3cd511c8fdcb124e2423b72be83342f1fa99",
+    "original_stl_sha256": "1ba1afcace7df8aa3f005e84b511531d408b7df862d341688b596bf435bfd33f",
+    "final_stl_sha256": "80659d7bace9fa4396c60100f4b366e0d04f99e1926d812375d01bcc466b07f6",
+    "original_mesh": {
+      "triangles": 26100,
+      "connected_components": 1,
+      "expected_components": 1,
+      "nonmanifold_or_boundary_edges": 118,
+      "inconsistent_winding_edges": 118,
+      "degenerate_faces": 0,
+      "signed_volume_mm3": 390901.3621436483,
+      "component_signed_volumes_mm3": [
+        390901.3621436489
+      ],
+      "boundary_edge_examples_mm": [
+        [
+          [
+            -4.41901,
+            104.0,
+            -75.87142
+          ],
+          [
+            -0.0,
+            104.0,
+            -76.0
+          ]
+        ],
+        [
+          [
+            -8.82306,
+            104.0,
+            -75.48611
+          ],
+          [
+            -4.41901,
+            104.0,
+            -75.87142
+          ]
+        ],
+        [
+          [
+            -13.19726,
+            104.0,
+            -74.84539
+          ],
+          [
+            -8.82306,
+            104.0,
+            -75.48611
+          ]
+        ],
+        [
+          [
+            -17.52681,
+            104.0,
+            -73.95141
+          ],
+          [
+            -13.19726,
+            104.0,
+            -74.84539
+          ]
+        ],
+        [
+          [
+            -21.79704,
+            104.0,
+            -72.80721
+          ],
+          [
+            -17.52681,
+            104.0,
+            -73.95141
+          ]
+        ],
+        [
+          [
+            -25.99353,
+            104.0,
+            -71.41664
+          ],
+          [
+            -21.79704,
+            104.0,
+            -72.80721
+          ]
+        ],
+        [
+          [
+            -30.10206,
+            104.0,
+            -69.78442
+          ],
+          [
+            -25.99353,
+            104.0,
+            -71.41664
+          ]
+        ],
+        [
+          [
+            -34.10874,
+            104.0,
+            -67.91608
+          ],
+          [
+            -30.10206,
+            104.0,
+            -69.78442
+          ]
+        ]
+      ],
+      "watertight": false
+    },
+    "cad_volume_mm3": 391485.9311129421,
+    "cleanup_volume_difference_mm3": 0.0010956933838315308,
+    "trials": [
+      {
+        "settings": {
+          "linear_tolerance_mm": 0.002,
+          "angular_tolerance_rad": 0.05,
+          "relative_deflection": true,
+          "parallel": false
+        },
+        "mesh": {
+          "triangles": 75148,
+          "connected_components": 1,
+          "expected_components": 1,
+          "nonmanifold_or_boundary_edges": 48,
+          "inconsistent_winding_edges": 48,
+          "degenerate_faces": 0,
+          "signed_volume_mm3": 391462.94997617544,
+          "component_signed_volumes_mm3": [
+            391462.9499761677
+          ],
+          "boundary_edge_examples_mm": [
+            [
+              [
+                -54.39997,
+                188.98,
+                -44.00006
+              ],
+              [
+                -54.39859,
+                188.98,
+                -44.12175
+              ]
+            ],
+            [
+              [
+                -54.39859,
+                188.98,
+                -44.12175
+              ],
+              [
+                -54.39448,
+                188.98,
+                -44.24338
+              ]
+            ],
+            [
+              [
+                -54.39448,
+                188.98,
+                -44.24338
+              ],
+              [
+                -54.38743,
+                188.98,
+                -44.36775
+              ]
+            ],
+            [
+              [
+                -54.38743,
+                188.98,
+                -44.36775
+              ],
+              [
+                -54.37752,
+                188.98,
+                -44.49192
+              ]
+            ],
+            [
+              [
+                -54.37752,
+                188.98,
+                -44.49192
+              ],
+              [
+                -54.36474,
+                188.98,
+                -44.61583
+              ]
+            ],
+            [
+              [
+                -54.36474,
+                188.98,
+                -44.61583
+              ],
+              [
+                -54.34911,
+                188.98,
+                -44.73941
+              ]
+            ],
+            [
+              [
+                -54.34911,
+                188.98,
+                -44.73941
+              ],
+              [
+                -54.33063,
+                188.98,
+                -44.86261
+              ]
+            ],
+            [
+              [
+                -54.25822,
+                188.98,
+                -45.22916
+              ],
+              [
+                -54.22847,
+                188.98,
+                -45.35012
+              ]
+            ]
+          ],
+          "watertight": false
+        },
+        "relative_volume_error": 5.8702331144665936e-05
+      },
+      {
+        "settings": {
+          "linear_tolerance_mm": 0.001,
+          "angular_tolerance_rad": 0.05,
+          "relative_deflection": false,
+          "parallel": false
+        },
+        "mesh": {
+          "triangles": 1991762,
+          "connected_components": 1,
+          "expected_components": 1,
+          "nonmanifold_or_boundary_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "degenerate_faces": 0,
+          "signed_volume_mm3": 391485.0562484664,
+          "component_signed_volumes_mm3": [
+            391485.0562484067
+          ],
+          "boundary_edge_examples_mm": [],
+          "watertight": true
+        },
+        "relative_volume_error": 2.2347277543232503e-06
+      }
+    ],
+    "accepted_settings": {
+      "linear_tolerance_mm": 0.001,
+      "angular_tolerance_rad": 0.05,
+      "relative_deflection": false,
+      "parallel": false
+    },
+    "method": "Fresh tessellation of unchanged STEP; no vertex welding."
+  },
+  "P2-flowing-head-right-INTEGRAL-OUTLET": {
+    "step_sha256": "25c345a9ce2caea5bbab375ead7e6e81feddf422315964abbf6bcd0353a777b5",
+    "original_stl_sha256": "28f6d6617da8100a7c47e6b678e0115fe4e613e66a993d14d004e801098e46bf",
+    "final_stl_sha256": "d0e47b7fba56d889fd8007d9e81e06e3040b950511fffe0680cfdab22bc0edb8",
+    "original_mesh": {
+      "triangles": 22678,
+      "connected_components": 1,
+      "expected_components": 1,
+      "nonmanifold_or_boundary_edges": 106,
+      "inconsistent_winding_edges": 107,
+      "degenerate_faces": 0,
+      "signed_volume_mm3": 391988.3545584458,
+      "component_signed_volumes_mm3": [
+        391988.35455843864
+      ],
+      "boundary_edge_examples_mm": [
+        [
+          [
+            -0.0,
+            104.0,
+            76.0
+          ],
+          [
+            4.41901,
+            104.0,
+            75.87142
+          ]
+        ],
+        [
+          [
+            4.41901,
+            104.0,
+            75.87142
+          ],
+          [
+            8.82306,
+            104.0,
+            75.48611
+          ]
+        ],
+        [
+          [
+            8.82306,
+            104.0,
+            75.48611
+          ],
+          [
+            13.19726,
+            104.0,
+            74.84539
+          ]
+        ],
+        [
+          [
+            13.19726,
+            104.0,
+            74.84539
+          ],
+          [
+            17.52681,
+            104.0,
+            73.95141
+          ]
+        ],
+        [
+          [
+            17.52681,
+            104.0,
+            73.95141
+          ],
+          [
+            21.79704,
+            104.0,
+            72.80721
+          ]
+        ],
+        [
+          [
+            21.79704,
+            104.0,
+            72.80721
+          ],
+          [
+            25.99353,
+            104.0,
+            71.41664
+          ]
+        ],
+        [
+          [
+            25.99353,
+            104.0,
+            71.41664
+          ],
+          [
+            30.10206,
+            104.0,
+            69.78442
+          ]
+        ],
+        [
+          [
+            30.10206,
+            104.0,
+            69.78442
+          ],
+          [
+            34.10874,
+            104.0,
+            67.91608
+          ]
+        ]
+      ],
+      "watertight": false
+    },
+    "cad_volume_mm3": 392553.95472967543,
+    "cleanup_volume_difference_mm3": 0.007433165272232145,
+    "trials": [
+      {
+        "settings": {
+          "linear_tolerance_mm": 0.002,
+          "angular_tolerance_rad": 0.05,
+          "relative_deflection": true,
+          "parallel": false
+        },
+        "mesh": {
+          "triangles": 69226,
+          "connected_components": 1,
+          "expected_components": 1,
+          "nonmanifold_or_boundary_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "degenerate_faces": 0,
+          "signed_volume_mm3": 392432.6953964865,
+          "component_signed_volumes_mm3": [
+            392432.6953964866
+          ],
+          "boundary_edge_examples_mm": [],
+          "watertight": true
+        },
+        "relative_volume_error": 0.00030889851376593425
+      }
+    ],
+    "accepted_settings": {
+      "linear_tolerance_mm": 0.002,
+      "angular_tolerance_rad": 0.05,
+      "relative_deflection": true,
+      "parallel": false
+    },
+    "method": "Fresh tessellation of unchanged STEP; no vertex welding."
+  }
+}
