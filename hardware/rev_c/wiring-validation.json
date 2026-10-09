@@ -1,0 +1,11 @@
+{
+  "result": "PASS:40physical Pico mappings and connector tables generated from checked population",
+  "physical_qualification": false,
+  "main_pcb_routed": false,
+  "installed_loom_qualified": false,
+  "input_sha256": {
+    "hardware/pcb/rev_c/circuit-population.json": "3ef3c76d66aabc5bd1ae334f1d7e952d5e305c23fc58a3a155674dde24875264",
+    "tools/build_rev_c_wiring.py": "069e5992f0750e3f404bfcc477fa2de2b45509c4f806d56107b646c56e308d26"
+  },
+  "output_sha256": "3ee316c3792c3611cb6f68a6de076792472da6147ceb47114e61ffa2d6016a0a"
+}

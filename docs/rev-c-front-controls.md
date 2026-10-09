@@ -1,0 +1,15 @@
+# Front screen and encoder — 8 October 2026
+
+The encoder now sits immediately beside the screen on the front fascia. The wheel rotates in the same **XZ plane** as the screen face; its horizontal shaft points **+Y**, along the airflow direction. Pressing moves it toward the enclosure, **−Y**. The previous side-wall encoder position is superseded. The shaft is perpendicular to the screen, so the visible wheel face stays parallel to it while turning.
+
+The initial wheel center is X−66 / Z−95.5 mm, level with the display center. The 30 mm wheel has an 8 mm axial thickness. Its front face sits about 9.4 mm ahead of the LCD face, giving fingers access to the rim. The screen, bezel and wheel remain separate service parts. These values are in [the CAD parameters](../cad/rev_c/head-parameters.json); they are starting dimensions for the fascia test piece.
+
+The Bourns PEC11H bushing and M7×0.75 nut carry operating loads into a removable rigid bracket. Two M3 screws attach the bracket to the curved base. Two separate M2 screws and captive nuts support the routed P1 encoder board. The board's soldered terminals do not carry the wheel's press force. The captive nuts load from the PCB-facing side before the board is installed. Remove the wheel before reaching the bracket screws.
+
+The rounded surround provides 0.8 mm nominal radial space around the wheel. The bracket has a separate opening and rear support bridges, keeping its fasteners clear of the encoder body and the screen cradle. The wheel, bracket and fascia section are supplied as small [test prints](../cad/rev_c/testpieces). Test the actual D-flat, nut, press stroke and rim finish before printing the full base. Do not force the encoder through the conservative 1.5 mm CAD test travel; its specified press travel is 0.5±0.3 mm.
+
+The intended front-face gesture is clockwise to increase and counterclockwise to decrease. Rolling upward on the rim nearest the screen also increases in that orientation. Confirm the actual A/B phase and set the stored encoder-direction calibration during commissioning; geometry does not establish the electrical direction. The short press still switches the fan on/off and the long press still changes night mode.
+
+The screen retains its top64-row status band, relative wheel phase and visible degrees remaining before boost. At maximum normal speed with the outlet open and ready, an additional fresh24detents arms boost. That entry turn holds the nozzle open. Further rotation progressively closes it within the qualified limits. Leaving boost resets entry progress. Moving the wheel does not change this interaction rule.
+
+Verify nominal wheel/press clearances in [encoder validation](../cad/rev_c/encoder-validation.json), screen removal and nozzle movement in [motion validation](../cad/rev_c/motion-validation.json), and the complete rigid assembly in [head validation](../cad/rev_c/head-validation.json). These reports have source hashes and do not establish physical fit, desk stability or a connected harness path. The full printed base, actual wheel press feel and screen glare still require hardware trials.

@@ -1,0 +1,1328 @@
+{
+  "parts": [
+    {
+      "part": "magnet-pocket-coupon",
+      "valid_solid": true,
+      "solids": 1,
+      "printable_custom_part": true,
+      "bbox_mm": [
+        48.0,
+        18.0,
+        5.002
+      ],
+      "volume_mm3": 3848.0,
+      "notes": null
+    },
+    {
+      "part": "magnet-keeper-coupon",
+      "valid_solid": true,
+      "solids": 1,
+      "printable_custom_part": true,
+      "bbox_mm": [
+        48.0,
+        18.0,
+        0.801
+      ],
+      "volume_mm3": 670.7,
+      "notes": null
+    },
+    {
+      "part": "led-channel-coupon",
+      "valid_solid": true,
+      "solids": 1,
+      "printable_custom_part": true,
+      "bbox_mm": [
+        60.0,
+        15.0,
+        12.0
+      ],
+      "volume_mm3": 4561.4,
+      "notes": null
+    },
+    {
+      "part": "diffuser-0p6",
+      "valid_solid": true,
+      "solids": 1,
+      "printable_custom_part": true,
+      "bbox_mm": [
+        55.0,
+        10.7,
+        0.6
+      ],
+      "volume_mm3": 353.1,
+      "notes": null
+    },
+    {
+      "part": "diffuser-0p8",
+      "valid_solid": true,
+      "solids": 1,
+      "printable_custom_part": true,
+      "bbox_mm": [
+        55.0,
+        10.7,
+        0.8
+      ],
+      "volume_mm3": 470.8,
+      "notes": null
+    },
+    {
+      "part": "diffuser-1p0",
+      "valid_solid": true,
+      "solids": 1,
+      "printable_custom_part": true,
+      "bbox_mm": [
+        55.0,
+        10.7,
+        1.0
+      ],
+      "volume_mm3": 588.5,
+      "notes": null
+    },
+    {
+      "part": "encoder-mount-coupon",
+      "valid_solid": true,
+      "solids": 1,
+      "printable_custom_part": true,
+      "bbox_mm": [
+        34.0,
+        28.0,
+        2.402
+      ],
+      "volume_mm3": 2143.3,
+      "notes": null
+    },
+    {
+      "part": "encoder-wheel-clearance-0p05",
+      "valid_solid": true,
+      "solids": 1,
+      "printable_custom_part": true,
+      "bbox_mm": [
+        29.983,
+        29.983,
+        8.004
+      ],
+      "volume_mm3": 5400.9,
+      "notes": null
+    },
+    {
+      "part": "encoder-wheel-clearance-0p15",
+      "valid_solid": true,
+      "solids": 1,
+      "printable_custom_part": true,
+      "bbox_mm": [
+        29.983,
+        29.983,
+        8.004
+      ],
+      "volume_mm3": 5393.6,
+      "notes": null
+    },
+    {
+      "part": "encoder-wheel-clearance-0p25",
+      "valid_solid": true,
+      "solids": 1,
+      "printable_custom_part": true,
+      "bbox_mm": [
+        29.983,
+        29.983,
+        8.004
+      ],
+      "volume_mm3": 5386.3,
+      "notes": null
+    },
+    {
+      "part": "tpu-fan-pad",
+      "valid_solid": true,
+      "solids": 1,
+      "printable_custom_part": true,
+      "bbox_mm": [
+        14.004,
+        14.0,
+        2.004
+      ],
+      "volume_mm3": 278.8,
+      "notes": null
+    },
+    {
+      "part": "tpu-bushing-coupon",
+      "valid_solid": true,
+      "solids": 1,
+      "printable_custom_part": true,
+      "bbox_mm": [
+        14.004,
+        14.0,
+        4.203
+      ],
+      "volume_mm3": 274.5,
+      "notes": null
+    },
+    {
+      "part": "m3-insert-coupon",
+      "valid_solid": true,
+      "solids": 1,
+      "printable_custom_part": true,
+      "bbox_mm": [
+        50.0,
+        16.0,
+        8.001
+      ],
+      "volume_mm3": 6143.2,
+      "notes": null
+    },
+    {
+      "part": "horizontal-hinge-bore-coupon",
+      "valid_solid": true,
+      "solids": 1,
+      "printable_custom_part": true,
+      "bbox_mm": [
+        18.001,
+        46.0,
+        10.0
+      ],
+      "volume_mm3": 7241.5,
+      "notes": null
+    },
+    {
+      "part": "yoke-slot-width-coupon",
+      "valid_solid": true,
+      "solids": 1,
+      "printable_custom_part": true,
+      "bbox_mm": [
+        4.001,
+        12.0,
+        42.0
+      ],
+      "volume_mm3": 1841.8,
+      "notes": null
+    },
+    {
+      "part": "yoke-crank-coupon",
+      "valid_solid": true,
+      "solids": 1,
+      "printable_custom_part": true,
+      "bbox_mm": [
+        4.004,
+        16.002,
+        34.001
+      ],
+      "volume_mm3": 1142.4,
+      "notes": "Separate double-flat split-clamp crank. M2 clamp fastener eliminates printed-fit backlash; verify key strength and free hinge motion."
+    },
+    {
+      "part": "boost-panel-keyed-crank",
+      "valid_solid": true,
+      "solids": 1,
+      "printable_custom_part": true,
+      "bbox_mm": [
+        4.004,
+        16.002,
+        34.001
+      ],
+      "volume_mm3": 1142.4,
+      "notes": null
+    },
+    {
+      "part": "REF-M2x16-crank-clamp-stack",
+      "valid_solid": true,
+      "solids": 3,
+      "printable_custom_part": false,
+      "bbox_mm": [
+        5.0,
+        5.0,
+        18.0
+      ],
+      "volume_mm3": 114.0,
+      "notes": "M2 x 16 DIN 912 screw and M2 DIN 985 nut envelopes; no threads. Tighten lightly to remove backlash with shaft present."
+    },
+    {
+      "part": "boost-panel-upper-test",
+      "valid_solid": true,
+      "solids": 1,
+      "printable_custom_part": true,
+      "bbox_mm": [
+        128.652,
+        57.801,
+        5.602
+      ],
+      "volume_mm3": 10716.3,
+      "notes": null
+    },
+    {
+      "part": "boost-panel-lower-test",
+      "valid_solid": true,
+      "solids": 1,
+      "printable_custom_part": true,
+      "bbox_mm": [
+        128.652,
+        57.801,
+        5.602
+      ],
+      "volume_mm3": 10716.3,
+      "notes": null
+    },
+    {
+      "part": "panel-key-clamp-coupon",
+      "valid_solid": true,
+      "solids": 1,
+      "printable_custom_part": true,
+      "bbox_mm": [
+        12.002,
+        5.602,
+        5.602
+      ],
+      "volume_mm3": 186.7,
+      "notes": "Insert 3 mm steel shaft before tightening crank; confirm no crack, backlash or shaft binding."
+    },
+    {
+      "part": "sliding-yoke-coupon",
+      "valid_solid": true,
+      "solids": 1,
+      "printable_custom_part": true,
+      "bbox_mm": [
+        4.002,
+        13.4,
+        154.0
+      ],
+      "volume_mm3": 5959.4,
+      "notes": null
+    },
+    {
+      "part": "REF-FS90-FB-approximate-envelope",
+      "valid_solid": true,
+      "solids": 1,
+      "printable_custom_part": false,
+      "bbox_mm": [
+        27.3,
+        32.6,
+        12.5
+      ],
+      "volume_mm3": 6781.0,
+      "notes": "Approximate family envelope only: measure purchased feedback variant and output/horn before mount release."
+    },
+    {
+      "part": "servo-slotted-bracket",
+      "valid_solid": true,
+      "solids": 1,
+      "printable_custom_part": true,
+      "bbox_mm": [
+        3.001,
+        55.9,
+        38.0
+      ],
+      "volume_mm3": 2909.1,
+      "notes": "Family-datum mount study. Slots allow about +/-1.6 mm Y adjustment with M2 screws; verify X/Z datum on FS90-FB."
+    },
+    {
+      "part": "servo-connecting-rod",
+      "valid_solid": true,
+      "solids": 1,
+      "printable_custom_part": true,
+      "bbox_mm": [
+        4.002,
+        43.0,
+        8.002
+      ],
+      "volume_mm3": 1252.6,
+      "notes": null
+    },
+    {
+      "part": "REF-supplied-servo-horn-envelope",
+      "valid_solid": true,
+      "solids": 1,
+      "printable_custom_part": false,
+      "bbox_mm": [
+        3.0,
+        8.0,
+        18.0
+      ],
+      "volume_mm3": 365.1,
+      "notes": "Approximate trimmed supplied horn, 10 mm pin radius, no spline detail."
+    },
+    {
+      "part": "nozzle-test-frame",
+      "valid_solid": true,
+      "solids": 1,
+      "printable_custom_part": true,
+      "bbox_mm": [
+        142.401,
+        77.0,
+        108.0
+      ],
+      "volume_mm3": 82745.4,
+      "notes": null
+    },
+    {
+      "part": "crank-retaining-spacer",
+      "valid_solid": true,
+      "solids": 1,
+      "printable_custom_part": true,
+      "bbox_mm": [
+        7.602,
+        7.002,
+        7.0
+      ],
+      "volume_mm3": 227.5,
+      "notes": null
+    },
+    {
+      "part": "REF-Maedler-62300300-collar-envelope",
+      "valid_solid": true,
+      "solids": 1,
+      "printable_custom_part": false,
+      "bbox_mm": [
+        5.0,
+        7.0,
+        7.0
+      ],
+      "volume_mm3": 157.1,
+      "notes": "Manufacturer dimensions: 3 mm bore, 7 mm OD, 5 mm width, M2 x 3 set screw. Simplified envelope, not vendor CAD."
+    },
+    {
+      "part": "REF-3mm-hinge-shaft-155mm",
+      "valid_solid": true,
+      "solids": 1,
+      "printable_custom_part": false,
+      "bbox_mm": [
+        155.0,
+        3.0,
+        3.0
+      ],
+      "volume_mm3": 1095.6,
+      "notes": "Cut straight 3 mm ground steel rod to 155 mm; deburr ends. Two required."
+    }
+  ],
+  "coordinate_system": {
+    "airflow": "+Y",
+    "hinges_mm": [
+      [
+        0,
+        0,
+        47.0
+      ],
+      [
+        0,
+        0,
+        -47.0
+      ]
+    ],
+    "parent_head_translation_mm": [
+      0,
+      90,
+      10.0
+    ],
+    "mechanism_outboard_offset_mm": 17.0,
+    "rightmost_servo_envelope_x_mm": 99.3
+  },
+  "kinematics": [
+    {
+      "fraction": 0.0,
+      "panel_angle_deg": 0.0,
+      "area_ratio_gross": 1.0,
+      "yoke_stroke_mm": 0.0,
+      "servo_angle_deg": 6.6613381477509385e-15,
+      "rod_angle_deg": -0.0,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.016666666666666666,
+      "panel_angle_deg": 0.20559230084900987,
+      "area_ratio_gross": 0.9958009783478512,
+      "yoke_stroke_mm": 0.08611811679316247,
+      "servo_angle_deg": 0.49342657359395353,
+      "rod_angle_deg": 0.000607046155575639,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.03333333333333333,
+      "panel_angle_deg": 0.41118460169801974,
+      "area_ratio_gross": 0.991602010760686,
+      "yoke_stroke_mm": 0.17223512476265757,
+      "servo_angle_deg": 0.9868835505674084,
+      "rod_angle_deg": 0.0024282892144670155,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.05,
+      "panel_angle_deg": 0.6167769025470297,
+      "area_ratio_gross": 0.9874031513027924,
+      "yoke_stroke_mm": 0.25834991509909466,
+      "servo_angle_deg": 1.4804016020724275,
+      "rod_angle_deg": 0.005464044904685473,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.06666666666666667,
+      "panel_angle_deg": 0.8223692033960395,
+      "area_ratio_gross": 0.9832044540370657,
+      "yoke_stroke_mm": 0.3444613790216365,
+      "servo_angle_deg": 1.9740117101928847,
+      "rod_angle_deg": 0.009714843733845551,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.08333333333333333,
+      "panel_angle_deg": 1.0279615042450494,
+      "area_ratio_gross": 0.9790059730243128,
+      "yoke_stroke_mm": 0.4305684077922755,
+      "servo_angle_deg": 2.4677451892083346,
+      "rod_angle_deg": 0.015181434950027127,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.1,
+      "panel_angle_deg": 1.2335538050940593,
+      "area_ratio_gross": 0.9748077623225567,
+      "yoke_stroke_mm": 0.5166698927301094,
+      "servo_angle_deg": 2.9616337075196806,
+      "rod_angle_deg": 0.02186479077516644,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.11666666666666667,
+      "panel_angle_deg": 1.4391461059430692,
+      "area_ratio_gross": 0.9706098759863396,
+      "yoke_stroke_mm": 0.6027647252256163,
+      "servo_angle_deg": 3.4557093102839938,
+      "rod_angle_deg": 0.02976611092261095,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.13333333333333333,
+      "panel_angle_deg": 1.644738406792079,
+      "area_ratio_gross": 0.9664123680660274,
+      "yoke_stroke_mm": 0.6888517967549281,
+      "servo_angle_deg": 3.950004442809945,
+      "rod_angle_deg": 0.03888682741140292,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.15,
+      "panel_angle_deg": 1.8503307076410889,
+      "area_ratio_gross": 0.9622152926071137,
+      "yoke_stroke_mm": 0.7749299988941045,
+      "servo_angle_deg": 4.444551974766395,
+      "rod_angle_deg": 0.04922860969086581,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.16666666666666666,
+      "panel_angle_deg": 2.055923008490099,
+      "area_ratio_gross": 0.9580187036495238,
+      "yoke_stroke_mm": 0.8609982233334039,
+      "servo_angle_deg": 4.939385225262385,
+      "rod_angle_deg": 0.06079337009007351,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.18333333333333332,
+      "panel_angle_deg": 2.2615153093391087,
+      "area_ratio_gross": 0.9538226552269189,
+      "yoke_stroke_mm": 0.9470553618915534,
+      "servo_angle_deg": 5.434537988857058,
+      "rod_angle_deg": 0.0735832696079062,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.2,
+      "panel_angle_deg": 2.4671076101881186,
+      "area_ratio_gross": 0.949627201366001,
+      "yoke_stroke_mm": 1.033100306530018,
+      "servo_angle_deg": 5.93004456256519,
+      "rod_angle_deg": 0.08760072406068553,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.21666666666666667,
+      "panel_angle_deg": 2.6726999110371286,
+      "area_ratio_gross": 0.9454323960858159,
+      "yoke_stroke_mm": 1.1191319493672665,
+      "servo_angle_deg": 6.425939773925278,
+      "rod_angle_deg": 0.10284841060553776,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.23333333333333334,
+      "panel_angle_deg": 2.8782922118861385,
+      "area_ratio_gross": 0.9412382933970594,
+      "yoke_stroke_mm": 1.2051491826930372,
+      "servo_angle_deg": 6.922259010203422,
+      "rod_angle_deg": 0.1193292746592016,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.25,
+      "panel_angle_deg": 3.083884512735148,
+      "area_ratio_gross": 0.9370449473013803,
+      "yoke_stroke_mm": 1.2911508989825988,
+      "servo_angle_deg": 7.419038248810047,
+      "rod_angle_deg": 0.13704653723337315,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.26666666666666666,
+      "panel_angle_deg": 3.289476813584158,
+      "area_ratio_gross": 0.9328524117906863,
+      "yoke_stroke_mm": 1.3771359909110128,
+      "servo_angle_deg": 7.916314089012211,
+      "rod_angle_deg": 0.1560037027093573,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.2833333333333333,
+      "panel_angle_deg": 3.495069114433168,
+      "area_ratio_gross": 0.9286607408464483,
+      "yoke_stroke_mm": 1.4631033513673877,
+      "servo_angle_deg": 8.414123785029867,
+      "rod_angle_deg": 0.17620456707656468,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.3,
+      "panel_angle_deg": 3.7006614152821777,
+      "area_ratio_gross": 0.9244699884390049,
+      "yoke_stroke_mm": 1.549051873469137,
+      "servo_angle_deg": 8.912505280610674,
+      "rod_angle_deg": 0.1976532266613323,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.31666666666666665,
+      "panel_angle_deg": 3.9062537161311877,
+      "area_ratio_gross": 0.9202802085268682,
+      "yoke_stroke_mm": 1.6349804505762293,
+      "servo_angle_deg": 9.411497245184604,
+      "rod_angle_deg": 0.2203540873744673,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.3333333333333333,
+      "panel_angle_deg": 4.111846016980198,
+      "area_ratio_gross": 0.9160914550560293,
+      "yoke_stroke_mm": 1.720887976305437,
+      "servo_angle_deg": 9.911139111706847,
+      "rod_angle_deg": 0.2443118745083735,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.35,
+      "panel_angle_deg": 4.3174383178292075,
+      "area_ratio_gross": 0.9119037819592624,
+      "yoke_stroke_mm": 1.806773344544582,
+      "servo_angle_deg": 10.411471116305952,
+      "rod_angle_deg": 0.26953164311680994,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.36666666666666664,
+      "panel_angle_deg": 4.523030618678217,
+      "area_ratio_gross": 0.907717243155432,
+      "yoke_stroke_mm": 1.8926354494667774,
+      "servo_angle_deg": 10.91253433986259,
+      "rod_angle_deg": 0.29601878901320866,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.38333333333333336,
+      "panel_angle_deg": 4.728622919527227,
+      "area_ratio_gross": 0.9035318925487973,
+      "yoke_stroke_mm": 1.9784731855446664,
+      "servo_angle_deg": 11.4143707516539,
+      "rod_angle_deg": 0.3237790604261394,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.4,
+      "panel_angle_deg": 4.934215220376237,
+      "area_ratio_gross": 0.899347784028319,
+      "yoke_stroke_mm": 2.064285447564655,
+      "servo_angle_deg": 11.917023255208697,
+      "rod_angle_deg": 0.3528185703538081,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.4166666666666667,
+      "panel_angle_deg": 5.139807521225247,
+      "area_ratio_gross": 0.8951649714669655,
+      "yoke_stroke_mm": 2.1500711306411446,
+      "servo_angle_deg": 12.420535736530574,
+      "rod_angle_deg": 0.3831438096628143,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.43333333333333335,
+      "panel_angle_deg": 5.345399822074257,
+      "area_ratio_gross": 0.8909835087210182,
+      "yoke_stroke_mm": 2.2358291302307554,
+      "servo_angle_deg": 12.92495311485842,
+      "rod_angle_deg": 0.41476166098012335,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.45,
+      "panel_angle_deg": 5.550992122923267,
+      "area_ratio_gross": 0.8868034496293792,
+      "yoke_stroke_mm": 2.3215583421465515,
+      "servo_angle_deg": 13.430321396146581,
+      "rod_angle_deg": 0.4476794134313397,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.4666666666666667,
+      "panel_angle_deg": 5.756584423772277,
+      "area_ratio_gross": 0.8826248480128778,
+      "yoke_stroke_mm": 2.407257662572253,
+      "servo_angle_deg": 13.936687729464404,
+      "rod_angle_deg": 0.4819047782828409,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.48333333333333334,
+      "panel_angle_deg": 5.962176724621286,
+      "area_ratio_gross": 0.8784477576735772,
+      "yoke_stroke_mm": 2.4929259880764545,
+      "servo_angle_deg": 14.444100466527338,
+      "rod_angle_deg": 0.5174459055501173,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.5,
+      "panel_angle_deg": 6.167769025470296,
+      "area_ratio_gross": 0.8742722323940819,
+      "yoke_stroke_mm": 2.5785622156268273,
+      "servo_angle_deg": 14.95260922459475,
+      "rod_angle_deg": 0.5543114016402707,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.5166666666666667,
+      "panel_angle_deg": 6.373361326319307,
+      "area_ratio_gross": 0.8700983259368459,
+      "yoke_stroke_mm": 2.6641652426043243,
+      "servo_angle_deg": 15.462264952985096,
+      "rod_angle_deg": 0.5925103481022526,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.5333333333333333,
+      "panel_angle_deg": 6.578953627168316,
+      "area_ratio_gross": 0.865926092043479,
+      "yoke_stroke_mm": 2.7497339668173755,
+      "servo_angle_deg": 15.97312000348452,
+      "rod_angle_deg": 0.6320523215652353,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.55,
+      "panel_angle_deg": 6.784545928017327,
+      "area_ratio_gross": 0.8617555844340563,
+      "yoke_stroke_mm": 2.835267286516081,
+      "servo_angle_deg": 16.485228204946893,
+      "rod_angle_deg": 0.6729474149524018,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.5666666666666667,
+      "panel_angle_deg": 6.990138228866336,
+      "area_ratio_gross": 0.8575868568064258,
+      "yoke_stroke_mm": 2.9207641004063944,
+      "servo_angle_deg": 16.998644942410902,
+      "rod_angle_deg": 0.71520626006551,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.5833333333333334,
+      "panel_angle_deg": 7.195730529715346,
+      "area_ratio_gross": 0.8534199628355169,
+      "yoke_stroke_mm": 3.006223307664307,
+      "servo_angle_deg": 17.513427241090383,
+      "rod_angle_deg": 0.7588400516443495,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.6,
+      "panel_angle_deg": 7.4013228305643555,
+      "area_ratio_gross": 0.84925495617265,
+      "yoke_stroke_mm": 3.091643807950014,
+      "servo_angle_deg": 18.029633855624585,
+      "rod_angle_deg": 0.8038605730147284,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.6166666666666667,
+      "panel_angle_deg": 7.606915131413366,
+      "area_ratio_gross": 0.8450918904448449,
+      "yoke_stroke_mm": 3.177024501422091,
+      "servo_angle_deg": 18.547325365013737,
+      "rod_angle_deg": 0.8502802234494506,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.6333333333333333,
+      "panel_angle_deg": 7.812507432262375,
+      "area_ratio_gross": 0.8409308192541306,
+      "yoke_stroke_mm": 3.262364288751648,
+      "servo_angle_deg": 19.06656427370405,
+      "rod_angle_deg": 0.8981120473786336,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.65,
+      "panel_angle_deg": 8.018099733111386,
+      "area_ratio_gross": 0.8367717961768556,
+      "yoke_stroke_mm": 3.3476620711364893,
+      "servo_angle_deg": 19.587415119332533,
+      "rod_angle_deg": 0.9473697655988825,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.6666666666666666,
+      "panel_angle_deg": 8.223692033960395,
+      "area_ratio_gross": 0.8326148747629973,
+      "yoke_stroke_mm": 3.432916750315254,
+      "servo_angle_deg": 20.10994458768975,
+      "rod_angle_deg": 0.9980678086454763,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.6833333333333333,
+      "panel_angle_deg": 8.429284334809406,
+      "area_ratio_gross": 0.8284601085354732,
+      "yoke_stroke_mm": 3.518127228581567,
+      "servo_angle_deg": 20.634221635517584,
+      "rod_angle_deg": 1.0502213525082666,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.7,
+      "panel_angle_deg": 8.634876635658415,
+      "area_ratio_gross": 0.8243075509894512,
+      "yoke_stroke_mm": 3.603292408798164,
+      "servo_angle_deg": 21.160317621817875,
+      "rod_angle_deg": 1.103846356890037,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.7166666666666667,
+      "panel_angle_deg": 8.840468936507426,
+      "area_ratio_gross": 0.8201572555916612,
+      "yoke_stroke_mm": 3.688411194411022,
+      "servo_angle_deg": 21.68830644842066,
+      "rod_angle_deg": 1.1589596062268024,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.7333333333333333,
+      "panel_angle_deg": 9.046061237356435,
+      "area_ratio_gross": 0.8160092757797065,
+      "yoke_stroke_mm": 3.7734824894634746,
+      "servo_angle_deg": 22.2182647106357,
+      "rod_angle_deg": 1.2155787537121447,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.75,
+      "panel_angle_deg": 9.251653538205446,
+      "area_ratio_gross": 0.8118636649613757,
+      "yoke_stroke_mm": 3.85850519861033,
+      "servo_angle_deg": 22.75027185890161,
+      "rod_angle_deg": 1.2737223685936052,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.7666666666666667,
+      "panel_angle_deg": 9.457245839054455,
+      "area_ratio_gross": 0.8077204765139556,
+      "yoke_stroke_mm": 3.9434782271319664,
+      "servo_angle_deg": 23.284410372442963,
+      "rod_angle_deg": 1.3334099870379157,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.7833333333333333,
+      "panel_angle_deg": 9.662838139903464,
+      "area_ratio_gross": 0.8035797637835428,
+      "yoke_stroke_mm": 4.028400480948431,
+      "servo_angle_deg": 23.820765946058614,
+      "rod_angle_deg": 1.394662166894493,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.8,
+      "panel_angle_deg": 9.868430440752475,
+      "area_ratio_gross": 0.7994415800843583,
+      "yoke_stroke_mm": 4.113270866633527,
+      "servo_angle_deg": 24.359427691288897,
+      "rod_angle_deg": 1.4575005467232716,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.8166666666666667,
+      "panel_angle_deg": 10.074022741601484,
+      "area_ratio_gross": 0.7953059786980594,
+      "yoke_stroke_mm": 4.198088291428892,
+      "servo_angle_deg": 24.900488353351445,
+      "rod_angle_deg": 1.5219479094944965,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.8333333333333334,
+      "panel_angle_deg": 10.279615042450494,
+      "area_ratio_gross": 0.7911730128730553,
+      "yoke_stroke_mm": 4.282851663258068,
+      "servo_angle_deg": 25.4440445453964,
+      "rod_angle_deg": 1.5880282514151998,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.85,
+      "panel_angle_deg": 10.485207343299503,
+      "area_ratio_gross": 0.7870427358238202,
+      "yoke_stroke_mm": 4.3675598907405595,
+      "servo_angle_deg": 25.990197001814362,
+      "rod_angle_deg": 1.6557668563904784,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.8666666666666667,
+      "panel_angle_deg": 10.690799644148514,
+      "area_ratio_gross": 0.782915200730209,
+      "yoke_stroke_mm": 4.452211883205893,
+      "servo_angle_deg": 26.53905085253814,
+      "rod_angle_deg": 1.7251903766884487,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.8833333333333333,
+      "panel_angle_deg": 10.896391944997523,
+      "area_ratio_gross": 0.7787904607367725,
+      "yoke_stroke_mm": 4.53680655070765,
+      "servo_angle_deg": 27.09071592051705,
+      "rod_angle_deg": 1.796326920447239,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.9,
+      "panel_angle_deg": 11.101984245846534,
+      "area_ratio_gross": 0.7746685689520718,
+      "yoke_stroke_mm": 4.621342804037511,
+      "servo_angle_deg": 27.645307044813823,
+      "rod_angle_deg": 1.8692061467415224,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.9166666666666666,
+      "panel_angle_deg": 11.307576546695543,
+      "area_ratio_gross": 0.7705495784479967,
+      "yoke_stroke_mm": 4.70581955473927,
+      "servo_angle_deg": 28.202944432084966,
+      "rod_angle_deg": 1.9438593690170303,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.9333333333333333,
+      "panel_angle_deg": 11.513168847544554,
+      "area_ratio_gross": 0.7664335422590804,
+      "yoke_stroke_mm": 4.79023571512286,
+      "servo_angle_deg": 28.763754039564084,
+      "rod_angle_deg": 2.0203196678059716,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.95,
+      "panel_angle_deg": 11.718761148393563,
+      "area_ratio_gross": 0.7623205133818183,
+      "yoke_stroke_mm": 4.8745901982783435,
+      "servo_angle_deg": 29.327867993078446,
+      "rod_angle_deg": 2.0986220137563594,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.9666666666666667,
+      "panel_angle_deg": 11.924353449242572,
+      "area_ratio_gross": 0.7582105447739841,
+      "yoke_stroke_mm": 4.958881918089925,
+      "servo_angle_deg": 29.89542504410723,
+      "rod_angle_deg": 2.178803402147478,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 0.9833333333333333,
+      "panel_angle_deg": 12.129945750091583,
+      "area_ratio_gross": 0.7541036893539491,
+      "yoke_stroke_mm": 5.043109789249916,
+      "servo_angle_deg": 30.466571070440263,
+      "rod_angle_deg": 2.260903000224418,
+      "maximum_unintended_overlap_mm3": 0.0
+    },
+    {
+      "fraction": 1.0,
+      "panel_angle_deg": 12.335538050940592,
+      "area_ratio_gross": 0.75,
+      "yoke_stroke_mm": 5.127272727272727,
+      "servo_angle_deg": 31.041459625639078,
+      "rod_angle_deg": 2.3449623088717892,
+      "maximum_unintended_overlap_mm3": 0.0
+    }
+  ],
+  "collision_sweep": {
+    "poses": 61,
+    "angular_step_deg": 0.20559230084900987,
+    "pair_maximum_overlap_mm3": {
+      "upper_panel / frame": 0.0,
+      "upper_panel / servo_bracket": 0.0,
+      "upper_panel / servo_approximate": 0.0,
+      "upper_panel / upper_shaft": 0.0,
+      "upper_panel / upper_retaining_spacer": 0.0,
+      "upper_panel / upper_left_collar": 0.0,
+      "upper_panel / upper_right_collar": 0.0,
+      "upper_panel / lower_shaft": 0.0,
+      "upper_panel / lower_retaining_spacer": 0.0,
+      "upper_panel / lower_left_collar": 0.0,
+      "upper_panel / lower_right_collar": 0.0,
+      "lower_panel / frame": 0.0,
+      "lower_panel / servo_bracket": 0.0,
+      "lower_panel / servo_approximate": 0.0,
+      "lower_panel / upper_shaft": 0.0,
+      "lower_panel / upper_retaining_spacer": 0.0,
+      "lower_panel / upper_left_collar": 0.0,
+      "lower_panel / upper_right_collar": 0.0,
+      "lower_panel / lower_shaft": 0.0,
+      "lower_panel / lower_retaining_spacer": 0.0,
+      "lower_panel / lower_left_collar": 0.0,
+      "lower_panel / lower_right_collar": 0.0,
+      "upper_crank / frame": 0.0,
+      "upper_crank / servo_bracket": 0.0,
+      "upper_crank / servo_approximate": 0.0,
+      "upper_crank / upper_shaft": 0.0,
+      "upper_crank / upper_retaining_spacer": 0.0,
+      "upper_crank / upper_left_collar": 0.0,
+      "upper_crank / upper_right_collar": 0.0,
+      "upper_crank / lower_shaft": 0.0,
+      "upper_crank / lower_retaining_spacer": 0.0,
+      "upper_crank / lower_left_collar": 0.0,
+      "upper_crank / lower_right_collar": 0.0,
+      "lower_crank / frame": 0.0,
+      "lower_crank / servo_bracket": 0.0,
+      "lower_crank / servo_approximate": 0.0,
+      "lower_crank / upper_shaft": 0.0,
+      "lower_crank / upper_retaining_spacer": 0.0,
+      "lower_crank / upper_left_collar": 0.0,
+      "lower_crank / upper_right_collar": 0.0,
+      "lower_crank / lower_shaft": 0.0,
+      "lower_crank / lower_retaining_spacer": 0.0,
+      "lower_crank / lower_left_collar": 0.0,
+      "lower_crank / lower_right_collar": 0.0,
+      "upper_clamp / frame": 0.0,
+      "upper_clamp / servo_bracket": 0.0,
+      "upper_clamp / servo_approximate": 0.0,
+      "upper_clamp / upper_shaft": 0.0,
+      "upper_clamp / upper_retaining_spacer": 0.0,
+      "upper_clamp / upper_left_collar": 0.0,
+      "upper_clamp / upper_right_collar": 0.0,
+      "upper_clamp / lower_shaft": 0.0,
+      "upper_clamp / lower_retaining_spacer": 0.0,
+      "upper_clamp / lower_left_collar": 0.0,
+      "upper_clamp / lower_right_collar": 0.0,
+      "lower_clamp / frame": 0.0,
+      "lower_clamp / servo_bracket": 0.0,
+      "lower_clamp / servo_approximate": 0.0,
+      "lower_clamp / upper_shaft": 0.0,
+      "lower_clamp / upper_retaining_spacer": 0.0,
+      "lower_clamp / upper_left_collar": 0.0,
+      "lower_clamp / upper_right_collar": 0.0,
+      "lower_clamp / lower_shaft": 0.0,
+      "lower_clamp / lower_retaining_spacer": 0.0,
+      "lower_clamp / lower_left_collar": 0.0,
+      "lower_clamp / lower_right_collar": 0.0,
+      "yoke / frame": 0.0,
+      "yoke / servo_bracket": 0.0,
+      "yoke / servo_approximate": 0.0,
+      "yoke / upper_shaft": 0.0,
+      "yoke / upper_retaining_spacer": 0.0,
+      "yoke / upper_left_collar": 0.0,
+      "yoke / upper_right_collar": 0.0,
+      "yoke / lower_shaft": 0.0,
+      "yoke / lower_retaining_spacer": 0.0,
+      "yoke / lower_left_collar": 0.0,
+      "yoke / lower_right_collar": 0.0,
+      "rod / frame": 0.0,
+      "rod / servo_bracket": 0.0,
+      "rod / servo_approximate": 0.0,
+      "rod / upper_shaft": 0.0,
+      "rod / upper_retaining_spacer": 0.0,
+      "rod / upper_left_collar": 0.0,
+      "rod / upper_right_collar": 0.0,
+      "rod / lower_shaft": 0.0,
+      "rod / lower_retaining_spacer": 0.0,
+      "rod / lower_left_collar": 0.0,
+      "rod / lower_right_collar": 0.0,
+      "horn / frame": 0.0,
+      "horn / servo_bracket": 0.0,
+      "horn / upper_shaft": 0.0,
+      "horn / upper_retaining_spacer": 0.0,
+      "horn / upper_left_collar": 0.0,
+      "horn / upper_right_collar": 0.0,
+      "horn / lower_shaft": 0.0,
+      "horn / lower_retaining_spacer": 0.0,
+      "horn / lower_left_collar": 0.0,
+      "horn / lower_right_collar": 0.0,
+      "upper_crank_pin / frame": 0.0,
+      "upper_crank_pin / servo_bracket": 0.0,
+      "upper_crank_pin / servo_approximate": 0.0,
+      "upper_crank_pin / upper_shaft": 0.0,
+      "upper_crank_pin / upper_retaining_spacer": 0.0,
+      "upper_crank_pin / upper_left_collar": 0.0,
+      "upper_crank_pin / upper_right_collar": 0.0,
+      "upper_crank_pin / lower_shaft": 0.0,
+      "upper_crank_pin / lower_retaining_spacer": 0.0,
+      "upper_crank_pin / lower_left_collar": 0.0,
+      "upper_crank_pin / lower_right_collar": 0.0,
+      "lower_crank_pin / frame": 0.0,
+      "lower_crank_pin / servo_bracket": 0.0,
+      "lower_crank_pin / servo_approximate": 0.0,
+      "lower_crank_pin / upper_shaft": 0.0,
+      "lower_crank_pin / upper_retaining_spacer": 0.0,
+      "lower_crank_pin / upper_left_collar": 0.0,
+      "lower_crank_pin / upper_right_collar": 0.0,
+      "lower_crank_pin / lower_shaft": 0.0,
+      "lower_crank_pin / lower_retaining_spacer": 0.0,
+      "lower_crank_pin / lower_left_collar": 0.0,
+      "lower_crank_pin / lower_right_collar": 0.0,
+      "rod_yoke_pin / frame": 0.0,
+      "rod_yoke_pin / servo_bracket": 0.0,
+      "rod_yoke_pin / servo_approximate": 0.0,
+      "rod_yoke_pin / upper_shaft": 0.0,
+      "rod_yoke_pin / upper_retaining_spacer": 0.0,
+      "rod_yoke_pin / upper_left_collar": 0.0,
+      "rod_yoke_pin / upper_right_collar": 0.0,
+      "rod_yoke_pin / lower_shaft": 0.0,
+      "rod_yoke_pin / lower_retaining_spacer": 0.0,
+      "rod_yoke_pin / lower_left_collar": 0.0,
+      "rod_yoke_pin / lower_right_collar": 0.0,
+      "horn_rod_pin / frame": 0.0,
+      "horn_rod_pin / servo_bracket": 0.0,
+      "horn_rod_pin / servo_approximate": 0.0,
+      "horn_rod_pin / upper_shaft": 0.0,
+      "horn_rod_pin / upper_retaining_spacer": 0.0,
+      "horn_rod_pin / upper_left_collar": 0.0,
+      "horn_rod_pin / upper_right_collar": 0.0,
+      "horn_rod_pin / lower_shaft": 0.0,
+      "horn_rod_pin / lower_retaining_spacer": 0.0,
+      "horn_rod_pin / lower_left_collar": 0.0,
+      "horn_rod_pin / lower_right_collar": 0.0,
+      "upper_panel / lower_panel": 0.0,
+      "upper_panel / upper_crank": 0.0,
+      "upper_panel / lower_crank": 0.0,
+      "upper_panel / upper_clamp": 0.0,
+      "upper_panel / lower_clamp": 0.0,
+      "upper_panel / yoke": 0.0,
+      "upper_panel / rod": 0.0,
+      "upper_panel / horn": 0.0,
+      "upper_panel / upper_crank_pin": 0.0,
+      "upper_panel / lower_crank_pin": 0.0,
+      "upper_panel / rod_yoke_pin": 0.0,
+      "upper_panel / horn_rod_pin": 0.0,
+      "lower_panel / upper_crank": 0.0,
+      "lower_panel / lower_crank": 0.0,
+      "lower_panel / upper_clamp": 0.0,
+      "lower_panel / lower_clamp": 0.0,
+      "lower_panel / yoke": 0.0,
+      "lower_panel / rod": 0.0,
+      "lower_panel / horn": 0.0,
+      "lower_panel / upper_crank_pin": 0.0,
+      "lower_panel / lower_crank_pin": 0.0,
+      "lower_panel / rod_yoke_pin": 0.0,
+      "lower_panel / horn_rod_pin": 0.0,
+      "upper_crank / lower_crank": 0.0,
+      "upper_crank / upper_clamp": 0.0,
+      "upper_crank / lower_clamp": 0.0,
+      "upper_crank / yoke": 0.0,
+      "upper_crank / rod": 0.0,
+      "upper_crank / horn": 0.0,
+      "upper_crank / upper_crank_pin": 0.0,
+      "upper_crank / lower_crank_pin": 0.0,
+      "upper_crank / rod_yoke_pin": 0.0,
+      "upper_crank / horn_rod_pin": 0.0,
+      "lower_crank / upper_clamp": 0.0,
+      "lower_crank / lower_clamp": 0.0,
+      "lower_crank / yoke": 0.0,
+      "lower_crank / rod": 0.0,
+      "lower_crank / horn": 0.0,
+      "lower_crank / upper_crank_pin": 0.0,
+      "lower_crank / lower_crank_pin": 0.0,
+      "lower_crank / rod_yoke_pin": 0.0,
+      "lower_crank / horn_rod_pin": 0.0,
+      "upper_clamp / lower_clamp": 0.0,
+      "upper_clamp / yoke": 0.0,
+      "upper_clamp / rod": 0.0,
+      "upper_clamp / horn": 0.0,
+      "upper_clamp / upper_crank_pin": 0.0,
+      "upper_clamp / lower_crank_pin": 0.0,
+      "upper_clamp / rod_yoke_pin": 0.0,
+      "upper_clamp / horn_rod_pin": 0.0,
+      "lower_clamp / yoke": 0.0,
+      "lower_clamp / rod": 0.0,
+      "lower_clamp / horn": 0.0,
+      "lower_clamp / upper_crank_pin": 0.0,
+      "lower_clamp / lower_crank_pin": 0.0,
+      "lower_clamp / rod_yoke_pin": 0.0,
+      "lower_clamp / horn_rod_pin": 0.0,
+      "yoke / rod": 0.0,
+      "yoke / horn": 0.0,
+      "yoke / upper_crank_pin": 0.0,
+      "yoke / lower_crank_pin": 0.0,
+      "yoke / rod_yoke_pin": 0.0,
+      "yoke / horn_rod_pin": 0.0,
+      "rod / horn": 0.0,
+      "rod / upper_crank_pin": 0.0,
+      "rod / lower_crank_pin": 0.0,
+      "rod / rod_yoke_pin": 0.0,
+      "rod / horn_rod_pin": 0.0,
+      "horn / upper_crank_pin": 0.0,
+      "horn / lower_crank_pin": 0.0,
+      "horn / rod_yoke_pin": 0.0,
+      "horn / horn_rod_pin": 0.0,
+      "upper_crank_pin / lower_crank_pin": 0.0,
+      "upper_crank_pin / rod_yoke_pin": 0.0,
+      "upper_crank_pin / horn_rod_pin": 0.0,
+      "lower_crank_pin / rod_yoke_pin": 0.0,
+      "lower_crank_pin / horn_rod_pin": 0.0,
+      "rod_yoke_pin / horn_rod_pin": 0.0,
+      "frame / servo_bracket": 0.0,
+      "frame / servo_approximate": 0.0,
+      "frame / upper_shaft": 0.0,
+      "frame / upper_retaining_spacer": 0.0,
+      "frame / upper_left_collar": 0.0,
+      "frame / upper_right_collar": 0.0,
+      "frame / lower_shaft": 0.0,
+      "frame / lower_retaining_spacer": 0.0,
+      "frame / lower_left_collar": 0.0,
+      "frame / lower_right_collar": 0.0,
+      "servo_bracket / upper_shaft": 0.0,
+      "servo_bracket / upper_retaining_spacer": 0.0,
+      "servo_bracket / upper_left_collar": 0.0,
+      "servo_bracket / upper_right_collar": 0.0,
+      "servo_approximate / servo_bracket": 0.0,
+      "servo_approximate / upper_shaft": 0.0,
+      "servo_approximate / upper_retaining_spacer": 0.0,
+      "servo_approximate / upper_left_collar": 0.0,
+      "servo_approximate / upper_right_collar": 0.0,
+      "upper_retaining_spacer / upper_shaft": 0.0,
+      "upper_retaining_spacer / upper_right_collar": 0.0,
+      "upper_left_collar / upper_shaft": 0.0,
+      "upper_left_collar / upper_retaining_spacer": 0.0,
+      "upper_left_collar / upper_right_collar": 0.0,
+      "upper_right_collar / upper_shaft": 0.0,
+      "lower_shaft / servo_bracket": 0.0,
+      "lower_shaft / servo_approximate": 0.0,
+      "lower_shaft / upper_shaft": 0.0,
+      "lower_shaft / upper_retaining_spacer": 0.0,
+      "lower_shaft / upper_left_collar": 0.0,
+      "lower_shaft / upper_right_collar": 0.0,
+      "lower_retaining_spacer / servo_bracket": 0.0,
+      "lower_retaining_spacer / servo_approximate": 0.0,
+      "lower_retaining_spacer / upper_shaft": 0.0,
+      "lower_retaining_spacer / upper_retaining_spacer": 0.0,
+      "lower_retaining_spacer / upper_left_collar": 0.0,
+      "lower_retaining_spacer / upper_right_collar": 0.0,
+      "lower_retaining_spacer / lower_shaft": 0.0,
+      "lower_retaining_spacer / lower_right_collar": 0.0,
+      "lower_left_collar / servo_bracket": 0.0,
+      "lower_left_collar / servo_approximate": 0.0,
+      "lower_left_collar / upper_shaft": 0.0,
+      "lower_left_collar / upper_retaining_spacer": 0.0,
+      "lower_left_collar / upper_left_collar": 0.0,
+      "lower_left_collar / upper_right_collar": 0.0,
+      "lower_left_collar / lower_shaft": 0.0,
+      "lower_left_collar / lower_retaining_spacer": 0.0,
+      "lower_left_collar / lower_right_collar": 0.0,
+      "lower_right_collar / servo_bracket": 0.0,
+      "lower_right_collar / servo_approximate": 0.0,
+      "lower_right_collar / upper_shaft": 0.0,
+      "lower_right_collar / upper_retaining_spacer": 0.0,
+      "lower_right_collar / upper_left_collar": 0.0,
+      "lower_right_collar / upper_right_collar": 0.0,
+      "lower_right_collar / lower_shaft": 0.0
+    },
+    "maximum_unintended_overlap_mm3": 0.0,
+    "excluded_mating_pair": "servo horn / approximate servo output only",
+    "bounds": "nominal solids only; not elastic deformation, tolerance extremes, harness, or parent enclosure"
+  },
+  "clearances_mm": {
+    "panel_each_side": 0.35,
+    "hinge_pin_diametral": 0.3,
+    "slot_pin_diametral": 0.4,
+    "yoke_each_side_in_x": 0.3,
+    "yoke_end_stop_beyond_command": 0.3,
+    "rod_to_parent_x66_wall": 6.5,
+    "rod_to_yoke_axial": 1.0,
+    "rod_to_servo_body_axial": 0.8,
+    "body_window_each_side": 0.5,
+    "frame_to_servo_bracket": 0.3
+  },
+  "mechanical_stop": {
+    "panel_angle_deg": 13.06970942399616,
+    "gross_area_ratio": 0.7353723404255319,
+    "note": "Guide ends stop yoke 0.3 mm beyond commanded travel. Software must not drive against these stops."
+  },
+  "pressure_load_estimate": {
+    "pressure_Pa": 24.0,
+    "one_panel_force_N": 0.13635599999999998,
+    "one_panel_moment_Nm": 0.0037497899999999994,
+    "yoke_force_N": 0.31986719291631843,
+    "servo_torque_Nm": 0.002673060065308139,
+    "assumptions": "Uniform normal pressure; no hinge friction, gravity, inertial load or trapped object. Stall torque is not a continuous rating."
+  },
+  "limitations": [
+    "FS90-FB envelope uses unverified family shaft/flange datums. Measure before printing the final servo bracket.",
+    "Frame is a mechanism fixture; parent assembly must union it into the non-removable outlet and repeat whole-assembly collisions.",
+    "Pressure estimate is not an airflow, noise or stability measurement.",
+    "Pins, spacers, screws and wire paths require physical assembly verification.",
+    "No measured airflow, noise, tolerance stack, wear or servo torque validation."
+  ],
+  "assembly_files": {
+    "moving": [
+      "upper_panel",
+      "lower_panel",
+      "upper_crank",
+      "lower_crank",
+      "upper_clamp",
+      "lower_clamp",
+      "yoke",
+      "rod",
+      "horn",
+      "upper_crank_pin",
+      "lower_crank_pin",
+      "rod_yoke_pin",
+      "horn_rod_pin"
+    ],
+    "fixed": [
+      "frame",
+      "servo_bracket",
+      "servo_approximate",
+      "upper_shaft",
+      "upper_retaining_spacer",
+      "upper_left_collar",
+      "upper_right_collar",
+      "lower_shaft",
+      "lower_retaining_spacer",
+      "lower_left_collar",
+      "lower_right_collar"
+    ],
+    "states": [
+      "open",
+      "max-boost"
+    ],
+    "translation_to_parent": [
+      0,
+      90,
+      10.0
+    ]
+  },
+  "build": {
+    "completed_utc": "2026-10-03T09:21:07.637019+00:00",
+    "script_sha256": "e6527fbc5b8d9fc9245b078549fde6d021774c2e23f2ce0988abbde89dd5f0d9",
+    "parameters_sha256": "6f86731c3123d8d15c025a0b34fb400919749b0227dfb576a218ed821d70c8ee",
+    "overview_written": true
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "status": "Historical checked full integration before8October front-encoder revision",
+  "physical_qualification": false,
+  "verified_date": "2026-10-08",
+  "document_id": "5ca1b5b26cd9a4a93dde4737",
+  "workspace_id": "6d3d38529391b53ad011b362",
+  "native_featurescript_id": "2a32177298720d2e7b92a604",
+  "native_architecture_part_studio_id": "349100a5392aecd5bec05fb3",
+  "integration_part_studio_id": "7ea77e17ed6471deeabcfc48",
+  "integration_assembly_id": "6b5211a8cb2c1370bdde64a6",
+  "version_id": "a8c7d08d540151a559d2f624",
+  "version_name": "Rev C P2406 integrated CAD — interference checked — 2026-10-08",
+  "integration_export": {
+    "path": "cad/rev_c/Windflow-Rev-C-integration-2026-10-07.step",
+    "sha256": "4b2e907ccf03fee1f1dd6cfe5e927145c0a164592795f94ed2b6eb026c8fd20b",
+    "bytes": 45438432,
+    "instances": 71,
+    "bodies": 171
+  },
+  "local_nominal_checks": {
+    "reopened_STEP_pairs": 2485,
+    "mechanism_samples": 61,
+    "mechanism_pairs": 4636,
+    "screen_service_pairs": 553,
+    "issues": 0
+  },
+  "native_interference": {
+    "entries": 6,
+    "custom_part_findings": 0,
+    "remaining": "Six contacts entirely within downloaded HUSB238 model; do not alter vendor geometry to disguise them."
+  },
+  "native_feature_tests": {
+    "open_microversion": "5328bc34c495a816de20054a",
+    "boost_microversion": "3c46e11b7969d3e92333dfa9",
+    "result": "PASS"
+  },
+  "evidence": [
+    "cad/evidence/onshape-rev-c-corrected-interference-2026-10-08.png",
+    "cad/evidence/onshape-rev-c-outlet-2026-10-08.png",
+    "cad/evidence/onshape-rev-c-version-2026-10-08.png"
+  ],
+  "limits": [
+    "Version is the immutable pre-front-encoder checkpoint; current local generator/report changes do not retroactively qualify it.",
+    "No physical rotor operation, manufacturing release, populated main PCB/harness/pressure route or complete fastener/tool qualification.",
+    "Imported full assembly has no kinematic mates; native10-part architecture is a separate adjustable study."
+  ]
+}

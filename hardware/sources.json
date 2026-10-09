@@ -182,5 +182,59 @@
     "sha256": "6bfc05690afce95e31ad652a8c1860ea9d8781373cf34f5730c935f703bf1fde",
     "status": "downloaded",
     "date": "2026-10-03"
+  },
+  {
+    "path": "hardware/datasheets/Samtec-IDSS-catalogue.pdf",
+    "url": "https://suddendocs.samtec.com/catalog_english/idss.pdf",
+    "bytes": 1001239,
+    "sha256": "232b84f32c6bcf29545e9fdcac277a5c6833fe7adc7515c882cd4912b104e519",
+    "status": "downloaded",
+    "date": "2026-10-03"
+  },
+  {
+    "path": "hardware/datasheets/Samtec-IDSS-series.pdf",
+    "url": "https://suddendocs.samtec.com/prints/idsx-xx-x-xx.xx-xxx-xxx-mkt.pdf",
+    "bytes": 353753,
+    "sha256": "f60fef0d37c89aea10caf3fbae8d47a75f94cb02adacc60624b112b7101c37a1",
+    "status": "downloaded",
+    "date": "2026-10-03"
+  },
+  {
+    "path": "hardware/reference/KS-8128-product.html",
+    "url": "https://ksmetals.com/products/br014-5-32",
+    "bytes": 357429,
+    "sha256": "46a88d0d749f17478f86ea2ac62dd13998bbbb46d11913170e3784500c20dc25",
+    "status": "downloaded",
+    "date": "2026-10-04"
+  },
+  {
+    "path": "hardware/datasheets/Tygon-E3603.pdf",
+    "url": "https://www.saint-gobain.co.jp/system/files/files/documents/ls_tygon_s3_e-3603_tubing_en.pdf",
+    "status": "failed",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "path": "hardware/datasheets/SDP-engineering-guide.pdf",
+    "url": "https://sensirion.com/en/media/documents/C3059EE6/667E9FD4/DP_AN_Engineering_Guide_V1.0.pdf",
+    "bytes": 1090450,
+    "sha256": "e15b1b53e53f2c3d8dff98dd478409cd13f3e8770e1cac8c82b102042b57f2f7",
+    "status": "downloaded",
+    "date": "2026-10-04"
+  },
+  {
+    "path": "hardware/datasheets/Accu-SSCF-M1p6x10.pdf",
+    "url": "https://www.accu.co.uk/api/product-datasheet?id=3785",
+    "bytes": 517451,
+    "sha256": "15d8c0c0eccba8d2c89085cd565571e9d731f8f2f515d77903bad93cb32b6328",
+    "status": "downloaded",
+    "date": "2026-10-04"
+  },
+  {
+    "path": "hardware/datasheets/SN74LVC1G17.pdf",
+    "url": "https://www.ti.com/lit/ds/symlink/sn74lvc1g17.pdf",
+    "bytes": 3015318,
+    "sha256": "c76fa723fac4502423967a1aa087dd669106b52b8de620c024b26e56f5d59309",
+    "status": "downloaded",
+    "date": "2026-10-05"
   }
 ]

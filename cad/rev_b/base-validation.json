@@ -116,19 +116,19 @@
       "solids": 1,
       "material": "PETG",
       "bounds_mm": [
-        10.903607577876826,
+        9.903607577876826,
         32.00000020000006,
         28.000000200000045
       ]
     },
     {
-      "name": "REF-encoder-daughterboard-required-outline",
+      "name": "encoder-daughterboard-P1-FR4",
       "valid": true,
       "solids": 1,
-      "material": "unrouted FR4 interface",
+      "material": "routed FR4 prototype P1 datum",
       "bounds_mm": [
-        1.6000000000000014,
-        24.0,
+        1.6000000000000085,
+        29.500000000000014,
         24.0
       ]
     },
@@ -189,9 +189,33 @@
     "tpu-desk-foot-3.step",
     "tpu-desk-foot-4.step",
     "REF-driver-carrier-90x65x22-NOT-DESIGNED.step",
+    "REF-Pico-M1p6x10-cap-screw-1.step",
+    "REF-Pico-M1p6-hex-nut-1.step",
+    "REF-Pico-M1p6x10-cap-screw-2.step",
+    "REF-Pico-M1p6-hex-nut-2.step",
+    "REF-Pico-M1p6x10-cap-screw-3.step",
+    "REF-Pico-M1p6-hex-nut-3.step",
+    "REF-Pico-M1p6x10-cap-screw-4.step",
+    "REF-Pico-M1p6-hex-nut-4.step",
     "REF-SDP810-daughterboard-required-outline.step",
     "horizontal-encoder-mount.step",
-    "REF-encoder-daughterboard-required-outline.step",
+    "encoder-daughterboard-P1-FR4.step",
+    "REF-encoder-JST-XH4-mated-envelope.step",
+    "REF-encoder-J1-1-terminal.step",
+    "REF-encoder-J1-2-terminal.step",
+    "REF-encoder-J1-3-terminal.step",
+    "REF-encoder-J1-4-terminal.step",
+    "REF-encoder-ENC1-A-terminal.step",
+    "REF-encoder-ENC1-C-terminal.step",
+    "REF-encoder-ENC1-B-terminal.step",
+    "REF-encoder-ENC1-S1-terminal.step",
+    "REF-encoder-ENC1-S2-terminal.step",
+    "REF-encoder-ENC1-SH-terminal.step",
+    "REF-encoder-ENC1-SH-terminal-other.step",
+    "REF-encoder-M2x10-screw-1.step",
+    "REF-encoder-M2-hex-nut-1.step",
+    "REF-encoder-M2x10-screw-2.step",
+    "REF-encoder-M2-hex-nut-2.step",
     "REF-M7x0p75-encoder-panel-nut.step",
     "horizontal-encoder-thumbwheel.step",
     "REF-Bourns-PEC11H-drawing-envelope.step",
@@ -287,8 +311,14 @@
     ]
   ],
   "build": {
-    "completed_utc": "2026-10-03T17:11:39.693016+00:00",
-    "script_sha256": "6dc44c84dcdc084d2560fee898633ec606226fbd5dce098f943a4e4742d6c2b0",
+    "completed_utc": "2026-10-05T16:58:42.764639+00:00",
+    "script_sha256": "52df714ec02592f006d0e10bdc20ae2c633e430f6c4831b9df2715738bc3a009",
+    "pico_mount_sha256": "a9bbc33f0d2d92a6497aba22280f33f5f5fd367c8d89dfe572f4547a97aad46c",
+    "encoder_layout_sha256": "b6fc3f93ec72fee3d2fcaf9903e66b856c872168ece08f911c4ba22fd0e17bb4",
+    "encoder_pcb_inputs_sha256": {
+      "hardware\\pcb\\encoder\\windflow-encoder-mechanical-datum.step": "72de91e09cf628ff4ec1116cc061e8ac2d7f2803ed04d6024a4579c0b3fcebed",
+      "hardware\\pcb\\encoder\\mechanical-interface.json": "63b9d509c833cf826053b475d1d4ee59ee1244e8d57b9bc6da6f90601cd3cd2b"
+    },
     "parameters_sha256": "6f86731c3123d8d15c025a0b34fb400919749b0227dfb576a218ed821d70c8ee"
   },
   "fasteners": [
@@ -458,37 +488,37 @@
       "location": "Pico",
       "axis_mm": [
         -50.2,
-        63,
+        63.0,
         -106
       ],
-      "hardware": "M2x10 screw and DIN 934 M2 hex nut; nut pocket 4.2 mm AF"
+      "hardware": "Accu SSCF-M1.6-10-A2 and Accu HPN-M1.6-A4 hex nut; nut pocket 3.3 mm AF"
     },
     {
       "location": "Pico",
       "axis_mm": [
         -50.2,
-        110,
+        110.0,
         -106
       ],
-      "hardware": "M2x10 screw and DIN 934 M2 hex nut; nut pocket 4.2 mm AF"
+      "hardware": "Accu SSCF-M1.6-10-A2 and Accu HPN-M1.6-A4 hex nut; nut pocket 3.3 mm AF"
     },
     {
       "location": "Pico",
       "axis_mm": [
         -38.8,
-        63,
+        63.0,
         -106
       ],
-      "hardware": "M2x10 screw and DIN 934 M2 hex nut; nut pocket 4.2 mm AF"
+      "hardware": "Accu SSCF-M1.6-10-A2 and Accu HPN-M1.6-A4 hex nut; nut pocket 3.3 mm AF"
     },
     {
       "location": "Pico",
       "axis_mm": [
         -38.8,
-        110,
+        110.0,
         -106
       ],
-      "hardware": "M2x10 screw and DIN 934 M2 hex nut; nut pocket 4.2 mm AF"
+      "hardware": "Accu SSCF-M1.6-10-A2 and Accu HPN-M1.6-A4 hex nut; nut pocket 3.3 mm AF"
     },
     {
       "location": "Pololu D24V22",
@@ -637,7 +667,7 @@
     {
       "location": "encoder daughterboard",
       "axis_mm": [
-        -61.5,
+        -62.5,
         22,
         -98.5
       ],
@@ -646,7 +676,7 @@
     {
       "location": "encoder daughterboard",
       "axis_mm": [
-        -61.5,
+        -62.5,
         22,
         -81.5
       ],
@@ -892,15 +922,21 @@
       "assessed_button_travel_mm": 1.5,
       "daughterboard_holes_xyz_mm": [
         [
-          -61.5,
+          -62.5,
           22,
           -98.5
         ],
         [
-          -61.5,
+          -62.5,
           22,
           -81.5
         ]
+      ],
+      "daughterboard_pcb_revision": "P1, native KiCad ERC/DRC and 1.6mm mechanical datum",
+      "daughterboard_outline_mm": [
+        29.5,
+        24,
+        1.6
       ],
       "remaining_test": "Verify supplied nut dimensions, switch travel, D-shaft fit and lateral wheel force"
     }
@@ -912,18 +948,5 @@
     "physical USB plug/insertion-load test",
     "sensor pigtail strain relief and safe pin clearance",
     "complete populated-tray removal and harness service paths"
-  ],
-  "metadata_amendments": [
-    {
-      "utc": "2026-10-03T17:59:47.313412+00:00",
-      "scope": "Descriptive service-sequence correction only; geometry, STEP/STL bytes and validation results unchanged",
-      "source": "display_layout.py",
-      "previous_source_sha256": "1cff0df7b300d946e92c16051e7ea9b7b34158a7fa6fdd44d01bbcdafac75b24",
-      "current_source_sha256": "06db882559464d5c2411cd3d325f358a8b61b509414a40df668be44bb4737392",
-      "AST_proof": "Exactly one string constant changed; all remaining AST nodes identical",
-      "previous_text": "Unplug display pigtail and undo four rear screws; withdraw cradle rearward before pulling service tray",
-      "current_text": "Unplug display pigtail; remove front bezel/window and service tray; undo four rear screws; withdraw cradle rearward 2 mm then lower through open bottom",
-      "previous_base_manifest_sha256": "910b7c26981d3c1d1f32f0abe242a570a060f397526c1450791b4ace9b7e2e13"
-    }
   ]
 }

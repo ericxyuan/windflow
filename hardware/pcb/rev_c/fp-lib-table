@@ -1,0 +1,1 @@
+(fp_lib_table (version 7) (lib (name "WindflowCarrier") (type "KiCad") (uri "${KIPRJMOD}/WindflowCarrier.pretty") (options "") (descr "Frozen E3 carrier footprint candidates")))

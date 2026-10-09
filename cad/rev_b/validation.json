@@ -1,30 +1,6 @@
 {
   "parts": [
     {
-      "name": "head-left-integral-outlet",
-      "valid": true,
-      "solids": 1,
-      "bounds_mm": [
-        71.12846189800192,
-        150.206623779236,
-        143.70089533543302
-      ],
-      "volume_mm3": 190864.53336988314,
-      "material": "PETG"
-    },
-    {
-      "name": "head-right-integral-outlet",
-      "valid": true,
-      "solids": 1,
-      "bounds_mm": [
-        107.90830729181192,
-        150.206623779236,
-        143.70089533543302
-      ],
-      "volume_mm3": 226622.9220737059,
-      "material": "PETG"
-    },
-    {
       "name": "linkage-service-cover",
       "valid": true,
       "solids": 1,
@@ -57,7 +33,7 @@
         16.46506215859077,
         142.06353424830155
       ],
-      "volume_mm3": 36186.56408291835,
+      "volume_mm3": 35751.06394290713,
       "material": "PETG"
     },
     {
@@ -205,6 +181,30 @@
       "material": "N42 magnet"
     },
     {
+      "name": "head-left-integral-outlet",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        71.12846189800192,
+        150.20748681159125,
+        143.70089533543302
+      ],
+      "volume_mm3": 191558.83218003312,
+      "material": "PETG"
+    },
+    {
+      "name": "head-right-integral-outlet",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        107.90830729181192,
+        150.206623779236,
+        143.70089533543302
+      ],
+      "volume_mm3": 226622.9220737059,
+      "material": "PETG"
+    },
+    {
       "name": "head-magnet-retaining-rim",
       "valid": true,
       "solids": 1,
@@ -213,7 +213,7 @@
         0.6050767990136023,
         112.00507679901361
       ],
-      "volume_mm3": 2283.607432302842,
+      "volume_mm3": 2276.4794323028414,
       "material": "PETG"
     },
     {
@@ -233,12 +233,516 @@
       "valid": true,
       "solids": 1,
       "bounds_mm": [
-        122.00507679901361,
-        3.805076799013591,
+        122.70266541448217,
+        11.552665414482163,
         112.00507679901361
       ],
-      "volume_mm3": 20723.032240436907,
+      "volume_mm3": 20807.47131561363,
       "material": "PETG"
+    },
+    {
+      "name": "interlock-sliding-bracket",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        2.4010642774493007,
+        25.000000200000045,
+        33.00000020000006
+      ],
+      "volume_mm3": 1847.4794443504243,
+      "material": "PETG"
+    },
+    {
+      "name": "interlock-protective-cover",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        13.300527196189506,
+        30.300000200000056,
+        35.00064439754421
+      ],
+      "volume_mm3": 4122.627306065244,
+      "material": "PETG"
+    },
+    {
+      "name": "interlock-wire-clamp",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        2.9013833810954353,
+        13.000000200000045,
+        6.001692399671217
+      ],
+      "volume_mm3": 162.26230631414077,
+      "material": "PETG"
+    },
+    {
+      "name": "interlock-wire-raceway",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        8.300537281259857,
+        16.500000200000045,
+        65.00000020000004
+      ],
+      "volume_mm3": 1955.0376388018242,
+      "material": "PETG"
+    },
+    {
+      "name": "interlock-raceway-lid",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        1.2010743625196412,
+        12.90000020000005,
+        54.900000200000036
+      ],
+      "volume_mm3": 473.48665578919446,
+      "material": "PETG"
+    },
+    {
+      "name": "interlock-tpu-wire-liner-free",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        4.150928903011767,
+        4.151393228536136,
+        6.201857606023488
+      ],
+      "volume_mm3": 72.08030914488256,
+      "material": "TPU 95A"
+    },
+    {
+      "name": "REF-D2F-01L-drawing-case",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        5.800000000000004,
+        6.5,
+        12.799999999999997
+      ],
+      "volume_mm3": 446.1175252183575,
+      "material": "drawing/reference envelope"
+    },
+    {
+      "name": "REF-D2F-01L-installed-lever-envelope",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        3.0,
+        1.3500000000004775,
+        12.2
+      ],
+      "volume_mm3": 10.980000000002905,
+      "material": "drawing/reference envelope"
+    },
+    {
+      "name": "REF-switch-terminal-1",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        0.3999999999999986,
+        3.5,
+        0.8999999999999986
+      ],
+      "volume_mm3": 1.2599999999999936,
+      "material": "drawing/reference envelope"
+    },
+    {
+      "name": "REF-switch-terminal-2",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        0.3999999999999986,
+        3.5,
+        0.9000000000000021
+      ],
+      "volume_mm3": 1.2599999999999985,
+      "material": "drawing/reference envelope"
+    },
+    {
+      "name": "REF-switch-terminal-3",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        0.3999999999999986,
+        3.5,
+        0.8999999999999986
+      ],
+      "volume_mm3": 1.2599999999999936,
+      "material": "drawing/reference envelope"
+    },
+    {
+      "name": "REF-bracket-M2x16-1-screw",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        18.0,
+        3.8000000000000114,
+        3.8000000000000007
+      ],
+      "volume_mm3": 72.94778141635423,
+      "material": "drawing/reference envelope"
+    },
+    {
+      "name": "REF-bracket-M2x16-1-washer",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        0.29999999999999716,
+        5.0,
+        5.0
+      ],
+      "volume_mm3": 4.750088092227832,
+      "material": "drawing/reference envelope"
+    },
+    {
+      "name": "REF-bracket-M2x16-1-nut",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        1.6000000000000014,
+        4.618802153510018,
+        4.000000000000153
+      ],
+      "volume_mm3": 17.143702091087892,
+      "material": "drawing/reference envelope"
+    },
+    {
+      "name": "REF-bracket-M2x16-2-screw",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        18.0,
+        3.8000000000000114,
+        3.799999999999997
+      ],
+      "volume_mm3": 72.94778141635422,
+      "material": "drawing/reference envelope"
+    },
+    {
+      "name": "REF-bracket-M2x16-2-washer",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        0.29999999999999716,
+        5.0,
+        5.0
+      ],
+      "volume_mm3": 4.750088092227833,
+      "material": "drawing/reference envelope"
+    },
+    {
+      "name": "REF-bracket-M2x16-2-nut",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        1.6000000000000014,
+        4.618802153510018,
+        4.000000000000156
+      ],
+      "volume_mm3": 17.14370209108788,
+      "material": "drawing/reference envelope"
+    },
+    {
+      "name": "REF-switch-M2x10-1-screw",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        12.0,
+        3.8000000000000114,
+        3.8000000000000025
+      ],
+      "volume_mm3": 54.09822549481583,
+      "material": "drawing/reference envelope"
+    },
+    {
+      "name": "REF-switch-M2x10-1-washer",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        0.29999999999999716,
+        5.0,
+        5.0
+      ],
+      "volume_mm3": 4.750088092227832,
+      "material": "drawing/reference envelope"
+    },
+    {
+      "name": "REF-switch-M2x10-1-nut",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        1.5999999999999943,
+        4.618802153510018,
+        4.0000000000001545
+      ],
+      "volume_mm3": 17.14370209108781,
+      "material": "drawing/reference envelope"
+    },
+    {
+      "name": "REF-switch-M2x10-2-screw",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        12.0,
+        3.8000000000000114,
+        3.799999999999997
+      ],
+      "volume_mm3": 54.09822549481584,
+      "material": "drawing/reference envelope"
+    },
+    {
+      "name": "REF-switch-M2x10-2-washer",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        0.29999999999999716,
+        5.0,
+        5.0
+      ],
+      "volume_mm3": 4.750088092227832,
+      "material": "drawing/reference envelope"
+    },
+    {
+      "name": "REF-switch-M2x10-2-nut",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        1.5999999999999943,
+        4.618802153510018,
+        4.000000000000156
+      ],
+      "volume_mm3": 17.143702091087807,
+      "material": "drawing/reference envelope"
+    },
+    {
+      "name": "REF-clamp-M2x10-1-screw",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        12.0,
+        3.8000000000000114,
+        3.8000000000000007
+      ],
+      "volume_mm3": 54.09822549481587,
+      "material": "drawing/reference envelope"
+    },
+    {
+      "name": "REF-clamp-M2x10-1-washer",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        0.29999999999999716,
+        5.0,
+        5.0
+      ],
+      "volume_mm3": 4.750088092227826,
+      "material": "drawing/reference envelope"
+    },
+    {
+      "name": "REF-clamp-M2x10-1-nut",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        1.5999999999999943,
+        4.6188021535100034,
+        4.000000000000147
+      ],
+      "volume_mm3": 17.1437020910878,
+      "material": "drawing/reference envelope"
+    },
+    {
+      "name": "REF-clamp-M2x10-2-screw",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        12.0,
+        3.8000000000000114,
+        3.8000000000000007
+      ],
+      "volume_mm3": 54.09822549481584,
+      "material": "drawing/reference envelope"
+    },
+    {
+      "name": "REF-clamp-M2x10-2-washer",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        0.29999999999999716,
+        5.0,
+        5.0
+      ],
+      "volume_mm3": 4.7500880922278315,
+      "material": "drawing/reference envelope"
+    },
+    {
+      "name": "REF-clamp-M2x10-2-nut",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        1.5999999999999943,
+        4.618802153509989,
+        4.000000000000128
+      ],
+      "volume_mm3": 17.143702091087874,
+      "material": "drawing/reference envelope"
+    },
+    {
+      "name": "REF-raceway-M2x10-1-screw",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        12.0,
+        3.8000000000000114,
+        3.8000000000000007
+      ],
+      "volume_mm3": 54.09822549481584,
+      "material": "drawing/reference envelope"
+    },
+    {
+      "name": "REF-raceway-M2x10-1-washer",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        0.29999999999999716,
+        5.0,
+        5.0
+      ],
+      "volume_mm3": 4.750088092227833,
+      "material": "drawing/reference envelope"
+    },
+    {
+      "name": "REF-raceway-M2x10-1-nut",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        1.6000000000000014,
+        4.618802153509989,
+        4.000000000000128
+      ],
+      "volume_mm3": 17.14370209108795,
+      "material": "drawing/reference envelope"
+    },
+    {
+      "name": "REF-raceway-M2x10-2-screw",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        12.0,
+        3.8000000000000114,
+        3.799999999999997
+      ],
+      "volume_mm3": 54.09822549481582,
+      "material": "drawing/reference envelope"
+    },
+    {
+      "name": "REF-raceway-M2x10-2-washer",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        0.29999999999999716,
+        5.0,
+        5.0
+      ],
+      "volume_mm3": 4.750088092227832,
+      "material": "drawing/reference envelope"
+    },
+    {
+      "name": "REF-raceway-M2x10-2-nut",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        1.6000000000000014,
+        4.618802153509989,
+        4.000000000000128
+      ],
+      "volume_mm3": 17.143702091087953,
+      "material": "drawing/reference envelope"
+    },
+    {
+      "name": "REF-COM-tail",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        1.2000000000000028,
+        3.8000000000000114,
+        1.200000000000001
+      ],
+      "volume_mm3": 4.297698750110849,
+      "material": "drawing/reference envelope"
+    },
+    {
+      "name": "REF-COM-down",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        1.2000000000000028,
+        1.1999999999999886,
+        74.32
+      ],
+      "volume_mm3": 84.05393976532585,
+      "material": "drawing/reference envelope"
+    },
+    {
+      "name": "REF-COM-R4-elbow",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        1.2000002000000052,
+        4.599999999999994,
+        4.600000099999999
+      ],
+      "volume_mm3": 7.1061151687847115,
+      "material": "drawing/reference envelope"
+    },
+    {
+      "name": "REF-NO-tail",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        1.2000000000000028,
+        3.8000000000000114,
+        1.2000000000000028
+      ],
+      "volume_mm3": 4.297698750110857,
+      "material": "drawing/reference envelope"
+    },
+    {
+      "name": "REF-NO-down",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        1.2000000000000028,
+        1.1999999999999886,
+        79.4
+      ],
+      "volume_mm3": 89.79928441021086,
+      "material": "drawing/reference envelope"
+    },
+    {
+      "name": "REF-NO-R4-elbow",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        1.2000002000000052,
+        4.599999999999994,
+        4.600000100000003
+      ],
+      "volume_mm3": 7.106115168784715,
+      "material": "drawing/reference envelope"
+    },
+    {
+      "name": "REF-TPU-wire-liner-installed",
+      "valid": true,
+      "solids": 1,
+      "bounds_mm": [
+        4.0,
+        4.0,
+        6.0
+      ],
+      "volume_mm3": 63.99424235362619,
+      "material": "drawing/reference envelope"
     },
     {
       "name": "tpu-fan-pad-m3",
@@ -249,7 +753,7 @@
         2.006266148030953,
         14.003133174015478
       ],
-      "volume_mm3": 289.7176745140507,
+      "volume_mm3": 277.4654631650506,
       "material": "TPU 95A"
     },
     {
@@ -257,12 +761,12 @@
       "valid": true,
       "solids": 1,
       "bounds_mm": [
-        4.0,
-        29.0,
-        4.0
+        3.96875,
+        28.7,
+        3.96875
       ],
-      "volume_mm3": 131.1929092139097,
-      "material": "stainless tube"
+      "volume_mm3": 116.77722124682904,
+      "material": "K&S 8128 brass"
     }
   ],
   "checks": {
@@ -277,7 +781,7 @@
     "grille_magnet_pairs": 4,
     "magnet_retention": "front-loaded pockets with screw-retained cover rims; adhesive removes rattle",
     "nominal_magnet_face_gap_mm": 1.424999999999983,
-    "rear_guard_to_fan_rear_mm": 26.6,
+    "rear_guard_to_fan_rear_mm": 26.910000000000004,
     "cover_screw_axes_local_yz_mm": [
       [
         37.0,
@@ -297,17 +801,43 @@
       ]
     ],
     "head_center_height_mm": 10.0,
-    "cover_fasteners": "4 x M3x8 into Ruthex RX-M3x5.7; verify insertion depth on coupon"
+    "cover_fasteners": "4 x M3x8 into Ruthex RX-M3x5.7; verify insertion depth on coupon",
+    "fan_mount_parameters": {
+      "stock": "K&S Precision Metals 8128 brass 260/272",
+      "stock_source": "https://ksmetals.com/products/br014-5-32",
+      "tube_od_mm": 3.96875,
+      "tube_id_mm": 3.2512,
+      "tube_od_id_tolerance_mm": 0.0508,
+      "tube_cut_length_mm": 28.7,
+      "tube_cut_length_target_tolerance_mm": 0.05,
+      "fan_mount_seat_y_mm": 29.01,
+      "fan_depth_with_vendor_pads_mm": 27.0,
+      "pad_od_mm": 14.0,
+      "pad_bore_mm": 4.4,
+      "pad_free_thickness_mm": 2.0,
+      "bell_screw_relief_diameter_mm": 7.6,
+      "washer_od_mm": 7.0,
+      "washer_id_mm": 3.2,
+      "washer_thickness_mm": 0.5,
+      "screw_underhead_length_mm": 35.0,
+      "screw_head_od_mm": 5.5,
+      "screw_head_height_mm": 3.0,
+      "insert_od_envelope_mm": 4.6,
+      "insert_length_mm": 5.7,
+      "status": "Nominal prototype stack; cut length and preload require coupon/fan measurement. Hardware references omit threads and insert knurling."
+    }
   },
   "build": {
-    "completed_utc": "2026-10-03T09:38:59.007846+00:00",
-    "script_sha256": "48e427c959fa807b7c9876a72d578360f8043637c26d9991115b00a6149ef4b5",
+    "completed_utc": "2026-10-05T17:16:40.319588+00:00",
+    "script_sha256": "8b687d6001f03d0483a5104856c810b69bd80080a954fe6daa8764fe6d525b23",
+    "fan_mount_layout_sha256": "35c2aea552500c99df0bf76b8318407442d03b3a349c8a850d2146875bf36c30",
+    "fan_mount_parameters_sha256": "2267c4b8b42dcc3f74bf5849ab4add0393e3e4b7ea1fd811307149036a975b3f",
+    "interlock_script_sha256": "41eb0a88f144f34a6078c1852214aa10534d91575107e3dd5477915a326c0be0",
+    "interlock_validation_sha256": "950b9e22747b6c7919ac25ab2751ec56a86805dfde83a92fc4b7a6e4781f8116",
     "parameters_sha256": "6f86731c3123d8d15c025a0b34fb400919749b0227dfb576a218ed821d70c8ee"
   },
   "status": "development, not print release",
   "assembly_files": [
-    "head-left-integral-outlet.step",
-    "head-right-integral-outlet.step",
     "linkage-service-cover.step",
     "tpu-servo-cable-grommet.step",
     "bellmouth-rear-inlet.step",
@@ -323,9 +853,52 @@
     "REF-grille-magnet-56.1--51.1.step",
     "REF-head-magnet-56.1-51.1.step",
     "REF-grille-magnet-56.1-51.1.step",
+    "head-left-integral-outlet.step",
+    "head-right-integral-outlet.step",
     "head-magnet-retaining-rim.step",
     "grille-magnet-retaining-rim.step",
-    "magnetic-front-grille.step"
+    "magnetic-front-grille.step",
+    "interlock-sliding-bracket.step",
+    "interlock-protective-cover.step",
+    "interlock-wire-clamp.step",
+    "interlock-wire-raceway.step",
+    "interlock-raceway-lid.step",
+    "REF-D2F-01L-drawing-case.step",
+    "REF-D2F-01L-installed-lever-envelope.step",
+    "REF-switch-terminal-1.step",
+    "REF-switch-terminal-2.step",
+    "REF-switch-terminal-3.step",
+    "REF-bracket-M2x16-1-screw.step",
+    "REF-bracket-M2x16-1-washer.step",
+    "REF-bracket-M2x16-1-nut.step",
+    "REF-bracket-M2x16-2-screw.step",
+    "REF-bracket-M2x16-2-washer.step",
+    "REF-bracket-M2x16-2-nut.step",
+    "REF-switch-M2x10-1-screw.step",
+    "REF-switch-M2x10-1-washer.step",
+    "REF-switch-M2x10-1-nut.step",
+    "REF-switch-M2x10-2-screw.step",
+    "REF-switch-M2x10-2-washer.step",
+    "REF-switch-M2x10-2-nut.step",
+    "REF-clamp-M2x10-1-screw.step",
+    "REF-clamp-M2x10-1-washer.step",
+    "REF-clamp-M2x10-1-nut.step",
+    "REF-clamp-M2x10-2-screw.step",
+    "REF-clamp-M2x10-2-washer.step",
+    "REF-clamp-M2x10-2-nut.step",
+    "REF-raceway-M2x10-1-screw.step",
+    "REF-raceway-M2x10-1-washer.step",
+    "REF-raceway-M2x10-1-nut.step",
+    "REF-raceway-M2x10-2-screw.step",
+    "REF-raceway-M2x10-2-washer.step",
+    "REF-raceway-M2x10-2-nut.step",
+    "REF-COM-tail.step",
+    "REF-COM-down.step",
+    "REF-COM-R4-elbow.step",
+    "REF-NO-tail.step",
+    "REF-NO-down.step",
+    "REF-NO-R4-elbow.step",
+    "REF-TPU-wire-liner-installed.step"
   ],
   "remaining": [
     "carrier PCB and wire/pressure-hose integration",

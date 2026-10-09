@@ -1,0 +1,2147 @@
+{
+  "status": "PLACED; routing and electrical layout review pending",
+  "timestamp_utc": "2026-10-08T17:39:05.236675+00:00",
+  "physical_qualification": false,
+  "PCB_routed": false,
+  "outline_mm": [
+    80,
+    55
+  ],
+  "copper_layers": 4,
+  "thickness_mm": 1.6,
+  "placed_circuit_components": 132,
+  "placement": [
+    {
+      "ref": "J1",
+      "xy_mm": [
+        8,
+        23
+      ],
+      "angle_deg": 0,
+      "side": "F",
+      "bounds_mm": [
+        5.025,
+        20.125,
+        13.475,
+        26.925
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "C2",
+      "xy_mm": [
+        20,
+        42
+      ],
+      "angle_deg": 0,
+      "side": "F",
+      "bounds_mm": [
+        17.689759,
+        38.575,
+        24.675,
+        45.425
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "J18",
+      "xy_mm": [
+        8,
+        31
+      ],
+      "angle_deg": 0,
+      "side": "F",
+      "bounds_mm": [
+        3.895,
+        28.005,
+        15.105,
+        37.835
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "J19",
+      "xy_mm": [
+        23,
+        31
+      ],
+      "angle_deg": 0,
+      "side": "F",
+      "bounds_mm": [
+        18.895,
+        28.005,
+        36.105,
+        37.835
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "C7",
+      "xy_mm": [
+        29,
+        42
+      ],
+      "angle_deg": 0,
+      "side": "F",
+      "bounds_mm": [
+        26.689759,
+        38.575,
+        33.675,
+        45.425
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "C8",
+      "xy_mm": [
+        9,
+        42
+      ],
+      "angle_deg": 0,
+      "side": "F",
+      "bounds_mm": [
+        6.689759,
+        38.575,
+        13.675,
+        45.425
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "C9",
+      "xy_mm": [
+        42,
+        41
+      ],
+      "angle_deg": 0,
+      "side": "F",
+      "bounds_mm": [
+        39.280302,
+        36.725,
+        48.025,
+        45.275
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "J4",
+      "xy_mm": [
+        59,
+        27.05
+      ],
+      "angle_deg": 90,
+      "side": "F",
+      "bounds_mm": [
+        57.205,
+        25.255,
+        65.875,
+        28.845
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "J5",
+      "xy_mm": [
+        67.5,
+        31
+      ],
+      "angle_deg": 0,
+      "side": "F",
+      "bounds_mm": [
+        65.705,
+        29.205,
+        69.295,
+        32.795
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "C10",
+      "xy_mm": [
+        58,
+        33.45
+      ],
+      "angle_deg": 0,
+      "side": "F",
+      "bounds_mm": [
+        55.280302,
+        29.175,
+        64.025,
+        37.725
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "J7",
+      "xy_mm": [
+        44,
+        31
+      ],
+      "angle_deg": 0,
+      "side": "F",
+      "bounds_mm": [
+        41.025,
+        28.125,
+        51.975,
+        34.925
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "J2",
+      "xy_mm": [
+        36,
+        22
+      ],
+      "angle_deg": 0,
+      "side": "F",
+      "bounds_mm": [
+        33.025,
+        19.125,
+        43.975,
+        25.925
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "J8",
+      "xy_mm": [
+        35,
+        49
+      ],
+      "angle_deg": 0,
+      "side": "F",
+      "bounds_mm": [
+        32.025,
+        46.125,
+        45.475,
+        52.925
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "J9",
+      "xy_mm": [
+        49.4,
+        49
+      ],
+      "angle_deg": 0,
+      "side": "F",
+      "bounds_mm": [
+        46.425,
+        46.125,
+        59.875,
+        52.925
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "J10",
+      "xy_mm": [
+        63.4,
+        49
+      ],
+      "angle_deg": 0,
+      "side": "F",
+      "bounds_mm": [
+        60.425,
+        46.125,
+        73.875,
+        52.925
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "J11",
+      "xy_mm": [
+        53,
+        41
+      ],
+      "angle_deg": 0,
+      "side": "F",
+      "bounds_mm": [
+        50.025,
+        38.125,
+        63.475,
+        44.925
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "J12",
+      "xy_mm": [
+        54,
+        21
+      ],
+      "angle_deg": 0,
+      "side": "F",
+      "bounds_mm": [
+        51.025,
+        18.125,
+        59.475,
+        24.925
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "J14",
+      "xy_mm": [
+        47,
+        19.5
+      ],
+      "angle_deg": 0,
+      "side": "F",
+      "bounds_mm": [
+        45.205,
+        17.705,
+        48.795,
+        23.845
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "J15",
+      "xy_mm": [
+        11,
+        12.4
+      ],
+      "angle_deg": 90,
+      "side": "F",
+      "bounds_mm": [
+        5.375,
+        6.155,
+        39.485,
+        17.14
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "J16",
+      "xy_mm": [
+        46,
+        12.4
+      ],
+      "angle_deg": 90,
+      "side": "F",
+      "bounds_mm": [
+        40.375,
+        6.155,
+        74.485,
+        17.14
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "J6",
+      "xy_mm": [
+        9.1,
+        49
+      ],
+      "angle_deg": 0,
+      "side": "F",
+      "bounds_mm": [
+        6.125,
+        46.125,
+        29.575,
+        52.925
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "EF1",
+      "xy_mm": [
+        24,
+        24.6
+      ],
+      "angle_deg": 0,
+      "side": "F",
+      "bounds_mm": [
+        20.97,
+        21.945,
+        26.655,
+        27.255
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "EF2",
+      "xy_mm": [
+        65,
+        21
+      ],
+      "angle_deg": 0,
+      "side": "F",
+      "bounds_mm": [
+        61.97,
+        18.345,
+        67.655,
+        23.655
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "QRC1",
+      "xy_mm": [
+        23,
+        19.5
+      ],
+      "angle_deg": 0,
+      "side": "F",
+      "bounds_mm": [
+        20.71,
+        17.48,
+        25.025,
+        21.425
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "J20",
+      "xy_mm": [
+        73,
+        22
+      ],
+      "angle_deg": 0,
+      "side": "F",
+      "bounds_mm": [
+        68.895,
+        19.005,
+        77.105,
+        28.835
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "J22",
+      "xy_mm": [
+        74,
+        41
+      ],
+      "angle_deg": 90,
+      "side": "F",
+      "bounds_mm": [
+        71.125,
+        33.025,
+        77.925,
+        43.975
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "J21",
+      "xy_mm": [
+        36.0,
+        17.5
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        33.025,
+        13.575,
+        43.975,
+        20.375
+      ],
+      "dnp": true
+    },
+    {
+      "ref": "BUF1",
+      "xy_mm": [
+        39.0,
+        29.0
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        35.275,
+        24.395,
+        42.725,
+        33.76
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "BUF2",
+      "xy_mm": [
+        24.0,
+        17.5
+      ],
+      "angle_deg": 90,
+      "side": "B",
+      "bounds_mm": [
+        19.395,
+        13.775,
+        28.76,
+        21.225
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "ISO1",
+      "xy_mm": [
+        36.5,
+        39.0
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        32.625,
+        36.225,
+        40.375,
+        41.94
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "D1",
+      "xy_mm": [
+        18.5,
+        24.0
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        14.78,
+        21.725,
+        22.175,
+        26.275
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "F1",
+      "xy_mm": [
+        17.0,
+        17.5
+      ],
+      "angle_deg": 90,
+      "side": "B",
+      "bounds_mm": [
+        15.15,
+        13.795,
+        18.85,
+        21.205
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "F2",
+      "xy_mm": [
+        25.0,
+        37.0
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        21.295,
+        35.15,
+        28.705,
+        38.85
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "F3",
+      "xy_mm": [
+        58.0,
+        30.5
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        54.295,
+        28.65,
+        61.705,
+        32.35
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "D2",
+      "xy_mm": [
+        20.0,
+        30.5
+      ],
+      "angle_deg": 90,
+      "side": "B",
+      "bounds_mm": [
+        18.225,
+        26.975,
+        21.775,
+        34.07
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "BUF5",
+      "xy_mm": [
+        62.0,
+        37.0
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        59.025,
+        35.175,
+        64.975,
+        38.84
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "BUF4",
+      "xy_mm": [
+        37.0,
+        11.0
+      ],
+      "angle_deg": 90,
+      "side": "B",
+      "bounds_mm": [
+        35.275,
+        8.925,
+        38.9,
+        13.075
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "SUP1",
+      "xy_mm": [
+        32.5,
+        28.0
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        30.425,
+        26.275,
+        34.575,
+        29.9
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "SW2",
+      "xy_mm": [
+        55.5,
+        26.0
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        53.425,
+        24.275,
+        57.575,
+        27.9
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "SW3",
+      "xy_mm": [
+        45.5,
+        34.0
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        43.425,
+        32.275,
+        47.575,
+        35.9
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "U1",
+      "xy_mm": [
+        64.0,
+        41.0
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        61.925,
+        39.275,
+        66.075,
+        42.9
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "U2",
+      "xy_mm": [
+        67.0,
+        36.5
+      ],
+      "angle_deg": 90,
+      "side": "B",
+      "bounds_mm": [
+        65.275,
+        34.425,
+        68.9,
+        38.575
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "U3",
+      "xy_mm": [
+        56.5,
+        37.0
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        54.425,
+        35.275,
+        58.575,
+        38.9
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "QDRV1",
+      "xy_mm": [
+        27.5,
+        23.5
+      ],
+      "angle_deg": 90,
+      "side": "B",
+      "bounds_mm": [
+        25.775,
+        21.545,
+        29.225,
+        25.455
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R40",
+      "xy_mm": [
+        60.5,
+        24.5
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        58.195,
+        23.345,
+        62.805,
+        25.655
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R41",
+      "xy_mm": [
+        45.5,
+        28.5
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        43.195,
+        27.345,
+        47.805,
+        29.655
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "BUF3",
+      "xy_mm": [
+        52.5,
+        29.5
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        51.025,
+        28.33,
+        53.975,
+        30.84
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "C1",
+      "xy_mm": [
+        24.0,
+        27.5
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        22.495,
+        26.745,
+        25.505,
+        28.255
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "C12",
+      "xy_mm": [
+        63.0,
+        30.0
+      ],
+      "angle_deg": 90,
+      "side": "B",
+      "bounds_mm": [
+        62.245,
+        28.495,
+        63.755,
+        31.505
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "C13",
+      "xy_mm": [
+        41.5,
+        35.0
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        39.995,
+        34.245,
+        43.005,
+        35.755
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "C15",
+      "xy_mm": [
+        55.0,
+        33.5
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        53.495,
+        32.745,
+        56.505,
+        34.255
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "C16",
+      "xy_mm": [
+        45.0,
+        26.0
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        43.495,
+        25.245,
+        46.505,
+        26.755
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "C17",
+      "xy_mm": [
+        43.0,
+        37.0
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        41.495,
+        36.245,
+        44.505,
+        37.755
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "C18",
+      "xy_mm": [
+        30.0,
+        17.0
+      ],
+      "angle_deg": 90,
+      "side": "B",
+      "bounds_mm": [
+        29.245,
+        15.495,
+        30.755,
+        18.505
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "C19",
+      "xy_mm": [
+        52.0,
+        26.5
+      ],
+      "angle_deg": 90,
+      "side": "B",
+      "bounds_mm": [
+        51.245,
+        24.995,
+        52.755,
+        28.005
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "C20",
+      "xy_mm": [
+        34.0,
+        32.0
+      ],
+      "angle_deg": 90,
+      "side": "B",
+      "bounds_mm": [
+        33.245,
+        30.495,
+        34.755,
+        33.505
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "C21",
+      "xy_mm": [
+        37.5,
+        35.0
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        35.995,
+        34.245,
+        39.005,
+        35.755
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "C22",
+      "xy_mm": [
+        33.0,
+        21.5
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        31.495,
+        20.745,
+        34.505,
+        22.255
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "C23",
+      "xy_mm": [
+        31.5,
+        37.0
+      ],
+      "angle_deg": 90,
+      "side": "B",
+      "bounds_mm": [
+        30.745,
+        35.495,
+        32.255,
+        38.505
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "C24",
+      "xy_mm": [
+        33.0,
+        25.0
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        31.495,
+        24.245,
+        34.505,
+        25.755
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "C25",
+      "xy_mm": [
+        29.0,
+        28.0
+      ],
+      "angle_deg": 90,
+      "side": "B",
+      "bounds_mm": [
+        28.245,
+        26.495,
+        29.755,
+        29.505
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "C26",
+      "xy_mm": [
+        41.0,
+        12.5
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        39.495,
+        11.745,
+        42.505,
+        13.255
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "C27",
+      "xy_mm": [
+        41.0,
+        10.5
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        39.495,
+        9.745,
+        42.505,
+        11.255
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "C28",
+      "xy_mm": [
+        43.0,
+        22.5
+      ],
+      "angle_deg": 90,
+      "side": "B",
+      "bounds_mm": [
+        42.245,
+        20.995,
+        43.755,
+        24.005
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "C31",
+      "xy_mm": [
+        36.0,
+        7.5
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        34.495,
+        6.745,
+        37.505,
+        8.255
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "C32",
+      "xy_mm": [
+        45.5,
+        16.5
+      ],
+      "angle_deg": 90,
+      "side": "B",
+      "bounds_mm": [
+        44.745,
+        14.995,
+        46.255,
+        18.005
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "C34",
+      "xy_mm": [
+        27.0,
+        27.5
+      ],
+      "angle_deg": 90,
+      "side": "B",
+      "bounds_mm": [
+        26.245,
+        25.995,
+        27.755,
+        29.005
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "C35",
+      "xy_mm": [
+        62.5,
+        21.5
+      ],
+      "angle_deg": 90,
+      "side": "B",
+      "bounds_mm": [
+        61.745,
+        19.995,
+        63.255,
+        23.005
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "C36",
+      "xy_mm": [
+        16.0,
+        27.5
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        14.495,
+        26.745,
+        17.505,
+        28.255
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "C37",
+      "xy_mm": [
+        65.5,
+        23.5
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        63.995,
+        22.745,
+        67.005,
+        24.255
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "C4",
+      "xy_mm": [
+        25.0,
+        40.0
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        23.495,
+        39.245,
+        26.505,
+        40.755
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "C40",
+      "xy_mm": [
+        64.5,
+        33.0
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        62.995,
+        32.245,
+        66.005,
+        33.755
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "C41",
+      "xy_mm": [
+        67.5,
+        40.5
+      ],
+      "angle_deg": 90,
+      "side": "B",
+      "bounds_mm": [
+        66.745,
+        38.995,
+        68.255,
+        42.005
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "C42",
+      "xy_mm": [
+        60.0,
+        43.5
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        58.495,
+        42.745,
+        61.505,
+        44.255
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "C43",
+      "xy_mm": [
+        63.5,
+        44.0
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        61.995,
+        43.245,
+        65.005,
+        44.755
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "C5",
+      "xy_mm": [
+        20.0,
+        37.5
+      ],
+      "angle_deg": 90,
+      "side": "B",
+      "bounds_mm": [
+        19.245,
+        35.995,
+        20.755,
+        39.005
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R1",
+      "xy_mm": [
+        44.0,
+        11.5
+      ],
+      "angle_deg": 90,
+      "side": "B",
+      "bounds_mm": [
+        43.245,
+        9.995,
+        44.755,
+        13.005
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R11",
+      "xy_mm": [
+        65.0,
+        30.0
+      ],
+      "angle_deg": 90,
+      "side": "B",
+      "bounds_mm": [
+        64.245,
+        28.495,
+        65.755,
+        31.505
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R12",
+      "xy_mm": [
+        49.0,
+        28.0
+      ],
+      "angle_deg": 90,
+      "side": "B",
+      "bounds_mm": [
+        48.245,
+        26.495,
+        49.755,
+        29.505
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R16",
+      "xy_mm": [
+        49.0,
+        34.0
+      ],
+      "angle_deg": 90,
+      "side": "B",
+      "bounds_mm": [
+        48.245,
+        32.495,
+        49.755,
+        35.505
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R17",
+      "xy_mm": [
+        59.5,
+        22.0
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        57.995,
+        21.245,
+        61.005,
+        22.755
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R19",
+      "xy_mm": [
+        46.5,
+        37.0
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        44.995,
+        36.245,
+        48.005,
+        37.755
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R2",
+      "xy_mm": [
+        41.0,
+        8.5
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        39.495,
+        7.745,
+        42.505,
+        9.255
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R23",
+      "xy_mm": [
+        52.0,
+        33.0
+      ],
+      "angle_deg": 90,
+      "side": "B",
+      "bounds_mm": [
+        51.245,
+        31.495,
+        52.755,
+        34.505
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R24",
+      "xy_mm": [
+        66.0,
+        26.5
+      ],
+      "angle_deg": 90,
+      "side": "B",
+      "bounds_mm": [
+        65.245,
+        24.995,
+        66.755,
+        28.005
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R28",
+      "xy_mm": [
+        42.5,
+        39.0
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        40.995,
+        38.245,
+        44.005,
+        39.755
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R29",
+      "xy_mm": [
+        30.5,
+        40.0
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        28.995,
+        39.245,
+        32.005,
+        40.755
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R3",
+      "xy_mm": [
+        32.5,
+        7.5
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        30.995,
+        6.745,
+        34.005,
+        8.255
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R30",
+      "xy_mm": [
+        36.0,
+        43.0
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        34.495,
+        42.245,
+        37.505,
+        43.755
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R31",
+      "xy_mm": [
+        39.5,
+        43.0
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        37.995,
+        42.245,
+        41.005,
+        43.755
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R32",
+      "xy_mm": [
+        46.0,
+        39.0
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        44.495,
+        38.245,
+        47.505,
+        39.755
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R33",
+      "xy_mm": [
+        32.5,
+        44.0
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        30.995,
+        43.245,
+        34.005,
+        44.755
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R34",
+      "xy_mm": [
+        45.0,
+        23.0
+      ],
+      "angle_deg": 90,
+      "side": "B",
+      "bounds_mm": [
+        44.245,
+        21.495,
+        45.755,
+        24.505
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R35",
+      "xy_mm": [
+        36.0,
+        45.0
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        34.495,
+        44.245,
+        37.505,
+        45.755
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R36",
+      "xy_mm": [
+        43.0,
+        43.0
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        41.495,
+        42.245,
+        44.505,
+        43.755
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R37",
+      "xy_mm": [
+        39.5,
+        45.0
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        37.995,
+        44.245,
+        41.005,
+        45.755
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R38",
+      "xy_mm": [
+        29.0,
+        44.0
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        27.495,
+        43.245,
+        30.505,
+        44.755
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R5",
+      "xy_mm": [
+        39.5,
+        6.5
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        37.995,
+        5.745,
+        41.005,
+        7.255
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R50",
+      "xy_mm": [
+        24.0,
+        7.5
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        22.495,
+        6.745,
+        25.505,
+        8.255
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R51",
+      "xy_mm": [
+        14.0,
+        17.0
+      ],
+      "angle_deg": 90,
+      "side": "B",
+      "bounds_mm": [
+        13.245,
+        15.495,
+        14.755,
+        18.505
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R52",
+      "xy_mm": [
+        20.5,
+        7.5
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        18.995,
+        6.745,
+        22.005,
+        8.255
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R53",
+      "xy_mm": [
+        27.5,
+        7.5
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        25.995,
+        6.745,
+        29.005,
+        8.255
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R54",
+      "xy_mm": [
+        13.5,
+        20.5
+      ],
+      "angle_deg": 90,
+      "side": "B",
+      "bounds_mm": [
+        12.745,
+        18.995,
+        14.255,
+        22.005
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R55",
+      "xy_mm": [
+        24.0,
+        5.5
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        22.495,
+        4.745,
+        25.505,
+        6.255
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R57",
+      "xy_mm": [
+        17.0,
+        7.5
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        15.495,
+        6.745,
+        18.505,
+        8.255
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R58",
+      "xy_mm": [
+        12.0,
+        17.0
+      ],
+      "angle_deg": 90,
+      "side": "B",
+      "bounds_mm": [
+        11.245,
+        15.495,
+        12.755,
+        18.505
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R59",
+      "xy_mm": [
+        20.5,
+        5.5
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        18.995,
+        4.745,
+        22.005,
+        6.255
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R6",
+      "xy_mm": [
+        36.0,
+        5.5
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        34.495,
+        4.745,
+        37.505,
+        6.255
+      ],
+      "dnp": true
+    },
+    {
+      "ref": "R60",
+      "xy_mm": [
+        47.5,
+        16.5
+      ],
+      "angle_deg": 90,
+      "side": "B",
+      "bounds_mm": [
+        46.745,
+        14.995,
+        48.255,
+        18.005
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R61",
+      "xy_mm": [
+        13.5,
+        24.0
+      ],
+      "angle_deg": 90,
+      "side": "B",
+      "bounds_mm": [
+        12.745,
+        22.495,
+        14.255,
+        25.505
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R62",
+      "xy_mm": [
+        16.0,
+        29.5
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        14.495,
+        28.745,
+        17.505,
+        30.255
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R63",
+      "xy_mm": [
+        13.0,
+        27.5
+      ],
+      "angle_deg": 90,
+      "side": "B",
+      "bounds_mm": [
+        12.245,
+        25.995,
+        13.755,
+        29.005
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R64",
+      "xy_mm": [
+        16.0,
+        31.5
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        14.495,
+        30.745,
+        17.505,
+        32.255
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R65",
+      "xy_mm": [
+        10.5,
+        20.5
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        8.995,
+        19.745,
+        12.005,
+        21.255
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R66",
+      "xy_mm": [
+        64.0,
+        18.5
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        62.495,
+        17.745,
+        65.505,
+        19.255
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R67",
+      "xy_mm": [
+        67.5,
+        20.5
+      ],
+      "angle_deg": 90,
+      "side": "B",
+      "bounds_mm": [
+        66.745,
+        18.995,
+        68.255,
+        22.005
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R68",
+      "xy_mm": [
+        60.5,
+        19.0
+      ],
+      "angle_deg": 90,
+      "side": "B",
+      "bounds_mm": [
+        59.745,
+        17.495,
+        61.255,
+        20.505
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R69",
+      "xy_mm": [
+        69.0,
+        23.5
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        67.495,
+        22.745,
+        70.505,
+        24.255
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R7",
+      "xy_mm": [
+        32.5,
+        5.5
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        30.995,
+        4.745,
+        34.005,
+        6.255
+      ],
+      "dnp": true
+    },
+    {
+      "ref": "R70",
+      "xy_mm": [
+        64.0,
+        16.5
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        62.495,
+        15.745,
+        65.505,
+        17.255
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R71",
+      "xy_mm": [
+        11.0,
+        26.0
+      ],
+      "angle_deg": 90,
+      "side": "B",
+      "bounds_mm": [
+        10.245,
+        24.495,
+        11.755,
+        27.505
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R72",
+      "xy_mm": [
+        13.0,
+        31.0
+      ],
+      "angle_deg": 90,
+      "side": "B",
+      "bounds_mm": [
+        12.245,
+        29.495,
+        13.755,
+        32.505
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R76",
+      "xy_mm": [
+        67.5,
+        17.5
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        65.995,
+        16.745,
+        69.005,
+        18.255
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R77",
+      "xy_mm": [
+        69.5,
+        20.5
+      ],
+      "angle_deg": 90,
+      "side": "B",
+      "bounds_mm": [
+        68.745,
+        18.995,
+        70.255,
+        22.005
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R8",
+      "xy_mm": [
+        52.0,
+        23.0
+      ],
+      "angle_deg": 90,
+      "side": "B",
+      "bounds_mm": [
+        51.245,
+        21.495,
+        52.755,
+        24.505
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R81",
+      "xy_mm": [
+        68.0,
+        33.0
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        66.495,
+        32.245,
+        69.505,
+        33.755
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R82",
+      "xy_mm": [
+        70.0,
+        37.0
+      ],
+      "angle_deg": 90,
+      "side": "B",
+      "bounds_mm": [
+        69.245,
+        35.495,
+        70.755,
+        38.505
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R83",
+      "xy_mm": [
+        10.0,
+        17.5
+      ],
+      "angle_deg": 90,
+      "side": "B",
+      "bounds_mm": [
+        9.245,
+        15.995,
+        10.755,
+        19.005
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R84",
+      "xy_mm": [
+        69.5,
+        40.5
+      ],
+      "angle_deg": 90,
+      "side": "B",
+      "bounds_mm": [
+        68.745,
+        38.995,
+        70.255,
+        42.005
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R85",
+      "xy_mm": [
+        56.5,
+        43.5
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        54.995,
+        42.745,
+        58.005,
+        44.255
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R86",
+      "xy_mm": [
+        67.0,
+        44.0
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        65.495,
+        43.245,
+        68.505,
+        44.755
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "R87",
+      "xy_mm": [
+        60.0,
+        45.5
+      ],
+      "angle_deg": 0,
+      "side": "B",
+      "bounds_mm": [
+        58.495,
+        44.745,
+        61.505,
+        46.255
+      ],
+      "dnp": false
+    }
+  ],
+  "input_sha256": {
+    "tools/build_rev_c_board.py": "a39f8d4172f82b901d4359eec553c83a8187f9f9516de3ac43c7d8728bea73e9",
+    "hardware/pcb/rev_c/circuit-population.json": "3ef3c76d66aabc5bd1ae334f1d7e952d5e305c23fc58a3a155674dde24875264"
+  },
+  "native_checks": {
+    "copper_package_silkscreen_violations": 0,
+    "schematic_parity_issues": 0,
+    "unconnected_items": 324,
+    "not_routed": true
+  },
+  "artifact_sha256": {
+    "hardware\\pcb\\rev_c\\windflow-rev-c.kicad_pcb": "72e58c282c052f89d46bd091fa56cdefaf4a0f3a643a719629be19ab06cb57fb",
+    "hardware\\pcb\\rev_c\\windflow-rev-c.kicad_dru": "270e28c9999811eb31732a4e79ee9fea970255506dbced21bd0dc59961bca95c",
+    "hardware\\pcb\\rev_c\\board-placement-drc.json": "d8e5213249b7633bda6576cc419601bf8e9d05dbef9ad3a1e2e17f0287ec1b4c",
+    "hardware\\pcb\\rev_c\\board-placement.svg": "56bb051c1c02c735b1e70717d2c4870465960da848829c3d8c68dc79683f80d7"
+  },
+  "limits": [
+    "Placement proximity is preliminary; power/thermal/decoupling routes need manual review.",
+    "Board has no routes and is not for fabrication. Through-hole leads and underside SMD clearance need assembly checks."
+  ]
+}

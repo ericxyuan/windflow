@@ -1,6 +1,8 @@
 # Wiring and pin assignments — electrical revision E3
 
-This is the prototype's net-level circuit specification, updated 2026-10-03. It corresponds to firmware defaults `busScale=11.1`, `logicScale=2.1` and a 50 ms LED rail-settle interval. It is **not a routed PCB, an ERC report, or a bench-tested circuit**. Build the carrier described in [electronics assembly](../docs/electronics-assembly.md) before enclosure integration.
+**Rev B historical wiring.** Use the [Rev C power and wiring specification](../docs/rev-c-motor-power.md) and [Rev C firmware pin mapping](../docs/rev-c-firmware.md) for the P2406 motor and A50S ESC. The four-wire fan circuitry below is superseded; ESC UART, branch power gating and a 15 V / 3 A PD contract require a revised carrier. Do not connect the new motor to this earlier fan circuit.
+
+This is the prototype's net-level circuit specification, updated 2026-10-05 with the 5 V grille-contact circuit and 3.3 V BUF4 output. It corresponds to firmware defaults `busScale=11.1`, `logicScale=2.1` and a 50 ms LED rail-settle interval. It is **not a routed PCB, an ERC report, or a bench-tested circuit**. Build the carrier described in [electronics assembly](../docs/electronics-assembly.md) before enclosure integration.
 
 ## Power diagram
 
@@ -55,7 +57,7 @@ R44=100k from IN to pin 3 UVLO, R45=15k from UVLO to RTN. Also connect pin 7 SHD
 | GP12 | 16 | SW1 EN, R10=100k pulldown |
 | GP13 | 17 | SW2 EN, R11=100k pulldown |
 | GP14 | 19 | SW3 EN, R12=100k pulldown |
-| GP15 | 20 | Guard present, R5=4.7k to 3.3 V; installed grille closes NO toCOM/GND |
+| GP15 | 20 | Guard present via BUF4 3.3 V output; R60=100k to3.3 V. Installed grille closes the separate5 V contact node toCOM/GND |
 | GP17 | 22 | Service jumper toGND; internal pullup |
 | GP16 | 21 | TFT BL PWM via BUF2 channel 3, then R55=330 ohm; R59=100k GPIO-side pulldown, R56=1k to GND at display end |
 | GP18 | 24 | SPI0 SCK through R51=33 ohm |
@@ -88,6 +90,14 @@ BUF3 is **74AHCT1G125GW,125**. Pin 5 VCC=SW2 output, pin 3 GND; C19=100 nF local
 
 Q1 **2N7002,215**: gate 1 via R13, source 2 GND, drain 3 fan PWM. R14=100k gate-toGND. Firmware inverts PWM because Q1 high pulls fan PWM low; fan power is separately disconnected when off. Use the fan's internal PWM pullup; add no 12 V pullup. Fan plug pins 1/2/3/4 are GND/12 V/tach/PWM.
 
+## Grille-present contact and logic level
+
+The 5 October guard correction replaces the former R5=4.7k pullup to3.3 V. Omron lists a1 mA /5 V minimum applicable load as a reference for D2F-01 gold contacts; the previous0.70 mA /3.3 V circuit did not match that reference. R5 is now **3.9k1% from unswitched REG2 5 V to GUARD_CONTACT_5V**. J12pin2 carries that node to the NO contact, and COM returns through J12pin1 toGND. Installed grille therefore pulls the node LOW; unplugging the loom makes it HIGH. NC is unused.
+
+**BUF4 SN74LVC1G17DBVR** translates this input: pin1 NC, pin2 A=GUARD_CONTACT_5V, pin3 GND, pin4 Y=GUARD_LOGIC_3V3 /GP15, pin5 VCC=Pico3V3. C31=100 nF locally across VCC/GND; C32=10 nF across the raw contact node/GND; R60=100k from GP15 to3V3. Keep the raw5 V net away from Pico pads. This exact buffer accepts input to5.5 V and specifies Ioff behavior during power-down; a generic buffer without those ratings is not a substitute. [TI pinout and limits](https://www.ti.com/lit/ds/symlink/sn74lvc1g17.pdf).
+
+Closed-contact current is1.282 mA nominal at5 V; allowing the4.65–5.35 V qualified rail and1% resistance gives approximately1.18–1.39 mA. The39 us nominal RC filters short interference; it does not replace software state qualification or prove switch life. Omron's load value is a reference, not a guarantee for every environment: verify voltage, contact resistance, repeated removal, dust and temperature on the actual switch. With service USB powering the Pico but REG2 absent, the contact node can read LOW; the independent PD, bus and regulator-good gates must remain effective so this condition cannot enable actuators. The fixed inner guard remains necessary, including during rotor coast and a contact/wiring fault.
+
 ## ADC isolation and divider values
 
 ISO1 **TMUX1511PWR**: pin 14 VDD=3.3 V, pin 7 GND, C20=100 nF locally. Channel 1 S2/D3 is bus; channel 2 S5/D6 servo feedback; channel 3 S9/D8 logic. SEL pins 1/4/10 join `ADC_ENABLE`. Unused channel 4 SEL13, S12 and D11 go toGND. SUP1 **TPS3808G33DBVR** pin 6 VDD and pin 5 SENSE=3.3 V, pin 2 GND, C21=100 nF locally; pin 3 MR=3.3 V; pin 4 CT unconnected. Pin 1 /RESET=`ADC_ENABLE`, R37=10k to 3.3 V and R38=100k toGND. No connection to Pico RUN is required. /RESET high means isolation channels on.
@@ -119,7 +129,7 @@ The following numbered positions define the **carrier header** nets; mark pin 1 
 | J9 XH4 | GND, 3.3 V,SDA,SCL | TEMP1 |
 | J10 XH4 | GND, 3.3 V,SDA,SCL | TEMP2 |
 | J11 XH4 | GND, 3.3 V,SDA,SCL | SDP soldered daughterboard, 2 mm sensor pitch; sensor native pins 1/2/3/4=SCL/VDD/GND/SDA |
-| J12 XH2 | GND, guard | Omron COM/NO; NC unused |
+| J12 XH2 | GND, GUARD_CONTACT_5V | Omron COM/NO; NC unused. Pin2 feeds BUF4 input and never connects directly to GP15 |
 | J14 Samtec 2 | GND,GP17 | Removable calibration jumper |
 
 E3 retires J13 (RGB lamp) and the former main-pixel components: LED1/LED2, R15, R18, R20–22 and R25–27 are not fitted. Reference-designator gaps are intentional. BUF2 and C18 remain for TFT CS/reset/backlight. R56 is now 1k and R59=100k is added at the BL buffer input. J6 changes from 3 to 8 positions; an old main-LED harness must not be reused on the new display connector. The retired lamp is not an independent fallback indicator; essential faults use the screen while REG2 is healthy.

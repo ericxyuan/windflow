@@ -1,0 +1,248 @@
+{
+  "status": "MECHANICAL BLANK - NOT AN ELECTRICAL/FABRICATION RELEASE",
+  "recorded_utc": "2026-10-04T06:44:27.357489+00:00",
+  "kicad_version": "10.0.6",
+  "runtime": "Explicit post-validation exit avoids the local CadQuery/OCP interpreter-teardown access violation; generation, assertions and child-process checks still fail with nonzero exit.",
+  "source_sha256": {
+    "parameters.json": "170ed5f607a44af272d5dad15414286688c9a138d77e2faf292754f2c5a7b3a4",
+    "tools/build_carrier_mechanical.py": "fd7bb37c1d7ae2f3a6792d1bbb6ef0257f79aa05546de7a0b8004ec6ae5d36f5",
+    "cad/build_base.py_read_only_datum_source": "6dc44c84dcdc084d2560fee898633ec606226fbd5dce098f943a4e4742d6c2b0"
+  },
+  "artifact_sha256": {
+    "carrier-mechanical.kicad_pcb": "4737b11fba8bc5a9ca64cd6c3a066d7416aa6c3dc0e6cda2db164c2ca710082d",
+    "carrier-mechanical.kicad_dru": "e87a6defd1702b7bc92e8a5839c53edf2cfa32605d47b0a0d64536e84f4ce776",
+    "carrier-mechanical.svg": "603fbc6a206b88ef6835b7842bdb7a744768b7e6aaf3ee08549886907de3f2bf",
+    "carrier-mechanical-kicad.step": "289128da2f69adaefc57a3558750e2ab62a020d4d51b6a3523be6367d3ff95da",
+    "carrier-mechanical-cad-datum.step": "93dbf5244c81889b290cedb547d1061c3ea3c6cb77229d10fcf6baa0bf092df4",
+    "drc.json": "ae6c66602ccd379cfd2fd805bd4696e99a859b7bfd23e0c833d0f98a8ff388c1",
+    "native-load-validation.json": "0653fc22d7fddbf49522933133fdf628faeab739187147b8e3b318bc2c054c56",
+    "MountingHole_2.4mm_M2_Keepout.kicad_mod": "938237f0f39e0f65c90514cee029f0f7f020ecab62128e3e6be6099a76961c3a"
+  },
+  "native_load_checks": {
+    "kicad_version": "10.0.6",
+    "checks": [
+      {
+        "name": "native KiCad outline parser",
+        "passed": true,
+        "detail": "closed Edge.Cuts contour"
+      },
+      {
+        "name": "90 x 65 mm Edge.Cuts extent",
+        "passed": true,
+        "detail": [
+          90.0,
+          65.0
+        ]
+      },
+      {
+        "name": "1.6 mm native board thickness",
+        "passed": true,
+        "detail": 1.6
+      },
+      {
+        "name": "four provisional copper layers",
+        "passed": true,
+        "detail": "no stackup or routing approval"
+      },
+      {
+        "name": "zero electrical nets",
+        "passed": true,
+        "detail": "only reserved empty net 0"
+      },
+      {
+        "name": "zero tracks/vias",
+        "passed": true,
+        "detail": 0
+      },
+      {
+        "name": "four mechanical hole footprints only",
+        "passed": true,
+        "detail": 4
+      },
+      {
+        "name": "H1 centre",
+        "passed": true,
+        "detail": [
+          3.0,
+          3.0
+        ]
+      },
+      {
+        "name": "H1 nonplated drill",
+        "passed": true,
+        "detail": 2.4
+      },
+      {
+        "name": "H1 edge ligament",
+        "passed": true,
+        "detail": "1.8 mm nominal hole wall to board edge"
+      },
+      {
+        "name": "H1 mounting rule area",
+        "passed": true,
+        "detail": "all copper layers; tracks/vias/pours/other footprints forbidden; companion rule forbids electrical pads and permits NPTH"
+      },
+      {
+        "name": "H2 centre",
+        "passed": true,
+        "detail": [
+          3.0,
+          62.0
+        ]
+      },
+      {
+        "name": "H2 nonplated drill",
+        "passed": true,
+        "detail": 2.4
+      },
+      {
+        "name": "H2 edge ligament",
+        "passed": true,
+        "detail": "1.8 mm nominal hole wall to board edge"
+      },
+      {
+        "name": "H2 mounting rule area",
+        "passed": true,
+        "detail": "all copper layers; tracks/vias/pours/other footprints forbidden; companion rule forbids electrical pads and permits NPTH"
+      },
+      {
+        "name": "H3 centre",
+        "passed": true,
+        "detail": [
+          87.0,
+          3.0
+        ]
+      },
+      {
+        "name": "H3 nonplated drill",
+        "passed": true,
+        "detail": 2.4
+      },
+      {
+        "name": "H3 edge ligament",
+        "passed": true,
+        "detail": "1.8 mm nominal hole wall to board edge"
+      },
+      {
+        "name": "H3 mounting rule area",
+        "passed": true,
+        "detail": "all copper layers; tracks/vias/pours/other footprints forbidden; companion rule forbids electrical pads and permits NPTH"
+      },
+      {
+        "name": "H4 centre",
+        "passed": true,
+        "detail": [
+          87.0,
+          62.0
+        ]
+      },
+      {
+        "name": "H4 nonplated drill",
+        "passed": true,
+        "detail": 2.4
+      },
+      {
+        "name": "H4 edge ligament",
+        "passed": true,
+        "detail": "1.8 mm nominal hole wall to board edge"
+      },
+      {
+        "name": "H4 mounting rule area",
+        "passed": true,
+        "detail": "all copper layers; tracks/vias/pours/other footprints forbidden; companion rule forbids electrical pads and permits NPTH"
+      }
+    ]
+  },
+  "cli_drc": {
+    "exit_code": 0,
+    "violations": [],
+    "unconnected_items": [],
+    "schematic_parity_checked": false,
+    "scope": "empty electrical board; native mechanical constraints only"
+  },
+  "negative_keepout_probes": [
+    {
+      "kind": "copper",
+      "exit_code": 5,
+      "detected_keepout_violations": 1,
+      "passed": true
+    },
+    {
+      "kind": "component",
+      "exit_code": 5,
+      "detected_keepout_violations": 1,
+      "passed": true
+    },
+    {
+      "kind": "pad",
+      "exit_code": 5,
+      "detected_keepout_violations": 1,
+      "passed": true
+    }
+  ],
+  "step": {
+    "single_valid_solid": true,
+    "native_bbox_mm": [
+      0.0,
+      -65.0,
+      0.0,
+      90.0,
+      0.0,
+      1.51
+    ],
+    "placed_bbox_mm": [
+      5.0,
+      55.0,
+      -106.00000000000001,
+      95.0,
+      120.0,
+      -104.4
+    ],
+    "native_substrate_thickness_mm": 1.51,
+    "mechanical_envelope_thickness_mm": 1.6,
+    "volume_mm3": 9331.047082104535,
+    "expected_volume_mm3": 9331.047082104516,
+    "hole_axis_probes": [
+      {
+        "hole_centre_global_xy_mm": [
+          8.0,
+          58.0
+        ],
+        "probe_overlap_mm3": 0.0
+      },
+      {
+        "hole_centre_global_xy_mm": [
+          8.0,
+          117.0
+        ],
+        "probe_overlap_mm3": 0.0
+      },
+      {
+        "hole_centre_global_xy_mm": [
+          92.0,
+          58.0
+        ],
+        "probe_overlap_mm3": 0.0
+      },
+      {
+        "hole_centre_global_xy_mm": [
+          92.0,
+          117.0
+        ],
+        "probe_overlap_mm3": 0.0
+      }
+    ],
+    "placement": "Extrude KiCad's validated drilled profile to nominal1.6mm; rotate180degrees aboutX; translate(5,55,-104.4) so board underside datum is(5,55,-106)"
+  },
+  "limits": [
+    "Hole positions match fixed CAD tray supports; clearance and hardware tolerances require physical checks.",
+    "Mounting rule areas forbid tracks, vias, pads, copper pours and other footprint placement on all four copper layers.",
+    "The 3.5 mm radius is an initial fastener/tool/component clearance, not a validated tool sweep.",
+    "The 22 mm height reserve starts at the board underside; with 1.6 mm PCB, 20.4 mm remains above the board.",
+    "No electrical component, connector, net, route, copper pour, finalized stackup or captured schematic is present.",
+    "This file does not modify or replace the current 76-instance CAD assembly.",
+    "A clean empty-board DRC cannot validate power circuits, connectivity, EMC, thermal layout, manufacturing stackup or populated assembly.",
+    "No schematic parity/ ERC, connector placement, harness routing or electrical component fit is claimed.",
+    "Native board-only STEP omits unpopulated outer copper/mask and has1.51mm substrate height. The separately named CAD datum STEP is a1.6mm full-thickness mechanical envelope from the same drilled profile."
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "revision": "Rev C standalone inhibited prototype",
+  "client_date": "2026-10-08",
+  "hardware_motion_qualified": false,
+  "default_motion_build_flag": 0,
+  "schema": 4,
+  "motor": "T-Motor Pacer V4 P2406 Juicy 2060KV",
+  "esc": "TeamTriforceUK A50S V2.3c-12-10",
+  "pole_pairs": 7,
+  "supply": "15V >=3A USB-C PD",
+  "trial_ceiling_rpm": 3000,
+  "absolute_analysis_ceiling_rpm": 5000,
+  "physical_ceiling_certified": false,
+  "commands": [
+    {
+      "command": "tools/test_rev_c_firmware.ps1",
+      "exit_code": 0,
+      "parser_safety_control_display_assertions": 4183,
+      "shipping_gate": "PASS default build cannot request rotor motion",
+      "shipping_service_assertions": 60,
+      "qualified_host_simulation_service_assertions": 73,
+      "host_compile_warnings_as_errors": true,
+      "hardware_verified": false
+    },
+    {
+      "command": "tools/build_rev_c_firmware.ps1",
+      "exit_code": 0,
+      "fqbn": "rp2040:rp2040:rpipico:flash=2097152_262144,freq=133",
+      "core_version": "6.1.0",
+      "program_bytes": 126800,
+      "static_ram_bytes": 11632,
+      "additional_screen_canvas_bytes": 10240,
+      "warnings": "upstream Adafruit NeoPixel pio_program initializer warnings; no firmware errors",
+      "hardware_flashing": false
+    }
+  ],
+  "uf2": {
+    "path": "firmware/dist/rev-c/WindflowRevC.ino.uf2",
+    "sha256": "772a1038a76b6a83930c37fda90e3da9bf2e4f376d23503ddd7b5247dc99552d",
+    "bytes": 290816,
+    "generated_local_ignored": true
+  },
+  "evidence_logs": {
+    "build/rev-c-firmware-host.log": "b9cea7ac745c72f3b82ad9bbdf8c4c858dcb3054629882f74a2d68df6ba527fd",
+    "build/rev-c-firmware-build.log": "44329b46687633528196f26fd91810b33528911dd4884f61ef901030a3cbdffc"
+  },
+  "source_sha256": {
+    "firmware/WindflowRevC/Calibration.h": "c16b917f1a89fcc3db0deb812467a95713b6c246d1cba24c36331ad7ee8e9a08",
+    "firmware/WindflowRevC/Config.h": "c13b763b6635d06f87cc1235e606dbdc4c7dac3be7403f684ca89abc389d45b9",
+    "firmware/WindflowRevC/Control.cpp": "5f3e527468ddd0b772c1f2dd8e001c13ee037c4b2cdbc2518a8da35e85aa69e8",
+    "firmware/WindflowRevC/Control.h": "772d11a06bafffcb696aee77d117b7c7a406ff727796fd06d87da2211545c7eb",
+    "firmware/WindflowRevC/Display.cpp": "7ffa95c8d8cb0d103a61f1f6648f83e02395cd5856ee1260daf057f8aedacd04",
+    "firmware/WindflowRevC/Display.h": "60781849510395066e023e07d61faf266037c801c842bd89f0ecb86204042822",
+    "firmware/WindflowRevC/DisplayLayout.cpp": "72bb901632971e516a1f623720138d54000ae0a96aa268a2507255c77b8ce0b2",
+    "firmware/WindflowRevC/DisplayLayout.h": "be7720ea3fa5cb3dabcd8af78a823682566bbd85464aedcf1f51747bec3d2b3a",
+    "firmware/WindflowRevC/DisplayView.cpp": "3906f6b29dc30f8e90a7fdbb4e81a516d263967a872ae3ad8b0be67893bffefb",
+    "firmware/WindflowRevC/DisplayView.h": "415ca86d8494edda39927307128fe386931ff846d9b2fe1bda92f3c256f0038b",
+    "firmware/WindflowRevC/EncoderDecoder.h": "00733f209257c66c655ab51225576cb1035f3ddf6a6a6273c86470b140881718",
+    "firmware/WindflowRevC/EscSafety.cpp": "f12a089b16bce9301e0dcbafffdf3645461d01a53f807b23e85931eadd94d45e",
+    "firmware/WindflowRevC/Hardware.cpp": "b5eb831a14283d15a6d29259f630bd8031d8f6807e68e9f08e252982d14d62b6",
+    "firmware/WindflowRevC/Hardware.h": "cfbacdfbee95b4e7f8a404eff9c085d498a08b32f0fde0a68ffff1ac1ddbb233",
+    "firmware/WindflowRevC/Input.h": "7d7da7b5510be441debbd1e1713e136256cd41ea1b8d3d06a1527abd1f951fd4",
+    "firmware/WindflowRevC/Lighting.cpp": "0e4cbc423a056576893e48d515dca89420a5538fa6c9c2a2bb55cc874b743086",
+    "firmware/WindflowRevC/Lighting.h": "a90772771670c5791abfd3daff531b42ed6381aa6ab7d65e6b7068c232a6f58f",
+    "firmware/WindflowRevC/SensorCodec.h": "c10162aa113af8bc70e4ba01c1bb825736a55a817c3c972560f4fb3123dc3f75",
+    "firmware/WindflowRevC/Service.cpp": "2fd5c712b665c3530dbff7bfbbafbc317426060f63fe49fb689b0245eda15264",
+    "firmware/WindflowRevC/Service.h": "a9782d7855a1c64b75097c05272f3f15a3654bd251defd9139b0def6fa4849f3",
+    "firmware/WindflowRevC/SettingsRecord.h": "2fcba539bc10948f81fb8b3fcab1616a07024b5124e79e99227391180618b5c8",
+    "firmware/WindflowRevC/Storage.cpp": "1eb467ee6017c6dbd2cb21b360fffe6b698f8b13fdfd7e3fd246cb3f85267866",
+    "firmware/WindflowRevC/Storage.h": "50964433d4d405fadff74005498e27aa48cd56c2f70ad11602145a1fa871a255",
+    "firmware/WindflowRevC/VescProtocol.h": "a624a169aaa5dd50bb47dad83c66fca843ae6b1e6e8f6d39a8dd96f7b0d07159",
+    "firmware/WindflowRevC/WindflowRevC.ino": "2ce3ffce7fbe6675a9d2fe2a7572283c564bc301959b7aee772789fd98a14999",
+    "tests/rev_c_esc_service_tests.cpp": "8fecb89f56a3b62f05e9d8c8f60e54a5d5f2e84bc6b230586c074c54ca96d064",
+    "tests/rev_c_esc_shipping_tests.cpp": "a5a5d3b40d9fcf5a6d105ba86162e66ab507389cdeea17a4abd07e0198d140c3",
+    "tests/rev_c_esc_tests.cpp": "381d992c799c0476ffc35f18050b24fd763dce2b8796cce0abb7052dcad8f1a4",
+    "tools/build_rev_c_firmware.ps1": "d9817700e481a0642fe30fd15a39b38fce7628de92a071b9fd96b613440e25a5",
+    "tools/test_rev_c_firmware.ps1": "1fea4785b9b72abab1798ebc6b758a159af1f0182c067819682d8100b62550be"
+  },
+  "limits": [
+    "Host simulation and compile do not verify actual motor, ESC, rotor, hardware interlock or daily-use performance.",
+    "No firmware was flashed or commissioned.",
+    "Printed rotor strength, balance, containment, shaft attachment, ESC current/ERPM/timeout limits and independent optical RPM must be qualified.",
+    "Actual physical pressure, servo holding, temperature lag and flash/UART timing must be measured.",
+    "Rev C carrier/power circuitry and harness must match the pin table before connection."
+  ],
+  "verification_script_sha256": "6d99e3aa0972f5a133b19fc9f42ad1895b26956f2d3d1c8f1bdda12ad18b70e5"
+}

@@ -5,6 +5,7 @@ from pathlib import Path
 import json, math, os, sys, hashlib
 from datetime import datetime, timezone
 import cadquery as cq
+import fan_mount_layout
 ROOT=Path(__file__).resolve().parent; OUT=ROOT/'rev_b'
 parts={}; colors={}
 HEAD_Z=json.loads((ROOT/'parameters.json').read_text())['head_center_height']
@@ -28,22 +29,50 @@ for n in mechanism['assembly_files']['fixed']:
  if n not in ('frame','servo_bracket','servo_approximate'):
   add(n,ROOT/'prototypes'/('installed-'+n+'.step'),(0,90,HEAD_Z),(.72,.73,.75))
 fan=cq.importers.importStep(str(ROOT/'vendor/NF-A12x25_G2_Public-CAD.stp')).val()
-fan=fan.rotate((0,0,0),(1,0,0),-90).translate((0,1,HEAD_Z))
+fan=fan.rotate((0,0,0),(1,0,0),-90).translate((0,1+fan_mount_layout.fan_rear_shift_mm(),HEAD_Z))
 parts['Noctua-NF-A12x25-G2-vendor']=fan;colors['Noctua-NF-A12x25-G2-vendor']=(.53,.40,.30)
-for x in (-52.5,52.5):
- for z in (-52.5,52.5):add('TPU-fan-pad-'+str(x)+'-'+str(z),OUT/'tpu-fan-pad-m3.step',(x,0,z+HEAD_Z),(.2,.2,.2))
+for name,shape in fan_mount_layout.installed_parts(HEAD_Z).items():
+ parts[name]=shape;colors[name]=(.2,.2,.2) if name.startswith('TPU') else (.72,.73,.75)
+ cq.exporters.export(shape,str(OUT/(name+'.step')))
+
+# Printed Ø4.0 pilots deliberately receive larger heat-set inserts. Retain those
+# print surfaces in the exported assembly, and use only the four explicit
+# installed-insert cavities during collision checks. No other contacts bypass
+# the checker. Record actual raw displacement volumes as intended engagement.
+collision_parts=dict(parts);insert_contacts=[]
+allowances=fan_mount_layout.insert_allowances(HEAD_Z)
+for head_name in ('head-left-integral-outlet','head-right-integral-outlet'):
+ shape=parts[head_name]
+ for index,allowance in enumerate(allowances,1):
+  insert_name='REF-RX-M3x5p7-fan-insert-'+str(index)
+  contact=parts[head_name].intersect(parts[insert_name]).Volume()
+  if contact>.00001:insert_contacts.append({'a':head_name,'b':insert_name,'raw_pilot_displacement_mm3':contact,'reason':'heat-set insert displaces printed pilot material'})
+  shape=shape.cut(allowance)
+ assert shape.isValid(),head_name+' installed insert cavity'
+ collision_parts[head_name]=shape
 
 def overlap(a,b):
  aa,bb=a.BoundingBox(),b.BoundingBox()
  if any(getattr(aa,k+'max')<=getattr(bb,k+'min')+1e-5 or getattr(bb,k+'max')<=getattr(aa,k+'min')+1e-5 for k in 'xyz'):return 0.
  return max(0.,a.intersect(b).Volume())
-issues=[];pairs=0;cover_removal=[];static_cover_cache={}
-items=list(parts.items())
+issues=[];pairs=0;cover_removal=[];static_cover_cache={};interlock_contacts=[]
+interlock_expected_contacts={
+ frozenset(('REF-COM-tail','REF-switch-terminal-1')):'solder tail contacts COM terminal',
+ frozenset(('REF-NO-tail','REF-switch-terminal-2')):'solder tail contacts NO terminal',
+ frozenset(('REF-COM-down','REF-TPU-wire-liner-installed')):'trial TPU wire insulation compression',
+ frozenset(('REF-NO-down','REF-TPU-wire-liner-installed')):'trial TPU wire insulation compression',
+}
+items=list(collision_parts.items())
 for i,(name,s) in enumerate(items):
  for other,t in items[i+1:]:
   # Original servo output enters its horn; encoder shaft intentionally enters wheel.
   if set((name,other)) in [set(('horn','FS90-FB-APPROXIMATE')),set(('REF-Bourns-PEC11H-drawing-envelope','horizontal-encoder-thumbwheel'))]:continue
   v=overlap(s,t);pairs+=1
+  expected_reason=interlock_expected_contacts.get(frozenset((name,other)))
+  if expected_reason:
+   assert v<1.2,(name,other,'unexpected contact magnitude',v)
+   interlock_contacts.append({'a':name,'b':other,'overlap_mm3':v,'reason':expected_reason})
+   continue
   if v>.01:issues.append({'pose':'maximum boost','a':name,'b':other,'overlap_mm3':round(v,4)})
  print('CHECKED '+name,flush=True)
 # Check open and halfway poses against every other part, including the housing.
@@ -53,7 +82,7 @@ for state in (mechanism['kinematics'][0],mechanism['kinematics'][30],mechanism['
  a=state['panel_angle_deg']; phi=state['servo_angle_deg']; stroke=state['yoke_stroke_mm']
  end_y=-p['servo_rod_length']+p['servo_crank_radius']*math.sin(math.radians(phi))
  end_z=-p['servo_crank_radius']+p['servo_crank_radius']*math.cos(math.radians(phi))
- varied=dict(parts)
+ varied=dict(collision_parts)
  for n in moving_names:
   s=cq.importers.importStep(str(ROOT/'prototypes'/('installed-'+n+'-open.step'))).val()
   if n in ('upper_panel','upper_crank','upper_clamp'):
@@ -97,13 +126,18 @@ for state in (mechanism['kinematics'][0],mechanism['kinematics'][30],mechanism['
     worst=max(worst,v)
     if v>.01:issues.append({'pose':pose+' cover removal','a':moving,'b':other,'outward_mm':dx,'overlap_mm3':round(v,4)})
   cover_removal.append({'pose':pose,'outward_x_mm':dx,'maximum_overlap_mm3':worst})
+assert len(interlock_contacts)==4,('Missing intended contact review',interlock_contacts)
 report={'part_count':len(parts),'pairs_checked':pairs,'poses':['open','halfway','maximum boost'],
  'completed_utc':datetime.now(timezone.utc).isoformat(),
- 'source_sha256':{n:hashlib.sha256((ROOT/n).read_bytes()).hexdigest() for n in ('build_head.py','build_base.py','display_layout.py','build_prototypes.py','check_assembly.py','parameters.json')},
+ 'source_sha256':{n:hashlib.sha256((ROOT/n).read_bytes()).hexdigest() for n in ('build_head.py','build_base.py','display_layout.py','build_prototypes.py','check_assembly.py','parameters.json','fan_mount_layout.py','fan_mount_parameters.json','pico_mount.py','encoder_layout.py','grille_interlock_study.py')},
+ 'intended_insert_installation_contacts':insert_contacts,
+ 'intended_interlock_contacts':interlock_contacts,
  'cover_removal_samples':cover_removal,
  'input_sha256':{str(path.relative_to(ROOT)):hashlib.sha256(path.read_bytes()).hexdigest()
   for path in [OUT/'validation.json',OUT/'base-validation.json',ROOT/'prototypes/validation.json']},
  'intersections_to_resolve':issues,'limitations':['Unrouted carrier and servo/encoder envelopes are marked approximate',
+ 'Only four explicit fan-insert cavities accommodate heat-set material displacement; raw print pilots remain in exported geometry',
+ 'Compressed TPU pads are installed-state envelopes, not the free-state print files',
  'Sampled static nominal solid check, not tolerance stack, wiring sweep or assembly insertion test']}
 (OUT/'assembly-interference.json').write_text(json.dumps(report,indent=2))
 asm=cq.Assembly(name='Windflow Rev B development - unresolved items in interference report')

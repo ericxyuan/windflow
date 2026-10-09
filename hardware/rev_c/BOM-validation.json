@@ -1,0 +1,16 @@
+{
+  "timestamp_utc": "2026-10-08T17:39:41.499050+00:00",
+  "bom_rows": 205,
+  "circuit_components": 139,
+  "printed_parts_included": false,
+  "order_release": false,
+  "input_sha256": {
+    "tools/build_rev_c_bom.py": "dc7555c00624620a2d380be2fcab293aa80eb7fc1a88faa3eb86f32e7c9270b0",
+    "hardware/pcb/rev_c/circuit-population.json": "3ef3c76d66aabc5bd1ae334f1d7e952d5e305c23fc58a3a155674dde24875264"
+  },
+  "limits": [
+    "Fastener quantities are CAD-based allowances until every stack is modelled and measured.",
+    "Pressure board, main PCB routes and Pico ribbon transition remain design work.",
+    "Current supplier stock and motor clamp dimensions are not assumed."
+  ]
+}

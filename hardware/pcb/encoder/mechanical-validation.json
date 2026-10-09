@@ -1,0 +1,245 @@
+{
+  "generator_sha256": "a45b51548ecd4c31e3b751ac9c1a34de78a5c4168dce837d0045f60143e600db",
+  "native_step": {
+    "sha256": "ea95569ca64b47653970cc77912a5b30320046472cc4980cd51c9b0c9bdb027a",
+    "bounds_mm": [
+      0.0,
+      29.5,
+      -24.0,
+      0.0,
+      0.0,
+      1.51
+    ],
+    "valid": true,
+    "solid_count": 1,
+    "substrate_thickness_mm": 1.51
+  },
+  "assembly_datum": {
+    "sha256": "72de91e09cf628ff4ec1116cc061e8ac2d7f2803ed04d6024a4579c0b3fcebed",
+    "bounds_mm": [
+      0.0,
+      29.5,
+      -24.0,
+      0.0,
+      0.0,
+      1.6
+    ],
+    "valid": true,
+    "solid_count": 1,
+    "total_board_thickness_mm": 1.6,
+    "volume_mm3": 1095.6544452842268,
+    "analytical_volume_mm3": 1095.6544452842354
+  },
+  "verified_drill_count": 13,
+  "holes": [
+    {
+      "ref": "H2",
+      "pin": "",
+      "step_xy_mm": [
+        27.5,
+        -20.5
+      ],
+      "drill_mm": [
+        2.4,
+        2.4
+      ],
+      "global_yz_mm": [
+        22.0,
+        -98.5
+      ]
+    },
+    {
+      "ref": "H1",
+      "pin": "",
+      "step_xy_mm": [
+        27.5,
+        -3.5
+      ],
+      "drill_mm": [
+        2.4,
+        2.4
+      ],
+      "global_yz_mm": [
+        22.0,
+        -81.5
+      ]
+    },
+    {
+      "ref": "J1",
+      "pin": "1",
+      "step_xy_mm": [
+        21.5,
+        -8.25
+      ],
+      "drill_mm": [
+        0.95,
+        0.95
+      ],
+      "global_yz_mm": [
+        16.0,
+        -86.25
+      ]
+    },
+    {
+      "ref": "J1",
+      "pin": "2",
+      "step_xy_mm": [
+        21.5,
+        -10.75
+      ],
+      "drill_mm": [
+        0.95,
+        0.95
+      ],
+      "global_yz_mm": [
+        16.0,
+        -88.75
+      ]
+    },
+    {
+      "ref": "J1",
+      "pin": "3",
+      "step_xy_mm": [
+        21.5,
+        -13.25
+      ],
+      "drill_mm": [
+        0.95,
+        0.95
+      ],
+      "global_yz_mm": [
+        16.0,
+        -91.25
+      ]
+    },
+    {
+      "ref": "J1",
+      "pin": "4",
+      "step_xy_mm": [
+        21.5,
+        -15.75
+      ],
+      "drill_mm": [
+        0.95,
+        0.95
+      ],
+      "global_yz_mm": [
+        16.0,
+        -93.75
+      ]
+    },
+    {
+      "ref": "ENC1",
+      "pin": "A",
+      "step_xy_mm": [
+        11.0,
+        -19.5
+      ],
+      "drill_mm": [
+        1.1,
+        1.1
+      ],
+      "global_yz_mm": [
+        5.5,
+        -97.5
+      ]
+    },
+    {
+      "ref": "ENC1",
+      "pin": "C",
+      "step_xy_mm": [
+        8.5,
+        -19.5
+      ],
+      "drill_mm": [
+        1.1,
+        1.1
+      ],
+      "global_yz_mm": [
+        3.0,
+        -97.5
+      ]
+    },
+    {
+      "ref": "ENC1",
+      "pin": "B",
+      "step_xy_mm": [
+        6.0,
+        -19.5
+      ],
+      "drill_mm": [
+        1.1,
+        1.1
+      ],
+      "global_yz_mm": [
+        0.5,
+        -97.5
+      ]
+    },
+    {
+      "ref": "ENC1",
+      "pin": "S1",
+      "step_xy_mm": [
+        11.0,
+        -5.0
+      ],
+      "drill_mm": [
+        1.1,
+        1.1
+      ],
+      "global_yz_mm": [
+        5.5,
+        -83.0
+      ]
+    },
+    {
+      "ref": "ENC1",
+      "pin": "S2",
+      "step_xy_mm": [
+        6.0,
+        -5.0
+      ],
+      "drill_mm": [
+        1.1,
+        1.1
+      ],
+      "global_yz_mm": [
+        0.5,
+        -83.0
+      ]
+    },
+    {
+      "ref": "ENC1",
+      "pin": "SH",
+      "step_xy_mm": [
+        14.9,
+        -12.0
+      ],
+      "drill_mm": [
+        2.4,
+        1.6
+      ],
+      "global_yz_mm": [
+        9.4,
+        -90.0
+      ]
+    },
+    {
+      "ref": "ENC1",
+      "pin": "SH",
+      "step_xy_mm": [
+        2.1,
+        -12.0
+      ],
+      "drill_mm": [
+        2.4,
+        1.6
+      ],
+      "global_yz_mm": [
+        -3.4,
+        -90.0
+      ]
+    }
+  ],
+  "scope": "Drilled PCB datum only. Component envelopes are explicit drawing reconstructions; final enclosure insertion/collision check belongs to main CAD."
+}

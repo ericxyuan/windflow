@@ -1,0 +1,12 @@
+{
+  "front_fixed_guard_slot_mm": 4.8,
+  "rear_fixed_guard_slot_mm": 4.8,
+  "front_guard_y_mm": 168.5,
+  "magnet_pocket_diameter_mm": 6.55,
+  "magnet_count": 8,
+  "magnet_nominal_gap_between_faces_mm": 1.925,
+  "keepers": "Two0.8mm rings, fourM2x6 screws each",
+  "guard_qualification": "Finger-access geometry only; not certified fragment containment",
+  "rear_attachment": "FourM2x10 through-bolts at radius72 with ISO4032 M2 nuts and ISO7089 washers; install nuts before closing head, qualify measured stack on coupon",
+  "interlock": "Omron D2F-01L bracket/raceway/tongue integrated; physical trip/overtravel and harness tests required"
+}

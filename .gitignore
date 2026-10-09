@@ -3,6 +3,7 @@ build/
 __pycache__/
 *.tmp
 *.log
+*.kicad_prl
 
 # Reproducible downloaded dependencies and vendor references.
 # Public download URLs and SHA-256 hashes are kept in hardware/sources.json.
@@ -10,11 +11,30 @@ cad/vendor/
 cad/rev_b/*-vendor.step
 cad/rev_b/electronics-layout-development.step
 cad/rev_b/full-development-assembly.step
+cad/rev_b/housing-development.step
+cad/interface_study/remote-pico-candidate.step
+cad/fan_mount_study/fan-mount-repaired-development.step
+cad/grille_interlock_study/mounted-grille-interlock-development.step
+cad/pressure_plumbing_study/pressure-plumbing-development.step
+cad/pressure_plumbing_study/baseline/*-vendor.step
+cad/pressure_plumbing_study/*-vendor.step
+cad/pressure_plumbing_study/*.html
 hardware/datasheets/
 hardware/reference/
+hardware/rev_c/references/
+cad/rev_c/*-vendor.step
+cad/rev_c/Rev-C-development-assembly.step
+cad/rev_c/head-base-development-assembly.step
+cad/rev_c/Windflow-Rev-C-integration-*.step
+cad/rev_d/*-vendor.step
+cad/rev_d/Windflow-Rev-D-150mm-integration-*.step
+.tmp-sdp/
 
 # Local continuation bookkeeping and compiler intermediates.
 docs/continuation-state.md
 firmware/dist/*.elf
 firmware/dist/*.map
 firmware/dist/*.bin
+firmware/dist/**/*.elf
+firmware/dist/**/*.map
+firmware/dist/**/*.bin

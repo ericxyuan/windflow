@@ -25,6 +25,13 @@ ASSETS={
  'hardware/reference/Adafruit-4311-EYESPI.sch':'https://raw.githubusercontent.com/adafruit/Adafruit-2.0-inch-240x320-TFT-PCB/master/Adafruit%20EYESPI%202.0%20Inch%20240x320%20IPS%20TFT.sch',
  'cad/vendor/ruthex-RX-M2x4.step':'https://cdn.shopify.com/s/files/1/0567/7019/9760/files/ruthex_RX-M2x4.step?v=1621264078',
  'hardware/datasheets/Ruthex-RX.pdf':'https://www.igo3d.com/mediafiles/Sonstiges/Ruthex/ruthex_Datenblatt_RX-Serie.pdf',
+ 'hardware/datasheets/Samtec-IDSS-catalogue.pdf':'https://suddendocs.samtec.com/catalog_english/idss.pdf',
+ 'hardware/datasheets/Samtec-IDSS-series.pdf':'https://suddendocs.samtec.com/prints/idsx-xx-x-xx.xx-xxx-xxx-mkt.pdf',
+ 'hardware/reference/KS-8128-product.html':'https://ksmetals.com/products/br014-5-32',
+ 'hardware/datasheets/Tygon-E3603.pdf':'https://www.ics.saint-gobain.com/sites/hps-mac3-lifesciences-fluid-transfer/files/2022-11/tygon-e-3603-lab-application-tubing.pdf?cache=mjHcb6ni',
+ 'hardware/datasheets/Accu-SSCF-M1p6x10.pdf':'https://www.accu.co.uk/api/product-datasheet?id=3785',
+ 'hardware/datasheets/SN74LVC1G17.pdf':'https://www.ti.com/lit/ds/symlink/sn74lvc1g17.pdf',
+ 'hardware/datasheets/SDP-engineering-guide.pdf':'https://sensirion.com/en/media/documents/C3059EE6/667E9FD4/DP_AN_Engineering_Guide_V1.0.pdf',
 }
 for folder in ['1426 8x NeoPixel Stick','1782 MCP9808','5807 HUSB238 Breakout']:
  ASSETS['cad/vendor/'+folder.split(' ')[0]+'.step']='https://raw.githubusercontent.com/adafruit/Adafruit_CAD_Parts/main/'+urllib.parse.quote(folder+'/'+folder+'.step')

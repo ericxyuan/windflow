@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "local_only": true,
+  "dependencies": [
+    {
+      "name": "Freerouting2.5.0 Java application",
+      "url": "https://github.com/freerouting/freerouting/releases/download/v2.5.0/freerouting-2.5.0.jar",
+      "sha256": "f6f51bb02245e8e717f9359bd260cc9c5c0b1bc0acc8b7cb2cd5b8ffeb5de3c7",
+      "path": ".tools/freerouting-2.5.0/freerouting-2.5.0.jar"
+    },
+    {
+      "name": "Eclipse Temurin JRE25.0.4.1+1 Windows x64",
+      "url": "https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.4.1%2B1/OpenJDK25U-jre_x64_windows_hotspot_25.0.4.1_1.zip",
+      "sha256": "4c95451cea98556def2c54f7782933f52a26d4a36bd85e1d59f0364464828b07",
+      "path": ".tools/routing-java/temurin25-jre.zip",
+      "extract_to": ".tools/routing-java"
+    },
+    {
+      "name": "Freerouting CLI2.5.0 Windows x64 native",
+      "url": "https://github.com/freerouting/freerouting/releases/download/v2.5.0/freerouting-cli-2.5.0-windows-x64.zip",
+      "sha256": "5750dc0bed261eefae29d79784301b478af978fd472407d77e01e85dbb794857",
+      "path": ".tools/freerouting-2.5.0/windows-x64.zip",
+      "optional": true,
+      "use": "Native build failed ComponentOutline serialization; use JAR instead."
+    }
+  ]
+}

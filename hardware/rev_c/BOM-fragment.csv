@@ -1,0 +1,23 @@
+Reference,Quantity,Manufacturer,Exact part or selected model,Function,Status
+MOTOR1,1,T-Motor / T-Hobby,Pacer V4 P2406 Juicy 2060KV,Single outrunner motor,Selected by user; exact shaft-seat and screw depth need measurement
+ESC1,1,TeamTriforceUK,A50S V2.3c 12S A50SV2.3c-12-10,Single sensorless FOC ESC with UART telemetry,Selected candidate; low-speed compatibility unqualified
+PD1,1,Adafruit,5807 HUSB238,USB PD sink set to15V3A,Retain module; modify contract jumpers
+PSU1,1,Raspberry Pi,45W USB-C Power Supply UK Type G white,15V3A PD source,Retain selected supply
+EF1-C,1,Texas Instruments,TPS26630RGER,Input eFuse 2.517A nominal with controlled inrush,New circuit and PCB required
+EF2-C,1,Texas Instruments,TPS26630RGER,ESC branch eFuse 1.8A nominal default off,New circuit and PCB required
+Q-RCB1,1,Texas Instruments,CSD19537Q3,Input reverse-current blocking FET,Use TI reference circuit; layout and sequencing required
+Q-DRV1,1,Diodes Incorporated,BSS138-7-F,Fast external blocking-FET gate pulldown,Use TI reference topology
+U-GUARD-NOT / U-UART-NOT,2,Texas Instruments,SN74LVC1G04DBVR,Invert guard signal and ESC-PGOOD,New hardwired motor and UART gates
+U-GUARD-AND,1,Texas Instruments,SN74LVC1G08DBVR,AND guard present with MCU power request,New hardwired motor gate
+U-UART1,1,Nexperia,74LVC2G125DP-Q100H,Dual noninverting UART buffers with Ioff,Power from Pico3.3V and enable only when ESC branch PGOOD is HIGH
+F1-C,1,Littelfuse,0451003.MRL,3A input branch fuse,Inrush and fault coordination require bench verification
+F2-C,1,Littelfuse,0451002.MRL,2A ESC wiring fuse,Does not replace current or stall control
+D-ESC,1,Littelfuse,SMBJ18A,ESC bus transient clamp,No continuous regenerative energy sink
+C-ESC,1,Panasonic,EEU-FR1V471,470uF35V ESC-local bulk capacitor,Fit behind controlled-inrush switch plus local ceramic bypass
+R-ESC-BLEED,1,Yageo,RC1206FR-073K3L,3.3k0.25W ESC-capacitor bleed,Discharge remains finite; verify actual capacitor sum
+R-EF1-ILIM,1,Yageo,RC0603FR-077K15L,7.15k1% input-eFuse limit resistor,2.517A nominal analytical
+R-EF2-ILIM,1,Yageo,RC0603FR-0710KL,10k1% ESC-eFuse limit resistor,1.8A nominal analytical
+R-EF2-SHDN,1,Yageo,RC0603FR-0710KL,10k motor-branch shutdown pulldown,Default off during reset
+J-ESC-POWER,1,Amass,XT30 male and female pair supplied with ESC,ESC power connection,Check actual supplied connector sex and keying
+J-MOTOR,1,Amass,MR30 pair supplied with ESC,Three phase motor connection,Keep accessible and insulated
+J-ESC-IO,1,Molex,5011892010 board connector plus ESC-supplied shell and precrimped wires,UART and ground loom,Do not invent physical cavity numbers from unnumbered vendor figure

@@ -1,0 +1,6012 @@
+{
+  "scope": "Native circuit capture; no routed/fabrication carrier PCB",
+  "components": [
+    {
+      "ref": "J1",
+      "value": "XH 2",
+      "mpn": "JST B2B-XH-A(LF)(SN)",
+      "group": "power",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "PD_RAW",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
+      "datasheet": "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf",
+      "dnp": false,
+      "location": "carrier",
+      "note": "HUSB238 PD output; physical breakout is remote",
+      "footprint": "WindflowCarrier:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "F1",
+      "value": "2A",
+      "mpn": "Littelfuse 0451002.MRL",
+      "group": "power",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "PD_RAW",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "RAW_FUSED",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Fuse:Fuse_2410_6125Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:Fuse_2410_6125Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "D1",
+      "value": "SMBJ18A",
+      "mpn": "Littelfuse SMBJ18A",
+      "group": "power",
+      "pins": [
+        {
+          "number": "1",
+          "name": "K",
+          "net": "RAW_FUSED",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Diode_SMD:D_SMB",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:D_SMB",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "C1",
+      "value": "100nF",
+      "mpn": "Murata GRM188R71H104KA93D",
+      "group": "power",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "RAW_FUSED",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Capacitor_SMD:C_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:C_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "EF1",
+      "value": "TPS26600PWPR",
+      "mpn": "Texas Instruments TPS26600PWPR",
+      "group": "power",
+      "pins": [
+        {
+          "number": "1",
+          "name": "IN",
+          "net": "RAW_FUSED",
+          "type": "power_in",
+          "symbol_xy_mm": [
+            -10.16,
+            10.16
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "IN",
+          "net": "RAW_FUSED",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            7.62
+          ],
+          "side": "left"
+        },
+        {
+          "number": "3",
+          "name": "UVLO",
+          "net": "EF_UVLO",
+          "type": "input",
+          "symbol_xy_mm": [
+            -10.16,
+            5.08
+          ],
+          "side": "left"
+        },
+        {
+          "number": "4",
+          "name": "NC",
+          "net": null,
+          "type": "no_connect",
+          "symbol_xy_mm": [
+            -10.16,
+            2.54
+          ],
+          "side": "left"
+        },
+        {
+          "number": "5",
+          "name": "OVP",
+          "net": "EF_OVP",
+          "type": "input",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "6",
+          "name": "MODE",
+          "net": "EF_MODE",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            -2.54
+          ],
+          "side": "left"
+        },
+        {
+          "number": "7",
+          "name": "SHDN",
+          "net": "EF_UVLO",
+          "type": "input",
+          "symbol_xy_mm": [
+            -10.16,
+            -5.08
+          ],
+          "side": "left"
+        },
+        {
+          "number": "8",
+          "name": "RTN",
+          "net": "EF_RTN",
+          "type": "power_in",
+          "symbol_xy_mm": [
+            -10.16,
+            -7.62
+          ],
+          "side": "left"
+        },
+        {
+          "number": "9",
+          "name": "GND",
+          "net": "GND",
+          "type": "power_in",
+          "symbol_xy_mm": [
+            -10.16,
+            -10.16
+          ],
+          "side": "left"
+        },
+        {
+          "number": "10",
+          "name": "IMON",
+          "net": null,
+          "type": "output",
+          "symbol_xy_mm": [
+            10.16,
+            10.16
+          ],
+          "side": "right"
+        },
+        {
+          "number": "11",
+          "name": "ILIM",
+          "net": "EF_ILIM",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            7.62
+          ],
+          "side": "right"
+        },
+        {
+          "number": "12",
+          "name": "DVDT",
+          "net": "EF_DVDT",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            5.08
+          ],
+          "side": "right"
+        },
+        {
+          "number": "13",
+          "name": "NC",
+          "net": null,
+          "type": "no_connect",
+          "symbol_xy_mm": [
+            10.16,
+            2.54
+          ],
+          "side": "right"
+        },
+        {
+          "number": "14",
+          "name": "~{FLT}",
+          "net": null,
+          "type": "open_collector",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        },
+        {
+          "number": "15",
+          "name": "OUT",
+          "net": "BUS_PROTECTED",
+          "type": "power_out",
+          "symbol_xy_mm": [
+            10.16,
+            -2.54
+          ],
+          "side": "right"
+        },
+        {
+          "number": "16",
+          "name": "OUT",
+          "net": "BUS_PROTECTED",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            -5.08
+          ],
+          "side": "right"
+        },
+        {
+          "number": "17",
+          "name": "EP",
+          "net": "EF_RTN",
+          "type": "power_in",
+          "symbol_xy_mm": [
+            10.16,
+            -7.62
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Package_SO:HTSSOP-16-1EP_4.4x5mm_P0.65mm_EP3.4x5mm_Mask2.66x2.46mm_ThermalVias",
+      "datasheet": "https://www.ti.com/lit/ds/symlink/tps2660.pdf",
+      "dnp": false,
+      "location": "carrier",
+      "note": "EP17 and pin8 use isolated EF_RTN; never merge with GND",
+      "footprint": "WindflowCarrier:HTSSOP-16-1EP_4.4x5mm_P0.65mm_EP3.4x5mm_Mask2.66x2.46mm_ThermalVias",
+      "half_height_mm": 12.7
+    },
+    {
+      "ref": "C2",
+      "value": "100uF/25V",
+      "mpn": "Panasonic EEU-FR1E101",
+      "group": "power",
+      "pins": [
+        {
+          "number": "1",
+          "name": "+",
+          "net": "BUS_PROTECTED",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "-",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:CP_Radial_D6.3mm_P2.50mm",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "R42",
+      "value": "8.06k 1%",
+      "mpn": "Yageo RC0603FR-078K06L",
+      "group": "power",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "EF_ILIM",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "EF_RTN",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Resistor_SMD:R_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:R_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "R43",
+      "value": "402k 1%",
+      "mpn": "Yageo RC0603FR-07402KL",
+      "group": "power",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "EF_MODE",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "EF_RTN",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Resistor_SMD:R_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:R_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "R44",
+      "value": "100k 1%",
+      "mpn": "Yageo RC0603FR-07100KL",
+      "group": "power",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "RAW_FUSED",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "EF_UVLO",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Resistor_SMD:R_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:R_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "R45",
+      "value": "15k 1%",
+      "mpn": "Yageo RC0603FR-0715KL",
+      "group": "power",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "EF_UVLO",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "EF_RTN",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Resistor_SMD:R_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:R_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "R46",
+      "value": "130k 1%",
+      "mpn": "Yageo RC0603FR-07130KL",
+      "group": "power",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "RAW_FUSED",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "EF_OVP",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Resistor_SMD:R_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:R_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "R47",
+      "value": "10k 1%",
+      "mpn": "Yageo RC0603FR-0710KL",
+      "group": "power",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "EF_OVP",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "EF_RTN",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Resistor_SMD:R_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:R_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "C29",
+      "value": "100nF",
+      "mpn": "Murata GRM188R71H104KA93D",
+      "group": "power",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "EF_DVDT",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "EF_RTN",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Capacitor_SMD:C_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:C_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "J17",
+      "value": "43045-0612",
+      "mpn": "Molex 43045-0612",
+      "group": "power",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            2.54
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "BUS_PROTECTED",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "3",
+          "name": "3",
+          "net": "REG12V",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            -2.54
+          ],
+          "side": "left"
+        },
+        {
+          "number": "4",
+          "name": "4",
+          "net": "PG_FAN",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            2.54
+          ],
+          "side": "right"
+        },
+        {
+          "number": "5",
+          "name": "5",
+          "net": null,
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        },
+        {
+          "number": "6",
+          "name": "6",
+          "net": null,
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            -2.54
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Connector_Molex:Molex_Micro-Fit_3.0_43045-0612_2x03_P3.00mm_Vertical",
+      "datasheet": "https://www.molex.com/pdm_docs/sd/430450212_sd.pdf",
+      "dnp": false,
+      "location": "carrier",
+      "note": "Remote regulator; different shrouded cavity count. Module EN is NC. Mating/placement qualification pending",
+      "footprint": "WindflowCarrier:Molex_Micro-Fit_3.0_43045-0612_2x03_P3.00mm_Vertical",
+      "half_height_mm": 5.08
+    },
+    {
+      "ref": "J18",
+      "value": "43045-0412",
+      "mpn": "Molex 43045-0412",
+      "group": "power",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            1.27
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "BUS_PROTECTED",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            -1.27
+          ],
+          "side": "left"
+        },
+        {
+          "number": "3",
+          "name": "3",
+          "net": "REG5_LOGIC",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            1.27
+          ],
+          "side": "right"
+        },
+        {
+          "number": "4",
+          "name": "4",
+          "net": null,
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            -1.27
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Connector_Molex:Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical",
+      "datasheet": "https://www.molex.com/pdm_docs/sd/430450212_sd.pdf",
+      "dnp": false,
+      "location": "carrier",
+      "note": "Remote regulator; different shrouded cavity count. Module EN is NC. Mating/placement qualification pending",
+      "footprint": "WindflowCarrier:Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical",
+      "half_height_mm": 3.81
+    },
+    {
+      "ref": "J19",
+      "value": "43045-0812",
+      "mpn": "Molex 43045-0812",
+      "group": "power",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            3.81
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "BUS_PROTECTED",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            1.27
+          ],
+          "side": "left"
+        },
+        {
+          "number": "3",
+          "name": "3",
+          "net": "REG5_SERVO",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            -1.27
+          ],
+          "side": "left"
+        },
+        {
+          "number": "4",
+          "name": "4",
+          "net": "PG_SERVO",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            -3.81
+          ],
+          "side": "left"
+        },
+        {
+          "number": "5",
+          "name": "5",
+          "net": null,
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            3.81
+          ],
+          "side": "right"
+        },
+        {
+          "number": "6",
+          "name": "6",
+          "net": null,
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            1.27
+          ],
+          "side": "right"
+        },
+        {
+          "number": "7",
+          "name": "7",
+          "net": null,
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            -1.27
+          ],
+          "side": "right"
+        },
+        {
+          "number": "8",
+          "name": "8",
+          "net": null,
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            -3.81
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Connector_Molex:Molex_Micro-Fit_3.0_43045-0812_2x04_P3.00mm_Vertical",
+      "datasheet": "https://www.molex.com/pdm_docs/sd/430450212_sd.pdf",
+      "dnp": false,
+      "location": "carrier",
+      "note": "Remote regulator; different shrouded cavity count. Module EN is NC. Mating/placement qualification pending",
+      "footprint": "WindflowCarrier:Molex_Micro-Fit_3.0_43045-0812_2x04_P3.00mm_Vertical",
+      "half_height_mm": 6.35
+    },
+    {
+      "ref": "C3",
+      "value": "1uF",
+      "mpn": "Murata GRM188R71E105KA12D",
+      "group": "power",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "BUS_PROTECTED",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Capacitor_SMD:C_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:C_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "C6",
+      "value": "100uF/25V",
+      "mpn": "Panasonic EEU-FR1E101",
+      "group": "power",
+      "pins": [
+        {
+          "number": "1",
+          "name": "+",
+          "net": "REG12V",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "-",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:CP_Radial_D6.3mm_P2.50mm",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "C4",
+      "value": "1uF",
+      "mpn": "Murata GRM188R71E105KA12D",
+      "group": "power",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "BUS_PROTECTED",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Capacitor_SMD:C_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:C_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "C7",
+      "value": "100uF/25V",
+      "mpn": "Panasonic EEU-FR1E101",
+      "group": "power",
+      "pins": [
+        {
+          "number": "1",
+          "name": "+",
+          "net": "REG5_LOGIC",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "-",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:CP_Radial_D6.3mm_P2.50mm",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "C5",
+      "value": "1uF",
+      "mpn": "Murata GRM188R71E105KA12D",
+      "group": "power",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "BUS_PROTECTED",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Capacitor_SMD:C_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:C_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "C8",
+      "value": "100uF/25V",
+      "mpn": "Panasonic EEU-FR1E101",
+      "group": "power",
+      "pins": [
+        {
+          "number": "1",
+          "name": "+",
+          "net": "REG5_SERVO",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "-",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:CP_Radial_D6.3mm_P2.50mm",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "D2",
+      "value": "SS14-E3/61T",
+      "mpn": "Vishay SS14-E3/61T",
+      "group": "power",
+      "pins": [
+        {
+          "number": "1",
+          "name": "K",
+          "net": "PICO_VSYS",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "net": "REG5_LOGIC",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Diode_SMD:D_SMA",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:D_SMA",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "F2",
+      "value": "0.5A",
+      "mpn": "Littelfuse 0451.500MRL",
+      "group": "fan_servo",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "REG12V",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "FAN_FUSED",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Fuse:Fuse_2410_6125Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:Fuse_2410_6125Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "F3",
+      "value": "1A",
+      "mpn": "Littelfuse 0451001.MRL",
+      "group": "fan_servo",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "REG5_SERVO",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "SERVO_FUSED",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Fuse:Fuse_2410_6125Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:Fuse_2410_6125Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "SW1",
+      "value": "TPS22810DBVR",
+      "mpn": "Texas Instruments TPS22810DBVR",
+      "group": "fan_servo",
+      "pins": [
+        {
+          "number": "1",
+          "name": "VIN",
+          "net": "FAN_FUSED",
+          "type": "power_in",
+          "symbol_xy_mm": [
+            -10.16,
+            2.54
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "GND",
+          "net": "GND",
+          "type": "power_in",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "3",
+          "name": "EN",
+          "net": "EN_FAN",
+          "type": "input",
+          "symbol_xy_mm": [
+            -10.16,
+            -2.54
+          ],
+          "side": "left"
+        },
+        {
+          "number": "4",
+          "name": "CT",
+          "net": "SW1_CT",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            2.54
+          ],
+          "side": "right"
+        },
+        {
+          "number": "5",
+          "name": "QOD",
+          "net": "SW1_QOD",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        },
+        {
+          "number": "6",
+          "name": "VOUT",
+          "net": "FAN12_SWITCHED",
+          "type": "power_out",
+          "symbol_xy_mm": [
+            10.16,
+            -2.54
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Package_TO_SOT_SMD:SOT-23-6",
+      "datasheet": "https://www.ti.com/lit/ds/symlink/tps22810.pdf",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:SOT-23-6",
+      "half_height_mm": 5.08
+    },
+    {
+      "ref": "SW2",
+      "value": "TPS22810DBVR",
+      "mpn": "Texas Instruments TPS22810DBVR",
+      "group": "fan_servo",
+      "pins": [
+        {
+          "number": "1",
+          "name": "VIN",
+          "net": "SERVO_FUSED",
+          "type": "power_in",
+          "symbol_xy_mm": [
+            -10.16,
+            2.54
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "GND",
+          "net": "GND",
+          "type": "power_in",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "3",
+          "name": "EN",
+          "net": "EN_SERVO",
+          "type": "input",
+          "symbol_xy_mm": [
+            -10.16,
+            -2.54
+          ],
+          "side": "left"
+        },
+        {
+          "number": "4",
+          "name": "CT",
+          "net": "SW2_CT",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            2.54
+          ],
+          "side": "right"
+        },
+        {
+          "number": "5",
+          "name": "QOD",
+          "net": "SW2_QOD",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        },
+        {
+          "number": "6",
+          "name": "VOUT",
+          "net": "SERVO5_SWITCHED",
+          "type": "power_out",
+          "symbol_xy_mm": [
+            10.16,
+            -2.54
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Package_TO_SOT_SMD:SOT-23-6",
+      "datasheet": "https://www.ti.com/lit/ds/symlink/tps22810.pdf",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:SOT-23-6",
+      "half_height_mm": 5.08
+    },
+    {
+      "ref": "C11",
+      "value": "1uF",
+      "mpn": "Murata GRM188R71E105KA12D",
+      "group": "fan_servo",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "FAN_FUSED",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Capacitor_SMD:C_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:C_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "C14",
+      "value": "100nF",
+      "mpn": "Murata GRM188R71H104KA93D",
+      "group": "fan_servo",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "SW1_CT",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Capacitor_SMD:C_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:C_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "R39",
+      "value": "330 1%",
+      "mpn": "Yageo RC1206FR-07330RL",
+      "group": "fan_servo",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "SW1_QOD",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "FAN12_SWITCHED",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Resistor_SMD:R_1206_3216Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:R_1206_3216Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "C12",
+      "value": "1uF",
+      "mpn": "Murata GRM188R71E105KA12D",
+      "group": "fan_servo",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "SERVO_FUSED",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Capacitor_SMD:C_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:C_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "C15",
+      "value": "100nF",
+      "mpn": "Murata GRM188R71H104KA93D",
+      "group": "fan_servo",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "SW2_CT",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Capacitor_SMD:C_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:C_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "R40",
+      "value": "330 1%",
+      "mpn": "Yageo RC1206FR-07330RL",
+      "group": "fan_servo",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "SW2_QOD",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "SERVO5_SWITCHED",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Resistor_SMD:R_1206_3216Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:R_1206_3216Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "R10",
+      "value": "100k 1%",
+      "mpn": "Yageo RC0603FR-07100KL",
+      "group": "fan_servo",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "EN_FAN",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Resistor_SMD:R_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:R_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "R11",
+      "value": "100k 1%",
+      "mpn": "Yageo RC0603FR-07100KL",
+      "group": "fan_servo",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "EN_SERVO",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Resistor_SMD:R_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:R_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "Q1",
+      "value": "2N7002,215",
+      "mpn": "Nexperia 2N7002,215",
+      "group": "fan_servo",
+      "pins": [
+        {
+          "number": "1",
+          "name": "G",
+          "net": "FAN_PWM_GATE",
+          "type": "input",
+          "symbol_xy_mm": [
+            -10.16,
+            1.27
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "S",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            -1.27
+          ],
+          "side": "left"
+        },
+        {
+          "number": "3",
+          "name": "D",
+          "net": "FAN_PWM_OD",
+          "type": "open_collector",
+          "symbol_xy_mm": [
+            10.16,
+            1.27
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Package_TO_SOT_SMD:SOT-23",
+      "datasheet": "https://www.nexperia.com/product/2N7002",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:SOT-23",
+      "half_height_mm": 3.81
+    },
+    {
+      "ref": "R13",
+      "value": "100 1%",
+      "mpn": "Yageo RC0603FR-07100RL",
+      "group": "fan_servo",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "FAN_PWM_GPIO",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "FAN_PWM_GATE",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Resistor_SMD:R_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:R_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "R14",
+      "value": "100k 1%",
+      "mpn": "Yageo RC0603FR-07100KL",
+      "group": "fan_servo",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "FAN_PWM_GATE",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Resistor_SMD:R_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:R_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "J3",
+      "value": "FAN 4-pin",
+      "mpn": "Molex 470531000",
+      "group": "fan_servo",
+      "pins": [
+        {
+          "number": "1",
+          "name": "GND",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            1.27
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "12V",
+          "net": "FAN12_SWITCHED",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            -1.27
+          ],
+          "side": "left"
+        },
+        {
+          "number": "3",
+          "name": "TACH",
+          "net": "FAN_TACH",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            1.27
+          ],
+          "side": "right"
+        },
+        {
+          "number": "4",
+          "name": "PWM",
+          "net": "FAN_PWM_OD",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            -1.27
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Connector:FanPinHeader_1x04_P2.54mm_Vertical",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:FanPinHeader_1x04_P2.54mm_Vertical",
+      "half_height_mm": 3.81
+    },
+    {
+      "ref": "R4",
+      "value": "4.7k 1%",
+      "mpn": "Yageo RC0603FR-074K7L",
+      "group": "fan_servo",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "+3V3",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "FAN_TACH",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Resistor_SMD:R_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:R_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "BUF3",
+      "value": "74AHCT1G125GW,125",
+      "mpn": "Nexperia 74AHCT1G125GW,125",
+      "group": "fan_servo",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~{OE}",
+          "net": "GND",
+          "type": "input",
+          "symbol_xy_mm": [
+            -10.16,
+            2.54
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "net": "SERVO_PWM_GPIO",
+          "type": "input",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "3",
+          "name": "GND",
+          "net": "GND",
+          "type": "power_in",
+          "symbol_xy_mm": [
+            -10.16,
+            -2.54
+          ],
+          "side": "left"
+        },
+        {
+          "number": "4",
+          "name": "Y",
+          "net": "SERVO_BUF_OUT",
+          "type": "output",
+          "symbol_xy_mm": [
+            10.16,
+            2.54
+          ],
+          "side": "right"
+        },
+        {
+          "number": "5",
+          "name": "VCC",
+          "net": "SERVO5_SWITCHED",
+          "type": "power_in",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Package_TO_SOT_SMD:SOT-353_SC-70-5",
+      "datasheet": "https://assets.nexperia.com/documents/data-sheet/74AHC_AHCT1G125.pdf",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:SOT-353_SC-70-5",
+      "half_height_mm": 5.08
+    },
+    {
+      "ref": "C19",
+      "value": "100nF",
+      "mpn": "Murata GRM188R71H104KA93D",
+      "group": "fan_servo",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "SERVO5_SWITCHED",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Capacitor_SMD:C_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:C_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "R23",
+      "value": "100k 1%",
+      "mpn": "Yageo RC0603FR-07100KL",
+      "group": "fan_servo",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "SERVO_PWM_GPIO",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Resistor_SMD:R_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:R_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "R17",
+      "value": "330 1%",
+      "mpn": "Yageo RC0603FR-07330RL",
+      "group": "fan_servo",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "SERVO_BUF_OUT",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "SERVO_SIGNAL",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Resistor_SMD:R_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:R_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "R24",
+      "value": "100k 1%",
+      "mpn": "Yageo RC0603FR-07100KL",
+      "group": "fan_servo",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "SERVO_SIGNAL",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Resistor_SMD:R_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:R_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "C9",
+      "value": "470uF/10V",
+      "mpn": "Panasonic EEU-FR1A471",
+      "group": "fan_servo",
+      "pins": [
+        {
+          "number": "1",
+          "name": "+",
+          "net": "SERVO5_SWITCHED",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "-",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:CP_Radial_D8.0mm_P3.50mm",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "J4",
+      "value": "2.54mm 3",
+      "mpn": "Samtec TSW-103-07-G-S",
+      "group": "fan_servo",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            1.27
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "SERVO5_SWITCHED",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            -1.27
+          ],
+          "side": "left"
+        },
+        {
+          "number": "3",
+          "name": "3",
+          "net": "SERVO_SIGNAL",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            1.27
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "Original servo plug, retain and label polarity",
+      "footprint": "WindflowCarrier:PinHeader_1x03_P2.54mm_Vertical",
+      "half_height_mm": 3.81
+    },
+    {
+      "ref": "J5",
+      "value": "2.54mm 1",
+      "mpn": "Samtec TSW-101-07-G-S",
+      "group": "fan_servo",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "SERVO_FEEDBACK_RAW",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        }
+      ],
+      "footprint_source": "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:PinHeader_1x01_P2.54mm_Vertical",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "R8",
+      "value": "4.7k 1%",
+      "mpn": "Yageo RC0603FR-074K7L",
+      "group": "fan_servo",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "+3V3",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "PG_SERVO",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Resistor_SMD:R_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:R_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "R9",
+      "value": "4.7k 1%",
+      "mpn": "Yageo RC0603FR-074K7L",
+      "group": "fan_servo",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "+3V3",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "PG_FAN",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Resistor_SMD:R_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:R_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "SW3",
+      "value": "TPS22810DBVR",
+      "mpn": "Texas Instruments TPS22810DBVR",
+      "group": "ambient",
+      "pins": [
+        {
+          "number": "1",
+          "name": "VIN",
+          "net": "REG5_LOGIC",
+          "type": "power_in",
+          "symbol_xy_mm": [
+            -10.16,
+            2.54
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "GND",
+          "net": "GND",
+          "type": "power_in",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "3",
+          "name": "EN",
+          "net": "EN_AMBIENT",
+          "type": "input",
+          "symbol_xy_mm": [
+            -10.16,
+            -2.54
+          ],
+          "side": "left"
+        },
+        {
+          "number": "4",
+          "name": "CT",
+          "net": "SW3_CT",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            2.54
+          ],
+          "side": "right"
+        },
+        {
+          "number": "5",
+          "name": "QOD",
+          "net": "SW3_QOD",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        },
+        {
+          "number": "6",
+          "name": "VOUT",
+          "net": "AMBIENT5_SWITCHED",
+          "type": "power_out",
+          "symbol_xy_mm": [
+            10.16,
+            -2.54
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Package_TO_SOT_SMD:SOT-23-6",
+      "datasheet": "https://www.ti.com/lit/ds/symlink/tps22810.pdf",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:SOT-23-6",
+      "half_height_mm": 5.08
+    },
+    {
+      "ref": "C13",
+      "value": "1uF",
+      "mpn": "Murata GRM188R71E105KA12D",
+      "group": "ambient",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "REG5_LOGIC",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Capacitor_SMD:C_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:C_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "C16",
+      "value": "100nF",
+      "mpn": "Murata GRM188R71H104KA93D",
+      "group": "ambient",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "SW3_CT",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Capacitor_SMD:C_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:C_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "R41",
+      "value": "330 1%",
+      "mpn": "Yageo RC1206FR-07330RL",
+      "group": "ambient",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "SW3_QOD",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "AMBIENT5_SWITCHED",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Resistor_SMD:R_1206_3216Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:R_1206_3216Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "R12",
+      "value": "100k 1%",
+      "mpn": "Yageo RC0603FR-07100KL",
+      "group": "ambient",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "EN_AMBIENT",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Resistor_SMD:R_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:R_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "C10",
+      "value": "470uF/10V",
+      "mpn": "Panasonic EEU-FR1A471",
+      "group": "ambient",
+      "pins": [
+        {
+          "number": "1",
+          "name": "+",
+          "net": "AMBIENT5_SWITCHED",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "-",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:CP_Radial_D8.0mm_P3.50mm",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "BUF1",
+      "value": "74AHCT125D,118",
+      "mpn": "Nexperia 74AHCT125D,118",
+      "group": "ambient",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~{OE}",
+          "net": "AMBIENT5_SWITCHED",
+          "type": "input",
+          "symbol_xy_mm": [
+            -10.16,
+            7.62
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "net": "GND",
+          "type": "input",
+          "symbol_xy_mm": [
+            -10.16,
+            5.08
+          ],
+          "side": "left"
+        },
+        {
+          "number": "3",
+          "name": "Y",
+          "net": null,
+          "type": "output",
+          "symbol_xy_mm": [
+            -10.16,
+            2.54
+          ],
+          "side": "left"
+        },
+        {
+          "number": "4",
+          "name": "~{OE}",
+          "net": "GND",
+          "type": "input",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "5",
+          "name": "A",
+          "net": "AMBIENT_DATA_GPIO",
+          "type": "input",
+          "symbol_xy_mm": [
+            -10.16,
+            -2.54
+          ],
+          "side": "left"
+        },
+        {
+          "number": "6",
+          "name": "Y",
+          "net": "AMBIENT_BUF_OUT",
+          "type": "output",
+          "symbol_xy_mm": [
+            -10.16,
+            -5.08
+          ],
+          "side": "left"
+        },
+        {
+          "number": "7",
+          "name": "GND",
+          "net": "GND",
+          "type": "power_in",
+          "symbol_xy_mm": [
+            -10.16,
+            -7.62
+          ],
+          "side": "left"
+        },
+        {
+          "number": "8",
+          "name": "Y",
+          "net": null,
+          "type": "output",
+          "symbol_xy_mm": [
+            10.16,
+            7.62
+          ],
+          "side": "right"
+        },
+        {
+          "number": "9",
+          "name": "A",
+          "net": "GND",
+          "type": "input",
+          "symbol_xy_mm": [
+            10.16,
+            5.08
+          ],
+          "side": "right"
+        },
+        {
+          "number": "10",
+          "name": "~{OE}",
+          "net": "AMBIENT5_SWITCHED",
+          "type": "input",
+          "symbol_xy_mm": [
+            10.16,
+            2.54
+          ],
+          "side": "right"
+        },
+        {
+          "number": "11",
+          "name": "Y",
+          "net": null,
+          "type": "output",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        },
+        {
+          "number": "12",
+          "name": "A",
+          "net": "GND",
+          "type": "input",
+          "symbol_xy_mm": [
+            10.16,
+            -2.54
+          ],
+          "side": "right"
+        },
+        {
+          "number": "13",
+          "name": "~{OE}",
+          "net": "AMBIENT5_SWITCHED",
+          "type": "input",
+          "symbol_xy_mm": [
+            10.16,
+            -5.08
+          ],
+          "side": "right"
+        },
+        {
+          "number": "14",
+          "name": "VCC",
+          "net": "AMBIENT5_SWITCHED",
+          "type": "power_in",
+          "symbol_xy_mm": [
+            10.16,
+            -7.62
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm",
+      "datasheet": "https://assets.nexperia.com/documents/data-sheet/74AHC_AHCT125.pdf",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:SOIC-14_3.9x8.7mm_P1.27mm",
+      "half_height_mm": 10.16
+    },
+    {
+      "ref": "C17",
+      "value": "100nF",
+      "mpn": "Murata GRM188R71H104KA93D",
+      "group": "ambient",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "AMBIENT5_SWITCHED",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Capacitor_SMD:C_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:C_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "R19",
+      "value": "100k 1%",
+      "mpn": "Yageo RC0603FR-07100KL",
+      "group": "ambient",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "AMBIENT_DATA_GPIO",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Resistor_SMD:R_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:R_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "R16",
+      "value": "330 1%",
+      "mpn": "Yageo RC0603FR-07330RL",
+      "group": "ambient",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "AMBIENT_BUF_OUT",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "AMBIENT_DATA",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Resistor_SMD:R_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:R_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "J7",
+      "value": "XH 3",
+      "mpn": "JST B3B-XH-A(LF)(SN)",
+      "group": "ambient",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            1.27
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "AMBIENT5_SWITCHED",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            -1.27
+          ],
+          "side": "left"
+        },
+        {
+          "number": "3",
+          "name": "3",
+          "net": "AMBIENT_DATA",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            1.27
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+      "datasheet": "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+      "half_height_mm": 3.81
+    },
+    {
+      "ref": "J2",
+      "value": "XH 3",
+      "mpn": "JST B3B-XH-A(LF)(SN)",
+      "group": "inputs",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            1.27
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "I2C_SDA",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            -1.27
+          ],
+          "side": "left"
+        },
+        {
+          "number": "3",
+          "name": "3",
+          "net": "I2C_SCL",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            1.27
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+      "datasheet": "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf",
+      "dnp": false,
+      "location": "carrier",
+      "note": "HUSB238 I2C only; PD voltage must not enter sensor headers",
+      "footprint": "WindflowCarrier:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+      "half_height_mm": 3.81
+    },
+    {
+      "ref": "J8",
+      "value": "XH 4",
+      "mpn": "JST B4B-XH-A(LF)(SN)",
+      "group": "inputs",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            1.27
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "ENC_A",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            -1.27
+          ],
+          "side": "left"
+        },
+        {
+          "number": "3",
+          "name": "3",
+          "net": "ENC_B",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            1.27
+          ],
+          "side": "right"
+        },
+        {
+          "number": "4",
+          "name": "4",
+          "net": "ENC_PUSH",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            -1.27
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical",
+      "datasheet": "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf",
+      "dnp": false,
+      "location": "carrier",
+      "note": "Exact encoder daughterboard J1 pin order",
+      "footprint": "WindflowCarrier:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical",
+      "half_height_mm": 3.81
+    },
+    {
+      "ref": "J9",
+      "value": "XH 4",
+      "mpn": "JST B4B-XH-A(LF)(SN)",
+      "group": "inputs",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            1.27
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "+3V3",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            -1.27
+          ],
+          "side": "left"
+        },
+        {
+          "number": "3",
+          "name": "3",
+          "net": "I2C_SDA",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            1.27
+          ],
+          "side": "right"
+        },
+        {
+          "number": "4",
+          "name": "4",
+          "net": "I2C_SCL",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            -1.27
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical",
+      "datasheet": "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical",
+      "half_height_mm": 3.81
+    },
+    {
+      "ref": "J10",
+      "value": "XH 4",
+      "mpn": "JST B4B-XH-A(LF)(SN)",
+      "group": "inputs",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            1.27
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "+3V3",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            -1.27
+          ],
+          "side": "left"
+        },
+        {
+          "number": "3",
+          "name": "3",
+          "net": "I2C_SDA",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            1.27
+          ],
+          "side": "right"
+        },
+        {
+          "number": "4",
+          "name": "4",
+          "net": "I2C_SCL",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            -1.27
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical",
+      "datasheet": "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical",
+      "half_height_mm": 3.81
+    },
+    {
+      "ref": "J11",
+      "value": "XH 4",
+      "mpn": "JST B4B-XH-A(LF)(SN)",
+      "group": "inputs",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            1.27
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "+3V3",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            -1.27
+          ],
+          "side": "left"
+        },
+        {
+          "number": "3",
+          "name": "3",
+          "net": "I2C_SDA",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            1.27
+          ],
+          "side": "right"
+        },
+        {
+          "number": "4",
+          "name": "4",
+          "net": "I2C_SCL",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            -1.27
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical",
+      "datasheet": "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical",
+      "half_height_mm": 3.81
+    },
+    {
+      "ref": "R1",
+      "value": "10k 1%",
+      "mpn": "Yageo RC0603FR-0710KL",
+      "group": "inputs",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "+3V3",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "ENC_A",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Resistor_SMD:R_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:R_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "C26",
+      "value": "10nF",
+      "mpn": "Murata GRM188R71C103KA01D",
+      "group": "inputs",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "ENC_A",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Capacitor_SMD:C_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:C_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "R2",
+      "value": "10k 1%",
+      "mpn": "Yageo RC0603FR-0710KL",
+      "group": "inputs",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "+3V3",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "ENC_B",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Resistor_SMD:R_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:R_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "C27",
+      "value": "10nF",
+      "mpn": "Murata GRM188R71C103KA01D",
+      "group": "inputs",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "ENC_B",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Capacitor_SMD:C_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:C_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "R3",
+      "value": "10k 1%",
+      "mpn": "Yageo RC0603FR-0710KL",
+      "group": "inputs",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "+3V3",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "ENC_PUSH",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Resistor_SMD:R_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:R_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "C28",
+      "value": "10nF",
+      "mpn": "Murata GRM188R71C103KA01D",
+      "group": "inputs",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "ENC_PUSH",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Capacitor_SMD:C_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:C_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "R6",
+      "value": "4.7k 1%",
+      "mpn": "Yageo RC0603FR-074K7L",
+      "group": "inputs",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "+3V3",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "I2C_SDA",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Resistor_SMD:R_0603_1608Metric",
+      "datasheet": "",
+      "dnp": true,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:R_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "R7",
+      "value": "4.7k 1%",
+      "mpn": "Yageo RC0603FR-074K7L",
+      "group": "inputs",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "+3V3",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "I2C_SCL",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Resistor_SMD:R_0603_1608Metric",
+      "datasheet": "",
+      "dnp": true,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:R_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "C22",
+      "value": "100nF",
+      "mpn": "Murata GRM188R71H104KA93D",
+      "group": "inputs",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "+3V3",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Capacitor_SMD:C_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:C_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "C33",
+      "value": "100nF",
+      "mpn": "Murata GRM188R71H104KA93D",
+      "group": "inputs",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "+3V3",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Capacitor_SMD:C_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "pressure_daughterboard",
+      "note": "",
+      "footprint": "WindflowCarrier:C_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "J12",
+      "value": "XH 2",
+      "mpn": "JST B2B-XH-A(LF)(SN)",
+      "group": "inputs",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GUARD_CONTACT_5V",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
+      "datasheet": "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf",
+      "dnp": false,
+      "location": "carrier",
+      "note": "Omron COM/NO; raw5V input goes to BUF4, never to GPIO",
+      "footprint": "WindflowCarrier:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "R5",
+      "value": "3.9k 1%",
+      "mpn": "Yageo RC0603FR-073K9L",
+      "group": "inputs",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "REG5_LOGIC",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GUARD_CONTACT_5V",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Resistor_SMD:R_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:R_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "BUF4",
+      "value": "SN74LVC1G17DBVR",
+      "mpn": "Texas Instruments SN74LVC1G17DBVR",
+      "group": "inputs",
+      "pins": [
+        {
+          "number": "1",
+          "name": "NC",
+          "net": null,
+          "type": "no_connect",
+          "symbol_xy_mm": [
+            -10.16,
+            2.54
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "net": "GUARD_CONTACT_5V",
+          "type": "input",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "3",
+          "name": "GND",
+          "net": "GND",
+          "type": "power_in",
+          "symbol_xy_mm": [
+            -10.16,
+            -2.54
+          ],
+          "side": "left"
+        },
+        {
+          "number": "4",
+          "name": "Y",
+          "net": "GUARD_LOGIC_3V3",
+          "type": "output",
+          "symbol_xy_mm": [
+            10.16,
+            2.54
+          ],
+          "side": "right"
+        },
+        {
+          "number": "5",
+          "name": "VCC",
+          "net": "+3V3",
+          "type": "power_in",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Package_TO_SOT_SMD:SOT-23-5",
+      "datasheet": "https://www.ti.com/lit/ds/symlink/sn74lvc1g17.pdf",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:SOT-23-5",
+      "half_height_mm": 5.08
+    },
+    {
+      "ref": "C31",
+      "value": "100nF",
+      "mpn": "Murata GRM188R71H104KA93D",
+      "group": "inputs",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "+3V3",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Capacitor_SMD:C_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:C_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "C32",
+      "value": "10nF",
+      "mpn": "Murata GRM188R71C103KA01D",
+      "group": "inputs",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "GUARD_CONTACT_5V",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Capacitor_SMD:C_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:C_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "R60",
+      "value": "100k 1%",
+      "mpn": "Yageo RC0603FR-07100KL",
+      "group": "inputs",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "+3V3",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GUARD_LOGIC_3V3",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Resistor_SMD:R_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:R_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "J14",
+      "value": "2.54mm 2",
+      "mpn": "Samtec TSW-102-07-G-S",
+      "group": "inputs",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "SERVICE_JUMPER",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "Removable SNT-100-BK-G service shunt",
+      "footprint": "WindflowCarrier:PinHeader_1x02_P2.54mm_Vertical",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "J15",
+      "value": "2.54mm 20",
+      "mpn": "Samtec TSW-120-07-G-S",
+      "group": "inputs",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "ENC_A",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            11.43
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "ENC_B",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            8.89
+          ],
+          "side": "left"
+        },
+        {
+          "number": "3",
+          "name": "3",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            6.35
+          ],
+          "side": "left"
+        },
+        {
+          "number": "4",
+          "name": "4",
+          "net": "ENC_PUSH",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            3.81
+          ],
+          "side": "left"
+        },
+        {
+          "number": "5",
+          "name": "5",
+          "net": "FAN_TACH",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            1.27
+          ],
+          "side": "left"
+        },
+        {
+          "number": "6",
+          "name": "6",
+          "net": "I2C_SDA",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            -1.27
+          ],
+          "side": "left"
+        },
+        {
+          "number": "7",
+          "name": "7",
+          "net": "I2C_SCL",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            -3.81
+          ],
+          "side": "left"
+        },
+        {
+          "number": "8",
+          "name": "8",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            -6.35
+          ],
+          "side": "left"
+        },
+        {
+          "number": "9",
+          "name": "9",
+          "net": "FAN_PWM_GPIO",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            -8.89
+          ],
+          "side": "left"
+        },
+        {
+          "number": "10",
+          "name": "10",
+          "net": "TFT_RST_GPIO",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            -11.43
+          ],
+          "side": "left"
+        },
+        {
+          "number": "11",
+          "name": "11",
+          "net": "SERVO_PWM_GPIO",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            11.43
+          ],
+          "side": "right"
+        },
+        {
+          "number": "12",
+          "name": "12",
+          "net": null,
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            8.89
+          ],
+          "side": "right"
+        },
+        {
+          "number": "13",
+          "name": "13",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            6.35
+          ],
+          "side": "right"
+        },
+        {
+          "number": "14",
+          "name": "14",
+          "net": "TFT_DC_GPIO",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            3.81
+          ],
+          "side": "right"
+        },
+        {
+          "number": "15",
+          "name": "15",
+          "net": "AMBIENT_DATA_GPIO",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            1.27
+          ],
+          "side": "right"
+        },
+        {
+          "number": "16",
+          "name": "16",
+          "net": "EN_FAN",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            -1.27
+          ],
+          "side": "right"
+        },
+        {
+          "number": "17",
+          "name": "17",
+          "net": "EN_SERVO",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            -3.81
+          ],
+          "side": "right"
+        },
+        {
+          "number": "18",
+          "name": "18",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            -6.35
+          ],
+          "side": "right"
+        },
+        {
+          "number": "19",
+          "name": "19",
+          "net": "EN_AMBIENT",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            -8.89
+          ],
+          "side": "right"
+        },
+        {
+          "number": "20",
+          "name": "20",
+          "net": "GUARD_LOGIC_3V3",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            -11.43
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Connector_PinHeader_2.54mm:PinHeader_1x20_P2.54mm_Vertical",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "Remote Pico ribbon; physical key removes contact12 for J15 or contact10 for J16. NC35/37/40 preserved",
+      "footprint": "WindflowCarrier:PinHeader_1x20_P2.54mm_Vertical",
+      "half_height_mm": 13.969999999999999
+    },
+    {
+      "ref": "J16",
+      "value": "2.54mm 20",
+      "mpn": "Samtec TSW-120-07-G-S",
+      "group": "inputs",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "TFT_BL_GPIO",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            11.43
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "SERVICE_JUMPER",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            8.89
+          ],
+          "side": "left"
+        },
+        {
+          "number": "3",
+          "name": "3",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            6.35
+          ],
+          "side": "left"
+        },
+        {
+          "number": "4",
+          "name": "4",
+          "net": "TFT_SCK_GPIO",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            3.81
+          ],
+          "side": "left"
+        },
+        {
+          "number": "5",
+          "name": "5",
+          "net": "TFT_MOSI_GPIO",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            1.27
+          ],
+          "side": "left"
+        },
+        {
+          "number": "6",
+          "name": "6",
+          "net": "TFT_CS_GPIO",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            -1.27
+          ],
+          "side": "left"
+        },
+        {
+          "number": "7",
+          "name": "7",
+          "net": "PG_SERVO",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            -3.81
+          ],
+          "side": "left"
+        },
+        {
+          "number": "8",
+          "name": "8",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            -6.35
+          ],
+          "side": "left"
+        },
+        {
+          "number": "9",
+          "name": "9",
+          "net": "PG_FAN",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            -8.89
+          ],
+          "side": "left"
+        },
+        {
+          "number": "10",
+          "name": "10",
+          "net": null,
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            -11.43
+          ],
+          "side": "left"
+        },
+        {
+          "number": "11",
+          "name": "11",
+          "net": "ADC_BUS",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            11.43
+          ],
+          "side": "right"
+        },
+        {
+          "number": "12",
+          "name": "12",
+          "net": "ADC_SERVO_FEEDBACK",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            8.89
+          ],
+          "side": "right"
+        },
+        {
+          "number": "13",
+          "name": "13",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            6.35
+          ],
+          "side": "right"
+        },
+        {
+          "number": "14",
+          "name": "14",
+          "net": "ADC_LOGIC",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            3.81
+          ],
+          "side": "right"
+        },
+        {
+          "number": "15",
+          "name": "15",
+          "net": null,
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            1.27
+          ],
+          "side": "right"
+        },
+        {
+          "number": "16",
+          "name": "16",
+          "net": "+3V3",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            -1.27
+          ],
+          "side": "right"
+        },
+        {
+          "number": "17",
+          "name": "17",
+          "net": null,
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            -3.81
+          ],
+          "side": "right"
+        },
+        {
+          "number": "18",
+          "name": "18",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            -6.35
+          ],
+          "side": "right"
+        },
+        {
+          "number": "19",
+          "name": "19",
+          "net": "PICO_VSYS",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            -8.89
+          ],
+          "side": "right"
+        },
+        {
+          "number": "20",
+          "name": "20",
+          "net": null,
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            -11.43
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Connector_PinHeader_2.54mm:PinHeader_1x20_P2.54mm_Vertical",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "Remote Pico ribbon; physical key removes contact12 for J15 or contact10 for J16. NC35/37/40 preserved",
+      "footprint": "WindflowCarrier:PinHeader_1x20_P2.54mm_Vertical",
+      "half_height_mm": 13.969999999999999
+    },
+    {
+      "ref": "ISO1",
+      "value": "TMUX1511PWR",
+      "mpn": "Texas Instruments TMUX1511PWR",
+      "group": "adc",
+      "pins": [
+        {
+          "number": "1",
+          "name": "SEL1",
+          "net": "ADC_ENABLE",
+          "type": "input",
+          "symbol_xy_mm": [
+            -10.16,
+            7.62
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "S1",
+          "net": "BUS_DIV",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            5.08
+          ],
+          "side": "left"
+        },
+        {
+          "number": "3",
+          "name": "D1",
+          "net": "ADC_BUS",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            2.54
+          ],
+          "side": "left"
+        },
+        {
+          "number": "4",
+          "name": "SEL2",
+          "net": "ADC_ENABLE",
+          "type": "input",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "5",
+          "name": "S2",
+          "net": "SERVO_DIV",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            -2.54
+          ],
+          "side": "left"
+        },
+        {
+          "number": "6",
+          "name": "D2",
+          "net": "ADC_SERVO_FEEDBACK",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            -5.08
+          ],
+          "side": "left"
+        },
+        {
+          "number": "7",
+          "name": "GND",
+          "net": "GND",
+          "type": "power_in",
+          "symbol_xy_mm": [
+            -10.16,
+            -7.62
+          ],
+          "side": "left"
+        },
+        {
+          "number": "8",
+          "name": "D3",
+          "net": "ADC_LOGIC",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            7.62
+          ],
+          "side": "right"
+        },
+        {
+          "number": "9",
+          "name": "S3",
+          "net": "LOGIC_DIV",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            5.08
+          ],
+          "side": "right"
+        },
+        {
+          "number": "10",
+          "name": "SEL3",
+          "net": "ADC_ENABLE",
+          "type": "input",
+          "symbol_xy_mm": [
+            10.16,
+            2.54
+          ],
+          "side": "right"
+        },
+        {
+          "number": "11",
+          "name": "D4",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        },
+        {
+          "number": "12",
+          "name": "S4",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            -2.54
+          ],
+          "side": "right"
+        },
+        {
+          "number": "13",
+          "name": "SEL4",
+          "net": "GND",
+          "type": "input",
+          "symbol_xy_mm": [
+            10.16,
+            -5.08
+          ],
+          "side": "right"
+        },
+        {
+          "number": "14",
+          "name": "VDD",
+          "net": "+3V3",
+          "type": "power_in",
+          "symbol_xy_mm": [
+            10.16,
+            -7.62
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Package_SO:TSSOP-14_4.4x5mm_P0.65mm",
+      "datasheet": "https://www.ti.com/lit/ds/symlink/tmux1511.pdf",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:TSSOP-14_4.4x5mm_P0.65mm",
+      "half_height_mm": 10.16
+    },
+    {
+      "ref": "SUP1",
+      "value": "TPS3808G33DBVR",
+      "mpn": "Texas Instruments TPS3808G33DBVR",
+      "group": "adc",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~{RESET}",
+          "net": "ADC_ENABLE",
+          "type": "open_collector",
+          "symbol_xy_mm": [
+            -10.16,
+            2.54
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "GND",
+          "net": "GND",
+          "type": "power_in",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "3",
+          "name": "~{MR}",
+          "net": "+3V3",
+          "type": "input",
+          "symbol_xy_mm": [
+            -10.16,
+            -2.54
+          ],
+          "side": "left"
+        },
+        {
+          "number": "4",
+          "name": "CT",
+          "net": null,
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            2.54
+          ],
+          "side": "right"
+        },
+        {
+          "number": "5",
+          "name": "SENSE",
+          "net": "+3V3",
+          "type": "input",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        },
+        {
+          "number": "6",
+          "name": "VDD",
+          "net": "+3V3",
+          "type": "power_in",
+          "symbol_xy_mm": [
+            10.16,
+            -2.54
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Package_TO_SOT_SMD:SOT-23-6",
+      "datasheet": "https://www.ti.com/lit/ds/symlink/tps3808.pdf",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:SOT-23-6",
+      "half_height_mm": 5.08
+    },
+    {
+      "ref": "C20",
+      "value": "100nF",
+      "mpn": "Murata GRM188R71H104KA93D",
+      "group": "adc",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "+3V3",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Capacitor_SMD:C_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:C_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "C21",
+      "value": "100nF",
+      "mpn": "Murata GRM188R71H104KA93D",
+      "group": "adc",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "+3V3",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Capacitor_SMD:C_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:C_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "R37",
+      "value": "10k 1%",
+      "mpn": "Yageo RC0603FR-0710KL",
+      "group": "adc",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "+3V3",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "ADC_ENABLE",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Resistor_SMD:R_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:R_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "R38",
+      "value": "100k 1%",
+      "mpn": "Yageo RC0603FR-07100KL",
+      "group": "adc",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "ADC_ENABLE",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Resistor_SMD:R_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:R_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "R28",
+      "value": "100k 1%",
+      "mpn": "Yageo RC0603FR-07100KL",
+      "group": "adc",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "BUS_PROTECTED",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "BUS_DIV",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Resistor_SMD:R_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:R_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "R29",
+      "value": "10k 1%",
+      "mpn": "Yageo RC0603FR-0710KL",
+      "group": "adc",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "BUS_DIV",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Resistor_SMD:R_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:R_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "R30",
+      "value": "1M 1%",
+      "mpn": "Yageo RC0603FR-071ML",
+      "group": "adc",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "ADC_BUS",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Resistor_SMD:R_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:R_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "C23",
+      "value": "100nF",
+      "mpn": "Murata GRM188R71H104KA93D",
+      "group": "adc",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "BUS_DIV",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Capacitor_SMD:C_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:C_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "R31",
+      "value": "100k 1%",
+      "mpn": "Yageo RC0603FR-07100KL",
+      "group": "adc",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "SERVO_FEEDBACK_RAW",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "SERVO_DIV",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Resistor_SMD:R_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:R_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "R32",
+      "value": "100k 1%",
+      "mpn": "Yageo RC0603FR-07100KL",
+      "group": "adc",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "SERVO_DIV",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Resistor_SMD:R_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:R_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "R33",
+      "value": "1M 1%",
+      "mpn": "Yageo RC0603FR-071ML",
+      "group": "adc",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "ADC_SERVO_FEEDBACK",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Resistor_SMD:R_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:R_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "C24",
+      "value": "100nF",
+      "mpn": "Murata GRM188R71H104KA93D",
+      "group": "adc",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "SERVO_DIV",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Capacitor_SMD:C_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:C_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "R34",
+      "value": "100k 1%",
+      "mpn": "Yageo RC0603FR-07100KL",
+      "group": "adc",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "REG5_LOGIC",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "LOGIC_DIV",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Resistor_SMD:R_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:R_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "R35",
+      "value": "100k 1%",
+      "mpn": "Yageo RC0603FR-07100KL",
+      "group": "adc",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "LOGIC_DIV",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Resistor_SMD:R_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:R_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "R36",
+      "value": "1M 1%",
+      "mpn": "Yageo RC0603FR-071ML",
+      "group": "adc",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "ADC_LOGIC",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Resistor_SMD:R_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:R_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "C25",
+      "value": "100nF",
+      "mpn": "Murata GRM188R71H104KA93D",
+      "group": "adc",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "LOGIC_DIV",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Capacitor_SMD:C_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:C_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "BUF2",
+      "value": "74AHCT125D,118",
+      "mpn": "Nexperia 74AHCT125D,118",
+      "group": "screen",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~{OE}",
+          "net": "GND",
+          "type": "input",
+          "symbol_xy_mm": [
+            -10.16,
+            7.62
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "net": "TFT_CS_GPIO",
+          "type": "input",
+          "symbol_xy_mm": [
+            -10.16,
+            5.08
+          ],
+          "side": "left"
+        },
+        {
+          "number": "3",
+          "name": "Y",
+          "net": "TFT_CS_BUF",
+          "type": "output",
+          "symbol_xy_mm": [
+            -10.16,
+            2.54
+          ],
+          "side": "left"
+        },
+        {
+          "number": "4",
+          "name": "~{OE}",
+          "net": "GND",
+          "type": "input",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "5",
+          "name": "A",
+          "net": "TFT_RST_GPIO",
+          "type": "input",
+          "symbol_xy_mm": [
+            -10.16,
+            -2.54
+          ],
+          "side": "left"
+        },
+        {
+          "number": "6",
+          "name": "Y",
+          "net": "TFT_RST_BUF",
+          "type": "output",
+          "symbol_xy_mm": [
+            -10.16,
+            -5.08
+          ],
+          "side": "left"
+        },
+        {
+          "number": "7",
+          "name": "GND",
+          "net": "GND",
+          "type": "power_in",
+          "symbol_xy_mm": [
+            -10.16,
+            -7.62
+          ],
+          "side": "left"
+        },
+        {
+          "number": "8",
+          "name": "Y",
+          "net": "TFT_BL_BUF",
+          "type": "output",
+          "symbol_xy_mm": [
+            10.16,
+            7.62
+          ],
+          "side": "right"
+        },
+        {
+          "number": "9",
+          "name": "A",
+          "net": "TFT_BL_GPIO",
+          "type": "input",
+          "symbol_xy_mm": [
+            10.16,
+            5.08
+          ],
+          "side": "right"
+        },
+        {
+          "number": "10",
+          "name": "~{OE}",
+          "net": "GND",
+          "type": "input",
+          "symbol_xy_mm": [
+            10.16,
+            2.54
+          ],
+          "side": "right"
+        },
+        {
+          "number": "11",
+          "name": "Y",
+          "net": null,
+          "type": "output",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        },
+        {
+          "number": "12",
+          "name": "A",
+          "net": "GND",
+          "type": "input",
+          "symbol_xy_mm": [
+            10.16,
+            -2.54
+          ],
+          "side": "right"
+        },
+        {
+          "number": "13",
+          "name": "~{OE}",
+          "net": "REG5_LOGIC",
+          "type": "input",
+          "symbol_xy_mm": [
+            10.16,
+            -5.08
+          ],
+          "side": "right"
+        },
+        {
+          "number": "14",
+          "name": "VCC",
+          "net": "REG5_LOGIC",
+          "type": "power_in",
+          "symbol_xy_mm": [
+            10.16,
+            -7.62
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm",
+      "datasheet": "https://assets.nexperia.com/documents/data-sheet/74AHC_AHCT125.pdf",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:SOIC-14_3.9x8.7mm_P1.27mm",
+      "half_height_mm": 10.16
+    },
+    {
+      "ref": "C18",
+      "value": "100nF",
+      "mpn": "Murata GRM188R71H104KA93D",
+      "group": "screen",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "REG5_LOGIC",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Capacitor_SMD:C_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:C_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "R50",
+      "value": "33 1%",
+      "mpn": "Yageo RC0603FR-0733RL",
+      "group": "screen",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "TFT_MOSI_GPIO",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "TFT_MOSI",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Resistor_SMD:R_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:R_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "R51",
+      "value": "33 1%",
+      "mpn": "Yageo RC0603FR-0733RL",
+      "group": "screen",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "TFT_SCK_GPIO",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "TFT_SCK",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Resistor_SMD:R_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:R_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "R52",
+      "value": "33 1%",
+      "mpn": "Yageo RC0603FR-0733RL",
+      "group": "screen",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "TFT_CS_BUF",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "TFT_CS",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Resistor_SMD:R_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:R_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "R53",
+      "value": "33 1%",
+      "mpn": "Yageo RC0603FR-0733RL",
+      "group": "screen",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "TFT_DC_GPIO",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "TFT_DC",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Resistor_SMD:R_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:R_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "R54",
+      "value": "33 1%",
+      "mpn": "Yageo RC0603FR-0733RL",
+      "group": "screen",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "TFT_RST_BUF",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "TFT_RST",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Resistor_SMD:R_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:R_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "R55",
+      "value": "330 1%",
+      "mpn": "Yageo RC0603FR-07330RL",
+      "group": "screen",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "TFT_BL_BUF",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "TFT_BL",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Resistor_SMD:R_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:R_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "R56",
+      "value": "1k 1%",
+      "mpn": "Yageo RC0603FR-071KL",
+      "group": "screen",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "TFT_BL",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Resistor_SMD:R_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "display_harness",
+      "note": "",
+      "footprint": "WindflowCarrier:R_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "R57",
+      "value": "10k 1%",
+      "mpn": "Yageo RC0603FR-0710KL",
+      "group": "screen",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "+3V3",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "TFT_CS_GPIO",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Resistor_SMD:R_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:R_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "R58",
+      "value": "10k 1%",
+      "mpn": "Yageo RC0603FR-0710KL",
+      "group": "screen",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "+3V3",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "TFT_RST_GPIO",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Resistor_SMD:R_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:R_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "R59",
+      "value": "100k 1%",
+      "mpn": "Yageo RC0603FR-07100KL",
+      "group": "screen",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "TFT_BL_GPIO",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Resistor_SMD:R_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:R_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "C30",
+      "value": "1uF",
+      "mpn": "Murata GRM188R71E105KA12D",
+      "group": "screen",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "REG5_LOGIC",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            0.0
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            0.0
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Capacitor_SMD:C_0603_1608Metric",
+      "datasheet": "",
+      "dnp": false,
+      "location": "display_harness",
+      "note": "",
+      "footprint": "WindflowCarrier:C_0603_1608Metric",
+      "half_height_mm": 2.54
+    },
+    {
+      "ref": "J6",
+      "value": "XH 8",
+      "mpn": "JST B8B-XH-A(LF)(SN)",
+      "group": "screen",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "REG5_LOGIC",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            3.81
+          ],
+          "side": "left"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            1.27
+          ],
+          "side": "left"
+        },
+        {
+          "number": "3",
+          "name": "3",
+          "net": "TFT_MOSI",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            -1.27
+          ],
+          "side": "left"
+        },
+        {
+          "number": "4",
+          "name": "4",
+          "net": "TFT_SCK",
+          "type": "passive",
+          "symbol_xy_mm": [
+            -10.16,
+            -3.81
+          ],
+          "side": "left"
+        },
+        {
+          "number": "5",
+          "name": "5",
+          "net": "TFT_CS",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            3.81
+          ],
+          "side": "right"
+        },
+        {
+          "number": "6",
+          "name": "6",
+          "net": "TFT_DC",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            1.27
+          ],
+          "side": "right"
+        },
+        {
+          "number": "7",
+          "name": "7",
+          "net": "TFT_RST",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            -1.27
+          ],
+          "side": "right"
+        },
+        {
+          "number": "8",
+          "name": "8",
+          "net": "TFT_BL",
+          "type": "passive",
+          "symbol_xy_mm": [
+            10.16,
+            -3.81
+          ],
+          "side": "right"
+        }
+      ],
+      "footprint_source": "Connector_JST:JST_XH_B8B-XH-A_1x08_P2.50mm_Vertical",
+      "datasheet": "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf",
+      "dnp": false,
+      "location": "carrier",
+      "note": "",
+      "footprint": "WindflowCarrier:JST_XH_B8B-XH-A_1x08_P2.50mm_Vertical",
+      "half_height_mm": 6.35
+    }
+  ],
+  "footprint_sources": {
+    "JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical": {
+      "source": "KiCad10.0.6 Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
+      "sha256": "2232aec22ac928e45560907af562b7bda39d1c6c1e74e985e57397980daac67e",
+      "qualified": "package/library mapping; final manufacturer land review required"
+    },
+    "Fuse_2410_6125Metric": {
+      "source": "Littelfuse0451/0453 recommended pad dimensions,4-page fuse datasheet finalpage",
+      "source_url": "https://www.littelfuse.com/assetdocs/fuse-451-and-453-datasheet?assetguid=533cd5cc-956c-4243-867f-6ab5a62f6ba1",
+      "sha256": "7520cbf3a3dbaf1ec47eda75f2231fb1fb189784889823dae777aac647111ec8",
+      "qualified": "Land dimensions checked; routing/clearance/assembly qualification pending"
+    },
+    "D_SMB": {
+      "source": "KiCad10.0.6 Diode_SMD:D_SMB",
+      "sha256": "9c05e7c89fdbe091e34239523a372eea056ffe3ad12d5526f5b49eaa25428579",
+      "qualified": "package/library mapping; final manufacturer land review required"
+    },
+    "C_0603_1608Metric": {
+      "source": "KiCad10.0.6 Capacitor_SMD:C_0603_1608Metric",
+      "sha256": "d45eebd5cb9faace255d4ec95a0f9484efde898359507b02e2ba9bbb3ef6d857",
+      "qualified": "package/library mapping; final manufacturer land review required"
+    },
+    "HTSSOP-16-1EP_4.4x5mm_P0.65mm_EP3.4x5mm_Mask2.66x2.46mm_ThermalVias": {
+      "source": "KiCad10.0.6 Package_SO:HTSSOP-16-1EP_4.4x5mm_P0.65mm_EP3.4x5mm_Mask2.66x2.46mm_ThermalVias",
+      "sha256": "a3a5821cc624287284d61464b78d51103c23a1eb0f75006c60c5ca98fbd84a78",
+      "qualified": "package/library mapping; final manufacturer land review required"
+    },
+    "CP_Radial_D6.3mm_P2.50mm": {
+      "source": "KiCad10.0.6 Capacitor_THT:CP_Radial_D6.3mm_P2.50mm",
+      "sha256": "985ff707ffcb2e5687d2e09b671bfa3ea0cdc41eeb20f6a75f6cb19f3f316e44",
+      "qualified": "package/library mapping; final manufacturer land review required"
+    },
+    "R_0603_1608Metric": {
+      "source": "KiCad10.0.6 Resistor_SMD:R_0603_1608Metric",
+      "sha256": "03fc7902b2661df01b4d828fdb6eab9eddf974e7130ed2b98892607387a50c4b",
+      "qualified": "package/library mapping; final manufacturer land review required"
+    },
+    "Molex_Micro-Fit_3.0_43045-0612_2x03_P3.00mm_Vertical": {
+      "source": "KiCad10.0.6 Connector_Molex:Molex_Micro-Fit_3.0_43045-0612_2x03_P3.00mm_Vertical",
+      "sha256": "6912a7ddb96187f479fc4123a2323ae680152fcdbd2a5c3d52affd62d202a4b2",
+      "qualified": "package/library mapping; final manufacturer land review required"
+    },
+    "Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical": {
+      "source": "KiCad10.0.6 Connector_Molex:Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical",
+      "sha256": "67cb0c5dd062b7f92eb2d85055a27e8a6d63d0e08d18409146ae1753d00177e7",
+      "qualified": "package/library mapping; final manufacturer land review required"
+    },
+    "Molex_Micro-Fit_3.0_43045-0812_2x04_P3.00mm_Vertical": {
+      "source": "KiCad10.0.6 Connector_Molex:Molex_Micro-Fit_3.0_43045-0812_2x04_P3.00mm_Vertical",
+      "sha256": "d6b878135aa7d8fcd0b6c9d1784aa6843b3fc126d039173142c5b95372450553",
+      "qualified": "package/library mapping; final manufacturer land review required"
+    },
+    "D_SMA": {
+      "source": "KiCad10.0.6 Diode_SMD:D_SMA",
+      "sha256": "e2d049a54ef961e231eb8e7e769078a3c44feb8475a7bdafba01c6646a5144f3",
+      "qualified": "package/library mapping; final manufacturer land review required"
+    },
+    "SOT-23-6": {
+      "source": "KiCad10.0.6 Package_TO_SOT_SMD:SOT-23-6",
+      "sha256": "ea29040bed73e5dfa455e36f2c9324b0de7782c5a6cf79040b7d885ff766fdb4",
+      "qualified": "package/library mapping; final manufacturer land review required"
+    },
+    "R_1206_3216Metric": {
+      "source": "KiCad10.0.6 Resistor_SMD:R_1206_3216Metric",
+      "sha256": "f45a0f7c60b15463e1126a75a9ff484349ecd1861de62f1cbff41574e03b7643",
+      "qualified": "package/library mapping; final manufacturer land review required"
+    },
+    "SOT-23": {
+      "source": "KiCad10.0.6 Package_TO_SOT_SMD:SOT-23",
+      "sha256": "7fb2859c6463f3a37966a1a20c31d8bfe7d4e8459d00bb165d5a7488270816c5",
+      "qualified": "package/library mapping; final manufacturer land review required"
+    },
+    "FanPinHeader_1x04_P2.54mm_Vertical": {
+      "source": "KiCad10.0.6 Connector:FanPinHeader_1x04_P2.54mm_Vertical",
+      "sha256": "81362ceae353986e44c9744a9c866d099916a2e506dda0ee7e47c3fd2ee7b528",
+      "qualified": "package/library mapping; final manufacturer land review required"
+    },
+    "SOT-353_SC-70-5": {
+      "source": "KiCad10.0.6 Package_TO_SOT_SMD:SOT-353_SC-70-5",
+      "sha256": "6466c1c6509bf1a16dff576fe03f532036734259c9cbda358ef9bde3cba6c052",
+      "qualified": "package/library mapping; final manufacturer land review required"
+    },
+    "CP_Radial_D8.0mm_P3.50mm": {
+      "source": "KiCad10.0.6 Capacitor_THT:CP_Radial_D8.0mm_P3.50mm",
+      "sha256": "ef43db75696baeadd4726ac5353c4ed478757cf83fd59e2d0c65858f97c2ec06",
+      "qualified": "package/library mapping; final manufacturer land review required"
+    },
+    "PinHeader_1x03_P2.54mm_Vertical": {
+      "source": "KiCad10.0.6 Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical",
+      "sha256": "6a7dba97d6e733fd9d5f12d2d57f2cde29e8393e15b08d8b3e41bf2b430d83ed",
+      "qualified": "package/library mapping; final manufacturer land review required"
+    },
+    "PinHeader_1x01_P2.54mm_Vertical": {
+      "source": "KiCad10.0.6 Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical",
+      "sha256": "03e149d2a12062dd8a30a96f25bcbe79ca02ad95dceb3d78fa48a9bd32c38161",
+      "qualified": "package/library mapping; final manufacturer land review required"
+    },
+    "SOIC-14_3.9x8.7mm_P1.27mm": {
+      "source": "KiCad10.0.6 Package_SO:SOIC-14_3.9x8.7mm_P1.27mm",
+      "sha256": "26e119bbf40b9b7043210d97c89de9294b820b8e6e155d8c52bedfd5078508e0",
+      "qualified": "package/library mapping; final manufacturer land review required"
+    },
+    "JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical": {
+      "source": "KiCad10.0.6 Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+      "sha256": "51ee7a7eec6d350fd2274c04610a51dbf02e76a65c6d1976a776495f8d9b7cb4",
+      "qualified": "package/library mapping; final manufacturer land review required"
+    },
+    "JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical": {
+      "source": "KiCad10.0.6 Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical",
+      "sha256": "4589a858b38de8a948196f3bbfceca9d026829b55f2ac6f77335609be3dec2b0",
+      "qualified": "package/library mapping; final manufacturer land review required"
+    },
+    "SOT-23-5": {
+      "source": "KiCad10.0.6 Package_TO_SOT_SMD:SOT-23-5",
+      "sha256": "684a94089f59798a46492dac8dd0242edfa4d915e76a210abdca369e4faa4f9b",
+      "qualified": "package/library mapping; final manufacturer land review required"
+    },
+    "PinHeader_1x02_P2.54mm_Vertical": {
+      "source": "KiCad10.0.6 Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+      "sha256": "e5c0d699660a4479fa2414cc5be1835c6f52a38630dd85a2d18aab4dcd3ff8e5",
+      "qualified": "package/library mapping; final manufacturer land review required"
+    },
+    "PinHeader_1x20_P2.54mm_Vertical": {
+      "source": "KiCad10.0.6 Connector_PinHeader_2.54mm:PinHeader_1x20_P2.54mm_Vertical",
+      "sha256": "3dc8726ee7f93edb84e15c825d0f3e15fb3fe992aacbf8c99df82813202e7552",
+      "qualified": "package/library mapping; final manufacturer land review required"
+    },
+    "TSSOP-14_4.4x5mm_P0.65mm": {
+      "source": "KiCad10.0.6 Package_SO:TSSOP-14_4.4x5mm_P0.65mm",
+      "sha256": "8da4c0cda07ca9aadbeb33cd860d9bc90a2b382263b25be3609543a6da4a7258",
+      "qualified": "package/library mapping; final manufacturer land review required"
+    },
+    "JST_XH_B8B-XH-A_1x08_P2.50mm_Vertical": {
+      "source": "KiCad10.0.6 Connector_JST:JST_XH_B8B-XH-A_1x08_P2.50mm_Vertical",
+      "sha256": "2e7e35e34b81a06679166344cbd07c0163b93fbe796beb55c2b5823c5edbddba",
+      "qualified": "package/library mapping; final manufacturer land review required"
+    }
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "units": "mm",
+  "coordinate_system": "assembled: airflow +Y; head-local Z +10 mm",
+  "switch_model": "Omron D2F-01L, straight PCB terminals, gold-alloy low-level contact",
+  "case_mm": [
+    5.8,
+    6.5,
+    12.8
+  ],
+  "case_axes": "X thickness, Y height, Z length",
+  "case_x_span": [
+    -63.1,
+    -57.3
+  ],
+  "case_z_span_local": [
+    12.0,
+    24.8
+  ],
+  "mount_hole_diameter_nominal": 2.0,
+  "mount_pitch": 6.5,
+  "first_hole_from_case_end": 3.15,
+  "case_bottom_from_mount_datum": -1.5,
+  "case_top_from_mount_datum": 5.0,
+  "switch_mount_y_nominal": 136.7,
+  "switch_bracket_adjustment_y": 2.0,
+  "switch_operating_position_from_hole_datum_nominal": 6.8,
+  "switch_operating_position_tolerance": 1.5,
+  "free_position_maximum": 10.0,
+  "guaranteed_overtravel_minimum": 0.55,
+  "movement_differential_maximum": 0.5,
+  "target_post_trip_travel": 0.25,
+  "grille_stop_additional_travel": 0.2,
+  "actuator_face_y": 143.25,
+  "actuator_contact_x": -60.2,
+  "lever_contact_z_local_inferred": 25.4,
+  "bracket_plate_x_span": [
+    -65.5,
+    -63.1
+  ],
+  "bracket_head_screw_axis_y": 136.7,
+  "bracket_head_screw_z_local": [
+    8.0,
+    29.0
+  ],
+  "bracket_screws": "2 x ISO 4762 M2x16 with ISO 7089 M2 washers, DIN 934 M2 nuts",
+  "switch_screws": "2 x ISO 4762 M2x10 with ISO 7089 M2 washers, DIN 934 M2 nuts",
+  "strain_clamp_screws": "2 x ISO 4762 M2x10 with ISO 7089 M2 washers, DIN 934 M2 nuts",
+  "raceway_screws": "2 x ISO 4762 M2x10 with ISO 7089 M2 washers, DIN 934 M2 nuts",
+  "nut_pocket_across_flats": 4.2,
+  "nut_reference_across_flats": 4.0,
+  "nut_reference_thickness": 1.6,
+  "clearance_screw_bores": 2.4,
+  "slide_slot_length": 6.4,
+  "wire_bundle_maximum_envelope_diameter": 2.6,
+  "wire_od_trial_mm": 1.2,
+  "liner_free_od_mm": 4.15,
+  "liner_installed_od_mm": 4.0,
+  "liner_wire_hole_trial_mm": 1.1,
+  "liner_free_height_mm": 6.2,
+  "liner_installed_height_mm": 6.0,
+  "wire_raceway_center_local": [
+    -60.2,
+    125.5
+  ],
+  "wire_raceway_z_local_span": [
+    -65.0,
+    0.0
+  ],
+  "wire_raceway_inside_y_width": 3.4,
+  "fixed_strain_clamp_z_local_span": [
+    -10.0,
+    -4.0
+  ],
+  "fixed_clamp_backplate_z_local_span": [
+    -10.0,
+    0.0
+  ],
+  "raceway_lid_z_local_span": [
+    -65.0,
+    -10.1
+  ],
+  "cover_z_local_span": [
+    0.0,
+    35.0
+  ],
+  "stop_land_xz_local": [
+    -56.5,
+    26.8
+  ],
+  "stop_land_head_face_y": 150.8,
+  "grille_rear_face_y": 151.0,
+  "electrical": "COM to GND; NO to J12 raw guard; R5 3.9k to 5V and 5V-tolerant 3V3 buffer to GP15; NC insulated and unused",
+  "terminal_mapping": "From the case end at local Z=12: COM Z=13.32, NO Z=18.4, NC Z=23.48",
+  "switch_mount_torque_Nm": [
+    0.08,
+    0.1
+  ]
+}

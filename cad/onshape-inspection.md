@@ -54,3 +54,15 @@ Onshape's native **Check interference** was run for the complete 76-instance ass
 The clear acrylic window's Part Studio appearance is saved with color `DCEEF7` and alpha 0.15; the returned assembly view shows the display behind it. CAD appearance does not establish optical performance. The manufacturer's generic screen surface has no firmware UI texture; the separate production-rendered previews in `docs/images/` demonstrate the actual software layout.
 
 Proof: `evidence/onshape-screen-native-interference-2026-10-03.jpg` and `evidence/onshape-screen-outlet-2026-10-03.jpg`. The assembly remains an imported development model; native airflow parameters do not automatically modify its detailed shell or mechanism. Motion mates, full harness/tubing, carrier PCB, interlock interface and complete tool/fastener access remain unfinished design work.
+
+### Carrier mechanical datum — 4 October 2026
+
+The independent carrier blank was uploaded and translated, then renamed **Rev B — Carrier PCB mechanical datum — UNROUTED**, element `9b11b7d7a7402bf192647aba`. The loaded studio visibly shows **Parts (1)**, a thin board and four corner holes. Its outline is 90 × 65 × 1.6 mm in the source datum. Proof is `evidence/onshape-carrier-blank-2026-10-04.jpg`.
+
+The file uploaded before the final generator cleanup had SHA-256 `d6b2321275882a03358954fddff902a9c5d11df7c24dabb6446e20c3f1607fd0`. Later local regeneration has its own artifact hash in `../hardware/pcb/carrier-mechanical/validation.json`; byte identity with that later export is not claimed. Native KiCad mechanical checks and baseline/negative DRC probes pass with clean process exits. This is an unrouted mechanical datum, not a populated circuit, and has not replaced the 76-instance assembly's reserve. Firmware interaction improvements do not alter the current imported product geometry.
+
+### Routed encoder board datum — 5 October 2026
+
+The exact 1.6 mm mechanical datum from encoder PCB P1 was uploaded through the signed-in Chrome session and translated successfully. Its studio is **Rev B — Encoder PCB P1 — routed datum**, element `21041dd778175eaad866a4ab`, and visibly contains **Parts (1)**. The imported file SHA-256 is `72de91e09cf628ff4ec1116cc061e8ac2d7f2803ed04d6024a4579c0b3fcebed`. The source datum is 29.5 × 24 × 1.6 mm and includes all thirteen native PCB hole/slot locations. This standalone studio is in the STEP's source coordinates; local assembly applies the documented rigid transform.
+
+Proof is `evidence/onshape-encoder-pcb-P1-2026-10-05.png`. Native KiCad schematic/netlist checks, all-severity ERC/DRC with schematic parity and fabrication generation completed with clean exits. The generator and all 34 artifact hashes were independently checked before upload. This is a drilled PCB datum, not a populated manufacturer model, and does not automatically replace the earlier assembly's encoder reserve. New fan-stack, Pico-mount and grille-interlock changes are being adopted locally; the 3 October assembly remains the last checked complete Onshape checkpoint pending a new full check/import.

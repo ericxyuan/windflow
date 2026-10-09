@@ -1,0 +1,253 @@
+{
+  "result": "PASS: valid printable coupon solids",
+  "timestamp_utc": "2026-10-08T17:37:38.303872+00:00",
+  "physical_qualification": false,
+  "parts": [
+    {
+      "name": "insert-M3-pilot-ladder",
+      "material": "PETG",
+      "orientation": "flat plate on bed",
+      "purpose": "Left to right: [3.8, 4.0, 4.2]mm bores. Heat-set real ruthex inserts; measure pull-out, wall damage and screw bottoming.",
+      "valid_solids": 1,
+      "bounds_mm": [
+        64.00000020000002,
+        18.00000020000002,
+        10.00139888099633
+      ],
+      "volume_mm3": 3536.270868814675
+    },
+    {
+      "name": "insert-M2-pilot-ladder",
+      "material": "PETG",
+      "orientation": "flat plate on bed",
+      "purpose": "Left to right: [3.0, 3.2, 3.4]mm bores. Heat-set real ruthex inserts; measure pull-out, wall damage and screw bottoming.",
+      "valid_solids": 1,
+      "bounds_mm": [
+        64.00000020000002,
+        18.00000020000002,
+        7.501056981197231
+      ],
+      "volume_mm3": 2775.0189865527177
+    },
+    {
+      "name": "hinge-3mm-horizontal-bore-ladder",
+      "material": "PETG",
+      "orientation": "flat plate on bed",
+      "purpose": "Left to right3.2/3.3/3.4mm. Test actual ground rod, bridge sag and light reaming; do not scale entire mechanism.",
+      "valid_solids": 1,
+      "bounds_mm": [
+        64.0000002,
+        18.000000200000006,
+        12.000000200000006
+      ],
+      "volume_mm3": 7824.554676539521
+    },
+    {
+      "name": "D42-magnet-pocket-ladder",
+      "material": "PETG",
+      "orientation": "flat bottom on bed",
+      "purpose": "Left to right6.45/6.55/6.65mm blind3.4mm pockets. Use6.35x3.175D42; test glue, polarity and trapped retention.",
+      "valid_solids": 1,
+      "bounds_mm": [
+        72.00000020000004,
+        20.00000020000004,
+        4.8013755696463996
+      ],
+      "volume_mm3": 6531.759296668168
+    },
+    {
+      "name": "D42-test-keeper",
+      "material": "PETG",
+      "orientation": "flat",
+      "purpose": "0.8mm retention skin. Magnet fit is not assembled pull-force qualification.",
+      "valid_solids": 1,
+      "bounds_mm": [
+        72.00000020000004,
+        20.00000020000004,
+        0.8006839995982185
+      ],
+      "volume_mm3": 1145.9178766226505
+    },
+    {
+      "name": "ambient-diffuser-0p8",
+      "material": "translucent PETG",
+      "orientation": "flat",
+      "purpose": "Compare glare/hot spots and low/night brightness with the real strip at5.3mm minimum separation.",
+      "valid_solids": 1,
+      "bounds_mm": [
+        54.600000200000004,
+        11.600000200000004,
+        0.8000002000000037
+      ],
+      "volume_mm3": 506.68800000000005
+    },
+    {
+      "name": "ambient-diffuser-1p0",
+      "material": "translucent PETG",
+      "orientation": "flat",
+      "purpose": "Compare glare/hot spots and low/night brightness with the real strip at5.3mm minimum separation.",
+      "valid_solids": 1,
+      "bounds_mm": [
+        54.600000200000004,
+        11.600000200000004,
+        1.0000002000000037
+      ],
+      "volume_mm3": 633.3599999999999
+    },
+    {
+      "name": "ambient-diffuser-1p2",
+      "material": "translucent PETG",
+      "orientation": "flat",
+      "purpose": "Compare glare/hot spots and low/night brightness with the real strip at5.3mm minimum separation.",
+      "valid_solids": 1,
+      "bounds_mm": [
+        54.600000200000004,
+        11.600000200000004,
+        1.2000002000000036
+      ],
+      "volume_mm3": 760.0319999999999
+    },
+    {
+      "name": "carrier-fit-section-head-right-integral-outlet",
+      "material": "PETG",
+      "orientation": "axial face on bed; orient individually in slicer",
+      "purpose": "Source-matched side section: test0.8mm radial TPU,0.4mm axial lips and0.3mm rigid stop gap; assess compression and captive fit.",
+      "valid_solids": 1,
+      "bounds_mm": [
+        9.063633031295396,
+        9.426397824264427,
+        28.426397824264424
+      ],
+      "volume_mm3": 1273.043550596006
+    },
+    {
+      "name": "carrier-fit-section-rigid-motor-carrier-PCD16",
+      "material": "PETG",
+      "orientation": "axial face on bed; orient individually in slicer",
+      "purpose": "Source-matched side section: test0.8mm radial TPU,0.4mm axial lips and0.3mm rigid stop gap; assess compression and captive fit.",
+      "valid_solids": 1,
+      "bounds_mm": [
+        5.4308713749209545,
+        6.033625007609842,
+        28.03362500760988
+      ],
+      "volume_mm3": 675.0610066435869
+    },
+    {
+      "name": "carrier-fit-section-TPU-carrier-isolation-ring-development",
+      "material": "TPU95A",
+      "orientation": "axial face on bed; orient individually in slicer",
+      "purpose": "Source-matched side section: test0.8mm radial TPU,0.4mm axial lips and0.3mm rigid stop gap; assess compression and captive fit.",
+      "valid_solids": 1,
+      "bounds_mm": [
+        6.2387897880748895,
+        6.849461834019735,
+        28.049461834019734
+      ],
+      "volume_mm3": 224.74281651619145
+    },
+    {
+      "name": "ambient-M1p6-post-coupon",
+      "material": "PETG",
+      "orientation": "bottom face on bed",
+      "purpose": "Test3mm-diameter M1.6 cap head on genuine1426 hole with adjacent rear package. Nominal head clearance is only0.12mm.",
+      "valid_solids": 1,
+      "bounds_mm": [
+        4.801492126396083,
+        4.800000200000001,
+        8.001196849296859
+      ],
+      "volume_mm3": 95.68113125589412
+    },
+    {
+      "name": "front-encoder-horizontal-encoder-mount-development",
+      "material": "PETG",
+      "orientation": "flat front plate or disk face on bed",
+      "purpose": "Current front encoder: test D-flat grip, nut trap, separate PCB support, in-plane rotation and actual switch travel before full base.",
+      "valid_solids": 1,
+      "bounds_mm": [
+        35.00000020000002,
+        28.000000200000017,
+        9.902067139694582
+      ],
+      "volume_mm3": 2506.558454482205
+    },
+    {
+      "name": "front-encoder-horizontal-encoder-thumbwheel-development",
+      "material": "PETG",
+      "orientation": "flat front plate or disk face on bed",
+      "purpose": "Current front encoder: test D-flat grip, nut trap, separate PCB support, in-plane rotation and actual switch travel before full base.",
+      "valid_solids": 1,
+      "bounds_mm": [
+        29.98264996914654,
+        29.982649969101132,
+        8.00407854066912
+      ],
+      "volume_mm3": 5393.621518267972
+    },
+    {
+      "name": "front-encoder-fascia-section",
+      "material": "PETG",
+      "orientation": "cut rear face on bed",
+      "purpose": "Assemble wheel/mount/PCB here. Check rim, press force, 9.4mm projection from LCD face, screen-side hand clearance and fastener access.",
+      "valid_solids": 1,
+      "bounds_mm": [
+        40.14936826775645,
+        38.20153394631981,
+        21.118353618969877
+      ],
+      "volume_mm3": 6276.199730924499
+    },
+    {
+      "name": "aiming-6deg-trial-rail-print-two",
+      "material": "PETG",
+      "orientation": "large X side on bed",
+      "purpose": "Optional paired trial under four feet. Add nonslip pads. Measure desk slip/tip under6N wheel press and cable pull; no qualified tilt claim.",
+      "valid_solids": 1,
+      "bounds_mm": [
+        18.000000200000038,
+        150.00000020000004,
+        19.7656354898515
+      ],
+      "volume_mm3": 26423.50704860404
+    }
+  ],
+  "input_sha256": {
+    "cad\\rev_c_testpieces.py": "f272a743e14254a3528425dd1ed83b37ab427d913a0cd522a01e428aa597b973",
+    "cad\\rev_c\\head-validation.json": "d86806561d12743b9f352ef83ca5a894a2c32c05766e483d3d3d3fc653adeabb"
+  },
+  "artifact_sha256": {
+    "cad\\rev_c\\testpieces\\aiming-6deg-trial-rail-print-two.step": "6d266d8269e3e7f00f28f29832c99d7b34c000aea1bb53975494119297134a3a",
+    "cad\\rev_c\\testpieces\\aiming-6deg-trial-rail-print-two.stl": "a0c020c1259fa867b1d80d9e03d604242ae65cf7e7ccbb4855552773b94252c2",
+    "cad\\rev_c\\testpieces\\ambient-diffuser-0p8.step": "1ea85cc0765310aff8c1fffd53eab322e2cde34f4bcca2ed5045cc9ae72f223c",
+    "cad\\rev_c\\testpieces\\ambient-diffuser-0p8.stl": "a80966532c741333ef4802dd29118b03242d71889179f87464e16c51e314999f",
+    "cad\\rev_c\\testpieces\\ambient-diffuser-1p0.step": "5538be6f9dc99d207ac9f1882d2c530824962e5202ba65d1432d006d6af1e982",
+    "cad\\rev_c\\testpieces\\ambient-diffuser-1p0.stl": "1b363d3a8810b257d8efd0fc6a5df3351a957a0566606413bd1c606cfaa7789c",
+    "cad\\rev_c\\testpieces\\ambient-diffuser-1p2.step": "3a658f29c48233c96a6e91603df6addd475d124ff1b1bf125f5bd96959a1d897",
+    "cad\\rev_c\\testpieces\\ambient-diffuser-1p2.stl": "4a86f1b35da7b25bdd894b9bc738c5ba62ad0af71f22af41e74ee6307c4e8f55",
+    "cad\\rev_c\\testpieces\\ambient-M1p6-post-coupon.step": "3ee168dc4597afda1a3f89ac36872e464817a549c460c84cd6d2470cd8566a32",
+    "cad\\rev_c\\testpieces\\ambient-M1p6-post-coupon.stl": "ea20e69d38206c80dd7d20f8959869a8c40a72a6a56f6d2a682ac033ff1c2ed9",
+    "cad\\rev_c\\testpieces\\carrier-fit-section-head-right-integral-outlet.step": "6046cc1a3ce17f3eda2ea7c000f56f5577379c66783f1fa6cf8582ef980a23dc",
+    "cad\\rev_c\\testpieces\\carrier-fit-section-head-right-integral-outlet.stl": "394ec33f5cd80c8e58359a1a457ff5d18a7d6d8f923525702a4189463a5f56e9",
+    "cad\\rev_c\\testpieces\\carrier-fit-section-rigid-motor-carrier-PCD16.step": "6b796f0fe8dc9428996730d2522c34af96c2084a276e924e457009666fc919d5",
+    "cad\\rev_c\\testpieces\\carrier-fit-section-rigid-motor-carrier-PCD16.stl": "f316e27e243220de48bf251a3595286555f86c976af8175500b414f9d010d242",
+    "cad\\rev_c\\testpieces\\carrier-fit-section-TPU-carrier-isolation-ring-development.step": "0df075bcc83addc76c5f9c8c7267b117cce24649171357f1b183a00d52d17160",
+    "cad\\rev_c\\testpieces\\carrier-fit-section-TPU-carrier-isolation-ring-development.stl": "a89e343c7f8433fdef345e0327a05c2b4921d423352ce2768c3ee56e11651f43",
+    "cad\\rev_c\\testpieces\\D42-magnet-pocket-ladder.step": "035d22941e9beb123c76097868e395f7930d3d488686d225dc3d7ebecf0815c1",
+    "cad\\rev_c\\testpieces\\D42-magnet-pocket-ladder.stl": "40888d9c9c5d3f57208d592128879fa7667215504bbcf99226856edb7d46844a",
+    "cad\\rev_c\\testpieces\\D42-test-keeper.step": "128ffd2e02d3adb7ade42a5f6137047a47c87022226290020ebb6f1203b69392",
+    "cad\\rev_c\\testpieces\\D42-test-keeper.stl": "d4ee5cea75a305ccfd67823515a5e3a901b7fc9a69c396c0b22a58eaa5868c7b",
+    "cad\\rev_c\\testpieces\\front-encoder-fascia-section.step": "e47527a28481b73698bb3f85642df280930df62fcfb17520f82a3bdf5764f33f",
+    "cad\\rev_c\\testpieces\\front-encoder-fascia-section.stl": "f10ac43e079e8adc3fd51837b268a3ecc05cbd401f733cad1a85cb97ed8db1b3",
+    "cad\\rev_c\\testpieces\\front-encoder-horizontal-encoder-mount-development.step": "9c58018e108d36f28ad8c71d60e118b7953bf8761ff8a99a3c3498f320058a13",
+    "cad\\rev_c\\testpieces\\front-encoder-horizontal-encoder-mount-development.stl": "46eaf047756ffa0f98cba4363578e41f0aba897a24c31d90f668392e70fb989f",
+    "cad\\rev_c\\testpieces\\front-encoder-horizontal-encoder-thumbwheel-development.step": "67aeb3a895dd11f0745d98c798dd92c9aa176df15efb8e4e9c1bdaba2352bd60",
+    "cad\\rev_c\\testpieces\\front-encoder-horizontal-encoder-thumbwheel-development.stl": "202a5ce74ab083ff5ce7ec839a1ed9b02c186d2643a52c8e502cc8293776dcf1",
+    "cad\\rev_c\\testpieces\\hinge-3mm-horizontal-bore-ladder.step": "694e07aa1bd9e24e4776744fa16ecc0e41d5c15d38554fdb036fc7e864359611",
+    "cad\\rev_c\\testpieces\\hinge-3mm-horizontal-bore-ladder.stl": "f0b79571d33dc287c8d07f6f40a533e6ad8222f5b39b65d1600ff2d964bc3079",
+    "cad\\rev_c\\testpieces\\insert-M2-pilot-ladder.step": "2e6c7c88f2dda0a27631cccc941d90b0fba6508a45637fd3510fd5b7a766267a",
+    "cad\\rev_c\\testpieces\\insert-M2-pilot-ladder.stl": "89dd9315ef4c6bf4ea25c74875470f88251e70afb8b8c4937458ec31b83e67b6",
+    "cad\\rev_c\\testpieces\\insert-M3-pilot-ladder.step": "cab697846c6ed42baf3eeeca8510256b67832f47c0d81b9153a07abdf54523af",
+    "cad\\rev_c\\testpieces\\insert-M3-pilot-ladder.stl": "d23c046e8d2986f60e267ee36f38d246657f1ccec0e72e85cf7b301b1da0fa75"
+  }
+}

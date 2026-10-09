@@ -1,0 +1,26 @@
+Drill report for windflow-encoder.kicad_pcb
+Created on 2026-10-05T17:53:45
+
+Copper Layer Stackup:
+    =============================================================
+    L1 :  F.Cu                      front
+    L2 :  B.Cu                      back
+
+
+Drill file 'windflow-encoder-PTH.drl' contains
+    plated through holes:
+    =============================================================
+    T1  0.300mm  0.0118"  (1 hole)
+    T2  0.950mm  0.0374"  (4 holes))
+    T3  1.100mm  0.0433"  (5 holes))
+    T4  1.600mm  0.0630"  (2 holes)  (with 2 slots)
+
+    Total plated holes count 12
+
+
+Drill file 'windflow-encoder-NPTH.drl' contains
+    unplated through holes:
+    =============================================================
+    T1  2.400mm  0.0945"  (2 holes))
+
+    Total unplated holes count 2

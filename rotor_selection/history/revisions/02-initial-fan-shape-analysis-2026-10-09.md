@@ -1,0 +1,151 @@
+# Windflow fan shape, airspeed and noise study
+
+9 October 2026. Analytical design selection for the existing P2406 motor. The user permits rearranging the inlet and electronics base, retaining the screen and controls, within a **200 mm complete product height**.
+
+**Recommended first candidate: a 150 mm, five-blade ducted axial rotor with cambered, twisted, moderately swept blades, a rounded inlet, a matched outlet stator and a smooth adjustable contraction.** Design the rotor for the pressure required by the outlet, rather than enlarging a free-air propeller. Use a mild mixed-flow rotor as the primary competing design if the axial stage loses too much flow under contraction. This is an engineering selection to develop and compare; no measured curve establishes a fastest or quietest winner yet.
+
+![Calculated size, loading, boost and height tradeoffs](fan-shape-study-2026-10-09/fan-tradeoffs.png)
+
+## Existing motor and actual constraints
+
+The current files specify the **T-Motor / LIGPOWER Pacer V4 P2406 Juicy 2060KV**, not the historical packaged Noctua fan. Its manufacturer gives a 30.2 mm diameter, 31 mm axial envelope, M5 propeller shaft, four M3 mounting holes on a 16 mm pitch circle, and 12N14P configuration. The published 48 A / 1,116 W figures are **one-second peaks at drone operating conditions**; they do not establish a continuous desktop rating. The motor's published propeller data are around 9,600–33,000 RPM, far above the proposed desktop regime. [Motor specification and test data](https://www.ligpower.com/product/p2406-fpv-freestyle-motor.html).
+
+The active architecture uses an **A50S V2.3c controller**, 15 V / 3 A USB PD, an **18 W ESC-plus-motor input cap**, an initial **3 A phase-current cap**, and a 3,000 RPM guarded commissioning ceiling. The separate 5,000 RPM calculation is not operating qualification. The ESC supports sensorless FOC and speed control; its 20 A advertised motor-current capability does not qualify this motor, wiring or rotor for that current. [ESC specification](https://teamtriforceuk.com/a50s-v2/), [current local electrical specification](../hardware/rev_c/motor-esc-specification.json), [power architecture](rev-c-motor-power.md).
+
+At 15 V, KV × voltage gives approximately 30,900 RPM ideal no-load speed. This is neither the desired speed nor a usable full-throttle command for a large desktop impeller. Full useful capability means using the **qualified torque, power and thermal envelope** efficiently. Using the motor's entire published peak would require a different supply and a different product design.
+
+### The phase-current limit can dominate before the 18 W limit
+
+A first motor-matching estimate uses torque = Kt × current and mechanical power = torque × angular speed. Two common current/voltage conventions give illustrative Kt values of **8.27 / 2060 = 0.00401** and **9.55 / 2060 = 0.00464 N·m/A**. The first is documented by ODrive for its phase-current convention; the second is the SI reciprocal of a speed constant. This bracket is **not a tolerance band or a calibrated conversion for the A50S/VESC**. Motor identification and torque/current measurements must resolve the applicable convention. [ODrive torque-constant guidance](https://newdocs.odriverobotics.com/v/latest/guides/odrivetool-setup.html).
+
+| Rotor speed | Electromagnetic power estimate at 3 A, before friction/core losses | Illustrative current for 10 W shaft output, before loss compensation |
+|---|---:|---:|
+| 1,500 RPM | 1.89–2.18 W | 13.7–15.9 A |
+| 2,000 RPM | 2.52–2.91 W | 10.3–11.9 A |
+| 2,500 RPM | 3.15–3.64 W | 8.2–9.5 A |
+| 3,000 RPM | 3.78–4.37 W | 6.9–7.9 A |
+
+These estimates show why a large rotor cannot be promised 18 W of useful shaft power with the present 3 A setting. Supply current, phase current and shaft power are different quantities. Keep 3 A as the existing initial limit; qualify a revised torque/current envelope before expecting the larger rotor to use more of the electrical budget. The illustrative currents above are **design requirements to investigate, not controller settings to apply**. The motor's high-speed idle-current figure cannot be treated as a constant loss at low speed.
+
+If the 3 A cap must remain permanently, compare a 125–140 mm axial rotor as well: the larger 150 mm design may lose its advantage when the pressure requirement forces more torque than is available. A smaller rotor at higher speed can access more mechanical power at the same torque cap, with a potential noise penalty. No geared drive is proposed: its added noise and the motor's high-speed losses need separate justification.
+
+## What “fastest airspeed” means for this selection
+
+Rank designs primarily by **area-average outlet velocity** with the complete guards, stator and nozzle fitted, at equal available electrical/thermal limits. Also measure centerline velocity and the velocity profile at 0.5 m and 1 m. A tiny local high-speed spot should not outrank a useful, stable jet.
+
+Average velocity is Q / A. Maximizing flow alone, RPM alone, or pressure alone will not maximize useful outlet velocity. The complete fan curve and the inlet/guard/stator/nozzle resistance determine Q. Exit speed and downstream throw also differ because entrainment and jet spreading change the profile.
+
+Compare noise both **at equal useful outlet speed** and at each design's maximum allowed output. The first comparison identifies aerodynamic/acoustic efficiency; the second shows the cost of ultimate performance. Record A-weighted sound plus narrow-band or one-third-octave data so an intrusive tone cannot disappear inside one overall number.
+
+## Shape comparison
+
+These are reasoned architectural expectations, not measured rankings or numerical performance predictions. The fan manufacturer describes pressure requirement and separation as decisive in choosing axial, diagonal and centrifugal designs. [Architecture and pressure explanation](https://mag.ebmpapst.com/en/insights/axial-diagonal-centrifugal_2447/).
+
+| Shape | Fit to airspeed and boost | Noise/loading considerations | Selection |
+|---|---|---|---|
+| Two/three narrow, propeller-like blades | Good low-restriction flow; limited solidity makes pressure demand harder to satisfy at low RPM | Low blade count does not guarantee low sound; greater loading per blade and higher required speed can create strong pulses | Comparator only; poor first choice for a contracted guarded outlet |
+| Five broad, cambered, twisted, moderately swept axial blades | Direct flow path, useful pressure potential and enough blade area without excessive solidity | Balance between blade loading, profile drag and interaction tones; needs clean inlet, finished edges and a matched stator | **Preferred first candidate at 150 mm** |
+| Seven narrower swept axial blades at similar total solidity | Can distribute loading and improve the usable pressure range, depending on section design | More blades shift blade-passing frequency upward; equal total solidity matters; either better or worse acoustics is possible | Main blade-count comparison |
+| Mild mixed-flow / diagonal rotor | Adds a radial component that may retain flow better through the contraction | Can combine pressure and noise advantages when designed as a complete stage; conical hub/shroud and flow return add complexity | **Primary alternative if axial boost flow collapses** |
+| Backward-curved centrifugal impeller with scroll and outlet | Strong candidate for pressure and a deliberately narrow jet | Scroll/tongue/inlet interactions and turning losses need tuning; a well-designed blower can be quiet, but the existing axial layout cannot simply accept it | Reconsider if maximum narrow-jet speed outweighs the present layout and broad-flow goal |
+| Many-blade, high-speed EDF-style rotor | Pressure/high-speed jet focus | Higher speed and tonal content conflict with the quiet desktop objective; torque/18 W limit still applies | Low priority |
+| Cross-flow cylindrical rotor | Broad, even slot flow | Different scroll geometry and motor loading; not the natural first choice for concentrated forward airspeed | Low priority |
+
+Commercial mixed-flow results demonstrate that greater pressure does not inevitably mean greater noise. Their measured benefits cannot be transferred numerically to this printed prototype. [Manufacturer's mixed-flow example](https://mag.ebmpapst.com/en/industries/electronics/diaforce-diagonal-fan-combines-axial-and-centrifugal-in-one-fan_14990/).
+
+## Diameter: lower RPM must retain enough pressure
+
+For geometrically similar fans at corresponding operating points and approximately equal efficiency:
+
+`Q ∝ N D³`, `Δp ∝ N² D²`, `Pshaft ∝ N³ D⁵`, `Tshaft ∝ N² D⁵`.
+
+At equal flow, this gives `N ∝ D⁻³`, `Δp ∝ D⁻⁴` and `Tshaft ∝ D⁻¹`. Thus a simply enlarged fan does **not** automatically need more torque at equal flow: its pressure and power have also fallen. At the **same required flow and pressure**, useful air power remains Q × Δp; lower RPM then demands more torque for the same shaft power. [Fan laws](https://beckettair.com/resources/fan-laws/), [geometric-similarity assumptions](https://ansyshelp.ansys.com/public/Views/Secured/MotorCAD/v252/en/Motor-CAD_UG/MotorCAD/topics/airflow.html).
+
+| Diameter | RPM to match the flow of a similar 112 mm fan at 3,000 RPM | Tip speed at that point | Pressure retained at that point | Shaft power multiplier if instead kept at 3,000 RPM |
+|---|---:|---:|---:|---:|
+| 112 mm | 3,000 | 17.6 m/s | 100% | 1.00× |
+| 125 mm | 2,158 | 14.1 m/s | 64% | 1.73× |
+| 140 mm | 1,536 | 11.3 m/s | 41% | 3.05× |
+| 150 mm | 1,249 | 9.8 m/s | 31% | 4.31× |
+| 160 mm | 1,029 | 8.6 m/s | 24% | 5.95× |
+| 170 mm | 858 | 7.6 m/s | 19% | 8.06× |
+
+This is a scaling demonstration, **not an RPM schedule for the actual new rotor**. Keeping the same motor, a 40 mm hub and the same outlet breaks exact geometric similarity. The 150 mm selection is a compromise: appreciably more area than the current 112 mm rotor, while leaving room for the inlet and a pressure-capable stage. A 160–170 mm rotor increases packaging and torque/pressure-design difficulty without a demonstrated useful-speed advantage.
+
+At the same 3,000 RPM, a 150 mm tip moves at 23.6 m/s, faster than the present 112 mm rotor's 17.6 m/s. **Larger diameter is quieter only when the required operating speed and aerodynamic loading permit it.** Compare complete stages at equal useful output.
+
+## Proposed blade and stage geometry
+
+Use five evenly spaced blades as the baseline, and seven blades with comparable total solidity as the comparison. Avoid choosing a count from appearance or assuming relatively prime rotor/stator counts eliminate noise.
+
+- **150 mm rotor; approximately 40 mm hub.** The hub-to-tip diameter ratio is 0.267, leaving about 93% of disk area outside the hub. Preserve the purchased motor/shaft interface and keep root reinforcement out of the main working span.
+- **Cambered airfoil sections with spanwise twist.** Start from relative-flow alignment, include actual swirl and required pressure in refinement, and avoid one flat pitch across the blade. The current geometric 5 m/s pitch-design value is not a measured flow prediction.
+- **Broad mid-span chord and gradual tip taper.** An initial study range is roughly 28–32 mm near the working root, 30–34 mm at mid-span and 18–22 mm near the tip. Refine chord/solidity and incidence from loading, torque and separation, rather than merely scaling the old profile.
+- **Moderate, smooth sweep in the outer span.** Compare unswept and moderately forward-swept planforms at matched loading. Sweep may spread interaction loading in time; its direction and magnitude need acoustic/aerodynamic comparison.
+- **Rounded leading edges and a consistently finished, thinner trailing edge.** The current outer 1.2 mm trailing-edge diameter on a 14 mm tip chord is relatively blunt. Investigate thinner process-resolved edges without compromising the qualified print/strength envelope; an attractive thin CAD edge is not sufficient.
+- **A removable, curved, incidence-matched stator after the motor support.** Use the present seven-vane straightener as a control article, and compare an open spacer. Streamline support struts and adjust spacing to reduce rotor-wake interaction; select the stator by net outlet speed, power and noise.
+- **Rounded inlet and smooth contraction.** Keep internal seams flush and avoid abrupt steps, crowded guards and short sharp-edged slots. The nominal 1 mm radial tip gap is a fit-study starting point; actual deflection/runout determines the feasible gap.
+
+Blade-tip leakage and rotor/stator interactions are established noise mechanisms, but the cited results do not supply a dBA prediction for Windflow. [Blade/housing tip interaction](https://mag.ebmpapst.com/en/products/fans/the-formula-for-vorticity_11766/), [NASA blade/vane-count and spacing investigation](https://ntrs.nasa.gov/citations/19850011481).
+
+Retaining the 104 × 94 mm gross outlet with a 150/40 mm rotor gives **0.009776 / 0.016415 = 0.596** outlet-to-rotor-annulus area ratio. At the current 75% panel endpoint it is **0.447**. These ratios make the pressure requirement material. Include guards and rounded corners in the actual free-area model; give the contraction adequate length and tune its endpoint. This is why a large low-pressure propeller is insufficient and a mixed-flow comparison is valuable.
+
+## Complete 200 mm height budget
+
+The existing head report matches the current Rev C geometry hashes checked by this study. Across the **71 exported part groups**, the recorded installed bounds extend from **Z = −126.003 mm at the feet** to **Z = +89.848 mm at the curved linkage fairing**, a total of **215.851 mm**. This is report-derived geometry evidence, not a physical measurement or a new CAD rebuild. [Existing local bounds](../cad/rev_c/head-validation.json), [matching export part list](../cad/rev_c/integration-export-validation.json).
+
+For the new layout, use this preliminary budget:
+
+| Item | Vertical budget |
+|---|---:|
+| Rotor | 150 mm diameter |
+| Throat at nominal 1 mm radial clearance | 152 mm diameter |
+| Inlet with 12 mm lip radius and 2.4 mm wall | 180.8 mm outer diameter |
+| Complete head, including guards and linkage kept inside its envelope | 185 mm |
+| Base and feet extending below that head | 10 mm |
+| **Target complete product height** | **195 mm** |
+| Reserve to user's maximum | **5 mm** |
+
+The 10 mm extension is a structural plinth/feet budget, **not** the height available for all electronics. Place the screen and encoder in the front lower portion of the head, below the smaller outlet. The existing screen bezel is about 39.6 mm high: a centered 94 mm outlet in a 185 mm head leaves 45.5 mm below it, approximately enough for that bezel plus a 5 mm gap. Reserve more space where fasteners, lenses and cable access need it.
+
+Place the controller and other electronics in downstream lower/side pockets **outside the air duct**. Use width/depth rather than adding height; preserve the visible screen status band, encoder orientation, service access and independent electronics cooling. Reposition the linkage so its fairing stays inside the head budget. This needs revised CAD and assembly clearance verification; the arithmetic alone does not demonstrate fit or manufacturability.
+
+## Make boost visibly useful without sacrificing normal quietness
+
+The current control maps normal maximum and boost to the **same maximum rotor speed**, with boost closing the outlet. Thus boost presently relies entirely on sufficient flow retention during contraction. Preserve the full fresh encoder turn to arm boost and the progressive control afterwards.
+
+For the current 75% area endpoint, at the **same RPM**:
+
+| Boost flow / normal flow | Boost velocity / normal velocity | Change |
+|---|---:|---:|
+| 100% | 1.333× | +33.3% |
+| 95% | 1.267× | +26.7% |
+| 90% | 1.200× | +20.0% |
+| 85% | 1.133× | +13.3% |
+| 80% | 1.067× | +6.7% |
+| 75% | 1.000× | No increase |
+| 70% | 0.933× | −6.7% |
+
+A **20% measured speed increase requires at least 90% flow retention** at 75% area. A 25% increase requires at least 93.75%. Smaller area alone cannot guarantee the requested effect.
+
+The recommended control development is to reserve roughly **15–20% of qualified maximum RPM** above normal maximum, then combine that RPM reserve with the measured beneficial panel travel. As a starting mapping, normal maximum could be 80% of qualified boost RPM, with the outlet open. For a similar stage at the same outlet, its aerodynamic power component would be about **0.8³ = 51.2%** of the boost-speed component, leaving meaningful power headroom. Do not equate this to a guaranteed 9.2 W electrical normal setting: fixed losses, efficiency and nozzle position change the operating point.
+
+During boost arming, hold normal maximum and open panels, as the current interaction requires. After arming, smoothly coordinate RPM and closure from a measured map. Target **at least 20% and preferably 25–30% higher area-average outlet velocity** than normal maximum, with a useful increase at 0.5 m. These are acceptance targets, not predicted outputs. Select the quietest map that satisfies them. If closure reduces flow or adds hiss without enough speed benefit, use less closure and more of the qualified RPM reserve.
+
+Retain the 18 W input limit and qualified current, RPM and thermal limits. The current 18/24 Pa pressure settings are unqualified restriction-monitor values; they are not a fan curve or necessarily total fan pressure. Map them to actual tap measurements before tuning. They may prevent an effective boost if the chosen stage's measured pressures exceed them, but simply increasing them cannot establish a safe operating point.
+
+## What is and is not numerically established
+
+No trustworthy absolute m/s or dBA prediction is available without a fan curve, motor loss map and acoustic measurements. As an energy check only, a uniform ambient-pressure jet has `Pjet = 0.5 ρ A V³`. With rho = 1.2 kg/m³ and the current gross areas, putting **all 18 W input** into jet kinetic energy gives ideal ceilings of about **14.5 m/s open** and **16.0 m/s at 75% area**. These are unattainable loss-free ceilings, not performance estimates.
+
+Using the generous 3 A / 3,000 RPM electromagnetic estimate of 4.37 W instead gives corresponding ideal ceilings of about **9.1 and 10.0 m/s**, before motor friction, rotor/stator loss, swirl and guard/nozzle losses. Actual output must be below the applicable energy ceiling, and the Kt/current convention must first be resolved. These checks reinforce that the phase-current limit materially affects the airspeed target.
+
+## Comparison needed to select the final shape
+
+Compare the existing 112 mm P1, 150 mm five-blade axial, 150 mm seven-blade axial with similar total solidity, and a mild mixed-flow candidate. Include a 125–140 mm comparator if torque remains constrained. Establish the actual motor/rotor operating envelope before taking performance data; the existing printed rotor's development status cannot qualify a larger replacement.
+
+For each complete stage, record RPM, phase/input current, input power, temperatures, outlet velocity traverse/flow, pressure, velocity at 0.5/1 m, sound and vibration over open and progressively contracted positions. Test the stator and open-spacer variants at equal useful output. Rank the stages by maximum useful mean airspeed within the 200 mm envelope and qualified limits, then choose the lowest-noise normal operating point that retains the required boost increment.
+
+The present evidence supports the **150 mm swept/twisted five-blade axial stage as the first development choice**, with the mixed-flow stage as a serious pressure-focused comparator. It does not support declaring any untested shape the fastest or assigning it a sound level.
+
+Reproducible results: [calculation record](fan-shape-study-2026-10-09/calculations.json), [diameter comparison](fan-shape-study-2026-10-09/diameter-scaling.csv), [boost continuity calculation](fan-shape-study-2026-10-09/boost-retention.csv), [motor matching estimates](fan-shape-study-2026-10-09/motor-power-estimates.csv). Generated by [the study calculation](../tools/analyse_fan_shapes.py).

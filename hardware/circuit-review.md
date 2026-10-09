@@ -1,6 +1,6 @@
 # Electrical circuit review — E3
 
-Reviewed 2026-10-03 against the selected module documentation and the Pico firmware. This is an analytical/netlist review. No carrier PCB has been routed, manufactured, populated or electrically tested. The physical assembly is therefore not yet an electronics release.
+Reviewed 2026-10-05 against the selected module documentation and the Pico firmware, including the 5 V grille-contact loading and 3.3 V BUF4 interface. This is an analytical/netlist review. Main-carrier capture is in progress; no carrier PCB has been routed, manufactured, populated or electrically tested. The physical assembly is therefore not yet an electronics release.
 
 ## Concrete corrections made
 
@@ -14,6 +14,7 @@ Reviewed 2026-10-03 against the selected module documentation and the Pico firmw
 | Raw PD output drove bulk capacitance without controlled startup | EF1 before reservoir and regulator bank; current limit and OVP | No GPIO added; low-voltage input may leave status dark |
 | Fan fuse order code was incorrect; connectors were unspecified sets | Corrected 0451.500MRL and fixed electrical harness quantities/pin order | None |
 | TFT BL 2.2k pulldown left 0.60 V during high-impedance reset, above some BSS138 minimum thresholds | R56=1k at the screen; spare BUF2 channel 3 drives BL, with R59=100k GPIO-side pulldown | Same GP16 and noninverting 2 kHz PWM; powered reset drives BL LOW |
+| Grille gold contact at3.3 V /0.70 mA was below Omron's1 mA /5 V reference load | R5=3.9k to5 V; BUF4 SN74LVC1G17DBVR at3.3 V with5.5 V tolerant input/Ioff, C31/C32 and R60 | Same GP15 and active-low guard logic; never connect raw5 V to GPIO |
 
 The specified Nexperia buffers characterize input leakage with supply at zero; the separate switched supplies remove an always-on buffer output from the servo and pixels. Their outputs are not universally power-off tolerant and must not be driven by another powered source. [Quad buffer](https://assets.nexperia.com/documents/data-sheet/74AHC_AHCT125.pdf), [single buffer](https://assets.nexperia.com/documents/data-sheet/74AHC_AHCT1G125.pdf).
 

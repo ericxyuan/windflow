@@ -1,0 +1,182 @@
+[
+  {
+    "original_relative_path": "README.md",
+    "saved_relative_path": "source-snapshots/workspace-README.md",
+    "bytes": 3897,
+    "sha256": "c48b7f91817b3c6371a45dd689f06b64f3ea92a0d000de960ae4e7a1d4965fd3"
+  },
+  {
+    "original_relative_path": "cad/rev_c/head-parameters.json",
+    "saved_relative_path": "cad/rev_c/head-parameters.json",
+    "bytes": 1719,
+    "sha256": "8f5ce5b28012ce864c9c0ad79ad5c6a62386bfbade4adb89ffc9b9456397dfd7"
+  },
+  {
+    "original_relative_path": "cad/rev_c/head-validation.json",
+    "saved_relative_path": "cad/rev_c/head-validation.json",
+    "bytes": 389456,
+    "sha256": "d86806561d12743b9f352ef83ca5a894a2c32c05766e483d3d3d3fc653adeabb"
+  },
+  {
+    "original_relative_path": "cad/rev_c/impeller-P1-GUARDED-TEST-ONLY.step",
+    "saved_relative_path": "cad/rev_c/impeller-P1-GUARDED-TEST-ONLY.step",
+    "bytes": 3346864,
+    "sha256": "e9d4bd5e3332050135be1f5a51f9d972ef1884283c81cbcb8d8379475e1bacbd"
+  },
+  {
+    "original_relative_path": "cad/rev_c/integration-export-validation.json",
+    "saved_relative_path": "cad/rev_c/integration-export-validation.json",
+    "bytes": 14214,
+    "sha256": "6fab962104f9eb992160151dfb9644ad2b427b3d3623014626b3cb3ea6a84dab"
+  },
+  {
+    "original_relative_path": "cad/rev_c/rotor-parameters.json",
+    "saved_relative_path": "cad/rev_c/rotor-parameters.json",
+    "bytes": 1563,
+    "sha256": "59b74ee67559b4795dae50023445f563dbe42848fd8083fd46a5ea0a4c8b81cb"
+  },
+  {
+    "original_relative_path": "cad/rev_c/rotor-validation.json",
+    "saved_relative_path": "cad/rev_c/rotor-validation.json",
+    "bytes": 9093,
+    "sha256": "0ce0b346700c9b53ac797101d6fad9cfe9aa5c420a3a432e4f1861312293a7bf"
+  },
+  {
+    "original_relative_path": "cad/rev_c_guards.py",
+    "saved_relative_path": "cad/rev_c_guards.py",
+    "bytes": 5334,
+    "sha256": "70904329a5401c8ce751bee6ae9152c54142794286e65bc1096ed931b429e6c6"
+  },
+  {
+    "original_relative_path": "cad/rev_c_head.py",
+    "saved_relative_path": "cad/rev_c_head.py",
+    "bytes": 27195,
+    "sha256": "a6432958b5eadeacef8258fd92a9baaff1cf2de178ecf18f45e9c4dadbe259fc"
+  },
+  {
+    "original_relative_path": "cad/rev_c_service.py",
+    "saved_relative_path": "cad/rev_c_service.py",
+    "bytes": 12145,
+    "sha256": "6e468db68eefc4a12e637041386efb3fb16f2f46db88b0ea8ca2f1b0c10d47cd"
+  },
+  {
+    "original_relative_path": "docs/fan-shape-analysis-2026-10-09.md",
+    "saved_relative_path": "docs/fan-shape-analysis-2026-10-09.md",
+    "bytes": 20460,
+    "sha256": "21f4e3d3d03563142e4fc0cac2b32664492dd1f075c522cf4828d31a8b4590b1"
+  },
+  {
+    "original_relative_path": "docs/fan-shape-study-2026-10-09/boost-retention.csv",
+    "saved_relative_path": "docs/fan-shape-study-2026-10-09/boost-retention.csv",
+    "bytes": 390,
+    "sha256": "e633864a42c5fdc0748ac5d1b2fffa7a69c5aa060c428b9dc145bd0fe4306896"
+  },
+  {
+    "original_relative_path": "docs/fan-shape-study-2026-10-09/calculations.json",
+    "saved_relative_path": "docs/fan-shape-study-2026-10-09/calculations.json",
+    "bytes": 10237,
+    "sha256": "c5b2302515a039ce961c9e8b37f472fec79320f2d20a7313ed081d7342c70199"
+  },
+  {
+    "original_relative_path": "docs/fan-shape-study-2026-10-09/diameter-scaling.csv",
+    "saved_relative_path": "docs/fan-shape-study-2026-10-09/diameter-scaling.csv",
+    "bytes": 716,
+    "sha256": "fcecceba841dd6766eda9862f984961f0cc711a111e14146b0130cbe7b86cfe3"
+  },
+  {
+    "original_relative_path": "docs/fan-shape-study-2026-10-09/fan-tradeoffs.png",
+    "saved_relative_path": "docs/fan-shape-study-2026-10-09/fan-tradeoffs.png",
+    "bytes": 388442,
+    "sha256": "80c8fde84c04c5e1b840edc4fb264a8c69726ad78cff60b3c244a3a38ec8df5d"
+  },
+  {
+    "original_relative_path": "docs/fan-shape-study-2026-10-09/fan-tradeoffs.svg",
+    "saved_relative_path": "docs/fan-shape-study-2026-10-09/fan-tradeoffs.svg",
+    "bytes": 215433,
+    "sha256": "374db083f94ff633bd0f3eabd44d6cfdd5b4afd40c9035aec6c9eee83a272896"
+  },
+  {
+    "original_relative_path": "docs/fan-shape-study-2026-10-09/motor-power-estimates.csv",
+    "saved_relative_path": "docs/fan-shape-study-2026-10-09/motor-power-estimates.csv",
+    "bytes": 467,
+    "sha256": "77565f5e087aff565db8d21a18c384e976f374a78370f5902590d081534019e1"
+  },
+  {
+    "original_relative_path": "docs/fan-shape-study-2026-10-09/rotor-and-layout-concept.png",
+    "saved_relative_path": "docs/fan-shape-study-2026-10-09/rotor-and-layout-concept.png",
+    "bytes": 216842,
+    "sha256": "71ab893b7488d47dd2a5e2cb5c97ae98c9ad75a56ad940f21f689d9f92a0087e"
+  },
+  {
+    "original_relative_path": "docs/fan-shape-study-2026-10-09/rotor-and-layout-concept.svg",
+    "saved_relative_path": "docs/fan-shape-study-2026-10-09/rotor-and-layout-concept.svg",
+    "bytes": 85231,
+    "sha256": "16f85283b6f89ed6c0cd403b42b6557ff8e3cd13c67ddd44ae67c3dfac15756c"
+  },
+  {
+    "original_relative_path": "docs/rev-c-airflow-and-mechanism.md",
+    "saved_relative_path": "docs/rev-c-airflow-and-mechanism.md",
+    "bytes": 6425,
+    "sha256": "40a70b075378e731253700b0914587c7d8230a5cd909aa4128150115e6e35c15"
+  },
+  {
+    "original_relative_path": "docs/rev-c-firmware.md",
+    "saved_relative_path": "docs/rev-c-firmware.md",
+    "bytes": 16225,
+    "sha256": "a88de553b0f4849315e38891dab9bf2305eb879941b08358bc49e0699c50c7a4"
+  },
+  {
+    "original_relative_path": "docs/rev-c-impeller.md",
+    "saved_relative_path": "docs/rev-c-impeller.md",
+    "bytes": 9280,
+    "sha256": "58db43b4997cd58135dd273a984fb2d6b8bac02f17c4029826153673111f7d7d"
+  },
+  {
+    "original_relative_path": "docs/rev-c-motor-power.md",
+    "saved_relative_path": "docs/rev-c-motor-power.md",
+    "bytes": 14473,
+    "sha256": "e6001ecbf700135a35dee7c1425e41139c23417e63fd5cc13a623eba219322bb"
+  },
+  {
+    "original_relative_path": "firmware/WindflowRevC/Config.h",
+    "saved_relative_path": "firmware/WindflowRevC/Config.h",
+    "bytes": 3288,
+    "sha256": "c13b763b6635d06f87cc1235e606dbdc4c7dac3be7403f684ca89abc389d45b9"
+  },
+  {
+    "original_relative_path": "firmware/WindflowRevC/Control.cpp",
+    "saved_relative_path": "firmware/WindflowRevC/Control.cpp",
+    "bytes": 18277,
+    "sha256": "5f3e527468ddd0b772c1f2dd8e001c13ee037c4b2cdbc2518a8da35e85aa69e8"
+  },
+  {
+    "original_relative_path": "hardware/power-budget.md",
+    "saved_relative_path": "hardware/power-budget.md",
+    "bytes": 7054,
+    "sha256": "39d8458525191ea511af9dd0f6be729d101dca18def18e97648957c118953db8"
+  },
+  {
+    "original_relative_path": "hardware/rev_c/motor-esc-specification.json",
+    "saved_relative_path": "hardware/rev_c/motor-esc-specification.json",
+    "bytes": 3220,
+    "sha256": "08454b9588d56389cbdb9df402b3e79c82b74d685291ae9266ccc6fe78a84b5d"
+  },
+  {
+    "original_relative_path": "tools/analyse_fan_shapes.py",
+    "saved_relative_path": "tools/analyse_fan_shapes.py",
+    "bytes": 18213,
+    "sha256": "8641a695a4c0ff3053ee113f07f2040413dd5bb92e8de9d4e557462467bc9c9b"
+  },
+  {
+    "original_relative_path": "tools/kicad-runtime.json",
+    "saved_relative_path": "tools/kicad-runtime.json",
+    "bytes": 1091,
+    "sha256": "c68bccc0eafa4dd4b3fd2568469ed95471b58975df965ca331a9a85828211c54"
+  },
+  {
+    "original_relative_path": "tools/routing-dependencies.json",
+    "saved_relative_path": "tools/routing-dependencies.json",
+    "bytes": 1224,
+    "sha256": "8e68ac98bfe1940427765cbc5cd241e0dc20f0545802504824482d8a6723fcd5"
+  }
+]

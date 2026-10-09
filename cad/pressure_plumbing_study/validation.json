@@ -1,0 +1,552 @@
+{
+  "completed_utc": "2026-10-05T17:21:31.485100+00:00",
+  "script_sha256": "a8b3a84ee563bdd811bb51ff6f9d655f3b55a34ebb5db99ae55fb1070c8ac23b",
+  "geometry_sha256": "daefc1c06ad87eba48eda5e841118e6e9768f870ad091b3354b4aec62d035c2d",
+  "baseline_sha256": {
+    "baseline\\Adafruit-HUSB238-5807-vendor.step": "6e9f1ee808e196f9e83df79fad04dc744150ca0c73733b751734859e6c75071c",
+    "baseline\\Adafruit-NeoPixel-1426-ambient-vendor.step": "51289949bd948655e1d2c9dc14ff05b7ee42b78c65adf6608f5fa87567f9bff0",
+    "baseline\\Adafruit-ST7789-4311-display-vendor.step": "e62cc79add7c191588fbc44f9623f6d332c34f9daf61b2b14b16694b50b40d13",
+    "baseline\\ambient-diffuser-keeper.step": "d92ef1c57801e221b8507d45921f31bf116f8b13710dceefc4ddd3e7bb424064",
+    "baseline\\ambient-light-diffuser.step": "36234066fc345534b68f713d1aa117543e61a056a937e2144a9c2985b4aaf85b",
+    "baseline\\base-validation.json": "cdcf4c2cf21181bf945c2fafb8a12a95237da884606a4e7de9110cfc24927450",
+    "baseline\\build_base.py": "52df714ec02592f006d0e10bdc20ae2c633e430f6c4831b9df2715738bc3a009",
+    "baseline\\build_head.py": "0c7d6fd9aaa4dc68befcb28e82907407647fb93da1fcedc507d6140b630c49ff",
+    "baseline\\display-front-bezel.step": "50750dbabe213394ca16eb2d6a07e6c1f7e1b53798bd9dce20888302750f0150",
+    "baseline\\display-removable-cradle.step": "febbd072732571440a5058cadfde41a5b3af92b9ab4a4e99377d54ad24542d8f",
+    "baseline\\electronics-base-shell.step": "e4df173cd018d7b4a33328c2a930f60d7438c6533436082c1053d08ac51195fd",
+    "baseline\\electronics-service-tray.step": "a2b9b6e6889df8bb4c7cad42dc05e16fde84cc7300ef79225fa25def9b21dc99",
+    "baseline\\head-left-integral-outlet.step": "e7fc4269c80eea562e25de389457ce4a672c26bf0362774e458689fcf2cf78d3",
+    "baseline\\head-right-integral-outlet.step": "af76434fd85f5496359d421cdfb63007c76eb1f239de94e98ef656e0b7ea2977",
+    "baseline\\horizontal-encoder-mount.step": "cd3991b8c73b20d770884754349097704118a93b266859c92cd29c20545cb4e7",
+    "baseline\\horizontal-encoder-thumbwheel.step": "c366ace9055806c8223ef63600002d947951e1c446a5da5fa76da4081631e6f4",
+    "baseline\\MCP9808-temp1-Adafruit1782-vendor.step": "70fa850c9827475a00e84c1f74629227943efe33fff38059f0ffa9b97199c744",
+    "baseline\\MCP9808-temp2-Adafruit1782-vendor.step": "75523b31cee981c2ba3708f85012b3641286005d1568941178161e8ba9ada63c",
+    "baseline\\parameters.json": "6f86731c3123d8d15c025a0b34fb400919749b0227dfb576a218ed821d70c8ee",
+    "baseline\\pico_mount.py": "a9bbc33f0d2d92a6497aba22280f33f5f5fd367c8d89dfe572f4547a97aad46c",
+    "baseline\\Pololu-D24V22-12V-vendor.step": "e13da351543bdbb28d77e60c00f541c2c4a8968d770d07ebd1d167505574f0b8",
+    "baseline\\Pololu-D24V22-5V-logic-vendor.step": "db27081c37fe317537b49d6e9cf4e09a9039822a2b3c6b336180e0f4cc9ee860",
+    "baseline\\Pololu-D24V22-5V-servo-vendor.step": "d32f479ab875d96ee0ad4aa158fb6afd8d233265c04e67ea52660481fa012767",
+    "baseline\\Raspberry-Pi-Pico-SC0915-vendor.step": "b89380903587f4aedb08c2a1736a0adeeb48b2931f2c5152922d62a0076ed302",
+    "baseline\\REF-Bourns-PEC11H-drawing-envelope.step": "fec3ed47b2002802874bfa39b44fac6b16bdf20d54c880ae7cbda978f77842bf",
+    "baseline\\REF-display-clear-window-45x34p4x1.step": "2993bab6a63c6e38bba558ad0040084aaeb8960a48c637d9d3cafae6968ada34",
+    "baseline\\REF-encoder-daughterboard-required-outline.step": "11aadd976ddc2fa8386fa6cefabbf0d0c4459b46dde3421b6481f443754da1da",
+    "baseline\\REF-M7x0p75-encoder-panel-nut.step": "54aabeaf0043e84d57de66bbc3bc5bfb764aef13bd3cdd685ca41ba23a201e7b",
+    "baseline\\REF-SDP810-daughterboard-required-outline.step": "20d8607555a588430a3610ab76a286c4aa91dcf249a8c1cbcd33968f4e814b16",
+    "baseline\\Sensirion-SDP810-125Pa-vendor.step": "9de282ab86649cd0b8d86db942c18d6b846f01c510875b522f654ef2b0e12dd6",
+    "baseline\\tpu-desk-foot-1.step": "0bad19874b6302fd7da4fd92f1d995854897f7fb33052bd4a25453ffe6c59fe1",
+    "baseline\\tpu-desk-foot-2.step": "04f2fa7a68f2f02177cb1b610714626dcb1922fe5c46cebac99ee6f559b56281",
+    "baseline\\tpu-desk-foot-3.step": "80c5fd76f98aa41530adcc41c5182cc8f167ad7138018361fb90612d25b92273",
+    "baseline\\tpu-desk-foot-4.step": "0f198808825f7b9aa1db3da95b37e21a28ec987f76fd33098cacd8e960e8cfe2"
+  },
+  "tube": {
+    "manufacturer": "Saint-Gobain",
+    "model": "Tygon E-3603 ACF00010",
+    "id_mm": 3.96875,
+    "od_mm": 7.14375,
+    "minimum_published_bend_radius_mm": 12.7,
+    "minimum_design_centerline_bend_radius_mm": 15,
+    "nominal_installed_centerline_length_each_mm": 270.5239673113095,
+    "trial_cut_length_each_mm": 281,
+    "cut_instruction": "Cut both equally with10mm trial service allowance; fit without reducing bends, trim only after checking sensor/head seating."
+  },
+  "positive_route": [
+    {
+      "kind": "line",
+      "start": [
+        48.2,
+        24.8,
+        -93.025
+      ],
+      "end": [
+        48.2,
+        39,
+        -93.025
+      ],
+      "length_mm": 14.2
+    },
+    {
+      "kind": "arc",
+      "start": [
+        48.2,
+        39,
+        -93.025
+      ],
+      "end": [
+        33.2,
+        54,
+        -93.025
+      ],
+      "radius_mm": 15,
+      "angle_deg": 90.0,
+      "length_mm": 23.561944901923447
+    },
+    {
+      "kind": "arc",
+      "start": [
+        33.2,
+        54,
+        -93.025
+      ],
+      "end": [
+        18.2,
+        39,
+        -93.025
+      ],
+      "radius_mm": 15,
+      "angle_deg": 90.0,
+      "length_mm": 23.561944901923447
+    },
+    {
+      "kind": "arc",
+      "start": [
+        18.2,
+        39,
+        -93.025
+      ],
+      "end": [
+        3.2,
+        24,
+        -93.025
+      ],
+      "radius_mm": 15,
+      "angle_deg": 90.0,
+      "length_mm": 23.561944901923447
+    },
+    {
+      "kind": "line",
+      "start": [
+        3.2,
+        24,
+        -93.025
+      ],
+      "end": [
+        -28,
+        24,
+        -93.025
+      ],
+      "length_mm": 31.2
+    },
+    {
+      "kind": "arc",
+      "start": [
+        -28,
+        24,
+        -93.025
+      ],
+      "end": [
+        -43,
+        39,
+        -93.025
+      ],
+      "radius_mm": 15,
+      "angle_deg": 90.0,
+      "length_mm": 23.561944901923447
+    },
+    {
+      "kind": "arc",
+      "start": [
+        -43,
+        39,
+        -93.025
+      ],
+      "end": [
+        -58,
+        54,
+        -93.025
+      ],
+      "radius_mm": 15,
+      "angle_deg": 90.0,
+      "length_mm": 23.561944901923447
+    },
+    {
+      "kind": "arc",
+      "start": [
+        -58,
+        54,
+        -93.025
+      ],
+      "end": [
+        -73,
+        54,
+        -78.025
+      ],
+      "radius_mm": 15,
+      "angle_deg": 90.0,
+      "length_mm": 23.561944901923447
+    },
+    {
+      "kind": "line",
+      "start": [
+        -73,
+        54,
+        -78.025
+      ],
+      "end": [
+        -73,
+        54,
+        -43.29931542632177
+      ],
+      "length_mm": 34.72568457367824
+    },
+    {
+      "kind": "arc",
+      "start": [
+        -73,
+        54,
+        -43.29931542632177
+      ],
+      "end": [
+        -73.75,
+        59.5,
+        -31.649657713160884
+      ],
+      "radius_mm": 15,
+      "angle_deg": 50.954308087532596,
+      "length_mm": 13.339806663045282
+    },
+    {
+      "kind": "arc",
+      "start": [
+        -73.75,
+        59.5,
+        -31.649657713160884
+      ],
+      "end": [
+        -74.5,
+        65.0,
+        -20.0
+      ],
+      "radius_mm": 15,
+      "angle_deg": 50.954308087532596,
+      "length_mm": 13.339806663045282
+    },
+    {
+      "kind": "line",
+      "start": [
+        -74.5,
+        65.0,
+        -20.0
+      ],
+      "end": [
+        -74.5,
+        65,
+        2.3470000000000004
+      ],
+      "length_mm": 22.347
+    }
+  ],
+  "reference_route": [
+    {
+      "kind": "line",
+      "start": [
+        60.8,
+        24.8,
+        -93.025
+      ],
+      "end": [
+        60.8,
+        39,
+        -93.025
+      ],
+      "length_mm": 14.2
+    },
+    {
+      "kind": "arc",
+      "start": [
+        60.8,
+        39,
+        -93.025
+      ],
+      "end": [
+        75.8,
+        54,
+        -93.025
+      ],
+      "radius_mm": 15,
+      "angle_deg": 90.0,
+      "length_mm": 23.561944901923447
+    },
+    {
+      "kind": "line",
+      "start": [
+        75.8,
+        54,
+        -93.025
+      ],
+      "end": [
+        82,
+        54,
+        -93.025
+      ],
+      "length_mm": 6.200000000000003
+    },
+    {
+      "kind": "arc",
+      "start": [
+        82,
+        54,
+        -93.025
+      ],
+      "end": [
+        97,
+        69,
+        -93.025
+      ],
+      "radius_mm": 15,
+      "angle_deg": 90.0,
+      "length_mm": 23.561944901923447
+    },
+    {
+      "kind": "line",
+      "start": [
+        97,
+        69,
+        -93.025
+      ],
+      "end": [
+        97,
+        98.9318521743831,
+        -93.025
+      ],
+      "length_mm": 29.931852174383096
+    },
+    {
+      "kind": "arc",
+      "start": [
+        97,
+        98.9318521743831,
+        -93.025
+      ],
+      "end": [
+        63,
+        132.9318521743831,
+        -93.025
+      ],
+      "radius_mm": 34,
+      "angle_deg": 90.0,
+      "length_mm": 53.40707511102649
+    },
+    {
+      "kind": "arc",
+      "start": [
+        63,
+        132.9318521743831,
+        -93.025
+      ],
+      "end": [
+        29,
+        98.9318521743831,
+        -93.025
+      ],
+      "radius_mm": 34,
+      "angle_deg": 90.0,
+      "length_mm": 53.40707511102649
+    },
+    {
+      "kind": "arc",
+      "start": [
+        29,
+        98.9318521743831,
+        -93.025
+      ],
+      "end": [
+        63,
+        64.9318521743831,
+        -93.025
+      ],
+      "radius_mm": 34,
+      "angle_deg": 90.0,
+      "length_mm": 53.40707511102649
+    },
+    {
+      "kind": "line",
+      "start": [
+        63,
+        64.9318521743831,
+        -93.025
+      ],
+      "end": [
+        75.84700000000001,
+        64.9318521743831,
+        -93.025
+      ],
+      "length_mm": 12.847000000000008
+    }
+  ],
+  "reference_loop": {
+    "radius_mm": 34,
+    "angle_deg": 270,
+    "center_xy_mm": [
+      63,
+      98.9318521743831
+    ]
+  },
+  "sensor_transform": {
+    "rotation_z_deg": 180,
+    "center_xy_mm": [
+      54.5,
+      21.525
+    ],
+    "delta_z_mm": -0.5,
+    "ports_xyz_mm": [
+      [
+        48.2,
+        34.8,
+        -93.025
+      ],
+      [
+        60.8,
+        34.8,
+        -93.025
+      ]
+    ],
+    "housing_mounts_xyz_mm": [
+      [
+        66.5,
+        21.55,
+        -97.525
+      ],
+      [
+        42.5,
+        21.55,
+        -97.525
+      ]
+    ],
+    "daughterboard_minimum_xyz_mm": [
+      45.5,
+      9.2,
+      -106.275
+    ]
+  },
+  "fitting": {
+    "manufacturer": "Ark-Plas",
+    "model": "MCX19-NY2",
+    "overall_mm": 22.352,
+    "body_mm": 9.398,
+    "center_to_tip_mm": 17.653,
+    "maximum_barb_mm": 5.8928,
+    "published_three_decimal_tolerance_mm": 0.127,
+    "drawing_url": "https://arkplas.com/document/view/44761",
+    "head_center_xyz_mm": [
+      -74.5,
+      65,
+      10.0
+    ],
+    "reference_center_xyz_mm": [
+      83.5,
+      64.9318521743831,
+      -93.025
+    ],
+    "model_limitation": "Published dimensions with conservative undimensioned full-max-barb cylinder; not exact tapered CAD."
+  },
+  "reference_ambient_port": {
+    "downward_xyz_mm": [
+      83.5,
+      64.9318521743831,
+      -117
+    ],
+    "protected_by_baffle": true
+  },
+  "hose_retention": "Clearance clamps on tray, split ceiling grommet; removable elbow capture collars; housing restraints take hose loads.",
+  "pressure_equivalent_4mm_hose_lengths_mm": {
+    "positive_including_two_leg_elbow_and_short_tap": 498.84551958792076,
+    "reference_including_two_leg_elbow_and_lid_bore": 511.9585414385067,
+    "comparison": "Both below1m screening limit from Sensirion engineering guide; laminar equivalent-length calculation assumes smooth bores and does not establish transient response."
+  },
+  "nominal_static_pairs_checked": 526,
+  "connector_corridor_checks": 38,
+  "intersections_to_resolve": [
+    {
+      "a": "pressure-head-elbow-capture",
+      "b": "STUDY-head-left-pressure-receiver",
+      "overlap_mm3": 124.68981242097885
+    },
+    {
+      "a": "pressure-reference-elbow-capture",
+      "b": "REF-Tygon-ACF00010-reference-hose",
+      "overlap_mm3": 214.04091000907877
+    },
+    {
+      "a": "REF-Tygon-ACF00010-reference-hose",
+      "b": "display-removable-cradle",
+      "overlap_mm3": 21.62699488411299
+    },
+    {
+      "a": "REF-expanded-hose-sleeve-reference-elbow",
+      "b": "pressure-reference-elbow-capture",
+      "overlap_mm3": 4.1768982546988065
+    }
+  ],
+  "intentional_interface_pairs": [
+    [
+      "REF-Arkplas-MCX19-NY2-head-elbow",
+      "STUDY-head-left-pressure-receiver"
+    ],
+    [
+      "REF-Arkplas-MCX19-NY2-reference-elbow",
+      "STUDY-electronics-service-tray-pressure"
+    ],
+    [
+      "REF-Tygon-ACF00010-positive-hose",
+      "STUDY-SDP810-rotated-vendor"
+    ],
+    [
+      "REF-Tygon-ACF00010-reference-hose",
+      "STUDY-SDP810-rotated-vendor"
+    ],
+    [
+      "REF-Arkplas-MCX19-NY2-head-elbow",
+      "REF-Tygon-ACF00010-positive-hose"
+    ],
+    [
+      "REF-Arkplas-MCX19-NY2-reference-elbow",
+      "REF-Tygon-ACF00010-reference-hose"
+    ],
+    [
+      "STUDY-electronics-base-shell-pressure",
+      "tpu-pressure-ceiling-split-grommet"
+    ]
+  ],
+  "artifact_sha256": {
+    "pressure-connector-service-hatch.step": "66e1c3367d955cefb3d8a38203b2532a098e8654d32323d5c8a40224c0f23a61",
+    "pressure-connector-service-hatch.stl": "90fb62fbce82495cbccf3d7c76166237584a87a5e0b8438d2a1a54340615686c",
+    "pressure-head-elbow-capture.step": "41b04416865fe1228f0472e45cfe9f8d17e916af02be776c6b3adac4ec5b5aa5",
+    "pressure-head-elbow-capture.stl": "c063b3c221d1ab69ee457fd17773eb6bccc65ab7ec5e9ba93a85d24672798721",
+    "pressure-positive-base-clamp.step": "a27ed1b523d6ef95209b2934cb79c3a7b70d910e6b903c3afdb5131e0feec864",
+    "pressure-positive-base-clamp.stl": "d48ad16f3cb965ecdc853c7293e88c9a38edf4a351c8b962e313f5e0ce1d151c",
+    "pressure-reference-ambient-baffle.step": "6156cc7e654881678d6874aa349f820b66263ee8b084e4891244336a377fd5e1",
+    "pressure-reference-ambient-baffle.stl": "3ac3e8bc097dd997125ce160baafb69469383f51a23887add611ecd099afc875",
+    "pressure-reference-base-clamp.step": "3e8466f4cb77c3976fbf441e6a4f4665cf5d72fca3abe26553ef441c8256e892",
+    "pressure-reference-base-clamp.stl": "11ed5e26c4b79653a9efc3b0c18ea230bf4381b73b86a347b9425129c9bdd4d3",
+    "pressure-reference-elbow-capture.step": "a0ebe862818c9f48c89cd2f822c862399872ace9e306535e96c3b01e9eefa006",
+    "pressure-reference-elbow-capture.stl": "9153f8806acddda718d0c68317e8ccf54ce9733175cded09b7df95d6ef1eed35",
+    "pressure-reference-wall-clip.step": "ca3dc5ec6be6aed6543debfb08034d2aa84d763631115125960be87576bb0bd3",
+    "pressure-reference-wall-clip.stl": "c963d2b4bb6a093826c85c19db8c38b16302078254b965b7312bd7245008213c",
+    "REF-Arkplas-MCX19-NY2-head-elbow.step": "e028584b3c9fb7d015759a13a18ec618b1e54765a498e5fc34bbdcafd253637c",
+    "REF-Arkplas-MCX19-NY2-reference-elbow.step": "9a29b3077fb233b1378f9f5334a4c4e5319412d28a14cb023a11dbc9cae7ee06",
+    "REF-expanded-hose-sleeve-positive-elbow.step": "b703a128af82295d6b9cbd211c6bf7be82e1ee1ad5508cd4fd186ba86a6f6a36",
+    "REF-expanded-hose-sleeve-positive-sensor.step": "a79406a1c814c4bb031e27769818a3199f52c7010c5c68605fde4f529652c406",
+    "REF-expanded-hose-sleeve-reference-elbow.step": "a1f2b5f666a8af71e28d69bcfda86931648447a61b4c985d91d96475e882fad8",
+    "REF-expanded-hose-sleeve-reference-sensor.step": "65a0d0cf73546a6bf9259d40d5cf79ee39bc65c4aadc338e67496e95914e1f4a",
+    "REF-pressure-board-downward-connector-reserve.step": "6a29e61bfe41735ed4425f542eea3ef75db7767849ea018a213d6e7b37f20c2e",
+    "REF-pressure-board-solder-tail-exit-reserve.step": "7818815790b0cb40fb1290f22bf167641dd2ec80174efe110d06f68c439d55bb",
+    "REF-Tygon-ACF00010-positive-hose.step": "fdcaa979484ca7ef152676376c4de8bd8164f92eff363655b8b85f79e48fbb7d",
+    "REF-Tygon-ACF00010-reference-hose.step": "e7cb9152e0627aaa25b97ea4b745bb974a3f8c2f0d5f75dd1be192e2dd8d281d",
+    "STUDY-electronics-base-shell-pressure.step": "624394fc39df75ff982b3182cabb9e66463e1ec1e01b464a8f96bdaa978c3358",
+    "STUDY-electronics-service-tray-pressure.step": "082e8bcdb3782a3afa1f35f0fda663801ad6b40dd07b7596fa50b1b9f9045cc3",
+    "STUDY-head-left-pressure-receiver.step": "c13bcabbec2012e3a96eefd53bede496467d77b9e164350b4c513f0cb9a211ab",
+    "STUDY-SDP810-rotated-daughterboard-outline.step": "6f1d6502dea12e32c09b625b696f2ac34d548f73e53a00ea5190af388665c379",
+    "STUDY-SDP810-rotated-vendor.step": "8f5c2754a8a9b6eed3aa1e674fadc905d558940d61a9fa5b696e17071d186cf5",
+    "tpu-pressure-ceiling-split-grommet.step": "60f359fdc616e86d435fc44acf530ff065def5171c17d261c401cbc9db05b8e1",
+    "tpu-pressure-ceiling-split-grommet.stl": "9c28efff434f1b9239b5f52c70b9857d1cbbfd55b30e487e60e809609f306e7e"
+  },
+  "limitations": [
+    "Separate nominal study; not adopted in main CAD or Onshape.",
+    "Carrier is unpopulated. The reference hose reserves a low lane over the board; future components/connectors must respect the exported hose envelope.",
+    "Pressure daughterboard and downward connector are mechanical reserves, not an electrical PCB or proven connector model.",
+    "FDM receiver bores need reaming and airtight seal testing; mechanically captured RTV seals require actual material compatibility and leak testing.",
+    "Sensor port P1/P2 identity and signal sign must be verified before commissioning; physical hose fit, flow response and quiet-reference bias are untested.",
+    "10mm trial service allowance is not included in the tight nominal swept path; physical slack needs routing and removal validation.",
+    "M2 screws/nuts and insertion tools not yet integrated in this study; collars are geometric mounting interfaces only."
+  ]
+}

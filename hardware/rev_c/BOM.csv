@@ -1,0 +1,206 @@
+Reference,Quantity,Manufacturer,Exact part/specification,Function,Location,Status
+MOTOR1,1,T-Motor,Pacer V4 P2406 Juicy2060KV,Single axial-impeller drive,assembly,Selected; physical qualification required
+ESC1,1,TeamTriforceUK,"A50SV2.3c-12-10, A50S V2.3c12S",Single FOC ESC; UART speed/current/temperature,assembly,Selected; physical qualification required
+PD1,1,Adafruit,5807 HUSB238,15V3A PD sink; exact15V contract required,assembly,Selected; physical qualification required
+PSU1,1,Raspberry Pi,45W USB-C Power Supply UK TypeG white,"15V3A USB PD source, integral cable",assembly,Selected; physical qualification required
+MCU1,1,Raspberry Pi,Pico SC0915,RP2040 controller; use Rev C firmware only,assembly,Selected; physical qualification required
+SERVO1,1,FEETECH / Pololu,FS90-FB / Pololu3436,Feedback servo; supplied20T horn and retaining screw,assembly,Selected; physical qualification required
+ENC1,1,Bourns,PEC11H-4215F-S0024,24-detent horizontal push thumbwheel,assembly,Selected; physical qualification required
+TFT1,1,Adafruit,"4311,2-inch ST7789 IPS240x320",Clear landscape display; top status band and wheel/countdown,assembly,Selected; physical qualification required
+LED1,1,Adafruit,"1426,8-pixel NeoPixel stick",Recessed downward ambient lighting,assembly,Selected; physical qualification required
+"TEMP1,TEMP2",2,Adafruit,1782 MCP9808,Power-board-adjacent and base-air temperature; addresses0x18/0x19,assembly,Selected; physical qualification required
+DP1,1,Sensirion,"SDP810-125Pa,1-101597-01",Restriction sensing; direct-solder2mm-pitch daughterboard required,assembly,Selected; physical qualification required
+"REG1,REG2",2,Pololu,2858 D24V22F5,Separate5V logic and servo rails,assembly,Selected; physical qualification required
+SW-GRILLE,1,Omron,D2F-01L,COM/NO magnetic-grille-present interlock,assembly,Selected; physical qualification required
+MAG1..8,8,K&J Magnetics,"D42,N42 axial,6.35x3.175mm",Four captive opposing pairs; face gap1.925mm nominal,assembly,Selected; physical qualification required
+"HINGE1,2",2,Metal stock supplier,"Ground stainless steel rod3mm,cut172mm","Two panel hinge shafts, deburred",assembly,Selected; physical qualification required
+COLLAR1..4,4,Maedler,"62300300,DIN705A,3mm bore",Four shaft collars with suppliedM2x3 set screws,assembly,Selected; physical qualification required
+"HINGE-SPACER1,2",2,Metal stock supplier,"Stainless tube7mmOD/3.3mmID,cut7.6mm",Right-side shaft spacers,assembly,Selected; physical qualification required
+PIVOT-SLEEVE1..4,4,Metal stock supplier,"Stainless tube3mmOD/2.1mmID;cuts9.1,9.1,9.6,8.6mm",Smooth sleeve bearings for4M2 pivot stacks,assembly,Selected; physical qualification required
+PIVOT-SCREW1..4,4,Accu,SSC-M2-14-A2 + HNN-M2-A2 + HPW-M2-A2,Four metal-clamped linkage pivots,assembly,Selected; physical qualification required
+"CLAMP1,2",2,ISO hardware supplier,ISO4762A2-70M2x16 / ISO10511M2 / ISO7089M2,Keyed crank clamp sets,assembly,Selected; physical qualification required
+LOOM-PICO-SOCKET,2,Wurth Elektronik,"61202023021,20pin IDC with strain relief","Mating J15/J16 sockets; new keyed loom, not E3 cable",assembly,Selected; physical qualification required
+LOOM-PICO-WIRE,2,Cable supplier,"28AWG20way ribbon,1.27mm pitch,maximum150mm",Pico-side transition/strain relief still requires physical layout,assembly,Selected; physical qualification required
+MOTOR-CONNECTOR,1,Amass,MR30 pair supplied with ESC,Three-phase loom; verify supplied connector sex,assembly,Selected; physical qualification required
+ESC-POWER-CONNECTOR,1,Amass,XT30 pair supplied with ESC,Power loom from J20; verify supplied connector sex,assembly,Selected; physical qualification required
+ESC-IO-LOOM,1,Molex / ESC supplier,"5011892010 interface,ESC-supplied mating shell and precrimped wires",Use vendor-labelled3.3V UART/GND; insulate BEC,assembly,Selected; physical qualification required
+TUBE-DP,1,Saint-Gobain,"TygonE-3603ACF00010,ID3.96875/OD7.14375mm",Cut matched hoses after Rev C route; minimum bend radius12.7mm,assembly,Selected; physical qualification required
+WIRE-POWER,1,Alpha Wire,"3051,22AWG",Power branches; lengths from finished loom,assembly,Selected; physical qualification required
+WIRE-SIGNAL,1,Alpha Wire,"5853,26AWG",Signal/feedback/I2C; twisted ground/UART where practical,assembly,Selected; physical qualification required
+WINDOW,1,Acrylic supplier,Clear45x34.4x1mm cut sheet,Screen protective window; no diffuser over TFT,assembly,Selected; physical qualification required
+WINDOW-ADHESIVE,1,3M,"467MP,0.05mm",Window perimeter only,assembly,Selected; physical qualification required
+MAGNET-ADHESIVE,1,3M,Scotch-WeldDP100PlusClear,"Allowed pocket glue, retained mechanically",assembly,Selected; physical qualification required
+SERVICE-SHUNT,1,Samtec,SNT-100-BK-G,Calibration entry shunt for service header,assembly,Selected; physical qualification required
+ESC-STRAP,1,Cable tie supplier,Nonconducting3mm-wide removable tie,ESC case restraint; qualify actual connector access,assembly,Selected; physical qualification required
+J1,1,See exact MPN,JST B2B-XH-A(LF)(SN),XH 2; HUSB238 PD output; physical breakout is remote,carrier,Captured/checked circuit; board unrouted
+F1,1,See exact MPN,Littelfuse 0451003.MRL,3A,carrier,Captured/checked circuit; board unrouted
+D1,1,See exact MPN,Littelfuse SMBJ18A,SMBJ18A,carrier,Captured/checked circuit; board unrouted
+C1,1,See exact MPN,Murata GRM188R71H104KA93D,100nF,carrier,Captured/checked circuit; board unrouted
+C2,1,See exact MPN,Panasonic EEU-FR1E101,100uF/25V,carrier,Captured/checked circuit; board unrouted
+J18,1,See exact MPN,Molex 43045-0412,43045-0412; Remote regulator; different shrouded cavity count. Module EN is NC. Mating/placement qualification pending,carrier,Captured/checked circuit; board unrouted
+J19,1,See exact MPN,Molex 43045-0812,43045-0812; Remote regulator; different shrouded cavity count. Module EN is NC. Mating/placement qualification pending,carrier,Captured/checked circuit; board unrouted
+C4,1,See exact MPN,Murata GRM188R71E105KA12D,1uF,carrier,Captured/checked circuit; board unrouted
+C7,1,See exact MPN,Panasonic EEU-FR1E101,100uF/25V,carrier,Captured/checked circuit; board unrouted
+C5,1,See exact MPN,Murata GRM188R71E105KA12D,1uF,carrier,Captured/checked circuit; board unrouted
+C8,1,See exact MPN,Panasonic EEU-FR1E101,100uF/25V,carrier,Captured/checked circuit; board unrouted
+D2,1,See exact MPN,Vishay SS14-E3/61T,SS14-E3/61T,carrier,Captured/checked circuit; board unrouted
+F3,1,See exact MPN,Littelfuse 0451001.MRL,1A,carrier,Captured/checked circuit; board unrouted
+SW2,1,See exact MPN,Texas Instruments TPS22810DBVR,TPS22810DBVR,carrier,Captured/checked circuit; board unrouted
+C12,1,See exact MPN,Murata GRM188R71E105KA12D,1uF,carrier,Captured/checked circuit; board unrouted
+C15,1,See exact MPN,Murata GRM188R71H104KA93D,100nF,carrier,Captured/checked circuit; board unrouted
+R40,1,See exact MPN,Yageo RC1206FR-07330RL,330 1%,carrier,Captured/checked circuit; board unrouted
+R11,1,See exact MPN,Yageo RC0603FR-07100KL,100k 1%,carrier,Captured/checked circuit; board unrouted
+BUF3,1,See exact MPN,"Nexperia 74AHCT1G125GW,125","74AHCT1G125GW,125",carrier,Captured/checked circuit; board unrouted
+C19,1,See exact MPN,Murata GRM188R71H104KA93D,100nF,carrier,Captured/checked circuit; board unrouted
+R23,1,See exact MPN,Yageo RC0603FR-07100KL,100k 1%,carrier,Captured/checked circuit; board unrouted
+R17,1,See exact MPN,Yageo RC0603FR-07330RL,330 1%,carrier,Captured/checked circuit; board unrouted
+R24,1,See exact MPN,Yageo RC0603FR-07100KL,100k 1%,carrier,Captured/checked circuit; board unrouted
+C9,1,See exact MPN,Panasonic EEU-FR1A471,470uF/10V,carrier,Captured/checked circuit; board unrouted
+J4,1,See exact MPN,Samtec TSW-103-07-G-S,"2.54mm 3; Original servo plug, retain and label polarity",carrier,Captured/checked circuit; board unrouted
+J5,1,See exact MPN,Samtec TSW-101-07-G-S,2.54mm 1,carrier,Captured/checked circuit; board unrouted
+R8,1,See exact MPN,Yageo RC0603FR-074K7L,4.7k 1%,carrier,Captured/checked circuit; board unrouted
+SW3,1,See exact MPN,Texas Instruments TPS22810DBVR,TPS22810DBVR,carrier,Captured/checked circuit; board unrouted
+C13,1,See exact MPN,Murata GRM188R71E105KA12D,1uF,carrier,Captured/checked circuit; board unrouted
+C16,1,See exact MPN,Murata GRM188R71H104KA93D,100nF,carrier,Captured/checked circuit; board unrouted
+R41,1,See exact MPN,Yageo RC1206FR-07330RL,330 1%,carrier,Captured/checked circuit; board unrouted
+R12,1,See exact MPN,Yageo RC0603FR-07100KL,100k 1%,carrier,Captured/checked circuit; board unrouted
+C10,1,See exact MPN,Panasonic EEU-FR1A471,470uF/10V,carrier,Captured/checked circuit; board unrouted
+BUF1,1,See exact MPN,"Nexperia 74AHCT125D,118","74AHCT125D,118",carrier,Captured/checked circuit; board unrouted
+C17,1,See exact MPN,Murata GRM188R71H104KA93D,100nF,carrier,Captured/checked circuit; board unrouted
+R19,1,See exact MPN,Yageo RC0603FR-07100KL,100k 1%,carrier,Captured/checked circuit; board unrouted
+R16,1,See exact MPN,Yageo RC0603FR-07330RL,330 1%,carrier,Captured/checked circuit; board unrouted
+J7,1,See exact MPN,JST B3B-XH-A(LF)(SN),XH 3,carrier,Captured/checked circuit; board unrouted
+J2,1,See exact MPN,JST B3B-XH-A(LF)(SN),XH 3; HUSB238 I2C only; PD voltage must not enter sensor headers,carrier,Captured/checked circuit; board unrouted
+J8,1,See exact MPN,JST B4B-XH-A(LF)(SN),XH 4; Exact encoder daughterboard J1 pin order,carrier,Captured/checked circuit; board unrouted
+J9,1,See exact MPN,JST B4B-XH-A(LF)(SN),XH 4,carrier,Captured/checked circuit; board unrouted
+J10,1,See exact MPN,JST B4B-XH-A(LF)(SN),XH 4,carrier,Captured/checked circuit; board unrouted
+J11,1,See exact MPN,JST B4B-XH-A(LF)(SN),XH 4,carrier,Captured/checked circuit; board unrouted
+R1,1,See exact MPN,Yageo RC0603FR-0710KL,10k 1%,carrier,Captured/checked circuit; board unrouted
+C26,1,See exact MPN,Murata GRM188R71C103KA01D,10nF,carrier,Captured/checked circuit; board unrouted
+R2,1,See exact MPN,Yageo RC0603FR-0710KL,10k 1%,carrier,Captured/checked circuit; board unrouted
+C27,1,See exact MPN,Murata GRM188R71C103KA01D,10nF,carrier,Captured/checked circuit; board unrouted
+R3,1,See exact MPN,Yageo RC0603FR-0710KL,10k 1%,carrier,Captured/checked circuit; board unrouted
+C28,1,See exact MPN,Murata GRM188R71C103KA01D,10nF,carrier,Captured/checked circuit; board unrouted
+R6,0,See exact MPN,Yageo RC0603FR-074K7L,4.7k 1%,carrier,DNP
+R7,0,See exact MPN,Yageo RC0603FR-074K7L,4.7k 1%,carrier,DNP
+C22,1,See exact MPN,Murata GRM188R71H104KA93D,100nF,carrier,Captured/checked circuit; board unrouted
+C33,1,See exact MPN,Murata GRM188R71H104KA93D,100nF,pressure_daughterboard,Captured/checked circuit; board unrouted
+J12,1,See exact MPN,JST B2B-XH-A(LF)(SN),"XH 2; Omron COM/NO; raw5V input goes to BUF4, never to GPIO",carrier,Captured/checked circuit; board unrouted
+R5,1,See exact MPN,Yageo RC0603FR-073K9L,3.9k 1%,carrier,Captured/checked circuit; board unrouted
+BUF4,1,See exact MPN,Texas Instruments SN74LVC1G17DBVR,SN74LVC1G17DBVR,carrier,Captured/checked circuit; board unrouted
+C31,1,See exact MPN,Murata GRM188R71H104KA93D,100nF,carrier,Captured/checked circuit; board unrouted
+C32,1,See exact MPN,Murata GRM188R71C103KA01D,10nF,carrier,Captured/checked circuit; board unrouted
+R60,1,See exact MPN,Yageo RC0603FR-07100KL,100k 1%,carrier,Captured/checked circuit; board unrouted
+J14,1,See exact MPN,Samtec TSW-102-07-G-S,2.54mm 2; Removable SNT-100-BK-G service shunt,carrier,Captured/checked circuit; board unrouted
+J15,1,See exact MPN,Wurth Elektronik 61202021621,Keyed IDC20; All20 contacts retained. New keyed2x10 loom with61202023021 sockets; no E3 contact-removal key.,carrier,Captured/checked circuit; board unrouted
+J16,1,See exact MPN,Wurth Elektronik 61202021621,Keyed IDC20; All20 contacts retained. New keyed2x10 loom with61202023021 sockets; no E3 contact-removal key.,carrier,Captured/checked circuit; board unrouted
+ISO1,1,See exact MPN,Texas Instruments TMUX1511PWR,TMUX1511PWR,carrier,Captured/checked circuit; board unrouted
+SUP1,1,See exact MPN,Texas Instruments TPS3808G33DBVR,TPS3808G33DBVR,carrier,Captured/checked circuit; board unrouted
+C20,1,See exact MPN,Murata GRM188R71H104KA93D,100nF,carrier,Captured/checked circuit; board unrouted
+C21,1,See exact MPN,Murata GRM188R71H104KA93D,100nF,carrier,Captured/checked circuit; board unrouted
+R37,1,See exact MPN,Yageo RC0603FR-0710KL,10k 1%,carrier,Captured/checked circuit; board unrouted
+R38,1,See exact MPN,Yageo RC0603FR-07100KL,100k 1%,carrier,Captured/checked circuit; board unrouted
+R28,1,See exact MPN,Yageo RC0603FR-07100KL,100k 1%,carrier,Captured/checked circuit; board unrouted
+R29,1,See exact MPN,Yageo RC0603FR-0710KL,10k 1%,carrier,Captured/checked circuit; board unrouted
+R30,1,See exact MPN,Yageo RC0603FR-071ML,1M 1%,carrier,Captured/checked circuit; board unrouted
+C23,1,See exact MPN,Murata GRM188R71H104KA93D,100nF,carrier,Captured/checked circuit; board unrouted
+R31,1,See exact MPN,Yageo RC0603FR-07100KL,100k 1%,carrier,Captured/checked circuit; board unrouted
+R32,1,See exact MPN,Yageo RC0603FR-07100KL,100k 1%,carrier,Captured/checked circuit; board unrouted
+R33,1,See exact MPN,Yageo RC0603FR-071ML,1M 1%,carrier,Captured/checked circuit; board unrouted
+C24,1,See exact MPN,Murata GRM188R71H104KA93D,100nF,carrier,Captured/checked circuit; board unrouted
+R34,1,See exact MPN,Yageo RC0603FR-07100KL,100k 1%,carrier,Captured/checked circuit; board unrouted
+R35,1,See exact MPN,Yageo RC0603FR-07100KL,100k 1%,carrier,Captured/checked circuit; board unrouted
+R36,1,See exact MPN,Yageo RC0603FR-071ML,1M 1%,carrier,Captured/checked circuit; board unrouted
+C25,1,See exact MPN,Murata GRM188R71H104KA93D,100nF,carrier,Captured/checked circuit; board unrouted
+BUF2,1,See exact MPN,"Nexperia 74AHCT125D,118","74AHCT125D,118",carrier,Captured/checked circuit; board unrouted
+C18,1,See exact MPN,Murata GRM188R71H104KA93D,100nF,carrier,Captured/checked circuit; board unrouted
+R50,1,See exact MPN,Yageo RC0603FR-0733RL,33 1%,carrier,Captured/checked circuit; board unrouted
+R51,1,See exact MPN,Yageo RC0603FR-0733RL,33 1%,carrier,Captured/checked circuit; board unrouted
+R52,1,See exact MPN,Yageo RC0603FR-0733RL,33 1%,carrier,Captured/checked circuit; board unrouted
+R53,1,See exact MPN,Yageo RC0603FR-0733RL,33 1%,carrier,Captured/checked circuit; board unrouted
+R54,1,See exact MPN,Yageo RC0603FR-0733RL,33 1%,carrier,Captured/checked circuit; board unrouted
+R55,1,See exact MPN,Yageo RC0603FR-07330RL,330 1%,carrier,Captured/checked circuit; board unrouted
+R56,1,See exact MPN,Yageo RC0603FR-071KL,1k 1%,display_harness,Captured/checked circuit; board unrouted
+R57,1,See exact MPN,Yageo RC0603FR-0710KL,10k 1%,carrier,Captured/checked circuit; board unrouted
+R58,1,See exact MPN,Yageo RC0603FR-0710KL,10k 1%,carrier,Captured/checked circuit; board unrouted
+R59,1,See exact MPN,Yageo RC0603FR-07100KL,100k 1%,carrier,Captured/checked circuit; board unrouted
+C30,1,See exact MPN,Murata GRM188R71E105KA12D,1uF,display_harness,Captured/checked circuit; board unrouted
+J6,1,See exact MPN,JST B8B-XH-A(LF)(SN),XH 8,carrier,Captured/checked circuit; board unrouted
+EF1,1,See exact MPN,Texas Instruments TPS26630RGER,TPS26630RGER,carrier,Captured/checked circuit; board unrouted
+EF2,1,See exact MPN,Texas Instruments TPS26630RGER,TPS26630RGER,carrier,Captured/checked circuit; board unrouted
+R61,1,See exact MPN,Yageo RC0603FR-077K15L,7.15k 1%,carrier,Captured/checked circuit; board unrouted
+R62,1,See exact MPN,Yageo RC0603FR-07100KL,100k 1%,carrier,Captured/checked circuit; board unrouted
+R63,1,See exact MPN,Yageo RC0603FR-0710KL,10k 1%,carrier,Captured/checked circuit; board unrouted
+R64,1,See exact MPN,Yageo RC0603FR-07132KL,132k 1%,carrier,Captured/checked circuit; board unrouted
+R65,1,See exact MPN,Yageo RC0603FR-0710KL,10k 1%,carrier,Captured/checked circuit; board unrouted
+R71,1,See exact MPN,Yageo RC0603FR-07100KL,100k 1%,carrier,Captured/checked circuit; board unrouted
+R72,1,See exact MPN,Yageo RC0603FR-0710KL,10k 1%,carrier,Captured/checked circuit; board unrouted
+C34,1,See exact MPN,Murata GRM188R71H104KA93D,100nF,carrier,Captured/checked circuit; board unrouted
+C36,1,See exact MPN,Murata GRM188R71E105KA12D,1uF,carrier,Captured/checked circuit; board unrouted
+R66,1,See exact MPN,Yageo RC0603FR-0710KL,10k 1%,carrier,Captured/checked circuit; board unrouted
+R67,1,See exact MPN,Yageo RC0603FR-07100KL,100k 1%,carrier,Captured/checked circuit; board unrouted
+R68,1,See exact MPN,Yageo RC0603FR-0710KL,10k 1%,carrier,Captured/checked circuit; board unrouted
+R69,1,See exact MPN,Yageo RC0603FR-07132KL,132k 1%,carrier,Captured/checked circuit; board unrouted
+R70,1,See exact MPN,Yageo RC0603FR-0710KL,10k 1%,carrier,Captured/checked circuit; board unrouted
+R76,1,See exact MPN,Yageo RC0603FR-07100KL,100k 1%,carrier,Captured/checked circuit; board unrouted
+R77,1,See exact MPN,Yageo RC0603FR-0710KL,10k 1%,carrier,Captured/checked circuit; board unrouted
+C35,1,See exact MPN,Murata GRM188R71H104KA93D,100nF,carrier,Captured/checked circuit; board unrouted
+C37,1,See exact MPN,Murata GRM188R71E105KA12D,1uF,carrier,Captured/checked circuit; board unrouted
+QRC1,1,See exact MPN,Texas Instruments CSD19537Q3,"CSD19537Q3; Actual drawing: source1..3, gate4, drain5..8+EP. Shared drain land represented by common pad5.",carrier,Captured/checked circuit; board unrouted
+QDRV1,1,See exact MPN,Diodes Incorporated BSS138-7-F,BSS138-7-F,carrier,Captured/checked circuit; board unrouted
+F2,1,See exact MPN,Littelfuse 0451002.MRL,2A,carrier,Captured/checked circuit; board unrouted
+J20,1,See exact MPN,Molex 43045-0212,ESC power; Adapter loom to suppliedXT30; no3A motor power through Pico/ribbon.,carrier,Captured/checked circuit; board unrouted
+J22,1,See exact MPN,JST B3B-XH-A(LF)(SN),XH 3; Adapter to vendor-labelled GND/RX/TX wires. Verify A50S20-cavity loom; BEC insulated NC.,carrier,Captured/checked circuit; board unrouted
+C38,1,See exact MPN,Panasonic EEU-FR1V471,470uF/35V,esc_harness,Captured/checked circuit; board unrouted
+C39,1,See exact MPN,Murata GRM188R71E105KA12D,1uF,esc_harness,Captured/checked circuit; board unrouted
+D3,1,See exact MPN,Littelfuse SMBJ18A,SMBJ18A,esc_harness,Captured/checked circuit; board unrouted
+R80,1,See exact MPN,Yageo RC1206FR-073K3L,3.3k 1%,esc_harness,Captured/checked circuit; board unrouted
+R81,1,See exact MPN,Yageo RC0603FR-0710KL,10k 1%,carrier,Captured/checked circuit; board unrouted
+R82,1,See exact MPN,Yageo RC0603FR-0710KL,10k 1%,carrier,Captured/checked circuit; board unrouted
+R83,1,See exact MPN,Yageo RC0603FR-0710KL,10k 1%,carrier,Captured/checked circuit; board unrouted
+U1,1,See exact MPN,Texas Instruments SN74LVC1G04DBVR,SN74LVC1G04DBVR,carrier,Captured/checked circuit; board unrouted
+U2,1,See exact MPN,Texas Instruments SN74LVC1G04DBVR,SN74LVC1G04DBVR,carrier,Captured/checked circuit; board unrouted
+U3,1,See exact MPN,Texas Instruments SN74LVC1G08DBVR,SN74LVC1G08DBVR,carrier,Captured/checked circuit; board unrouted
+BUF5,1,See exact MPN,Nexperia 74LVC2G125DP-Q100H,74LVC2G125DP-Q100H,carrier,Captured/checked circuit; board unrouted
+R84,1,See exact MPN,Yageo RC0603FR-0710KL,10k 1%,carrier,Captured/checked circuit; board unrouted
+R85,1,See exact MPN,Yageo RC0603FR-0710KL,10k 1%,carrier,Captured/checked circuit; board unrouted
+R86,1,See exact MPN,Yageo RC0603FR-0733RL,33 1%,carrier,Captured/checked circuit; board unrouted
+R87,1,See exact MPN,Yageo RC0603FR-0733RL,33 1%,carrier,Captured/checked circuit; board unrouted
+C40,1,See exact MPN,Murata GRM188R71H104KA93D,100nF,carrier,Captured/checked circuit; board unrouted
+C41,1,See exact MPN,Murata GRM188R71H104KA93D,100nF,carrier,Captured/checked circuit; board unrouted
+C42,1,See exact MPN,Murata GRM188R71H104KA93D,100nF,carrier,Captured/checked circuit; board unrouted
+C43,1,See exact MPN,Murata GRM188R71H104KA93D,100nF,carrier,Captured/checked circuit; board unrouted
+J21,0,See exact MPN,JST B3B-XH-A(LF)(SN),XH 3; DNP optical RPM service header; no unqualified sensor trusted,carrier,DNP
+LOOM-XH-2,2,JST,XHP-2,Mating shell for selected XH2 headers,assembly,Selected; physical qualification required
+LOOM-XH-3,3,JST,XHP-3,Mating shell for selected XH3 headers,assembly,Selected; physical qualification required
+LOOM-XH-4,5,JST,XHP-4,Mating shell for selected XH4 headers,assembly,Selected; physical qualification required
+LOOM-XH-8,1,JST,XHP-8,Mating shell for selected XH8 headers,assembly,Selected; physical qualification required
+LOOM-XH-CONTACT,41,JST,SXH-001T-P0.6N,XH crimp contacts for22..26AWG; no bare push-on wires,assembly,Selected; physical qualification required
+LOOM-MICROFIT-0210,1,Molex,43025-0210,Mating dual-row housing for protected power/module connector,assembly,Selected; physical qualification required
+LOOM-MICROFIT-CRIMP-0210,2,Molex,43030-0007,Tin female contacts for selected22AWG power loom,assembly,Selected; physical qualification required
+LOOM-MICROFIT-0410,1,Molex,43025-0410,Mating dual-row housing for protected power/module connector,assembly,Selected; physical qualification required
+LOOM-MICROFIT-CRIMP-0410,4,Molex,43030-0007,Tin female contacts for selected22AWG power loom,assembly,Selected; physical qualification required
+LOOM-MICROFIT-0810,1,Molex,43025-0810,Mating dual-row housing for protected power/module connector,assembly,Selected; physical qualification required
+LOOM-MICROFIT-CRIMP-0810,8,Molex,43030-0007,Tin female contacts for selected22AWG power loom,assembly,Selected; physical qualification required
+ENC-NUT,1,Bourns / ISO hardware,M7x0.75 panel nut and washer supplied/verified withPEC11H,"Encoder mount, separate from wheel support",assembly,Selected; physical qualification required
+LOOM-SERVO,1,FEETECH,FS90-FB supplied3-contact plug plus feedback lead,No guessed replacement servo pin order,assembly,Selected; physical qualification required
+LOOM-DISPLAY,1,Adafruit,4311 supplied solder-pad interface; eight26AWG leads,J6-to-VIN/GND/MOSI/SCK/CS/DC/RST/LITE; verify current board labels,assembly,Selected; physical qualification required
+THREADLOCK,1,Henkel,LOCTITE243,Metal-to-metal linkage fasteners only; keep off TPU/plastic and motor bearings,assembly,Selected; physical qualification required
+PCB-MAIN,1,PCB fabricator,"Rev C80x55mm,1.6mmFR4",Protected power/control carrier,assembly,UNROUTED; not orderable
+PCB-ENCODER,1,PCB fabricator,Windflow encoder P1 native KiCad design,Supported encoder daughterboard,assembly,Routed/checked prototype; assembly qualification pending
+PCB-PRESSURE,1,PCB fabricator,SDP810 direct-solder2mm-pitch daughterboard,Independent sensor housing support,assembly,UNFINISHED; not orderable
+FIX-190,4,ISO / ruthex,ISO4762A2-70M1.6x12 + DIN934M1.6,Pico mounting,assembly,Nominal CAD allowance; measure stacks and reconcile complete fastener models
+FIX-191,2,ISO / ruthex,ISO4762A2-70M1.6x8 + DIN934M1.6,Ambient PCB,assembly,Nominal CAD allowance; measure stacks and reconcile complete fastener models
+FIX-192,6,ISO / ruthex,ISO4762A2-70M2x14 + ISO4032M2,Two regulators and PD sink,assembly,Nominal CAD allowance; measure stacks and reconcile complete fastener models
+FIX-193,8,ISO / ruthex,ISO4762A2-70M2x12 + ISO4032M2,Two MCP9808 and main PCB,assembly,Nominal CAD allowance; measure stacks and reconcile complete fastener models
+FIX-194,2,ISO / ruthex,ISO4762A2-70M2x20 + ISO4032M2,SDP810 housing allowance,assembly,Nominal CAD allowance; measure stacks and reconcile complete fastener models
+FIX-195,10,ISO / ruthex,ISO4762A2-70M3x8,"Four screen cradle, four fairing, two encoder",assembly,Nominal CAD allowance; measure stacks and reconcile complete fastener models
+FIX-196,10,ISO / ruthex,ISO4762A2-70M3x12,Six head seams and four tray/feet,assembly,Nominal CAD allowance; measure stacks and reconcile complete fastener models
+FIX-197,4,ISO / ruthex,ISO4762A2-70M3x10,Head-to-base feet from interior,assembly,Nominal CAD allowance; measure stacks and reconcile complete fastener models
+FIX-198,16,ISO / ruthex,ISO4762A2-70M2x6,"Four bezel, eight magnet keepers, two inner guard, two ESC cradle",assembly,Nominal CAD allowance; measure stacks and reconcile complete fastener models
+FIX-199,14,ISO / ruthex,ISO4762A2-70M2x10 + ISO4032M2,"Four rear guard, eight interlock switch/clamp/raceway and two encoder PCB screws",assembly,Nominal CAD allowance; measure stacks and reconcile complete fastener models
+FIX-200,2,ISO / ruthex,ISO4762A2-70M2x20 + ISO10511M2 + ISO7089M2,Interlock bracket with new continuous backplate,assembly,Nominal CAD allowance; measure stacks and reconcile complete fastener models
+FIX-201,24,ISO / ruthex,ruthexRX-M3x5.7,"Head seams, head/base, tray, screen, encoder and fairing",assembly,Nominal CAD allowance; measure stacks and reconcile complete fastener models
+FIX-202,18,ISO / ruthex,ruthexRX-M2x4 / GE-M2x04-001,"Bezel, magnet/guard/ESC/diffuser mounts",assembly,Nominal CAD allowance; measure stacks and reconcile complete fastener models
+MOTOR-M3,4,ISO hardware supplier,M3 cap screw; LENGTH NOT FROZEN,Motor mounting on6mmcarrier,assembly,Supplier insertion limit/actual base depth required
+ROTOR-CLAMP,1,Motor/fastener supplier,M5 clamping stack; THREAD/HAND/HEIGHT NOT FROZEN,Retain printed hub,assembly,Actual8/10mmthread discrepancy must be resolved; no improvised clamp

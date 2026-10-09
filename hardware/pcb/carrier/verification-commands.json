@@ -1,0 +1,61 @@
+[
+  {
+    "arguments": [
+      "sch",
+      "export",
+      "netlist",
+      "--format",
+      "kicadxml",
+      "-o",
+      "C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\carrier\\windflow-carrier.net.xml",
+      "C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\carrier\\windflow-carrier.kicad_sch"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "arguments": [
+      "sch",
+      "erc",
+      "--format",
+      "json",
+      "--severity-all",
+      "--exit-code-violations",
+      "-o",
+      "C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\carrier\\erc.json",
+      "C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\carrier\\windflow-carrier.kicad_sch"
+    ],
+    "exit_code": 0,
+    "stdout": "Found 0 violations\nSaved ERC Report to C:/Users/admin/iCloudDrive/Windflow/hardware/pcb/carrier/erc.json",
+    "stderr": ""
+  },
+  {
+    "arguments": [
+      "sch",
+      "export",
+      "svg",
+      "--exclude-drawing-sheet",
+      "-o",
+      "C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\carrier\\schematic-svg",
+      "C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\carrier\\windflow-carrier.kicad_sch"
+    ],
+    "exit_code": 0,
+    "stdout": "Plotted to 'C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\carrier\\schematic-svg\\windflow-carrier.svg'.\nPlotted to 'C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\carrier\\schematic-svg\\windflow-carrier-PD input, eFuse and remote regulators.svg'.\nPlotted to 'C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\carrier\\schematic-svg\\windflow-carrier-Fan_servo switches, PWM and feedback connectors.svg'.\nPlotted to 'C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\carrier\\schematic-svg\\windflow-carrier-Downward ambient lighting supply and data.svg'.\nPlotted to 'C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\carrier\\schematic-svg\\windflow-carrier-Encoder, I2C, grille safety and remote Pico.svg'.\nPlotted to 'C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\carrier\\schematic-svg\\windflow-carrier-ADC isolation and voltage_feedback measurement.svg'.\nPlotted to 'C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\carrier\\schematic-svg\\windflow-carrier-IPS display interfaces and external screen passives.svg'.\nDone.",
+    "stderr": ""
+  },
+  {
+    "arguments": [
+      "sch",
+      "export",
+      "pdf",
+      "--exclude-drawing-sheet",
+      "-o",
+      "C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\carrier\\windflow-carrier-schematic.pdf",
+      "C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\carrier\\windflow-carrier.kicad_sch"
+    ],
+    "exit_code": 0,
+    "stdout": "Plotted to 'C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\carrier\\windflow-carrier-schematic.pdf'.\nDone.",
+    "stderr": ""
+  }
+]

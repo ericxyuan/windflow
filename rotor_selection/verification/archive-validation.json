@@ -1,0 +1,15 @@
+{
+  "result": "PASS",
+  "copied_original_files": 30,
+  "copied_files_byte_identical": true,
+  "manifested_files": 51,
+  "total_saved_files_including_manifest_and_validation": 53,
+  "all_manifest_hashes_verified": true,
+  "report_local_links_checked": 11,
+  "missing_report_links": [],
+  "original_study_records": 38,
+  "original_patches_saved": 3,
+  "viewed_images_saved": 3,
+  "original_calculation_inputs_still_match": true,
+  "manifest_sha256": "de17dea92fc28f854ced8ce8bf3ed773bf4ef3af4618a509b46644a1106b14e5"
+}

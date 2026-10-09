@@ -1,0 +1,51 @@
+# Rev C printing, assembly and service — 8 October 2026
+
+This document applies to the P2406 motor/ESC design in `cad/rev_c/`. Use the current source-matched head, rotor and motion reports. Rev B's Noctua mount, 12 V power branch and 76-instance Onshape clearance report do not qualify this design. The printed impeller is a guarded development article; the distributed firmware cannot command rotor motion.
+
+## Parts and process
+
+| Parts | Starting material / orientation | Process and inspection |
+|---|---|---|
+| Left/right flowing head with integral outlet | Dry PETG; split X face on bed | 0.2 mm layers, 0.4 mm nozzle, at least four walls. Check seam bosses, outboard bearing/guide supports, inlet bead and carrier seats in the slicer. Local supports may be required; remove them before assembly. Do not leave support fragments in the air path. |
+| Base shell | PETG, open bottom toward bed | 0.2 mm layers, four walls. The roof and internal pillars need an inspected bridging/support plan. Print a side/control coupon first. Rear vents must remain open; remove supports through the service opening. |
+| Bottom tray, display cradle, bezel and covers | PETG, broad flat face toward bed | Use four walls; small nut/insert lands should be solid. Protect the screen glass from insert-installation heat. Keep screw access and actual EYESPI pigtail clearance. |
+| Panels, cranks, yoke and rod | PETG, tested mechanism coupon orientations | Keep 1.6 mm panel skins fully resolved. Print crank/yoke/rod on broad X faces. Test bridge sag in hinge bores and ream only after measuring. Use metal smooth sleeves; threads do not bear on printed pivots. |
+| Stator and guards | PETG, axial face toward bed where feasible | Seven default vanes are 1.2 mm thick. Guard clear slots are nominally 4.8 mm. Inspect extrusion continuity along long bars and supports. The guards are not certified fragment containment. |
+| Carrier isolation ring, wire liner and desk feet | TPU 95A, separately printed | Measure seat compression, concentricity and creep. Rigid carrier alignment must remain stable. The four feet sit below the tray, giving downward lighting actual desk clearance. |
+| Ambient diffuser | Translucent PETG, flat | Start at 0.8 mm thickness. Inspect hot spots and glare using the actual LEDs; the screw-on keeper permits replacement. |
+| Impeller and shaft coupon | Follow [impeller process](rev-c-impeller.md) exactly | The rotor needs a separate qualified print and guarded balance/spin program. A dimensionally valid STL is not permission to operate it. |
+
+The carrier uses a 0.8 mm radial TPU sleeve and 0.4 mm axial lips. Four rigid alignment stops have a nominal 0.3 mm gap; test compression and runout before fitting a rotor. Other starting fits include 0.3 mm sliding-guide clearance, 0.35 mm per panel side, 3.3 mm bores for 3 mm hinge shafts, and 6.55 mm magnet pockets for 6.35 mm discs. Use the thirteen [Rev C test pieces](../cad/rev_c/testpieces/testpiece-validation.json), including a pair of 6° aiming rails, with the actual printer, filament and orientation. Inspect the small upper LED support necks before tightening; screw loads should seat the board without touching LED packages.
+
+Use [service-interface datums](../cad/rev_c/service-interfaces.json) for exact nominal axes. Six shell seam positions use M3 screws and RX-M3x5.7 inserts. Display and linkage-cover screws enter from accessible faces. All inserts and captive nuts must be installed before closing the corresponding shell. Pilot diameters are starting values rather than guaranteed press fits.
+
+## Assembly sequence
+
+1. Inspect the purchased motor, ESC, encoder, feedback servo and current-revision screen. Measure the motor prop seat, thread pitch/hand, usable thread length and permissible M3 insertion depth. Resolve the 8/10 mm shaft-drawing discrepancy before choosing the final rotor clamping stack. Verify the exact A50S V2.3c connectors; its vendor V2.2 reference is historical.
+2. Print and inspect the shaft/clamping, hinge, yoke slot, encoder, insert, magnet/diffuser and carrier-fit coupons. Check a print of the curved fascia before printing the full enclosure. Install inserts, captive nuts and magnet-retaining hardware with the components removed.
+3. With the head split open, place the rounded inlet spigot/bead in its captive seat. Fit the rear finger guard with four M2×10 through-bolts, ISO 7089 washers and ISO 4032 nuts; capture the nuts before closing the head. Mount the motor rigidly on the Ø16 mm pitch-circle carrier with four M3 screws of a measured safe length. Fit the replaceable TPU carrier ring and place the assembly in its captured seat. Check alignment without the rotor installed.
+4. Place the independently removable stator in its locating seat. Its trial geometry must later be compared with an open spacer; straight vanes are not a qualified swirl-recovery design. Fit the fixed front guard and verify its screw access.
+5. Assemble the guide/yoke and separate keyed cranks, then the two panels. Close the structural head around the inlet, carrier and stator. Insert both nominal 172 mm ground-steel hinge shafts from the left; fit the separately placed collars and spacers. Deburr and verify shaft length against the supplied hardware before cutting.
+6. Fit the four sleeved M2 pivot stacks, connecting rod and the supplied servo horn. Fit the adjustable FS90-FB bracket, set the real output datum and manually sweep the full linkage. Fit neither endpoint by driving the servo against a stop. Keep the loom outside the entire yoke/crank envelope. Secure the curved cover using its four accessible M3 locations after commissioning checks.
+7. Install the Omron D2F-01L on its slotted bracket, its protected raceway and TPU wire clamp. Adjust the grille's integral tongue to trip reliably with bounded overtravel. The case/lever drawing does not establish the actual switch trip point. COM goes to ground, NO to the buffered guard input; insulate NC. Verify electrical opening on grille removal before connecting the motor branch.
+8. Mark magnet polarity before insertion: all head outward faces share one pole; grille inward faces attract them. Install four D42 discs per side, using the allowed adhesive clearance and the screw-on retaining rings. Keep magnets away from hot insert tooling. Test deliberate peeling and maximum-operation retention/rattle on the actual assembly.
+9. Fit the clear screen lens and bezel, then the LCD to its two genuine PCB mounting holes on the removable cradle. Fit the four rear cradle screws. Support the PCB and mounting tabs; do not clamp the glass. Install the horizontal encoder through its nut-supported bracket and its separately supported routed daughterboard. Check switch travel and wheel-to-shroud clearance by hand.
+10. Populate the removable tray with the Pico, two 5 V regulators, PD sink, sensors, ambient stick and ESC cradle. The nominal stacks use M1.6×12 for the Pico, M2×14 for the regulator/PD boards and M1.6×8 for the ambient stick. Use the documented board-hole datums and check the small clearance beside the LED packages. The protected circuit is captured in the [editable KiCad schematic](../hardware/pcb/rev_c/windflow-rev-c.kicad_sch); its 80 × 55 mm main PCB still needs placement/routing and electrical checks before fabrication. Fit the actual ESC with a nonconducting restraint and free connector access.
+11. Route the three phase leads separately from short UART/ground and analog/I2C wiring. Fit strain relief at connectors and the servo exit. Provide slack for unplugging the tray, screen and servo. Pressure hoses need a new source-matched route with correct bend radius and independent housing restraint; do not copy the old Noctua layout unchanged.
+12. Fit the downward diffuser and its removable keeper. Fit the tray and four TPU feet. Connect only the specified 15 V / 3 A PD supply. Test housekeeping, display, night mode, switch input, sensors, branch gates and servo with the rotor absent. Commission the motor and rotor only under the separate contained test plan.
+
+## Service paths
+
+For routine cleaning, disconnect power, verify rotor rest, then peel off the magnetic grille. Fixed guards remain in place. Removing the cosmetic grille interrupts torque permission but does not stop mechanical coast instantly. Removing a fixed guard is a service operation with power disconnected and rotor rest confirmed.
+
+The screen, with its cradle attached, withdraws rearward 4 mm and then lowers 70 mm through the open bottom after the bezel/lens, tray and loom are removed. The motion report checks that nominal unplugged path. It does not model a live connected harness or screwdriver.
+
+To service the tray, disconnect USB-C and wait for discharge/rest, remove the foot/tray fasteners, unplug the board-to-head and screen looms, then lower the tray. The PD board is recessed at the rear port; the actual plug and cable must be checked. Release the ESC restraint before unplugging its miniature I/O connector; pull connector housings rather than wires.
+
+## Qualification boundaries
+
+Nominal rigid-solid clearance checks can resolve known CAD collisions. They do not qualify print error, deflection, heat creep, rotor runout/balance, switch overtravel, magnet holding force, connector fit, dynamic hose/wire motion or an installed tool path. Those are measured acceptance items. Airflow/noise/power, low-speed FOC compatibility, boost usefulness and an unattended-use speed ceiling remain unmeasured. Main-board routing, pressure plumbing, installed looms and complete fastener/tool checks remain design work. The complete development geometry is imported into Onshape alongside the native parametric architecture; the [checkpoint record](../cad/onshape-rev-c-checkpoint.json) identifies the exact checked files and limitations.
+
+## Front encoder revision
+
+The8October mount sits beside the screen. Its shaft is horizontal +Y and its disk turns parallel to the screen face. Print the source-matched front encoder wheel, bracket and fascia section before the complete base. Assemble captiveM2nuts, PCB and Bourns bushing/nut first; attach the bracket using its separate M3axes; install the wheel last. Remove the wheel before bracket service. See [front controls](rev-c-front-controls.md) for the gesture and test limits.

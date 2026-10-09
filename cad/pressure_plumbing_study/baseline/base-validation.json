@@ -1,0 +1,929 @@
+{
+  "parts": [
+    {
+      "name": "REF-display-clear-window-45x34p4x1",
+      "valid": true,
+      "solids": 1,
+      "material": "clear acrylic sheet, cut to drawing",
+      "bounds_mm": [
+        45.0,
+        1.0,
+        34.400000000000006
+      ]
+    },
+    {
+      "name": "display-removable-cradle",
+      "valid": true,
+      "solids": 1,
+      "material": "PETG",
+      "bounds_mm": [
+        81.00000020000004,
+        9.442173937965535,
+        39.20000020000012
+      ]
+    },
+    {
+      "name": "display-front-bezel",
+      "valid": true,
+      "solids": 1,
+      "material": "PETG",
+      "bounds_mm": [
+        78.00000020000006,
+        1.6009848489763385,
+        39.60000020000007
+      ]
+    },
+    {
+      "name": "ambient-light-diffuser",
+      "valid": true,
+      "solids": 1,
+      "material": "translucent PETG",
+      "bounds_mm": [
+        55.00000020000003,
+        11.700000200000034,
+        0.8000002000000563
+      ]
+    },
+    {
+      "name": "ambient-diffuser-keeper",
+      "valid": true,
+      "solids": 1,
+      "material": "PETG",
+      "bounds_mm": [
+        72.00000020000003,
+        20.00000020000003,
+        1.2014771734644398
+      ]
+    },
+    {
+      "name": "tpu-desk-foot-1",
+      "valid": true,
+      "solids": 1,
+      "material": "TPU 95A",
+      "bounds_mm": [
+        14.00313317401551,
+        14.004699573374802,
+        5.0062661480309885
+      ]
+    },
+    {
+      "name": "tpu-desk-foot-2",
+      "valid": true,
+      "solids": 1,
+      "material": "TPU 95A",
+      "bounds_mm": [
+        14.003133174015524,
+        14.004699573374808,
+        5.0062661480309885
+      ]
+    },
+    {
+      "name": "tpu-desk-foot-3",
+      "valid": true,
+      "solids": 1,
+      "material": "TPU 95A",
+      "bounds_mm": [
+        14.003133174015517,
+        14.00469957337481,
+        5.0062661480309885
+      ]
+    },
+    {
+      "name": "tpu-desk-foot-4",
+      "valid": true,
+      "solids": 1,
+      "material": "TPU 95A",
+      "bounds_mm": [
+        14.003133174015517,
+        14.004699573374808,
+        5.0062661480309885
+      ]
+    },
+    {
+      "name": "REF-SDP810-daughterboard-required-outline",
+      "valid": true,
+      "solids": 1,
+      "material": "unrouted FR4 interface",
+      "bounds_mm": [
+        18.0,
+        1.6000000000000014,
+        12.0
+      ]
+    },
+    {
+      "name": "horizontal-encoder-mount",
+      "valid": true,
+      "solids": 1,
+      "material": "PETG",
+      "bounds_mm": [
+        10.903607577876826,
+        32.00000020000006,
+        28.000000200000045
+      ]
+    },
+    {
+      "name": "REF-encoder-daughterboard-required-outline",
+      "valid": true,
+      "solids": 1,
+      "material": "unrouted FR4 interface",
+      "bounds_mm": [
+        1.6000000000000014,
+        24.0,
+        24.0
+      ]
+    },
+    {
+      "name": "REF-M7x0p75-encoder-panel-nut",
+      "valid": true,
+      "solids": 1,
+      "material": "purchased steel nut envelope",
+      "bounds_mm": [
+        2.0,
+        12.701705922171765,
+        11.0
+      ]
+    },
+    {
+      "name": "horizontal-encoder-thumbwheel",
+      "valid": true,
+      "solids": 1,
+      "material": "PETG",
+      "bounds_mm": [
+        8.004078540581503,
+        29.982649969142052,
+        29.98264996914203
+      ]
+    },
+    {
+      "name": "electronics-base-shell",
+      "valid": true,
+      "solids": 1,
+      "material": "PETG",
+      "bounds_mm": [
+        198.52025465826802,
+        150.00592289884924,
+        52.40711556681749
+      ]
+    },
+    {
+      "name": "electronics-service-tray",
+      "valid": true,
+      "solids": 1,
+      "material": "PETG",
+      "bounds_mm": [
+        189.40566906889856,
+        149.7028346344493,
+        22.977834634449295
+      ]
+    }
+  ],
+  "assembly_files": [
+    "Adafruit-ST7789-4311-display-vendor.step",
+    "REF-display-clear-window-45x34p4x1.step",
+    "display-removable-cradle.step",
+    "display-front-bezel.step",
+    "ambient-light-diffuser.step",
+    "ambient-diffuser-keeper.step",
+    "tpu-desk-foot-1.step",
+    "tpu-desk-foot-2.step",
+    "tpu-desk-foot-3.step",
+    "tpu-desk-foot-4.step",
+    "REF-driver-carrier-90x65x22-NOT-DESIGNED.step",
+    "REF-SDP810-daughterboard-required-outline.step",
+    "horizontal-encoder-mount.step",
+    "REF-encoder-daughterboard-required-outline.step",
+    "REF-M7x0p75-encoder-panel-nut.step",
+    "horizontal-encoder-thumbwheel.step",
+    "REF-Bourns-PEC11H-drawing-envelope.step",
+    "electronics-base-shell.step",
+    "electronics-service-tray.step",
+    "Raspberry-Pi-Pico-SC0915-vendor.step",
+    "Pololu-D24V22-12V-vendor.step",
+    "Pololu-D24V22-5V-logic-vendor.step",
+    "Pololu-D24V22-5V-servo-vendor.step",
+    "Sensirion-SDP810-125Pa-vendor.step",
+    "Adafruit-HUSB238-5807-vendor.step",
+    "Adafruit-NeoPixel-1426-ambient-vendor.step",
+    "MCP9808-temp1-Adafruit1782-vendor.step",
+    "MCP9808-temp2-Adafruit1782-vendor.step"
+  ],
+  "layout_envelopes": [
+    [
+      "carrier-reserved",
+      90,
+      65,
+      22,
+      [
+        5,
+        55,
+        -106
+      ]
+    ],
+    [
+      "pico",
+      21,
+      52.3,
+      8,
+      [
+        -55,
+        61,
+        -106
+      ]
+    ],
+    [
+      "regulator12",
+      17.8,
+      17.8,
+      9,
+      [
+        -53,
+        18,
+        -106
+      ]
+    ],
+    [
+      "regulator5logic",
+      17.8,
+      17.8,
+      9,
+      [
+        -27,
+        18,
+        -106
+      ]
+    ],
+    [
+      "regulator5servo",
+      17.8,
+      17.8,
+      9,
+      [
+        -1,
+        18,
+        -106
+      ]
+    ],
+    [
+      "pressure",
+      29,
+      27.05,
+      17.95,
+      [
+        40,
+        8,
+        -106
+      ]
+    ],
+    [
+      "pd",
+      20.32,
+      24.608,
+      14,
+      [
+        72,
+        -8.2,
+        -106
+      ]
+    ]
+  ],
+  "build": {
+    "completed_utc": "2026-10-03T17:11:39.693016+00:00",
+    "script_sha256": "6dc44c84dcdc084d2560fee898633ec606226fbd5dce098f943a4e4742d6c2b0",
+    "parameters_sha256": "6f86731c3123d8d15c025a0b34fb400919749b0227dfb576a218ed821d70c8ee"
+  },
+  "fasteners": [
+    {
+      "location": "4311 display PCB",
+      "axis_mm": [
+        40.0427509537852,
+        136.5088022014568,
+        -79.2605345602586
+      ],
+      "hardware": "M2x12 screw and DIN934 M2 nut; screw through PCB, nut loaded from rear"
+    },
+    {
+      "location": "4311 display PCB",
+      "axis_mm": [
+        40.0427509537852,
+        136.5088022014568,
+        -109.7405345602586
+      ],
+      "hardware": "M2x12 screw and DIN934 M2 nut; screw through PCB, nut loaded from rear"
+    },
+    {
+      "location": "display removable cradle",
+      "axis_mm": [
+        -23,
+        125.5,
+        -80.6
+      ],
+      "hardware": "M3x8 screw and Ruthex RX-M3x5.7 insert, installed from rear"
+    },
+    {
+      "location": "display removable cradle",
+      "axis_mm": [
+        -23,
+        125.5,
+        -108.4
+      ],
+      "hardware": "M3x8 screw and Ruthex RX-M3x5.7 insert, installed from rear"
+    },
+    {
+      "location": "display removable cradle",
+      "axis_mm": [
+        49,
+        125.5,
+        -80.6
+      ],
+      "hardware": "M3x8 screw and Ruthex RX-M3x5.7 insert, installed from rear"
+    },
+    {
+      "location": "display removable cradle",
+      "axis_mm": [
+        49,
+        125.5,
+        -108.4
+      ],
+      "hardware": "M3x8 screw and Ruthex RX-M3x5.7 insert, installed from rear"
+    },
+    {
+      "location": "display front bezel",
+      "axis_mm": [
+        -23,
+        141.6,
+        -85.5
+      ],
+      "hardware": "M2x6 screw and Ruthex RX-M2x4 insert, 3.2 mm initial pilot; clear sheet retained with 3M467MP perimeter film"
+    },
+    {
+      "location": "display front bezel",
+      "axis_mm": [
+        -23,
+        141.6,
+        -103.5
+      ],
+      "hardware": "M2x6 screw and Ruthex RX-M2x4 insert, 3.2 mm initial pilot; clear sheet retained with 3M467MP perimeter film"
+    },
+    {
+      "location": "display front bezel",
+      "axis_mm": [
+        49,
+        141.6,
+        -85.5
+      ],
+      "hardware": "M2x6 screw and Ruthex RX-M2x4 insert, 3.2 mm initial pilot; clear sheet retained with 3M467MP perimeter film"
+    },
+    {
+      "location": "display front bezel",
+      "axis_mm": [
+        49,
+        141.6,
+        -103.5
+      ],
+      "hardware": "M2x6 screw and Ruthex RX-M2x4 insert, 3.2 mm initial pilot; clear sheet retained with 3M467MP perimeter film"
+    },
+    {
+      "location": "ambient diffuser keeper",
+      "axis_mm": [
+        -17,
+        51.5,
+        -117
+      ],
+      "hardware": "M3x6 screw and Ruthex RX-M3x5.7 insert"
+    },
+    {
+      "location": "ambient diffuser keeper",
+      "axis_mm": [
+        47,
+        51.5,
+        -117
+      ],
+      "hardware": "M3x6 screw and Ruthex RX-M3x5.7 insert"
+    },
+    {
+      "location": "ambient LED PCB",
+      "axis_mm": [
+        2.15,
+        41.922,
+        -109
+      ],
+      "hardware": "M2x6 screw and DIN 934 M2 hex nut; nut pocket 4.2 mm AF"
+    },
+    {
+      "location": "ambient LED PCB",
+      "axis_mm": [
+        27.55,
+        41.922,
+        -109
+      ],
+      "hardware": "M2x6 screw and DIN 934 M2 hex nut; nut pocket 4.2 mm AF"
+    },
+    {
+      "location": "carrier required NPTH mounting datum",
+      "axis_mm": [
+        8,
+        58,
+        -106
+      ],
+      "hardware": "M2x10 screw and DIN 934 M2 hex nut; nut pocket 4.2 mm AF"
+    },
+    {
+      "location": "carrier required NPTH mounting datum",
+      "axis_mm": [
+        8,
+        117,
+        -106
+      ],
+      "hardware": "M2x10 screw and DIN 934 M2 hex nut; nut pocket 4.2 mm AF"
+    },
+    {
+      "location": "carrier required NPTH mounting datum",
+      "axis_mm": [
+        92,
+        58,
+        -106
+      ],
+      "hardware": "M2x10 screw and DIN 934 M2 hex nut; nut pocket 4.2 mm AF"
+    },
+    {
+      "location": "carrier required NPTH mounting datum",
+      "axis_mm": [
+        92,
+        117,
+        -106
+      ],
+      "hardware": "M2x10 screw and DIN 934 M2 hex nut; nut pocket 4.2 mm AF"
+    },
+    {
+      "location": "Pico",
+      "axis_mm": [
+        -50.2,
+        63,
+        -106
+      ],
+      "hardware": "M2x10 screw and DIN 934 M2 hex nut; nut pocket 4.2 mm AF"
+    },
+    {
+      "location": "Pico",
+      "axis_mm": [
+        -50.2,
+        110,
+        -106
+      ],
+      "hardware": "M2x10 screw and DIN 934 M2 hex nut; nut pocket 4.2 mm AF"
+    },
+    {
+      "location": "Pico",
+      "axis_mm": [
+        -38.8,
+        63,
+        -106
+      ],
+      "hardware": "M2x10 screw and DIN 934 M2 hex nut; nut pocket 4.2 mm AF"
+    },
+    {
+      "location": "Pico",
+      "axis_mm": [
+        -38.8,
+        110,
+        -106
+      ],
+      "hardware": "M2x10 screw and DIN 934 M2 hex nut; nut pocket 4.2 mm AF"
+    },
+    {
+      "location": "Pololu D24V22",
+      "axis_mm": [
+        -37.506,
+        20.286,
+        -104.9
+      ],
+      "hardware": "M2x12 screw and DIN 934 M2 hex nut; nut pocket 4.2 mm AF"
+    },
+    {
+      "location": "Pololu D24V22",
+      "axis_mm": [
+        -50.714,
+        33.494,
+        -104.9
+      ],
+      "hardware": "M2x12 screw and DIN 934 M2 hex nut; nut pocket 4.2 mm AF"
+    },
+    {
+      "location": "Pololu D24V22",
+      "axis_mm": [
+        -11.506,
+        20.286,
+        -104.9
+      ],
+      "hardware": "M2x12 screw and DIN 934 M2 hex nut; nut pocket 4.2 mm AF"
+    },
+    {
+      "location": "Pololu D24V22",
+      "axis_mm": [
+        -24.714,
+        33.494,
+        -104.9
+      ],
+      "hardware": "M2x12 screw and DIN 934 M2 hex nut; nut pocket 4.2 mm AF"
+    },
+    {
+      "location": "Pololu D24V22",
+      "axis_mm": [
+        14.494,
+        20.286,
+        -104.9
+      ],
+      "hardware": "M2x12 screw and DIN 934 M2 hex nut; nut pocket 4.2 mm AF"
+    },
+    {
+      "location": "Pololu D24V22",
+      "axis_mm": [
+        1.286,
+        33.494,
+        -104.9
+      ],
+      "hardware": "M2x12 screw and DIN 934 M2 hex nut; nut pocket 4.2 mm AF"
+    },
+    {
+      "location": "HUSB238 PD",
+      "axis_mm": [
+        74.667,
+        -4.547,
+        -104.079823488
+      ],
+      "hardware": "M2x12 screw and DIN 934 M2 hex nut; nut pocket 4.2 mm AF"
+    },
+    {
+      "location": "HUSB238 PD",
+      "axis_mm": [
+        89.907,
+        -4.547,
+        -104.079823488
+      ],
+      "hardware": "M2x12 screw and DIN 934 M2 hex nut; nut pocket 4.2 mm AF"
+    },
+    {
+      "location": "TEMP1",
+      "axis_mm": [
+        -50.46,
+        52.16,
+        -103
+      ],
+      "hardware": "M2x14 screw with 0.4 mm washer and DIN 934 M2 hex nut; nut pocket 4.2 mm AF"
+    },
+    {
+      "location": "TEMP1",
+      "axis_mm": [
+        -35.22,
+        52.16,
+        -103
+      ],
+      "hardware": "M2x14 screw with 0.4 mm washer and DIN 934 M2 hex nut; nut pocket 4.2 mm AF"
+    },
+    {
+      "location": "TEMP2",
+      "axis_mm": [
+        -52.46,
+        127.16,
+        -103
+      ],
+      "hardware": "M2x14 screw with 0.4 mm washer and DIN 934 M2 hex nut; nut pocket 4.2 mm AF"
+    },
+    {
+      "location": "TEMP2",
+      "axis_mm": [
+        -37.22,
+        127.16,
+        -103
+      ],
+      "hardware": "M2x14 screw with 0.4 mm washer and DIN 934 M2 hex nut; nut pocket 4.2 mm AF"
+    },
+    {
+      "location": "SDP810 housing restraint",
+      "axis_mm": [
+        42.5,
+        21.5,
+        -97.025
+      ],
+      "hardware": "M2x20 screw, 0.4 mm washer and DIN 934 M2 nut; nominal 1.85 mm tip protrusion"
+    },
+    {
+      "location": "SDP810 housing restraint",
+      "axis_mm": [
+        66.5,
+        21.5,
+        -97.025
+      ],
+      "hardware": "M2x20 screw, 0.4 mm washer and DIN 934 M2 nut; nominal 1.85 mm tip protrusion"
+    },
+    {
+      "location": "SDP810 daughterboard",
+      "axis_mm": [
+        47.5,
+        32.25,
+        -103.775
+      ],
+      "hardware": "M2x6 screw and DIN 934 M2 nut; nominal 0.6 mm tip protrusion"
+    },
+    {
+      "location": "SDP810 daughterboard",
+      "axis_mm": [
+        61.5,
+        32.25,
+        -103.775
+      ],
+      "hardware": "M2x6 screw and DIN 934 M2 nut; nominal 0.6 mm tip protrusion"
+    },
+    {
+      "location": "encoder daughterboard",
+      "axis_mm": [
+        -61.5,
+        22,
+        -98.5
+      ],
+      "hardware": "M2x10 screw and M2 hex nut inserted before mounting encoder bracket"
+    },
+    {
+      "location": "encoder daughterboard",
+      "axis_mm": [
+        -61.5,
+        22,
+        -81.5
+      ],
+      "hardware": "M2x10 screw and M2 hex nut inserted before mounting encoder bracket"
+    }
+  ],
+  "shell_component_and_board_support_intersections": [],
+  "tray_and_USB_downward_removal_samples": [
+    {
+      "part": "electronics-service-tray",
+      "downward_mm": 1,
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "Adafruit-HUSB238-5807-vendor",
+      "downward_mm": 1,
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "electronics-service-tray",
+      "downward_mm": 3,
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "Adafruit-HUSB238-5807-vendor",
+      "downward_mm": 3,
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "electronics-service-tray",
+      "downward_mm": 6,
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "Adafruit-HUSB238-5807-vendor",
+      "downward_mm": 6,
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "electronics-service-tray",
+      "downward_mm": 12,
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "Adafruit-HUSB238-5807-vendor",
+      "downward_mm": 12,
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "electronics-service-tray",
+      "downward_mm": 25,
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "Adafruit-HUSB238-5807-vendor",
+      "downward_mm": 25,
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "electronics-service-tray",
+      "downward_mm": 45,
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "Adafruit-HUSB238-5807-vendor",
+      "downward_mm": 45,
+      "overlap_mm3": 0.0
+    }
+  ],
+  "usb": {
+    "vendor_shell_faces": "+Y before Z180 rotation",
+    "mouth_y_mm": -8.2,
+    "outer_wall_y_mm": -10,
+    "aperture_mm": [
+      14,
+      9
+    ],
+    "plug_overmould_check_mm": [
+      12,
+      35,
+      7
+    ],
+    "plug_to_shell_overlap_mm3": 0.0,
+    "mount_holes_source": "5807 STEP PCB circular edges, radii 1.25 mm",
+    "service_access": "USB fascia is integral with tray; connector exits through open-bottom shell slot",
+    "critical_remaining_test": "Verify supplied USB cable overmould and insertion load in printed receptacle coupon"
+  },
+  "mounting_interfaces": [
+    {
+      "component": "Adafruit 4311 ST7789 IPS display",
+      "source": "Manufacturer STEP and EYESPI Eagle board; current product page confirms unchanged size/pinout",
+      "vendor_bounds_mm": [
+        59.05500000000001,
+        6.080897798543276,
+        35.56000000000002
+      ],
+      "active_area_mm": [
+        40.8,
+        30.6
+      ],
+      "active_center_xz_mm": [
+        15,
+        -94.5
+      ],
+      "pcb_hole_axes_xyz_mm": [
+        [
+          40.0427509537852,
+          136.5088022014568,
+          -79.2605345602586
+        ],
+        [
+          40.0427509537852,
+          136.5088022014568,
+          -109.7405345602586
+        ]
+      ],
+      "cover_mm": [
+        45,
+        34.4,
+        1
+      ],
+      "lens_to_module_nominal_gap_mm": 0.7602999999998872,
+      "cradle_removal": "Unplug display pigtail; remove front bezel/window and service tray; undo four rear screws; withdraw cradle rearward 2 mm then lower through open bottom",
+      "remaining_test": "Check current EYESPI rear connector, right-angle solder pigtail, optical alignment, clear-sheet fit and screw pilots on coupon"
+    },
+    {
+      "component": "unrouted carrier",
+      "required_pcb_outline_mm": [
+        90,
+        65
+      ],
+      "minimum_xyz_mm": [
+        5,
+        55,
+        -106
+      ],
+      "required_hole_centers_xy_mm": [
+        [
+          8,
+          58
+        ],
+        [
+          8,
+          117
+        ],
+        [
+          92,
+          58
+        ],
+        [
+          92,
+          117
+        ]
+      ],
+      "required_hole_diameter_mm": 2.4,
+      "instruction": "Route PCB to these holes; no hardware release implied"
+    },
+    {
+      "component": "TEMP1 Adafruit 1782 non-STEMMA",
+      "hole_centers_xyz_mm": [
+        [
+          -50.46,
+          52.16,
+          -103
+        ],
+        [
+          -35.22,
+          52.16,
+          -103
+        ]
+      ],
+      "clear_board_envelope_mm": [
+        21.6,
+        13.6,
+        3.7
+      ],
+      "revision_source": "https://www.adafruit.com/product/1782: 2023 silkscreen-only update",
+      "remaining_test": "Verify actual board edges/holes, soldered pigtail clearance and thermal lag"
+    },
+    {
+      "component": "TEMP2 Adafruit 1782 non-STEMMA",
+      "hole_centers_xyz_mm": [
+        [
+          -52.46,
+          127.16,
+          -103
+        ],
+        [
+          -37.22,
+          127.16,
+          -103
+        ]
+      ],
+      "clear_board_envelope_mm": [
+        21.6,
+        13.6,
+        3.7
+      ],
+      "revision_source": "https://www.adafruit.com/product/1782: 2023 silkscreen-only update",
+      "remaining_test": "Verify actual board edges/holes, soldered pigtail clearance and thermal lag"
+    },
+    {
+      "component": "SDP810 pressure sensor",
+      "housing_hole_axes_xyz_mm": [
+        [
+          42.5,
+          21.5,
+          -97.025
+        ],
+        [
+          66.5,
+          21.5,
+          -97.025
+        ]
+      ],
+      "daughterboard_outline_mm": [
+        18,
+        12,
+        1.6
+      ],
+      "daughterboard_minimum_xyz_mm": [
+        45.5,
+        32.25,
+        -105.775
+      ],
+      "pin_pitch_mm": 2.0,
+      "pin_axes_x_mm": [
+        51.5,
+        53.5,
+        55.5,
+        57.5
+      ],
+      "pin_axis_z_mm": -99.775,
+      "pin_drill_mm": 0.8,
+      "mounting_drill_mm": 2.4,
+      "electrical_interface": "Direct solder; removable sensor/PCB module, strain-relieved four-wire pigtail",
+      "remaining_test": "Confirm actual pin projection, washer/nut fit and tubing bend radius on coupon"
+    },
+    {
+      "component": "encoder",
+      "panel_nut": "M7 x 0.75, 11 mm AF, maximum 2 mm thick",
+      "wheel_to_nut_axial_gap_mm": 2.8,
+      "assessed_button_travel_mm": 1.5,
+      "daughterboard_holes_xyz_mm": [
+        [
+          -61.5,
+          22,
+          -98.5
+        ],
+        [
+          -61.5,
+          22,
+          -81.5
+        ]
+      ],
+      "remaining_test": "Verify supplied nut dimensions, switch travel, D-shaft fit and lateral wheel force"
+    }
+  ],
+  "status": "development, not print release",
+  "remaining": [
+    "carrier and daughterboard PCB design",
+    "all component and harness interference checks",
+    "physical USB plug/insertion-load test",
+    "sensor pigtail strain relief and safe pin clearance",
+    "complete populated-tray removal and harness service paths"
+  ],
+  "metadata_amendments": [
+    {
+      "utc": "2026-10-03T17:59:47.313412+00:00",
+      "scope": "Descriptive service-sequence correction only; geometry, STEP/STL bytes and validation results unchanged",
+      "source": "display_layout.py",
+      "previous_source_sha256": "1cff0df7b300d946e92c16051e7ea9b7b34158a7fa6fdd44d01bbcdafac75b24",
+      "current_source_sha256": "06db882559464d5c2411cd3d325f358a8b61b509414a40df668be44bb4737392",
+      "AST_proof": "Exactly one string constant changed; all remaining AST nodes identical",
+      "previous_text": "Unplug display pigtail and undo four rear screws; withdraw cradle rearward before pulling service tray",
+      "current_text": "Unplug display pigtail; remove front bezel/window and service tray; undo four rear screws; withdraw cradle rearward 2 mm then lower through open bottom",
+      "previous_base_manifest_sha256": "910b7c26981d3c1d1f32f0abe242a570a060f397526c1450791b4ace9b7e2e13"
+    }
+  ]
+}

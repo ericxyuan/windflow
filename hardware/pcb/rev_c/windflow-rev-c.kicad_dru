@@ -1,0 +1,4 @@
+(version 1)
+(rule "Factory NexFET land spacing only"
+ (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('QRC1') && B.memberOfFootprint('QRC1')")
+ (constraint clearance (min 0.12mm)))

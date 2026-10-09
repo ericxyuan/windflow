@@ -1,0 +1,547 @@
+{
+  "fasteners": [
+    {
+      "interface": "Pico M1.6x12 / DIN934 M1.6",
+      "axis_xyz_mm": [
+        -70.2,
+        60,
+        -110
+      ],
+      "direction": "+Z",
+      "hole_diameter_mm": 1.8,
+      "nut_af_mm": 3.3,
+      "nut_loaded_from": "tray underside"
+    },
+    {
+      "interface": "Pico M1.6x12 / DIN934 M1.6",
+      "axis_xyz_mm": [
+        -70.2,
+        107,
+        -110
+      ],
+      "direction": "+Z",
+      "hole_diameter_mm": 1.8,
+      "nut_af_mm": 3.3,
+      "nut_loaded_from": "tray underside"
+    },
+    {
+      "interface": "Pico M1.6x12 / DIN934 M1.6",
+      "axis_xyz_mm": [
+        -58.8,
+        60,
+        -110
+      ],
+      "direction": "+Z",
+      "hole_diameter_mm": 1.8,
+      "nut_af_mm": 3.3,
+      "nut_loaded_from": "tray underside"
+    },
+    {
+      "interface": "Pico M1.6x12 / DIN934 M1.6",
+      "axis_xyz_mm": [
+        -58.8,
+        107,
+        -110
+      ],
+      "direction": "+Z",
+      "hole_diameter_mm": 1.8,
+      "nut_af_mm": 3.3,
+      "nut_loaded_from": "tray underside"
+    },
+    {
+      "interface": "D24V22F5 M2x14",
+      "axis_xyz_mm": [
+        -11.506,
+        12.286,
+        -108.9
+      ],
+      "direction": "+Z",
+      "hole_diameter_mm": 2.2,
+      "nut_af_mm": 4.2,
+      "nut_loaded_from": "tray underside"
+    },
+    {
+      "interface": "D24V22F5 M2x14",
+      "axis_xyz_mm": [
+        -24.714,
+        25.494,
+        -108.9
+      ],
+      "direction": "+Z",
+      "hole_diameter_mm": 2.2,
+      "nut_af_mm": 4.2,
+      "nut_loaded_from": "tray underside"
+    },
+    {
+      "interface": "D24V22F5 M2x14",
+      "axis_xyz_mm": [
+        16.494,
+        12.286,
+        -108.9
+      ],
+      "direction": "+Z",
+      "hole_diameter_mm": 2.2,
+      "nut_af_mm": 4.2,
+      "nut_loaded_from": "tray underside"
+    },
+    {
+      "interface": "D24V22F5 M2x14",
+      "axis_xyz_mm": [
+        3.286,
+        25.494,
+        -108.9
+      ],
+      "direction": "+Z",
+      "hole_diameter_mm": 2.2,
+      "nut_af_mm": 4.2,
+      "nut_loaded_from": "tray underside"
+    },
+    {
+      "interface": "HUSB238 M2x14",
+      "axis_xyz_mm": [
+        44.667,
+        8.653,
+        -108.079823488
+      ],
+      "direction": "+Z",
+      "hole_diameter_mm": 2.2,
+      "nut_af_mm": 4.2,
+      "nut_loaded_from": "tray underside"
+    },
+    {
+      "interface": "HUSB238 M2x14",
+      "axis_xyz_mm": [
+        59.907,
+        8.653,
+        -108.079823488
+      ],
+      "direction": "+Z",
+      "hole_diameter_mm": 2.2,
+      "nut_af_mm": 4.2,
+      "nut_loaded_from": "tray underside"
+    },
+    {
+      "interface": "ambient PCB M1.6x8 / DIN934 M1.6",
+      "axis_xyz_mm": [
+        -12.85,
+        78.922,
+        -113.6
+      ],
+      "direction": "+Z",
+      "hole_diameter_mm": 1.8,
+      "nut_af_mm": 3.3,
+      "nut_loaded_from": "tray underside"
+    },
+    {
+      "interface": "ambient PCB M1.6x8 / DIN934 M1.6",
+      "axis_xyz_mm": [
+        12.55,
+        78.922,
+        -113.6
+      ],
+      "direction": "+Z",
+      "hole_diameter_mm": 1.8,
+      "nut_af_mm": 3.3,
+      "nut_loaded_from": "tray underside"
+    },
+    {
+      "interface": "screen cradle M3x8 / RX-M3x5.7",
+      "axis_xyz_mm": [
+        -38,
+        158.1,
+        -81.6
+      ],
+      "direction": "+Y"
+    },
+    {
+      "interface": "screen cradle M3x8 / RX-M3x5.7",
+      "axis_xyz_mm": [
+        -38,
+        158.1,
+        -109.4
+      ],
+      "direction": "+Y"
+    },
+    {
+      "interface": "screen cradle M3x8 / RX-M3x5.7",
+      "axis_xyz_mm": [
+        34,
+        158.1,
+        -81.6
+      ],
+      "direction": "+Y"
+    },
+    {
+      "interface": "screen cradle M3x8 / RX-M3x5.7",
+      "axis_xyz_mm": [
+        34,
+        158.1,
+        -109.4
+      ],
+      "direction": "+Y"
+    },
+    {
+      "interface": "bezel M2x6 / RX-M2x4",
+      "axis_xyz_mm": [
+        -36,
+        173,
+        -85.5
+      ],
+      "direction": "-Y"
+    },
+    {
+      "interface": "bezel M2x6 / RX-M2x4",
+      "axis_xyz_mm": [
+        -36,
+        173,
+        -105.5
+      ],
+      "direction": "-Y"
+    },
+    {
+      "interface": "bezel M2x6 / RX-M2x4",
+      "axis_xyz_mm": [
+        36,
+        173,
+        -85.5
+      ],
+      "direction": "-Y"
+    },
+    {
+      "interface": "bezel M2x6 / RX-M2x4",
+      "axis_xyz_mm": [
+        36,
+        173,
+        -105.5
+      ],
+      "direction": "-Y"
+    },
+    {
+      "interface": "encoder PCB M2x10 / DIN934 M2",
+      "axis_xyz_mm": [
+        -47,
+        154.8,
+        -104.0
+      ],
+      "direction": "+Y",
+      "nut_loaded_from": "PCB-facing mouth before installing board"
+    },
+    {
+      "interface": "encoder PCB M2x10 / DIN934 M2",
+      "axis_xyz_mm": [
+        -47,
+        154.8,
+        -87.0
+      ],
+      "direction": "+Y",
+      "nut_loaded_from": "PCB-facing mouth before installing board"
+    },
+    {
+      "interface": "encoder mount M3x8 / RX-M3x5.7",
+      "axis_xyz_mm": [
+        -74.5,
+        166.3,
+        -105.5
+      ],
+      "direction": "-Y"
+    },
+    {
+      "interface": "encoder mount M3x8 / RX-M3x5.7",
+      "axis_xyz_mm": [
+        -74.5,
+        166.3,
+        -85.5
+      ],
+      "direction": "-Y"
+    },
+    {
+      "interface": "MCP9808 M2x12",
+      "axis_xyz_mm": [
+        -42.46,
+        48.16,
+        -110
+      ],
+      "direction": "+Z",
+      "hole_diameter_mm": 2.2,
+      "nut_af_mm": 4.2,
+      "nut_loaded_from": "tray underside"
+    },
+    {
+      "interface": "MCP9808 M2x12",
+      "axis_xyz_mm": [
+        -27.22,
+        48.16,
+        -110
+      ],
+      "direction": "+Z",
+      "hole_diameter_mm": 2.2,
+      "nut_af_mm": 4.2,
+      "nut_loaded_from": "tray underside"
+    },
+    {
+      "interface": "MCP9808 M2x12",
+      "axis_xyz_mm": [
+        -69.46,
+        139.16,
+        -110
+      ],
+      "direction": "+Z",
+      "hole_diameter_mm": 2.2,
+      "nut_af_mm": 4.2,
+      "nut_loaded_from": "tray underside"
+    },
+    {
+      "interface": "MCP9808 M2x12",
+      "axis_xyz_mm": [
+        -54.22,
+        139.16,
+        -110
+      ],
+      "direction": "+Z",
+      "hole_diameter_mm": 2.2,
+      "nut_af_mm": 4.2,
+      "nut_loaded_from": "tray underside"
+    },
+    {
+      "interface": "SDP810 restrained housing M2",
+      "axis_xyz_mm": [
+        47.2,
+        92.75,
+        -104.675
+      ],
+      "direction": "+Z",
+      "hole_diameter_mm": 2.2,
+      "nut_af_mm": 4.2,
+      "nut_loaded_from": "tray underside"
+    },
+    {
+      "interface": "SDP810 restrained housing M2",
+      "axis_xyz_mm": [
+        75.8,
+        92.75,
+        -104.675
+      ],
+      "direction": "+Z",
+      "hole_diameter_mm": 2.2,
+      "nut_af_mm": 4.2,
+      "nut_loaded_from": "tray underside"
+    },
+    {
+      "interface": "new80x55 carrier M2x12",
+      "axis_xyz_mm": [
+        -48,
+        71.5,
+        -110
+      ],
+      "direction": "+Z",
+      "hole_diameter_mm": 2.2,
+      "nut_af_mm": 4.2,
+      "nut_loaded_from": "tray underside"
+    },
+    {
+      "interface": "new80x55 carrier M2x12",
+      "axis_xyz_mm": [
+        -48,
+        120.5,
+        -110
+      ],
+      "direction": "+Z",
+      "hole_diameter_mm": 2.2,
+      "nut_af_mm": 4.2,
+      "nut_loaded_from": "tray underside"
+    },
+    {
+      "interface": "new80x55 carrier M2x12",
+      "axis_xyz_mm": [
+        26,
+        71.5,
+        -110
+      ],
+      "direction": "+Z",
+      "hole_diameter_mm": 2.2,
+      "nut_af_mm": 4.2,
+      "nut_loaded_from": "tray underside"
+    },
+    {
+      "interface": "new80x55 carrier M2x12",
+      "axis_xyz_mm": [
+        26,
+        120.5,
+        -110
+      ],
+      "direction": "+Z",
+      "hole_diameter_mm": 2.2,
+      "nut_af_mm": 4.2,
+      "nut_loaded_from": "tray underside"
+    },
+    {
+      "interface": "tray/foot M3x12 / RX-M3x5.7",
+      "axis_xyz_mm": [
+        -79,
+        18,
+        -126
+      ],
+      "direction": "+Z"
+    },
+    {
+      "interface": "tray/foot M3x12 / RX-M3x5.7",
+      "axis_xyz_mm": [
+        79,
+        18,
+        -126
+      ],
+      "direction": "+Z"
+    },
+    {
+      "interface": "tray/foot M3x12 / RX-M3x5.7",
+      "axis_xyz_mm": [
+        -79,
+        143,
+        -126
+      ],
+      "direction": "+Z"
+    },
+    {
+      "interface": "tray/foot M3x12 / RX-M3x5.7",
+      "axis_xyz_mm": [
+        79,
+        143,
+        -126
+      ],
+      "direction": "+Z"
+    },
+    {
+      "interface": "linkage cover M3x8 / RX-M3x5.7",
+      "axis_xyz_mm": [
+        110,
+        60,
+        -60
+      ],
+      "direction": "-X"
+    },
+    {
+      "interface": "linkage cover M3x8 / RX-M3x5.7",
+      "axis_xyz_mm": [
+        110,
+        60,
+        60
+      ],
+      "direction": "-X"
+    },
+    {
+      "interface": "linkage cover M3x8 / RX-M3x5.7",
+      "axis_xyz_mm": [
+        110,
+        130,
+        -50
+      ],
+      "direction": "-X"
+    },
+    {
+      "interface": "linkage cover M3x8 / RX-M3x5.7",
+      "axis_xyz_mm": [
+        110,
+        130,
+        50
+      ],
+      "direction": "-X"
+    }
+  ],
+  "mounts": [
+    {
+      "component": "HUSB238",
+      "connector_access": "rear -Y",
+      "remaining": "Actual Type-C plug/captive cable fit and strain at port"
+    },
+    {
+      "component": "ambient #1426",
+      "LED_to_diffuser_minimum_mm": 5.3,
+      "service": "Undo two M2 keeper screws, remove diffuser, remove LED PCB screws and unplug harness."
+    },
+    {
+      "component": "Adafruit4311 screen",
+      "active_center_xz_mm": [
+        0,
+        -95.5
+      ],
+      "cradle_path": "Unplug loom; remove bezel/lens and tray; unscrew cradle; pull -Y4mm then lower -Z.",
+      "remaining": "Current EYESPI cable and actual glare/viewing angle"
+    },
+    {
+      "component": "Bourns PEC11H-4215F-S0024",
+      "axis": "horizontal +Y",
+      "rotation_plane": "XZ, parallel to screen face",
+      "wheel_center_xz_mm": [
+        -66,
+        -95.5
+      ],
+      "wheel_axial_bounds_y_mm": [
+        171.4,
+        179.4
+      ],
+      "PCB": "routed P1 datum, separate captive-nut M2 supports",
+      "press_direction": "-Y, toward enclosure",
+      "remaining": "Actual press travel, direction preference, reach and one-handed desk stability"
+    },
+    {
+      "component": "SDP810-125Pa",
+      "remaining": "Direct-soldered2mm-pitch board, compliant housing cradle, tubes and port routing"
+    },
+    {
+      "component": "new power/control PCB",
+      "outline_mm": [
+        80,
+        55,
+        1.6
+      ],
+      "minimum_xyz_mm": [
+        -51,
+        68.5,
+        -110
+      ],
+      "holes_xy_mm": [
+        [
+          -48,
+          71.5
+        ],
+        [
+          -48,
+          120.5
+        ],
+        [
+          26,
+          71.5
+        ],
+        [
+          26,
+          120.5
+        ]
+      ],
+      "status": "139-component circuit captured and ERC checked; mechanical target only, PCB unrouted"
+    },
+    {
+      "component": "A50S V2.3c",
+      "envelope_mm": [
+        46,
+        22,
+        17
+      ],
+      "service": "Unplug UART, XT30 and MR30; release insulating strap; lift out.",
+      "remaining": "Exact case/connector CAD and actual strap pressure/air gap"
+    }
+  ],
+  "reserves": [
+    {
+      "name": "USB-C plug and bend",
+      "bounds_xyz_mm": [
+        42.0,
+        62.0,
+        -30.0,
+        2.0,
+        -109.0,
+        -95.0
+      ]
+    }
+  ],
+  "physical_qualification": false
+}

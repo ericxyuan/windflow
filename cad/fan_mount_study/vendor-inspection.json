@@ -1,0 +1,108 @@
+{
+  "fan_with_pads_depth_mm": 27.000000200000912,
+  "rigid_mounting_bores": [
+    {
+      "solid_index": 0,
+      "diameter_mm": 4.3,
+      "axis_xz_mm": [
+        -52.5,
+        62.5
+      ],
+      "y_span_mm": [
+        21.499999899999985,
+        26.0000001
+      ]
+    },
+    {
+      "solid_index": 0,
+      "diameter_mm": 4.3,
+      "axis_xz_mm": [
+        52.5,
+        -42.5
+      ],
+      "y_span_mm": [
+        21.4999999,
+        26.000000100000015
+      ]
+    },
+    {
+      "solid_index": 0,
+      "diameter_mm": 4.3,
+      "axis_xz_mm": [
+        -52.5,
+        -42.5
+      ],
+      "y_span_mm": [
+        21.4999999,
+        26.000000100000015
+      ]
+    },
+    {
+      "solid_index": 0,
+      "diameter_mm": 4.3,
+      "axis_xz_mm": [
+        52.5,
+        62.5
+      ],
+      "y_span_mm": [
+        21.499999899999985,
+        26.0000001
+      ]
+    },
+    {
+      "solid_index": 0,
+      "diameter_mm": 4.3,
+      "axis_xz_mm": [
+        52.5,
+        62.5
+      ],
+      "y_span_mm": [
+        0.9999998999998031,
+        5.500000099999822
+      ]
+    },
+    {
+      "solid_index": 0,
+      "diameter_mm": 4.3,
+      "axis_xz_mm": [
+        -52.5,
+        62.5
+      ],
+      "y_span_mm": [
+        0.9999998999998031,
+        5.500000099999822
+      ]
+    },
+    {
+      "solid_index": 0,
+      "diameter_mm": 4.3,
+      "axis_xz_mm": [
+        -52.5,
+        -42.5
+      ],
+      "y_span_mm": [
+        0.9999999000001815,
+        5.500000100000195
+      ]
+    },
+    {
+      "solid_index": 0,
+      "diameter_mm": 4.3,
+      "axis_xz_mm": [
+        52.5,
+        -42.5
+      ],
+      "y_span_mm": [
+        0.9999999000001815,
+        5.500000100000195
+      ]
+    }
+  ],
+  "nominal_mount_pitch_mm": 105.0,
+  "tube_to_rigid_fan_bore_radial_clearance_mm": 0.1656249999999999,
+  "tube_to_tpu_pad_radial_clearance_mm": 0.21562500000000018,
+  "m3_shank_to_tube_radial_clearance_mm": 0.12559999999999993,
+  "worst_stock_od_to_nominal_fan_bore_radial_clearance_mm": 0.14022500000000004,
+  "worst_stock_od_to_nominal_tpu_bore_radial_clearance_mm": 0.1902250000000003,
+  "worst_stock_id_to_nominal_m3_shank_radial_clearance_mm": 0.10019999999999984
+}

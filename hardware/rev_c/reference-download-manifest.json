@@ -1,0 +1,123 @@
+{
+  "Pacer-V4-Juicy-product.html": {
+    "url": "https://www.ligpower.com/product/p2406-fpv-freestyle-motor.html",
+    "path": "references\\Pacer-V4-Juicy-product.html",
+    "bytes": 260518,
+    "sha256": "bb1542762b33250d39b060be7c8f50698ef74f6b1a7df051d881f5283f769fba",
+    "status": "downloaded"
+  },
+  "Pacer-V4-Juicy-draw.png": {
+    "url": "https://www.ligpower.com/images/202508/Pacer-V4-Juicy-draw.png",
+    "path": "references\\Pacer-V4-Juicy-draw.png",
+    "bytes": 245062,
+    "sha256": "bfc3c9499e7e05d4b0c165b3e4ad908ae8dd9dcced23c10762dc9380d0d2aaf3",
+    "status": "downloaded"
+  },
+  "A50S-v2-3c-product.html": {
+    "url": "https://teamtriforceuk.com/a50s-v2/",
+    "path": "references\\A50S-v2-3c-product.html",
+    "bytes": 176088,
+    "sha256": "88206694167d0e805e122cfefca20467d27a3c43fc542a4f62bc08f24d9c59ea",
+    "status": "downloaded"
+  },
+  "A50S-v2-3-pinout.png": {
+    "url": "https://cdn11.bigcommerce.com/s-4t55i5fv4j/images/stencil/original/image-manager/pinout-v2.3.png?t=1684596909",
+    "path": "references\\A50S-v2-3-pinout.png",
+    "bytes": 68802,
+    "sha256": "f9905829c8b03849c81090632c7dfb5ff26c964c13e90af5662d7b58aa9dc79b",
+    "status": "downloaded"
+  },
+  "A50S-manufacturer-cad-folder.html": {
+    "url": "https://drive.google.com/drive/folders/1Uu2ekqWRjQy-1kAd9qATjfwv0aw9FCOZ?usp=sharing",
+    "path": "references\\A50S-manufacturer-cad-folder.html",
+    "bytes": 314910,
+    "sha256": "a5af3df43d8aab499260f12fda73e29951dfe7d643345a98d00c56bd55f8bc91",
+    "status": "downloaded"
+  },
+  "tps2663.pdf": {
+    "url": "https://www.ti.com/lit/ds/symlink/tps2663.pdf",
+    "path": "references\\tps2663.pdf",
+    "bytes": 5728602,
+    "sha256": "bb61314ace65ed37684bd07f541fc676081d7cf81cb24020e7c5c2065bfe16b2",
+    "status": "downloaded"
+  },
+  "HUSB238-5807-product.html": {
+    "url": "https://www.adafruit.com/product/5807",
+    "path": "references\\HUSB238-5807-product.html",
+    "bytes": 94867,
+    "sha256": "18ceeebf5d7457c6d7dac1417802b5ded1fdb1f9888d107c85a29dc073c836f4",
+    "status": "downloaded"
+  },
+  "RP2040-datasheet.pdf": {
+    "url": "https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf",
+    "path": "references\\RP2040-datasheet.pdf",
+    "bytes": 5301205,
+    "sha256": "be56fbb75ba0ae9e26558a73c93ac3e75c2ad4e6878d3b6703de2a76d886ea8c",
+    "status": "downloaded"
+  },
+  "hw_a50s_v23_core.h": {
+    "url": "https://raw.githubusercontent.com/vedderb/bldc/master/hwconf/teamtriforceuk/a50s_v23/hw_a50s_v23_core.h",
+    "path": "references\\hw_a50s_v23_core.h",
+    "bytes": 9554,
+    "sha256": "ccb38cdae2ac26f29b32f66ade9126df535fef070d01978a1f74ee4860d961d8",
+    "status": "downloaded"
+  },
+  "vesc-commands.c": {
+    "url": "https://raw.githubusercontent.com/vedderb/bldc/master/comm/commands.c",
+    "path": "references\\vesc-commands.c",
+    "bytes": 76165,
+    "sha256": "50bdebc91e22670ec7f2a9de4dd99c80f7c31b998af81750cf39c64c70417d65",
+    "status": "downloaded"
+  },
+  "Adafruit_HUSB238.h": {
+    "url": "https://raw.githubusercontent.com/adafruit/Adafruit_HUSB238/master/Adafruit_HUSB238.h",
+    "path": "references\\Adafruit_HUSB238.h",
+    "bytes": 4545,
+    "sha256": "33bc104bd93ae1158e31698cee11e1c559df37d87a9dcf7275b3d7bce741473d",
+    "status": "downloaded"
+  },
+  "74LVC2G125_Q100.pdf": {
+    "url": "https://assets.nexperia.com/documents/data-sheet/74LVC2G125_Q100.pdf",
+    "path": "references\\74LVC2G125_Q100.pdf",
+    "bytes": 228834,
+    "sha256": "c11a8260be758e72680916846f1c96f212cd23ea64e5f08e032c2adad4576cd4",
+    "status": "downloaded"
+  },
+  "A50S V2.2 3D Model.step": {
+    "url": "https://drive.google.com/uc?export=download&id=1-2GHeQ0M21JoS92eA7WNE7d85tEO53TA",
+    "path": "references\\A50S V2.2 3D Model.step",
+    "bytes": 4251938,
+    "sha256": "6c272ec9ae24ee05ffd78bfdbf10141a3268bc68298a340277451243366e11da",
+    "status": "downloaded",
+    "applicability": "Vendor V2.2 reference only; not verified as V2.3c mechanical geometry."
+  },
+  "A50S V2.2 With Case 3D Model.step": {
+    "url": "https://drive.google.com/uc?export=download&id=1dlgxatcstdM2lSfofotxKtMJxBGvp6Rr",
+    "path": "references\\A50S V2.2 With Case 3D Model.step",
+    "bytes": 4682768,
+    "sha256": "dd97cf59e2f4f42d4cb334fe4f145a1979c96a4160b20c158f24c44ae79c28f2",
+    "status": "downloaded",
+    "applicability": "Vendor V2.2 reference only; not verified as V2.3c mechanical geometry."
+  },
+  "csd19537q3.pdf": {
+    "url": "https://www.ti.com/lit/ds/symlink/csd19537q3.pdf",
+    "path": "references\\csd19537q3.pdf",
+    "bytes": 979540,
+    "sha256": "d74d65b7815d46d642a11c89834ee71245ae6d3541595df2b4fcfa21dfbd4903",
+    "status": "downloaded"
+  },
+  "61202021621.pdf": {
+    "url": "https://www.we-online.com/katalog/datasheet/61202021621.pdf",
+    "path": "references\\61202021621.pdf",
+    "bytes": 947361,
+    "sha256": "6b16ebe85c06a6c1c88eaf0b38e529fc3b3f6712756f28dd54c87a144cc0f841",
+    "status": "downloaded"
+  },
+  "61202023021.pdf": {
+    "url": "https://www.we-online.com/katalog/datasheet/61202023021.pdf",
+    "path": "references\\61202023021.pdf",
+    "bytes": 663870,
+    "sha256": "1bfc4759fe84351836945a0fb9ceb5bf71e67691456d8949f00c1f420d523c09",
+    "status": "downloaded"
+  }
+}

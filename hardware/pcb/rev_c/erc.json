@@ -1,0 +1,82 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-07T21:52:35",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/29fa04f0-f9a6-5325-9c63-606ce6526541",
+            "violations": []
+        },
+        {
+            "path": "/15V input and reverse blocking/",
+            "uuid_path": "/29fa04f0-f9a6-5325-9c63-606ce6526541/d9ca2957-c9fb-521b-862b-228b1cfe5615",
+            "violations": []
+        },
+        {
+            "path": "/Protected bus and 5V rails/",
+            "uuid_path": "/29fa04f0-f9a6-5325-9c63-606ce6526541/8862556e-16df-5af8-8f62-1938e66b2ee4",
+            "violations": []
+        },
+        {
+            "path": "/Default-off ESC branch/",
+            "uuid_path": "/29fa04f0-f9a6-5325-9c63-606ce6526541/ee8e2b21-8aa5-5d0b-a7e7-193a8fb065c9",
+            "violations": []
+        },
+        {
+            "path": "/Guard interlock and UART isolation/",
+            "uuid_path": "/29fa04f0-f9a6-5325-9c63-606ce6526541/c2f04a2b-0b3a-57c0-bb0f-387494bb2368",
+            "violations": []
+        },
+        {
+            "path": "/Servo supply and feedback/",
+            "uuid_path": "/29fa04f0-f9a6-5325-9c63-606ce6526541/b2cde76b-48b4-5ac8-833a-a27327ea559c",
+            "violations": []
+        },
+        {
+            "path": "/Downward ambient strip/",
+            "uuid_path": "/29fa04f0-f9a6-5325-9c63-606ce6526541/ef22a73b-c2db-52d5-ba7f-e688895ec971",
+            "violations": []
+        },
+        {
+            "path": "/Encoder, I2C and Pico/",
+            "uuid_path": "/29fa04f0-f9a6-5325-9c63-606ce6526541/84f24f08-ede0-5c5c-b6d2-1621af51c576",
+            "violations": []
+        },
+        {
+            "path": "/ADC isolation and filters/",
+            "uuid_path": "/29fa04f0-f9a6-5325-9c63-606ce6526541/f2b8e9f2-fd86-5ae7-b394-5de450c11586",
+            "violations": []
+        },
+        {
+            "path": "/IPS screen interfaces/",
+            "uuid_path": "/29fa04f0-f9a6-5325-9c63-606ce6526541/06197e94-0e9f-500b-8a57-e362d7cdea8f",
+            "violations": []
+        }
+    ],
+    "source": "windflow-rev-c.kicad_sch"
+}

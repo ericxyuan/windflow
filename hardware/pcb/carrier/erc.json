@@ -1,0 +1,67 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-05T18:21:22",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/331cb289-f5de-5a22-9636-1cd5657added",
+            "violations": []
+        },
+        {
+            "path": "/PD input, eFuse and remote regulators/",
+            "uuid_path": "/331cb289-f5de-5a22-9636-1cd5657added/9e7af232-f9ac-5129-b271-faef459ccf62",
+            "violations": []
+        },
+        {
+            "path": "/Fan/servo switches, PWM and feedback connectors/",
+            "uuid_path": "/331cb289-f5de-5a22-9636-1cd5657added/ab2769b3-5fb9-5eed-902d-93ad9b8dbf58",
+            "violations": []
+        },
+        {
+            "path": "/Downward ambient lighting supply and data/",
+            "uuid_path": "/331cb289-f5de-5a22-9636-1cd5657added/29d349ad-6680-5968-a634-c9195064a918",
+            "violations": []
+        },
+        {
+            "path": "/Encoder, I2C, grille safety and remote Pico/",
+            "uuid_path": "/331cb289-f5de-5a22-9636-1cd5657added/28e6e1f6-606f-5441-8cc5-8d4b77fa1914",
+            "violations": []
+        },
+        {
+            "path": "/ADC isolation and voltage/feedback measurement/",
+            "uuid_path": "/331cb289-f5de-5a22-9636-1cd5657added/6726d9f8-df25-501d-a1f5-4e1e83d13958",
+            "violations": []
+        },
+        {
+            "path": "/IPS display interfaces and external screen passives/",
+            "uuid_path": "/331cb289-f5de-5a22-9636-1cd5657added/856cdf4b-9aaa-56c3-9218-8f7503cd73a6",
+            "violations": []
+        }
+    ],
+    "source": "windflow-carrier.kicad_sch"
+}

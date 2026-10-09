@@ -1,0 +1,22 @@
+{
+  "revision": "E3-mechanical-blank-2026-10-03",
+  "status": "MECHANICAL ONLY - NO ELECTRICAL NETLIST OR ROUTING - NOT FOR FABRICATION",
+  "outline_mm": [90.0, 65.0],
+  "thickness_mm": 1.6,
+  "hole_diameter_mm": 2.4,
+  "hole_centres_mm": [[3.0, 3.0], [3.0, 62.0], [87.0, 3.0], [87.0, 62.0]],
+  "mounting_keepout_radius_mm": 3.5,
+  "keepout_polygon_segments": 64,
+  "cad_bottom_datum_xyz_mm": [5.0, 55.0, -106.0],
+  "assembled_height_reserve_mm": 22.0,
+  "provisional_copper_layers": 4,
+  "outline_source": "cad/build_base.py: carrier-reserved and carrier required NPTH mounting datum",
+  "limits": [
+    "Hole positions match fixed CAD tray supports; clearance and hardware tolerances require physical checks.",
+    "Mounting rule areas forbid tracks, vias, pads, copper pours and other footprint placement on all four copper layers.",
+    "The 3.5 mm radius is an initial fastener/tool/component clearance, not a validated tool sweep.",
+    "The 22 mm height reserve starts at the board underside; with 1.6 mm PCB, 20.4 mm remains above the board.",
+    "No electrical component, connector, net, route, copper pour, finalized stackup or captured schematic is present.",
+    "This file does not modify or replace the current 76-instance CAD assembly."
+  ]
+}

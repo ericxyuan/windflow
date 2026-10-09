@@ -1,0 +1,166 @@
+[
+  {
+    "arguments": [
+      "sch",
+      "export",
+      "netlist",
+      "--format",
+      "kicadxml",
+      "-o",
+      "C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\encoder\\windflow-encoder.net.xml",
+      "C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\encoder\\windflow-encoder.kicad_sch"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "arguments": [
+      "sch",
+      "erc",
+      "--format",
+      "json",
+      "--severity-all",
+      "--exit-code-violations",
+      "-o",
+      "C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\encoder\\erc.json",
+      "C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\encoder\\windflow-encoder.kicad_sch"
+    ],
+    "exit_code": 0,
+    "stdout": "Found 0 violations\nSaved ERC Report to C:/Users/admin/iCloudDrive/Windflow/hardware/pcb/encoder/erc.json",
+    "stderr": ""
+  },
+  {
+    "arguments": [
+      "pcb",
+      "drc",
+      "--format",
+      "json",
+      "--all-track-errors",
+      "--schematic-parity",
+      "--severity-all",
+      "--exit-code-violations",
+      "-o",
+      "C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\encoder\\drc.json",
+      "C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\encoder\\windflow-encoder.kicad_pcb"
+    ],
+    "exit_code": 0,
+    "stdout": "Found 0 violations\nFound 0 unconnected items\nFound 0 schematic parity issues\nSaved DRC Report to C:/Users/admin/iCloudDrive/Windflow/hardware/pcb/encoder/drc.json",
+    "stderr": ""
+  },
+  {
+    "arguments": [
+      "pcb",
+      "export",
+      "gerbers",
+      "-l",
+      "F.Cu,B.Cu,F.Mask,B.Mask,F.SilkS,B.SilkS,Edge.Cuts",
+      "-o",
+      "C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\encoder\\fabrication",
+      "C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\encoder\\windflow-encoder.kicad_pcb"
+    ],
+    "exit_code": 0,
+    "stdout": "Plotted to 'C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\encoder\\fabrication\\windflow-encoder-F_Cu.gtl'.\nPlotted to 'C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\encoder\\fabrication\\windflow-encoder-B_Cu.gbl'.\nPlotted to 'C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\encoder\\fabrication\\windflow-encoder-F_Silkscreen.gto'.\nPlotted to 'C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\encoder\\fabrication\\windflow-encoder-B_Silkscreen.gbo'.\nPlotted to 'C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\encoder\\fabrication\\windflow-encoder-F_Mask.gts'.\nPlotted to 'C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\encoder\\fabrication\\windflow-encoder-B_Mask.gbs'.\nPlotted to 'C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\encoder\\fabrication\\windflow-encoder-Edge_Cuts.gm1'.",
+    "stderr": ""
+  },
+  {
+    "arguments": [
+      "pcb",
+      "export",
+      "drill",
+      "--format",
+      "excellon",
+      "--excellon-separate-th",
+      "--excellon-oval-format",
+      "route",
+      "--generate-map",
+      "--map-format",
+      "svg",
+      "--generate-report",
+      "--report-path",
+      "C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\encoder\\fabrication\\drill-report.txt",
+      "-o",
+      "C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\encoder\\fabrication",
+      "C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\encoder\\windflow-encoder.kicad_pcb"
+    ],
+    "exit_code": 0,
+    "stdout": "Created file 'C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\encoder\\fabrication\\windflow-encoder-PTH.drl'\nCreated file 'C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\encoder\\fabrication\\windflow-encoder-NPTH.drl'\nCreated file 'C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\encoder\\fabrication\\windflow-encoder-PTH-drl_map.svg'.\nCreated file 'C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\encoder\\fabrication\\windflow-encoder-NPTH-drl_map.svg'.\nDone.",
+    "stderr": ""
+  },
+  {
+    "arguments": [
+      "pcb",
+      "export",
+      "step",
+      "--board-only",
+      "--force",
+      "-o",
+      "C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\encoder\\windflow-encoder-board-only.step",
+      "C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\encoder\\windflow-encoder.kicad_pcb"
+    ],
+    "exit_code": 0,
+    "stdout": "STEP file 'C:/Users/admin/iCloudDrive/Windflow/hardware/pcb/encoder/windflow-encoder-board-only.step' created.\n\nExport time 0.048 s",
+    "stderr": ""
+  },
+  {
+    "arguments": [
+      "C:\\Users\\admin\\iCloudDrive\\Windflow\\.tools\\venv\\Scripts\\python.exe",
+      "C:\\Users\\admin\\iCloudDrive\\Windflow\\tools\\build_encoder_board.py",
+      "--mechanical-check"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS native STEP origin and exact 1.6mm drilled assembly datum",
+    "stderr": ""
+  },
+  {
+    "arguments": [
+      "pcb",
+      "export",
+      "svg",
+      "--mode-single",
+      "--fit-page-to-board",
+      "--exclude-drawing-sheet",
+      "-l",
+      "F.Cu,F.SilkS,Edge.Cuts",
+      "-o",
+      "C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\encoder\\front.svg",
+      "C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\encoder\\windflow-encoder.kicad_pcb"
+    ],
+    "exit_code": 0,
+    "stdout": "Plotted to 'C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\encoder\\front.svg'.\nDone.",
+    "stderr": ""
+  },
+  {
+    "arguments": [
+      "pcb",
+      "export",
+      "svg",
+      "--mode-single",
+      "--fit-page-to-board",
+      "--exclude-drawing-sheet",
+      "--mirror",
+      "-l",
+      "B.Cu,B.SilkS,Edge.Cuts",
+      "-o",
+      "C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\encoder\\back.svg",
+      "C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\encoder\\windflow-encoder.kicad_pcb"
+    ],
+    "exit_code": 0,
+    "stdout": "Plotted to 'C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\encoder\\back.svg'.\nDone.",
+    "stderr": ""
+  },
+  {
+    "arguments": [
+      "sch",
+      "export",
+      "svg",
+      "--exclude-drawing-sheet",
+      "-o",
+      "C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\encoder\\schematic-svg",
+      "C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\encoder\\windflow-encoder.kicad_sch"
+    ],
+    "exit_code": 0,
+    "stdout": "Plotted to 'C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\encoder\\schematic-svg\\windflow-encoder.svg'.\nDone.",
+    "stderr": ""
+  }
+]

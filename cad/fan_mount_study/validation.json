@@ -1,0 +1,293 @@
+{
+  "completed_utc": "2026-10-04T07:02:09.332783+00:00",
+  "status": "independent mechanical repair study; not integrated or print qualified",
+  "frozen_baseline_commit": "ee3ddc9cbf206eec5d336ee8c083fa07e3193e1a",
+  "frozen_baseline_note": "Seven baseline files preserved byte-for-byte before mount repair adoption; vendor fan remains reproducibly downloaded",
+  "script_sha256": "41dcab8d58b7c2cecd83b6b80104f8bce12fbb54a136b9a7d156b09a2e635509",
+  "input_sha256": {
+    "cad\\fan_mount_study\\baseline\\parameters.json": "6f86731c3123d8d15c025a0b34fb400919749b0227dfb576a218ed821d70c8ee",
+    "cad\\fan_mount_study\\baseline\\build_head.py": "48e427c959fa807b7c9876a72d578360f8043637c26d9991115b00a6149ef4b5",
+    "cad\\fan_mount_study\\baseline\\check_assembly.py": "59f486b575dd15ed59b4ae9062e59f787ccf3fbda74fe45da35474227fe0ee5d",
+    "cad\\vendor\\NF-A12x25_G2_Public-CAD.stp": "d1d93310b63ead7e98af57ad292ccce87feaa67b0d2f92fb25066736960e97e1",
+    "cad\\fan_mount_study\\baseline\\head-left-integral-outlet.step": "f94152a8e4bde0b5ffee4ffaa1b1281c1bcf54db4d0a35ef3645d539d1e6f832",
+    "cad\\fan_mount_study\\baseline\\head-right-integral-outlet.step": "f2c226227c899018ed9b1f0489063ef3f5148440f2156851f8de30b9d481a783",
+    "cad\\fan_mount_study\\baseline\\bellmouth-rear-inlet.step": "f4a259e7f42b79b2c0142be8f1b92e2ec1f3c97842c6d92c9e5cda1a9774064a",
+    "cad\\fan_mount_study\\baseline\\tpu-fan-pad-m3.step": "5d434818901970448a5f46b9e5d4654e7762336a83bfda79c6c946024f331b5a"
+  },
+  "parameters": {
+    "tube_manufacturer": "K&S Precision Metals",
+    "tube_sku": "8128",
+    "tube_material": "brass alloy260/272",
+    "tube_od_mm": 3.96875,
+    "tube_id_mm": 3.2512,
+    "tube_od_id_tolerance_mm": 0.0508,
+    "tube_length_mm": 28.7,
+    "tube_length_tolerance_mm": 0.05,
+    "tpu_pad_od_mm": 14.0,
+    "tpu_pad_bore_mm": 4.4,
+    "tpu_pad_free_thickness_mm": 2.0,
+    "trial_compression_fraction": 0.15,
+    "insert_od_reference_mm": 4.6,
+    "insert_length_mm": 5.7,
+    "insert_pilot_mm": 4.0,
+    "insert_pilot_depth_mm": 6.8,
+    "washer_od_mm": 7.0,
+    "washer_id_mm": 3.2,
+    "washer_thickness_mm": 0.5,
+    "screw_length_mm": 35.0,
+    "screw_nominal_shank_mm": 3.0,
+    "screw_head_od_mm": 5.5,
+    "screw_head_height_mm": 3.0,
+    "bellplate_clearance_bore_mm": 7.6
+  },
+  "manufacturer_cad_measurements": {
+    "fan_with_pads_depth_mm": 27.000000200000912,
+    "rigid_mounting_bores": [
+      {
+        "solid_index": 0,
+        "diameter_mm": 4.3,
+        "axis_xz_mm": [
+          -52.5,
+          62.5
+        ],
+        "y_span_mm": [
+          21.499999899999985,
+          26.0000001
+        ]
+      },
+      {
+        "solid_index": 0,
+        "diameter_mm": 4.3,
+        "axis_xz_mm": [
+          52.5,
+          -42.5
+        ],
+        "y_span_mm": [
+          21.4999999,
+          26.000000100000015
+        ]
+      },
+      {
+        "solid_index": 0,
+        "diameter_mm": 4.3,
+        "axis_xz_mm": [
+          -52.5,
+          -42.5
+        ],
+        "y_span_mm": [
+          21.4999999,
+          26.000000100000015
+        ]
+      },
+      {
+        "solid_index": 0,
+        "diameter_mm": 4.3,
+        "axis_xz_mm": [
+          52.5,
+          62.5
+        ],
+        "y_span_mm": [
+          21.499999899999985,
+          26.0000001
+        ]
+      },
+      {
+        "solid_index": 0,
+        "diameter_mm": 4.3,
+        "axis_xz_mm": [
+          52.5,
+          62.5
+        ],
+        "y_span_mm": [
+          0.9999998999998031,
+          5.500000099999822
+        ]
+      },
+      {
+        "solid_index": 0,
+        "diameter_mm": 4.3,
+        "axis_xz_mm": [
+          -52.5,
+          62.5
+        ],
+        "y_span_mm": [
+          0.9999998999998031,
+          5.500000099999822
+        ]
+      },
+      {
+        "solid_index": 0,
+        "diameter_mm": 4.3,
+        "axis_xz_mm": [
+          -52.5,
+          -42.5
+        ],
+        "y_span_mm": [
+          0.9999999000001815,
+          5.500000100000195
+        ]
+      },
+      {
+        "solid_index": 0,
+        "diameter_mm": 4.3,
+        "axis_xz_mm": [
+          52.5,
+          -42.5
+        ],
+        "y_span_mm": [
+          0.9999999000001815,
+          5.500000100000195
+        ]
+      }
+    ],
+    "nominal_mount_pitch_mm": 105.0,
+    "tube_to_rigid_fan_bore_radial_clearance_mm": 0.1656249999999999,
+    "tube_to_tpu_pad_radial_clearance_mm": 0.21562500000000018,
+    "m3_shank_to_tube_radial_clearance_mm": 0.12559999999999993,
+    "worst_stock_od_to_nominal_fan_bore_radial_clearance_mm": 0.14022500000000004,
+    "worst_stock_od_to_nominal_tpu_bore_radial_clearance_mm": 0.1902250000000003,
+    "worst_stock_id_to_nominal_m3_shank_radial_clearance_mm": 0.10019999999999984
+  },
+  "stack": {
+    "head_insert_front_y_mm": 29.01,
+    "fan_rear_silicone_face_y_mm": 0.3100000000000023,
+    "fan_front_silicone_face_y_mm": 27.310000000000002,
+    "tpu_compressed_thickness_mm": 1.7,
+    "tpu_nominal_compression_mm": 0.30000000000000004,
+    "rear_washer_span_y_mm": [
+      -0.18999999999999773,
+      0.3100000000000023
+    ],
+    "screw_tip_y_mm": 34.81,
+    "thread_engagement_length_mm": 5.7,
+    "screw_extension_past_insert_mm": 0.10000000000000142,
+    "blind_pilot_end_y_mm": 35.8,
+    "screw_tip_to_blind_pilot_nominal_margin_mm": 0.9899999999999949,
+    "head_rear_face_rigid_frame_gap_mm": 1.3100000000000023,
+    "fan_front_shift_from_current_assembly_mm": 0.3100000000000023
+  },
+  "checks": {
+    "valid_printable_solids": 6,
+    "old_tpu_pad_tube_overlap_mm3": 5.59569500154978,
+    "old_bellplate_hardware_clashes": [
+      {
+        "hardware": "REF-ISO7089-M3-washer-1",
+        "old_bellplate_overlap_mm3": 5.783986234524098
+      },
+      {
+        "hardware": "REF-ISO4762-M3x35-1",
+        "old_bellplate_overlap_mm3": 51.08840560337468
+      },
+      {
+        "hardware": "REF-ISO7089-M3-washer-2",
+        "old_bellplate_overlap_mm3": 5.7839862345241
+      },
+      {
+        "hardware": "REF-ISO4762-M3x35-2",
+        "old_bellplate_overlap_mm3": 51.0884056033747
+      },
+      {
+        "hardware": "REF-ISO7089-M3-washer-3",
+        "old_bellplate_overlap_mm3": 5.783986234524098
+      },
+      {
+        "hardware": "REF-ISO4762-M3x35-3",
+        "old_bellplate_overlap_mm3": 51.08840560337468
+      },
+      {
+        "hardware": "REF-ISO7089-M3-washer-4",
+        "old_bellplate_overlap_mm3": 5.7839862345241
+      },
+      {
+        "hardware": "REF-ISO4762-M3x35-4",
+        "old_bellplate_overlap_mm3": 51.08840560337469
+      }
+    ],
+    "static_pairs_checked": 276,
+    "unintended_intersections": [],
+    "tube_insertion_checks": 132,
+    "tube_insertion_unintended_intersections": 0,
+    "tube_continuous_sweep_boolean_checks": 16,
+    "driver_checks": 16,
+    "driver_unintended_intersections": 0,
+    "insert_installation_contacts": [
+      {
+        "a": "REF-RX-M3x5p7-smooth-insert-1",
+        "b": "head-left-integral-outlet",
+        "raw_pilot_displacement_mm3": 23.100130781845515,
+        "reason": "heat-set insert intentionally displaces \u00d84.0 pilot material"
+      },
+      {
+        "a": "REF-RX-M3x5p7-smooth-insert-2",
+        "b": "head-left-integral-outlet",
+        "raw_pilot_displacement_mm3": 23.100130781845536,
+        "reason": "heat-set insert intentionally displaces \u00d84.0 pilot material"
+      },
+      {
+        "a": "REF-RX-M3x5p7-smooth-insert-3",
+        "b": "head-right-integral-outlet",
+        "raw_pilot_displacement_mm3": 23.100130781845515,
+        "reason": "heat-set insert intentionally displaces \u00d84.0 pilot material"
+      },
+      {
+        "a": "REF-RX-M3x5p7-smooth-insert-4",
+        "b": "head-right-integral-outlet",
+        "raw_pilot_displacement_mm3": 23.100130781845536,
+        "reason": "heat-set insert intentionally displaces \u00d84.0 pilot material"
+      }
+    ]
+  },
+  "limitations": [
+    "TPU deformation is represented by an axial compressed envelope; stiffness and lateral bulge are unmeasured",
+    "Vendor silicone pads are unchanged; their compression and tolerance require physical measurement",
+    "K&S8128 stock has OD/ID tolerances, but fan bores, pad print tolerances and received stock remain unmeasured",
+    "Brass tube ends bear on a flush insert face; a recessed insert changes the stack and must be measured",
+    "Current printed head pilots are not re-cut; heat-setting is represented explicitly for assembly interference",
+    "Nominal ISO screw, washer and smooth insert references omit threads, knurls and tolerance variation",
+    "Current full76-instance assembly, its hashes and Onshape imports are unchanged",
+    "No whole fan axial insertion or rear guard service path qualification; tube/driver paths are before the rear guard is fitted",
+    "No evidence of isolation transmissibility, creep, rotor rubbing, tightening torque or acoustic improvement"
+  ],
+  "primary_references": [
+    "https://www.noctua.at/en/products/nf-a12x25-g2-pwm/specifications",
+    "https://cdn.noctua.at/media/a7b1158c/NF-A12x25_G2_Public-CAD.zip?download=true",
+    "https://www.ruthex.de/products/ruthex-gewindeeinsatz-m3-100-stuck-rx-m3x5-7-messing-gewindebuchsen",
+    "https://ksmetals.com/products/br014-5-32"
+  ],
+  "artifact_sha256": {
+    "tpu-fan-pad-sleeve-4p4-free.step": "0cfb9ef4dced5b5053f5ced4f72d0a430693e53414a522993cf553ca44fcebd2",
+    "tpu-fan-pad-sleeve-4p4-free.stl": "c1caf93b52d550ea9e2a53c533ec43cdb48cde442cc4616683e981bac2c556e1",
+    "tpu-fan-pad-bore-coupon-4p2.step": "4bf2b5a0ede9d9649ba88a8b764cb8c1d9a002cc6a237ed8656f5d2f3cdb29eb",
+    "tpu-fan-pad-bore-coupon-4p2.stl": "bc488fe3faaa960f443bccac6de3955275f1ba70ba0ac57a262b53d1b7171140",
+    "tpu-fan-pad-bore-coupon-4p6.step": "28e45c7141bbc33bcf32eae35dfbe28e0bd7476357a8faaeb489186509010ff1",
+    "tpu-fan-pad-bore-coupon-4p6.stl": "5f647441407df7ebd6eb315e980b820db5abde3bed8f2ec0f5686559ba97a9d3",
+    "bellmouth-rear-inlet-mount-reliefs.step": "74e10133fe8af91f2bcad063a145f266f3d3e184ede574806fdd96af65cd3b98",
+    "bellmouth-rear-inlet-mount-reliefs.stl": "60823cd5004142e3ab5e452940fde5aa579ccd4e7181d7c576850bd647b67621",
+    "REF-KS8128-brass-tube-cut-28p7.step": "cc196bd679dbea3eeb0370eb55d22fc72ea3c855be5cdfce5ce8adef6a9db935",
+    "fan-insert-boss-coupon.step": "fcfeafe3a0b430ec58a65f830037b185799c5fe72ec2442751af1172f844aae6",
+    "fan-insert-boss-coupon.stl": "0ce4dd10a21b7de224e3d8ea02277ab27c72c58a3c23747789169c2eb8070830",
+    "fan-corner-27mm-stack-coupon.step": "a0762471c70f0aaa37ac12f565b61410248bacac5e9eb5b8deed3ab5943d8c0d",
+    "fan-corner-27mm-stack-coupon.stl": "57d2826034f1616fc10f8beb3c9c4bf6d3804fe0d7292154709dddd5d5d66c59",
+    "TPU-compressed-envelope-1.step": "35af6b84ff29b9c61c981353493d3f62cdc1f832f64c2e168f845f4dc6d36a64",
+    "REF-KS8128-brass-tube-1.step": "275407aea5c9e328c4c3af13094d52ac5a786616ff08bf84594c62a70880bb5c",
+    "REF-ISO7089-M3-washer-1.step": "880a6efa22f6c5f4c54750a58bdc9adeadc984111657459fb25419e0466a5851",
+    "REF-ISO4762-M3x35-1.step": "4d0047d432012a53ce702cc1a3cf6f2fbab65af178dbea6600c650e4f3b6337c",
+    "REF-RX-M3x5p7-smooth-insert-1.step": "d0593692c947687bda22a59b4dccf097ed1c665410f09afc1dda4d6ef69b54ad",
+    "TPU-compressed-envelope-2.step": "731f1983ae9652cdd86c128afc17028521efd6b4393ff8973123bc8f623257dc",
+    "REF-KS8128-brass-tube-2.step": "d6294726daa6d6d9473e943bad5e40849723f42446945ac0e4bd6e25d60edbf1",
+    "REF-ISO7089-M3-washer-2.step": "917ed25cc16f6a1fb82186b95cff6ef98bcbd7f34d29406a57ecd6c31f431b67",
+    "REF-ISO4762-M3x35-2.step": "750cd54603ff9c946b22b7d5993d139d4cd618b2cf81ab4aa8b2af5c187ded48",
+    "REF-RX-M3x5p7-smooth-insert-2.step": "675eecfdc5d3d39ae0f42c18dae52b55cb4e022feb34b9345de44a96a3fc7958",
+    "TPU-compressed-envelope-3.step": "fd10f22d6d38b037a6e915ebcc97fd6edadc6190e6ece225fea62e1673925ed4",
+    "REF-KS8128-brass-tube-3.step": "e507e4887ac2514d91c48e0793a8bae96115b4eb8891dffad066f8188f20bdb1",
+    "REF-ISO7089-M3-washer-3.step": "b87283be19c7e09c6e79102437746a2bca45c31ffe1161c4e30a1633d900293d",
+    "REF-ISO4762-M3x35-3.step": "b1b09b8d9d623419d8871dcd2d2d702771c2d2a3fc9ca27df12a2b38b0b173a4",
+    "REF-RX-M3x5p7-smooth-insert-3.step": "fb6627940ef1adb57a588077525081b2b40a2d724fda46fe901f77f6329e0c3a",
+    "TPU-compressed-envelope-4.step": "571170262d17cdfa65cd8b091b501c296b642afac9eca9d5b9beb566779d9538",
+    "REF-KS8128-brass-tube-4.step": "4d18293313edb168e4d1f8864f3fd87baa79d0d1adbd18014fa6f529dcfda389",
+    "REF-ISO7089-M3-washer-4.step": "20381d3ddc2b4c185a1e1c5d3e34beba0e391a77803da2c3a3ad6a9915ec46dc",
+    "REF-ISO4762-M3x35-4.step": "f88535cbd7f7876623e2da77330dc7121f68bd88f076f492b5e451390edad4df",
+    "REF-RX-M3x5p7-smooth-insert-4.step": "9f97b4dda425a52f183479a68c0745685db93be3f2871ceff24cbf58bbfff0a8",
+    "fan-mount-repaired-development.step": "5ff00a049ae603215d7f7820e734be288df14608ff7d1faf3baf8b185f8bbae4"
+  }
+}

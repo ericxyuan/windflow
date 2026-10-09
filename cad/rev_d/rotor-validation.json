@@ -1,0 +1,323 @@
+{
+  "result": "PASS",
+  "revision": "Rev D P2 - 150 mm swept axial development rotor, 2026-10-09",
+  "generated_utc": "2026-10-09T18:56:05.411418+00:00",
+  "runtime": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "cadquery": "2.6.1"
+  },
+  "physical_qualification": false,
+  "approved_operating_rpm": null,
+  "input_sha256": {
+    "cad\\rev_d_rotor.py": "553734d2edc11e82a9c18d4efbc7a05f030e438fbf176c333052fe0f0ffd7dd6",
+    "cad\\rev_d\\rotor-parameters.json": "07b5e99c128552e7ff93ab45c045d7b75c1f559567997d0182abb039c3d65335",
+    "cad\\rev_c_rotor.py": "caea0b9dea293c6681b2cd92975d42aeaf0734a3df25526b45e9bdf6fb41f73e",
+    "rotor_selection\\docs\\fan-shape-analysis-2026-10-09.md": "21f4e3d3d03563142e4fc0cac2b32664492dd1f075c522cf4828d31a8b4590b1"
+  },
+  "parts": [
+    {
+      "name": "impeller-P2-150mm-GUARDED-TEST-ONLY",
+      "valid_solid": true,
+      "step_round_trip": true,
+      "round_trip_volume_difference_mm3": 1.1656084097921848e-08,
+      "volume_mm3": 72340.10819085973,
+      "sha256": {
+        "impeller-P2-150mm-GUARDED-TEST-ONLY.step": "bf5fd64690b8edc7ecac47ac38f1be2bf501f899b063052fc26b7126a108bae2",
+        "impeller-P2-150mm-GUARDED-TEST-ONLY.stl": "837392d1988ead9713401fbce2f51fa90cea17e68f4605a6d1add948287646da"
+      },
+      "mesh": {
+        "triangles": 436470,
+        "unique_vertices": 218235,
+        "nonmanifold_or_boundary_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "connected_components": 1,
+        "signed_volume_mm3": 72203.54510610763,
+        "watertight": true
+      },
+      "bounds_xyz_mm": [
+        -70.35699526473,
+        74.99582431546445,
+        0.0,
+        40.0,
+        -71.08070427174033,
+        75.39037809130801
+      ]
+    },
+    {
+      "name": "P2-M5-clamp-web-fit-coupon",
+      "valid_solid": true,
+      "step_round_trip": true,
+      "round_trip_volume_difference_mm3": 5.002220859751105e-12,
+      "volume_mm3": 2540.6819825548278,
+      "sha256": {
+        "P2-M5-clamp-web-fit-coupon.step": "c3f480496f4f9d0bc2e2ee45143232d114852963527009125c0f17f268afe9f6",
+        "P2-M5-clamp-web-fit-coupon.stl": "65647c95f45e579a48b65ff7cfa4cf64eecbba355ca646e9b30af08f4c1735cd"
+      },
+      "mesh": {
+        "triangles": 2040,
+        "unique_vertices": 1016,
+        "nonmanifold_or_boundary_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "connected_components": 1,
+        "signed_volume_mm3": 2540.7191473355006,
+        "watertight": true
+      },
+      "bounds_xyz_mm": [
+        -27.0,
+        27.0,
+        -10.0,
+        10.0,
+        0.0,
+        2.5
+      ]
+    },
+    {
+      "name": "P2-root-and-edge-stationary-coupon",
+      "valid_solid": true,
+      "step_round_trip": true,
+      "round_trip_volume_difference_mm3": 7.593189366161823e-08,
+      "volume_mm3": 36045.75997328002,
+      "sha256": {
+        "P2-root-and-edge-stationary-coupon.step": "14e623ff689c61940abfc9ce855fa29387b6940efd7e274583e41fbf96a857c9",
+        "P2-root-and-edge-stationary-coupon.stl": "4edf488b0a79d1aea0e49fc7841d52c60acceeb27c25c684538a9fd4dbbdc34b"
+      },
+      "mesh": {
+        "triangles": 53872,
+        "unique_vertices": 26936,
+        "nonmanifold_or_boundary_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "connected_components": 1,
+        "signed_volume_mm3": 36009.5677366757,
+        "watertight": true
+      },
+      "bounds_xyz_mm": [
+        -15.00000010000183,
+        65.0000001,
+        -1.0000000005551115e-07,
+        40.0000001,
+        -14.000000100003868,
+        14.000000100003863
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "radius_mm": 16.0,
+      "chord_mm": 34.0,
+      "section_thickness_mm": 12.5,
+      "leading_edge_diameter_mm": 9.6,
+      "trailing_edge_diameter_mm": 8.0,
+      "camber_mm": 0.8,
+      "forward_sweep_deg": 0.0,
+      "pitch_deg": 58.60135521159193,
+      "root_flare_mm": 3.0,
+      "local_solidity": 1.691021270351388
+    },
+    {
+      "radius_mm": 20.0,
+      "chord_mm": 36.0,
+      "section_thickness_mm": 12.5,
+      "leading_edge_diameter_mm": 9.6,
+      "trailing_edge_diameter_mm": 8.0,
+      "camber_mm": 0.8,
+      "forward_sweep_deg": 0.0,
+      "pitch_deg": 52.33838352704618,
+      "root_flare_mm": 3.0,
+      "local_solidity": 1.432394487827058
+    },
+    {
+      "radius_mm": 20.09,
+      "chord_mm": 34.57137050626282,
+      "section_thickness_mm": 11.014370506262818,
+      "leading_edge_diameter_mm": 8.129370506262816,
+      "trailing_edge_diameter_mm": 6.529370506262817,
+      "camber_mm": 0.806,
+      "forward_sweep_deg": 0.0,
+      "pitch_deg": 52.21016243290626,
+      "root_flare_mm": 2.270685253131408,
+      "local_solidity": 1.369388876439295
+    },
+    {
+      "radius_mm": 20.3,
+      "chord_mm": 33.48466063387559,
+      "section_thickness_mm": 9.794660633875594,
+      "leading_edge_diameter_mm": 6.944660633875593,
+      "trailing_edge_diameter_mm": 5.344660633875593,
+      "camber_mm": 0.8200000000000001,
+      "forward_sweep_deg": 0.0,
+      "pitch_deg": 51.91303380117695,
+      "root_flare_mm": 1.6923303169377966,
+      "local_solidity": 1.3126229698610585
+    },
+    {
+      "radius_mm": 20.66,
+      "chord_mm": 32.46532291668112,
+      "section_thickness_mm": 8.547322916681114,
+      "leading_edge_diameter_mm": 5.757322916681115,
+      "trailing_edge_diameter_mm": 4.157322916681116,
+      "camber_mm": 0.8440000000000001,
+      "forward_sweep_deg": 0.0,
+      "pitch_deg": 51.41029803085108,
+      "root_flare_mm": 1.1226614583405579,
+      "local_solidity": 1.2504880496767639
+    },
+    {
+      "radius_mm": 21.2,
+      "chord_mm": 31.6,
+      "section_thickness_mm": 7.340000000000002,
+      "leading_edge_diameter_mm": 4.6400000000000015,
+      "trailing_edge_diameter_mm": 3.0400000000000014,
+      "camber_mm": 0.88,
+      "forward_sweep_deg": 0.0,
+      "pitch_deg": 50.67164170119485,
+      "root_flare_mm": 0.6000000000000005,
+      "local_solidity": 1.186154764552805
+    },
+    {
+      "radius_mm": 21.86,
+      "chord_mm": 31.07008108167335,
+      "section_thickness_mm": 6.392081081673355,
+      "leading_edge_diameter_mm": 3.8020810816733555,
+      "trailing_edge_diameter_mm": 2.2020810816733554,
+      "camber_mm": 0.9239999999999999,
+      "forward_sweep_deg": 0.0,
+      "pitch_deg": 49.793438046731985,
+      "root_flare_mm": 0.22504054083667757,
+      "local_solidity": 1.1310514607534987
+    },
+    {
+      "radius_mm": 22.46,
+      "chord_mm": 30.91800033886819,
+      "section_thickness_mm": 5.860000338868189,
+      "leading_edge_diameter_mm": 3.3700003388681896,
+      "trailing_edge_diameter_mm": 1.7700003388681893,
+      "camber_mm": 0.9640000000000001,
+      "forward_sweep_deg": 0.0,
+      "pitch_deg": 49.01791639383292,
+      "root_flare_mm": 0.04900016943409469,
+      "local_solidity": 1.0954480374995028
+    },
+    {
+      "radius_mm": 23.0,
+      "chord_mm": 31.0,
+      "section_thickness_mm": 5.6,
+      "leading_edge_diameter_mm": 3.2,
+      "trailing_edge_diameter_mm": 1.6,
+      "camber_mm": 1.0,
+      "forward_sweep_deg": 0.0,
+      "pitch_deg": 48.338032808781,
+      "root_flare_mm": 0.0,
+      "local_solidity": 1.072565920836686
+    },
+    {
+      "radius_mm": 30.0,
+      "chord_mm": 33.0,
+      "section_thickness_mm": 4.8,
+      "leading_edge_diameter_mm": 2.8,
+      "trailing_edge_diameter_mm": 1.3,
+      "camber_mm": 1.15,
+      "forward_sweep_deg": 0.4,
+      "pitch_deg": 40.88316421426573,
+      "root_flare_mm": 0.0,
+      "local_solidity": 0.8753521870054245
+    },
+    {
+      "radius_mm": 42.0,
+      "chord_mm": 34.0,
+      "section_thickness_mm": 4.2,
+      "leading_edge_diameter_mm": 2.4,
+      "trailing_edge_diameter_mm": 1.0,
+      "camber_mm": 1.15,
+      "forward_sweep_deg": 1.8,
+      "pitch_deg": 32.32706416809056,
+      "root_flare_mm": 0.0,
+      "local_solidity": 0.6441985791814812
+    },
+    {
+      "radius_mm": 55.0,
+      "chord_mm": 31.0,
+      "section_thickness_mm": 3.5,
+      "leading_edge_diameter_mm": 2.0,
+      "trailing_edge_diameter_mm": 0.9,
+      "camber_mm": 1.0,
+      "forward_sweep_deg": 4.2,
+      "pitch_deg": 26.534144143696928,
+      "root_flare_mm": 0.0,
+      "local_solidity": 0.4485275668953414
+    },
+    {
+      "radius_mm": 66.0,
+      "chord_mm": 26.0,
+      "section_thickness_mm": 2.8,
+      "leading_edge_diameter_mm": 1.8,
+      "trailing_edge_diameter_mm": 0.8,
+      "camber_mm": 0.8,
+      "forward_sweep_deg": 6.7,
+      "pitch_deg": 23.20254681279082,
+      "root_flare_mm": 0.0,
+      "local_solidity": 0.3134870091203999
+    },
+    {
+      "radius_mm": 75.0,
+      "chord_mm": 20.0,
+      "section_thickness_mm": 2.4,
+      "leading_edge_diameter_mm": 1.6,
+      "trailing_edge_diameter_mm": 0.8,
+      "camber_mm": 0.55,
+      "forward_sweep_deg": 8.0,
+      "pitch_deg": 21.138995988509603,
+      "root_flare_mm": 0.0,
+      "local_solidity": 0.2122065907891938
+    }
+  ],
+  "nominal_radial_tip_gap_mm": 1.0,
+  "outside_duct_volume_mm3": 0.0,
+  "maximum_tessellated_radius_mm": 75.00000001247528,
+  "equal_angle_sector_volumes_mm3": [
+    14468.348584970201,
+    14468.348584543357,
+    14468.348585712982,
+    14468.348586352568,
+    14468.294149464538
+  ],
+  "sector_spread_mm3": 0.05443688802915858,
+  "nominal_radial_centroid_mm": 8.000158366787443e-05,
+  "estimated_mass_g": 91.87193740237706,
+  "analytical_cases": [
+    {
+      "rpm": 1500,
+      "tip_speed_m_s": 11.780972450961725,
+      "single_blade_centrifugal_load_N": 7.846805142748195,
+      "kinetic_energy_upper_bound_J": 6.3755133589905935,
+      "operating_permission": false
+    },
+    {
+      "rpm": 2200,
+      "tip_speed_m_s": 17.27875959474386,
+      "single_blade_centrifugal_load_N": 16.879349729289448,
+      "kinetic_energy_upper_bound_J": 13.714437625561988,
+      "operating_permission": false
+    },
+    {
+      "rpm": 3000,
+      "tip_speed_m_s": 23.56194490192345,
+      "single_blade_centrifugal_load_N": 31.38722057099278,
+      "kinetic_energy_upper_bound_J": 25.502053435962374,
+      "operating_permission": false
+    },
+    {
+      "rpm": 5000,
+      "tip_speed_m_s": 39.26990816987241,
+      "single_blade_centrifugal_load_N": 87.18672380831327,
+      "kinetic_energy_upper_bound_J": 70.8390373221177,
+      "operating_permission": false
+    }
+  ],
+  "limits": [
+    "Section pitch-design velocity and RPM are not performance predictions.",
+    "Swept planform and finite edges are prototype choices, not CFD/FEA or noise proof.",
+    "M5 shoulder, nut thread and motor screw depth require measurement.",
+    "No operating speed, print strength, balance or containment is qualified.",
+    "150 mm rotor does not inherit 112 mm motor/rotor commissioning values."
+  ]
+}

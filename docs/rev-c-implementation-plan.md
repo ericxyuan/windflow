@@ -1,0 +1,27 @@
+# Windflow Rev C — motor and exterior redesign
+
+Decision date: 2026-10-06. This revision implements the requested single T-Motor Pacer V4 P2406 Juicy 2060KV motor, a purpose-designed printed axial impeller, and one ESC. Rev B is retained as a reference; its Noctua fan, 25 kHz PWM/two-pulse tach interface, fan power branch, and fan mount are superseded for Rev C. Rev B qualification reports do not qualify this revision.
+
+## Architecture to implement
+
+1. **Mechanical and appearance:** replace the square fan bay with a smoothly lofted split head, rounded shoulders, integral outlet, and a flowing service cover around the linkage. Use a separate rigid motor carrier with four M3 holes on the manufacturer's Ø16 mm pitch circle, not a 16 mm square pattern. Isolate the carrier at its enclosure attachments while retaining rigid motor/rotor alignment. Keep fasteners accessible before the stator is installed. Preserve the removable magnetic cleaning grille and an independently fixed inner guard.
+2. **Airflow:** use a 114 mm initial throat with a 14 mm quarter-round bell-mouth and a 112 mm prototype impeller. Five blades have rounded, thickened sections, twist, and reinforced roots. Locate the motor behind the impeller and the removable stator downstream. Trial stator and open-spacer configurations require comparison; straight vanes are a baseline, not evidence of optimal swirl recovery. Keep the outlet integrated into the shell. Retain the two symmetrically moving converging panels, one-servo linkage, and an initial 75% minimum gross outlet area. That endpoint must be requalified with the new rotor.
+3. **Drive and power:** use a single documented ESC with FOC, RPM control, current/voltage/temperature telemetry, command timeout, and independently configured speed/current/power limits. The selected motor's aircraft peak rating is not a desktop continuous operating requirement. Upgrade USB-C PD to a specified 15 V / 3 A contract, with a nominal 18 W initial motor-branch budget and separate protected logic/servo supplies. Replace the old small fan load switch, fuse, and regulator branch. No battery is added.
+4. **Firmware and feedback:** retain the modular Pico firmware and screen workflow in a distinct Rev C sketch. Replace open-loop fan PWM with bounded UART RPM commands and verified telemetry. Convert electrical RPM using seven pole pairs. Require fresh feedback, a closed grille, healthy power/temperature/pressure, and physical commissioning before motion. A stopped, powered ESC may report health before arming. An independent speed observation is required during qualification. A communication failure sends zero and cuts the ESC branch; reverse/braking commands are not part of normal operation.
+5. **Interaction:** preserve one normal adjustment turn, then a fresh full 24-detent entry turn at maximum/open/ready, followed by progressive boost control. Every exit requires a new entry turn. The screen retains its top status area, wheel phase, entry countdown, night mode and essential fault indication. “100%” means the qualified product speed ceiling, not raw motor throttle.
+6. **Physical integration:** retain the screen and horizontal thumbwheel arrangement, downward diffuser, bottom electronics access, strain relief and wiring corridors. Integrate the exact ESC CAD when obtained. Motor reference geometry must be labeled a drawing envelope unless an exact manufacturer model is available. Create rotor hub, motor carrier/isolation, guard, and exterior/seam coupons before printing the complete product.
+
+## Initial development limits and evidence
+
+The initial rotor calculations examine 3,000 and 5,000 mechanical RPM. Neither is a certified safe printed-rotor rating. The initial guarded commissioning target is at most 3,000 RPM; shipped firmware keeps rotor operation disabled until a separately recorded physical qualification. The 2060KV value makes an unrestricted ESC particularly unsuitable: at 15 V, the simple no-load estimate is 30,900 RPM. Startup, boost and calibration must all share the qualified speed ceiling.
+
+CAD validity, nominal clearances and software tests can be completed without hardware. Rotor retention, runout, print anisotropy, balance, fragment containment, loaded startup, low-speed commutation, actual power/heat/noise/flow, safe boost endpoint, and user comfort require measured guarded trials. An FDM grille is a finger guard; it is not automatically a fragment-containment enclosure.
+
+## Deliverable tracking
+
+- Native Onshape Rev C geometry and local parametric STEP/STL are being developed through the newly connected Onshape MCP.
+- Motor/ESC/power specification: [Rev C motor and power](rev-c-motor-power.md).
+- Printed rotor design: [Rev C impeller](rev-c-impeller.md).
+- Distinct firmware profile and tests: [Rev C firmware](rev-c-firmware.md).
+- Rev C now has a checked71-instance/171-body development integration in the existing Onshape document. Its immutable8October checkpoint precedes the new front encoder placement. See the [checkpoint record](../cad/onshape-rev-c-checkpoint.json) for source identity and validation limits.
+- The8October encoder clarification places the wheel beside the screen, with rotation parallel to the screen face. The local parameters and [front-control integration](rev-c-front-controls.md) govern that revision; regenerate the full export and refresh the same Onshape assembly after checks pass.

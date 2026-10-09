@@ -1,0 +1,754 @@
+{
+  "board_size_mm": [
+    29.5,
+    24.0,
+    1.6
+  ],
+  "encoder_axis_xy_mm": [
+    8.5,
+    12.0
+  ],
+  "mount_holes_xy_mm": [
+    [
+      27.5,
+      3.5
+    ],
+    [
+      27.5,
+      20.5
+    ]
+  ],
+  "proposed_cad_mapping": {
+    "encoder_component_face_x_mm": -62.5,
+    "connector_component_face_x_mm": -60.9,
+    "global_y_mm": "u - 5.5",
+    "global_z_mm": "-78 - v",
+    "connector_on": "F side / toward +X",
+    "encoder_on": "B side / toward -X",
+    "kicad_step_transform": "global X=-62.5+STEP z; global Y=-5.5+STEP x; global Z=-78+STEP y; STEP y=-v"
+  },
+  "required_cad_changes": [
+    "Extend board Y minimum from 0 to -5.5; keep Ymax 24 and Z[-102,-78].",
+    "Move encoder component face from X -61.5 to -62.5; trim bracket support ends by 1mm.",
+    "Preserve M2 centers Y22, Z-81.5/-98.5.",
+    "Model F-side header toward +X, 9.8mm mated-height envelope and wire bend beyond PCB face X-60.9."
+  ],
+  "nominal_terminal_stack_mm": {
+    "rear_body_x": -63.5,
+    "rear_pin_tip_x": -60.5,
+    "body_to_board_gap": 1.0,
+    "board_thickness": 1.6,
+    "pin_projection_beyond_solder_face": 0.4
+  },
+  "physical_qualification": [
+    "Measure rear pin/tab projection and body-to-PCB seating with actual encoder; 1mm spacing is a nominal engineering choice.",
+    "Confirm A/B direction and pin1 mapping using continuity before connecting carrier.",
+    "Verify mated XH plug and cable insertion/removal/strain clearance in final assembly.",
+    "Bourns does not recommend hand soldering; qualify selective/wave process at260C+-5 for3+-1seconds."
+  ],
+  "component_envelopes_global_mm": {
+    "encoder_body_nominal": {
+      "min": [
+        -70.0,
+        -2.9,
+        -96.8
+      ],
+      "max": [
+        -63.5,
+        8.9,
+        -83.2
+      ],
+      "source": "Bourns 6.5 x 11.8 x 13.6mm body; manufacturer dimensional tolerances apply"
+    },
+    "encoder_terminal_tips_nominal": {
+      "x_mm": -60.5,
+      "source": "3mm terminals extending from rear body X-63.5; actual seating requires measurement"
+    },
+    "header_body_nominal": {
+      "min": [
+        -60.9,
+        12.6,
+        -96.2
+      ],
+      "max": [
+        -53.9,
+        18.35,
+        -83.8
+      ],
+      "source": "JST B4B-XH-A, 12.4 x 5.75 x 7mm rotated 270 degrees on F side"
+    },
+    "mated_header_housing_reserve": {
+      "min": [
+        -60.9,
+        12.6,
+        -96.2
+      ],
+      "max": [
+        -51.1,
+        18.35,
+        -83.8
+      ],
+      "source": "9.8mm mated board height; includes header, not cable bend or withdrawal space"
+    },
+    "header_solder_pin_tips_nominal": {
+      "x_mm": -64.3,
+      "source": "3.4mm JST terminal from F face X-60.9 through 1.6mm PCB"
+    }
+  },
+  "pads": [
+    {
+      "ref": "H2",
+      "number": "",
+      "net": "",
+      "xy_mm": [
+        27.5,
+        20.5
+      ],
+      "size_mm": [
+        2.4,
+        2.4
+      ],
+      "drill_mm": [
+        2.4,
+        2.4
+      ]
+    },
+    {
+      "ref": "H1",
+      "number": "",
+      "net": "",
+      "xy_mm": [
+        27.5,
+        3.5
+      ],
+      "size_mm": [
+        2.4,
+        2.4
+      ],
+      "drill_mm": [
+        2.4,
+        2.4
+      ]
+    },
+    {
+      "ref": "J1",
+      "number": "1",
+      "net": "/GND",
+      "xy_mm": [
+        21.5,
+        8.25
+      ],
+      "size_mm": [
+        1.7,
+        1.95
+      ],
+      "drill_mm": [
+        0.95,
+        0.95
+      ]
+    },
+    {
+      "ref": "J1",
+      "number": "2",
+      "net": "/ENC_A",
+      "xy_mm": [
+        21.5,
+        10.75
+      ],
+      "size_mm": [
+        1.7,
+        1.95
+      ],
+      "drill_mm": [
+        0.95,
+        0.95
+      ]
+    },
+    {
+      "ref": "J1",
+      "number": "3",
+      "net": "/ENC_B",
+      "xy_mm": [
+        21.5,
+        13.25
+      ],
+      "size_mm": [
+        1.7,
+        1.95
+      ],
+      "drill_mm": [
+        0.95,
+        0.95
+      ]
+    },
+    {
+      "ref": "J1",
+      "number": "4",
+      "net": "/ENC_PUSH",
+      "xy_mm": [
+        21.5,
+        15.75
+      ],
+      "size_mm": [
+        1.7,
+        1.95
+      ],
+      "drill_mm": [
+        0.95,
+        0.95
+      ]
+    },
+    {
+      "ref": "ENC1",
+      "number": "A",
+      "net": "/ENC_A",
+      "xy_mm": [
+        11.0,
+        19.5
+      ],
+      "size_mm": [
+        1.9,
+        1.9
+      ],
+      "drill_mm": [
+        1.1,
+        1.1
+      ]
+    },
+    {
+      "ref": "ENC1",
+      "number": "C",
+      "net": "/GND",
+      "xy_mm": [
+        8.5,
+        19.5
+      ],
+      "size_mm": [
+        1.9,
+        1.9
+      ],
+      "drill_mm": [
+        1.1,
+        1.1
+      ]
+    },
+    {
+      "ref": "ENC1",
+      "number": "B",
+      "net": "/ENC_B",
+      "xy_mm": [
+        6.0,
+        19.5
+      ],
+      "size_mm": [
+        1.9,
+        1.9
+      ],
+      "drill_mm": [
+        1.1,
+        1.1
+      ]
+    },
+    {
+      "ref": "ENC1",
+      "number": "S1",
+      "net": "/ENC_PUSH",
+      "xy_mm": [
+        11.0,
+        5.0
+      ],
+      "size_mm": [
+        1.9,
+        1.9
+      ],
+      "drill_mm": [
+        1.1,
+        1.1
+      ]
+    },
+    {
+      "ref": "ENC1",
+      "number": "S2",
+      "net": "/GND",
+      "xy_mm": [
+        6.0,
+        5.0
+      ],
+      "size_mm": [
+        1.9,
+        1.9
+      ],
+      "drill_mm": [
+        1.1,
+        1.1
+      ]
+    },
+    {
+      "ref": "ENC1",
+      "number": "SH",
+      "net": "/GND",
+      "xy_mm": [
+        14.9,
+        12.0
+      ],
+      "size_mm": [
+        3.4,
+        2.6
+      ],
+      "drill_mm": [
+        2.4,
+        1.6
+      ]
+    },
+    {
+      "ref": "ENC1",
+      "number": "SH",
+      "net": "/GND",
+      "xy_mm": [
+        2.1,
+        12.0
+      ],
+      "size_mm": [
+        3.4,
+        2.6
+      ],
+      "drill_mm": [
+        2.4,
+        1.6
+      ]
+    }
+  ],
+  "tracks": [
+    {
+      "net": "/GND",
+      "layer": "B.Cu",
+      "a_mm": [
+        16.649999,
+        8.25
+      ],
+      "b_mm": [
+        21.5,
+        8.25
+      ],
+      "width_mm": 0.35,
+      "via": false
+    },
+    {
+      "net": "/GND",
+      "layer": "B.Cu",
+      "a_mm": [
+        15.4,
+        9.5
+      ],
+      "b_mm": [
+        16.649999,
+        8.25
+      ],
+      "width_mm": 0.35,
+      "via": false
+    },
+    {
+      "net": "/GND",
+      "layer": "B.Cu",
+      "a_mm": [
+        14.9,
+        12.0
+      ],
+      "b_mm": [
+        15.4,
+        9.5
+      ],
+      "width_mm": 0.35,
+      "via": false
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "a_mm": [
+        8.0,
+        6.5
+      ],
+      "b_mm": [
+        6.0,
+        5.0
+      ],
+      "width_mm": 0.35,
+      "via": false
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "a_mm": [
+        14.9,
+        6.5
+      ],
+      "b_mm": [
+        8.0,
+        6.5
+      ],
+      "width_mm": 0.35,
+      "via": false
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "a_mm": [
+        14.9,
+        12.0
+      ],
+      "b_mm": [
+        14.9,
+        6.5
+      ],
+      "width_mm": 0.35,
+      "via": false
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "a_mm": [
+        2.1,
+        10.0
+      ],
+      "b_mm": [
+        8.5,
+        10.0
+      ],
+      "width_mm": 0.35,
+      "via": false
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "a_mm": [
+        2.1,
+        12.0
+      ],
+      "b_mm": [
+        2.1,
+        10.0
+      ],
+      "width_mm": 0.35,
+      "via": false
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "a_mm": [
+        6.0,
+        7.5
+      ],
+      "b_mm": [
+        6.0,
+        5.0
+      ],
+      "width_mm": 0.35,
+      "via": false
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "a_mm": [
+        8.5,
+        10.0
+      ],
+      "b_mm": [
+        6.0,
+        7.5
+      ],
+      "width_mm": 0.35,
+      "via": false
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "a_mm": [
+        8.5,
+        19.5
+      ],
+      "b_mm": [
+        8.5,
+        10.0
+      ],
+      "width_mm": 0.35,
+      "via": false
+    },
+    {
+      "net": "/ENC_PUSH",
+      "layer": "B.Cu",
+      "a_mm": [
+        18.2,
+        15.75
+      ],
+      "b_mm": [
+        21.5,
+        15.75
+      ],
+      "width_mm": 0.35,
+      "via": false
+    },
+    {
+      "net": "/ENC_PUSH",
+      "layer": "F.Cu",
+      "a_mm": [
+        18.2,
+        15.75
+      ],
+      "b_mm": [
+        18.2,
+        15.75
+      ],
+      "width_mm": 0.6,
+      "via": true
+    },
+    {
+      "net": "/ENC_PUSH",
+      "layer": "F.Cu",
+      "a_mm": [
+        18.2,
+        3.4
+      ],
+      "b_mm": [
+        18.2,
+        15.75
+      ],
+      "width_mm": 0.35,
+      "via": false
+    },
+    {
+      "net": "/ENC_PUSH",
+      "layer": "F.Cu",
+      "a_mm": [
+        17.0,
+        2.2
+      ],
+      "b_mm": [
+        18.2,
+        3.4
+      ],
+      "width_mm": 0.35,
+      "via": false
+    },
+    {
+      "net": "/ENC_PUSH",
+      "layer": "F.Cu",
+      "a_mm": [
+        11.0,
+        2.2
+      ],
+      "b_mm": [
+        17.0,
+        2.2
+      ],
+      "width_mm": 0.35,
+      "via": false
+    },
+    {
+      "net": "/ENC_PUSH",
+      "layer": "F.Cu",
+      "a_mm": [
+        11.0,
+        5.0
+      ],
+      "b_mm": [
+        11.0,
+        2.2
+      ],
+      "width_mm": 0.35,
+      "via": false
+    },
+    {
+      "net": "/ENC_B",
+      "layer": "B.Cu",
+      "a_mm": [
+        17.0,
+        13.25
+      ],
+      "b_mm": [
+        21.5,
+        13.25
+      ],
+      "width_mm": 0.35,
+      "via": false
+    },
+    {
+      "net": "/ENC_B",
+      "layer": "B.Cu",
+      "a_mm": [
+        17.0,
+        19.0
+      ],
+      "b_mm": [
+        17.0,
+        13.25
+      ],
+      "width_mm": 0.35,
+      "via": false
+    },
+    {
+      "net": "/ENC_B",
+      "layer": "B.Cu",
+      "a_mm": [
+        15.0,
+        21.0
+      ],
+      "b_mm": [
+        17.0,
+        19.0
+      ],
+      "width_mm": 0.35,
+      "via": false
+    },
+    {
+      "net": "/ENC_B",
+      "layer": "B.Cu",
+      "a_mm": [
+        6.0,
+        21.0
+      ],
+      "b_mm": [
+        15.0,
+        21.0
+      ],
+      "width_mm": 0.35,
+      "via": false
+    },
+    {
+      "net": "/ENC_B",
+      "layer": "B.Cu",
+      "a_mm": [
+        6.0,
+        19.5
+      ],
+      "b_mm": [
+        6.0,
+        21.0
+      ],
+      "width_mm": 0.35,
+      "via": false
+    },
+    {
+      "net": "/ENC_A",
+      "layer": "F.Cu",
+      "a_mm": [
+        20.0,
+        10.75
+      ],
+      "b_mm": [
+        21.5,
+        10.75
+      ],
+      "width_mm": 0.35,
+      "via": false
+    },
+    {
+      "net": "/ENC_A",
+      "layer": "F.Cu",
+      "a_mm": [
+        20.0,
+        21.1
+      ],
+      "b_mm": [
+        20.0,
+        10.75
+      ],
+      "width_mm": 0.35,
+      "via": false
+    },
+    {
+      "net": "/ENC_A",
+      "layer": "F.Cu",
+      "a_mm": [
+        18.8,
+        22.3
+      ],
+      "b_mm": [
+        20.0,
+        21.1
+      ],
+      "width_mm": 0.35,
+      "via": false
+    },
+    {
+      "net": "/ENC_A",
+      "layer": "F.Cu",
+      "a_mm": [
+        11.0,
+        22.3
+      ],
+      "b_mm": [
+        18.8,
+        22.3
+      ],
+      "width_mm": 0.35,
+      "via": false
+    },
+    {
+      "net": "/ENC_A",
+      "layer": "F.Cu",
+      "a_mm": [
+        11.0,
+        19.5
+      ],
+      "b_mm": [
+        11.0,
+        22.3
+      ],
+      "width_mm": 0.35,
+      "via": false
+    }
+  ],
+  "net_count": 4,
+  "footprint_count": 4,
+  "rule_area_count": 3,
+  "header_pads_xy_mm": {
+    "1": [
+      21.5,
+      8.25
+    ],
+    "2": [
+      21.5,
+      10.75
+    ],
+    "3": [
+      21.5,
+      13.25
+    ],
+    "4": [
+      21.5,
+      15.75
+    ]
+  },
+  "placed_encoder_pads_xy_mm": {
+    "A": [
+      11.0,
+      19.5
+    ],
+    "C": [
+      8.5,
+      19.5
+    ],
+    "B": [
+      6.0,
+      19.5
+    ],
+    "S1": [
+      11.0,
+      5.0
+    ],
+    "S2": [
+      6.0,
+      5.0
+    ]
+  },
+  "placed_encoder_tabs_xy_mm": [
+    [
+      2.1,
+      12.0
+    ],
+    [
+      14.9,
+      12.0
+    ]
+  ]
+}

@@ -1,0 +1,1 @@
+(fp_lib_table (version 7) (lib (name "WindflowEncoder") (type "KiCad") (uri "${KIPRJMOD}/WindflowEncoder.pretty") (options "") (descr "Encoder footprint from Bourns drawing; JST from KiCad 10 library")))

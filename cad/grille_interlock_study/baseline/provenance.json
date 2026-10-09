@@ -1,0 +1,70 @@
+{
+  "status": "frozen current repaired-fan head, before interlock adoption",
+  "inputs": [
+    {
+      "source": "cad/parameters.json",
+      "frozen_path": "parameters.json",
+      "sha256": "6f86731c3123d8d15c025a0b34fb400919749b0227dfb576a218ed821d70c8ee"
+    },
+    {
+      "source": "cad/build_head.py",
+      "frozen_path": "build_head.py",
+      "sha256": "0c7d6fd9aaa4dc68befcb28e82907407647fb93da1fcedc507d6140b630c49ff"
+    },
+    {
+      "source": "cad/check_assembly.py",
+      "frozen_path": "check_assembly.py",
+      "sha256": "d382cf392ce646acc7a17dfbd6c6d6417e0c10db10cd8e9114371e19112b47a7"
+    },
+    {
+      "source": "cad/build_prototypes.py",
+      "frozen_path": "build_prototypes.py",
+      "sha256": "e6527fbc5b8d9fc9245b078549fde6d021774c2e23f2ce0988abbde89dd5f0d9"
+    },
+    {
+      "source": "cad/prototypes/validation.json",
+      "frozen_path": "prototypes/validation.json",
+      "sha256": "7b7e47c2fa2f839a47fde4bf7347e63709d08bb2de3a500cabbf0188d947310b"
+    },
+    {
+      "source": "cad/rev_b/head-left-integral-outlet.step",
+      "frozen_path": "rev_b/head-left-integral-outlet.step",
+      "sha256": "e7fc4269c80eea562e25de389457ce4a672c26bf0362774e458689fcf2cf78d3"
+    },
+    {
+      "source": "cad/rev_b/head-right-integral-outlet.step",
+      "frozen_path": "rev_b/head-right-integral-outlet.step",
+      "sha256": "af76434fd85f5496359d421cdfb63007c76eb1f239de94e98ef656e0b7ea2977"
+    },
+    {
+      "source": "cad/rev_b/magnetic-front-grille.step",
+      "frozen_path": "rev_b/magnetic-front-grille.step",
+      "sha256": "3e4e1b83409ed783a6997b198dd08829aa87c28149016d563f860785a49f8f7e"
+    },
+    {
+      "source": "cad/rev_b/head-magnet-retaining-rim.step",
+      "frozen_path": "rev_b/head-magnet-retaining-rim.step",
+      "sha256": "99bd7680f29b0b3ed471b457e879d3a8602410abbdd0093e67164f77b8b9d6c4"
+    },
+    {
+      "source": "cad/rev_b/grille-magnet-retaining-rim.step",
+      "frozen_path": "rev_b/grille-magnet-retaining-rim.step",
+      "sha256": "38a253aa1d955ce0f23b8a8b7397d21b6b09236afba4beb7197bac5c7c0e9048"
+    },
+    {
+      "source": "cad/rev_b/fixed-inner-finger-guard.step",
+      "frozen_path": "rev_b/fixed-inner-finger-guard.step",
+      "sha256": "8f53fd907c976fd752d9d31093bcc1216c7118d15e3cff00cf07293847a54c2c"
+    },
+    {
+      "source": "cad/prototypes/installed-upper_panel-open.step",
+      "frozen_path": "prototypes/installed-upper_panel-open.step",
+      "sha256": "2feaf2285e3adfd4f711727a478f46680b732621e3891134f9f6ce511e544cc5"
+    },
+    {
+      "source": "cad/prototypes/installed-lower_panel-open.step",
+      "frozen_path": "prototypes/installed-lower_panel-open.step",
+      "sha256": "7bc4e17fad10a0a943e0d25eb99056ad08756aad7c5604ee8486a3f8e9af4fb9"
+    }
+  ]
+}

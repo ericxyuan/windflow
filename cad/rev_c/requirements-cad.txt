@@ -1,0 +1,4 @@
+# Isolated and verified CAD runtime for Rev C; do not mutate shared Rev B venv.
+cadquery==2.6.1
+cadquery-ocp==7.8.1.1.post1
+vtk==9.3.1

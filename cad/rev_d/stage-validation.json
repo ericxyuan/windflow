@@ -1,0 +1,1208 @@
+{
+  "result": "PASS",
+  "generated_utc": "2026-10-09T19:31:27.711349+00:00",
+  "physical_qualification": false,
+  "parts": [
+    {
+      "name": "REF-mechanism-upper_panel-open",
+      "printed": true,
+      "material": "PETG prototype",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        -51.6521411987927,
+        77.0021411987927,
+        186.19869406506547,
+        244.00000010000142,
+        44.198295164922726,
+        49.802077005958516
+      ],
+      "volume_mm3": 10716.27904401294,
+      "source": "cad\\rev_c\\REF-mechanism-upper_panel-open.step",
+      "sha256": "fe815b602ecf9903bc7147f8d6ee912b2ef66bb6535e986bd99b52295d122a14"
+    },
+    {
+      "name": "REF-mechanism-lower_panel-open",
+      "printed": true,
+      "material": "PETG prototype",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        -51.6521411987927,
+        77.0021411987927,
+        186.1986940650655,
+        244.00000010000218,
+        -49.802077005958516,
+        -44.198295164922726
+      ],
+      "volume_mm3": 10716.279044012097,
+      "source": "cad\\rev_c\\REF-mechanism-lower_panel-open.step",
+      "sha256": "64949e6c5892dad299ff34fb65454d4a8631dd8ea7bf88058493e281dea56d53"
+    },
+    {
+      "name": "REF-mechanism-upper_crank-open",
+      "printed": true,
+      "material": "PETG prototype",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        72.9973045090585,
+        77.0026954909415,
+        182.99731374406835,
+        199.00000010000167,
+        40.997877855695016,
+        75.00000010000002
+      ],
+      "volume_mm3": 1142.435887404107,
+      "source": "cad\\rev_c\\REF-mechanism-upper_crank-open.step",
+      "sha256": "ec0fb48ac636aaa4b7c91b43cdef49f082707a3e7552f8457b49c674668884e3"
+    },
+    {
+      "name": "REF-mechanism-lower_crank-open",
+      "printed": true,
+      "material": "PETG prototype",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        72.99730450905848,
+        77.00269549094152,
+        182.99731374406835,
+        199.00000010000232,
+        -75.00000010000004,
+        -40.997877855695016
+      ],
+      "volume_mm3": 1142.4358874042146,
+      "source": "cad\\rev_c\\REF-mechanism-lower_crank-open.step",
+      "sha256": "0adce50a032b331461bf3d3fb06c964dc9d0d9745e738ec7004881dc073711aa"
+    },
+    {
+      "name": "REF-mechanism-yoke-open",
+      "printed": true,
+      "material": "PETG prototype",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        77.4983310787334,
+        81.5016689212666,
+        183.99999989999995,
+        197.40000010000006,
+        -77.00000010000004,
+        77.00000010000004
+      ],
+      "volume_mm3": 5959.376042180058,
+      "source": "cad\\rev_c\\REF-mechanism-yoke-open.step",
+      "sha256": "27a9b2d68b94ea49f3a6f4ef6115dba7eefb177da0805ced3b44b550af7fc8a9"
+    },
+    {
+      "name": "REF-mechanism-rod-open",
+      "printed": true,
+      "material": "PETG prototype",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        72.49824324603516,
+        76.50175675396484,
+        149.99999989999998,
+        193.00000010000002,
+        -4.001756753964844,
+        4.001756753964844
+      ],
+      "volume_mm3": 1252.638041834565,
+      "source": "cad\\rev_c\\REF-mechanism-rod-open.step",
+      "sha256": "f6dd336e7956b95897c109742d9818550cdf30a39bfd42403ac281a723c64cdb"
+    },
+    {
+      "name": "REF-mechanism-horn-open",
+      "printed": false,
+      "material": "Purchased/drawing reference; see source",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        68.5,
+        71.5,
+        150.0,
+        158.0,
+        -14.0,
+        4.0
+      ],
+      "volume_mm3": 365.1374893741198,
+      "source": "cad\\rev_c\\REF-mechanism-horn-open.step",
+      "sha256": "0aaaf18185a86200f38a1a7f27ba0c85c7245d47c4a790da900368f8c89b90c5"
+    },
+    {
+      "name": "REF-mechanism-upper_shaft",
+      "printed": false,
+      "material": "Purchased/drawing reference; see source",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        -71.0,
+        101.0,
+        187.5,
+        190.5,
+        45.5,
+        48.5
+      ],
+      "volume_mm3": 1215.79635693925,
+      "source": "cad\\rev_c\\REF-mechanism-upper_shaft.step",
+      "sha256": "5134a822da603bdac55ae894290224cf1ce583e5446bcb5f3da095bebbf1c31e"
+    },
+    {
+      "name": "REF-mechanism-lower_shaft",
+      "printed": false,
+      "material": "Purchased/drawing reference; see source",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        -71.0,
+        101.0,
+        187.5,
+        190.5,
+        -48.5,
+        -45.5
+      ],
+      "volume_mm3": 1215.79635693925,
+      "source": "cad\\rev_c\\REF-mechanism-lower_shaft.step",
+      "sha256": "c8d22fcdfea7940c9982bfc6a7f8d7819937cb069482b14a819ffff757160e58"
+    },
+    {
+      "name": "REF-mechanism-upper_retaining_spacer",
+      "printed": false,
+      "material": "Purchased/drawing reference; see source",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        77.2,
+        84.8,
+        185.5,
+        192.5,
+        43.5,
+        50.5
+      ],
+      "volume_mm3": 227.47958245379485,
+      "source": "cad\\rev_c\\REF-mechanism-upper_retaining_spacer.step",
+      "sha256": "95151ef1231f1ad2e92fb610e09f1ff5e3a914536f67d2ccc3e51536371c198f"
+    },
+    {
+      "name": "REF-mechanism-lower_retaining_spacer",
+      "printed": false,
+      "material": "Purchased/drawing reference; see source",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        77.2,
+        84.8,
+        185.5,
+        192.5,
+        -50.5,
+        -43.5
+      ],
+      "volume_mm3": 227.47958245379485,
+      "source": "cad\\rev_c\\REF-mechanism-lower_retaining_spacer.step",
+      "sha256": "28edce7c0e697313ff483b07f97700a671a10bec9d7708723b0751f9480e05b8"
+    },
+    {
+      "name": "REF-mechanism-upper_left_collar",
+      "printed": false,
+      "material": "Purchased/drawing reference; see source",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        -69.0,
+        -64.0,
+        185.5,
+        192.5,
+        43.5,
+        50.5
+      ],
+      "volume_mm3": 157.07963267949793,
+      "source": "cad\\rev_c\\REF-mechanism-upper_left_collar.step",
+      "sha256": "c4f6dd937435a779e5ea08770e06132b96454d7f335100af69d26d549551eefd"
+    },
+    {
+      "name": "REF-mechanism-lower_left_collar",
+      "printed": false,
+      "material": "Purchased/drawing reference; see source",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        -69.0,
+        -64.0,
+        185.5,
+        192.5,
+        -50.5,
+        -43.5
+      ],
+      "volume_mm3": 157.07963267949793,
+      "source": "cad\\rev_c\\REF-mechanism-lower_left_collar.step",
+      "sha256": "b560d7679ee27b20e9b1077be40b843f41f4247be1638a258cb8080b2a087c3f"
+    },
+    {
+      "name": "REF-mechanism-upper_right_collar",
+      "printed": false,
+      "material": "Purchased/drawing reference; see source",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        88.3,
+        93.3,
+        185.5,
+        192.5,
+        43.5,
+        50.5
+      ],
+      "volume_mm3": 157.07963267949793,
+      "source": "cad\\rev_c\\REF-mechanism-upper_right_collar.step",
+      "sha256": "280ce6577c51ffefa4a6a55e6fc5a7e35c826086e2a1122b12724d0efc21b3a9"
+    },
+    {
+      "name": "REF-mechanism-lower_right_collar",
+      "printed": false,
+      "material": "Purchased/drawing reference; see source",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        88.3,
+        93.3,
+        185.5,
+        192.5,
+        -50.5,
+        -43.5
+      ],
+      "volume_mm3": 157.07963267949793,
+      "source": "cad\\rev_c\\REF-mechanism-lower_right_collar.step",
+      "sha256": "0521fef9f24944646951095b7d261a8aabb0261115e1de079497effd5fd6e05e"
+    },
+    {
+      "name": "servo-slotted-bracket-development",
+      "printed": true,
+      "material": "PETG prototype",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        85.29926141326774,
+        88.30073858673225,
+        126.59999989999997,
+        182.50000010000002,
+        -37.00000010000003,
+        1.0000001000000294
+      ],
+      "volume_mm3": 2909.0542092498354,
+      "source": "cad\\rev_c\\servo-slotted-bracket-development.step",
+      "sha256": "7516b3195e9204999693145fe61d342d8a675de578178164dde2b95b13dd64b2"
+    },
+    {
+      "name": "REF-FS90-FB-family-envelope-UNVERIFIED",
+      "printed": false,
+      "material": "Purchased/drawing reference; see source",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        72.0,
+        99.3,
+        132.3,
+        164.9,
+        -16.25,
+        -3.75
+      ],
+      "volume_mm3": 6780.98232483904,
+      "source": "cad\\rev_c\\REF-FS90-FB-family-envelope-UNVERIFIED.step",
+      "sha256": "6cae39524c85e3d8610ae25d2ee30a04db1a65d89be56b414bccb4ee2af7bf92"
+    },
+    {
+      "name": "P2-150mm-rotor-installed-TEST-ONLY",
+      "printed": false,
+      "material": "PETG prototype",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        -70.35699526473,
+        74.99582431546445,
+        -7.000000000000003,
+        33.0,
+        -75.39037809130001,
+        71.08070427174033
+      ],
+      "volume_mm3": 72340.1082256568,
+      "source": "cad\\rev_d\\impeller-P2-150mm-GUARDED-TEST-ONLY.step",
+      "sha256": "60a26234d500e17a3e3ee6c7ad06a1d0fa4282f0119039f8a2e1410efa36f092"
+    },
+    {
+      "name": "REF-P2406-manufacturer-envelope-seat-UNVERIFIED",
+      "printed": false,
+      "material": "PETG prototype",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        -15.1,
+        15.1,
+        25.0,
+        56.0,
+        -15.1,
+        15.1
+      ],
+      "volume_mm3": 16632.314074414975,
+      "source": "Manufacturer 30.2 mm diameter / 16 mm M3 pitch circle, shaft shoulder not measured",
+      "sha256": "8add0a5fbfa265149dff223943108710ee87ebe6efa321773b66ebdbc7968b15"
+    },
+    {
+      "name": "P2-rigid-motor-carrier-PCD16",
+      "printed": true,
+      "material": "PETG prototype",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        -78.42631659089881,
+        78.42631659089881,
+        55.964910591026644,
+        62.035089408973356,
+        -78.40000010000004,
+        78.43508940897337
+      ],
+      "volume_mm3": 22173.941117031856,
+      "source": null,
+      "sha256": "3c9b8cc3252a1a4b34996b0bf7490e292696a7446d3aa7ddc6e83786c75e6de0"
+    },
+    {
+      "name": "P2-TPU-carrier-isolation-ring",
+      "printed": true,
+      "material": "TPU95A, unqualified compression",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        -79.07653477609118,
+        79.07653477609118,
+        55.614619672010924,
+        62.385380327989076,
+        -79.05000010000002,
+        79.08538032798907
+      ],
+      "volume_mm3": 2154.1735892051074,
+      "source": null,
+      "sha256": "b573b61fa4471c3f371ab7947b64a7134fe1f13821465660fd1593599ba4cafe"
+    },
+    {
+      "name": "P2-seven-curved-vane-stator-TRIAL",
+      "printed": true,
+      "material": "PETG prototype",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        -78.0261823230881,
+        78.0261823230881,
+        77.92892035178842,
+        102.07107964821158,
+        -78.00000010000002,
+        78.03491038188676
+      ],
+      "volume_mm3": 45864.51940062133,
+      "source": null,
+      "sha256": "f66115bbb6e621e5b1a8077d4c551018e7db46adf52a5fa696e546c37b0d8e45"
+    },
+    {
+      "name": "P2-stator-open-comparison-spacer",
+      "printed": true,
+      "material": "PETG prototype",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        -78.0261823230881,
+        78.0261823230881,
+        77.96508961811324,
+        102.03491038188676,
+        -78.00000010000002,
+        78.03491038188676
+      ],
+      "volume_mm3": 28934.068339562567,
+      "source": null,
+      "sha256": "ee35e473a4463a952cdd319a70828c30933f6f0aa668185efa335e1e1db850f0"
+    },
+    {
+      "name": "P2-R12-bellmouth-insert",
+      "printed": true,
+      "material": "PETG prototype",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        -90.43034462522003,
+        90.43034462522003,
+        -14.440460221571314,
+        4.034867692575448,
+        -90.40000010000003,
+        90.44046022157131
+      ],
+      "volume_mm3": 29301.5644289123,
+      "source": null,
+      "sha256": "eff6c7b6017ce863232af339cb4941a03ee87d79f6503f8a1df79baaf08c956e"
+    },
+    {
+      "name": "P2-fixed-rear-inlet-guard",
+      "printed": true,
+      "material": "PETG prototype",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        -90.43034462522003,
+        90.43034462522003,
+        -17.140460221571313,
+        -14.659539778428686,
+        -90.40000010000003,
+        90.44046022157131
+      ],
+      "volume_mm3": 16384.21369015838,
+      "source": null,
+      "sha256": "58e04d69d6f4f7b0060bcb9d67c31f3f62be4bc8c8d5a32ec286b6c060d13c42"
+    },
+    {
+      "name": "P2-fixed-front-finger-guard",
+      "printed": true,
+      "material": "PETG prototype",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        -57.002538399506804,
+        57.002538399506804,
+        252.9974616004932,
+        255.0025383995068,
+        -52.002538399506804,
+        52.002538399506804
+      ],
+      "volume_mm3": 8149.486003293917,
+      "source": null,
+      "sha256": "0c8e79c87bab706826f751b33ff01a507027798ce97d249321b439ca4c4502e6"
+    },
+    {
+      "name": "REF-head-D42-magnet--55--40",
+      "printed": false,
+      "material": "PETG prototype",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        -58.175,
+        -51.825,
+        262.7,
+        265.875,
+        -43.175,
+        -36.825
+      ],
+      "volume_mm3": 100.54976538340999,
+      "source": "K&J D42 6.35 x 3.175 mm, retention/adhesive tests required",
+      "sha256": "241e4422be6cecad730aad1d97e235a4634ecf81e79ac6fb7b3cfe4859ed573c"
+    },
+    {
+      "name": "REF-grille-D42-magnet--55--40",
+      "printed": false,
+      "material": "PETG prototype",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        -58.175,
+        -51.825,
+        267.7,
+        270.875,
+        -43.175,
+        -36.825
+      ],
+      "volume_mm3": 100.54976538340999,
+      "source": "K&J D42 6.35 x 3.175 mm, paired opposite polarity",
+      "sha256": "9c7424a3208f7a12cdabfcca30c53d17f07e52ee02cdada7f0040738e4f17374"
+    },
+    {
+      "name": "REF-head-D42-magnet--55-40",
+      "printed": false,
+      "material": "PETG prototype",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        -58.175,
+        -51.825,
+        262.7,
+        265.875,
+        36.825,
+        43.175
+      ],
+      "volume_mm3": 100.54976538340999,
+      "source": "K&J D42 6.35 x 3.175 mm, retention/adhesive tests required",
+      "sha256": "11a7d5bd6d0df044a5daa97eb5c3baaebd4c5955f0c619edfd5a61d82e2e1489"
+    },
+    {
+      "name": "REF-grille-D42-magnet--55-40",
+      "printed": false,
+      "material": "PETG prototype",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        -58.175,
+        -51.825,
+        267.7,
+        270.875,
+        36.825,
+        43.175
+      ],
+      "volume_mm3": 100.54976538340999,
+      "source": "K&J D42 6.35 x 3.175 mm, paired opposite polarity",
+      "sha256": "717e6e9b3fa8959633f8f0190e0bae63571d88e208d3bd50b90facdb4b4e1ea7"
+    },
+    {
+      "name": "REF-head-D42-magnet-55--40",
+      "printed": false,
+      "material": "PETG prototype",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        51.825,
+        58.175,
+        262.7,
+        265.875,
+        -43.175,
+        -36.825
+      ],
+      "volume_mm3": 100.54976538340999,
+      "source": "K&J D42 6.35 x 3.175 mm, retention/adhesive tests required",
+      "sha256": "0122b086c6bae39fbf41e2caa5d2d35efd57e91c0348e7a12da74bd80e9e88c7"
+    },
+    {
+      "name": "REF-grille-D42-magnet-55--40",
+      "printed": false,
+      "material": "PETG prototype",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        51.825,
+        58.175,
+        267.7,
+        270.875,
+        -43.175,
+        -36.825
+      ],
+      "volume_mm3": 100.54976538340999,
+      "source": "K&J D42 6.35 x 3.175 mm, paired opposite polarity",
+      "sha256": "df1436c5418f39e974e492029829b9e74b73465a276cc09d0abfa64facc7ff65"
+    },
+    {
+      "name": "REF-head-D42-magnet-55-40",
+      "printed": false,
+      "material": "PETG prototype",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        51.825,
+        58.175,
+        262.7,
+        265.875,
+        36.825,
+        43.175
+      ],
+      "volume_mm3": 100.54976538340999,
+      "source": "K&J D42 6.35 x 3.175 mm, retention/adhesive tests required",
+      "sha256": "dd97b7f09bb66d581261803eadc78450834d97f32152c1dc91665085d63b1504"
+    },
+    {
+      "name": "REF-grille-D42-magnet-55-40",
+      "printed": false,
+      "material": "PETG prototype",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        51.825,
+        58.175,
+        267.7,
+        270.875,
+        36.825,
+        43.175
+      ],
+      "volume_mm3": 100.54976538340999,
+      "source": "K&J D42 6.35 x 3.175 mm, paired opposite polarity",
+      "sha256": "cb0e5eaf6c799f20d5fe253dfa967f369839c326555cc9708a56b11c1bbddfa3"
+    },
+    {
+      "name": "P2-fixed-magnet-seat-frame",
+      "printed": true,
+      "material": "PETG prototype",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        -61.002115349589005,
+        61.002115349589005,
+        259.997884650411,
+        266.002115349589,
+        -50.002115349589005,
+        50.002115349589005
+      ],
+      "volume_mm3": 13790.186048087333,
+      "source": null,
+      "sha256": "ed93d9c187e6687cef71509aaec48cc77288bf3ecb5b2f2d14aa768b929c2cfe"
+    },
+    {
+      "name": "head-magnet-retaining-ring-development",
+      "printed": true,
+      "material": "PETG prototype",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        -60.002115349589005,
+        60.002115349589005,
+        265.997884650411,
+        266.80211534958903,
+        -50.002115349589005,
+        50.002115349589005
+      ],
+      "volume_mm3": 1705.3805328942972,
+      "source": null,
+      "sha256": "eeec87c16c86fe30658a042bd17c0ac1766e0d02dbe88c65094373cdf15f1293"
+    },
+    {
+      "name": "grille-magnet-retaining-ring-development",
+      "printed": true,
+      "material": "PETG prototype",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        -60.002115349589005,
+        60.002115349589005,
+        266.797884650411,
+        267.60211534958904,
+        -50.002115349589005,
+        50.002115349589005
+      ],
+      "volume_mm3": 1745.5929188602502,
+      "source": null,
+      "sha256": "ace483fcfd9b5730f0c2056e5c8c467a026d9b67c1eae0ca7cbc8e190211af3b"
+    },
+    {
+      "name": "magnetic-front-cleaning-grille-development",
+      "printed": true,
+      "material": "PETG prototype",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        -62.00000010000006,
+        60.002115349589005,
+        264.5994628187402,
+        272.8000001000001,
+        -50.002115349589005,
+        50.002115349589005
+      ],
+      "volume_mm3": 18296.266424286,
+      "source": null,
+      "sha256": "c9a8f248d768cb9989f3f25e17dc18af68324c8f58689274976dcd984bf08019"
+    },
+    {
+      "name": "REF-Adafruit-4311-IPS-vendor",
+      "printed": false,
+      "material": "Purchased/drawing reference; see source",
+      "valid": true,
+      "solid_count": 15,
+      "bounds_xyz_mm": [
+        -21.47224904621,
+        37.582750953785,
+        260.0588022013993,
+        266.13970000000006,
+        -88.28053456020001,
+        -52.72053456025
+      ],
+      "volume_mm3": 7026.733919221685,
+      "source": "cad\\rev_c\\REF-Adafruit-4311-IPS-vendor.step",
+      "sha256": "b7fbaaa55e1552d0aa731d02667dd24241ce807146d33aed40812e686296350f"
+    },
+    {
+      "name": "REF-clear-display-lens-45x34p4",
+      "printed": false,
+      "material": "Purchased/drawing reference; see source",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        -12.5,
+        32.5,
+        266.6,
+        267.6,
+        -87.7,
+        -53.3
+      ],
+      "volume_mm3": 1548.0000000000002,
+      "source": "cad\\rev_c\\REF-clear-display-lens-45x34p4.step",
+      "sha256": "29894648758aba27de89fe185b91d242410c6d220ad0d901fd5443521d386134"
+    },
+    {
+      "name": "display-removable-cradle-development",
+      "printed": true,
+      "material": "PETG prototype",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        -32.50000010000003,
+        48.50000010000003,
+        252.49831413175315,
+        261.94048806969687,
+        -90.10000010000569,
+        -52.299999899994305
+      ],
+      "volume_mm3": 1400.3118988324843,
+      "source": "cad\\rev_c\\display-removable-cradle-development.step",
+      "sha256": "c73391c3cec737492cbbb8ace50ae717b5abbb96401a663ff7cb0ef9d14acb83"
+    },
+    {
+      "name": "display-front-bezel-development",
+      "printed": true,
+      "material": "PETG prototype",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        -29.000000100000026,
+        49.00000010000002,
+        266.59950757551184,
+        269.0004924244882,
+        -90.30000010000002,
+        -50.69999989999998
+      ],
+      "volume_mm3": 3872.915259735862,
+      "source": "cad\\rev_c\\display-front-bezel-development.step",
+      "sha256": "ed91286363508c0c4b18eae4f4e3cc7630c7b2e0e6db770641be8e0aa6f4f402"
+    },
+    {
+      "name": "horizontal-encoder-thumbwheel-development",
+      "printed": true,
+      "material": "PETG prototype",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        -70.99132498456963,
+        -41.00867501542308,
+        267.39796072966544,
+        275.4020392703345,
+        -85.4913249845315,
+        -55.50867501543038
+      ],
+      "volume_mm3": 5393.621518267978,
+      "source": "cad\\rev_c\\horizontal-encoder-thumbwheel-development.step",
+      "sha256": "188060ea2df17f3cce545ad42a78b06d86f46d41f0e789a6341d95de6edb8847"
+    },
+    {
+      "name": "REF-Bourns-PEC11H-drawing-envelope",
+      "printed": false,
+      "material": "Purchased/drawing reference; see source",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        -61.9,
+        -50.1,
+        253.4,
+        274.9,
+        -77.3,
+        -63.7
+      ],
+      "volume_mm3": 1462.101934595716,
+      "source": "cad\\rev_c\\REF-Bourns-PEC11H-drawing-envelope.step",
+      "sha256": "849e60ede10c852b8bd201422b086c2e51f523984e194255de5ee22c65f829b8"
+    },
+    {
+      "name": "encoder-daughterboard-P1-FR4",
+      "printed": false,
+      "material": "Purchased/drawing reference; see source",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        -64.5,
+        -35.0,
+        250.8,
+        252.4,
+        -82.5,
+        -58.5
+      ],
+      "volume_mm3": 1095.654445284252,
+      "source": "cad\\rev_c\\encoder-daughterboard-P1-FR4.step",
+      "sha256": "ce456dfff6dc8a653d2022505537efe83acb6479e2bc9fc2fd43aaf6144229a9"
+    },
+    {
+      "name": "REF-M7x0p75-encoder-panel-nut",
+      "printed": false,
+      "material": "Purchased/drawing reference; see source",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        -62.35085296108341,
+        -49.649147038906584,
+        262.6,
+        264.6,
+        -76.0,
+        -65.0
+      ],
+      "volume_mm3": 128.14806613483452,
+      "source": "cad\\rev_c\\REF-M7x0p75-encoder-panel-nut.step",
+      "sha256": "c02b7ce5629225b98ec5cb0b7a2d56f141c2aff645530819ec18f4697a710652"
+    },
+    {
+      "name": "horizontal-encoder-mount-development",
+      "printed": true,
+      "material": "PETG prototype",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        -68.00000010000002,
+        -32.99999989999998,
+        252.3986571968505,
+        262.3016337221652,
+        -84.50000010000002,
+        -56.49999989999998
+      ],
+      "volume_mm3": 2506.55845448223,
+      "source": "cad\\rev_c\\horizontal-encoder-mount-development.step",
+      "sha256": "a374c2ed5b2e0beccb0b755154c726e09d539428d8fd4d6fb145af2dec376dca"
+    },
+    {
+      "name": "Raspberry-Pi-Pico-SC0915-vendor",
+      "printed": false,
+      "material": "Purchased/drawing reference; see source",
+      "valid": true,
+      "solid_count": 17,
+      "bounds_xyz_mm": [
+        -87.00000000000016,
+        -65.99999999999984,
+        160.0,
+        212.29999999999998,
+        -72.0,
+        -68.26999999999896
+      ],
+      "volume_mm3": 1144.870991287023,
+      "source": "cad\\rev_c\\Raspberry-Pi-Pico-SC0915-vendor.step",
+      "sha256": "05883292d9cbf9a7b07a78b7775487855cacd39d62714f2318c53b9a7a746178"
+    },
+    {
+      "name": "Pololu-D24V22-5V-logic-vendor",
+      "printed": false,
+      "material": "Purchased/drawing reference; see source",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        -62.0,
+        -44.2199998,
+        226.0,
+        243.7800002,
+        -82.0,
+        -73.7807562307
+      ],
+      "volume_mm3": 944.7484512882463,
+      "source": "cad\\rev_c\\Pololu-D24V22-5V-logic-vendor.step",
+      "sha256": "9066e333a4aeeb060090ff227d51ed4550668a8934b274683e2dbdfdcab9efeb"
+    },
+    {
+      "name": "Pololu-D24V22-5V-servo-vendor",
+      "printed": false,
+      "material": "Purchased/drawing reference; see source",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        56.0,
+        73.78000019999999,
+        227.0,
+        244.7800002,
+        -82.0,
+        -73.7807562307
+      ],
+      "volume_mm3": 944.7484512884106,
+      "source": "cad\\rev_c\\Pololu-D24V22-5V-servo-vendor.step",
+      "sha256": "bd83dca77e22bad10ee60ed6e177678f1300dd16c8b066b295cae1e25003493b"
+    },
+    {
+      "name": "Adafruit-HUSB238-5807-vendor",
+      "printed": false,
+      "material": "Purchased/drawing reference; see source",
+      "valid": true,
+      "solid_count": 34,
+      "bounds_xyz_mm": [
+        -94.0,
+        -73.67999999999999,
+        227.99999999999122,
+        252.608,
+        -75.0,
+        -62.9
+      ],
+      "volume_mm3": 1164.6445579245308,
+      "source": "cad\\rev_c\\Adafruit-HUSB238-5807-vendor.step",
+      "sha256": "d39d9399619872e86e8f3718fde8afa6a58df618372f6ded491694fc2d22d631"
+    },
+    {
+      "name": "REF-A50S-V2p3c-envelope-UNVERIFIED",
+      "printed": false,
+      "material": "Purchased/drawing reference; see source",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        37.0,
+        83.0,
+        151.0,
+        173.0,
+        -80.0,
+        -63.0
+      ],
+      "volume_mm3": 17204.0,
+      "source": "cad\\rev_c\\REF-A50S-V2p3c-envelope-UNVERIFIED.step",
+      "sha256": "f310135d68e4ae43e8ed7871c51c914c9a75b67cbe3e7bc9308a1456a731d46f"
+    },
+    {
+      "name": "MCP9808-temp1-Adafruit1782-vendor",
+      "printed": false,
+      "material": "Purchased/drawing reference; see source",
+      "valid": true,
+      "solid_count": 18,
+      "bounds_xyz_mm": [
+        -64.0,
+        -43.68,
+        202.0,
+        214.7,
+        -77.0,
+        -73.93
+      ],
+      "volume_mm3": 393.8295051873856,
+      "source": "cad\\rev_c\\MCP9808-temp1-Adafruit1782-vendor.step",
+      "sha256": "5c663abe969b5107f837aeaca36017032ea4b4bbdb88024fe0409bf1e82b0e45"
+    },
+    {
+      "name": "MCP9808-temp2-Adafruit1782-vendor",
+      "printed": false,
+      "material": "Purchased/drawing reference; see source",
+      "valid": true,
+      "solid_count": 18,
+      "bounds_xyz_mm": [
+        68.0,
+        88.32000000000001,
+        201.0,
+        213.7,
+        -77.0,
+        -73.93
+      ],
+      "volume_mm3": 393.8295051873861,
+      "source": "cad\\rev_c\\MCP9808-temp2-Adafruit1782-vendor.step",
+      "sha256": "8a17ce37cb16852c7d07fa3cd6cae98db2de6091cd330e14b9c3603ca6a3360b"
+    },
+    {
+      "name": "Sensirion-SDP810-125Pa-vendor",
+      "printed": false,
+      "material": "Purchased/drawing reference; see source",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        14.999999999999996,
+        44.00000020000001,
+        226.0,
+        253.05000010000003,
+        -82.0,
+        -64.04999980000001
+      ],
+      "volume_mm3": 3691.592478445897,
+      "source": "cad\\rev_c\\Sensirion-SDP810-125Pa-vendor.step",
+      "sha256": "290d562ccce9efd13992e7c5395ededc5da22d3d7b7d285c053eeaabf469e96c"
+    },
+    {
+      "name": "Adafruit-NeoPixel-1426-ambient-vendor",
+      "printed": false,
+      "material": "Purchased/drawing reference; see source",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        -25.4,
+        25.4,
+        203.0,
+        213.16,
+        -88.0,
+        -85.4
+      ],
+      "volume_mm3": 1035.646404349354,
+      "source": "cad\\rev_c\\Adafruit-NeoPixel-1426-ambient-vendor.step",
+      "sha256": "d67fd69bd419b340cfafe1319bb5b8453497931c0e0f5479aa34c378bd8883e2"
+    },
+    {
+      "name": "REF-main-PCB-population-and-loom-reserve-NOT-INTEGRATED",
+      "printed": false,
+      "material": "PETG prototype",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        -40.0,
+        40.0,
+        170.0,
+        225.0,
+        -82.0,
+        -62.0
+      ],
+      "volume_mm3": 88000.0,
+      "source": null,
+      "sha256": "4be23bc6f16ba8d0d6fad19bc6ecf2239b4e8325e18aca22c496c11ddd252584"
+    },
+    {
+      "name": "P2-low-structural-plinth",
+      "printed": true,
+      "material": "PETG prototype",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        -97.00948628969387,
+        97.00948628969385,
+        14.990692801808404,
+        257.9800490381639,
+        -98.50948628969387,
+        -92.49051371030613
+      ],
+      "volume_mm3": 163626.5511928753,
+      "source": null,
+      "sha256": "e7e6ec04fbf25ac3d0574fd28f7cbf2b9313a6df188a45531e8602b3dc841f83"
+    },
+    {
+      "name": "P2-bottom-electronics-service-tray",
+      "printed": true,
+      "material": "PETG prototype",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        -87.00423059917804,
+        87.00423059917804,
+        149.99576940082198,
+        262.004230599178,
+        -91.70423059917805,
+        -89.29576940082195
+      ],
+      "volume_mm3": 44366.78223686188,
+      "source": null,
+      "sha256": "8029cb9eae5889212e95d7d1d57258f5ac505193a99c75c5eee37f55832b46d8"
+    },
+    {
+      "name": "P2-downward-ambient-diffuser",
+      "printed": true,
+      "material": "Translucent PETG",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        -26.700000100000032,
+        26.700000100000032,
+        202.2999999,
+        213.7000001,
+        -91.80000010000003,
+        -90.99999989999996
+      ],
+      "volume_mm3": 487.0079999999973,
+      "source": null,
+      "sha256": "68d4d235dbed9a0a8ad01149fe23fdb4a7ba64d181b8d86c2b3f6d1b80e5734c"
+    },
+    {
+      "name": "P2-replaceable-TPU-desk-feet",
+      "printed": true,
+      "material": "TPU95A",
+      "valid": true,
+      "solid_count": 4,
+      "bounds_xyz_mm": [
+        -84.00000010000002,
+        84.0031330740155,
+        30.997650213312596,
+        246.0023497866874,
+        -102.5031330740155,
+        -98.4968669259845
+      ],
+      "volume_mm3": 2463.0086404143976,
+      "source": null,
+      "sha256": "dcc3372c6e6f06548581ccc14ae1cf781e547704d49a233650b18b9b06c7445a"
+    },
+    {
+      "name": "P2-flowing-head-left-INTEGRAL-OUTLET",
+      "printed": true,
+      "material": "PETG prototype",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        -113.20658936570035,
+        4.079509646018396,
+        -0.04399363651075026,
+        271.4082268762738,
+        -94.74258803145752,
+        96.5795096460184
+      ],
+      "volume_mm3": 391485.9311129421,
+      "source": null,
+      "sha256": "fcb160b20cd83d650dae7eaf66bd3cd511c8fdcb124e2423b72be83342f1fa99"
+    },
+    {
+      "name": "P2-flowing-head-right-INTEGRAL-OUTLET",
+      "printed": true,
+      "material": "PETG prototype",
+      "valid": true,
+      "solid_count": 1,
+      "bounds_xyz_mm": [
+        -3.4726841718877344,
+        113.28969343834966,
+        -0.04399363651088265,
+        270.26616971128516,
+        -95.04024754051134,
+        95.97268417188774
+      ],
+      "volume_mm3": 392553.95472967543,
+      "source": null,
+      "sha256": "25c345a9ce2caea5bbab375ead7e6e81feddf422315964abbf6bcd0353a777b5"
+    }
+  ],
+  "pair_checks": 1830,
+  "unintended_issues": [],
+  "complete_bounds_xyz_mm": [
+    -113.20658936570035,
+    113.28969343834966,
+    -17.140460221571313,
+    275.4020392703345,
+    -102.5031330740155,
+    96.5795096460184
+  ],
+  "complete_height_mm": 199.0826427200339,
+  "maximum_height_mm": 200,
+  "head_height_constraint_mm": 185,
+  "excluded_alternative_and_reserves": [
+    "P2-stator-open-comparison-spacer",
+    "REF-main-PCB-population-and-loom-reserve-NOT-INTEGRATED"
+  ],
+  "input_sha256": {
+    "cad\\rev_d_stage.py": "4c17a5103498b5d467cefe3a83ff4c1cc75d3cd8ff5f73ba471789bd65b7571d",
+    "cad\\rev_d\\head-parameters.json": "38f967004bf9ef99db1bc5b4276ac8524c9b5f6313d8e6f17748cefd82b7dc92",
+    "cad\\rev_d\\rotor-validation.json": "12f048d8df41056d43c73bc4b4f233d1f272fc014f3c074787c3829ee753ecc7",
+    "cad\\rev_c\\head-validation.json": "d86806561d12743b9f352ef83ca5a894a2c32c05766e483d3d3d3fc653adeabb",
+    "cad\\rev_d\\impeller-P2-150mm-GUARDED-TEST-ONLY.step": "bf5fd64690b8edc7ecac47ac38f1be2bf501f899b063052fc26b7126a108bae2",
+    "cad\\rev_c\\REF-mechanism-upper_panel-open.step": "faaa4200295fe9ae0f1481f708f97f2ad860873eea0d860f6befa79f875cf376",
+    "cad\\rev_c\\REF-mechanism-lower_panel-open.step": "dcedb5fa4196a9258e376f5e957d3730f2ca307849feff99bd8b78212297ea54",
+    "cad\\rev_c\\REF-mechanism-upper_crank-open.step": "bd3c17ae44a56760e22b4af34cfdb00515a9ec9b9583e0290499d3a5617e5bc9",
+    "cad\\rev_c\\REF-mechanism-lower_crank-open.step": "4f6decb9b1998f2e6f2e78ea67a7f303110969422a4f148df1358ff615e4df02",
+    "cad\\rev_c\\REF-mechanism-yoke-open.step": "fec5cf10a306455dfc48a6dd21b7aa20b11653928042312b156462db693bec8c",
+    "cad\\rev_c\\REF-mechanism-rod-open.step": "c28a80d8dffc2976eb822dcabcbf57e5b6b3b7a20d07c45ab685eed8b6980b46",
+    "cad\\rev_c\\REF-mechanism-horn-open.step": "61cbb2ae61fef808c0566b4df8eb391ca4133f1521d40a5e28e3d150942becc6",
+    "cad\\rev_c\\REF-mechanism-upper_shaft.step": "042d3d3a344d2b10a4c6130f04a67bc68173ffc98bfe0c4b20545bdeb9ab90a3",
+    "cad\\rev_c\\REF-mechanism-lower_shaft.step": "746da6b602b1119f8f0c988913558262baa8c1822a835cd32105720d94bdd6ab",
+    "cad\\rev_c\\REF-mechanism-upper_retaining_spacer.step": "2aaa177afa374637515cf89429c510b8ac85aa1aec79770e8501c56eeae34fa6",
+    "cad\\rev_c\\REF-mechanism-lower_retaining_spacer.step": "510e8f5571552942cebbd2b2a257a075908f91c475f85ef5a8c72e8fd6a27eb6",
+    "cad\\rev_c\\REF-mechanism-upper_left_collar.step": "9cae26ac2814684b4652349433dd06fba74a67a6838fae6433b4f704f3b5af99",
+    "cad\\rev_c\\REF-mechanism-lower_left_collar.step": "ec3534dd7c3fb629345f5260237515cb6e4deae55fefcd0cbbf97046e54f2023",
+    "cad\\rev_c\\REF-mechanism-upper_right_collar.step": "927c54520ca1283b109de97799c39de452c5b9efc4292c213caa5eeabbc6fbce",
+    "cad\\rev_c\\REF-mechanism-lower_right_collar.step": "7dd4410b97a52d8724d3501fd3e74b40738ea86edb23157d32e5ecd643c9781f",
+    "cad\\rev_c\\servo-slotted-bracket-development.step": "e15a044b584134689c432abf365deacb45c1881994a84727e277420d5d1d562b",
+    "cad\\rev_c\\REF-FS90-FB-family-envelope-UNVERIFIED.step": "a2f63eeedfb8559a7d84631f16639ae1b5d7ab7488fb34c61a32f946195c645c",
+    "cad\\rev_c\\REF-Adafruit-4311-IPS-vendor.step": "d24c0497c2a83704bfff84e48c2e9ea8748f5143cffd3d08dcfe5df6c29f00f2",
+    "cad\\rev_c\\REF-clear-display-lens-45x34p4.step": "f55362a470c873079239a1d6f2e5827ccc434614cefba152271b997600a147ac",
+    "cad\\rev_c\\display-removable-cradle-development.step": "7de5b64716976e5455400d0c3084927bccd1a639a3796cb3dcefea61f02a56ed",
+    "cad\\rev_c\\display-front-bezel-development.step": "c91325ba07187e60136362d598173ccbb310980a8fafab24aa14f85b0ba81261",
+    "cad\\rev_c\\horizontal-encoder-thumbwheel-development.step": "706afa5d7da5cc15630df938eb7b51797fef906895ff519af5a9d6939a1679a3",
+    "cad\\rev_c\\REF-Bourns-PEC11H-drawing-envelope.step": "1e1f80d8fa5715d413f7a94e82fee7caedea1dcdbe239a7d0fc13c00af5c2973",
+    "cad\\rev_c\\encoder-daughterboard-P1-FR4.step": "167c54101997e2d8cec3c3cbf1b3336a70211f0bcbfc4ef9d54326c291476e8c",
+    "cad\\rev_c\\REF-M7x0p75-encoder-panel-nut.step": "6a7a3eb947ac200ef5c8860c5c052d9563e58fb3466b159caaaecf9b3be496dc",
+    "cad\\rev_c\\horizontal-encoder-mount-development.step": "70ed69c574462caf10d393e21240329e825173c24aa163e4cbe953e0e8222d2d",
+    "cad\\rev_c\\Raspberry-Pi-Pico-SC0915-vendor.step": "12632a6b435420bd4d853a75bf0737eaaa6a602aadc514087e3b1f421ba363e9",
+    "cad\\rev_c\\Pololu-D24V22-5V-logic-vendor.step": "9913c9b374b36a4278b5d545ecee28872601540169bf8af44417dbcb86773da6",
+    "cad\\rev_c\\Pololu-D24V22-5V-servo-vendor.step": "560cae7f3abb2bcfedf3c5883c592b134b3dbe34f7a55f6c6917c1d1e2b2f110",
+    "cad\\rev_c\\Adafruit-HUSB238-5807-vendor.step": "f269bef690bc6bffade12757b9ef688231140ab726c6c5577585e42f6dd0b558",
+    "cad\\rev_c\\REF-A50S-V2p3c-envelope-UNVERIFIED.step": "67e5ba0012fb9aeb61e3a946ff9eff089a2a5a07f902a1f75f4b0b777d63b0c5",
+    "cad\\rev_c\\MCP9808-temp1-Adafruit1782-vendor.step": "eadba2b1db7883932d37e2b73337187611e7184f0a2074032608e090146a81f1",
+    "cad\\rev_c\\MCP9808-temp2-Adafruit1782-vendor.step": "bd509b4cf4d6d355e5d67d7efff09539c770c7ab50e18cc3a8ea4aab665b5d2c",
+    "cad\\rev_c\\Sensirion-SDP810-125Pa-vendor.step": "493bfb59911749adee1e2ede98d3f7162735bbe6802be52fd8cfacefa31c081b",
+    "cad\\rev_c\\Adafruit-NeoPixel-1426-ambient-vendor.step": "61dc1e25e14ea0087a6175b986704495185e45629eeb7734d451a5686c56e429"
+  },
+  "limits": [
+    "Nominal placement only; motion, connected harness, tolerances and screw/tool approaches need revalidation.",
+    "Main PCB population, pressure hoses/taps, component retention and grille interlock are not yet integrated.",
+    "Motor/servo/ESC drawing envelopes remain unverified.",
+    "Curved stator incidence and boost benefit require physical flow/power/noise tests.",
+    "Finger guards are not a qualified printed-rotor fragment containment enclosure.",
+    "No operating speed or increased current is approved for the larger rotor."
+  ]
+}

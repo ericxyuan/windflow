@@ -1,0 +1,105 @@
+{
+  "generator": "tools/build_encoder_board.py",
+  "generator_sha256": "a45b51548ecd4c31e3b751ac9c1a34de78a5c4168dce837d0045f60143e600db",
+  "kicad_version": "10.0.6",
+  "manufacturer_reference": {
+    "url": "https://www.bourns.com/docs/product-datasheets/pec11h.pdf",
+    "sha256": "bf7cd10e676fa2be14ace1d6dc671b1d05a77b2fc6639c701316fe4180bffdac",
+    "dimension_revision": "08/23"
+  },
+  "connector_reference": "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf",
+  "functional_nets": {
+    "/ENC_A": [
+      [
+        "ENC1",
+        "A"
+      ],
+      [
+        "J1",
+        "2"
+      ]
+    ],
+    "/ENC_B": [
+      [
+        "ENC1",
+        "B"
+      ],
+      [
+        "J1",
+        "3"
+      ]
+    ],
+    "/ENC_PUSH": [
+      [
+        "ENC1",
+        "S1"
+      ],
+      [
+        "J1",
+        "4"
+      ]
+    ],
+    "/GND": [
+      [
+        "ENC1",
+        "C"
+      ],
+      [
+        "ENC1",
+        "S2"
+      ],
+      [
+        "ENC1",
+        "SH"
+      ],
+      [
+        "J1",
+        "1"
+      ]
+    ]
+  },
+  "carrier_rc_duplicate_count": 0,
+  "verification": {
+    "native_erc": "all severities, exit-code-violations",
+    "native_drc": "all tracks, schematic parity, all severities, exit-code-violations",
+    "route_segments_and_vias": 27,
+    "pads_including_mechanical": 13,
+    "manufacturing_status": "prototype candidate; exact encoder seating and assembly clearance require hardware/CAD adoption"
+  },
+  "files": {
+    "back.svg": "9adbbde281edcb002854737af241046c6c81506709714e00779f1573ee874940",
+    "drc.json": "8767f63b88ec27aa7538fd44bacbcd36c6f63998e052b014bd75dbe32757f559",
+    "erc.json": "a393d49072a8e54c09d2ecc2580bf73068b235b5ae37279335e7aa05aa63dd3e",
+    "fabrication/drill-report.txt": "1de600a6adffafc3662f57f8bdaae57b56d672cffe07a9de2181d5e6bcc658e0",
+    "fabrication/windflow-encoder-B_Cu.gbl": "522ca3c5dcdfd3c218d34900b66c278079c92f552303ee8a35af4529b0368ae4",
+    "fabrication/windflow-encoder-B_Mask.gbs": "e6fdcc83255af757463b0e1e26146bff673c881a1d0a70f0c749d77ad6dd6945",
+    "fabrication/windflow-encoder-B_Silkscreen.gbo": "3682141002d19eab7350ca8c0d14a0d67aadfa9e37d95b86beb6dc0f528c2b7e",
+    "fabrication/windflow-encoder-Edge_Cuts.gm1": "de10c3a69eee590748275dc88826e3d1d337baab06305abbf4bc086db1d854b1",
+    "fabrication/windflow-encoder-F_Cu.gtl": "fe38f7ba483dc79fc9691bdc17151c1e623bc9f38af0989f10690a0eddfa8b12",
+    "fabrication/windflow-encoder-F_Mask.gts": "1509010e62ff831196b63219d8938be25bdc0a00b9dce592c838d385aeedf8e2",
+    "fabrication/windflow-encoder-F_Silkscreen.gto": "a6cb70a9683970107de542025f199a1cf6d3b4a0a21857f66525d68a70174052",
+    "fabrication/windflow-encoder-job.gbrjob": "5dea758c04989ed64354480dee62ed7b642f19142572ddc6f7d4d000438bf319",
+    "fabrication/windflow-encoder-NPTH-drl_map.svg": "457396a39ec5f5ec3a1830109630065050eb582f7003be3553daad7f2b23657e",
+    "fabrication/windflow-encoder-NPTH.drl": "fb8a7da697e1c915f41e693607f0d445a150ba2e49a26387903e3874a67a8e33",
+    "fabrication/windflow-encoder-PTH-drl_map.svg": "0dc67ef87257e5f8269df90c4452151df590ef51d0d3ee2a2577e8f74cb03ba6",
+    "fabrication/windflow-encoder-PTH.drl": "eb84680693708444bce0b39a0d24398b874014c45c4b7c8d368b9efc17add1bc",
+    "fp-lib-table": "d31a0ef15ec871ecb602421d68be9d0d80c3719d7eb0c1daaaa143cb9b21f1d7",
+    "front.svg": "ccf323cda178d9f42d58bd3d983b8c18e39e758f3ff5292dbccad877e134a127",
+    "mechanical-interface.json": "63b9d509c833cf826053b475d1d4ee59ee1244e8d57b9bc6da6f90601cd3cd2b",
+    "mechanical-validation.json": "f007e836cbc1cf63d39eb02b7ddd0f5f4968e229f411219806a2806dfdf7f5eb",
+    "schematic-svg/windflow-encoder.svg": "8541ab520b1e517f932696b612c3dc56584dc512756b94c126244d9fd0934bfe",
+    "sym-lib-table": "24e1895437d8c306daa7a4191af2b7b3c89654dc1f8063681b3ceb63f5c670b0",
+    "verification-commands.json": "ef95a1e2c0aef5adbfc64b4ffffdb591ef3a06cfe290233dc3d5891c3d6c674b",
+    "windflow-encoder-board-only.step": "ea95569ca64b47653970cc77912a5b30320046472cc4980cd51c9b0c9bdb027a",
+    "windflow-encoder-mechanical-datum.step": "72de91e09cf628ff4ec1116cc061e8ac2d7f2803ed04d6024a4579c0b3fcebed",
+    "windflow-encoder.kicad_dru": "1a3d8b57a137fbf8bc64b65b77d2bda04906f7c13de6520ff94b85ffea4fa720",
+    "windflow-encoder.kicad_pcb": "6009f605382ca2c6fcc7c2177ebca068b8d9596a50dea07ed8349d80279be865",
+    "windflow-encoder.kicad_pro": "d09ed00ecace01661caa9394500b19838eb295ac3234e1126ff88663f1326363",
+    "windflow-encoder.kicad_sch": "e786e8fa70bea7f1056dfcc76b485baf1e4901ae242467901c071080723cdc7a",
+    "windflow-encoder.net.xml": "bed9fcbc5722f7e6a5bd4cf8f78e5fa85f6757f57892b364f8433fc0fa5e668f",
+    "WindflowEncoder.kicad_sym": "18726e5d58bc6c0d2c3414c9c583bd504bbfe5b5d87eb7743401ab924332be02",
+    "WindflowEncoder.pretty/JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical.kicad_mod": "fa93a9f49b03c4caad76b643da2473903ee645833aa1d0ae65afd97740431d86",
+    "WindflowEncoder.pretty/MountingHole_2p4_M2.kicad_mod": "b6ccd93fdf08afa01dbe07dd8e2e94cdec30f1d28cff26c4a1d9b6c1392abda2",
+    "WindflowEncoder.pretty/PEC11H_4215F_S0024.kicad_mod": "681d47a109335a9fc42f76a03c4b135eac488b4d361f6b7a7c3a905170b9ca09"
+  }
+}

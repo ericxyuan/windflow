@@ -1,0 +1,8 @@
+{
+  "python_version": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "python_executable_used": "C:\\Users\\admin\\iCloudDrive\\Windflow\\.tools\\venv\\Scripts\\python.exe",
+  "packages": {
+    "matplotlib": "3.11.1",
+    "numpy": "2.5.3"
+  }
+}

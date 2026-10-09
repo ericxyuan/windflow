@@ -1,0 +1,220 @@
+{
+  "study_date": "2026-10-09",
+  "method": "Similarity laws, torque/power estimate, continuity and envelope arithmetic",
+  "limitations": [
+    "No CFD, blade-element validation, motor loss map, fan curve, acoustic prediction or physical test.",
+    "Similarity cases scale every dimension; fixed motor/hub/outlet of real candidates violate exact similarity.",
+    "Kt range represents two current conventions, not a measured tolerance or validated VESC conversion.",
+    "Electromagnetic power estimates omit motor friction/core losses and are not measured shaft output.",
+    "Pressure and torque at the actual nozzle require fan/system curves, not free-flow scaling.",
+    "Height proposal is a budget; screen, cables, cooling and linkage have not been placed in revised CAD.",
+    "3000 RPM remains a historical guarded trial ceiling; a larger rotor has no approved operating RPM."
+  ],
+  "sources": {
+    "motor": "https://www.ligpower.com/product/p2406-fpv-freestyle-motor.html",
+    "esc": "https://teamtriforceuk.com/a50s-v2/",
+    "fan_laws": "https://beckettair.com/resources/fan-laws/",
+    "similarity_conditions": "https://ansyshelp.ansys.com/public/Views/Secured/MotorCAD/v252/en/Motor-CAD_UG/MotorCAD/topics/airflow.html",
+    "phase_current_torque_convention": "https://newdocs.odriverobotics.com/v/latest/guides/odrivetool-setup.html",
+    "fan_architectures": "https://mag.ebmpapst.com/en/insights/axial-diagonal-centrifugal_2447/",
+    "tip_noise": "https://mag.ebmpapst.com/en/products/fans/the-formula-for-vorticity_11766/",
+    "stator_interaction": "https://ntrs.nasa.gov/citations/19850011481"
+  },
+  "current_design": {
+    "motor": "Pacer V4 P2406 Juicy 2060KV",
+    "kv_rpm_per_v": 2060,
+    "esc_input_limit_w": 18,
+    "initial_phase_current_limit_a": 3,
+    "included_export_part_groups": 71,
+    "recorded_min_z_mm": -126.0031330740155,
+    "recorded_max_z_mm": 89.84786906992001,
+    "recorded_total_height_mm": 215.8510021439355,
+    "tallest_part": "curved-linkage-fairing-development",
+    "lowest_part": "base-replaceable-feet-development",
+    "report_rev_c_geometry_hash_matches": {
+      "cad\\rev_c_head.py": true,
+      "cad\\rev_c_service.py": true,
+      "cad\\rev_c_guards.py": true,
+      "cad\\rev_c\\head-parameters.json": true,
+      "cad\\rev_c\\impeller-P1-GUARDED-TEST-ONLY.step": true
+    }
+  },
+  "similar_fan_equal_flow_cases": [
+    {
+      "diameter_mm": 112,
+      "rpm_equal_flow_similar_fan": 3000.0,
+      "tip_speed_equal_flow_m_s": 17.59291886010284,
+      "pressure_fraction_equal_flow": 1.0,
+      "shaft_power_fraction_equal_flow": 1.0,
+      "shaft_torque_fraction_equal_flow": 1.0,
+      "shaft_power_multiplier_equal_rpm": 1.0
+    },
+    {
+      "diameter_mm": 125,
+      "rpm_equal_flow_similar_fan": 2157.969408,
+      "tip_speed_equal_flow_m_s": 14.123876747592323,
+      "pressure_fraction_equal_flow": 0.644513529856,
+      "shaft_power_fraction_equal_flow": 0.644513529856,
+      "shaft_torque_fraction_equal_flow": 0.896,
+      "shaft_power_multiplier_equal_rpm": 1.7316493399615462
+    },
+    {
+      "diameter_mm": 140,
+      "rpm_equal_flow_similar_fan": 1536.0,
+      "tip_speed_equal_flow_m_s": 11.25946807046582,
+      "pressure_fraction_equal_flow": 0.4096,
+      "shaft_power_fraction_equal_flow": 0.4096,
+      "shaft_torque_fraction_equal_flow": 0.8,
+      "shaft_power_multiplier_equal_rpm": 3.0517578125
+    },
+    {
+      "diameter_mm": 150,
+      "rpm_equal_flow_similar_fan": 1248.824888888889,
+      "tip_speed_equal_flow_m_s": 9.808247741383559,
+      "pressure_fraction_equal_flow": 0.31081863901234574,
+      "shaft_power_fraction_equal_flow": 0.31081863901234574,
+      "shaft_torque_fraction_equal_flow": 0.7466666666666667,
+      "shaft_power_multiplier_equal_rpm": 4.308897685613113
+    },
+    {
+      "diameter_mm": 160,
+      "rpm_equal_flow_similar_fan": 1029.0,
+      "tip_speed_equal_flow_m_s": 8.620530241450393,
+      "pressure_fraction_equal_flow": 0.24009999999999998,
+      "shaft_power_fraction_equal_flow": 0.24009999999999998,
+      "shaft_torque_fraction_equal_flow": 0.7,
+      "shaft_power_multiplier_equal_rpm": 5.949901826619861
+    },
+    {
+      "diameter_mm": 170,
+      "rpm_equal_flow_similar_fan": 857.8839812741707,
+      "tip_speed_equal_flow_m_s": 7.636179037409344,
+      "pressure_fraction_equal_flow": 0.1883980507896218,
+      "shaft_power_fraction_equal_flow": 0.1883980507896218,
+      "shaft_torque_fraction_equal_flow": 0.6588235294117647,
+      "shaft_power_multiplier_equal_rpm": 8.056649930800432
+    }
+  ],
+  "same_rpm_boost_cases": [
+    {
+      "measured_flow_retention_at_same_rpm": 1.0,
+      "outlet_area_fraction": 0.75,
+      "mean_velocity_ratio": 1.3333333333333333,
+      "velocity_gain_percent": 33.33333333333333
+    },
+    {
+      "measured_flow_retention_at_same_rpm": 0.95,
+      "outlet_area_fraction": 0.75,
+      "mean_velocity_ratio": 1.2666666666666666,
+      "velocity_gain_percent": 26.66666666666666
+    },
+    {
+      "measured_flow_retention_at_same_rpm": 0.9,
+      "outlet_area_fraction": 0.75,
+      "mean_velocity_ratio": 1.2,
+      "velocity_gain_percent": 19.999999999999996
+    },
+    {
+      "measured_flow_retention_at_same_rpm": 0.85,
+      "outlet_area_fraction": 0.75,
+      "mean_velocity_ratio": 1.1333333333333333,
+      "velocity_gain_percent": 13.33333333333333
+    },
+    {
+      "measured_flow_retention_at_same_rpm": 0.8,
+      "outlet_area_fraction": 0.75,
+      "mean_velocity_ratio": 1.0666666666666667,
+      "velocity_gain_percent": 6.666666666666665
+    },
+    {
+      "measured_flow_retention_at_same_rpm": 0.75,
+      "outlet_area_fraction": 0.75,
+      "mean_velocity_ratio": 1.0,
+      "velocity_gain_percent": 0.0
+    },
+    {
+      "measured_flow_retention_at_same_rpm": 0.7,
+      "outlet_area_fraction": 0.75,
+      "mean_velocity_ratio": 0.9333333333333332,
+      "velocity_gain_percent": -6.666666666666677
+    }
+  ],
+  "motor_estimates": [
+    {
+      "rpm": 1500,
+      "estimated_electromagnetic_power_low_w_at_3a": 1.8918182945524946,
+      "estimated_electromagnetic_power_high_w_at_3a": 2.1844660194174756,
+      "illustrative_current_low_a_for_10w_shaft": 13.733333333333333,
+      "illustrative_current_high_a_for_10w_shaft": 15.85775974700384
+    },
+    {
+      "rpm": 2000,
+      "estimated_electromagnetic_power_low_w_at_3a": 2.522424392736659,
+      "estimated_electromagnetic_power_high_w_at_3a": 2.9126213592233006,
+      "illustrative_current_low_a_for_10w_shaft": 10.3,
+      "illustrative_current_high_a_for_10w_shaft": 11.89331981025288
+    },
+    {
+      "rpm": 2500,
+      "estimated_electromagnetic_power_low_w_at_3a": 3.153030490920824,
+      "estimated_electromagnetic_power_high_w_at_3a": 3.640776699029126,
+      "illustrative_current_low_a_for_10w_shaft": 8.24,
+      "illustrative_current_high_a_for_10w_shaft": 9.514655848202304
+    },
+    {
+      "rpm": 3000,
+      "estimated_electromagnetic_power_low_w_at_3a": 3.7836365891049892,
+      "estimated_electromagnetic_power_high_w_at_3a": 4.368932038834951,
+      "illustrative_current_low_a_for_10w_shaft": 6.866666666666666,
+      "illustrative_current_high_a_for_10w_shaft": 7.92887987350192
+    }
+  ],
+  "candidate": {
+    "status": "Analytical candidate, not CAD or operating qualification",
+    "architecture": "Ducted swept/twisted five-blade axial rotor with pressure bias",
+    "rotor_diameter_mm": 150,
+    "hub_diameter_mm": 40,
+    "nominal_radial_tip_gap_mm_for_fit_study": 1,
+    "throat_diameter_mm": 152,
+    "inlet_lip_radius_mm": 12,
+    "wall_mm": 2.4,
+    "calculated_inlet_outer_diameter_mm": 180.8,
+    "head_vertical_budget_including_guards_and_linkage_mm": 185,
+    "base_and_feet_extension_below_head_mm": 10,
+    "target_total_height_mm": 195,
+    "height_reserve_to_200_mm": 5,
+    "screen_controls_location": "Below outlet at front, within lower head envelope",
+    "electronics_location": "Outside duct in downstream lower/side pockets",
+    "normal_maximum_fraction_of_qualified_boost_rpm": 0.8,
+    "blade_count_comparator": 7,
+    "architecture_comparator": "Mild mixed-flow rotor if axial stage loses flow in boost",
+    "fan_curve_available": false,
+    "noise_measurements_available": false,
+    "absolute_velocity_prediction_available": false,
+    "rotor_annulus_area_m2": 0.016414821615006667,
+    "open_outlet_to_rotor_annulus_area_ratio": 0.595559320063682,
+    "minimum_outlet_to_rotor_annulus_area_ratio": 0.44666949004776146
+  },
+  "outlet": {
+    "open_gross_area_m2": 0.009776,
+    "minimum_gross_area_m2": 0.007332
+  },
+  "ideal_energy_bounds_not_predictions": {
+    "assumptions": "Uniform ambient-pressure jet, rho=1.2, all power becomes jet kinetic energy; real mean velocity is lower. Gross area includes blocked regions.",
+    "open_velocity_m_s_from_18w_input": 14.531820362039683,
+    "boost_velocity_m_s_from_18w_input": 15.99433787648687,
+    "open_velocity_m_s_from_3a_high_kt_3000rpm": 9.064717666611365,
+    "boost_velocity_m_s_from_3a_high_kt_3000rpm": 9.977012755640194
+  },
+  "input_sha256": {
+    "cad/rev_c/rotor-parameters.json": "59b74ee67559b4795dae50023445f563dbe42848fd8083fd46a5ea0a4c8b81cb",
+    "cad/rev_c/head-parameters.json": "8f5ce5b28012ce864c9c0ad79ad5c6a62386bfbade4adb89ffc9b9456397dfd7",
+    "hardware/rev_c/motor-esc-specification.json": "08454b9588d56389cbdb9df402b3e79c82b74d685291ae9266ccc6fe78a84b5d",
+    "cad/rev_c/head-validation.json": "d86806561d12743b9f352ef83ca5a894a2c32c05766e483d3d3d3fc653adeabb",
+    "cad/rev_c/integration-export-validation.json": "6fab962104f9eb992160151dfb9644ad2b427b3d3623014626b3cb3ea6a84dab",
+    "firmware/WindflowRevC/Config.h": "c13b763b6635d06f87cc1235e606dbdc4c7dac3be7403f684ca89abc389d45b9",
+    "firmware/WindflowRevC/Control.cpp": "5f3e527468ddd0b772c1f2dd8e001c13ee037c4b2cdbc2518a8da35e85aa69e8",
+    "tools/analyse_fan_shapes.py": "8641a695a4c0ff3053ee113f07f2040413dd5bb92e8de9d4e557462467bc9c9b"
+  },
+  "verification": "PASS: geometry provenance, envelope and numerical identities; no physical validation"
+}

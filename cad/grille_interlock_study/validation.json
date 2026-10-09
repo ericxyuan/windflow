@@ -1,0 +1,756 @@
+{
+  "status": "PASS independent nominal design study; not adopted or physically qualified",
+  "completed_utc": "2026-10-05T17:09:45.493513+00:00",
+  "script_sha256": "41eb0a88f144f34a6078c1852214aa10534d91575107e3dd5477915a326c0be0",
+  "head_center_height_mm": 10.0,
+  "source_sha256": {
+    "grille_interlock_study\\baseline\\parameters.json": "6f86731c3123d8d15c025a0b34fb400919749b0227dfb576a218ed821d70c8ee",
+    "grille_interlock_study\\baseline\\build_head.py": "0c7d6fd9aaa4dc68befcb28e82907407647fb93da1fcedc507d6140b630c49ff",
+    "grille_interlock_study\\baseline\\check_assembly.py": "d382cf392ce646acc7a17dfbd6c6d6417e0c10db10cd8e9114371e19112b47a7",
+    "grille_interlock_study\\baseline\\build_prototypes.py": "e6527fbc5b8d9fc9245b078549fde6d021774c2e23f2ce0988abbde89dd5f0d9",
+    "grille_interlock_study\\baseline\\prototypes\\validation.json": "7b7e47c2fa2f839a47fde4bf7347e63709d08bb2de3a500cabbf0188d947310b",
+    "grille_interlock_study\\baseline\\rev_b\\head-left-integral-outlet.step": "e7fc4269c80eea562e25de389457ce4a672c26bf0362774e458689fcf2cf78d3",
+    "grille_interlock_study\\baseline\\rev_b\\head-right-integral-outlet.step": "af76434fd85f5496359d421cdfb63007c76eb1f239de94e98ef656e0b7ea2977",
+    "grille_interlock_study\\baseline\\rev_b\\magnetic-front-grille.step": "3e4e1b83409ed783a6997b198dd08829aa87c28149016d563f860785a49f8f7e",
+    "grille_interlock_study\\baseline\\rev_b\\head-magnet-retaining-rim.step": "99bd7680f29b0b3ed471b457e879d3a8602410abbdd0093e67164f77b8b9d6c4",
+    "grille_interlock_study\\baseline\\rev_b\\grille-magnet-retaining-rim.step": "38a253aa1d955ce0f23b8a8b7397d21b6b09236afba4beb7197bac5c7c0e9048",
+    "grille_interlock_study\\baseline\\rev_b\\fixed-inner-finger-guard.step": "8f53fd907c976fd752d9d31093bcc1216c7118d15e3cff00cf07293847a54c2c",
+    "grille_interlock_study\\baseline\\prototypes\\installed-upper_panel-open.step": "2feaf2285e3adfd4f711727a478f46680b732621e3891134f9f6ce511e544cc5",
+    "grille_interlock_study\\baseline\\prototypes\\installed-lower_panel-open.step": "7bc4e17fad10a0a943e0d25eb99056ad08756aad7c5604ee8486a3f8e9af4fb9",
+    "grille_interlock_study\\baseline\\provenance.json": "2ea000a61d8d76933dc0449400ebfdbef7d5e4a1d9cd1b63f645c3a5986e25f2"
+  },
+  "parameters": {
+    "units": "mm",
+    "coordinate_system": "assembled: airflow +Y; head-local Z +10 mm",
+    "switch_model": "Omron D2F-01L, straight PCB terminals, gold-alloy low-level contact",
+    "case_mm": [
+      5.8,
+      6.5,
+      12.8
+    ],
+    "case_axes": "X thickness, Y height, Z length",
+    "case_x_span": [
+      -63.1,
+      -57.3
+    ],
+    "case_z_span_local": [
+      12.0,
+      24.8
+    ],
+    "mount_hole_diameter_nominal": 2.0,
+    "mount_pitch": 6.5,
+    "first_hole_from_case_end": 3.15,
+    "case_bottom_from_mount_datum": -1.5,
+    "case_top_from_mount_datum": 5.0,
+    "switch_mount_y_nominal": 136.7,
+    "switch_bracket_adjustment_y": 2.0,
+    "switch_operating_position_from_hole_datum_nominal": 6.8,
+    "switch_operating_position_tolerance": 1.5,
+    "free_position_maximum": 10.0,
+    "guaranteed_overtravel_minimum": 0.55,
+    "movement_differential_maximum": 0.5,
+    "target_post_trip_travel": 0.25,
+    "grille_stop_additional_travel": 0.2,
+    "actuator_face_y": 143.25,
+    "actuator_contact_x": -60.2,
+    "lever_contact_z_local_inferred": 25.4,
+    "bracket_plate_x_span": [
+      -65.5,
+      -63.1
+    ],
+    "bracket_head_screw_axis_y": 136.7,
+    "bracket_head_screw_z_local": [
+      8.0,
+      29.0
+    ],
+    "bracket_screws": "2 x ISO 4762 M2x16 with ISO 7089 M2 washers, DIN 934 M2 nuts",
+    "switch_screws": "2 x ISO 4762 M2x10 with ISO 7089 M2 washers, DIN 934 M2 nuts",
+    "strain_clamp_screws": "2 x ISO 4762 M2x10 with ISO 7089 M2 washers, DIN 934 M2 nuts",
+    "raceway_screws": "2 x ISO 4762 M2x10 with ISO 7089 M2 washers, DIN 934 M2 nuts",
+    "nut_pocket_across_flats": 4.2,
+    "nut_reference_across_flats": 4.0,
+    "nut_reference_thickness": 1.6,
+    "clearance_screw_bores": 2.4,
+    "slide_slot_length": 6.4,
+    "wire_bundle_maximum_envelope_diameter": 2.6,
+    "wire_od_trial_mm": 1.2,
+    "liner_free_od_mm": 4.15,
+    "liner_installed_od_mm": 4.0,
+    "liner_wire_hole_trial_mm": 1.1,
+    "liner_free_height_mm": 6.2,
+    "liner_installed_height_mm": 6.0,
+    "wire_raceway_center_local": [
+      -60.2,
+      125.5
+    ],
+    "wire_raceway_z_local_span": [
+      -65.0,
+      0.0
+    ],
+    "wire_raceway_inside_y_width": 3.4,
+    "fixed_strain_clamp_z_local_span": [
+      -10.0,
+      -4.0
+    ],
+    "fixed_clamp_backplate_z_local_span": [
+      -10.0,
+      0.0
+    ],
+    "raceway_lid_z_local_span": [
+      -65.0,
+      -10.1
+    ],
+    "cover_z_local_span": [
+      0.0,
+      35.0
+    ],
+    "stop_land_xz_local": [
+      -56.5,
+      26.8
+    ],
+    "stop_land_head_face_y": 150.8,
+    "grille_rear_face_y": 151.0,
+    "electrical": "COM to GND; NO to J12 raw guard; R5 3.9k to 5V and 5V-tolerant 3V3 buffer to GP15; NC insulated and unused",
+    "terminal_mapping": "From the case end at local Z=12: COM Z=13.32, NO Z=18.4, NC Z=23.48",
+    "switch_mount_torque_Nm": [
+      0.08,
+      0.1
+    ]
+  },
+  "printable_parts": [
+    "head-left-interlock-bosses",
+    "grille-with-integral-switch-tongue",
+    "head-magnet-rim-interlock-relief",
+    "interlock-sliding-bracket",
+    "interlock-protective-cover",
+    "interlock-wire-clamp",
+    "interlock-wire-raceway",
+    "interlock-raceway-lid",
+    "interlock-tpu-wire-liner-hole-1p0",
+    "interlock-tpu-wire-liner-hole-1p1",
+    "interlock-tpu-wire-liner-hole-1p2",
+    "interlock-tpu-wire-liner-free",
+    "interlock-head-corner-coupon",
+    "grille-tongue-coupon-minus0p15",
+    "grille-tongue-coupon-0p0",
+    "grille-tongue-coupon-0p15",
+    "wire-clamp-coupon"
+  ],
+  "checks": {
+    "solid_pair_checks": 18737,
+    "unintended_intersections": [],
+    "expected_contact_intersections": [
+      {
+        "check": "harness to switch",
+        "a": "REF-COM-tail",
+        "b": "REF-switch-terminal-1",
+        "overlap_mm3": 0.130554
+      },
+      {
+        "check": "harness to switch",
+        "a": "REF-NO-tail",
+        "b": "REF-switch-terminal-2",
+        "overlap_mm3": 0.130554
+      },
+      {
+        "check": "installed reference pair",
+        "a": "REF-switch-terminal-1",
+        "b": "REF-COM-tail",
+        "overlap_mm3": 0.130554
+      },
+      {
+        "check": "installed reference pair",
+        "a": "REF-switch-terminal-2",
+        "b": "REF-NO-tail",
+        "overlap_mm3": 0.130554
+      },
+      {
+        "check": "installed reference pair",
+        "a": "REF-COM-down",
+        "b": "REF-TPU-wire-liner-installed",
+        "overlap_mm3": 1.083849
+      },
+      {
+        "check": "installed reference pair",
+        "a": "REF-NO-down",
+        "b": "REF-TPU-wire-liner-installed",
+        "overlap_mm3": 1.083849
+      },
+      {
+        "check": "calibration OP 5.3",
+        "a": "REF-calibrated-lever",
+        "b": "grille-with-integral-switch-tongue",
+        "overlap_mm3": 0.018333
+      },
+      {
+        "check": "calibration harness OP 5.3",
+        "a": "REF-COM-tail",
+        "b": "REF-switch-terminal-1",
+        "overlap_mm3": 0.130554
+      },
+      {
+        "check": "calibration harness OP 5.3",
+        "a": "REF-NO-tail",
+        "b": "REF-switch-terminal-2",
+        "overlap_mm3": 0.130554
+      },
+      {
+        "check": "calibration harness OP 6.8",
+        "a": "REF-COM-tail",
+        "b": "REF-switch-terminal-1",
+        "overlap_mm3": 0.130554
+      },
+      {
+        "check": "calibration harness OP 6.8",
+        "a": "REF-NO-tail",
+        "b": "REF-switch-terminal-2",
+        "overlap_mm3": 0.130554
+      },
+      {
+        "check": "calibration harness OP 8.3",
+        "a": "REF-COM-tail",
+        "b": "REF-switch-terminal-1",
+        "overlap_mm3": 0.130554
+      },
+      {
+        "check": "calibration harness OP 8.3",
+        "a": "REF-NO-tail",
+        "b": "REF-switch-terminal-2",
+        "overlap_mm3": 0.130554
+      }
+    ],
+    "boost_panel_samples": 61,
+    "boost_panel_pair_checks": 5002,
+    "grille_forward_removal_samples": 61,
+    "module_outward_samples": 31,
+    "raceway_lid_outward_samples": 21,
+    "driver_checks": [
+      {
+        "fastener": "bracket0",
+        "axis_yz_mm": [
+          136.7,
+          18.0
+        ],
+        "tool_radius_mm": 1.5,
+        "approach_length_mm": 32.0
+      },
+      {
+        "fastener": "bracket1",
+        "axis_yz_mm": [
+          136.7,
+          39.0
+        ],
+        "tool_radius_mm": 1.5,
+        "approach_length_mm": 32.0
+      },
+      {
+        "fastener": "raceway0",
+        "axis_yz_mm": [
+          133.0,
+          -4.0
+        ],
+        "tool_radius_mm": 1.5,
+        "approach_length_mm": 32.0
+      },
+      {
+        "fastener": "raceway1",
+        "axis_yz_mm": [
+          133.0,
+          -42.0
+        ],
+        "tool_radius_mm": 1.5,
+        "approach_length_mm": 32.0
+      }
+    ],
+    "wired_unit_outward_samples": 31,
+    "bench_driver_checks": [
+      {
+        "fastener": "switch1",
+        "axis_yz_mm": [
+          136.7,
+          25.15
+        ],
+        "tool_radius_mm": 1.5,
+        "approach_length_mm": 32.0,
+        "service_location": "removed wired unit on bench"
+      },
+      {
+        "fastener": "switch2",
+        "axis_yz_mm": [
+          136.7,
+          31.65
+        ],
+        "tool_radius_mm": 1.5,
+        "approach_length_mm": 32.0,
+        "service_location": "removed wired unit on bench"
+      },
+      {
+        "fastener": "clamp1",
+        "axis_yz_mm": [
+          121.5,
+          3.0
+        ],
+        "tool_radius_mm": 1.5,
+        "approach_length_mm": 32.0,
+        "service_location": "removed wired unit on bench"
+      },
+      {
+        "fastener": "clamp2",
+        "axis_yz_mm": [
+          129.5,
+          3.0
+        ],
+        "tool_radius_mm": 1.5,
+        "approach_length_mm": 32.0,
+        "service_location": "removed wired unit on bench"
+      }
+    ],
+    "continuous_air_path_left_boundary_xmax_mm": -54.0,
+    "air_path_x_minimum_mm": -52.0,
+    "calibration_operating_extremes": [
+      {
+        "actual_OP_mm": 5.3,
+        "bracket_translation_y_mm": 1.5,
+        "commanded_post_trip_travel_mm": 0.25,
+        "maximum_at_stop_mm": 0.45,
+        "guaranteed_OT_margin_mm": 0.1,
+        "straight_solder_tail_mm": 5.299999999999983
+      },
+      {
+        "actual_OP_mm": 6.8,
+        "bracket_translation_y_mm": 0.0,
+        "commanded_post_trip_travel_mm": 0.25,
+        "maximum_at_stop_mm": 0.45,
+        "guaranteed_OT_margin_mm": 0.1,
+        "straight_solder_tail_mm": 3.799999999999983
+      },
+      {
+        "actual_OP_mm": 8.3,
+        "bracket_translation_y_mm": -1.5,
+        "commanded_post_trip_travel_mm": 0.25,
+        "maximum_at_stop_mm": 0.45,
+        "guaranteed_OT_margin_mm": 0.1,
+        "straight_solder_tail_mm": 2.299999999999983
+      }
+    ],
+    "stop_land_present": true,
+    "nominal_grille_stop_travel_mm": 0.2,
+    "post_trip_travel_at_stop_mm": 0.45,
+    "guaranteed_overtravel_margin_mm": 0.1,
+    "actuator_to_installed_lever_distance_mm": 0.0
+  },
+  "removal_contact_assumptions": [
+    {
+      "forward_mm": 0.0,
+      "nominal_contact_closed": true,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 0.5,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 1.0,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 1.5,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 2.0,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 2.5,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 3.0,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 3.5,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 4.0,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 4.5,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 5.0,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 5.5,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 6.0,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 6.5,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 7.0,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 7.5,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 8.0,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 8.5,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 9.0,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 9.5,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 10.0,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 10.5,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 11.0,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 11.5,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 12.0,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 12.5,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 13.0,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 13.5,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 14.0,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 14.5,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 15.0,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 15.5,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 16.0,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 16.5,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 17.0,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 17.5,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 18.0,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 18.5,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 19.0,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 19.5,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 20.0,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 20.5,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 21.0,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 21.5,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 22.0,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 22.5,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 23.0,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 23.5,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 24.0,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 24.5,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 25.0,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 25.5,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 26.0,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 26.5,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 27.0,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 27.5,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 28.0,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 28.5,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 29.0,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 29.5,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    },
+    {
+      "forward_mm": 30.0,
+      "nominal_contact_closed": false,
+      "worst_MD_release_guaranteed_above_mm": 0.75
+    }
+  ],
+  "limitations": [
+    "Case/holes/terminal dimensions are drawing-based; manufacturer CAD route needs member login",
+    "Lever pivot/contact-end and intermediate poses are approximate drawing envelopes, not vendor CAD or elastic simulation",
+    "Each received switch is meter-calibrated: actual OP is broad and cannot be covered by one fixed unadjusted tab",
+    "Zero-clash tests are nominal rigid B-reps; printed tolerances, lever flex, grille deflection, friction/creep and actual wire bends require coupons",
+    "The protected head raceway ends at head-local Z=-65 (global Z=-55); its continuation/connector routing into the electronics base is not adopted in this study",
+    "COM/NO routes use nominal \u00d81.2 mm insulation and R4 tangent bends; actual solder/heatshrink, wire grade and safe clamp compression need physical dressing",
+    "The TPU liner free OD4.15 / installed OD4.0 and \u00d81.1 wire holes are trial compression geometry; pull retention and insulation damage require coupons before approval",
+    "Whole wired-unit service requires unplugging J12 and freeing the base continuation before withdrawal; the head-only study cannot prove the final base feed-through",
+    "Smooth screw/nut/washer envelopes omit thread profiles and tolerances; body screw service occurs on the bench",
+    "Local outboard tools are checked; full bench wiring/soldering tools and all original product fasteners are outside this study",
+    "This switch supplements the captured fixed inner guard and does not stop a rotor instantaneously or provide a certified safety interlock",
+    "This script does not mutate main sources; it uses a frozen repaired-fan head baseline and must be integrated and rechecked in the full assembly",
+    "The head raceway strain clamp stays fixed while the switch bracket moves; cable service loop dressing is still a physical assembly task",
+    "Guard input R5=3.9k to 5V through a 5V-tolerant 3V3 Schmitt buffer is the parent E3 revision; 1mA at 5V Omron reference and actual rail/contact life still require physical qualification"
+  ],
+  "primary_references": [
+    {
+      "url": "https://omronfs.omron.com/en_US/ecb/products/pdf/en-d2f.pdf",
+      "local_file": "../../build/datasheets/grille-interlock/Omron-D2F-datasheet.pdf",
+      "pages": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "sha256": "d3f2ed08101cf7ec6f57577643225f73faa5475026dda0072bcddf2d99fb04db"
+    },
+    {
+      "url": "https://components.omron.com/us-en/products/switches/D2F",
+      "CAD_attempt": "Manufacturer CAD listed but requires login/register; drawing-envelope fallback used"
+    }
+  ],
+  "artifact_sha256": {
+    "head-left-interlock-bosses.step": "a1edc455fcd8efe7b95de0efa7ae0fed8ce4daf88849369f28555e9c9ad048f2",
+    "head-left-interlock-bosses.stl": "a2771f7c52634f70f091ae6f021a0237bf79a5a58e1b8c3960e3e8be909ea079",
+    "grille-with-integral-switch-tongue.step": "97866822f542c8dfbce590d6791cb20a59c200f783e98b7c970fafc30eeb90ce",
+    "grille-with-integral-switch-tongue.stl": "f4f23e6317a9d3da7d2c602deabd66cdb9f96f9160cd86c7a08bbcb416501a3c",
+    "head-magnet-rim-interlock-relief.step": "f618b887b5455934b7d277b17b76454cf3189f089f9bc6c4452b2ac12304ab54",
+    "head-magnet-rim-interlock-relief.stl": "679dca25380631334eeea6f5e4d0ca161b320e64061a98f0ef083b90e7099d39",
+    "interlock-sliding-bracket.step": "e995786c170c659397e8680309a4803a8e28448717079f4ff67885cd836f4046",
+    "interlock-sliding-bracket.stl": "d0488a111d0e86288924b8541de2774e57acbf532c553be792e5bf6d3d10a24b",
+    "interlock-protective-cover.step": "c117b1f9003459a674ca46f5c4c14088dba9f8bf55a23465f7820e204036b3b6",
+    "interlock-protective-cover.stl": "0448b7038956fe922d86ae4155e25ba2e499c054a44ee35a61f1d34ef7b226d7",
+    "interlock-wire-clamp.step": "048682ef9eac8a93ac62fd97675e79cc69d421e285b6c260744d6139252ae153",
+    "interlock-wire-clamp.stl": "75f95095b762c6a560c19df08492ca512fa0f38201827d114566d547fe5fe058",
+    "interlock-wire-raceway.step": "b566f461983161d2e1880021a4ed6b81446e119fced3c3485c6d197fed651927",
+    "interlock-wire-raceway.stl": "83862f6fb8beb70c8f6c6779e5186bb2392017bd7b553a0a4aee1ebbb516c62a",
+    "interlock-raceway-lid.step": "c24c65c34acf3eb9df3209db3eb50780708d8f1213e287277b76cf5c4facb72b",
+    "interlock-raceway-lid.stl": "be6d2dc1f68290bc50edb950b1594660b603314b50f102151d7472a7ecf3a8ee",
+    "REF-D2F-01L-drawing-case.step": "91d6d2ba4c647abe4be5ab9e1f22c8660c0444cb246ed65369cab4ec99ee5a94",
+    "REF-D2F-01L-installed-lever-envelope.step": "77ab3c95eb7175c736b39d4302183f5d684b8d8d6f1011e8b14a6926713a7bf8",
+    "REF-switch-terminal-1.step": "20d082918a808a039e139f05e03eefff1e2d7baf9c79d8867c3a7da79f2b0162",
+    "REF-switch-terminal-2.step": "e9dc569c43db964618d2a3da61bef7d9271196e636185aa5dafb72d099e0a17d",
+    "REF-switch-terminal-3.step": "696641779fc029439342edfeab673e6f322a5e734b3e8098db543cc14e84e50d",
+    "REF-D2F-01L-free-lever-envelope.step": "a844c43e9e08657c9ddec4f307e20af1632d77f7a280b935a39a270b71dd38f1",
+    "REF-bracket-M2x16-1-screw.step": "80ea45eccce080c887523f65816b5f7ecbff4a395906349e4dcb5a21c6162bd9",
+    "REF-bracket-M2x16-1-washer.step": "0913c005dd98eaf8abdd43103e6ee7837db82d4402f08ddae22985c0debb81f7",
+    "REF-bracket-M2x16-1-nut.step": "241f76c2fc77512cd3188d041a1b7265c63fe39457607695f1fedf3fa815009f",
+    "REF-bracket-M2x16-2-screw.step": "c71f329e0f5877d5a2ed30410eca0f74c7224b84d8c3cfe70a1faad1f615b73b",
+    "REF-bracket-M2x16-2-washer.step": "07fef1aab24eb5681cf0f0f4b71eb5658d6b640dfd5faa0bf235c91e662437d1",
+    "REF-bracket-M2x16-2-nut.step": "d2592018ad72e58290003283c20cbdc5289b5cd2ae6342af83491af8d33dde50",
+    "REF-switch-M2x10-1-screw.step": "56597c7a76bacf6c1903ed87305a4bd04ab721aed889ece100033f5d0f28da03",
+    "REF-switch-M2x10-1-washer.step": "212dd04d96e7846dab0c48ab6de71457792d48b7c2f596f0084319f4992bb9ff",
+    "REF-switch-M2x10-1-nut.step": "361640ea5dc8b8463b83953a921e0ab97883139be10f4c3694c18b68ec5279ea",
+    "REF-switch-M2x10-2-screw.step": "3642e48a694b6e1287de5c3070821d0b9a370ec35765c31f2596e32ea8641066",
+    "REF-switch-M2x10-2-washer.step": "703e5a4c4d58510a562fe7419631254fcd1706dccd7bc07141c8c742dbda9adf",
+    "REF-switch-M2x10-2-nut.step": "d23bd67d96f22e5e0ada3b3a2504329bf3e1832e664e3317c426189cf5928931",
+    "REF-clamp-M2x10-1-screw.step": "425628a11a79b8630a31bc2696803ea2b7b1daff228153b0b11eb0926f3a1c0d",
+    "REF-clamp-M2x10-1-washer.step": "55f3c2e4225fbf722e5c5454890aa5e801c63eee0a82622573acc7297d6c3890",
+    "REF-clamp-M2x10-1-nut.step": "2c68eae93ba733ece80eec0f769f3adf8b26baec59228dd1ba88bd15d4cec1f2",
+    "REF-clamp-M2x10-2-screw.step": "4c09cfa07f96a1e7e77a5555666f4820c85d0e0ea462003585114de0395f3e57",
+    "REF-clamp-M2x10-2-washer.step": "2cfa6db8fcd344e53c848bb78d3cf0fa02414c382f3dddc0326df6fe3c68fded",
+    "REF-clamp-M2x10-2-nut.step": "dc6b0f792d31ae70c51d37fc22b2a69178921bd5f1264b33d9c931e9a1a709c5",
+    "REF-raceway-M2x10-1-screw.step": "4645f79cae863ff94db328eff89b8c6736838a49ebe86b020492ee1bf085274f",
+    "REF-raceway-M2x10-1-washer.step": "aec658994e0ea2c1eb71dfcfbfbebbbc1284455d8ffc0d96dfc9a616b22a2675",
+    "REF-raceway-M2x10-1-nut.step": "f144b93b577101dbbba46c048c05c3e8bf19fcd46a886b669ff927ac03a01c0a",
+    "REF-raceway-M2x10-2-screw.step": "309bbe6688dc2d3b61a8733bbfc4207426eb462af8bf199e06e050f79f8e374f",
+    "REF-raceway-M2x10-2-washer.step": "2e6d59a5a34fb23e622f6121e6ec336072adda1fce045fe162efba4976bbe809",
+    "REF-raceway-M2x10-2-nut.step": "110c745212bd40bca9c9f886d33f834262a9f3d3054f4def7be714604452e8c2",
+    "REF-COM-tail.step": "7d5bfda9d1e9b330ede646f84414876d9533d5fda17e02a510aaf522b8d57113",
+    "REF-COM-down.step": "3a5cb68f13f16924a4d8c84c1914be352edba9871bae0383073e7ae5d161714e",
+    "REF-COM-R4-elbow.step": "d0de81ee8a6560aeecdbb3262bec33c2d82a5fb25a108ee03829afcb70d8ce97",
+    "REF-NO-tail.step": "edb6d7b3da2a3d61bdeaa6b7ce8c1305ece0570db82b08bf9467fda6b83ba223",
+    "REF-NO-down.step": "6e1e789479bb166b7406b0f89adc9adda9872702f41c0e0f7b92239d1d588e0a",
+    "REF-NO-R4-elbow.step": "ccc0b8c1e039c9da4f3cd80e8976f601ef22f6c1409b2bd81eb729710b4cdfbd",
+    "REF-TPU-wire-liner-installed.step": "5bab1bbc001e20baa3c0a378d7a92719989e707c901bfe42bd0818447f03ca31",
+    "interlock-tpu-wire-liner-hole-1p0.step": "dcf04271d8ced9470d325e33f39728e8a484fc6295a736b8445677532bd4f548",
+    "interlock-tpu-wire-liner-hole-1p0.stl": "f8e0efe5b753701891c0b035f1af487ccc2cc1b4423b5d49bfab41b0acf75830",
+    "interlock-tpu-wire-liner-hole-1p1.step": "de549beb721e5bcc41e3fc97a755b6e8d59dec1f795175ae13e096d6b974b4e8",
+    "interlock-tpu-wire-liner-hole-1p1.stl": "9cb15cd8a7e073191960e64a6feb876b1162cb3a06dca7076301e9f4e3271180",
+    "interlock-tpu-wire-liner-hole-1p2.step": "f9069ec545332bdab26ceb91b982fdf5d4b99b0acf1971e5b51b34d671bcce4b",
+    "interlock-tpu-wire-liner-hole-1p2.stl": "4b1baa70894693b596f4af85e8eee717068723b1a925021ec290c7bf34828a20",
+    "interlock-tpu-wire-liner-free.step": "a74fa058b09777b2d5317588cd0fd2faaf9294919d496cec3eb432e38092abb3",
+    "interlock-tpu-wire-liner-free.stl": "9cb15cd8a7e073191960e64a6feb876b1162cb3a06dca7076301e9f4e3271180",
+    "interlock-head-corner-coupon.step": "57d81d61c1efde0854b87ff2c7e5669dab969d3916a5aa32e04e8aead4420d3e",
+    "interlock-head-corner-coupon.stl": "6cc47ea720893db90486799245628ebc3ecb4b9bab33601afafb961d85539999",
+    "grille-tongue-coupon-minus0p15.step": "c29b750a7867e317b6f7c48a8fdbf5fe19ca4a21ec239dcb5c3be37c15cf39a8",
+    "grille-tongue-coupon-minus0p15.stl": "b6ba0b2ce221761205074f33e56cfe3c940b87ba5392f94f450793672e91d99a",
+    "grille-tongue-coupon-0p0.step": "b5c7b5eadda0d5691c56fea28b6f75836819ffeb79aaf675baaef0eff030614e",
+    "grille-tongue-coupon-0p0.stl": "42bf6828388e76d98fa9cb310a1724e94840673ebbd60ff7384736d5fda91833",
+    "grille-tongue-coupon-0p15.step": "45bd274743b0273518ed9f06974d5c256dac8d11c41263eb00cb3095c0ae194f",
+    "grille-tongue-coupon-0p15.stl": "2c3f8a1d9c0db9b2a8eb4bc978d5eeeb368218403f024a086a9b4ad70f9f391e",
+    "wire-clamp-coupon.step": "ad18ad820853b937166d5bdabfef4edb18c94ce3d33340801df4193c0c76cb97",
+    "wire-clamp-coupon.stl": "59258ffe93bd2d7ca83ca06c38342f2fab83b4dcde89ffc3122d94c6500af4c8",
+    "mounted-grille-interlock-development.step": "f7d46548c1bede0f1394d022d43e0346a46adac6570f2c1f3a430b2b79ed6fca"
+  }
+}

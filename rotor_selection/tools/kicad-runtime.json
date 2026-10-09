@@ -1,0 +1,23 @@
+{
+  "signature_status": "Valid",
+  "signer": "E=seth@kipro-pcb.com, CN=KICAD SERVICES CORPORATION, O=KICAD SERVICES CORPORATION, L=Long Beach, S=California, C=US, OID.1.3.6.1.4.1.311.60.2.1.2=California, OID.1.3.6.1.4.1.311.60.2.1.3=US, SERIALNUMBER=4276589, OID.2.5.4.15=Private Organization",
+  "official_download_page": "https://www.kicad.org/download/windows/",
+  "version": "10.0.6",
+  "downloads": [
+    {
+      "sha256": "0859c524b8a63551848f0c246abddcb1d0b7b656b0fbfe879f8d85e61a9e6edd",
+      "url": "https://github.com/ip7z/7zip/releases/download/26.03/7z2603-x64.exe",
+      "name": "7z2603-x64.exe"
+    },
+    {
+      "sha256": "ad4c82fadcbdf93c03b4fc440f300509c7d60c5c2f4d183e35d9d70d6957037d",
+      "url": "https://github.com/ip7z/7zip/releases/download/26.03/7zr.exe",
+      "name": "7zr.exe"
+    },
+    {
+      "sha256": "9e24dc47119f7c472128c2f293c5e3f35569274a44c905e60a7514d47c16ce48",
+      "url": "https://github.com/KiCad/kicad-source-mirror/releases/download/10.0.6/kicad-10.0.6-x86_64.exe",
+      "name": "kicad-10.0.6-x86_64.exe"
+    }
+  ]
+}

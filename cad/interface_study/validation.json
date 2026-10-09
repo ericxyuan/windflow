@@ -1,0 +1,145 @@
+{
+  "completed_utc": "2026-10-05T17:00:45.886069+00:00",
+  "source_sha256": "84f7a12634cea7edcd7e000ece863e95a0eb0fb42e0fa18c137a4fac7f220f81",
+  "base_manifest_sha256": "6e51a8c7f7e33e18ff6e80ac81c345c191b8a67fdd8af60a2ac90c9bcd5183b2",
+  "input_sha256": {
+    "Adafruit-ST7789-4311-display-vendor.step": "d14a655efb0d2c11e9087bb234b8c2d31c6df4b7e331c31cd3b3c5c4b19d2866",
+    "REF-display-clear-window-45x34p4x1.step": "2927a88c026bae90375432e200d8fc991ab7aad7fbd82637581601ac96eb7ca5",
+    "display-removable-cradle.step": "4b3498dd428374b887a2bc21f8dbea7761321de6fd625a1e179ba0a4297c04b6",
+    "display-front-bezel.step": "79ae3385a9629fb543b4321eb2b10986207dbbb1361c1a5f4bd3c1fca6bf05e0",
+    "ambient-light-diffuser.step": "40483454c6d1b7a8dbef945ebc85778c2b21351103b749f07e4081203380c23f",
+    "ambient-diffuser-keeper.step": "255e23d2abed96aae606765d92f0db4d0871b27897db824f597b3e8376c66180",
+    "tpu-desk-foot-1.step": "444d85ff2b238d6889846527a01b1fd7445b1fccb0ac73a31a67e7780cba8b65",
+    "tpu-desk-foot-2.step": "21f0d86310bddece4ce27a2e3279c7462c8a04b9d51c782e4a4d3e30ff160544",
+    "tpu-desk-foot-3.step": "9e98d22ef0f35a64db2a6795184efde7f08b8b775e16d9f43c70efa364fd460e",
+    "tpu-desk-foot-4.step": "15a36d5d302c4e14487982b577842bef81b08aa4f89371c8a78c86587ab2fd54",
+    "REF-Pico-M1p6x10-cap-screw-1.step": "5af5ca639c7d4d56bf95474a0bbd09106eef979d7f995735e51e1a9a8760b4a3",
+    "REF-Pico-M1p6-hex-nut-1.step": "5bc0d09269364110136bfbf3f056697147e1335aaf2d31b2893cecac36407c6a",
+    "REF-Pico-M1p6x10-cap-screw-2.step": "5531fa425d5e97cde1b626ebb4dae671187b183a56fc2170b8cfef3af11e5038",
+    "REF-Pico-M1p6-hex-nut-2.step": "8353ede269238ed620231387a94a402c0683b8567695557dfc6160b34e819784",
+    "REF-Pico-M1p6x10-cap-screw-3.step": "ccd0eea2d79b527db2d3ba308c9ce0f601ca275d48c9176157f91fb26729bb6c",
+    "REF-Pico-M1p6-hex-nut-3.step": "38ea453aefc066d2f70e10b9ab3bb73ece508d6b9fe2e05361a17935cc0cba99",
+    "REF-Pico-M1p6x10-cap-screw-4.step": "7a644d2efbcd53d3fe4ef89f19fbfd7aebd0380636ab1c2a95723f5789b57e3e",
+    "REF-Pico-M1p6-hex-nut-4.step": "965db247ab9de0096b64fd70e5f133d69917370d01d3c1abfebfd13939d2c6e2",
+    "REF-SDP810-daughterboard-required-outline.step": "784a7db6b59a369782044651d51be5abb84cb28ad9465d56e9f0749ffa6e83f9",
+    "horizontal-encoder-mount.step": "1dcba2065d0baf3ecfe158207210c0134b7b80d7e0275b7d93ba158b528978ff",
+    "encoder-daughterboard-P1-FR4.step": "64beba0666fc2c8c2069475a5a9165dcb5a6f1a306b55986370099b63ffa73e8",
+    "REF-encoder-JST-XH4-mated-envelope.step": "68ced4fb54d4adb372adb9d9ac2a0c21f2c34ae6c31aa78969f81ac1d00458de",
+    "REF-encoder-J1-1-terminal.step": "b53c64569f2fe81e8d0c7f0491a5c3287e0eef7264ff08cd199a0ad9ef0a85d8",
+    "REF-encoder-J1-2-terminal.step": "d147172b4d5c664ddefdf08b096f5b33928c3ff241a46f83ad77eb3c8e1df089",
+    "REF-encoder-J1-3-terminal.step": "b9c22018a48d25c0ba71002abd9134843c83254d92ed1135be2e8f572871f06c",
+    "REF-encoder-J1-4-terminal.step": "4c281233495512fbf44468c10d1355da2d93c5dcfe135d5e98c4b7708be80940",
+    "REF-encoder-ENC1-A-terminal.step": "c3f943ab4ed1d6484d665e710d8f97d29bc8ed991d84420fa4af7347dc12338b",
+    "REF-encoder-ENC1-C-terminal.step": "fc856f25ddfd32a6132710ee7f778ded03e61adceac651babccd65f31f35a360",
+    "REF-encoder-ENC1-B-terminal.step": "84aede3523aad4e8c6251965aeca3e1fec43f7b8ffb42aabfdb0a1ae95648c66",
+    "REF-encoder-ENC1-S1-terminal.step": "294f23f7b3d78823b3b7ffc8af6a0968a07027069a78c7fa0c1c009096d6a4fa",
+    "REF-encoder-ENC1-S2-terminal.step": "fd37129867408dd8d7ed460e227fc6a3f880b082bcba0a0f2411f7bdab1fe65f",
+    "REF-encoder-ENC1-SH-terminal.step": "e57b1adaa80d617cc5484aaf44824716146806e16d148d9cb0fb79dce125273f",
+    "REF-encoder-ENC1-SH-terminal-other.step": "b8039c2731a30194787997005fc0897c72b36e34e5f095df28ab6fd6ec153a9a",
+    "REF-encoder-M2x10-screw-1.step": "49b8ba70fedcd9d9f3e0fedbd5294524f5644557cf3f85936ea0b0914f546039",
+    "REF-encoder-M2-hex-nut-1.step": "b423651806c50554147369184fecebac9ed5cccb0bd1918c7323f20e95dd9718",
+    "REF-encoder-M2x10-screw-2.step": "443df5ecb6638036075765e0b26a19d01f2d12204a3eea583e9373a7bbee18f9",
+    "REF-encoder-M2-hex-nut-2.step": "3fca9abc82313158e1246dde84b86ceb4d8215f841c11f2a6f86b11b00cc3958",
+    "REF-M7x0p75-encoder-panel-nut.step": "4a252849cfde9afb554f78aa40bee0e1e4a49cd013670d0ed7a2f2676a92986c",
+    "horizontal-encoder-thumbwheel.step": "e2fb2858c3248a0a0b58c1aef05c58108ac6b5275755ec1eaa335d47f665c5bb",
+    "REF-Bourns-PEC11H-drawing-envelope.step": "537fd6a8f3587a07945f7b6255cded449d88328ff33edbf3344049e5d53d2c56",
+    "electronics-base-shell.step": "dac780fe46fd08475728a3ae25827aa44fd605c6f3ca0dc1766631e0239fa20c",
+    "electronics-service-tray.step": "6b2b6be079bd89ac0385e7e5c87dcdedbdb7bf2fd0cfdffa0e4578f7f5f22b7f",
+    "Raspberry-Pi-Pico-SC0915-vendor.step": "810dd2e18b134e3b33c7cdac372795f2cbf42d1eb9842b27d0eabd222cf5d81c",
+    "Pololu-D24V22-12V-vendor.step": "bb004f00b414048f022f535853bc885c0205a667a37f7682878d7bbffeb8dcb3",
+    "Pololu-D24V22-5V-logic-vendor.step": "7f601e4e520c7f8bd730be406f78a543b8c15d412bfb0a6a888d409b76f7a4cf",
+    "Pololu-D24V22-5V-servo-vendor.step": "6a8003d792c483e7db0ac110f7c021ef9a3cd2d048aba226d264b4f818af41c0",
+    "Sensirion-SDP810-125Pa-vendor.step": "d7f3bc63bd208035ff782814a10020a1d221c0a0e5dbf5f385a4363d43d0d1e9",
+    "Adafruit-HUSB238-5807-vendor.step": "bddaa68abfb52c92c7b385de429fbc346c6ba2de262a3803c8826af784649123",
+    "Adafruit-NeoPixel-1426-ambient-vendor.step": "1b562d4f8007608f07ce9ad610c08789beb4bd6d5e516838f666f52acd9b006f",
+    "MCP9808-temp1-Adafruit1782-vendor.step": "8fac176721bc39c39c251f92990afa30b20a1f66045463a6808c1db083fe6d74",
+    "MCP9808-temp2-Adafruit1782-vendor.step": "66daaae5ec100922b68d0ee3abe0b97a9f197015de7f9f205e73f84b2e973a67"
+  },
+  "candidate_count": 10,
+  "checks": 555,
+  "intersections_to_resolve": [],
+  "connector_centres_xyz_mm": [
+    [
+      -53.39,
+      86.5,
+      -105.0,
+      "Pico-left"
+    ],
+    [
+      -35.61,
+      86.5,
+      -105.0,
+      "Pico-right"
+    ],
+    [
+      13.0,
+      86.5,
+      -104.4,
+      "carrier-J15"
+    ],
+    [
+      22.0,
+      86.5,
+      -104.4,
+      "carrier-J16"
+    ]
+  ],
+  "carrier_component_height_under_ribbon_limit_mm": 18,
+  "pico_mount_head_clearances": [
+    {
+      "pico_hole_xy_mm": [
+        -50.2,
+        63.0
+      ],
+      "header_body_head_gap_mm": 0.4199999999999977,
+      "bare_header_slim_driver_diameter_mm": 3.4,
+      "driver_gap_mm": 0.21999999999999775,
+      "instruction": "Unplug IDSS sockets before accessing Pico screws; no washers"
+    },
+    {
+      "pico_hole_xy_mm": [
+        -50.2,
+        110.0
+      ],
+      "header_body_head_gap_mm": 0.4199999999999977,
+      "bare_header_slim_driver_diameter_mm": 3.4,
+      "driver_gap_mm": 0.21999999999999775,
+      "instruction": "Unplug IDSS sockets before accessing Pico screws; no washers"
+    },
+    {
+      "pico_hole_xy_mm": [
+        -38.8,
+        63.0
+      ],
+      "header_body_head_gap_mm": 0.4199999999999977,
+      "bare_header_slim_driver_diameter_mm": 3.4,
+      "driver_gap_mm": 0.21999999999999775,
+      "instruction": "Unplug IDSS sockets before accessing Pico screws; no washers"
+    },
+    {
+      "pico_hole_xy_mm": [
+        -38.8,
+        110.0
+      ],
+      "header_body_head_gap_mm": 0.4199999999999977,
+      "bare_header_slim_driver_diameter_mm": 3.4,
+      "driver_gap_mm": 0.21999999999999775,
+      "instruction": "Unplug IDSS sockets before accessing Pico screws; no washers"
+    }
+  ],
+  "pico_mount_sha256": "a9bbc33f0d2d92a6497aba22280f33f5f5fd367c8d89dfe572f4547a97aad46c",
+  "existing_top_ceiling_mm": -74.4,
+  "corridor_top_mm": -79,
+  "pico_pin_keying": {
+    "left_removed_physical_pin": 12,
+    "right_removed_physical_pin": 30
+  },
+  "limitations": [
+    "Drawing-based envelopes only; no manufacturer connector STEP obtained",
+    "No electrical netlist, PCB placement/routing or schematic/ERC validation",
+    "Cable corridor excludes bends, retention, physical cable shape and service slack",
+    "Selected M1.6 cap heads have0.42mm nominal lateral gap to header bodies; placement/fastener tolerances and cable removal require physical qualification",
+    "22mm carrier reserve omitted as an obstacle; future component placement must honor cable keepouts",
+    "This candidate study does not establish that remote connectors/cables are adopted in Onshape"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "result": "PASS: architecture arithmetic and provenance assertions",
+  "physical_qualification": false,
+  "reference_files_sha256_verified": 17,
+  "input_normal_w": 21.774117647058823,
+  "input_upper_w": 29.5125,
+  "input_upper_a_at_14v": 2.1080357142857142,
+  "input_efuse_nominal_a": 2.5174825174825175,
+  "conservative_current_limit_low_a": 2.2433012532022434,
+  "conservative_current_limit_high_a": 2.7972027972027975,
+  "worst_case_budget_headroom_at_low_current_limit_a": 0.13526553891652915,
+  "current_limit_allowance": "Analytical +/-10% plus1% resistor only; actual low-limit value requires bench test.",
+  "power_budget_source": "18W motor/ESC cap; 85% normal and80% upper accessory conversion allowance, not measured efficiency.",
+  "spec_sha256": "08454b9588d56389cbdb9df402b3e79c82b74d685291ae9266ccc6fe78a84b5d",
+  "fetcher_sha256": "0a353c57bdda8616cb34ef05aaf80c5a63f2ce31ad0dfdc19840be6d3a7d421b",
+  "pins_distinct": true,
+  "pd_minimum_current_status_code": 10,
+  "physical_tests_required": [
+    "Actual input and phase current",
+    "True RPM",
+    "Low-speed sensorless startup",
+    "ESC temperature",
+    "PD and branch inrush",
+    "UART partial-power behavior",
+    "FDM rotor retention and guarded qualification"
+  ]
+}

@@ -1,16 +1,16 @@
 {
-  "completed_utc": "2026-10-03T17:15:49.192471+00:00",
+  "completed_utc": "2026-10-05T17:00:34.786879+00:00",
   "source_sha256": {
     "display_layout.py": "06db882559464d5c2411cd3d325f358a8b61b509414a40df668be44bb4737392",
-    "build_base.py": "6dc44c84dcdc084d2560fee898633ec606226fbd5dce098f943a4e4742d6c2b0",
+    "build_base.py": "52df714ec02592f006d0e10bdc20ae2c633e430f6c4831b9df2715738bc3a009",
     "check_display.py": "657ea69ac03b23e12fdce95015a8a6b0f867a6016db6ae9bb5f947bb9ad4e4fa"
   },
   "input_sha256": {
-    "electronics-base-shell": "841d3388ee27e40ed4fb78ae77177bf4f40194b08ae28a7d5c4b64ef9363a695",
-    "display-front-bezel": "553404636d577e9ce32b804f34f534140dd38c1afe2aea31ae9a6aa84226850b",
-    "REF-display-clear-window-45x34p4x1": "7c5ff586dff7ec325c0671504e382038348bf827060b444227cf12ff8dbcad2c",
-    "display-removable-cradle": "9caf54797e08acf7e5685ce5ac4db5b06ed84d8a62247b2e7a12755d9a2603a0",
-    "Adafruit-ST7789-4311-display-vendor": "e62cc79add7c191588fbc44f9623f6d332c34f9daf61b2b14b16694b50b40d13"
+    "electronics-base-shell": "dac780fe46fd08475728a3ae25827aa44fd605c6f3ca0dc1766631e0239fa20c",
+    "display-front-bezel": "79ae3385a9629fb543b4321eb2b10986207dbbb1361c1a5f4bd3c1fca6bf05e0",
+    "REF-display-clear-window-45x34p4x1": "2927a88c026bae90375432e200d8fc991ab7aad7fbd82637581601ac96eb7ca5",
+    "display-removable-cradle": "4b3498dd428374b887a2bc21f8dbea7761321de6fd625a1e179ba0a4297c04b6",
+    "Adafruit-ST7789-4311-display-vendor": "d14a655efb0d2c11e9087bb234b8c2d31c6df4b7e331c31cd3b3c5c4b19d2866"
   },
   "samples": [
     {
@@ -1582,18 +1582,5 @@
   ],
   "intersections_to_resolve": [],
   "sequence": "Unplug screen; remove service tray and front bezel/window; undo cradle screws; pull cradle rearward 2 mm then lower through open bottom.",
-  "limits": "Nominal B-rep/sampled path; excludes screws, harness, tools, tolerance stack and physical printed fit.",
-  "metadata_amendments": [
-    {
-      "utc": "2026-10-03T17:59:47.313412+00:00",
-      "scope": "Descriptive service-sequence correction only; geometry, STEP/STL bytes and validation results unchanged",
-      "source": "display_layout.py",
-      "previous_source_sha256": "1cff0df7b300d946e92c16051e7ea9b7b34158a7fa6fdd44d01bbcdafac75b24",
-      "current_source_sha256": "06db882559464d5c2411cd3d325f358a8b61b509414a40df668be44bb4737392",
-      "AST_proof": "Exactly one string constant changed; all remaining AST nodes identical",
-      "previous_text": "Unplug display pigtail and undo four rear screws; withdraw cradle rearward before pulling service tray",
-      "current_text": "Unplug display pigtail; remove front bezel/window and service tray; undo four rear screws; withdraw cradle rearward 2 mm then lower through open bottom",
-      "previous_base_manifest_sha256": "910b7c26981d3c1d1f32f0abe242a570a060f397526c1450791b4ace9b7e2e13"
-    }
-  ]
+  "limits": "Nominal B-rep/sampled path; excludes screws, harness, tools, tolerance stack and physical printed fit."
 }

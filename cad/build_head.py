@@ -8,6 +8,8 @@ from pathlib import Path
 import json, math, os, sys, hashlib
 from datetime import datetime, timezone
 import cadquery as cq
+import fan_mount_layout
+import grille_interlock_study
 
 ROOT=Path(__file__).resolve().parent
 P=json.loads((ROOT/'parameters.json').read_text())
@@ -154,8 +156,7 @@ for y,z in seams:
 # Same-domain face unification creates invalid trimming on the intersecting
 # collar reliefs in this OCP version. The pre-unification solids are valid;
 # retain those exact boolean results and still apply every validity assertion.
-save('head-left-integral-outlet',left)
-save('head-right-integral-outlet',right)
+# Save the structural halves after adding the grille switch interface below.
 
 # Outward-removable cover with an open inner face around the parent duct. Moving
 # hardware stays inside the 2.4 mm shell. Print on its broad outside X face; it
@@ -190,6 +191,7 @@ plate=rrsolid(132,132,7,-T,0).cut(cy(R,-T-.1,T+.2))
 bell=bell.fuse(plate)
 for x in (-62.,62.):
     for z in (-62.,62.): bell=bell.cut(cy(1.65,-T-.1,T+.2,x,z))
+bell=fan_mount_layout.reliefs(bell)
 save('bellmouth-rear-inlet',bell.clean())
 
 # Thin radial vanes are a replaceable comparison insert; no long honeycomb.
@@ -240,13 +242,24 @@ for x,z in grille_screws:
     g=g.cut(cy(1.15,150.9,4,x,z)).cut(nut_y(x,z,150.9,1.9))
     front_keeper=front_keeper.cut(cy(1.2,154.7,1,x,z))
     head_keeper=head_keeper.cut(cy(1.8,150.1,.8,x,z))
-save('head-magnet-retaining-rim',head_keeper.clean())
+interlock=grille_interlock_study.integrate_head_parts(left,g.clean(),head_keeper.clean(),0.)
+left=interlock['head-left-integral-outlet']
+g=interlock['magnetic-front-grille']
+head_keeper=interlock['head-magnet-retaining-rim']
+save('head-left-integral-outlet',left)
+save('head-right-integral-outlet',right)
+save('head-magnet-retaining-rim',head_keeper)
 save('grille-magnet-retaining-rim',front_keeper.clean())
-save('magnetic-front-grille',g.clean())
+save('magnetic-front-grille',g)
+for name,shape in interlock.items():
+    if name in ('head-left-integral-outlet','magnetic-front-grille','head-magnet-retaining-rim'):continue
+    save(name,shape,'TPU 95A' if 'tpu' in name else 'PETG')
+for name,shape in grille_interlock_study.installed_reference_parts(0.).items():
+    save(name,shape,'drawing/reference envelope',False)
 
 # Separate printable TPU isolators and rigid compression limiters around M3.
-save('tpu-fan-pad-m3',cy(7,27,2).cut(cy(1.7,26.9,2.2)),'TPU 95A')
-save('fan-compression-limiter-reference',cy(2,0,29).cut(cy(1.6,-.1,29.2)),'stainless tube',False)
+save('tpu-fan-pad-m3',fan_mount_layout.free_pad(),'TPU 95A')
+save('fan-compression-limiter-reference',fan_mount_layout.tube_reference(),'K&S 8128 brass',False)
 
 checks={
     'head_halves_overlap_mm3':left.intersect(right).Volume(),
@@ -258,24 +271,29 @@ checks={
     'grille_magnet_pairs':len(magnet_centres),
     'magnet_retention':'front-loaded pockets with screw-retained cover rims; adhesive removes rattle',
     'nominal_magnet_face_gap_mm':151.5-(146.9+P['magnet_depth']),
-    'rear_guard_to_fan_rear_mm':26.6,
+    'rear_guard_to_fan_rear_mm':26.6+fan_mount_layout.fan_rear_shift_mm(),
     'cover_screw_axes_local_yz_mm':cover_mounts,
     'head_center_height_mm':P['head_center_height'],
     'cover_fasteners':'4 x M3x8 into Ruthex RX-M3x5.7; verify insertion depth on coupon',
+    'fan_mount_parameters':fan_mount_layout.parameters(),
 }
 assert checks['head_halves_overlap_mm3']<1e-5
 assembly=cq.Assembly(name='Windflow Rev B housing development')
 for name,s in parts.items():
-    if name in ('tpu-fan-pad-m3','fan-compression-limiter-reference'):continue
+    if name in ('tpu-fan-pad-m3','fan-compression-limiter-reference','interlock-tpu-wire-liner-free'):continue
     color=cq.Color(.12,.65,.68) if ('grille' in name or 'straightener' in name) else cq.Color(.32,.36,.42)
     assembly.add(s,name=name,color=color)
 assembly.save(str(OUT/'housing-development.step'))
 (OUT/'validation.json').write_text(json.dumps({'parts':records,'checks':checks,
     'build':{'completed_utc':datetime.now(timezone.utc).isoformat(),
       'script_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+      'fan_mount_layout_sha256':hashlib.sha256((ROOT/'fan_mount_layout.py').read_bytes()).hexdigest(),
+      'fan_mount_parameters_sha256':hashlib.sha256((ROOT/'fan_mount_parameters.json').read_bytes()).hexdigest(),
+      'interlock_script_sha256':hashlib.sha256((ROOT/'grille_interlock_study.py').read_bytes()).hexdigest(),
+      'interlock_validation_sha256':hashlib.sha256((ROOT/'grille_interlock_study/validation.json').read_bytes()).hexdigest(),
       'parameters_sha256':hashlib.sha256((ROOT/'parameters.json').read_bytes()).hexdigest()},
     'status':'development, not print release',
-    'assembly_files':[n+'.step' for n in parts if n not in ('tpu-fan-pad-m3','fan-compression-limiter-reference')],
+    'assembly_files':[n+'.step' for n in parts if n not in ('tpu-fan-pad-m3','fan-compression-limiter-reference','interlock-tpu-wire-liner-free')],
     'remaining':['carrier PCB and wire/pressure-hose integration','whole-product interference and mechanism insertion checks',
         'grille interlock mounting','guard deflection and magnet pull testing',
         'full assembly sequence/tool clearance and physical trials',

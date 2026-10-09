@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>C:\Users\admin\iCloudDrive\Windflow\hardware\pcb\encoder\windflow-encoder.kicad_sch</source>
+    <date>2026-10-05T17:53:42</date>
+    <tool>Eeschema 10.0.6</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>Windflow E3 encoder daughterboard</title>
+        <company/>
+        <rev>P1</rev>
+        <date/>
+        <source>windflow-encoder.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="ENC1">
+      <value>PEC11H-4215F-S0024</value>
+      <footprint>WindflowEncoder:PEC11H_4215F_S0024</footprint>
+      <fields>
+        <field name="Footprint">WindflowEncoder:PEC11H_4215F_S0024</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="WindflowEncoder" part="PEC11H_4215F_S0024" description=""/>
+      <property name="Sheetname" value="windflow-encoder"/>
+      <property name="Sheetfile" value="windflow-encoder.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3c15b516-2048-5f4e-9f03-1acf1c19e7cb</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="A"/>
+            <pin num="C"/>
+            <pin num="B"/>
+            <pin num="S1"/>
+            <pin num="S2"/>
+            <pin num="SH"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="H1">
+      <value>M2 / 2.4mm NPTH</value>
+      <footprint>WindflowEncoder:MountingHole_2p4_M2</footprint>
+      <fields>
+        <field name="Footprint">WindflowEncoder:MountingHole_2p4_M2</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="WindflowEncoder" part="M2_Mount" description=""/>
+      <property name="Sheetname" value="windflow-encoder"/>
+      <property name="Sheetfile" value="windflow-encoder.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>53b7df8f-7931-5f39-9258-045a885ecf60</tstamps>
+      <units>
+        <unit name="A">
+          <pins/>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="H2">
+      <value>M2 / 2.4mm NPTH</value>
+      <footprint>WindflowEncoder:MountingHole_2p4_M2</footprint>
+      <fields>
+        <field name="Footprint">WindflowEncoder:MountingHole_2p4_M2</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="WindflowEncoder" part="M2_Mount" description=""/>
+      <property name="Sheetname" value="windflow-encoder"/>
+      <property name="Sheetfile" value="windflow-encoder.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1925acbf-48da-5994-be1d-f91c295b5b03</tstamps>
+      <units>
+        <unit name="A">
+          <pins/>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J1">
+      <value>B4B-XH-A(LF)(SN)</value>
+      <footprint>WindflowEncoder:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">WindflowEncoder:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="WindflowEncoder" part="XH4" description=""/>
+      <property name="Sheetname" value="windflow-encoder"/>
+      <property name="Sheetfile" value="windflow-encoder.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a9f0ea77-6f40-5c08-b882-4a4165d08b9e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="WindflowEncoder" part="M2_Mount">
+      <fields>
+        <field name="Reference">H</field>
+        <field name="Value">M2 / 2.4mm NPTH</field>
+        <field name="Footprint">WindflowEncoder:MountingHole_2p4_M2</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+    </libpart>
+    <libpart lib="WindflowEncoder" part="PEC11H_4215F_S0024">
+      <docs>https://www.bourns.com/docs/product-datasheets/pec11h.pdf</docs>
+      <fields>
+        <field name="Reference">ENC</field>
+        <field name="Value">PEC11H-4215F-S0024</field>
+        <field name="Footprint">WindflowEncoder:PEC11H_4215F_S0024</field>
+        <field name="Datasheet">https://www.bourns.com/docs/product-datasheets/pec11h.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="A" name="A" type="passive"/>
+        <pin num="B" name="B" type="passive"/>
+        <pin num="C" name="COMMON" type="passive"/>
+        <pin num="S1" name="PUSH" type="passive"/>
+        <pin num="S2" name="PUSH_COMMON" type="passive"/>
+        <pin num="SH" name="MOUNT_TABS" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="WindflowEncoder" part="XH4">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">B4B-XH-A(LF)(SN)</field>
+        <field name="Footprint">WindflowEncoder:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="passive"/>
+        <pin num="2" name="ENC_A" type="passive"/>
+        <pin num="3" name="ENC_B" type="passive"/>
+        <pin num="4" name="ENC_PUSH" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="WindflowEncoder">
+      <uri>${KIPRJMOD}/WindflowEncoder.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/ENC_A" class="Default">
+      <node ref="ENC1" pin="A" pinfunction="A_A" pintype="passive"/>
+      <node ref="J1" pin="2" pinfunction="ENC_A_2" pintype="passive"/>
+    </net>
+    <net code="2" name="/ENC_B" class="Default">
+      <node ref="ENC1" pin="B" pinfunction="B_B" pintype="passive"/>
+      <node ref="J1" pin="3" pinfunction="ENC_B_3" pintype="passive"/>
+    </net>
+    <net code="3" name="/ENC_PUSH" class="Default">
+      <node ref="ENC1" pin="S1" pinfunction="PUSH_S1" pintype="passive"/>
+      <node ref="J1" pin="4" pinfunction="ENC_PUSH_4" pintype="passive"/>
+    </net>
+    <net code="4" name="/GND" class="Default">
+      <node ref="ENC1" pin="C" pinfunction="COMMON_C" pintype="passive"/>
+      <node ref="ENC1" pin="S2" pinfunction="PUSH_COMMON_S2" pintype="passive"/>
+      <node ref="ENC1" pin="SH" pinfunction="MOUNT_TABS_SH" pintype="passive"/>
+      <node ref="J1" pin="1" pinfunction="GND_1" pintype="passive"/>
+    </net>
+  </nets>
+</export>
