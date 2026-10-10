@@ -71,7 +71,9 @@ The first complete motion run on 10 October found 62 intersections in the propos
 
 The detailed assembly now contains 65 named groups / 165 solids, including the rotated intact HUSB238 board, its integral rounded side port, two M2 screws and two captured nuts. Its 2,080 nominal pairs pass. The [USB access design and current coupon](rev-d-usb-access.md) record the mounting datums, aperture and unverified cable-boot envelope. The whole-assembly STEP round-trip volume difference is 0.04463 mm³. Four current installed review views include the screen, parallel wheel and recessed side port.
 
-No test report establishes measured airflow, throw, acoustic noise, rotor burst strength, actual motor torque, electronics temperature, magnet retention or hardware operation. The Onshape imported hierarchy will not by itself supply native kinematic mates. Latest online integration is recorded separately in `cad/onshape-rev-d-checkpoint.json`; an earlier online checkpoint never proves later source changes.
+The [detailed 65-instance assembly](https://cad.onshape.com/documents/5ca1b5b26cd9a4a93dde4737/w/6d3d38529391b53ad011b362/e/57c900ab51f3a2c24ffaefca) is now imported and visibly inspected in the original Main workspace. Onshape's interference tool analyzed the entire hierarchy with top-level filtering disabled. All six returned contacts are within the intact supplied HUSB238 model, with no custom-part findings. The immutable version **Rev D 150 mm integrated side port — DEVELOPMENT — 2026-10-10** has ID `9e2e00efc42a6cb0a410eb64`. Its exact input SHA, options and proof screenshots are in `cad/onshape-rev-d-checkpoint.json`.
+
+No test report establishes measured airflow, throw, acoustic noise, rotor burst strength, actual motor torque, electronics temperature, magnet retention or hardware operation. The Onshape imported hierarchy does not supply native kinematic mates. The online checkpoint applies only to its matching imported snapshot; it never proves later source changes or independent pilots.
 
 ## Printing and assembly development
 

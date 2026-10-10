@@ -1,0 +1,78 @@
+{
+  "status": "Current detailed 150 mm development integration; not a manufacturing release",
+  "physical_qualification": false,
+  "verified_utc": "2026-10-10T19:51:15.334785+00:00",
+  "document_id": "5ca1b5b26cd9a4a93dde4737",
+  "workspace_id": "6d3d38529391b53ad011b362",
+  "integration_assembly_id": "57c900ab51f3a2c24ffaefca",
+  "assembly_name": "Rev D — 150 mm integrated hardware and USB port — DEVELOPMENT",
+  "version_id": "9e2e00efc42a6cb0a410eb64",
+  "version_name": "Rev D 150 mm integrated side port — DEVELOPMENT — 2026-10-10",
+  "geometry_commit": "a8e1bc21570c14a98a485ddb4ee20830d9cf8fcd",
+  "integration_export": {
+    "path": "cad\\rev_d\\Windflow-Rev-D-150mm-integration-2026-10-09.step",
+    "sha256": "6588ad9535ca15f21603f41eece3883a7c7f2c10adb268b6d1580fb16a266254",
+    "bytes": 42813826,
+    "named_part_groups": 65,
+    "round_trip_solids": 165,
+    "round_trip_volume_difference_mm3": 0.04462585970759392
+  },
+  "observed_online_top_level_instances": 65,
+  "import_options": {
+    "hierarchy": "Import to this document",
+    "import_appearances": true,
+    "y_axis_up": false,
+    "combine_to_single_part_studio": false,
+    "create_composite": false,
+    "join_adjacent_surfaces": false
+  },
+  "native_interference": {
+    "scope": "Entire imported assembly; Show top level only unchecked; no standard-content instances",
+    "entries": 6,
+    "custom_part_findings": 0,
+    "findings": [
+      "HUSB238 body 34 / body 1",
+      "HUSB238 body 34 / body 1",
+      "HUSB238 body 34 / body 8",
+      "HUSB238 body 34 / body 8",
+      "HUSB238 body 34 / body 8",
+      "HUSB238 body 34 / body 8"
+    ],
+    "interpretation": "All six findings are internal to the downloaded HUSB238 vendor model; intact reference retained. No other interference rows were returned."
+  },
+  "native_studies": {
+    "rotor_part_studio": "ac831cfb3e2f99f349f8306c",
+    "airpath_part_studio": "399cdd4584e017c0a30623b4",
+    "airpath_feature_studio": "fcaf5b7ea81e608e05d9abb6",
+    "airpath_source_version": "2e06951c7fbf0c38eba49a77",
+    "airpath_part_count": 7,
+    "airpath_input_count": 17
+  },
+  "local_validation": {
+    "nominal_pairs": 2080,
+    "motion_comparisons": 34833,
+    "stage_stl_files": 28,
+    "current_port_coupon_meshes": 1,
+    "intended_complete_height_mm": 195
+  },
+  "evidence": [
+    "cad/evidence/onshape-rev-d-integrated-controls-and-port-2026-10-10.png",
+    "cad/evidence/onshape-rev-d-integrated-version-2026-10-10.png",
+    "cad/evidence/onshape-rev-d-integrated-interference-2026-10-10.png"
+  ],
+  "input_sha256": {
+    "cad\\rev_d\\integration-export-validation.json": "be19bcabb81de9257b9c7250e3df96477cb053f55ef8f5185aab4ff899898f8b",
+    "cad\\rev_d\\stage-validation.json": "85a29fadb2cc77f2c92179bed2acd1af8078d9e81e49bd3c5d17525ed8f44ae7",
+    "cad\\rev_d\\motion-validation.json": "f7b9c0b9bec91666a465c3d7c49a90c7c70e3c9e6af3e2c898df7a4724349c39",
+    "cad\\rev_d\\mesh-validation.json": "81d7d0100ce37db5f42da1c069b79bc1239faca336c3bf0016e293d9d141a402",
+    "cad\\rev_d\\testpieces\\testpiece-validation.json": "b8db5b7532c8d2579b7fc0dd146c483eabe5d6f3428df555483241ec73e853c9"
+  },
+  "limits": [
+    "Online 65-instance hierarchy is observed; the 165-solid count is the local STEP round-trip count, not a summed independent online body audit.",
+    "Imported assembly has no native kinematic mates; detailed local parameters regenerate through the checked scripts.",
+    "Native rotor and seven-part airpath are separate profile studies, not identical detailed P2 geometry.",
+    "Populated main PCB, connected looms/hoses, interlock and full fastener/driver/assembly sequence remain engineering work.",
+    "No physical fit, airflow/noise/throw, rotor strength/balance, motor compatibility or operating RPM approval.",
+    "An immutable version supports only its matching imported source; subsequent pilots or geometry changes are not included."
+  ]
+}

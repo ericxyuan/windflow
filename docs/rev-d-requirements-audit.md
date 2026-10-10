@@ -43,7 +43,7 @@ An implemented design is an inspectable artifact. It does not establish physical
 
 ## Authorized unfinished design queue
 
-1. Preserve a source-matched complete exchange and Onshape checkpoint of the checked 150 mm assembly, with explicit STEP/mates limitations.
+1. Keep subsequent geometry changes matched to a fresh complete exchange and Onshape checkpoint. The current 65-instance assembly is imported, inspected and versioned; its native interference check returns six internal vendor contacts and no custom-part findings. Imported STEP has no native motion mates.
 2. Complete the real supplied USB cable-boot confirmation, installed power/I2C wiring and strain relief. The retained side port and current coupon are integrated; stage/mesh/motion/export records pass for the 65-group snapshot.
 3. Re-integrate grille interlock, pressure taps/hoses and installed wiring with service slack and strain relief.
 4. Finish and review main PCB routing/thermal paths, keyed Pico transition and pressure daughterboard; integrate their populated geometry and retention.
