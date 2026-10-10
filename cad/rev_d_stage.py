@@ -10,11 +10,16 @@ import hashlib
 import json
 import math
 import cadquery as cq
+if __package__:
+    from .rev_d_power_access import design as design_power_access
+else:
+    from rev_d_power_access import design as design_power_access
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT/'cad/rev_d'
 P = json.loads((OUT/'head-parameters.json').read_text())
 PARTS, RECORDS, SOURCES = {}, [], [Path(__file__), OUT/'head-parameters.json',
+                                 Path(__file__).with_name('rev_d_power_access.py'),
                                  OUT/'rotor-validation.json', ROOT/'cad/rev_c/head-validation.json']
 T, R = P['wall_mm'], P['throat_diameter_mm']/2
 
@@ -91,8 +96,18 @@ def at_min(oldname, xmin, ymin, zmin):
     return reuse(oldname, shift=(xmin-b.xmin, ymin-b.ymin, zmin-b.zmin))
 
 
+_bounds_cache = {}
+
+
+def cached_bounds(shape):
+    key = id(shape)
+    if key not in _bounds_cache:
+        _bounds_cache[key] = (shape, shape.BoundingBox())
+    return _bounds_cache[key][1]
+
+
 def overlap(a, b):
-    aa, bb = a.BoundingBox(), b.BoundingBox()
+    aa, bb = cached_bounds(a), cached_bounds(b)
     if any(getattr(aa, hi) <= getattr(bb, lo) or getattr(bb, hi) <= getattr(aa, lo)
            for lo, hi in (('xmin', 'xmax'), ('ymin', 'ymax'), ('zmin', 'zmax'))):
         return 0.
@@ -100,6 +115,7 @@ def overlap(a, b):
 
 
 def build():
+    _bounds_cache.clear()
     OUT.mkdir(exist_ok=True)
     (OUT/'stage-build-state.json').write_text(json.dumps({'status': 'RUNNING'})+'\n')
     rotor_report = json.loads((OUT/'rotor-validation.json').read_text())
@@ -347,8 +363,8 @@ def build():
     at_min('Sensirion-SDP810-125Pa-vendor', 15, 226, -82)
     at_min('Adafruit-NeoPixel-1426-ambient-vendor', -25.4, 203, -88)
     record('REF-main-PCB-population-and-loom-reserve-NOT-INTEGRATED', box(80, 55, 20, 0, 197.5, -72), False)
-    # Side/rear USB access must be completed against the plug and harness; the
-    # actual module is present, but this stage is not an assembly release.
+    # The retained side port is applied after the bolted shell split. This
+    # earlier shoulder relief remains available for the output/I2C loom.
     shell = shell.cut(box(32, 20, 16, -80, 225, -69))
 
     # Low structural plinth and removable tray. All electronics occupy the
@@ -382,6 +398,23 @@ def build():
         for z in (-87.6, 87.6):
             left = left.cut(cx(1.7, -8.1, 8.2, y, z)).cut(cx(3.2, -8.1, 3.1, y, z))
             right = right.cut(cx(2, -.1, 7.1, y, z))
+    left, usb, screws, nuts, coupon, trial_plug, usb_metadata = design_power_access(
+        left, PARTS['Adafruit-HUSB238-5807-vendor'], P['usb_side_port'])
+    record('Adafruit-HUSB238-5807-vendor', usb, False,
+           'Manufacturer 5807, intact board; rotated -90 degrees about Z for side port', one=False)
+    for i, shape in enumerate(screws):
+        record(f'REF-PD-ISO4762-M2x6-{i+1}', shape, False,
+               'ISO 4762 M2x6 ideal envelope; physical thread and driver access unqualified')
+    for i, shape in enumerate(nuts):
+        record(f'REF-PD-ISO4032-M2-{i+1}', shape, False,
+               'ISO 4032 M2 ideal envelope; physical nut fit unqualified')
+    testpieces = OUT/'testpieces'
+    testpieces.mkdir(exist_ok=True)
+    cq.exporters.export(coupon, str(testpieces/'USB-side-port-fit-coupon.step'))
+    cq.exporters.export(coupon, str(testpieces/'USB-side-port-fit-coupon.stl'),
+                        tolerance=.02, angularTolerance=.08)
+    usb_metadata['trial_plug_overlap_mm3'] = overlap(left, trial_plug)
+    assert usb_metadata['trial_plug_overlap_mm3'] < 1e-4
     record('P2-flowing-head-left-INTEGRAL-OUTLET', left)
     record('P2-flowing-head-right-INTEGRAL-OUTLET', right)
 
@@ -409,6 +442,9 @@ def build():
               'complete_bounds_xyz_mm': complete_bounds, 'complete_height_mm': total_height,
               'maximum_height_mm': P['maximum_product_height_mm'],
               'head_height_constraint_mm': P['head_height_mm'], 'excluded_alternative_and_reserves': sorted(excluded),
+              'usb_side_port': usb_metadata,
+              'testpiece_sha256': {str(path.relative_to(ROOT)): digest(path)
+                                  for path in sorted(testpieces.glob('USB-side-port-fit-coupon.*'))},
               'input_sha256': {str(p.relative_to(ROOT)): digest(p) for p in dict.fromkeys(SOURCES)},
               'limits': ['Nominal placement only; motion, connected harness, tolerances and screw/tool approaches need revalidation.',
                          'Main PCB population, pressure hoses/taps, component retention and grille interlock are not yet integrated.',

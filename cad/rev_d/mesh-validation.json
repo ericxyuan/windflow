@@ -1,13 +1,13 @@
 {
   "result": "PASS",
-  "generated_utc": "2026-10-09T20:07:39.981353+00:00",
+  "generated_utc": "2026-10-10T12:13:30.720426+00:00",
   "physical_qualification": false,
   "parts": [
     {
       "name": "REF-mechanism-upper_panel-open",
       "result": "PASS",
       "sha256": "cfe8874f70bfdfbc1d84b117ec363a4011bd5f44406e75835488a11b8297475e",
-      "step_sha256": "fe815b602ecf9903bc7147f8d6ee912b2ef66bb6535e986bd99b52295d122a14",
+      "step_sha256": "776cb640fcc9e0fa2f52c83c8dff6862d54a989767113508e9f66c81546f52c0",
       "mesh": {
         "triangles": 870,
         "connected_components": 1,
@@ -27,7 +27,7 @@
       "name": "REF-mechanism-lower_panel-open",
       "result": "PASS",
       "sha256": "eba93a9bcbea9949b8e49b151c02a8c418a944eea717b60cceaa0ec26d5b2979",
-      "step_sha256": "64949e6c5892dad299ff34fb65454d4a8631dd8ea7bf88058493e281dea56d53",
+      "step_sha256": "3a6a64db61028e13521d8adc9557d5434d37bf9a52681ca1aab61fc44a59547e",
       "mesh": {
         "triangles": 870,
         "connected_components": 1,
@@ -47,7 +47,7 @@
       "name": "REF-mechanism-upper_crank-open",
       "result": "PASS",
       "sha256": "f87099bb614118fefd0dee0cb0af012896b363db27a4f05b2dccbe879d7e19f3",
-      "step_sha256": "ec0fb48ac636aaa4b7c91b43cdef49f082707a3e7552f8457b49c674668884e3",
+      "step_sha256": "38ed5deb44ad6c25cdc000e9ff604b26bf006166468d5ddb5e441a6c22f9bf6d",
       "mesh": {
         "triangles": 1988,
         "connected_components": 1,
@@ -67,7 +67,7 @@
       "name": "REF-mechanism-lower_crank-open",
       "result": "PASS",
       "sha256": "4f0886a19b03d5a43268a7f4f706fc4328402775882a831b4437980bfd6ece10",
-      "step_sha256": "0adce50a032b331461bf3d3fb06c964dc9d0d9745e738ec7004881dc073711aa",
+      "step_sha256": "b45eec4524383890b220ff808ad93505cbbd947ccbae45ca41816ead985732a3",
       "mesh": {
         "triangles": 1988,
         "connected_components": 1,
@@ -87,7 +87,7 @@
       "name": "REF-mechanism-yoke-open",
       "result": "PASS",
       "sha256": "5d090b8473aeda8fd12ce8cb598fbdd9f9814a300f8c3a321c873953432c3319",
-      "step_sha256": "27a9b2d68b94ea49f3a6f4ef6115dba7eefb177da0805ced3b44b550af7fc8a9",
+      "step_sha256": "01970edbf8bf1cca05dff6d6fea181e08ee98b125039d688a3408e1b63adfcea",
       "mesh": {
         "triangles": 1788,
         "connected_components": 1,
@@ -107,7 +107,7 @@
       "name": "REF-mechanism-rod-open",
       "result": "PASS",
       "sha256": "6c94ec4d05bb832a05d7db42eaf38d278c6f371657702b032f98840613006ff7",
-      "step_sha256": "f6dd336e7956b95897c109742d9818550cdf30a39bfd42403ac281a723c64cdb",
+      "step_sha256": "92436edc9ea29392a8e2b606faf73661868690b9b0707247c71b4bb760ddf5c2",
       "mesh": {
         "triangles": 1276,
         "connected_components": 1,
@@ -127,7 +127,7 @@
       "name": "servo-slotted-bracket-development",
       "result": "PASS",
       "sha256": "f8ee9bc3b431b245cc40e666a4a464051e40153e49fc3b64adb171896ed2e726",
-      "step_sha256": "7516b3195e9204999693145fe61d342d8a675de578178164dde2b95b13dd64b2",
+      "step_sha256": "ed3e2d4236d32354b3ceb981dae7305bff8482b2d927af128ecceeadeb7a84d1",
       "mesh": {
         "triangles": 1360,
         "connected_components": 1,
@@ -147,7 +147,7 @@
       "name": "P2-rigid-motor-carrier-PCD16",
       "result": "PASS",
       "sha256": "3dff430f4f945bea68a62c472acdfb747dd142e035a8d1e313dc22e26e5a1b18",
-      "step_sha256": "3c9b8cc3252a1a4b34996b0bf7490e292696a7446d3aa7ddc6e83786c75e6de0",
+      "step_sha256": "5847a4092e8d614f79549dfacef551b38311d75b79a1e01ef9bb08741e842d08",
       "mesh": {
         "triangles": 3384,
         "connected_components": 1,
@@ -167,7 +167,7 @@
       "name": "P2-TPU-carrier-isolation-ring",
       "result": "PASS",
       "sha256": "b64c63766e6cdd0ac978abe2c3a0fe71305e57194d3f7751515c2324e0fe804e",
-      "step_sha256": "b573b61fa4471c3f371ab7947b64a7134fe1f13821465660fd1593599ba4cafe",
+      "step_sha256": "fbf03a5f8c4c48704ba95f64ce46c85c0bf13755f082b55e6f5d47bad05f2e23",
       "mesh": {
         "triangles": 840,
         "connected_components": 1,
@@ -187,7 +187,7 @@
       "name": "P2-seven-curved-vane-stator-TRIAL",
       "result": "PASS",
       "sha256": "3eef411b0b09073a1efc9f885aed1448d11b69a7647af3dbb5ed34cf7b416878",
-      "step_sha256": "f66115bbb6e621e5b1a8077d4c551018e7db46adf52a5fa696e546c37b0d8e45",
+      "step_sha256": "fc406458e1ad637cefd3d2bd30f55c4c61ec2bc7aa36cfd7f28e33d7479594a6",
       "mesh": {
         "triangles": 13162,
         "connected_components": 1,
@@ -207,7 +207,7 @@
       "name": "P2-stator-open-comparison-spacer",
       "result": "PASS",
       "sha256": "29448a059cdfa504595f128b6102a547d841c71d86cccccc8e9e1018b0df3acc",
-      "step_sha256": "ee35e473a4463a952cdd319a70828c30933f6f0aa668185efa335e1e1db850f0",
+      "step_sha256": "a547d9b4b2d431a44a170e8b8ae5154416887147f13b2b511f76d88bbd215a16",
       "mesh": {
         "triangles": 840,
         "connected_components": 1,
@@ -227,7 +227,7 @@
       "name": "P2-R12-bellmouth-insert",
       "result": "PASS",
       "sha256": "bb478fc2ec13ce685ebffdc4f5baeeb691abd7587fcf3ee93a5ce9009d881bd0",
-      "step_sha256": "eff6c7b6017ce863232af339cb4941a03ee87d79f6503f8a1df79baaf08c956e",
+      "step_sha256": "bf75089e9d7bebb56623ebf77b8196b19fbdfcb05fc207f5a4a664766d87648e",
       "mesh": {
         "triangles": 68040,
         "connected_components": 1,
@@ -247,7 +247,7 @@
       "name": "P2-fixed-rear-inlet-guard",
       "result": "PASS",
       "sha256": "d365b2248e1786ac5791fe76c186376c2db035bee00c2feeb1c4f7e576d5f738",
-      "step_sha256": "58e04d69d6f4f7b0060bcb9d67c31f3f62be4bc8c8d5a32ec286b6c060d13c42",
+      "step_sha256": "9518cdff5582534e72cb74875780017fc6d5ad7f37ddc7cc27cfe3205052cc8d",
       "mesh": {
         "triangles": 2096,
         "connected_components": 1,
@@ -267,7 +267,7 @@
       "name": "P2-fixed-front-finger-guard",
       "result": "PASS",
       "sha256": "837470e6b29e8711876af8c638111af963c2a8f68fa93edfaed540391246d14f",
-      "step_sha256": "0c8e79c87bab706826f751b33ff01a507027798ce97d249321b439ca4c4502e6",
+      "step_sha256": "ff19334354ffbc997eeb34ff2bead735f8dfb12c590aee72afff4ee7058b5956",
       "mesh": {
         "triangles": 1596,
         "connected_components": 1,
@@ -287,7 +287,7 @@
       "name": "P2-fixed-magnet-seat-frame",
       "result": "PASS",
       "sha256": "31253e5ea12d5c5e5551201d2a6c63d18296a53f398def573a81869d42c03976",
-      "step_sha256": "ed93d9c187e6687cef71509aaec48cc77288bf3ecb5b2f2d14aa768b929c2cfe",
+      "step_sha256": "087d564b813fcb3beb647ed5500f49a94ce0891a8c83b4378cd7a01b45cc72e1",
       "mesh": {
         "triangles": 7392,
         "connected_components": 1,
@@ -307,7 +307,7 @@
       "name": "head-magnet-retaining-ring-development",
       "result": "PASS",
       "sha256": "a3042c538373f09097604ab615a7b33aea47840d447e1e1b1b15521b9c7427cd",
-      "step_sha256": "eeec87c16c86fe30658a042bd17c0ac1766e0d02dbe88c65094373cdf15f1293",
+      "step_sha256": "0c9c3f4f621efa5f9bcd55ee331e9f20a9e8648d059290030ffce8d441c90746",
       "mesh": {
         "triangles": 4288,
         "connected_components": 1,
@@ -327,7 +327,7 @@
       "name": "grille-magnet-retaining-ring-development",
       "result": "PASS",
       "sha256": "016a648feea1da898c713e1d3768fa8959347d9fa280082f26a58b18d0a98618",
-      "step_sha256": "ace483fcfd9b5730f0c2056e5c8c467a026d9b67c1eae0ca7cbc8e190211af3b",
+      "step_sha256": "ab164dc88f213c0d37b812b295bae10602971ffe371b5583247a5346b6c66125",
       "mesh": {
         "triangles": 2592,
         "connected_components": 1,
@@ -347,7 +347,7 @@
       "name": "magnetic-front-cleaning-grille-development",
       "result": "PASS",
       "sha256": "be06ac5f49d901fd562c22398aab9c18d9bd4122f760c0f4b6841e85b9040a68",
-      "step_sha256": "c9a8f248d768cb9989f3f25e17dc18af68324c8f58689274976dcd984bf08019",
+      "step_sha256": "70a3592185159383948a9483c23d2fbc11a1ef8d1bf240b8b6518d0f710e7d02",
       "mesh": {
         "triangles": 4740,
         "connected_components": 1,
@@ -367,7 +367,7 @@
       "name": "display-removable-cradle-development",
       "result": "PASS",
       "sha256": "2f57ee58acd1677a1dd6df60dff7b485c661353329dfcc42659e970514361c16",
-      "step_sha256": "c73391c3cec737492cbbb8ace50ae717b5abbb96401a663ff7cb0ef9d14acb83",
+      "step_sha256": "95b2be24aff1daa64957e7a5eed172b2fc5431b6c363d441ace0738115fe79cc",
       "mesh": {
         "triangles": 3842,
         "connected_components": 1,
@@ -387,7 +387,7 @@
       "name": "display-front-bezel-development",
       "result": "PASS",
       "sha256": "503946cb1649c10ad3c6c0cee4117ddd2c77cf7725aea0ced4db148417798e61",
-      "step_sha256": "ed91286363508c0c4b18eae4f4e3cc7630c7b2e0e6db770641be8e0aa6f4f402",
+      "step_sha256": "28442a1c7aae9c3041bfd2a7bcbd1becfd94ae32bcdd4c399f42e73be8803519",
       "mesh": {
         "triangles": 1744,
         "connected_components": 1,
@@ -407,7 +407,7 @@
       "name": "horizontal-encoder-thumbwheel-development",
       "result": "PASS",
       "sha256": "b9d565a415ec951177afb86daac74e3e40cbce004f1f17d24994230553834043",
-      "step_sha256": "188060ea2df17f3cce545ad42a78b06d86f46d41f0e789a6341d95de6edb8847",
+      "step_sha256": "dbea0e0a0e0f0e092702ff641c5fab851a6c063077385d087424d7e89c467d47",
       "mesh": {
         "triangles": 5328,
         "connected_components": 1,
@@ -427,7 +427,7 @@
       "name": "horizontal-encoder-mount-development",
       "result": "PASS",
       "sha256": "47adf9a039889112f6195d9dfc45fd2e44ec9d715c157d1699771214a2b87997",
-      "step_sha256": "a374c2ed5b2e0beccb0b755154c726e09d539428d8fd4d6fb145af2dec376dca",
+      "step_sha256": "55260f773310a1a8ad61b93da2b68b8a4b44644691ef7c6539635fd2b3e202b5",
       "mesh": {
         "triangles": 3020,
         "connected_components": 1,
@@ -447,7 +447,7 @@
       "name": "P2-low-structural-plinth",
       "result": "PASS",
       "sha256": "1d39ccdaff0e000bd88fa9f2fc2bd0ad3229851eb6fd5240376e05d269eb7163",
-      "step_sha256": "e7e6ec04fbf25ac3d0574fd28f7cbf2b9313a6df188a45531e8602b3dc841f83",
+      "step_sha256": "8bc378cea4938da017c2bcea000a79db4e59c11915798c8b1aff0f290720da4a",
       "mesh": {
         "triangles": 356,
         "connected_components": 1,
@@ -467,7 +467,7 @@
       "name": "P2-bottom-electronics-service-tray",
       "result": "PASS",
       "sha256": "2b7bde57c1b20e1ea5964d8729936d35ac3697a2124ce49d2bd279ece4bf74de",
-      "step_sha256": "8029cb9eae5889212e95d7d1d57258f5ac505193a99c75c5eee37f55832b46d8",
+      "step_sha256": "509c11ab86c876abddae74bce5ef59edb79e9614b46f3219624742bf7323dee0",
       "mesh": {
         "triangles": 484,
         "connected_components": 1,
@@ -487,7 +487,7 @@
       "name": "P2-downward-ambient-diffuser",
       "result": "PASS",
       "sha256": "0ca9cbedff1bb1f101779baff760833c5a8cdf026d595012aa7d833c1992db33",
-      "step_sha256": "68d4d235dbed9a0a8ad01149fe23fdb4a7ba64d181b8d86c2b3f6d1b80e5734c",
+      "step_sha256": "4d45dde6f2c4d402cfeb91854126457e4558450f850f5df4cc20afb26d65d3de",
       "mesh": {
         "triangles": 12,
         "connected_components": 1,
@@ -507,7 +507,7 @@
       "name": "P2-replaceable-TPU-desk-feet",
       "result": "PASS",
       "sha256": "3d27d50dafa0bd1e1fa4e291c75c68f0b32212b67554466a933e9465c6561e45",
-      "step_sha256": "dcc3372c6e6f06548581ccc14ae1cf781e547704d49a233650b18b9b06c7445a",
+      "step_sha256": "7b89d8d0c5299a72e7698b63143c974a4b6afdd73882b7f73d3dfcd68934e192",
       "mesh": {
         "triangles": 1664,
         "connected_components": 4,
@@ -529,18 +529,18 @@
     {
       "name": "P2-flowing-head-left-INTEGRAL-OUTLET",
       "result": "PASS",
-      "sha256": "80659d7bace9fa4396c60100f4b366e0d04f99e1926d812375d01bcc466b07f6",
-      "step_sha256": "fcb160b20cd83d650dae7eaf66bd3cd511c8fdcb124e2423b72be83342f1fa99",
+      "sha256": "2323f959e59e796e1c06f607f462535785373c06f562db2f2604647ca317feb7",
+      "step_sha256": "0d0c5d26aec6d59e58aa3e935c1527169cda59ff6f72283e78364866f547e764",
       "mesh": {
-        "triangles": 1991762,
+        "triangles": 2063688,
         "connected_components": 1,
         "expected_components": 1,
         "nonmanifold_or_boundary_edges": 0,
         "inconsistent_winding_edges": 0,
         "degenerate_faces": 0,
-        "signed_volume_mm3": 391485.0562484664,
+        "signed_volume_mm3": 393363.3560571683,
         "component_signed_volumes_mm3": [
-          391485.0562484067
+          393363.3560572477
         ],
         "boundary_edge_examples_mm": [],
         "watertight": true
@@ -550,7 +550,7 @@
       "name": "P2-flowing-head-right-INTEGRAL-OUTLET",
       "result": "PASS",
       "sha256": "d0e47b7fba56d889fd8007d9e81e06e3040b950511fffe0680cfdab22bc0edb8",
-      "step_sha256": "25c345a9ce2caea5bbab375ead7e6e81feddf422315964abbf6bcd0353a777b5",
+      "step_sha256": "5d35bc0fd5ed0bd50e8a7a980b836707146fde8239dac316e5cd205655af3be4",
       "mesh": {
         "triangles": 69226,
         "connected_components": 1,
@@ -569,8 +569,8 @@
   ],
   "input_sha256": {
     "cad\\rev_d_meshes.py": "52ddb4ef42db642fdbdfff5fbafe0baad14ee0144ee421979d262bc70343cee6",
-    "cad\\rev_d\\stage-validation.json": "614bd693b12eff3113aa81d384297961dffd92ff30c08794240d92e5d4046124",
-    "cad\\rev_d\\stl-refinements.json": "246a0db487d1feaedf6015980f5bc5159648c15c95070e13012f9d390b84ae1f"
+    "cad\\rev_d\\stage-validation.json": "85a29fadb2cc77f2c92179bed2acd1af8078d9e81e49bd3c5d17525ed8f44ae7",
+    "cad\\rev_d\\stl-refinements.json": "7199905820e64603f862cbdcff40abefa13ce44b86a9b097ef6eadd7dd77e12f"
   },
   "limits": [
     "Binary STL shared-edge topology, orientation and connectivity only.",

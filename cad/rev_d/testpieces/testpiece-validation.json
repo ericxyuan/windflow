@@ -1,0 +1,37 @@
+{
+  "result": "PASS",
+  "generated_utc": "2026-10-10T19:42:24.314540+00:00",
+  "physical_qualification": false,
+  "parts": [
+    {
+      "path": "cad\\rev_d\\testpieces\\USB-side-port-fit-coupon.stl",
+      "mesh": {
+        "triangles": 6234,
+        "connected_components": 1,
+        "expected_components": 1,
+        "nonmanifold_or_boundary_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume_mm3": 4158.835467491417,
+        "component_signed_volumes_mm3": [
+          4158.835467491436
+        ],
+        "boundary_edge_examples_mm": [],
+        "watertight": true
+      },
+      "sha256": "7a63b6cb011709ea605e860979aece7fd370e6e913e6165bd472ddcf1f31de27"
+    }
+  ],
+  "geometry_sha256": {
+    "cad\\rev_d\\testpieces\\USB-side-port-fit-coupon.step": "434958d86e3a53cd2ee9e9de140273f1e861aa234f342d0c4c01816a7ce1a02a",
+    "cad\\rev_d\\testpieces\\USB-side-port-fit-coupon.stl": "7a63b6cb011709ea605e860979aece7fd370e6e913e6165bd472ddcf1f31de27"
+  },
+  "input_sha256": {
+    "tools\\verify_rev_d_testpieces.py": "6b64a7ad7a2668bb28e309913cfbadce22780a7b5ac4ff1fd3c16aef59a9b3e3",
+    "cad\\rev_d_meshes.py": "52ddb4ef42db642fdbdfff5fbafe0baad14ee0144ee421979d262bc70343cee6",
+    "cad\\rev_d\\stage-validation.json": "85a29fadb2cc77f2c92179bed2acd1af8078d9e81e49bd3c5d17525ed8f44ae7"
+  },
+  "limits": [
+    "Mesh topology only; physical print/plug/fastener/driver fit remains unqualified."
+  ]
+}

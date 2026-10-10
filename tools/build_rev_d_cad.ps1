@@ -15,6 +15,8 @@ try {
     if($LASTEXITCODE -ne 0){throw 'Stage geometry or nominal collision validation failed.'}
     & $taskPython 'cad/rev_d_meshes.py'
     if($LASTEXITCODE -ne 0){throw 'Printed STL topology validation failed.'}
+    & $taskPython 'tools/verify_rev_d_testpieces.py'
+    if($LASTEXITCODE -ne 0){throw 'Current fit-coupon source or mesh validation failed.'}
     & $taskPython 'cad/rev_d_motion.py'
     if($LASTEXITCODE -ne 0){throw 'Motion validation failed.'}
     & $taskPython 'cad/rev_d_export.py'

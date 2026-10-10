@@ -20,6 +20,7 @@ def digest(path):
     return value.hexdigest()
 
 def color(name):
+    if name.startswith('REF-PD-ISO'):return (.65,.68,.70)
     if 'UNVERIFIED' in name or 'drawing-envelope' in name:return (.70,.46,.22)
     if 'rotor' in name:return (.29,.34,.40)
     if 'TPU' in name or 'thumbwheel' in name:return (.16,.19,.23)
@@ -69,6 +70,7 @@ def main():
     outputs=[]
     views=[('front',(350,670,210),'Installed layout - screen and wheel on the front',False),
            ('rear',(345,-370,200),'Rounded inlet and fixed rear guard',False),
+           ('controls-and-power',(-350,670,190),'Screen, thumbwheel and recessed side USB-C port',False),
            ('internal',(390,660,230),'Shells hidden - installed positions, no harness shown',True)]
     for label,position,subtitle,internal in views:
         renderer=vtk.vtkRenderer();renderer.SetBackground(.965,.971,.977)
@@ -104,6 +106,6 @@ def main():
                       'Drawing-envelope colors do not assert accurate purchased-component dimensions.',
                       'Images do not establish airflow, moving clearance, physical fit, printability or operation.']}
     (OUT/'preview-record.json').write_text(json.dumps(record,indent=2)+'\n')
-    print('PASS',len(actors),'installed groups; 3 source-matched review images',flush=True)
+    print('PASS',len(actors),'installed groups;',len(views),'source-matched review images',flush=True)
 
 if __name__=='__main__':main()

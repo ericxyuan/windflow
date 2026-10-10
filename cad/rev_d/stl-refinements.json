@@ -1,6 +1,6 @@
 {
   "P2-R12-bellmouth-insert": {
-    "step_sha256": "eff6c7b6017ce863232af339cb4941a03ee87d79f6503f8a1df79baaf08c956e",
+    "step_sha256": "bf75089e9d7bebb56623ebf77b8196b19fbdfcb05fc207f5a4a664766d87648e",
     "original_stl_sha256": "34af580adbc9b0bdef0e07fe6b1953bd5908a410bfb795505b396700c2843527",
     "final_stl_sha256": "bb478fc2ec13ce685ebffdc4f5baeeb691abd7587fcf3ee93a5ce9009d881bd0",
     "original_mesh": {
@@ -150,19 +150,19 @@
     "method": "Fresh tessellation of unchanged STEP; no vertex welding."
   },
   "P2-flowing-head-left-INTEGRAL-OUTLET": {
-    "step_sha256": "fcb160b20cd83d650dae7eaf66bd3cd511c8fdcb124e2423b72be83342f1fa99",
-    "original_stl_sha256": "1ba1afcace7df8aa3f005e84b511531d408b7df862d341688b596bf435bfd33f",
-    "final_stl_sha256": "80659d7bace9fa4396c60100f4b366e0d04f99e1926d812375d01bcc466b07f6",
+    "step_sha256": "0d0c5d26aec6d59e58aa3e935c1527169cda59ff6f72283e78364866f547e764",
+    "original_stl_sha256": "03f4ca55a6d1316c0a73f508cad151c9ee54855758524d9d846070c132c7c87d",
+    "final_stl_sha256": "2323f959e59e796e1c06f607f462535785373c06f562db2f2604647ca317feb7",
     "original_mesh": {
-      "triangles": 26100,
+      "triangles": 28294,
       "connected_components": 1,
       "expected_components": 1,
       "nonmanifold_or_boundary_edges": 118,
       "inconsistent_winding_edges": 118,
       "degenerate_faces": 0,
-      "signed_volume_mm3": 390901.3621436483,
+      "signed_volume_mm3": 392517.5944027427,
       "component_signed_volumes_mm3": [
-        390901.3621436489
+        392517.5944027469
       ],
       "boundary_edge_examples_mm": [
         [
@@ -264,8 +264,8 @@
       ],
       "watertight": false
     },
-    "cad_volume_mm3": 391485.9311129421,
-    "cleanup_volume_difference_mm3": 0.0010956933838315308,
+    "cad_volume_mm3": 393364.6498177118,
+    "cleanup_volume_difference_mm3": 0.0,
     "trials": [
       {
         "settings": {
@@ -275,15 +275,15 @@
           "parallel": false
         },
         "mesh": {
-          "triangles": 75148,
+          "triangles": 83936,
           "connected_components": 1,
           "expected_components": 1,
           "nonmanifold_or_boundary_edges": 48,
           "inconsistent_winding_edges": 48,
           "degenerate_faces": 0,
-          "signed_volume_mm3": 391462.94997617544,
+          "signed_volume_mm3": 393333.83809344494,
           "component_signed_volumes_mm3": [
-            391462.9499761677
+            393333.8380934231
           ],
           "boundary_edge_examples_mm": [
             [
@@ -385,7 +385,7 @@
           ],
           "watertight": false
         },
-        "relative_volume_error": 5.8702331144665936e-05
+        "relative_volume_error": 7.832865581879471e-05
       },
       {
         "settings": {
@@ -395,20 +395,20 @@
           "parallel": false
         },
         "mesh": {
-          "triangles": 1991762,
+          "triangles": 2063688,
           "connected_components": 1,
           "expected_components": 1,
           "nonmanifold_or_boundary_edges": 0,
           "inconsistent_winding_edges": 0,
           "degenerate_faces": 0,
-          "signed_volume_mm3": 391485.0562484664,
+          "signed_volume_mm3": 393363.3560571683,
           "component_signed_volumes_mm3": [
-            391485.0562484067
+            393363.3560572477
           ],
           "boundary_edge_examples_mm": [],
           "watertight": true
         },
-        "relative_volume_error": 2.2347277543232503e-06
+        "relative_volume_error": 3.2889598597994186e-06
       }
     ],
     "accepted_settings": {
@@ -420,7 +420,7 @@
     "method": "Fresh tessellation of unchanged STEP; no vertex welding."
   },
   "P2-flowing-head-right-INTEGRAL-OUTLET": {
-    "step_sha256": "25c345a9ce2caea5bbab375ead7e6e81feddf422315964abbf6bcd0353a777b5",
+    "step_sha256": "5d35bc0fd5ed0bd50e8a7a980b836707146fde8239dac316e5cd205655af3be4",
     "original_stl_sha256": "28f6d6617da8100a7c47e6b678e0115fe4e613e66a993d14d004e801098e46bf",
     "final_stl_sha256": "d0e47b7fba56d889fd8007d9e81e06e3040b950511fffe0680cfdab22bc0edb8",
     "original_mesh": {
