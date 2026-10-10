@@ -1,698 +1,15 @@
 {
-  "result": "FAIL",
+  "result": "PASS",
   "physical_qualification": false,
-  "generated_utc": "2026-10-10T11:15:45.012923+00:00",
+  "generated_utc": "2026-10-10T11:52:10.246196+00:00",
   "counts": {
     "mechanism_fixed": 22570,
     "mechanism_moving": 1281,
     "wheel_press": 5664,
-    "screen_service": 4345,
+    "screen_service": 2958,
     "rotor_swept_envelope": 60
   },
-  "issues": [
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "P2-flowing-head-left-INTEGRAL-OUTLET",
-      "pose": {
-        "sample": 1,
-        "yshift_mm": -0.5,
-        "zshift_mm": 0
-      },
-      "overlap_mm3": 56.35158261601729
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "P2-flowing-head-right-INTEGRAL-OUTLET",
-      "pose": {
-        "sample": 1,
-        "yshift_mm": -0.5,
-        "zshift_mm": 0
-      },
-      "overlap_mm3": 84.19187162788924
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "P2-flowing-head-left-INTEGRAL-OUTLET",
-      "pose": {
-        "sample": 2,
-        "yshift_mm": -1.0,
-        "zshift_mm": 0
-      },
-      "overlap_mm3": 112.70316523203458
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "P2-flowing-head-right-INTEGRAL-OUTLET",
-      "pose": {
-        "sample": 2,
-        "yshift_mm": -1.0,
-        "zshift_mm": 0
-      },
-      "overlap_mm3": 168.38374325577848
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "P2-flowing-head-left-INTEGRAL-OUTLET",
-      "pose": {
-        "sample": 3,
-        "yshift_mm": -1.5,
-        "zshift_mm": 0
-      },
-      "overlap_mm3": 169.05474784805185
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "P2-flowing-head-right-INTEGRAL-OUTLET",
-      "pose": {
-        "sample": 3,
-        "yshift_mm": -1.5,
-        "zshift_mm": 0
-      },
-      "overlap_mm3": 252.57561488366778
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "P2-flowing-head-left-INTEGRAL-OUTLET",
-      "pose": {
-        "sample": 4,
-        "yshift_mm": -2.0,
-        "zshift_mm": 0
-      },
-      "overlap_mm3": 179.02773541718636
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "P2-flowing-head-right-INTEGRAL-OUTLET",
-      "pose": {
-        "sample": 4,
-        "yshift_mm": -2.0,
-        "zshift_mm": 0
-      },
-      "overlap_mm3": 275.0909959461467
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "P2-flowing-head-left-INTEGRAL-OUTLET",
-      "pose": {
-        "sample": 5,
-        "yshift_mm": -2.5,
-        "zshift_mm": 0
-      },
-      "overlap_mm3": 177.90774730146975
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "P2-flowing-head-right-INTEGRAL-OUTLET",
-      "pose": {
-        "sample": 5,
-        "yshift_mm": -2.5,
-        "zshift_mm": 0
-      },
-      "overlap_mm3": 282.688927444143
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "Sensirion-SDP810-125Pa-vendor",
-      "pose": {
-        "sample": 6,
-        "yshift_mm": -3.0,
-        "zshift_mm": 0
-      },
-      "overlap_mm3": 2.889544071584112
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "P2-flowing-head-left-INTEGRAL-OUTLET",
-      "pose": {
-        "sample": 6,
-        "yshift_mm": -3.0,
-        "zshift_mm": 0
-      },
-      "overlap_mm3": 121.55616468545301
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "P2-flowing-head-right-INTEGRAL-OUTLET",
-      "pose": {
-        "sample": 6,
-        "yshift_mm": -3.0,
-        "zshift_mm": 0
-      },
-      "overlap_mm3": 212.9526559359075
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "Sensirion-SDP810-125Pa-vendor",
-      "pose": {
-        "sample": 7,
-        "yshift_mm": -3.5,
-        "zshift_mm": 0
-      },
-      "overlap_mm3": 9.812669010498722
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "P2-flowing-head-left-INTEGRAL-OUTLET",
-      "pose": {
-        "sample": 7,
-        "yshift_mm": -3.5,
-        "zshift_mm": 0
-      },
-      "overlap_mm3": 66.27791340036153
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "P2-flowing-head-right-INTEGRAL-OUTLET",
-      "pose": {
-        "sample": 7,
-        "yshift_mm": -3.5,
-        "zshift_mm": 0
-      },
-      "overlap_mm3": 144.28971575861326
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "Sensirion-SDP810-125Pa-vendor",
-      "pose": {
-        "sample": 8,
-        "yshift_mm": -4.0,
-        "zshift_mm": 0
-      },
-      "overlap_mm3": 16.81105455291898
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "P2-flowing-head-left-INTEGRAL-OUTLET",
-      "pose": {
-        "sample": 8,
-        "yshift_mm": -4.0,
-        "zshift_mm": 0
-      },
-      "overlap_mm3": 11.944332139202267
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "P2-flowing-head-right-INTEGRAL-OUTLET",
-      "pose": {
-        "sample": 8,
-        "yshift_mm": -4.0,
-        "zshift_mm": 0
-      },
-      "overlap_mm3": 75.72617700485411
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "Sensirion-SDP810-125Pa-vendor",
-      "pose": {
-        "sample": 9,
-        "yshift_mm": -4,
-        "zshift_mm": -1
-      },
-      "overlap_mm3": 15.405275438817599
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "P2-flowing-head-left-INTEGRAL-OUTLET",
-      "pose": {
-        "sample": 9,
-        "yshift_mm": -4,
-        "zshift_mm": -1
-      },
-      "overlap_mm3": 10.691812356952049
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "P2-flowing-head-right-INTEGRAL-OUTLET",
-      "pose": {
-        "sample": 9,
-        "yshift_mm": -4,
-        "zshift_mm": -1
-      },
-      "overlap_mm3": 97.24904012190026
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "Sensirion-SDP810-125Pa-vendor",
-      "pose": {
-        "sample": 10,
-        "yshift_mm": -4,
-        "zshift_mm": -2
-      },
-      "overlap_mm3": 15.29369319661375
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "P2-flowing-head-left-INTEGRAL-OUTLET",
-      "pose": {
-        "sample": 10,
-        "yshift_mm": -4,
-        "zshift_mm": -2
-      },
-      "overlap_mm3": 9.47504028029427
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "P2-flowing-head-right-INTEGRAL-OUTLET",
-      "pose": {
-        "sample": 10,
-        "yshift_mm": -4,
-        "zshift_mm": -2
-      },
-      "overlap_mm3": 109.63681251013794
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "Sensirion-SDP810-125Pa-vendor",
-      "pose": {
-        "sample": 11,
-        "yshift_mm": -4,
-        "zshift_mm": -3
-      },
-      "overlap_mm3": 15.293693196613047
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "P2-flowing-head-left-INTEGRAL-OUTLET",
-      "pose": {
-        "sample": 11,
-        "yshift_mm": -4,
-        "zshift_mm": -3
-      },
-      "overlap_mm3": 8.650022773348852
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "P2-flowing-head-right-INTEGRAL-OUTLET",
-      "pose": {
-        "sample": 11,
-        "yshift_mm": -4,
-        "zshift_mm": -3
-      },
-      "overlap_mm3": 93.73289113576537
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "Sensirion-SDP810-125Pa-vendor",
-      "pose": {
-        "sample": 12,
-        "yshift_mm": -4,
-        "zshift_mm": -4
-      },
-      "overlap_mm3": 15.347425235623938
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "P2-flowing-head-left-INTEGRAL-OUTLET",
-      "pose": {
-        "sample": 12,
-        "yshift_mm": -4,
-        "zshift_mm": -4
-      },
-      "overlap_mm3": 8.079263640294952
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "P2-flowing-head-right-INTEGRAL-OUTLET",
-      "pose": {
-        "sample": 12,
-        "yshift_mm": -4,
-        "zshift_mm": -4
-      },
-      "overlap_mm3": 70.88218844989687
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "Sensirion-SDP810-125Pa-vendor",
-      "pose": {
-        "sample": 13,
-        "yshift_mm": -4,
-        "zshift_mm": -5
-      },
-      "overlap_mm3": 16.73908782496108
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "P2-flowing-head-left-INTEGRAL-OUTLET",
-      "pose": {
-        "sample": 13,
-        "yshift_mm": -4,
-        "zshift_mm": -5
-      },
-      "overlap_mm3": 7.090146829849783
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "P2-flowing-head-right-INTEGRAL-OUTLET",
-      "pose": {
-        "sample": 13,
-        "yshift_mm": -4,
-        "zshift_mm": -5
-      },
-      "overlap_mm3": 59.78706881778707
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "Sensirion-SDP810-125Pa-vendor",
-      "pose": {
-        "sample": 14,
-        "yshift_mm": -4,
-        "zshift_mm": -6
-      },
-      "overlap_mm3": 17.216893560830247
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "P2-flowing-head-left-INTEGRAL-OUTLET",
-      "pose": {
-        "sample": 14,
-        "yshift_mm": -4,
-        "zshift_mm": -6
-      },
-      "overlap_mm3": 4.860080000000259
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "P2-flowing-head-right-INTEGRAL-OUTLET",
-      "pose": {
-        "sample": 14,
-        "yshift_mm": -4,
-        "zshift_mm": -6
-      },
-      "overlap_mm3": 35.60369623417484
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "Sensirion-SDP810-125Pa-vendor",
-      "pose": {
-        "sample": 15,
-        "yshift_mm": -4,
-        "zshift_mm": -7
-      },
-      "overlap_mm3": 19.80961207210592
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "P2-flowing-head-left-INTEGRAL-OUTLET",
-      "pose": {
-        "sample": 15,
-        "yshift_mm": -4,
-        "zshift_mm": -7
-      },
-      "overlap_mm3": 1.6971325000000654
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "P2-flowing-head-right-INTEGRAL-OUTLET",
-      "pose": {
-        "sample": 15,
-        "yshift_mm": -4,
-        "zshift_mm": -7
-      },
-      "overlap_mm3": 6.892008189421944
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "Sensirion-SDP810-125Pa-vendor",
-      "pose": {
-        "sample": 16,
-        "yshift_mm": -4,
-        "zshift_mm": -8
-      },
-      "overlap_mm3": 20.140437985810042
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "Sensirion-SDP810-125Pa-vendor",
-      "pose": {
-        "sample": 17,
-        "yshift_mm": -4,
-        "zshift_mm": -9
-      },
-      "overlap_mm3": 19.37143931884145
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "Sensirion-SDP810-125Pa-vendor",
-      "pose": {
-        "sample": 18,
-        "yshift_mm": -4,
-        "zshift_mm": -10
-      },
-      "overlap_mm3": 29.403924463652658
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "Sensirion-SDP810-125Pa-vendor",
-      "pose": {
-        "sample": 19,
-        "yshift_mm": -4,
-        "zshift_mm": -11
-      },
-      "overlap_mm3": 51.499527096911024
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "Sensirion-SDP810-125Pa-vendor",
-      "pose": {
-        "sample": 20,
-        "yshift_mm": -4,
-        "zshift_mm": -12
-      },
-      "overlap_mm3": 51.56780670544863
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "Sensirion-SDP810-125Pa-vendor",
-      "pose": {
-        "sample": 21,
-        "yshift_mm": -4,
-        "zshift_mm": -13
-      },
-      "overlap_mm3": 25.85847343175785
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "Sensirion-SDP810-125Pa-vendor",
-      "pose": {
-        "sample": 22,
-        "yshift_mm": -4,
-        "zshift_mm": -14
-      },
-      "overlap_mm3": 20.24407424085322
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "Sensirion-SDP810-125Pa-vendor",
-      "pose": {
-        "sample": 23,
-        "yshift_mm": -4,
-        "zshift_mm": -15
-      },
-      "overlap_mm3": 20.35978601207745
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "Sensirion-SDP810-125Pa-vendor",
-      "pose": {
-        "sample": 24,
-        "yshift_mm": -4,
-        "zshift_mm": -16
-      },
-      "overlap_mm3": 20.901327234717357
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "Sensirion-SDP810-125Pa-vendor",
-      "pose": {
-        "sample": 25,
-        "yshift_mm": -4,
-        "zshift_mm": -17
-      },
-      "overlap_mm3": 22.47498719953444
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "Sensirion-SDP810-125Pa-vendor",
-      "pose": {
-        "sample": 26,
-        "yshift_mm": -4,
-        "zshift_mm": -18
-      },
-      "overlap_mm3": 22.58674496247305
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "Sensirion-SDP810-125Pa-vendor",
-      "pose": {
-        "sample": 27,
-        "yshift_mm": -4,
-        "zshift_mm": -19
-      },
-      "overlap_mm3": 17.430630267876744
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "Sensirion-SDP810-125Pa-vendor",
-      "pose": {
-        "sample": 28,
-        "yshift_mm": -4,
-        "zshift_mm": -20
-      },
-      "overlap_mm3": 21.685063814893578
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "Sensirion-SDP810-125Pa-vendor",
-      "pose": {
-        "sample": 29,
-        "yshift_mm": -4,
-        "zshift_mm": -21
-      },
-      "overlap_mm3": 23.02583636461744
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "Sensirion-SDP810-125Pa-vendor",
-      "pose": {
-        "sample": 30,
-        "yshift_mm": -4,
-        "zshift_mm": -22
-      },
-      "overlap_mm3": 22.956799841890064
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "Sensirion-SDP810-125Pa-vendor",
-      "pose": {
-        "sample": 31,
-        "yshift_mm": -4,
-        "zshift_mm": -23
-      },
-      "overlap_mm3": 19.26831324825047
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "Sensirion-SDP810-125Pa-vendor",
-      "pose": {
-        "sample": 32,
-        "yshift_mm": -4,
-        "zshift_mm": -24
-      },
-      "overlap_mm3": 14.315280034426364
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "Sensirion-SDP810-125Pa-vendor",
-      "pose": {
-        "sample": 33,
-        "yshift_mm": -4,
-        "zshift_mm": -25
-      },
-      "overlap_mm3": 12.263833522993988
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "Sensirion-SDP810-125Pa-vendor",
-      "pose": {
-        "sample": 34,
-        "yshift_mm": -4,
-        "zshift_mm": -26
-      },
-      "overlap_mm3": 10.29912501721978
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "Sensirion-SDP810-125Pa-vendor",
-      "pose": {
-        "sample": 35,
-        "yshift_mm": -4,
-        "zshift_mm": -27
-      },
-      "overlap_mm3": 15.111642701013773
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "Sensirion-SDP810-125Pa-vendor",
-      "pose": {
-        "sample": 36,
-        "yshift_mm": -4,
-        "zshift_mm": -28
-      },
-      "overlap_mm3": 18.924588014959667
-    },
-    {
-      "kind": "screen_service",
-      "moving": "screen+cradle",
-      "fixed": "Sensirion-SDP810-125Pa-vendor",
-      "pose": {
-        "sample": 37,
-        "yshift_mm": -4,
-        "zshift_mm": -29
-      },
-      "overlap_mm3": 9.442092305593878
-    }
-  ],
+  "issues": [],
   "panel_samples": 61,
   "maximum_panel_deg": 12.335538050940592,
   "servo_horn_deg": 31.041459625639078,
@@ -702,6 +19,8 @@
   "outside_height_volume_mm3": {},
   "wheel_rotation_plane": "XZ, parallel to screen",
   "rotor_nominal_radial_gap_mm": 1.0,
+  "screen_service_protocol": "Display alone forward +Y 50 mm after unplugging and removing bezel/lens and two PCB screws; cradle retained.",
+  "bounds_cache": "Computed once per immutable shape; strong references prevent identity reuse.",
   "maxima_mm3": {
     "REF-mechanism-upper_panel-open / REF-mechanism-upper_shaft": 0.0,
     "REF-mechanism-upper_panel-open / REF-mechanism-lower_shaft": 0.0,
@@ -1153,61 +472,64 @@
     "horizontal-encoder-thumbwheel-development / P2-replaceable-TPU-desk-feet": 0.0,
     "horizontal-encoder-thumbwheel-development / P2-flowing-head-left-INTEGRAL-OUTLET": 0.0,
     "horizontal-encoder-thumbwheel-development / P2-flowing-head-right-INTEGRAL-OUTLET": 0.0,
-    "screen+cradle / REF-mechanism-upper_panel-open": 0.0,
-    "screen+cradle / REF-mechanism-lower_panel-open": 0.0,
-    "screen+cradle / REF-mechanism-upper_crank-open": 0.0,
-    "screen+cradle / REF-mechanism-lower_crank-open": 0.0,
-    "screen+cradle / REF-mechanism-yoke-open": 0.0,
-    "screen+cradle / REF-mechanism-rod-open": 0.0,
-    "screen+cradle / REF-mechanism-horn-open": 0.0,
-    "screen+cradle / REF-mechanism-upper_shaft": 0.0,
-    "screen+cradle / REF-mechanism-lower_shaft": 0.0,
-    "screen+cradle / REF-mechanism-upper_retaining_spacer": 0.0,
-    "screen+cradle / REF-mechanism-lower_retaining_spacer": 0.0,
-    "screen+cradle / REF-mechanism-upper_left_collar": 0.0,
-    "screen+cradle / REF-mechanism-lower_left_collar": 0.0,
-    "screen+cradle / REF-mechanism-upper_right_collar": 0.0,
-    "screen+cradle / REF-mechanism-lower_right_collar": 0.0,
-    "screen+cradle / servo-slotted-bracket-development": 0.0,
-    "screen+cradle / REF-FS90-FB-family-envelope-UNVERIFIED": 0.0,
-    "screen+cradle / P2-150mm-rotor-installed-TEST-ONLY": 0.0,
-    "screen+cradle / REF-P2406-manufacturer-envelope-seat-UNVERIFIED": 0.0,
-    "screen+cradle / P2-rigid-motor-carrier-PCD16": 0.0,
-    "screen+cradle / P2-TPU-carrier-isolation-ring": 0.0,
-    "screen+cradle / P2-seven-curved-vane-stator-TRIAL": 0.0,
-    "screen+cradle / P2-R12-bellmouth-insert": 0.0,
-    "screen+cradle / P2-fixed-rear-inlet-guard": 0.0,
-    "screen+cradle / P2-fixed-front-finger-guard": 0.0,
-    "screen+cradle / REF-head-D42-magnet--55--40": 0.0,
-    "screen+cradle / REF-grille-D42-magnet--55--40": 0.0,
-    "screen+cradle / REF-head-D42-magnet--55-40": 0.0,
-    "screen+cradle / REF-grille-D42-magnet--55-40": 0.0,
-    "screen+cradle / REF-head-D42-magnet-55--40": 0.0,
-    "screen+cradle / REF-grille-D42-magnet-55--40": 0.0,
-    "screen+cradle / REF-head-D42-magnet-55-40": 0.0,
-    "screen+cradle / REF-grille-D42-magnet-55-40": 0.0,
-    "screen+cradle / P2-fixed-magnet-seat-frame": 0.0,
-    "screen+cradle / head-magnet-retaining-ring-development": 0.0,
-    "screen+cradle / grille-magnet-retaining-ring-development": 0.0,
-    "screen+cradle / magnetic-front-cleaning-grille-development": 0.0,
-    "screen+cradle / horizontal-encoder-thumbwheel-development": 0.0,
-    "screen+cradle / REF-Bourns-PEC11H-drawing-envelope": 0.0,
-    "screen+cradle / encoder-daughterboard-P1-FR4": 0.0,
-    "screen+cradle / REF-M7x0p75-encoder-panel-nut": 0.0,
-    "screen+cradle / horizontal-encoder-mount-development": 0.0,
-    "screen+cradle / Raspberry-Pi-Pico-SC0915-vendor": 0.0,
-    "screen+cradle / Pololu-D24V22-5V-logic-vendor": 0.0,
-    "screen+cradle / Pololu-D24V22-5V-servo-vendor": 0.0,
-    "screen+cradle / Adafruit-HUSB238-5807-vendor": 0.0,
-    "screen+cradle / REF-A50S-V2p3c-envelope-UNVERIFIED": 0.0,
-    "screen+cradle / MCP9808-temp1-Adafruit1782-vendor": 0.0,
-    "screen+cradle / MCP9808-temp2-Adafruit1782-vendor": 0.0,
-    "screen+cradle / Sensirion-SDP810-125Pa-vendor": 51.56780670544863,
-    "screen+cradle / Adafruit-NeoPixel-1426-ambient-vendor": 0.0,
-    "screen+cradle / P2-low-structural-plinth": 0.0,
-    "screen+cradle / P2-replaceable-TPU-desk-feet": 0.0,
-    "screen+cradle / P2-flowing-head-left-INTEGRAL-OUTLET": 179.02773541718636,
-    "screen+cradle / P2-flowing-head-right-INTEGRAL-OUTLET": 282.688927444143,
+    "screen module / REF-mechanism-upper_panel-open": 0.0,
+    "screen module / REF-mechanism-lower_panel-open": 0.0,
+    "screen module / REF-mechanism-upper_crank-open": 0.0,
+    "screen module / REF-mechanism-lower_crank-open": 0.0,
+    "screen module / REF-mechanism-yoke-open": 0.0,
+    "screen module / REF-mechanism-rod-open": 0.0,
+    "screen module / REF-mechanism-horn-open": 0.0,
+    "screen module / REF-mechanism-upper_shaft": 0.0,
+    "screen module / REF-mechanism-lower_shaft": 0.0,
+    "screen module / REF-mechanism-upper_retaining_spacer": 0.0,
+    "screen module / REF-mechanism-lower_retaining_spacer": 0.0,
+    "screen module / REF-mechanism-upper_left_collar": 0.0,
+    "screen module / REF-mechanism-lower_left_collar": 0.0,
+    "screen module / REF-mechanism-upper_right_collar": 0.0,
+    "screen module / REF-mechanism-lower_right_collar": 0.0,
+    "screen module / servo-slotted-bracket-development": 0.0,
+    "screen module / REF-FS90-FB-family-envelope-UNVERIFIED": 0.0,
+    "screen module / P2-150mm-rotor-installed-TEST-ONLY": 0.0,
+    "screen module / REF-P2406-manufacturer-envelope-seat-UNVERIFIED": 0.0,
+    "screen module / P2-rigid-motor-carrier-PCD16": 0.0,
+    "screen module / P2-TPU-carrier-isolation-ring": 0.0,
+    "screen module / P2-seven-curved-vane-stator-TRIAL": 0.0,
+    "screen module / P2-R12-bellmouth-insert": 0.0,
+    "screen module / P2-fixed-rear-inlet-guard": 0.0,
+    "screen module / P2-fixed-front-finger-guard": 0.0,
+    "screen module / REF-head-D42-magnet--55--40": 0.0,
+    "screen module / REF-grille-D42-magnet--55--40": 0.0,
+    "screen module / REF-head-D42-magnet--55-40": 0.0,
+    "screen module / REF-grille-D42-magnet--55-40": 0.0,
+    "screen module / REF-head-D42-magnet-55--40": 0.0,
+    "screen module / REF-grille-D42-magnet-55--40": 0.0,
+    "screen module / REF-head-D42-magnet-55-40": 0.0,
+    "screen module / REF-grille-D42-magnet-55-40": 0.0,
+    "screen module / P2-fixed-magnet-seat-frame": 0.0,
+    "screen module / head-magnet-retaining-ring-development": 0.0,
+    "screen module / grille-magnet-retaining-ring-development": 0.0,
+    "screen module / magnetic-front-cleaning-grille-development": 0.0,
+    "screen module / display-removable-cradle-development": 0.0,
+    "screen module / horizontal-encoder-thumbwheel-development": 0.0,
+    "screen module / REF-Bourns-PEC11H-drawing-envelope": 0.0,
+    "screen module / encoder-daughterboard-P1-FR4": 0.0,
+    "screen module / REF-M7x0p75-encoder-panel-nut": 0.0,
+    "screen module / horizontal-encoder-mount-development": 0.0,
+    "screen module / Raspberry-Pi-Pico-SC0915-vendor": 0.0,
+    "screen module / Pololu-D24V22-5V-logic-vendor": 0.0,
+    "screen module / Pololu-D24V22-5V-servo-vendor": 0.0,
+    "screen module / Adafruit-HUSB238-5807-vendor": 0.0,
+    "screen module / REF-A50S-V2p3c-envelope-UNVERIFIED": 0.0,
+    "screen module / MCP9808-temp1-Adafruit1782-vendor": 0.0,
+    "screen module / MCP9808-temp2-Adafruit1782-vendor": 0.0,
+    "screen module / Sensirion-SDP810-125Pa-vendor": 0.0,
+    "screen module / Adafruit-NeoPixel-1426-ambient-vendor": 0.0,
+    "screen module / P2-low-structural-plinth": 0.0,
+    "screen module / P2-bottom-electronics-service-tray": 0.0,
+    "screen module / P2-downward-ambient-diffuser": 0.0,
+    "screen module / P2-replaceable-TPU-desk-feet": 0.0,
+    "screen module / P2-flowing-head-left-INTEGRAL-OUTLET": 0.0,
+    "screen module / P2-flowing-head-right-INTEGRAL-OUTLET": 0.0,
     "P2-150mm-rotor-installed-TEST-ONLY / REF-mechanism-upper_panel-open": 0.0,
     "P2-150mm-rotor-installed-TEST-ONLY / REF-mechanism-lower_panel-open": 0.0,
     "P2-150mm-rotor-installed-TEST-ONLY / REF-mechanism-upper_crank-open": 0.0,
@@ -1574,7 +896,8 @@
     ]
   },
   "input_sha256": {
-    "cad\\rev_d_motion.py": "0b966f3060d4291b726de91d2f5818e56d9e375e2b2ef4a7edbfd485eb525d63",
+    "cad\\rev_d_motion.py": "596249d063b413aca93e2779203f91b2454891443dd1de06039696135a5f99e5",
+    "cad\\rev_d_front_service.py": "0dae4fbc211d4fe4ea8b8706630bb761a2a4100e28d9ec95860af1caecf0b959",
     "cad\\rev_d\\stage-validation.json": "614bd693b12eff3113aa81d384297961dffd92ff30c08794240d92e5d4046124",
     "cad\\rev_d\\head-parameters.json": "38f967004bf9ef99db1bc5b4276ac8524c9b5f6313d8e6f17748cefd82b7dc92",
     "cad\\rev_d\\rotor-validation.json": "12f048d8df41056d43c73bc4b4f233d1f272fc014f3c074787c3829ee753ecc7",
@@ -1644,7 +967,7 @@
     "cad\\rev_d\\P2-flowing-head-right-INTEGRAL-OUTLET.step": "25c345a9ce2caea5bbab375ead7e6e81feddf422315964abbf6bcd0353a777b5"
   },
   "source_matched_resume": {
-    "signature": "7498d4805c05b2b34fb19fd31f29eb3c80b25c72feb271db7dfc38a3bf7d1ff1",
+    "signature": "d325d17c66f40b140f4277679bfc072dd42e126c237995839250f2cae4b658fd",
     "reused_samples": {
       "boost": 0,
       "wheel": 0,
@@ -1652,6 +975,7 @@
       "rotor": 0
     }
   },
+  "progress_cache_policy": "Disposable progress outside the synced checkout; failed cache writes do not skip validation.",
   "limits": [
     "61 sampled boost poses; nominal geometry, no continuous or tolerance-extreme guarantee for the linkage.",
     "Servo spline/body pair is an intended supplier interface, not validated clearance.",

@@ -5,22 +5,35 @@ The rotor swept annulus is a conservative continuous clearance envelope.
 """
 from pathlib import Path
 from datetime import datetime, timezone
-import hashlib, json, math
+import hashlib, json, math, os, tempfile
 import cadquery as cq
 import time
+if __package__:
+    from .rev_d_front_service import SCREEN, REMOVED, positions
+else:
+    from rev_d_front_service import SCREEN, REMOVED, positions
 
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'cad/rev_d'
 
 def digest(path): return hashlib.sha256(path.read_bytes()).hexdigest()
 
+_bounds_cache={}
+def bounds(shape):
+    # Transforms and Boolean results create new shapes. Keep strong references
+    # alongside cached bounds so Python cannot recycle an object's id.
+    key=id(shape)
+    if key not in _bounds_cache:_bounds_cache[key]=(shape,shape.BoundingBox())
+    return _bounds_cache[key][1]
+
 def overlap(a,b):
-    aa,bb=a.BoundingBox(),b.BoundingBox()
+    aa,bb=bounds(a),bounds(b)
     if any(getattr(aa,k+'max')<=getattr(bb,k+'min')+1e-6 or
            getattr(bb,k+'max')<=getattr(aa,k+'min')+1e-6 for k in 'xyz'): return 0.
     return max(0.,a.intersect(b).Volume())
 
 def run():
+    _bounds_cache.clear()
     report=json.loads((OUT/'stage-validation.json').read_text())
     assert report['result']=='PASS', 'Resolve nominal collisions first'
     assert json.loads((OUT/'stage-build-state.json').read_text())['status']=='PASS'
@@ -49,17 +62,22 @@ def run():
     static={n:s for n,s in shapes.items() if n not in moving_names and n!=wheel_name}
     issues=[];counts={'mechanism_fixed':0,'mechanism_moving':0,'wheel_press':0,'screen_service':0,'rotor_swept_envelope':0}
     maxima={};coupling=[]
-    sources=[Path(__file__),OUT/'stage-validation.json',OUT/'head-parameters.json',
+    sources=[Path(__file__),Path(__file__).with_name('rev_d_front_service.py'),OUT/'stage-validation.json',OUT/'head-parameters.json',
              OUT/'rotor-validation.json',OUT/'rotor-parameters.json']
     input_hashes={str(q.relative_to(ROOT)):digest(q) for q in sources}
     geometry_hashes={str((OUT/(n+'.step')).relative_to(ROOT)):digest(OUT/(n+'.step')) for n in shapes}
     signature=hashlib.sha256(json.dumps({'source':input_hashes,'geometry':geometry_hashes},sort_keys=True).encode()).hexdigest()
-    cache_path=ROOT/'build/rev-d-cad/motion-check-progress.json'
+    # Progress is disposable. Keep its frequently replaced file outside the
+    # iCloud checkout so a sync-provider lock cannot stop geometry validation.
+    workspace_key=hashlib.sha256(str(ROOT).casefold().encode()).hexdigest()[:12]
+    local_base=Path(os.environ.get('LOCALAPPDATA') or tempfile.gettempdir())
+    cache_path=local_base/'Windflow/cad-check-cache'/workspace_key/'motion-check-progress.json'
     cache_path.parent.mkdir(parents=True,exist_ok=True)
     done={k:set() for k in ('boost','wheel','screen','rotor')}
     reused={k:0 for k in done}
     if cache_path.exists():
-        cache=json.loads(cache_path.read_text())
+        try:cache=json.loads(cache_path.read_text())
+        except (OSError,ValueError):cache={}
         if cache.get('signature')==signature:
             done={k:set(cache['done'][k]) for k in done}
             reused={k:len(v) for k,v in done.items()}
@@ -71,7 +89,12 @@ def run():
                'issues':issues,'counts':counts,'maxima':maxima,'coupling':coupling,
                'updated_utc':datetime.now(timezone.utc).isoformat()}
         temporary=cache_path.with_suffix('.tmp')
-        temporary.write_text(json.dumps(cache,indent=2)+'\n');temporary.replace(cache_path)
+        try:
+            temporary.write_text(json.dumps(cache,indent=2)+'\n');temporary.replace(cache_path)
+        except OSError as error:
+            # Never turn an optional checkpoint failure into a geometry pass
+            # or stop the checks. The final report still requires all samples.
+            print('PROGRESS CACHE UNAVAILABLE; checks continue:',type(error).__name__,flush=True)
     local_fixed={}
     envelopes={}
     def check(kind,label,a,n,b,pose):
@@ -151,19 +174,16 @@ def run():
             checkpoint('wheel',index)
             print('WHEEL COMPLETE',index,'/95',flush=True)
     print('WHEEL CHECKED',counts['wheel_press'],flush=True)
-    # Unplug and remove bezel/lens and bottom tray before sliding the screen
-    # rearward 4 mm and down. No connected cable or screwdriver claim.
-    screen_names={'REF-Adafruit-4311-IPS-vendor','display-removable-cradle-development'}
-    service_removed=screen_names|{'REF-clear-display-lens-45x34p4','display-front-bezel-development',
-                                'P2-bottom-electronics-service-tray','P2-downward-ambient-diffuser'}
-    screen=cq.Compound.makeCompound([shapes[n] for n in screen_names])
-    for i,(ys,zs) in enumerate([(-i*.5,0) for i in range(9)]+[(-4,-i) for i in range(1,71)]):
+    # Unplug through bottom service access, then remove bezel/lens and the
+    # two PCB screws. Pull the display alone forward; its cradle stays inside.
+    # Keeping tray/diffuser in the collision test is conservative. No wire or
+    # screwdriver clearance is claimed by this rigid-body path check.
+    for i,sample,pose in positions(shapes[SCREEN]):
         if i in done['screen']:continue
-        sample=screen.translate((0,ys,zs))
         for n,fixed in shapes.items():
-            if n not in service_removed:check('screen_service','screen+cradle',sample,n,fixed,{'sample':i,'yshift_mm':ys,'zshift_mm':zs})
+            if n not in REMOVED:check('screen_service','screen module',sample,n,fixed,pose)
         checkpoint('screen',i)
-        print('SCREEN SERVICE COMPLETE',i,'/78',flush=True)
+        print('SCREEN SERVICE COMPLETE',i,'/50',flush=True)
     print('SCREEN SERVICE CHECKED',counts['screen_service'],flush=True)
     seat=p['motor_prop_seat_y_assumed_mm']
     rotor_report=json.loads((OUT/'rotor-validation.json').read_text())
@@ -182,10 +202,13 @@ def run():
             'minimum_gross_outlet_ratio':p['minimum_gross_outlet_ratio'],'bezel_to_wheel_gap_mm':gap,
             'exact_height_envelope_mm':p['target_product_height_mm'],'outside_height_volume_mm3':outside_height,
             'wheel_rotation_plane':'XZ, parallel to screen','rotor_nominal_radial_gap_mm':(p['throat_diameter_mm']-p['rotor_diameter_mm'])/2,
+            'screen_service_protocol':'Display alone forward +Y 50 mm after unplugging and removing bezel/lens and two PCB screws; cradle retained.',
+            'bounds_cache':'Computed once per immutable shape; strong references prevent identity reuse.',
             'maxima_mm3':maxima,'intentional_supplier_horn_interface':coupling,
             'sampled_motion_envelopes_xyz_mm':envelopes,
             'input_sha256':input_hashes,'geometry_sha256':geometry_hashes,
             'source_matched_resume':{'signature':signature,'reused_samples':reused},
+            'progress_cache_policy':'Disposable progress outside the synced checkout; failed cache writes do not skip validation.',
             'limits':['61 sampled boost poses; nominal geometry, no continuous or tolerance-extreme guarantee for the linkage.',
                       'Servo spline/body pair is an intended supplier interface, not validated clearance.',
                       'Encoder body excluded from wheel sweep because shaft couples and translates; nominal case and nut included in stage check.',
