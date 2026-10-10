@@ -1,0 +1,345 @@
+{
+  "result": "PASS",
+  "generated_utc": "2026-10-10T11:54:54.607401+00:00",
+  "physical_qualification": false,
+  "path": "cad\\rev_d\\Windflow-Rev-D-150mm-integration-2026-10-09.step",
+  "sha256": "839471a169c7f592f6566e96f88d6ae19d7cd628496399fede19ecd7c1d59fe6",
+  "bytes": 42538154,
+  "named_part_groups": 61,
+  "round_trip_solids": 161,
+  "round_trip_volume_difference_mm3": 0.025959230726584792,
+  "components": [
+    {
+      "name": "REF-mechanism-upper_panel-open",
+      "solid_count": 1,
+      "source_sha256": "fe815b602ecf9903bc7147f8d6ee912b2ef66bb6535e986bd99b52295d122a14"
+    },
+    {
+      "name": "REF-mechanism-lower_panel-open",
+      "solid_count": 1,
+      "source_sha256": "64949e6c5892dad299ff34fb65454d4a8631dd8ea7bf88058493e281dea56d53"
+    },
+    {
+      "name": "REF-mechanism-upper_crank-open",
+      "solid_count": 1,
+      "source_sha256": "ec0fb48ac636aaa4b7c91b43cdef49f082707a3e7552f8457b49c674668884e3"
+    },
+    {
+      "name": "REF-mechanism-lower_crank-open",
+      "solid_count": 1,
+      "source_sha256": "0adce50a032b331461bf3d3fb06c964dc9d0d9745e738ec7004881dc073711aa"
+    },
+    {
+      "name": "REF-mechanism-yoke-open",
+      "solid_count": 1,
+      "source_sha256": "27a9b2d68b94ea49f3a6f4ef6115dba7eefb177da0805ced3b44b550af7fc8a9"
+    },
+    {
+      "name": "REF-mechanism-rod-open",
+      "solid_count": 1,
+      "source_sha256": "f6dd336e7956b95897c109742d9818550cdf30a39bfd42403ac281a723c64cdb"
+    },
+    {
+      "name": "REF-mechanism-horn-open",
+      "solid_count": 1,
+      "source_sha256": "0aaaf18185a86200f38a1a7f27ba0c85c7245d47c4a790da900368f8c89b90c5"
+    },
+    {
+      "name": "REF-mechanism-upper_shaft",
+      "solid_count": 1,
+      "source_sha256": "5134a822da603bdac55ae894290224cf1ce583e5446bcb5f3da095bebbf1c31e"
+    },
+    {
+      "name": "REF-mechanism-lower_shaft",
+      "solid_count": 1,
+      "source_sha256": "c8d22fcdfea7940c9982bfc6a7f8d7819937cb069482b14a819ffff757160e58"
+    },
+    {
+      "name": "REF-mechanism-upper_retaining_spacer",
+      "solid_count": 1,
+      "source_sha256": "95151ef1231f1ad2e92fb610e09f1ff5e3a914536f67d2ccc3e51536371c198f"
+    },
+    {
+      "name": "REF-mechanism-lower_retaining_spacer",
+      "solid_count": 1,
+      "source_sha256": "28edce7c0e697313ff483b07f97700a671a10bec9d7708723b0751f9480e05b8"
+    },
+    {
+      "name": "REF-mechanism-upper_left_collar",
+      "solid_count": 1,
+      "source_sha256": "c4f6dd937435a779e5ea08770e06132b96454d7f335100af69d26d549551eefd"
+    },
+    {
+      "name": "REF-mechanism-lower_left_collar",
+      "solid_count": 1,
+      "source_sha256": "b560d7679ee27b20e9b1077be40b843f41f4247be1638a258cb8080b2a087c3f"
+    },
+    {
+      "name": "REF-mechanism-upper_right_collar",
+      "solid_count": 1,
+      "source_sha256": "280ce6577c51ffefa4a6a55e6fc5a7e35c826086e2a1122b12724d0efc21b3a9"
+    },
+    {
+      "name": "REF-mechanism-lower_right_collar",
+      "solid_count": 1,
+      "source_sha256": "0521fef9f24944646951095b7d261a8aabb0261115e1de079497effd5fd6e05e"
+    },
+    {
+      "name": "servo-slotted-bracket-development",
+      "solid_count": 1,
+      "source_sha256": "7516b3195e9204999693145fe61d342d8a675de578178164dde2b95b13dd64b2"
+    },
+    {
+      "name": "REF-FS90-FB-family-envelope-UNVERIFIED",
+      "solid_count": 1,
+      "source_sha256": "6cae39524c85e3d8610ae25d2ee30a04db1a65d89be56b414bccb4ee2af7bf92"
+    },
+    {
+      "name": "P2-150mm-rotor-installed-TEST-ONLY",
+      "solid_count": 1,
+      "source_sha256": "60a26234d500e17a3e3ee6c7ad06a1d0fa4282f0119039f8a2e1410efa36f092"
+    },
+    {
+      "name": "REF-P2406-manufacturer-envelope-seat-UNVERIFIED",
+      "solid_count": 1,
+      "source_sha256": "8add0a5fbfa265149dff223943108710ee87ebe6efa321773b66ebdbc7968b15"
+    },
+    {
+      "name": "P2-rigid-motor-carrier-PCD16",
+      "solid_count": 1,
+      "source_sha256": "3c9b8cc3252a1a4b34996b0bf7490e292696a7446d3aa7ddc6e83786c75e6de0"
+    },
+    {
+      "name": "P2-TPU-carrier-isolation-ring",
+      "solid_count": 1,
+      "source_sha256": "b573b61fa4471c3f371ab7947b64a7134fe1f13821465660fd1593599ba4cafe"
+    },
+    {
+      "name": "P2-seven-curved-vane-stator-TRIAL",
+      "solid_count": 1,
+      "source_sha256": "f66115bbb6e621e5b1a8077d4c551018e7db46adf52a5fa696e546c37b0d8e45"
+    },
+    {
+      "name": "P2-R12-bellmouth-insert",
+      "solid_count": 1,
+      "source_sha256": "eff6c7b6017ce863232af339cb4941a03ee87d79f6503f8a1df79baaf08c956e"
+    },
+    {
+      "name": "P2-fixed-rear-inlet-guard",
+      "solid_count": 1,
+      "source_sha256": "58e04d69d6f4f7b0060bcb9d67c31f3f62be4bc8c8d5a32ec286b6c060d13c42"
+    },
+    {
+      "name": "P2-fixed-front-finger-guard",
+      "solid_count": 1,
+      "source_sha256": "0c8e79c87bab706826f751b33ff01a507027798ce97d249321b439ca4c4502e6"
+    },
+    {
+      "name": "REF-head-D42-magnet--55--40",
+      "solid_count": 1,
+      "source_sha256": "241e4422be6cecad730aad1d97e235a4634ecf81e79ac6fb7b3cfe4859ed573c"
+    },
+    {
+      "name": "REF-grille-D42-magnet--55--40",
+      "solid_count": 1,
+      "source_sha256": "9c7424a3208f7a12cdabfcca30c53d17f07e52ee02cdada7f0040738e4f17374"
+    },
+    {
+      "name": "REF-head-D42-magnet--55-40",
+      "solid_count": 1,
+      "source_sha256": "11a7d5bd6d0df044a5daa97eb5c3baaebd4c5955f0c619edfd5a61d82e2e1489"
+    },
+    {
+      "name": "REF-grille-D42-magnet--55-40",
+      "solid_count": 1,
+      "source_sha256": "717e6e9b3fa8959633f8f0190e0bae63571d88e208d3bd50b90facdb4b4e1ea7"
+    },
+    {
+      "name": "REF-head-D42-magnet-55--40",
+      "solid_count": 1,
+      "source_sha256": "0122b086c6bae39fbf41e2caa5d2d35efd57e91c0348e7a12da74bd80e9e88c7"
+    },
+    {
+      "name": "REF-grille-D42-magnet-55--40",
+      "solid_count": 1,
+      "source_sha256": "df1436c5418f39e974e492029829b9e74b73465a276cc09d0abfa64facc7ff65"
+    },
+    {
+      "name": "REF-head-D42-magnet-55-40",
+      "solid_count": 1,
+      "source_sha256": "dd97b7f09bb66d581261803eadc78450834d97f32152c1dc91665085d63b1504"
+    },
+    {
+      "name": "REF-grille-D42-magnet-55-40",
+      "solid_count": 1,
+      "source_sha256": "cb0e5eaf6c799f20d5fe253dfa967f369839c326555cc9708a56b11c1bbddfa3"
+    },
+    {
+      "name": "P2-fixed-magnet-seat-frame",
+      "solid_count": 1,
+      "source_sha256": "ed93d9c187e6687cef71509aaec48cc77288bf3ecb5b2f2d14aa768b929c2cfe"
+    },
+    {
+      "name": "head-magnet-retaining-ring-development",
+      "solid_count": 1,
+      "source_sha256": "eeec87c16c86fe30658a042bd17c0ac1766e0d02dbe88c65094373cdf15f1293"
+    },
+    {
+      "name": "grille-magnet-retaining-ring-development",
+      "solid_count": 1,
+      "source_sha256": "ace483fcfd9b5730f0c2056e5c8c467a026d9b67c1eae0ca7cbc8e190211af3b"
+    },
+    {
+      "name": "magnetic-front-cleaning-grille-development",
+      "solid_count": 1,
+      "source_sha256": "c9a8f248d768cb9989f3f25e17dc18af68324c8f58689274976dcd984bf08019"
+    },
+    {
+      "name": "REF-Adafruit-4311-IPS-vendor",
+      "solid_count": 15,
+      "source_sha256": "b7fbaaa55e1552d0aa731d02667dd24241ce807146d33aed40812e686296350f"
+    },
+    {
+      "name": "REF-clear-display-lens-45x34p4",
+      "solid_count": 1,
+      "source_sha256": "29894648758aba27de89fe185b91d242410c6d220ad0d901fd5443521d386134"
+    },
+    {
+      "name": "display-removable-cradle-development",
+      "solid_count": 1,
+      "source_sha256": "c73391c3cec737492cbbb8ace50ae717b5abbb96401a663ff7cb0ef9d14acb83"
+    },
+    {
+      "name": "display-front-bezel-development",
+      "solid_count": 1,
+      "source_sha256": "ed91286363508c0c4b18eae4f4e3cc7630c7b2e0e6db770641be8e0aa6f4f402"
+    },
+    {
+      "name": "horizontal-encoder-thumbwheel-development",
+      "solid_count": 1,
+      "source_sha256": "188060ea2df17f3cce545ad42a78b06d86f46d41f0e789a6341d95de6edb8847"
+    },
+    {
+      "name": "REF-Bourns-PEC11H-drawing-envelope",
+      "solid_count": 1,
+      "source_sha256": "849e60ede10c852b8bd201422b086c2e51f523984e194255de5ee22c65f829b8"
+    },
+    {
+      "name": "encoder-daughterboard-P1-FR4",
+      "solid_count": 1,
+      "source_sha256": "ce456dfff6dc8a653d2022505537efe83acb6479e2bc9fc2fd43aaf6144229a9"
+    },
+    {
+      "name": "REF-M7x0p75-encoder-panel-nut",
+      "solid_count": 1,
+      "source_sha256": "c02b7ce5629225b98ec5cb0b7a2d56f141c2aff645530819ec18f4697a710652"
+    },
+    {
+      "name": "horizontal-encoder-mount-development",
+      "solid_count": 1,
+      "source_sha256": "a374c2ed5b2e0beccb0b755154c726e09d539428d8fd4d6fb145af2dec376dca"
+    },
+    {
+      "name": "Raspberry-Pi-Pico-SC0915-vendor",
+      "solid_count": 17,
+      "source_sha256": "05883292d9cbf9a7b07a78b7775487855cacd39d62714f2318c53b9a7a746178"
+    },
+    {
+      "name": "Pololu-D24V22-5V-logic-vendor",
+      "solid_count": 1,
+      "source_sha256": "9066e333a4aeeb060090ff227d51ed4550668a8934b274683e2dbdfdcab9efeb"
+    },
+    {
+      "name": "Pololu-D24V22-5V-servo-vendor",
+      "solid_count": 1,
+      "source_sha256": "bd83dca77e22bad10ee60ed6e177678f1300dd16c8b066b295cae1e25003493b"
+    },
+    {
+      "name": "Adafruit-HUSB238-5807-vendor",
+      "solid_count": 34,
+      "source_sha256": "d39d9399619872e86e8f3718fde8afa6a58df618372f6ded491694fc2d22d631"
+    },
+    {
+      "name": "REF-A50S-V2p3c-envelope-UNVERIFIED",
+      "solid_count": 1,
+      "source_sha256": "f310135d68e4ae43e8ed7871c51c914c9a75b67cbe3e7bc9308a1456a731d46f"
+    },
+    {
+      "name": "MCP9808-temp1-Adafruit1782-vendor",
+      "solid_count": 18,
+      "source_sha256": "5c663abe969b5107f837aeaca36017032ea4b4bbdb88024fe0409bf1e82b0e45"
+    },
+    {
+      "name": "MCP9808-temp2-Adafruit1782-vendor",
+      "solid_count": 18,
+      "source_sha256": "8a17ce37cb16852c7d07fa3cd6cae98db2de6091cd330e14b9c3603ca6a3360b"
+    },
+    {
+      "name": "Sensirion-SDP810-125Pa-vendor",
+      "solid_count": 1,
+      "source_sha256": "290d562ccce9efd13992e7c5395ededc5da22d3d7b7d285c053eeaabf469e96c"
+    },
+    {
+      "name": "Adafruit-NeoPixel-1426-ambient-vendor",
+      "solid_count": 1,
+      "source_sha256": "d67fd69bd419b340cfafe1319bb5b8453497931c0e0f5479aa34c378bd8883e2"
+    },
+    {
+      "name": "P2-low-structural-plinth",
+      "solid_count": 1,
+      "source_sha256": "e7e6ec04fbf25ac3d0574fd28f7cbf2b9313a6df188a45531e8602b3dc841f83"
+    },
+    {
+      "name": "P2-bottom-electronics-service-tray",
+      "solid_count": 1,
+      "source_sha256": "8029cb9eae5889212e95d7d1d57258f5ac505193a99c75c5eee37f55832b46d8"
+    },
+    {
+      "name": "P2-downward-ambient-diffuser",
+      "solid_count": 1,
+      "source_sha256": "68d4d235dbed9a0a8ad01149fe23fdb4a7ba64d181b8d86c2b3f6d1b80e5734c"
+    },
+    {
+      "name": "P2-replaceable-TPU-desk-feet",
+      "solid_count": 4,
+      "source_sha256": "dcc3372c6e6f06548581ccc14ae1cf781e547704d49a233650b18b9b06c7445a"
+    },
+    {
+      "name": "P2-flowing-head-left-INTEGRAL-OUTLET",
+      "solid_count": 1,
+      "source_sha256": "fcb160b20cd83d650dae7eaf66bd3cd511c8fdcb124e2423b72be83342f1fa99"
+    },
+    {
+      "name": "P2-flowing-head-right-INTEGRAL-OUTLET",
+      "solid_count": 1,
+      "source_sha256": "25c345a9ce2caea5bbab375ead7e6e81feddf422315964abbf6bcd0353a777b5"
+    }
+  ],
+  "excluded_alternative_and_reserves": [
+    "P2-stator-open-comparison-spacer",
+    "REF-main-PCB-population-and-loom-reserve-NOT-INTEGRATED"
+  ],
+  "firmware_profile": {
+    "rotor_diameter_mm": 150.0,
+    "rotor_article_sha256": "bf5fd64690b8edc7ecac47ac38f1be2bf501f899b063052fc26b7126a108bae2",
+    "settings_schema": 5,
+    "distributed_motion_inhibited": true,
+    "approved_operating_rpm": null,
+    "uf2_sha256": "214637bc161236e2a0032e339d5625ecabb6ba90695852367b52841f2deb23e1"
+  },
+  "input_sha256": {
+    "cad\\rev_d_export.py": "a011931b69e412a35b58d0dbf5c4c80314e32297390ca3d4029a24458e20ee2e",
+    "cad\\rev_d\\stage-validation.json": "614bd693b12eff3113aa81d384297961dffd92ff30c08794240d92e5d4046124",
+    "cad\\rev_d\\motion-validation.json": "e1ba9f3ac0211d0f4c4f04992f8f2eb2ff564e2d1453a4605aef8302faaf7f36",
+    "cad\\rev_d\\rotor-validation.json": "12f048d8df41056d43c73bc4b4f233d1f272fc014f3c074787c3829ee753ecc7",
+    "cad\\rev_d\\mesh-validation.json": "20c08072b8b4d7e784a00facce7f12381bc4a8033e68a1652355bf6bc37c048a",
+    "firmware\\WindflowRevC\\validation.json": "2578b1f681e7da6b8cbee4635829762c54a87885a9e28909178eb40686aa2edd",
+    "firmware\\WindflowRevC\\Config.h": "258d5bd0ad49b82ad02d8c1a5ffbd007abc239bb3eb09273e15ded1cbdb3372a",
+    "firmware\\dist\\rev-c\\WindflowRevC.ino.uf2": "214637bc161236e2a0032e339d5625ecabb6ba90695852367b52841f2deb23e1"
+  },
+  "limits": [
+    "Development STEP hierarchy has no native assembly mates.",
+    "Main PCB, connected harness, pressure plumbing, interlock and all fasteners are unfinished integration.",
+    "Rotor/servo/ESC physical qualification remains required; this is not an operating or production release."
+  ]
+}
