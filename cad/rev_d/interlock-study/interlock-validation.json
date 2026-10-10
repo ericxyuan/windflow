@@ -1,0 +1,170 @@
+{
+  "result": "PASS",
+  "generated_utc": "2026-10-10T19:47:25.735793+00:00",
+  "physical_qualification": false,
+  "pair_checks": 1233,
+  "issues": [],
+  "switch_model": "Omron D2F-01L; primary drawing envelope",
+  "translation_y_mm": 116.60000000000002,
+  "case_center_xyz_mm": [
+    -60.2,
+    255.05,
+    18.4
+  ],
+  "actuator_face_y_mm": 259.85,
+  "grille_rear_y_mm": 267.6,
+  "mount_adjustment_y_mm": [
+    -2,
+    2
+  ],
+  "nominal_post_trip_mm": 0.25,
+  "additional_stop_travel_mm": 0.2,
+  "guaranteed_overtravel_min_mm": 0.55,
+  "tongue_root_embed_length_mm": 4.0,
+  "wire_trial_od_mm": 1.1,
+  "liner_trial_hole_mm": 1.2,
+  "raceway_shift_y_mm": -7.100000000000023,
+  "wire_routes": {
+    "COM": {
+      "wire_od_mm": 1.1,
+      "quarter_bend_input_mm": 14.0,
+      "sampled_minimum_centerline_radius_mm": 13.909057135825318,
+      "curvature_samples": 161,
+      "route_length_mm": 85.5222302058587,
+      "required_radius_for_max_selected_od_mm": 10.921999999999997
+    },
+    "NO": {
+      "wire_od_mm": 1.1,
+      "quarter_bend_input_mm": 14.0,
+      "sampled_minimum_centerline_radius_mm": 13.909057135826309,
+      "curvature_samples": 161,
+      "route_length_mm": 90.60223020585869,
+      "required_radius_for_max_selected_od_mm": 10.921999999999997
+    }
+  },
+  "wire_source": "https://www.alphawire.com/en/products/wire/hook-up-wire/premium/5853",
+  "parts": [
+    {
+      "name": "P2-flowing-head-left-INTEGRAL-OUTLET",
+      "sha256": "0301c9282bb5f9494cfc49be567a26efbbbde65d5f3839b4d5248de05b75557c",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "magnetic-front-cleaning-grille-development",
+      "sha256": "5f08691319e8773b86f9416f9aa7c6418ae5b16bad65030b21be1de3f0c7df9e",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "head-magnet-retaining-ring-development",
+      "sha256": "7462c4784f9882d76f4aa50616518223c1d3cf7795a21de354b89973a65b3447",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "grille-magnet-retaining-ring-development",
+      "sha256": "826a84d8c6bf14002d4dafe14dd832f63fddccb32e649ea06aa2e8e225e77f4b",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "P2-fixed-magnet-seat-frame",
+      "sha256": "5b2e6aa56b93768142854420d23d61d3ed08f3c667b5d838dddd9b5b1677a14e",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "interlock-sliding-bracket-development",
+      "sha256": "5e4c490adf22b19bb6f7331d9a69cc6c8bbcf8f860e774a799cf5e88a439bd15",
+      "printed": true,
+      "solid_count": 1
+    },
+    {
+      "name": "interlock-protective-cover-development",
+      "sha256": "f42fecfee1d10ae95e7f276a5d93e4297facdaca0ad5516b128c3b6664477b5f",
+      "printed": true,
+      "solid_count": 1
+    },
+    {
+      "name": "interlock-wire-clamp-development",
+      "sha256": "3602d052dda92319a76ffe323d29dd846d1e43a5fe98c86ad5c5ff2cdfc2e2b0",
+      "printed": true,
+      "solid_count": 1
+    },
+    {
+      "name": "interlock-wire-raceway-development",
+      "sha256": "ee0166c8bf6c9b3dc6609afc523750722de6a08b6cda6bc586682ec0c4554f42",
+      "printed": true,
+      "solid_count": 1
+    },
+    {
+      "name": "interlock-raceway-lid-development",
+      "sha256": "f6d27e254ef14626340339b8d0a3967b5e979604c027d24b638320c66b84fc31",
+      "printed": true,
+      "solid_count": 1
+    },
+    {
+      "name": "TPU-interlock-wire-liner-development",
+      "sha256": "accf6e00faafad7aefebc9caeedbf80dd08cabf926a3a4e3bef4ff9c953aaf31",
+      "printed": true,
+      "solid_count": 1
+    },
+    {
+      "name": "REF-D2F-01L-drawing-case",
+      "sha256": "b7a792691f2df025749d4e5c891869ca16449e6747acf7a2595d9516b56258f8",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "REF-D2F-01L-lever-closed-envelope",
+      "sha256": "22381d0ad32a6773075685034736ca41c8823b37ee461b470ea1756652110adb",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "REF-D2F-01L-COM-terminal-envelope",
+      "sha256": "b50430de77b2848e99e820192528b09c5ad2f81359361c2f1963801a0559de4d",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "REF-D2F-01L-NO-terminal-envelope",
+      "sha256": "26cdc8960a8c6adba481052154ce0b4f62c952f55f020f7cf55316f8612d4b57",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "REF-D2F-01L-NC-terminal-envelope",
+      "sha256": "8696592b4535e95a71abdf1d19f5b89b98f55f26b5366acbbfc8066d41254cf6",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "REF-COM-5853-insulated-route",
+      "sha256": "32fa63fa97e23df2f68840bba74492341f3fca6cb6896a218e5199538813f942",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "REF-NO-5853-insulated-route",
+      "sha256": "26141f94fe435be2ff3e4cb5ac1b4db5af75e1d5e03a85cd91aaec96bb5a6285",
+      "printed": false,
+      "solid_count": 1
+    }
+  ],
+  "input_sha256": {
+    "cad\\rev_d_interlock.py": "804e285b14f4d92bac76ef36130548249315c0aa4d1d872dd5b1181b0ddad748",
+    "cad\\grille_interlock_study.py": "41eb0a88f144f34a6078c1852214aa10534d91575107e3dd5477915a326c0be0",
+    "cad\\rev_d_power_access.py": "b5102917bedc797e429587f4e9cf85da7b1a258c200068a833bac535e24b3439",
+    "cad\\rev_d\\stage-validation.json": "85a29fadb2cc77f2c92179bed2acd1af8078d9e81e49bd3c5d17525ed8f44ae7",
+    "cad\\rev_d\\head-parameters.json": "9feaa04b78a2c3a42456b0647a89fb0f4e0c8b79811ed7a2928242e8684a7592"
+  },
+  "limits": [
+    "Independent pilot only; not yet integrated in stage/motion/export reports.",
+    "Primary drawing switch/lever/terminals; no elastic snap-action or trip qualification.",
+    "Nominal connected switch-wire trial only; full connector/service slack and main harness remain unfinished.",
+    "Screw/nut/driver paths, tolerance extremes, slide endpoints and full grille withdrawal require further design checks.",
+    "Fixed guards are not a qualified rotor-fragment containment system."
+  ]
+}

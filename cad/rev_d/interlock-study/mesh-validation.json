@@ -1,0 +1,130 @@
+{
+  "result": "PASS",
+  "generated_utc": "2026-10-10T19:53:17.591999+00:00",
+  "physical_qualification": false,
+  "parts": [
+    {
+      "name": "interlock-sliding-bracket-development",
+      "sha256": "9f468388f0ae282213dd28583b9a0e00ff04b778ad8f2e55650d3e0b98391425",
+      "step_sha256": "5e4c490adf22b19bb6f7331d9a69cc6c8bbcf8f860e774a799cf5e88a439bd15",
+      "mesh": {
+        "triangles": 2620,
+        "connected_components": 1,
+        "expected_components": 1,
+        "nonmanifold_or_boundary_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume_mm3": 1847.4860586090151,
+        "component_signed_volumes_mm3": [
+          1847.486058609009
+        ],
+        "boundary_edge_examples_mm": [],
+        "watertight": true
+      }
+    },
+    {
+      "name": "interlock-protective-cover-development",
+      "sha256": "19d888053bb3bb925a558ec26a6faf64cbe8f3cac169201ea1867c0f4419e281",
+      "step_sha256": "f42fecfee1d10ae95e7f276a5d93e4297facdaca0ad5516b128c3b6664477b5f",
+      "mesh": {
+        "triangles": 19990,
+        "connected_components": 1,
+        "expected_components": 1,
+        "nonmanifold_or_boundary_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume_mm3": 4736.189437526064,
+        "component_signed_volumes_mm3": [
+          4736.189437526301
+        ],
+        "boundary_edge_examples_mm": [],
+        "watertight": true
+      }
+    },
+    {
+      "name": "interlock-wire-clamp-development",
+      "sha256": "76d716611bdac160651996af37e404f0bcb61cda2af342f433a851237ea8c016",
+      "step_sha256": "3602d052dda92319a76ffe323d29dd846d1e43a5fe98c86ad5c5ff2cdfc2e2b0",
+      "mesh": {
+        "triangles": 1608,
+        "connected_components": 1,
+        "expected_components": 1,
+        "nonmanifold_or_boundary_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume_mm3": 162.27892605650453,
+        "component_signed_volumes_mm3": [
+          162.2789260565078
+        ],
+        "boundary_edge_examples_mm": [],
+        "watertight": true
+      }
+    },
+    {
+      "name": "interlock-wire-raceway-development",
+      "sha256": "83f217eb8a56b18d19a1558e8cc59ceee6e887b2687fc9682c4c88c629d1b8a7",
+      "step_sha256": "ee0166c8bf6c9b3dc6609afc523750722de6a08b6cda6bc586682ec0c4554f42",
+      "mesh": {
+        "triangles": 3416,
+        "connected_components": 1,
+        "expected_components": 1,
+        "nonmanifold_or_boundary_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume_mm3": 1955.0632987059225,
+        "component_signed_volumes_mm3": [
+          1955.0632987059844
+        ],
+        "boundary_edge_examples_mm": [],
+        "watertight": true
+      }
+    },
+    {
+      "name": "interlock-raceway-lid-development",
+      "sha256": "4daa60341ab82b7a62276d52ddb29321f7c2fcb99473a560b34719d3adac5ea0",
+      "step_sha256": "f6d27e254ef14626340339b8d0a3967b5e979604c027d24b638320c66b84fc31",
+      "mesh": {
+        "triangles": 1332,
+        "connected_components": 1,
+        "expected_components": 1,
+        "nonmanifold_or_boundary_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume_mm3": 473.48832765740696,
+        "component_signed_volumes_mm3": [
+          473.4883276574001
+        ],
+        "boundary_edge_examples_mm": [],
+        "watertight": true
+      }
+    },
+    {
+      "name": "TPU-interlock-wire-liner-development",
+      "sha256": "66c5989c50e30315b1f81a1c3d641199a12c884ee7b0ca27237cf313617bfb61",
+      "step_sha256": "accf6e00faafad7aefebc9caeedbf80dd08cabf926a3a4e3bef4ff9c953aaf31",
+      "mesh": {
+        "triangles": 1900,
+        "connected_components": 1,
+        "expected_components": 1,
+        "nonmanifold_or_boundary_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume_mm3": 61.81021536965329,
+        "component_signed_volumes_mm3": [
+          61.81021536965441
+        ],
+        "boundary_edge_examples_mm": [],
+        "watertight": true
+      }
+    }
+  ],
+  "input_sha256": {
+    "tools\\verify_rev_d_interlock_mesh.py": "55b0a9bcbac4daeedb56b31b277927667f8ae31f00900c32153b28c32e9e295e",
+    "cad\\rev_d_meshes.py": "52ddb4ef42db642fdbdfff5fbafe0baad14ee0144ee421979d262bc70343cee6",
+    "cad\\rev_d\\interlock-study\\interlock-validation.json": "db5d4f7de1d7b40d8e8650e9d8d30fd8a522b22c202417bf36cee1a306be2b02"
+  },
+  "limits": [
+    "Isolated pilot only; no main-stage integration or physical fit is established.",
+    "STL shared-edge/winding/connectivity checks do not prove print strength or switch actuation."
+  ]
+}
