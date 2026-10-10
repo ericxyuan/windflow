@@ -28,6 +28,7 @@ cad/rev_c/head-base-development-assembly.step
 cad/rev_c/Windflow-Rev-C-integration-*.step
 cad/rev_d/*-vendor.step
 cad/rev_d/Windflow-Rev-D-150mm-integration-*.step
+cad/rev_d/power-access-study/HUSB238-side-port-vendor-CANDIDATE.step
 .tmp-sdp/
 
 # Local continuation bookkeeping and compiler intermediates.

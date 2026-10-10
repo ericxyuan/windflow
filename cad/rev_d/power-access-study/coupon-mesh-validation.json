@@ -1,0 +1,31 @@
+{
+  "result": "PASS",
+  "generated_utc": "2026-10-10T12:02:25.282703+00:00",
+  "physical_qualification": false,
+  "mesh": {
+    "triangles": 6234,
+    "connected_components": 1,
+    "expected_components": 1,
+    "nonmanifold_or_boundary_edges": 0,
+    "inconsistent_winding_edges": 0,
+    "degenerate_faces": 0,
+    "signed_volume_mm3": 4158.835498516134,
+    "component_signed_volumes_mm3": [
+      4158.8354985160995
+    ],
+    "boundary_edge_examples_mm": [],
+    "watertight": true
+  },
+  "geometry_sha256": {
+    "cad\\rev_d\\power-access-study\\USB-side-port-fit-coupon.step": "0d6833f55df861a8479410005390bcb67500146c2796155bbfe79c816db20f2b",
+    "cad\\rev_d\\power-access-study\\USB-side-port-fit-coupon.stl": "b9f007ca87728c038ef2c6352099096076bc512e042f09fb858c2ab496a148f4"
+  },
+  "input_sha256": {
+    "tools\\verify_rev_d_power_access_mesh.py": "75d78f1c96a9af43f8baf43df8be4802f7ad45ba99485dada200ccc966773692",
+    "cad\\rev_d_meshes.py": "52ddb4ef42db642fdbdfff5fbafe0baad14ee0144ee421979d262bc70343cee6",
+    "cad\\rev_d\\power-access-study\\power-access-validation.json": "28d95bcc1c694fd8f2ac951db2f3179be1dfd657e2c9ce61534acb549a8f46fd"
+  },
+  "limits": [
+    "Mesh topology only; supplied cable, print fit, retention and assembly tools remain unqualified."
+  ]
+}

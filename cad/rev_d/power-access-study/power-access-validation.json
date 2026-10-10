@@ -1,0 +1,129 @@
+{
+  "result": "PASS",
+  "generated_utc": "2026-10-10T11:59:29.180443+00:00",
+  "physical_qualification": false,
+  "parameters": {
+    "socket_face_x_mm": -110.5,
+    "socket_center_y_mm": 235.0,
+    "outer_port_face_x_mm": -112.1,
+    "port_opening_y_mm": 16.5,
+    "port_opening_z_mm": 9.2,
+    "port_corner_radius_mm": 2.2,
+    "side_patch_width_y_mm": 28.0,
+    "side_patch_height_z_mm": 20.0,
+    "side_patch_corner_radius_mm": 6.0,
+    "side_patch_inner_x_mm": -101.0,
+    "board_clearance_mm": 0.3,
+    "post_radius_mm": 3.5,
+    "mount_screw_clearance_diameter_mm": 2.2,
+    "nut_pocket_af_mm": 4.3,
+    "nut_pocket_height_mm": 1.9,
+    "nut_pocket_top_below_pcb_mm": 2.4,
+    "screw_length_mm": 6.0,
+    "screw_head_diameter_mm": 3.8,
+    "screw_head_height_mm": 2.0,
+    "nominal_nut_af_mm": 4.0,
+    "nominal_nut_height_mm": 1.6,
+    "trial_plug_width_y_mm": 15.0,
+    "trial_plug_height_z_mm": 7.5,
+    "trial_plug_length_x_mm": 30.0
+  },
+  "socket_face_x_mm": -110.50000000000001,
+  "socket_center_yz_mm": [
+    235.0,
+    -70.40982348790001
+  ],
+  "pcb_bottom_z_mm": -73.0798234879,
+  "pcb_top_z_mm": -71.5098234879,
+  "pcb_mount_centers_xy_mm": [
+    [
+      -106.84699999999125,
+      242.4930000000001
+    ],
+    [
+      -106.84699999999125,
+      227.2530000000001
+    ]
+  ],
+  "socket_recess_mm": 1.59999999999998,
+  "patch_wall_before_port_cut_mm": 2.4130000000087364,
+  "original_usb_transform": {
+    "rotation_axis": [
+      -83.83999999999992,
+      240.3039999999956,
+      0
+    ],
+    "rotation_z_deg": -90,
+    "translation_xyz_mm": [
+      -14.355999999995731,
+      -5.303999999995597,
+      0
+    ]
+  },
+  "pair_checks": 369,
+  "issues": [],
+  "trial_plug_overlap_mm3": 0.0,
+  "parts": [
+    {
+      "name": "USB-side-port-head-left-CANDIDATE",
+      "sha256": "ed6ff1a9cb1cd037bf2d424dfe44e1d7e43fd863f5eedccddf15d1c6d7ee8a30",
+      "solid_count": 1,
+      "volume_mm3": 393364.6486404287
+    },
+    {
+      "name": "HUSB238-side-port-vendor-CANDIDATE",
+      "sha256": "0d26ff43790c9fa2e66185417ac604a64728a264107d917fcdb07424fdc865ca",
+      "solid_count": 34,
+      "volume_mm3": 1164.644557921698
+    },
+    {
+      "name": "REF-PD-ISO4762-M2x6-1",
+      "sha256": "b74700422e8049f6f317c60f8f69c535982463ff0874d7e4dd30aab79f0508ba",
+      "solid_count": 1,
+      "volume_mm3": 41.156748717618285
+    },
+    {
+      "name": "REF-PD-ISO4762-M2x6-2",
+      "sha256": "ab155c262e03019c63911ac41eb990d01812be9eb0ef204a54b819da6bfee70f",
+      "solid_count": 1,
+      "volume_mm3": 41.156748717618285
+    },
+    {
+      "name": "REF-PD-ISO4032-M2-1",
+      "sha256": "aa244082398fc1c97b94c89388d6e3208dce76100a9fc726978ad5deefba253f",
+      "solid_count": 1,
+      "volume_mm3": 17.042668471189046
+    },
+    {
+      "name": "REF-PD-ISO4032-M2-2",
+      "sha256": "491333da09e4499567cc8de02e051c36fecda0979365c96f4af89438a823b2a3",
+      "solid_count": 1,
+      "volume_mm3": 17.042668471189046
+    },
+    {
+      "name": "USB-side-port-fit-coupon",
+      "sha256": "0d6833f55df861a8479410005390bcb67500146c2796155bbfe79c816db20f2b",
+      "solid_count": 1,
+      "volume_mm3": 4158.8009178106895
+    },
+    {
+      "name": "REF-USB-plug-size-TRIAL-UNVERIFIED",
+      "sha256": "db8328b882db3f4a442450564365884fd338661ac799eb954ca515591cb1cce5",
+      "solid_count": 1,
+      "volume_mm3": 3291.562805928967
+    }
+  ],
+  "input_sha256": {
+    "cad\\rev_d_power_access.py": "b5102917bedc797e429587f4e9cf85da7b1a258c200068a833bac535e24b3439",
+    "cad\\rev_d\\stage-validation.json": "614bd693b12eff3113aa81d384297961dffd92ff30c08794240d92e5d4046124",
+    "cad\\rev_d\\P2-flowing-head-left-INTEGRAL-OUTLET.step": "fcb160b20cd83d650dae7eaf66bd3cd511c8fdcb124e2423b72be83342f1fa99",
+    "cad\\rev_d\\Adafruit-HUSB238-5807-vendor.step": "d39d9399619872e86e8f3718fde8afa6a58df618372f6ded491694fc2d22d631"
+  },
+  "limits": [
+    "Intact manufacturer HUSB238 CAD; actual board revision/PCB/socket dimensions require fit check.",
+    "ISO fastener envelopes omit threads; actual screw/nut dimensions, engagement and tool access need verification.",
+    "15 x 7.5 mm trial cable boot is not supplied-cable CAD or a confirmed cable dimension.",
+    "Coupon only: not yet integrated into the complete stage, motion or export reports.",
+    "Power and I2C loom/strain relief are not yet installed; no mechanical or electrical qualification."
+  ]
+}
