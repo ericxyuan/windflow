@@ -1,0 +1,68 @@
+{
+  "result": "PASS",
+  "scope": "FeatureScript evaluation and exact workspace source readback; no instantiated main-workspace Part Studio verified yet",
+  "generated_utc": "2026-10-10T10:58:30.901Z",
+  "physical_qualification": false,
+  "source": {
+    "path": "cad/WindflowRevDHead.fs",
+    "sha256": "84c8e3a445365e2368cde5cf8b34377ff6535d42eb1a848c00c7c994db88a129",
+    "featurescript_library": 3083
+  },
+  "onshape": {
+    "document_id": "5ca1b5b26cd9a4a93dde4737",
+    "workspace_id": "6d3d38529391b53ad011b362",
+    "feature_studio_id": "fcaf5b7ea81e608e05d9abb6",
+    "feature_name": "Windflow150mmAirpath",
+    "source_readback_matches": true,
+    "main_part_studio_id": null,
+    "version_id": null,
+    "ui_part_count_verified": false
+  },
+  "parameters": 17,
+  "body_count_assertion": 7,
+  "evaluations": [
+    {
+      "name": "default open panels",
+      "changed_default": {
+        "boost": 0
+      },
+      "btType": "BTFeatureScriptEvalResponse-1859",
+      "rejectMicroversionSkew": false,
+      "microversionSkew": false,
+      "result": {
+        "btType": "com.belmonttech.serialize.fsvalue.BTFSValueUndefined",
+        "typeTag": ""
+      },
+      "notices": [],
+      "serializationVersion": "1.2.23",
+      "sourceMicroversion": "632e69eced22dd6b560eb25e",
+      "libraryVersion": 3083,
+      "console": ""
+    },
+    {
+      "name": "maximum geometric boost",
+      "changed_default": {
+        "boost": 1
+      },
+      "btType": "BTFeatureScriptEvalResponse-1859",
+      "rejectMicroversionSkew": false,
+      "microversionSkew": false,
+      "result": {
+        "btType": "com.belmonttech.serialize.fsvalue.BTFSValueUndefined",
+        "typeTag": ""
+      },
+      "notices": [],
+      "serializationVersion": "1.2.21",
+      "sourceMicroversion": "5034b55aaa1fff8525267eef",
+      "libraryVersion": 3083,
+      "console": ""
+    }
+  ],
+  "limits": [
+    "Seven-body native major-profile study is distinct from the detailed split-shell fit assembly.",
+    "Native contraction uses a true circular first section and axial end derivative constraints; outlet trim adds 0.02 mm radial numerical relief.",
+    "Detailed bearings, linkage, seam, guards, purchased hardware and plinth are not supplied by this feature.",
+    "Parameter changes require renewed fit and motion validation. No airflow, noise, strength, spin or physical fit qualification.",
+    "Publishing a document version and instantiating the feature in the main workspace remain pending browser sign-in."
+  ]
+}
