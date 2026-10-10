@@ -11,6 +11,8 @@
 # STEP writers use continuation-line padding; validity is checked geometrically.
 *.step -text diff -whitespace
 *.stp -text diff -whitespace
+# Preserve the checked routing session bytes and its native writer padding.
+hardware/pcb/rev_c/route-study/*.ses -text diff -whitespace
 *.stl -text
 *.uf2 -text
 *.png -text
