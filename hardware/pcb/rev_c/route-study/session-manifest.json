@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "path": "hardware/pcb/rev_c/route-study/initial-candidate.ses",
+  "sha256": "965aab742e1a772d96376b326d2612ec953892eef4f23ab1c38669f6f1f6343c",
+  "generator": "Freerouting 2.5.0 initial session; preserved input",
+  "scope": "Reproducible route candidate; no current-capacity or fabrication approval",
+  "source_board_path": "hardware/pcb/rev_c/windflow-rev-c.kicad_pcb",
+  "source_board_sha256": "72e58c282c052f89d46bd091fa56cdefaf4a0f3a643a719629be19ab06cb57fb"
+}

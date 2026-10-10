@@ -1,0 +1,162 @@
+{
+  "result": "PASS",
+  "scope": "Minimum fabrication geometry and connectivity candidate only",
+  "generated_utc": "2026-10-10T20:51:43.009229+00:00",
+  "physical_qualification": false,
+  "adopted_as_main_board": false,
+  "power_layout_approved": false,
+  "native_exit_code": 0,
+  "native_counts": {
+    "violations": 0,
+    "unconnected_items": 0,
+    "schematic_parity": 0
+  },
+  "widened_track_count": 226,
+  "adjusted_endpoints": 22,
+  "current_placement_and_pad_nets_unchanged": true,
+  "fabrication_rules_unchanged": true,
+  "power_track_metrics": {
+    "PD_RAW": {
+      "minimum_track_width_mm": 0.2,
+      "maximum_track_width_mm": 0.2,
+      "total_track_length_mm": 10.263351365237941,
+      "layers": [
+        "B.Cu",
+        "In2.Cu"
+      ]
+    },
+    "RAW_FUSED": {
+      "minimum_track_width_mm": 0.2,
+      "maximum_track_width_mm": 0.2,
+      "total_track_length_mm": 52.01723996124045,
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ]
+    },
+    "EF1_IN": {
+      "minimum_track_width_mm": 0.2,
+      "maximum_track_width_mm": 0.2,
+      "total_track_length_mm": 4.908152775297745,
+      "layers": [
+        "F.Cu"
+      ]
+    },
+    "BUS_PROTECTED": {
+      "minimum_track_width_mm": 0.2,
+      "maximum_track_width_mm": 0.2,
+      "total_track_length_mm": 71.11057753218608,
+      "layers": [
+        "B.Cu",
+        "F.Cu",
+        "In2.Cu"
+      ]
+    },
+    "ESC_FUSED": {
+      "minimum_track_width_mm": 0.2,
+      "maximum_track_width_mm": 0.2,
+      "total_track_length_mm": 68.0287527611039,
+      "layers": [
+        "B.Cu",
+        "F.Cu",
+        "In2.Cu"
+      ]
+    },
+    "ESC_15V": {
+      "minimum_track_width_mm": 0.2,
+      "maximum_track_width_mm": 0.2,
+      "total_track_length_mm": 12.036041892639105,
+      "layers": [
+        "B.Cu",
+        "F.Cu",
+        "In1.Cu"
+      ]
+    },
+    "REG5_SERVO": {
+      "minimum_track_width_mm": 0.2,
+      "maximum_track_width_mm": 0.2,
+      "total_track_length_mm": 53.18384350636357,
+      "layers": [
+        "B.Cu",
+        "In2.Cu"
+      ]
+    },
+    "SERVO_FUSED": {
+      "minimum_track_width_mm": 0.2,
+      "maximum_track_width_mm": 0.2,
+      "total_track_length_mm": 10.221866876077089,
+      "layers": [
+        "B.Cu"
+      ]
+    },
+    "SERVO5_SWITCHED": {
+      "minimum_track_width_mm": 0.2,
+      "maximum_track_width_mm": 0.2,
+      "total_track_length_mm": 53.883471062408624,
+      "layers": [
+        "B.Cu",
+        "In1.Cu"
+      ]
+    },
+    "REG5_LOGIC": {
+      "minimum_track_width_mm": 0.2,
+      "maximum_track_width_mm": 0.2,
+      "total_track_length_mm": 144.51148461779312,
+      "layers": [
+        "B.Cu",
+        "In1.Cu",
+        "In2.Cu"
+      ]
+    },
+    "AMBIENT5_SWITCHED": {
+      "minimum_track_width_mm": 0.2,
+      "maximum_track_width_mm": 0.2,
+      "total_track_length_mm": 44.51637075780947,
+      "layers": [
+        "B.Cu",
+        "In1.Cu",
+        "In2.Cu"
+      ]
+    },
+    "PICO_VSYS": {
+      "minimum_track_width_mm": 0.2,
+      "maximum_track_width_mm": 0.2,
+      "total_track_length_mm": 58.742420061692705,
+      "layers": [
+        "B.Cu",
+        "In2.Cu"
+      ]
+    },
+    "GND": {
+      "minimum_track_width_mm": 0.2,
+      "maximum_track_width_mm": 0.2,
+      "total_track_length_mm": 545.1978552254368,
+      "layers": [
+        "B.Cu",
+        "F.Cu",
+        "In1.Cu",
+        "In2.Cu"
+      ]
+    }
+  },
+  "input_sha256": {
+    "tools\\build_rev_c_route_candidate.py": "95cb76f2b51f16189762e992c79a5e34afd28e913a0d83bb973a06590ac1bbaa",
+    "tools\\import_rev_c_routing.py": "45ee33d741a409f2fc877eb9a02272e4a72ce845530ffaeb544f57a6a2c38960",
+    "tools\\repair_rev_c_route_widths.py": "49af85ba1e1e5ca2298a968f0f24e93e50339c788f9359fcd6b097fef1c0ad59",
+    "hardware\\pcb\\rev_c\\windflow-rev-c.kicad_pcb": "72e58c282c052f89d46bd091fa56cdefaf4a0f3a643a719629be19ab06cb57fb",
+    "hardware\\pcb\\rev_c\\windflow-rev-c.kicad_pro": "664e4b66300546841ac17dc17d3e5562fa960c1d607eacd40f7dc5ad82716f05",
+    "hardware\\pcb\\rev_c\\windflow-rev-c.kicad_dru": "270e28c9999811eb31732a4e79ee9fea970255506dbced21bd0dc59961bca95c",
+    "hardware\\pcb\\rev_c\\windflow-rev-c.kicad_sch": "0eb2623eca982352c386d594e54e0741e48d00cd37b7b889b87fd3775e37f824",
+    "hardware\\pcb\\rev_c\\route-study\\initial-candidate.ses": "965aab742e1a772d96376b326d2612ec953892eef4f23ab1c38669f6f1f6343c",
+    "hardware\\pcb\\rev_c\\route-study\\session-manifest.json": "0d61a4c8b00eb91f8870ad8c1b4c004d2414a57f3a9f5763c9d8473dec16e2e8"
+  },
+  "artifact_sha256": {
+    "build\\rev-c-board\\minimum-route-candidate\\windflow-rev-c.kicad_pcb": "e7ddb91e4a8b800f12d68c15c1dc3e5ae81785243d57b27f9de24b50e14251b9",
+    "build\\rev-c-board\\minimum-route-candidate\\drc.json": "ef92647ad6e03eaf9d4b0941bf20da1bd72d27dd8954a1e2cf0c6bbbf7917720"
+  },
+  "limits": [
+    "Power tracks remain only 0.2 mm in places; this route is not the 3 A power design.",
+    "Power copper, short pad necks, return paths, thermal reliefs and decoupling placement require redesign/review.",
+    "The un-routed authoritative board remains unchanged; no Gerbers or fabrication approval are produced."
+  ]
+}

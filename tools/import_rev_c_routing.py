@@ -38,6 +38,10 @@ def main():
     parser=argparse.ArgumentParser()
     parser.add_argument('--session',required=True,type=Path)
     parser.add_argument('--output',required=True,type=Path)
+    parser.add_argument('--base-board',type=Path,
+                        help='Optional isolated un-routed board carrying reviewed copper zones')
+    parser.add_argument('--design-name',default='windflow-rev-c',
+                        help='Explicit DSN/session base name; geometry is still matched to the current board')
     args=parser.parse_args()
     source=ROOT/'hardware/pcb/rev_c'
     target=args.output.resolve()
@@ -49,8 +53,15 @@ def main():
     shutil.copytree(source/'WindflowCarrier.pretty',target/'WindflowCarrier.pretty',dirs_exist_ok=True)
     raw=args.session.read_text()
     data=sexpr(raw)
-    assert item(data,'base_design')[1]=='windflow-rev-c'
+    assert item(data,'base_design')[1]==args.design_name,'Unexpected router session design name'
     board=p.LoadBoard(str(target/'windflow-rev-c.kicad_pcb'))
+    if args.base_board:
+        seed=args.base_board.resolve()
+        assert seed.is_relative_to((ROOT/'build').resolve()),'Seed must stay under build/'
+        from repair_rev_c_route_widths import placement
+        candidate=p.LoadBoard(str(seed))
+        assert placement(candidate)==placement(board),'Seed changed current placement, pad geometry or net names'
+        board=candidate
     assert not list(board.GetTracks()),'Start from unrouted placement only'
     fps={f.GetReference():f for f in board.GetFootprints()}
     placement=item(data,'placement')
