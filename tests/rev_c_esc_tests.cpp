@@ -38,10 +38,13 @@ int main(){
  n=vescSpeedFrame(0,7,3000,frame,sizeof(frame));CHECK(n==10&&frame[2]==6&&vescI32(frame+3)==0); // Coast, never RPM-zero braking.
  CHECK(!vescSpeedFrame(-1,7,3000,frame,sizeof(frame)));CHECK(!vescSpeedFrame(3001,7,3000,frame,sizeof(frame)));CHECK(!vescSpeedFrame(1,6,3000,frame,sizeof(frame)));CHECK(!vescSpeedFrame(1,7,5001,frame,sizeof(frame)));CHECK(!vescSpeedFrame(NAN,7,3000,frame,sizeof(frame)));CHECK(!vescFrame(b,54,frame,58));
  CHECK(!decodePd(0x46,0x40));CHECK(decodePd(0x4a,0x40));CHECK(!decodePd(0x4a,0));CHECK(!decodePd(0x5a,0x40));
- Settings s;CHECK(valid(s));CHECK(!s.on&&!s.commissioned&&!s.rotorQualified);CHECK(kSchema==4);
+ Settings s;CHECK(valid(s));CHECK(!s.on&&!s.commissioned&&!s.rotorQualified);CHECK(kSchema==5);CHECK(kRotorDiameterMm==150);
+ s.rotorArticleTag^=1;CHECK(!valid(s));s=Settings{};
  s.on=1;float previous=0;for(int i=0;i<=1000;i++){s.setting=i;Mapping m=mapSetting(s);CHECK(m.speedFraction>=previous-.000001f);CHECK(m.closure>=0&&m.closure<=1.00001f);CHECK(m.areaRatio>=.74999f);if(i<=750)CHECK(m.closure==0);else CHECK(m.speedFraction==1);previous=m.speedFraction;}
  s=Settings{};s.rpmAtMax=5001;CHECK(!valid(s));s=Settings{};s.escInputLimitA=1.41;CHECK(!valid(s));s=Settings{};s.escPhaseLimitA=3.01;CHECK(!valid(s));s=Settings{};s.escPowerLimitW=18.01;CHECK(!valid(s));s=Settings{};s.rpmAtMax=NAN;CHECK(!valid(s));
  auto record=makeRecord(Settings{},7);SettingsRecord decoded{};CHECK(decodeRecord(&record,sizeof(record),decoded));record.schema=3;record.crc=crc32(&record,offsetof(SettingsRecord,crc));CHECK(!decodeRecord(&record,sizeof(record),decoded));
+ record=makeRecord(Settings{},8);record.schema=4;record.crc=crc32(&record,offsetof(SettingsRecord,crc));CHECK(!decodeRecord(&record,sizeof(record),decoded));
+ record=makeRecord(Settings{},9);record.settings.rotorArticleTag^=1;record.crc=crc32(&record,offsetof(SettingsRecord,crc));CHECK(!decodeRecord(&record,sizeof(record),decoded));
  {Rig r;r.live();r.in.escTelemetryValid=false;r.step(10);CHECK(r.c.fault==Fault::EscTelemetry&&!r.c.out.motorEnable&&!r.c.out.escSupplyEnable);}
  {Rig r;r.live();r.in.rpm=3301;r.step(10,false);CHECK(r.c.fault==Fault::Overspeed);}
  {Rig r;r.live();r.in.rpm=-100;r.step(10,false);CHECK(r.c.fault==Fault::ReverseRotation);}

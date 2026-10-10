@@ -10,6 +10,8 @@ The mechanical plan is a 152 mm rotor throat, R12 inlet, rigid 16 mm PCD motor c
 
 The electrical baseline remains the **T-Motor Pacer V4 P2406 Juicy 2060 KV**, single **Team Triforce A50S V2.3c** ESC, Pico, Adafruit 4311 IPS screen and horizontal Bourns encoder. The existing 15 V / 3 A USB PD architecture, 18 W motor/ESC input ceiling and initial 3 A phase-current ceiling remain the development baseline. A drone's one-second peak rating is not the desktop continuous rating. Actual motor shoulder, shaft projection, thread pitch, mounting screw depth, exact servo and ESC dimensions still require measured confirmation.
 
+The active firmware in the historical `firmware/WindflowRevC` folder now identifies the exact 150 mm P2 STEP article with its SHA-256 and a saved article tag. Schema 5 rejects earlier 112 mm calibration records; a CRC-correct record with another article tag is rejected too. Verification on 10 October passed 4,187 parser/safety/control/display assertions, 60 default service assertions, 73 qualified **host simulation** service assertions, the motion-inhibited shipping test and a Pico build. Those results do not grant any operating RPM to the larger rotor.
+
 Firmware remains **motion inhibited**. No new speed, higher current or boost speed reserve has been enabled. The study's proposed 15–20% speed reserve and 20–30% boost airspeed improvement are future experimental objectives. The existing normal/full-turn-arm/boost interaction, screen status band, wheel phase, entry countdown, night mode and safety logic are preserved. Each exit from boost still requires a fresh complete arm turn at maximum normal output; no new hardware control has been introduced.
 
 ## Actual geometry

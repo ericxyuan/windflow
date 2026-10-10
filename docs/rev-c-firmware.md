@@ -1,8 +1,10 @@
-# Rev C motor / ESC firmware — 8 October 2026
+# Motor / ESC firmware — 150 mm Rev D profile, 10 October 2026
 
 `firmware/WindflowRevC` is the separate Raspberry Pi Pico sketch for the T-Motor Pacer V4 P2406 Juicy 2060KV motor and one TeamTriforceUK A50S V2.3c-12-10 VESC-compatible ESC. The proven `firmware/Windflow` Rev B sketch is preserved. Rev C uses closed-loop mechanical speed requests over UART; GPIO6 no longer emits the old 25 kHz four-wire fan signal.
 
-**The distributed build cannot spin the rotor.** `WF_MOTION_BUILD_QUALIFIED` defaults to zero. Normal operation requires that build flag, the schema-4 `rotorQualified` acknowledgement and a measured `commissioned` profile. The physical rotor, enclosure containment, ESC limits and sensorless minimum speed have not been qualified. A 3000 RPM trial ceiling and 5000 RPM absolute analysis ceiling are engineering starting limits, not certified rotor ratings. Setting a flag or passing a host test cannot establish printed-rotor strength.
+The sketch folder retains its historical `WindflowRevC` name; its active rotor profile now identifies the **150 mm P2 fit article** by the SHA-256 string in `Config.h` and a saved article tag. Schema 5 rejects prior schema-4 records, and settings with a mismatched article tag are rejected even with a correct CRC. The change requires fresh calibration rather than carrying approval from the smaller rotor.
+
+**The distributed build cannot spin the rotor.** `WF_MOTION_BUILD_QUALIFIED` defaults to zero. Normal operation requires that build flag, the schema-5 `rotorQualified` acknowledgement and a measured `commissioned` profile. The physical rotor, enclosure containment, ESC limits and sensorless minimum speed have not been qualified. **The 150 mm rotor has no approved operating RPM.** The unchanged 3000 RPM settings placeholder and 5000 RPM commissioning-input sanity cap are not permission to run this larger rotor. Setting a flag or passing a host test cannot establish printed-rotor strength.
 
 ## Hardware and pins
 
@@ -51,13 +53,13 @@ Returning boost to zero leaves boost control and requires a fresh complete entry
 
 The screen's top 64 rows replace the previous speed/boost and system light bars. The lower area shows relative wheel phase, requested normal/boost level and degrees remaining before boost control. Wheel phase is relative to boot, because this incremental encoder has no absolute-angle sensor. The former `PWM` label is now `SPEED`. Short press changes on/off, long press changes night mode. Night brightness is configurable, essential faults remain visible, and night startup omits the full-speed cosmetic ramp.
 
-The nominal nozzle inputs remain 104 × 94 mm, 55 mm panel length, at least 75% open area and a 15° mechanical angle limit. They match the current Rev C nominal proposal. The final linkage, real minimum area, opening force and pressure limits remain physical/mechanical qualification work. Firmware pressure and RPM evidence cannot certify the linkage geometry.
+The nominal nozzle inputs remain 104 × 94 mm, 55 mm panel length, at least 75% gross open area and a 15° absolute angle limit. They match the current Rev D nominal proposal; the 75% area input requests approximately 12.3355° maximum closure. The final linkage, real minimum area, opening force and pressure limits remain physical/mechanical qualification work. Firmware pressure and RPM evidence cannot certify the linkage geometry.
 
 ## Startup, settings and protection
 
 Startup waits for a stable power contract, valid commissioned settings and stopped ESC telemetry. It opens the nozzle, verifies open feedback and waits for a complete initial display frame. The normal startup then ramps smoothly over 1.8 s to **100% of the configured speed ceiling**, fills the screen bar in sync and returns to the saved normal setting over 0.9 s. It uses no full-throttle interpretation of the motor's KV rating. Off, night, thermal and unhealthy-pressure conditions skip or limit the cosmetic ramp. The user still needs a fresh full turn to enter boost.
 
-Schema 4 deliberately rejects Rev B records. Dual LittleFS records retain sequence numbers, CRC32, full validation and read-back verification. Setting changes wait at least 8 s before saving and saves are separated by at least 60 s; volatile wheel phase and boost entry progress do not trigger writes. Service commit is explicit. Measure worst-case flash-write pause against the independent 250 ms ESC watchdog during hardware qualification; the firmware cannot prove that timing through a host test. A lost keepalive must coast the ESC.
+Schema 5 deliberately rejects Rev B and earlier 112 mm Rev C records. Dual LittleFS records retain sequence numbers, CRC32, full validation and read-back verification. Setting changes wait at least 8 s before saving and saves are separated by at least 60 s; volatile wheel phase and boost entry progress do not trigger writes. Service commit is explicit. Measure worst-case flash-write pause against the independent 250 ms ESC watchdog during hardware qualification; the firmware cannot prove that timing through a host test. A lost keepalive must coast the ESC.
 
 | Condition | Current Rev C software response |
 |---|---|

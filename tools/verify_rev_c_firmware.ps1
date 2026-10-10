@@ -19,7 +19,8 @@ foreach($m in @($hostMatch,$shippingMatch,$qualifiedMatch,$flashMatch,$ramMatch)
 if($hostText -notmatch 'PASS Rev C distributed build cannot request rotor motion'){throw 'Missing motion inhibit evidence'}
 $reportPath=Join-Path $taskRoot 'firmware\WindflowRevC\validation.json'
 $report=Get-Content -Raw -LiteralPath $reportPath | ConvertFrom-Json
-$report.client_date='2026-10-08'
+$report.client_date='2026-10-10'
+$report.revision='150 mm Rev D profile; historical WindflowRevC sketch; distributed motion inhibited'
 $report.commands[0].parser_safety_control_display_assertions=[int]$hostMatch.Groups[1].Value
 $report.commands[0].shipping_service_assertions=[int]$shippingMatch.Groups[1].Value
 $report.commands[0].qualified_host_simulation_service_assertions=[int]$qualifiedMatch.Groups[1].Value

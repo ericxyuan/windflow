@@ -1,6 +1,6 @@
 {
-  "revision": "Rev C standalone inhibited prototype",
-  "client_date": "2026-10-08",
+  "revision": "150 mm Rev D profile; historical WindflowRevC sketch; distributed motion inhibited",
+  "client_date": "2026-10-10",
   "hardware_motion_qualified": false,
   "default_motion_build_flag": 0,
   "schema": 4,
@@ -15,7 +15,7 @@
     {
       "command": "tools/test_rev_c_firmware.ps1",
       "exit_code": 0,
-      "parser_safety_control_display_assertions": 4183,
+      "parser_safety_control_display_assertions": 4187,
       "shipping_gate": "PASS default build cannot request rotor motion",
       "shipping_service_assertions": 60,
       "qualified_host_simulation_service_assertions": 73,
@@ -27,7 +27,7 @@
       "exit_code": 0,
       "fqbn": "rp2040:rp2040:rpipico:flash=2097152_262144,freq=133",
       "core_version": "6.1.0",
-      "program_bytes": 126800,
+      "program_bytes": 126840,
       "static_ram_bytes": 11632,
       "additional_screen_canvas_bytes": 10240,
       "warnings": "upstream Adafruit NeoPixel pio_program initializer warnings; no firmware errors",
@@ -36,18 +36,18 @@
   ],
   "uf2": {
     "path": "firmware/dist/rev-c/WindflowRevC.ino.uf2",
-    "sha256": "772a1038a76b6a83930c37fda90e3da9bf2e4f376d23503ddd7b5247dc99552d",
+    "sha256": "214637bc161236e2a0032e339d5625ecabb6ba90695852367b52841f2deb23e1",
     "bytes": 290816,
     "generated_local_ignored": true
   },
   "evidence_logs": {
-    "build/rev-c-firmware-host.log": "b9cea7ac745c72f3b82ad9bbdf8c4c858dcb3054629882f74a2d68df6ba527fd",
-    "build/rev-c-firmware-build.log": "44329b46687633528196f26fd91810b33528911dd4884f61ef901030a3cbdffc"
+    "build/rev-c-firmware-host.log": "6e8bb5b7157b845e94ff0537775d21e8c3b50a4df9366273d8789cfa03052707",
+    "build/rev-c-firmware-build.log": "96483319e39b378611354fc66cd5c5475ecf35570ee96f7953deea28e51f275b"
   },
   "source_sha256": {
     "firmware/WindflowRevC/Calibration.h": "c16b917f1a89fcc3db0deb812467a95713b6c246d1cba24c36331ad7ee8e9a08",
-    "firmware/WindflowRevC/Config.h": "c13b763b6635d06f87cc1235e606dbdc4c7dac3be7403f684ca89abc389d45b9",
-    "firmware/WindflowRevC/Control.cpp": "5f3e527468ddd0b772c1f2dd8e001c13ee037c4b2cdbc2518a8da35e85aa69e8",
+    "firmware/WindflowRevC/Config.h": "258d5bd0ad49b82ad02d8c1a5ffbd007abc239bb3eb09273e15ded1cbdb3372a",
+    "firmware/WindflowRevC/Control.cpp": "1874478bf9ed519ae844b301e60cf0634d60ea03b84911270aa7a266eb7d94a5",
     "firmware/WindflowRevC/Control.h": "772d11a06bafffcb696aee77d117b7c7a406ff727796fd06d87da2211545c7eb",
     "firmware/WindflowRevC/Display.cpp": "7ffa95c8d8cb0d103a61f1f6648f83e02395cd5856ee1260daf057f8aedacd04",
     "firmware/WindflowRevC/Display.h": "60781849510395066e023e07d61faf266037c801c842bd89f0ecb86204042822",
@@ -72,7 +72,7 @@
     "firmware/WindflowRevC/WindflowRevC.ino": "2ce3ffce7fbe6675a9d2fe2a7572283c564bc301959b7aee772789fd98a14999",
     "tests/rev_c_esc_service_tests.cpp": "8fecb89f56a3b62f05e9d8c8f60e54a5d5f2e84bc6b230586c074c54ca96d064",
     "tests/rev_c_esc_shipping_tests.cpp": "a5a5d3b40d9fcf5a6d105ba86162e66ab507389cdeea17a4abd07e0198d140c3",
-    "tests/rev_c_esc_tests.cpp": "381d992c799c0476ffc35f18050b24fd763dce2b8796cce0abb7052dcad8f1a4",
+    "tests/rev_c_esc_tests.cpp": "7f476151e07514cec60a468b0ce311145eaf618881f01766ec71b356a66e1c21",
     "tools/build_rev_c_firmware.ps1": "d9817700e481a0642fe30fd15a39b38fce7628de92a071b9fd96b613440e25a5",
     "tools/test_rev_c_firmware.ps1": "1fea4785b9b72abab1798ebc6b758a159af1f0182c067819682d8100b62550be"
   },
@@ -83,5 +83,5 @@
     "Actual physical pressure, servo holding, temperature lag and flash/UART timing must be measured.",
     "Rev C carrier/power circuitry and harness must match the pin table before connection."
   ],
-  "verification_script_sha256": "6d99e3aa0972f5a133b19fc9f42ad1895b26956f2d3d1c8f1bdda12ad18b70e5"
+  "verification_script_sha256": "02e437b30c0df0f84e5f9301d9d6f4fc58db9b24abf696f20c415ed53b84906a"
 }

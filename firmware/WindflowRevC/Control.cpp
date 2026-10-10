@@ -4,6 +4,7 @@ namespace wf {
 static_assert(kEncoderDetentsPerRev>0&&kBoostEntryDetents>0&&kBoostControlDetents>0&&kNormalControlDetents>0,"Encoder control increments must be positive");
 static_assert(kNormalControlDetents<=600,"Normal grid must have distinct steps at every valid threshold");
 bool valid(const Settings& s){
+ if(s.rotorArticleTag!=kRotorArticleTag)return false;
  const float f[]={s.boostThreshold,s.minAreaRatio,s.minSpeedFraction,s.maxSpeedFraction,s.rpmAtMax,s.escInputLimitA,s.escPhaseLimitA,s.escPowerLimitW,s.pressureSoft,s.pressureHard,s.warnC,s.tripC,s.pressureZero,s.busScale,s.logicScale};
  for(float v:f)if(!isfinite(v))return false;
  if(s.setting>1000||s.on>1||s.night>1||s.commissioned>1||s.encoderReverse>1||s.rotorQualified>1)return false;

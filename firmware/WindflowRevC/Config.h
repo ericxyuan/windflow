@@ -3,7 +3,11 @@
 #include <math.h>
 #include <initializer_list>
 namespace wf {
-constexpr uint16_t kSchema=4; // ESC/rotor architecture: Rev B records are rejected.
+constexpr uint16_t kSchema=5; // 150 mm P2 article: reject earlier 112 mm calibration records.
+constexpr uint16_t kRotorDiameterMm=150;
+// Prefix of the exact fit article STEP hash, also retained in saved settings.
+constexpr uint32_t kRotorArticleTag=0xbf5fd646;
+constexpr char kRotorArticleSha256[]="bf5fd64690b8edc7ecac47ac38f1be2bf501f899b063052fc26b7126a108bae2";
 // Change only after a contained spin/overspeed and ESC watchdog qualification.
 // This distributed prototype build can display/service the system but cannot spin.
 #ifndef WF_MOTION_BUILD_QUALIFIED
@@ -11,6 +15,7 @@ constexpr uint16_t kSchema=4; // ESC/rotor architecture: Rev B records are rejec
 #endif
 constexpr bool kMotionBuildQualified=WF_MOTION_BUILD_QUALIFIED==1;
 constexpr uint8_t kMotorPolePairs=7;
+// Commissioning-input sanity bound only. The 150 mm rotor has NO approved RPM.
 constexpr float kRotorAnalysisCeilingRpm=5000;
 constexpr uint32_t kEscBaud=115200,kEscCommandMs=50,kEscRequestMs=100;
 constexpr uint8_t kMainCapacity=16,kAmbientCapacity=8; // mainCount is a legacy reserved field, not LEDs.
@@ -36,6 +41,7 @@ inline float clamp(float x,float lo,float hi){return fminf(hi,fmaxf(lo,x));}
 inline float approach(float x,float target,float step){return x+clamp(target-x,-step,step);}
 inline float smooth(float x){x=clamp(x,0,1);return x*x*(3-2*x);}
 struct Settings {
+ uint32_t rotorArticleTag=kRotorArticleTag;
  uint16_t setting=400;
  uint8_t on=0,night=0,commissioned=0,encoderReverse=0;
  uint8_t rotorQualified=0;
