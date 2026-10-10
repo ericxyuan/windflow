@@ -21,6 +21,19 @@ $reportPath=Join-Path $taskRoot 'firmware\WindflowRevC\validation.json'
 $report=Get-Content -Raw -LiteralPath $reportPath | ConvertFrom-Json
 $report.client_date='2026-10-10'
 $report.revision='150 mm Rev D profile; historical WindflowRevC sketch; distributed motion inhibited'
+$taskConfig=Get-Content -LiteralPath (Join-Path $taskRoot 'firmware\WindflowRevC\Config.h') -Raw
+foreach($taskField in @('kSchema','kRotorDiameterMm','kRotorArticleSha256')) {
+    $taskPattern=if($taskField -eq 'kRotorArticleSha256'){'kRotorArticleSha256\[\]="([0-9a-f]{64})"'}else{"$taskField=(\d+)"}
+    $taskMatch=[regex]::Match($taskConfig,$taskPattern)
+    if(-not $taskMatch.Success){throw "Missing firmware profile field: $taskField"}
+    switch($taskField) {
+        'kSchema' {$report.schema=[int]$taskMatch.Groups[1].Value}
+        'kRotorDiameterMm' {$report | Add-Member -NotePropertyName rotor_diameter_mm -NotePropertyValue ([int]$taskMatch.Groups[1].Value) -Force}
+        'kRotorArticleSha256' {$report | Add-Member -NotePropertyName rotor_article_sha256 -NotePropertyValue $taskMatch.Groups[1].Value -Force}
+    }
+}
+$report | Add-Member -NotePropertyName approved_operating_rpm -NotePropertyValue $null -Force
+$report | Add-Member -NotePropertyName rpm_field_limits -NotePropertyValue '3000 RPM is an unqualified settings placeholder; 5000 RPM is a commissioning-input sanity bound. Neither is permission to operate the 150 mm rotor.' -Force
 $report.commands[0].parser_safety_control_display_assertions=[int]$hostMatch.Groups[1].Value
 $report.commands[0].shipping_service_assertions=[int]$shippingMatch.Groups[1].Value
 $report.commands[0].qualified_host_simulation_service_assertions=[int]$qualifiedMatch.Groups[1].Value

@@ -3,7 +3,7 @@
   "client_date": "2026-10-10",
   "hardware_motion_qualified": false,
   "default_motion_build_flag": 0,
-  "schema": 4,
+  "schema": 5,
   "motor": "T-Motor Pacer V4 P2406 Juicy 2060KV",
   "esc": "TeamTriforceUK A50S V2.3c-12-10",
   "pole_pairs": 7,
@@ -84,5 +84,9 @@
     "Actual physical pressure, servo holding, temperature lag and flash/UART timing must be measured.",
     "Rev C carrier/power circuitry and harness must match the pin table before connection."
   ],
-  "verification_script_sha256": "d26ee2067f0c65a65b365a2bef4209bb62b099c7fd7f165ca23df6b290d6decd"
+  "verification_script_sha256": "ca34c7f34b8d7461d84d82c16aa8d33957cec0a4af46e3111c570ee52c19ec58",
+  "rotor_diameter_mm": 150,
+  "rotor_article_sha256": "bf5fd64690b8edc7ecac47ac38f1be2bf501f899b063052fc26b7126a108bae2",
+  "approved_operating_rpm": null,
+  "rpm_field_limits": "3000 RPM is an unqualified settings placeholder; 5000 RPM is a commissioning-input sanity bound. Neither is permission to operate the 150 mm rotor."
 }
