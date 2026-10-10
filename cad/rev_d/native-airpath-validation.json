@@ -1,6 +1,6 @@
 {
   "result": "PASS",
-  "scope": "FeatureScript evaluation and exact workspace source readback; no instantiated main-workspace Part Studio verified yet",
+  "scope": "FeatureScript evaluation, exact workspace source readback and visible main-workspace seven-part model",
   "generated_utc": "2026-10-10T10:58:30.901Z",
   "physical_qualification": false,
   "source": {
@@ -14,9 +14,11 @@
     "feature_studio_id": "fcaf5b7ea81e608e05d9abb6",
     "feature_name": "Windflow150mmAirpath",
     "source_readback_matches": true,
-    "main_part_studio_id": null,
+    "main_part_studio_id": "399cdd4584e017c0a30623b4",
     "version_id": null,
-    "ui_part_count_verified": false
+    "ui_part_count_verified": true,
+    "source_version_name": "Rev D native airflow source — DEVELOPMENT — 2026-10-10",
+    "insertion_method": "Custom features in this workspace"
   },
   "parameters": 17,
   "body_count_assertion": 7,
@@ -63,6 +65,12 @@
     "Native contraction uses a true circular first section and axial end derivative constraints; outlet trim adds 0.02 mm radial numerical relief.",
     "Detailed bearings, linkage, seam, guards, purchased hardware and plinth are not supplied by this feature.",
     "Parameter changes require renewed fit and motion validation. No airflow, noise, strength, spin or physical fit qualification.",
-    "Publishing a document version and instantiating the feature in the main workspace remain pending browser sign-in."
-  ]
+    "Main-workspace default-open model visibly contains seven parts. Maximum closure is independently evaluated in the test context; native and detailed fit geometry remain separate articles."
+  ],
+  "ui_evidence": {
+    "path": "cad/evidence/onshape-rev-d-native-airpath-2026-10-10.png",
+    "sha256": "e0f9ce2081af1093a6e5e51ff49d691951825a6e7a7582519cf1535a5b2d7b8c",
+    "parts": 7,
+    "boost_fraction": 0
+  }
 }
