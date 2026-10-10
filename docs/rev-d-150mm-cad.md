@@ -67,6 +67,8 @@ This native airpath is a major-profile study with a hollow flowing exterior, rou
 - `cad/rev_d/motion-validation.json`: sampled boost motion, moving-part pairs, encoder rotation/press, unplugged display removal and conservative rotor swept-envelope checks.
 - `cad/rev_d/integration-export-validation.json`: only generated after source-matched PASS records, with named assembly STEP round-trip validation.
 
+The first complete motion run on 10 October exited with **FAIL**: 62 intersections affect the proposed backward/downward screen-and-cradle service path. The 61 boost positions, 96 wheel rotation/press poses and continuous rotor envelope have no unintended intersections; the exact 195 mm height box also passed. The failed service path hits both enclosure shoulders and the pressure sensor. It must be replaced and rechecked before exporting the assembled package; clear installed positions alone did not establish service access.
+
 No test report establishes measured airflow, throw, acoustic noise, rotor burst strength, actual motor torque, electronics temperature, magnet retention or hardware operation. The Onshape imported hierarchy will not by itself supply native kinematic mates. Latest online integration is recorded separately in `cad/onshape-rev-d-checkpoint.json`; an earlier online checkpoint never proves later source changes.
 
 ## Printing and assembly development
