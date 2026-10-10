@@ -1,0 +1,394 @@
+{
+  "result": "PASS",
+  "generated_utc": "2026-10-10T20:38:05.347851+00:00",
+  "physical_qualification": false,
+  "counts": {
+    "boost": 20496,
+    "wheel": 4608,
+    "screen_service": 2448,
+    "grille_withdrawal": 12852,
+    "cartridge_withdrawal": 144485,
+    "switch_adjustment": 11088,
+    "front_driver": 190,
+    "insert_tool": 106,
+    "removed_module_driver": 288
+  },
+  "maxima_mm3": {
+    "boost": 0.0,
+    "wheel": 0.0,
+    "screen_service": 0.0,
+    "grille_withdrawal": 0.0,
+    "cartridge_withdrawal": 0.0,
+    "switch_adjustment": 0.0,
+    "front_driver": 0.0,
+    "insert_tool": 0.0,
+    "removed_module_driver": 0.0
+  },
+  "issues": [],
+  "meshes": [
+    {
+      "name": "interlock-front-cartridge-development",
+      "mesh": {
+        "triangles": 11404,
+        "connected_components": 1,
+        "expected_components": 1,
+        "nonmanifold_or_boundary_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume_mm3": 15033.524415297397,
+        "component_signed_volumes_mm3": [
+          15033.524415296582
+        ],
+        "boundary_edge_examples_mm": [],
+        "watertight": true
+      },
+      "sha256": "f318fb72e06febb3209c1878f43753553119d9e2516f2b19c1d30c57836a3e31"
+    },
+    {
+      "name": "interlock-sliding-bracket-development",
+      "mesh": {
+        "triangles": 2620,
+        "connected_components": 1,
+        "expected_components": 1,
+        "nonmanifold_or_boundary_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume_mm3": 1427.724474608702,
+        "component_signed_volumes_mm3": [
+          1427.7244746086888
+        ],
+        "boundary_edge_examples_mm": [],
+        "watertight": true
+      },
+      "sha256": "b8937a1e6cfa212a2916971e8b12627a906b3bc47a91e837be925c919a91b460"
+    },
+    {
+      "name": "interlock-wire-raceway-development",
+      "mesh": {
+        "triangles": 3044,
+        "connected_components": 1,
+        "expected_components": 1,
+        "nonmanifold_or_boundary_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume_mm3": 2179.503238500575,
+        "component_signed_volumes_mm3": [
+          2179.5032385005893
+        ],
+        "boundary_edge_examples_mm": [],
+        "watertight": true
+      },
+      "sha256": "a3aca55ee682b6f4766809069f879c72f725dc2aaf4ceb1d96243e5c59ff9047"
+    },
+    {
+      "name": "interlock-wire-clamp-development",
+      "mesh": {
+        "triangles": 1712,
+        "connected_components": 1,
+        "expected_components": 1,
+        "nonmanifold_or_boundary_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume_mm3": 315.5732368975062,
+        "component_signed_volumes_mm3": [
+          315.57323689750297
+        ],
+        "boundary_edge_examples_mm": [],
+        "watertight": true
+      },
+      "sha256": "999667222486938247441e6c7d74f46c9b8450918474d90e24b89dba6f182efa"
+    },
+    {
+      "name": "interlock-raceway-lid-development",
+      "mesh": {
+        "triangles": 1316,
+        "connected_components": 1,
+        "expected_components": 1,
+        "nonmanifold_or_boundary_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume_mm3": 445.88868695844667,
+        "component_signed_volumes_mm3": [
+          445.88868695843723
+        ],
+        "boundary_edge_examples_mm": [],
+        "watertight": true
+      },
+      "sha256": "935fdafb60493853481c1cd440521009583fad4faa177f7d4cf4c7426d7e5bef"
+    },
+    {
+      "name": "TPU-interlock-wire-liner-development",
+      "mesh": {
+        "triangles": 1900,
+        "connected_components": 1,
+        "expected_components": 1,
+        "nonmanifold_or_boundary_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume_mm3": 61.810215369670246,
+        "component_signed_volumes_mm3": [
+          61.810215369668576
+        ],
+        "boundary_edge_examples_mm": [],
+        "watertight": true
+      },
+      "sha256": "a5c8f0ee12ea2c6abf069fbc45d402714ebe241adb486f2cd7cf402fe9ab8052"
+    }
+  ],
+  "tool_envelopes": [
+    {
+      "axis_xz_mm": [
+        -70.0,
+        -38.0
+      ],
+      "driver_shank_diameter_mm": 3.0,
+      "insert_tool_diameter_mm": 5.0
+    },
+    {
+      "axis_xz_mm": [
+        -65.0,
+        38.0
+      ],
+      "driver_shank_diameter_mm": 3.0,
+      "insert_tool_diameter_mm": 5.0
+    }
+  ],
+  "adjustment_wire_metrics": [
+    {
+      "adjust_y_mm": -2.0,
+      "tag": "COM",
+      "wire_od_mm": 1.1,
+      "quarter_bend_input_mm": 14.0,
+      "sampled_minimum_centerline_radius_mm": 13.326518994750597,
+      "curvature_samples": 161,
+      "route_length_mm": 72.60376694849393,
+      "exit_z_mm": -52.0,
+      "required_radius_for_max_selected_od_mm": 10.921999999999997
+    },
+    {
+      "adjust_y_mm": -2.0,
+      "tag": "NO",
+      "wire_od_mm": 1.1,
+      "quarter_bend_input_mm": 14.0,
+      "sampled_minimum_centerline_radius_mm": 12.280092310906518,
+      "curvature_samples": 161,
+      "route_length_mm": 77.85897591646847,
+      "exit_z_mm": -52.0,
+      "required_radius_for_max_selected_od_mm": 10.921999999999997
+    },
+    {
+      "adjust_y_mm": -1.5,
+      "tag": "COM",
+      "wire_od_mm": 1.1,
+      "quarter_bend_input_mm": 14.5,
+      "sampled_minimum_centerline_radius_mm": 13.846430797686345,
+      "curvature_samples": 161,
+      "route_length_mm": 72.88600826034849,
+      "exit_z_mm": -52.0,
+      "required_radius_for_max_selected_od_mm": 10.921999999999997
+    },
+    {
+      "adjust_y_mm": -1.5,
+      "tag": "NO",
+      "wire_od_mm": 1.1,
+      "quarter_bend_input_mm": 14.5,
+      "sampled_minimum_centerline_radius_mm": 12.819111494048359,
+      "curvature_samples": 161,
+      "route_length_mm": 78.13531507395831,
+      "exit_z_mm": -52.0,
+      "required_radius_for_max_selected_od_mm": 10.921999999999997
+    },
+    {
+      "adjust_y_mm": -1.0,
+      "tag": "COM",
+      "wire_od_mm": 1.1,
+      "quarter_bend_input_mm": 15.0,
+      "sampled_minimum_centerline_radius_mm": 14.365277412537393,
+      "curvature_samples": 161,
+      "route_length_mm": 73.16845686545884,
+      "exit_z_mm": -52.0,
+      "required_radius_for_max_selected_od_mm": 10.921999999999997
+    },
+    {
+      "adjust_y_mm": -1.0,
+      "tag": "NO",
+      "wire_od_mm": 1.1,
+      "quarter_bend_input_mm": 15.0,
+      "sampled_minimum_centerline_radius_mm": 13.356982802985158,
+      "curvature_samples": 161,
+      "route_length_mm": 78.41224183059104,
+      "exit_z_mm": -52.0,
+      "required_radius_for_max_selected_od_mm": 10.921999999999997
+    },
+    {
+      "adjust_y_mm": -0.5,
+      "tag": "COM",
+      "wire_od_mm": 1.1,
+      "quarter_bend_input_mm": 15.5,
+      "sampled_minimum_centerline_radius_mm": 14.883132604968976,
+      "curvature_samples": 161,
+      "route_length_mm": 73.45109307554317,
+      "exit_z_mm": -52.0,
+      "required_radius_for_max_selected_od_mm": 10.921999999999997
+    },
+    {
+      "adjust_y_mm": -0.5,
+      "tag": "NO",
+      "wire_od_mm": 1.1,
+      "quarter_bend_input_mm": 15.5,
+      "sampled_minimum_centerline_radius_mm": 13.893689955599742,
+      "curvature_samples": 161,
+      "route_length_mm": 78.6897012932946,
+      "exit_z_mm": -52.0,
+      "required_radius_for_max_selected_od_mm": 10.921999999999997
+    },
+    {
+      "adjust_y_mm": 0.0,
+      "tag": "COM",
+      "wire_od_mm": 1.1,
+      "quarter_bend_input_mm": 16.0,
+      "sampled_minimum_centerline_radius_mm": 15.400064711487685,
+      "curvature_samples": 161,
+      "route_length_mm": 73.73389960883296,
+      "exit_z_mm": -52.0,
+      "required_radius_for_max_selected_od_mm": 10.921999999999997
+    },
+    {
+      "adjust_y_mm": 0.0,
+      "tag": "NO",
+      "wire_od_mm": 1.1,
+      "quarter_bend_input_mm": 16.0,
+      "sampled_minimum_centerline_radius_mm": 14.42923092998708,
+      "curvature_samples": 161,
+      "route_length_mm": 78.9676451416765,
+      "exit_z_mm": -52.0,
+      "required_radius_for_max_selected_od_mm": 10.921999999999997
+    },
+    {
+      "adjust_y_mm": 0.5,
+      "tag": "COM",
+      "wire_od_mm": 1.1,
+      "quarter_bend_input_mm": 16.5,
+      "sampled_minimum_centerline_radius_mm": 15.916136904302297,
+      "curvature_samples": 161,
+      "route_length_mm": 74.01686123486543,
+      "exit_z_mm": -52.0,
+      "required_radius_for_max_selected_od_mm": 10.921999999999997
+    },
+    {
+      "adjust_y_mm": 0.5,
+      "tag": "NO",
+      "wire_od_mm": 1.1,
+      "quarter_bend_input_mm": 16.5,
+      "sampled_minimum_centerline_radius_mm": 14.963614635897729,
+      "curvature_samples": 161,
+      "route_length_mm": 79.24603068148227,
+      "exit_z_mm": -52.0,
+      "required_radius_for_max_selected_od_mm": 10.921999999999997
+    },
+    {
+      "adjust_y_mm": 1.0,
+      "tag": "COM",
+      "wire_od_mm": 1.1,
+      "quarter_bend_input_mm": 17.0,
+      "sampled_minimum_centerline_radius_mm": 16.431407499175425,
+      "curvature_samples": 161,
+      "route_length_mm": 74.29996448010485,
+      "exit_z_mm": -52.0,
+      "required_radius_for_max_selected_od_mm": 10.921999999999997
+    },
+    {
+      "adjust_y_mm": 1.0,
+      "tag": "NO",
+      "wire_od_mm": 1.1,
+      "quarter_bend_input_mm": 17.0,
+      "sampled_minimum_centerline_radius_mm": 15.496858259847631,
+      "curvature_samples": 161,
+      "route_length_mm": 79.52482005555959,
+      "exit_z_mm": -52.0,
+      "required_radius_for_max_selected_od_mm": 10.921999999999997
+    },
+    {
+      "adjust_y_mm": 1.5,
+      "tag": "COM",
+      "wire_od_mm": 1.1,
+      "quarter_bend_input_mm": 17.5,
+      "sampled_minimum_centerline_radius_mm": 16.945930283436024,
+      "curvature_samples": 161,
+      "route_length_mm": 74.58319738263414,
+      "exit_z_mm": -52.0,
+      "required_radius_for_max_selected_od_mm": 10.921999999999997
+    },
+    {
+      "adjust_y_mm": 1.5,
+      "tag": "NO",
+      "wire_od_mm": 1.1,
+      "quarter_bend_input_mm": 17.5,
+      "sampled_minimum_centerline_radius_mm": 16.028985153820248,
+      "curvature_samples": 161,
+      "route_length_mm": 79.80397958287112,
+      "exit_z_mm": -52.0,
+      "required_radius_for_max_selected_od_mm": 10.921999999999997
+    },
+    {
+      "adjust_y_mm": 2.0,
+      "tag": "COM",
+      "wire_od_mm": 1.1,
+      "quarter_bend_input_mm": 18.0,
+      "sampled_minimum_centerline_radius_mm": 17.459754847291332,
+      "curvature_samples": 161,
+      "route_length_mm": 74.86654928667335,
+      "exit_z_mm": -52.0,
+      "required_radius_for_max_selected_od_mm": 10.921999999999997
+    },
+    {
+      "adjust_y_mm": 2.0,
+      "tag": "NO",
+      "wire_od_mm": 1.1,
+      "quarter_bend_input_mm": 18.0,
+      "sampled_minimum_centerline_radius_mm": 16.560023159682014,
+      "curvature_samples": 161,
+      "route_length_mm": 80.08347920216538,
+      "exit_z_mm": -52.0,
+      "required_radius_for_max_selected_od_mm": 10.921999999999997
+    }
+  ],
+  "fit_coupons": [
+    {
+      "name": "front-insert-seat-fit-coupon",
+      "step_sha256": "b259eb5625a8e441c89e1da02b3b1c7880e53b0ee604646c5bc6bc469c16da5b",
+      "stl_sha256": "c4fd2d04f4a30326f2a635340524747aab497877267870ed9e84c294857dba3c",
+      "mesh": {
+        "triangles": 1076,
+        "connected_components": 1,
+        "expected_components": 1,
+        "nonmanifold_or_boundary_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume_mm3": 1479.8554162588991,
+        "component_signed_volumes_mm3": [
+          1479.855416258877
+        ],
+        "boundary_edge_examples_mm": [],
+        "watertight": true
+      }
+    }
+  ],
+  "head_spatial_subset_policy": "Each fixed-head clip contains the full sampled moving-body envelope plus 0.1 mm. Tool labels are unique per approach. All check counts include empty spatial subsets.",
+  "service_protocol": "Power off/unplug; remove cleaning grille; remove fixed magnetic seat/keeper; unplug J12 through bottom; remove two front M2x8 screws; withdraw entire cartridge +Y70mm. Fixed finger guard remains.",
+  "input_sha256": {
+    "tools\\verify_rev_d_cartridge.py": "fd70e61a599c5fffeed9833340f7ce1bbcefa5f4bc46541a7f9d79ab7a1939a9",
+    "cad\\rev_d_interlock_cartridge.py": "8b563568d6fca4f1555b121d56166b6c2f6230ff2d3c5a30e896442319549de3",
+    "cad\\rev_d\\interlock-cartridge\\cartridge-validation.json": "1351bc59374ee6c064ad7da362e95887ec764e4eac310979a41e15628f0e85bf",
+    "cad\\rev_d\\motion-validation.json": "f7b9c0b9bec91666a465c3d7c49a90c7c70e3c9e6af3e2c898df7a4724349c39",
+    "cad\\rev_d_motion.py": "596249d063b413aca93e2779203f91b2454891443dd1de06039696135a5f99e5",
+    "cad\\rev_d_front_service.py": "0dae4fbc211d4fe4ea8b8706630bb761a2a4100e28d9ec95860af1caecf0b959",
+    "cad\\rev_d_meshes.py": "52ddb4ef42db642fdbdfff5fbafe0baad14ee0144ee421979d262bc70343cee6"
+  },
+  "limits": [
+    "Independent candidate; main complete stage/export and Onshape adoption still required.",
+    "Sampled nominal drawing bodies, not elastic switch actuation or tolerance qualification.",
+    "Whole main loom, plugged connectors and realistic hand dexterity are not qualified by tool cylinders.",
+    "Thermal insert pullout and calibrated switch post-trip/overtravel require physical tests."
+  ]
+}

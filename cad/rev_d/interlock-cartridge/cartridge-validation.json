@@ -1,0 +1,495 @@
+{
+  "result": "PASS",
+  "generated_utc": "2026-10-10T20:36:15.790426+00:00",
+  "physical_qualification": false,
+  "pair_checks": 4008,
+  "issues": [],
+  "intended_couplings": [
+    {
+      "a": "P2-flowing-head-left-INTEGRAL-OUTLET",
+      "b": "REF-cartridge-0-ruthex-RX-M2x4-vendor",
+      "kind": "thermal insert seat",
+      "overlap_mm3": 1.1415805475569258,
+      "outside_declared_seat_mm3": 0.0
+    },
+    {
+      "a": "P2-flowing-head-left-INTEGRAL-OUTLET",
+      "b": "REF-cartridge-1-ruthex-RX-M2x4-vendor",
+      "kind": "thermal insert seat",
+      "overlap_mm3": 1.141580566806329,
+      "outside_declared_seat_mm3": 0.0
+    },
+    {
+      "a": "REF-cartridge-0-ISO4762-M2x8",
+      "b": "REF-cartridge-0-ruthex-RX-M2x4-vendor",
+      "kind": "ideal screw major-cylinder / vendor female thread",
+      "overlap_mm3": 2.1657275905334945,
+      "outside_declared_seat_mm3": 0.0
+    }
+  ],
+  "parts": [
+    {
+      "name": "P2-flowing-head-left-INTEGRAL-OUTLET",
+      "sha256": "0e7fee687b392560122f05c1e0bf43288d5604e24c8a573dfff3872e7f892f39",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "magnetic-front-cleaning-grille-development",
+      "sha256": "fbf8e1d707d73cb82e98436774a71f1891cbd74524f49c6e5e8dff3735483490",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "head-magnet-retaining-ring-development",
+      "sha256": "a3729026f2c442ff51cae2eb03b28b8e42ec3b477953c6eac9bdeb83bd7d96fd",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "grille-magnet-retaining-ring-development",
+      "sha256": "dec18cba96666f760e4c12be56c1f62b03f6fb6c8b816d1e42d5f7433acea804",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "P2-fixed-magnet-seat-frame",
+      "sha256": "78d81981f07de7531a00738549f66eabae7cc5dd21a30d6f72cad47910f7168f",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "interlock-front-cartridge-development",
+      "sha256": "cea1e89f60894a1ecd41f05b2dc32332a45a08472507d000312633e533b028a4",
+      "printed": true,
+      "solid_count": 1
+    },
+    {
+      "name": "interlock-sliding-bracket-development",
+      "sha256": "24aa0f5738660e72244501eeb5351f94e3b0f34aafe1bd375686f4f28a00eadb",
+      "printed": true,
+      "solid_count": 1
+    },
+    {
+      "name": "interlock-wire-raceway-development",
+      "sha256": "0af26755dd4b2c34642fa2c5500b9479d310ffd7be193b5d94572d25841fd6e9",
+      "printed": true,
+      "solid_count": 1
+    },
+    {
+      "name": "interlock-wire-clamp-development",
+      "sha256": "259cee545ba572c4d07c43cc5b74d3192b8a83b4ac1a4fc317d32deefb0a48cb",
+      "printed": true,
+      "solid_count": 1
+    },
+    {
+      "name": "interlock-raceway-lid-development",
+      "sha256": "700ea4bd1b3d63e4b1afc7294b00767852c94a2554c3993a4b9d11dc6ea36673",
+      "printed": true,
+      "solid_count": 1
+    },
+    {
+      "name": "TPU-interlock-wire-liner-development",
+      "sha256": "6ddd3ccf55d3913a0d0d1ab32bf7485a2428673bc5daf6e16a774ab0572df191",
+      "printed": true,
+      "solid_count": 1
+    },
+    {
+      "name": "REF-D2F-01L-drawing-case",
+      "sha256": "9083eeb35ac333534184d3b49a6f7236f812bfa0252e4e25f12be0ef6a8bf113",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "REF-D2F-01L-lever-closed-envelope",
+      "sha256": "4b80bd8dc62653d2518f537500588beef01a6faef17d19f71429e941cbb6715d",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "REF-D2F-01L-COM-terminal-envelope",
+      "sha256": "86c0e2e37f05ff053982416308047a394e6c2ed263e6315e3c717524892bc76e",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "REF-D2F-01L-NO-terminal-envelope",
+      "sha256": "9a0ee1522d970b7eee1b4d9256f0d83eefb37fbfccaf67241374690d5c150299",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "REF-D2F-01L-NC-terminal-envelope",
+      "sha256": "9fb428507fd1d50e1f1097d175daf114e7912d8fb153ae5793c7c2dbba410962",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "REF-COM-5853-insulated-route",
+      "sha256": "cdc2998a42d2e9491eb1076fd8dedd5ba960679f5d916f694071749a76e812bf",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "REF-NO-5853-insulated-route",
+      "sha256": "203472bd2b57106c9b9328e1343ee89809d1b4c2fa909ed7c38422ceb2b11abc",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "REF-slide-0-ISO4762-M2x6",
+      "sha256": "ea5b84b131c9883dd123253960070923cacd156eacdb2a26f70da956565f774b",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "REF-slide-0-ISO7089-M2-washer",
+      "sha256": "f7e2c51549226d76bef4c73f5e9cd321769f62418a4324a44f7b9cb6133b3434",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "REF-slide-0-ISO4032-M2-nut",
+      "sha256": "e27df9359eea5deb6c47b28994f825e3f19934f78ec78a673350387c0fb0ae9c",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "REF-slide-1-ISO4762-M2x6",
+      "sha256": "b027ffac838e085fefdb89097cfd1efda841b7b9a7e1e8606173453674a9eef2",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "REF-slide-1-ISO7089-M2-washer",
+      "sha256": "2c3f98ade79102e48d7f5e082143e7dbf12e0cdfbf0d9e82927850b5d8ed3963",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "REF-slide-1-ISO4032-M2-nut",
+      "sha256": "a8e220ec8d60d6bab07690b0afd1bfdb09dcebf70809e076c4c1d8754c0dae1d",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "REF-switch-0-ISO4762-M2x10",
+      "sha256": "14844bd58330b8e427c64432c5168049060bdcc1f054b14a58ca6889689effbe",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "REF-switch-0-ISO7089-M2-washer",
+      "sha256": "a1c5601cb8024695caf10709dd52486087f485a95d378b72090f88462f12c965",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "REF-switch-0-ISO4032-M2-nut",
+      "sha256": "a78c2d1c7f8882c274822b75a32510805ab5e1c6126d39f13d23d4b1ac143739",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "REF-switch-1-ISO4762-M2x10",
+      "sha256": "07b5ec47124300ae7b6fd8ccb8c5f2f29074708431aa36808e9ea7749d36cdcd",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "REF-switch-1-ISO7089-M2-washer",
+      "sha256": "581c55b9d3d860142026fcaee60e96095b1e98b2f869b6be6999b20b99a65fe9",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "REF-switch-1-ISO4032-M2-nut",
+      "sha256": "dadcbd53048c2a88405c153519f1468e3fa891312ab2551bd04808758159da03",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "REF-clamp-0-ISO4762-M2x14",
+      "sha256": "470c97cd704491947100142eb9b96636850484286edbd9f30ebd935f67f8a7a9",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "REF-clamp-0-ISO7089-M2-washer",
+      "sha256": "37053534b75008b6ce530bce81a4d370953ffbc636a82495dbad09c2439fd4c0",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "REF-clamp-0-ISO4032-M2-nut",
+      "sha256": "5de691567aadae494b00c5d1e01ac74518a00f34112e058dc8a843aa5071c439",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "REF-clamp-1-ISO4762-M2x14",
+      "sha256": "821ae949e8ed9d28c4d65bd81d11f4d254b3df2e15db5b3c118205f3cd9661f3",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "REF-clamp-1-ISO7089-M2-washer",
+      "sha256": "38e63254c388a81d0c2cc9cfef8ff2804fdd430aec21ce9478cc8a0b87c1a5ee",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "REF-clamp-1-ISO4032-M2-nut",
+      "sha256": "3e02e004697e53e81006330dc27edc92493bbab7de3b14b5c8d0a5ee493f5b7f",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "REF-race-0-ISO4762-M2x14",
+      "sha256": "2a684a1d176ac92e2da8fb82d8a3fd39243d4af7f1dae978e3792e68e31d549d",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "REF-race-0-ISO7089-M2-washer",
+      "sha256": "34b039dfbacad0dbe87a2b718a04b2944c26fc5c1f3dc700b29fb7581630e3bf",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "REF-race-0-ISO4032-M2-nut",
+      "sha256": "554a9d14e2e67ab8fedac831f9116c571a8b7fb85a9f9b07733fe32886060618",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "REF-race-1-ISO4762-M2x14",
+      "sha256": "b118028f23268a44e88694bf81c2b951d0ba3a6330a8551d2245f01fa6997eba",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "REF-race-1-ISO7089-M2-washer",
+      "sha256": "b277aa9015db3c94e137e4a748e5b08c4d8a586543b82a1a659b710bea37aeba",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "REF-race-1-ISO4032-M2-nut",
+      "sha256": "a7b45636e440b5e00454c6cfaa13cc5edaa09602602c5cd92ca2bd5f7e92750d",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "REF-cartridge-0-ISO4762-M2x8",
+      "sha256": "a50af12757c16307469f335ba8e5514159d91c61408ec55461655a23c729fc33",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "REF-cartridge-0-ISO7089-M2-washer",
+      "sha256": "b9a92579458ecbfc28886f55f8bd3b41f78f4282451e245878ac0189c3554802",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "REF-cartridge-0-ruthex-RX-M2x4-vendor",
+      "sha256": "919efe66faac2fc41030ccfea7151d683f5f5fdea599daacd596558ceae6e979",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "REF-cartridge-1-ISO4762-M2x8",
+      "sha256": "bac2d72729717108d085dc52dcc7ef3bb077f8a7aab4789d31f9269becbe5094",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "REF-cartridge-1-ISO7089-M2-washer",
+      "sha256": "3d74ba7690265486ee6851bc31e942cf00fb2c014ea42e4f54b151676413f62f",
+      "printed": false,
+      "solid_count": 1
+    },
+    {
+      "name": "REF-cartridge-1-ruthex-RX-M2x4-vendor",
+      "sha256": "391a8f48e2d7638a7a4db38052ffeedc2ef4eb5f1d5ab4f006d127444d1b4b7e",
+      "printed": false,
+      "solid_count": 1
+    }
+  ],
+  "input_sha256": {
+    "cad\\rev_d_interlock_cartridge.py": "8b563568d6fca4f1555b121d56166b6c2f6230ff2d3c5a30e896442319549de3",
+    "cad\\rev_d_interlock.py": "804e285b14f4d92bac76ef36130548249315c0aa4d1d872dd5b1181b0ddad748",
+    "cad\\grille_interlock_study.py": "41eb0a88f144f34a6078c1852214aa10534d91575107e3dd5477915a326c0be0",
+    "cad\\rev_d_power_access.py": "b5102917bedc797e429587f4e9cf85da7b1a258c200068a833bac535e24b3439",
+    "cad\\rev_d\\stage-validation.json": "85a29fadb2cc77f2c92179bed2acd1af8078d9e81e49bd3c5d17525ed8f44ae7",
+    "cad\\rev_d\\head-parameters.json": "9feaa04b78a2c3a42456b0647a89fb0f4e0c8b79811ed7a2928242e8684a7592",
+    "cad\\vendor\\ruthex-RX-M2x4.step": "4fe0b584d0f9473ff9dc4afbf08bf6a3c951bf32e81e595a912bb1f1f71dd3ce",
+    "hardware\\datasheets\\Ruthex-RX.pdf": "6bfc05690afce95e31ad652a8c1860ea9d8781373cf34f5730c935f703bf1fde"
+  },
+  "switch_model": "Omron D2F-01L; primary drawing envelope",
+  "translation_y_mm": 116.60000000000002,
+  "case_center_xyz_mm": [
+    -62.7,
+    255.05,
+    18.4
+  ],
+  "actuator_face_y_mm": 259.85,
+  "grille_rear_y_mm": 267.6,
+  "mount_adjustment_y_mm": [
+    -2,
+    2
+  ],
+  "nominal_post_trip_mm": 0.25,
+  "additional_stop_travel_mm": 0.2,
+  "guaranteed_overtravel_min_mm": 0.55,
+  "tongue_root_embed_length_mm": 4.0,
+  "wire_trial_od_mm": 1.1,
+  "liner_trial_hole_mm": 1.2,
+  "raceway_shift_y_mm": -9.1,
+  "wire_routes": {
+    "COM": {
+      "wire_od_mm": 1.1,
+      "quarter_bend_input_mm": 16.0,
+      "sampled_minimum_centerline_radius_mm": 15.400064711487685,
+      "curvature_samples": 161,
+      "route_length_mm": 73.73389960883296,
+      "exit_z_mm": -52.0,
+      "required_radius_for_max_selected_od_mm": 10.921999999999997
+    },
+    "NO": {
+      "wire_od_mm": 1.1,
+      "quarter_bend_input_mm": 16.0,
+      "sampled_minimum_centerline_radius_mm": 14.42923092998708,
+      "curvature_samples": 161,
+      "route_length_mm": 78.9676451416765,
+      "exit_z_mm": -52.0,
+      "required_radius_for_max_selected_od_mm": 10.921999999999997
+    }
+  },
+  "wire_source": "https://www.alphawire.com/en/products/wire/hook-up-wire/premium/5853",
+  "actuator_contact_x_mm": -62.7,
+  "wire_channel_y_mm": 233.0,
+  "architecture": "Front-removable cartridge; fixed grille seat removed first; all internal X screws preassembled outside head",
+  "free_wire_exit_z_mm": -52.0,
+  "front_mount_axes_xz_mm": [
+    [
+      -70.0,
+      -38.0
+    ],
+    [
+      -65.0,
+      38.0
+    ]
+  ],
+  "front_fastener_stacks": {
+    "slide-0": {
+      "axis": "X",
+      "direction": -1,
+      "under_head_x_mm": -65.3,
+      "length_mm": 6,
+      "y_mm": 253.3,
+      "z_mm": 8.0,
+      "full_nut_thread_engagement_mm": 1.5999999999999943
+    },
+    "slide-1": {
+      "axis": "X",
+      "direction": -1,
+      "under_head_x_mm": -65.3,
+      "length_mm": 6,
+      "y_mm": 253.3,
+      "z_mm": 29.0,
+      "full_nut_thread_engagement_mm": 1.5999999999999943
+    },
+    "switch-0": {
+      "axis": "X",
+      "direction": -1,
+      "under_head_x_mm": -59.5,
+      "length_mm": 10,
+      "y_mm": 253.3,
+      "z_mm": 15.15,
+      "full_nut_thread_engagement_mm": 1.5999999999999943
+    },
+    "switch-1": {
+      "axis": "X",
+      "direction": -1,
+      "under_head_x_mm": -59.5,
+      "length_mm": 10,
+      "y_mm": 253.3,
+      "z_mm": 21.65,
+      "full_nut_thread_engagement_mm": 1.5999999999999943
+    },
+    "clamp-0": {
+      "axis": "X",
+      "direction": 1,
+      "under_head_x_mm": -71.7,
+      "length_mm": 14,
+      "y_mm": 227.3,
+      "z_mm": -7.0,
+      "full_nut_thread_engagement_mm": 1.6000000000000014
+    },
+    "clamp-1": {
+      "axis": "X",
+      "direction": 1,
+      "under_head_x_mm": -71.7,
+      "length_mm": 14,
+      "y_mm": 238.7,
+      "z_mm": -7.0,
+      "full_nut_thread_engagement_mm": 1.6000000000000014
+    },
+    "race-0": {
+      "axis": "X",
+      "direction": 1,
+      "under_head_x_mm": -72.0,
+      "length_mm": 14,
+      "y_mm": 240.5,
+      "z_mm": -16.0,
+      "full_nut_thread_engagement_mm": 1.6000000000000014
+    },
+    "race-1": {
+      "axis": "X",
+      "direction": 1,
+      "under_head_x_mm": -72.0,
+      "length_mm": 14,
+      "y_mm": 240.5,
+      "z_mm": -46.0,
+      "full_nut_thread_engagement_mm": 1.6000000000000014
+    },
+    "front-0": {
+      "axis": "Y",
+      "under_head_y_mm": 263.8,
+      "length_mm": 8,
+      "x_mm": -70.0,
+      "z_mm": -38.0,
+      "insert_thread_engagement_mm": 3.7,
+      "insert_outer_mm": 3.6,
+      "printed_seat_mm": 3.2,
+      "blind_depth_mm": 5.0,
+      "minimum_radial_plastic_mm": 1.4
+    },
+    "front-1": {
+      "axis": "Y",
+      "under_head_y_mm": 263.8,
+      "length_mm": 8,
+      "x_mm": -65.0,
+      "z_mm": 38.0,
+      "insert_thread_engagement_mm": 3.7,
+      "insert_outer_mm": 3.6,
+      "printed_seat_mm": 3.2,
+      "blind_depth_mm": 5.0,
+      "minimum_radial_plastic_mm": 1.7
+    }
+  },
+  "insert_vendor_sha256": "4fe0b584d0f9473ff9dc4afbf08bf6a3c951bf32e81e595a912bb1f1f71dd3ce",
+  "insert_datasheet_sha256": "6bfc05690afce95e31ad652a8c1860ea9d8781373cf34f5730c935f703bf1fde",
+  "insert_source": "https://www.ruthex.de/en/products/ruthex-gewindeeinsatz-m2-70-stuck-rx-m2x4-messing-gewindebuchsen",
+  "fixed_seat_removed_for_cartridge_service": true,
+  "wire_routes_scope": "Terminal-to-cartridge-exit trial only; main J12 connector unplugged before service",
+  "limits": [
+    "Independent cartridge candidate; not yet in current main stage or Onshape checkpoint.",
+    "Primary switch drawing envelopes; no elastic snap-action or trip qualification.",
+    "Thread cylinders and thermal-insert material displacement are declared interfaces, not fit or strength qualification.",
+    "Main wire connectors, complete loom, tolerance extremes and physical actuation remain to qualify.",
+    "Fixed finger guards are not qualified rotor-fragment containment."
+  ]
+}
