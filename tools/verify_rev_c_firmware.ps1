@@ -29,6 +29,8 @@ $report.commands[1].static_ram_bytes=[int]$ramMatch.Groups[1].Value
 $uf2=Join-Path $taskRoot 'firmware\dist\rev-c\WindflowRevC.ino.uf2'
 $report.uf2.sha256=(Get-FileHash -Algorithm SHA256 -LiteralPath $uf2).Hash.ToLowerInvariant()
 $report.uf2.bytes=(Get-Item -LiteralPath $uf2).Length
+$report.uf2.generated_local_ignored=$false
+$report.uf2 | Add-Member -NotePropertyName tracked_in_repository -NotePropertyValue $true -Force
 foreach($entry in $report.source_sha256.PSObject.Properties){
  $entry.Value=(Get-FileHash -Algorithm SHA256 -LiteralPath (Join-Path $taskRoot $entry.Name)).Hash.ToLowerInvariant()
 }

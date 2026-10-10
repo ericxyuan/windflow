@@ -38,7 +38,8 @@
     "path": "firmware/dist/rev-c/WindflowRevC.ino.uf2",
     "sha256": "214637bc161236e2a0032e339d5625ecabb6ba90695852367b52841f2deb23e1",
     "bytes": 290816,
-    "generated_local_ignored": true
+    "generated_local_ignored": false,
+    "tracked_in_repository": true
   },
   "evidence_logs": {
     "build/rev-c-firmware-host.log": "6e8bb5b7157b845e94ff0537775d21e8c3b50a4df9366273d8789cfa03052707",
@@ -83,5 +84,5 @@
     "Actual physical pressure, servo holding, temperature lag and flash/UART timing must be measured.",
     "Rev C carrier/power circuitry and harness must match the pin table before connection."
   ],
-  "verification_script_sha256": "02e437b30c0df0f84e5f9301d9d6f4fc58db9b24abf696f20c415ed53b84906a"
+  "verification_script_sha256": "d26ee2067f0c65a65b365a2bef4209bb62b099c7fd7f165ca23df6b290d6decd"
 }
