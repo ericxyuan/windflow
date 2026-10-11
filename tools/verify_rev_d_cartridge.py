@@ -6,7 +6,7 @@ paths. It is sampled nominal CAD, not live switch, wire or motor qualification.
 """
 from pathlib import Path
 from datetime import datetime, timezone
-import sys, hashlib, json, math, time
+import sys, hashlib, json, math, time, argparse
 import cadquery as cq
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -50,16 +50,29 @@ def lever(mount_y,contact_y):
 
 
 def main():
-    _bounds_cache.clear();report_path=c.OUT/'cartridge-validation.json'
+    parser=argparse.ArgumentParser()
+    parser.add_argument('--integrated',action='store_true',help='Check the current adopted main-stage geometry, not the historical independent pilot')
+    integrated=parser.parse_args().integrated
+    _bounds_cache.clear()
+    report_path=(c.BASE/'stage-validation.json') if integrated else (c.OUT/'cartridge-validation.json')
     report=json.loads(report_path.read_text())
-    assert report['result']=='PASS' and not report['issues']
+    assert report['result']=='PASS' and not report.get('issues',report.get('unintended_issues',[]))
     for name,sha in report['input_sha256'].items(): assert digest(ROOT/name)==sha,('Stale cartridge',name)
     shapes,p=c.load_stage();candidate={};meshes=[]
-    for item in report['parts']:
-        path=c.OUT/(item['name']+'.step')
+    if integrated:
+        metadata=report['grille_interlock'];assert metadata['main_stage_adopted']
+        candidate_names=set(metadata['candidate_part_names'])
+        items=[item for item in report['parts'] if item['name'] in candidate_names]
+        assert len(items)==len(candidate_names)==48
+        shapes={n:s for n,s in shapes.items() if n not in candidate_names-set(metadata['changed_stage_part_names'])}
+        stacks=metadata['front_fastener_stacks']
+    else:
+        items=report['parts'];stacks=report['front_fastener_stacks']
+    for item in items:
+        path=(c.BASE if integrated else c.OUT)/(item['name']+'.step')
         assert digest(path)==item['sha256'],('Changed cartridge STEP',item['name'])
         candidate[item['name']]=cq.importers.importStep(str(path)).val()
-        if item['printed']:
+        if item['name'] in metadata['printed_part_names'] if integrated else item['printed']:
             mesh=check_mesh(path.with_suffix('.stl'),1)
             assert mesh['watertight'],item['name']
             meshes.append({'name':item['name'],'mesh':mesh,'sha256':digest(path.with_suffix('.stl'))})
@@ -163,7 +176,7 @@ def main():
         tool_records.append({'axis_xz_mm':[x,z],'driver_shank_diameter_mm':3.,'insert_tool_diameter_mm':5.})
     # With the unplugged cartridge fully removed, internal screws must have
     # a straight X approach. Its outer enclosure is absent in this service step.
-    for tag,stack in report['front_fastener_stacks'].items():
+    for tag,stack in stacks.items():
         if stack['axis']!='X': continue
         own=[n for n in module if n.startswith('REF-'+tag+'-ISO4762-')];assert len(own)==1
         start=stack['under_head_x_mm']-36.9 if stack['direction']>0 else stack['under_head_x_mm']+1.9
@@ -172,23 +185,27 @@ def main():
             if fn!=own[0]: check('removed_module_driver',tag,tool,fn,fs,{'module_removed':True})
     coupon=assembly[c.HEAD].intersect(c.box(20.,15.,13.,-60.,257.8,38.)).clean()
     assert coupon.isValid() and len(coupon.Solids())==1,'Insert-seat coupon is disconnected'
-    step=c.OUT/'front-insert-seat-fit-coupon.step';cq.exporters.export(coupon,str(step))
+    result_folder=c.BASE/'testpieces' if integrated else c.OUT
+    step=result_folder/'front-insert-seat-fit-coupon.step';cq.exporters.export(coupon,str(step))
     cq.exporters.export(coupon,str(step.with_suffix('.stl')),tolerance=.03,angularTolerance=.08)
     coupon_mesh=check_mesh(step.with_suffix('.stl'),1);assert coupon_mesh['watertight']
     result={'result':'PASS' if not issues else 'FAIL','generated_utc':datetime.now(timezone.utc).isoformat(),
             'physical_qualification':False,'counts':counts,'maxima_mm3':maxima,'issues':issues,
             'meshes':meshes,'tool_envelopes':tool_records,'adjustment_wire_metrics':bend_metrics,
-            'fit_coupons':[{'name':step.stem,'step_sha256':digest(step),
+            'assembly_scope':'current integrated main stage' if integrated else 'independent cartridge candidate',
+            'fit_coupons':[{'name':step.stem,'path':str(step.relative_to(ROOT)),'step_sha256':digest(step),
                             'stl_sha256':digest(step.with_suffix('.stl')),'mesh':coupon_mesh}],
             'head_spatial_subset_policy':'Each fixed-head clip contains the full sampled moving-body envelope plus 0.1 mm. Tool labels are unique per approach. All check counts include empty spatial subsets.',
             'service_protocol':'Power off/unplug; remove cleaning grille; remove fixed magnetic seat/keeper; unplug J12 through bottom; remove two front M2x8 screws; withdraw entire cartridge +Y70mm. Fixed finger guard remains.',
             'input_sha256':{str(q.relative_to(ROOT)):digest(q) for q in (Path(__file__),Path(c.__file__),report_path,
                 c.BASE/'motion-validation.json',ROOT/'cad/rev_d_motion.py',ROOT/'cad/rev_d_front_service.py',ROOT/'cad/rev_d_meshes.py')},
-            'limits':['Independent candidate; main complete stage/export and Onshape adoption still required.',
+            'limits':[('Current main-stage cartridge paths; a matching complete exchange and Onshape checkpoint are still required.'
+                       if integrated else 'Independent candidate; main complete stage/export and Onshape adoption still required.'),
                       'Sampled nominal drawing bodies, not elastic switch actuation or tolerance qualification.',
                       'Whole main loom, plugged connectors and realistic hand dexterity are not qualified by tool cylinders.',
                       'Thermal insert pullout and calibrated switch post-trip/overtravel require physical tests.']}
-    (c.OUT/'service-motion-validation.json').write_text(json.dumps(result,indent=2)+'\n')
+    result_path=c.BASE/'cartridge-service-validation.json' if integrated else c.OUT/'service-motion-validation.json'
+    result_path.write_text(json.dumps(result,indent=2)+'\n')
     print(result['result'],sum(counts.values()),'checks;',len(issues),'collisions',flush=True)
     for issue in issues[:35]: print('COLLISION',issue,flush=True)
     if issues: raise SystemExit(1)

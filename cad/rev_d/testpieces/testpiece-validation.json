@@ -1,6 +1,6 @@
 {
   "result": "PASS",
-  "generated_utc": "2026-10-10T19:42:24.314540+00:00",
+  "generated_utc": "2026-10-10T20:51:06.506592+00:00",
   "physical_qualification": false,
   "parts": [
     {
@@ -23,13 +23,13 @@
     }
   ],
   "geometry_sha256": {
-    "cad\\rev_d\\testpieces\\USB-side-port-fit-coupon.step": "434958d86e3a53cd2ee9e9de140273f1e861aa234f342d0c4c01816a7ce1a02a",
+    "cad\\rev_d\\testpieces\\USB-side-port-fit-coupon.step": "73981b5ad95e4a2ade3d49f362bbbe18a6b7695e27c2d87513098ae99a4ddf02",
     "cad\\rev_d\\testpieces\\USB-side-port-fit-coupon.stl": "7a63b6cb011709ea605e860979aece7fd370e6e913e6165bd472ddcf1f31de27"
   },
   "input_sha256": {
     "tools\\verify_rev_d_testpieces.py": "6b64a7ad7a2668bb28e309913cfbadce22780a7b5ac4ff1fd3c16aef59a9b3e3",
     "cad\\rev_d_meshes.py": "52ddb4ef42db642fdbdfff5fbafe0baad14ee0144ee421979d262bc70343cee6",
-    "cad\\rev_d\\stage-validation.json": "85a29fadb2cc77f2c92179bed2acd1af8078d9e81e49bd3c5d17525ed8f44ae7"
+    "cad\\rev_d\\stage-validation.json": "485c1ffc84beafc1a8a2288a7b5e52a0e93c6fa0f38479a63fc643c2bd68165c"
   },
   "limits": [
     "Mesh topology only; physical print/plug/fastener/driver fit remains unqualified."

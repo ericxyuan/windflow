@@ -242,6 +242,10 @@ def load_stage():
 
 def main():
     OUT.mkdir(parents=True,exist_ok=True)
+    assert not json.loads((BASE/'stage-validation.json').read_text()).get('grille_interlock',{}).get('main_stage_adopted'), (
+        'This standalone pilot must not reapply its operations to an integrated stage. '
+        'Use tools/verify_rev_d_cartridge.py --integrated for the current assembly; '
+        'the independent baseline is preserved at commit 69df446.')
     shapes,parameters=load_stage()
     changed,printed,purchased,metadata,intended=design(shapes,parameters)
     candidates={**changed,**printed,**purchased}

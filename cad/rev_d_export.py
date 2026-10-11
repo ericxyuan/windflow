@@ -38,8 +38,16 @@ def main():
     motion=json.loads((OUT/'motion-validation.json').read_text())
     rotor=json.loads((OUT/'rotor-validation.json').read_text())
     mesh=json.loads((OUT/'mesh-validation.json').read_text())
+    cartridge=json.loads((OUT/'cartridge-service-validation.json').read_text())
+    testpieces=json.loads((OUT/'testpieces/testpiece-validation.json').read_text())
     assert json.loads((OUT/'stage-build-state.json').read_text())['status']=='PASS'
-    verify(stage);verify(motion);verify(rotor);verify(mesh)
+    verify(stage);verify(motion);verify(rotor);verify(mesh);verify(cartridge);verify(testpieces)
+    assert cartridge['assembly_scope']=='current integrated main stage' and not cartridge['issues']
+    for item in cartridge['meshes']:
+        assert digest(OUT/(item['name']+'.stl'))==item['sha256'],('Changed cartridge mesh',item['name'])
+    for item in cartridge['fit_coupons']:
+        path=ROOT/item['path']
+        assert digest(path)==item['step_sha256'] and digest(path.with_suffix('.stl'))==item['stl_sha256'],('Changed cartridge fit coupon',item['name'])
     firmware_profile=verify_firmware_profile(rotor)
     for r in mesh['parts']:assert digest(OUT/(r['name']+'.stl'))==r['sha256'],('Stale STL',r['name'])
     excluded=set(stage['excluded_alternative_and_reserves'])
@@ -74,10 +82,11 @@ def main():
             'round_trip_solids':len(restored.Solids()),'round_trip_volume_difference_mm3':delta,
             'components':components,'excluded_alternative_and_reserves':sorted(excluded),
             'firmware_profile':firmware_profile,
-            'input_sha256':{str(p.relative_to(ROOT)):digest(p) for p in [Path(__file__),OUT/'stage-validation.json',OUT/'motion-validation.json',OUT/'rotor-validation.json',OUT/'mesh-validation.json',
+            'input_sha256':{str(p.relative_to(ROOT)):digest(p) for p in [Path(__file__),OUT/'stage-validation.json',OUT/'motion-validation.json',OUT/'rotor-validation.json',OUT/'mesh-validation.json',OUT/'cartridge-service-validation.json',OUT/'testpieces/testpiece-validation.json',
                 ROOT/'firmware/WindflowRevC/validation.json',ROOT/'firmware/WindflowRevC/Config.h',ROOT/'firmware/dist/rev-c/WindflowRevC.ino.uf2']},
             'limits':['Development STEP hierarchy has no native assembly mates.',
-                      'Main PCB, connected harness, pressure plumbing, interlock and all fasteners are unfinished integration.',
+                      'Main PCB, connected main harness, pressure plumbing and remaining fasteners are unfinished integration.',
+                      'Interlock integrated nominal paths do not establish physical trip, overtravel, insert retention or printed fit.',
                       'Rotor/servo/ESC physical qualification remains required; this is not an operating or production release.']}
     (OUT/'integration-export-validation.json').write_text(json.dumps(result,indent=2)+'\n')
     print('PASS',len(components),'groups;',len(restored.Solids()),'solids;',delta,'mm3 round trip',flush=True)

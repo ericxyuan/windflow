@@ -1,5 +1,7 @@
 # Rev D grille interlock development
 
+**Historical independent bracket study.** The later [front-service cartridge](rev-d-interlock-cartridge.md) is now adopted into the detailed 108-group main stage, with fresh complete-assembly and cartridge removal checks. The dimensions and 1,233-check evidence below describe this earlier pilot only.
+
 The independent adaptation in `cad/rev_d_interlock.py` passed **1,233 nominal part comparisons with zero collisions** and exit code zero against the source-matched 65-group stage. It remains a separate pilot in `cad/rev_d/interlock-study`; it is **not** included in the current main assembly or Onshape version.
 
 The selected switch is **Omron D2F-01L**, with a low-level contact. COM and NO follow the current electrical wiring; NC stays insulated. The case, lever and three terminals are drawing envelopes. They do not simulate the snap action, spring return, contact timing or elastic overtravel. The integral grille tongue has 4 mm nominal root embed. The intended adjustment is ±2 mm along airflow, with 0.25 mm nominal post-trip travel and 0.20 mm additional stop travel, below the drawing's 0.55 mm minimum overtravel. Those inputs require actual switch calibration before use.

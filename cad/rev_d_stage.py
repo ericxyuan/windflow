@@ -12,14 +12,22 @@ import math
 import cadquery as cq
 if __package__:
     from .rev_d_power_access import design as design_power_access
+    from .rev_d_interlock_cartridge import design as design_interlock_cartridge
 else:
     from rev_d_power_access import design as design_power_access
+    from rev_d_interlock_cartridge import design as design_interlock_cartridge
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT/'cad/rev_d'
 P = json.loads((OUT/'head-parameters.json').read_text())
 PARTS, RECORDS, SOURCES = {}, [], [Path(__file__), OUT/'head-parameters.json',
                                  Path(__file__).with_name('rev_d_power_access.py'),
+                                 Path(__file__).with_name('rev_d_interlock_cartridge.py'),
+                                 Path(__file__).with_name('rev_d_interlock.py'),
+                                 Path(__file__).with_name('grille_interlock_study.py'),
+                                 ROOT/'cad/vendor/ruthex-RX-M2x4.step',
+                                 ROOT/'hardware/datasheets/Ruthex-RX.pdf',
+                                 ROOT/'hardware/datasheets/D2F.pdf',
                                  OUT/'rotor-validation.json', ROOT/'cad/rev_c/head-validation.json']
 T, R = P['wall_mm'], P['throat_diameter_mm']/2
 
@@ -418,15 +426,46 @@ def build():
     record('P2-flowing-head-left-INTEGRAL-OUTLET', left)
     record('P2-flowing-head-right-INTEGRAL-OUTLET', right)
 
+    # Apply the checked cartridge to the freshly built, unmodified stage.
+    # Never run its geometry operation against an already adopted cartridge.
+    changed, printed, purchased, interlock_metadata, intended = design_interlock_cartridge(PARTS, P)
+    for name, shape in changed.items():
+        prior = next(r for r in RECORDS if r['name'] == name)
+        record(name, shape, prior['printed'], prior['source'], material=prior['material'])
+    for name, shape in printed.items():
+        record(name, shape, material='TPU95A' if name.startswith('TPU-') else 'PETG prototype')
+    for name, shape in purchased.items():
+        source = ('Manufacturer RX-M2x4 CAD; bounded thermal-insertion interface'
+                  if name.endswith('-vendor') else
+                  'Omron D2F primary drawing envelope; no elastic or trip qualification'
+                  if 'D2F' in name else
+                  'Alpha Wire 5853 1.1 mm insulated route; main loom still separate'
+                  if '5853' in name else
+                  'ISO fastener ideal envelope; actual supplied fit and thread unqualified')
+        record(name, shape, False, source, material='Purchased/drawing reference; see source')
+    interlock_metadata.update({'candidate_part_names':sorted({**changed, **printed, **purchased}),
+                               'changed_stage_part_names':sorted(changed),
+                               'printed_part_names':sorted(printed),
+                               'purchased_part_names':sorted(purchased),
+                               'main_stage_adopted':True,
+                               'independent_candidate_commit':'69df4468a0dfb357583ba9e83957447f6df0d717'})
+
     # Mutually exclusive spacer and reserved PCB are not physical instances.
     excluded = {'P2-stator-open-comparison-spacer', 'REF-main-PCB-population-and-loom-reserve-NOT-INTEGRATED'}
     names = [r['name'] for r in RECORDS if r['name'] not in excluded]
-    checks, issues = 0, []
+    checks, issues, couplings = 0, [], []
     for i, a in enumerate(names):
         for b in names[i+1:]:
             checks += 1
             vol = overlap(PARTS[a], PARTS[b])
-            if vol > .05: issues.append({'a': a, 'b': b, 'overlap_mm3': vol})
+            key = frozenset((a, b))
+            if vol > 1e-4 and key in intended:
+                rule = intended[key]
+                outside = PARTS[a].intersect(PARTS[b]).cut(rule['envelope']).Volume()
+                assert outside < 1e-4 and vol <= rule['maximum_mm3'], ('Invalid declared seat', a, b, vol, outside)
+                couplings.append({'a':a, 'b':b, 'kind':rule['kind'],
+                                  'overlap_mm3':vol, 'outside_declared_seat_mm3':outside})
+            elif vol > .05: issues.append({'a': a, 'b': b, 'overlap_mm3': vol})
         if i%10==0: print('NOMINAL PAIRS',checks,'/',len(names)*(len(names)-1)//2,flush=True)
     complete_bounds = [min(r['bounds_xyz_mm'][0] for r in RECORDS if r['name'] in names),
                        max(r['bounds_xyz_mm'][1] for r in RECORDS if r['name'] in names),
@@ -443,11 +482,14 @@ def build():
               'maximum_height_mm': P['maximum_product_height_mm'],
               'head_height_constraint_mm': P['head_height_mm'], 'excluded_alternative_and_reserves': sorted(excluded),
               'usb_side_port': usb_metadata,
+              'grille_interlock':interlock_metadata,
+              'intended_couplings':couplings,
               'testpiece_sha256': {str(path.relative_to(ROOT)): digest(path)
                                   for path in sorted(testpieces.glob('USB-side-port-fit-coupon.*'))},
               'input_sha256': {str(p.relative_to(ROOT)): digest(p) for p in dict.fromkeys(SOURCES)},
               'limits': ['Nominal placement only; motion, connected harness, tolerances and screw/tool approaches need revalidation.',
-                         'Main PCB population, pressure hoses/taps, component retention and grille interlock are not yet integrated.',
+                         'Main PCB population, pressure hoses/taps, remaining component retention and connected main loom are not yet integrated.',
+                         'Interlock nominal geometry is integrated; elastic trip, overtravel, printed fit and retention require physical qualification.',
                          'Motor/servo/ESC drawing envelopes remain unverified.',
                          'Curved stator incidence and boost benefit require physical flow/power/noise tests.',
                          'Finger guards are not a qualified printed-rotor fragment containment enclosure.',

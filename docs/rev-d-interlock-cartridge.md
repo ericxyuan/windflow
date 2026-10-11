@@ -1,6 +1,6 @@
 # Rev D front-service interlock cartridge — development
 
-The 150 mm grille interlock now has a checked front-removal design. This replaces the earlier independent bracket/raceway arrangement for the next main-stage integration. The current online 65-instance assembly has not yet adopted this cartridge. The fixed inner finger guard stays installed when either the cleaning grille or the cartridge is removed.
+The 150 mm grille interlock now has a checked front-removal design. This replaces the earlier independent bracket/raceway arrangement in the detailed 108-group main stage. The online checkpoint is recorded separately when the matching assembly is inspected. The fixed inner finger guard stays installed when either the cleaning grille or the cartridge is removed.
 
 The cartridge contains the Omron D2F-01L drawing-reference switch, an adjustable switch bracket, a short covered wire raceway and a separate TPU liner/clamp. Two front-facing M2 screws secure the cartridge to heat-set inserts in the left flowing shell. The internal screws are assembled and adjusted with the cartridge outside the enclosure. Their approach directions, recessed nuts and head clearances allow the complete module to withdraw past the fixed guard.
 
@@ -11,7 +11,7 @@ The cartridge contains the Omron D2F-01L drawing-reference switch, an adjustable
 - All six separately printed cartridge meshes and the insert-seat coupon are watertight, consistently wound and single components.
 - The two selected Alpha Wire 5853 signal wires have a nominal 1.1 mm envelope. Across nine switch adjustment positions from −2 to +2 mm, the smallest sampled centerline bend radius is **12.280 mm**. The selected wire's largest documented OD requires 10.922 mm at its specified 10×OD bend radius. These routes end at the cartridge exit; they do not establish a connected route to J12.
 
-These results belong to the exact hashes in [cartridge-validation.json](../cad/rev_d/interlock-cartridge/cartridge-validation.json) and [service-motion-validation.json](../cad/rev_d/interlock-cartridge/service-motion-validation.json). The reports also identify the main-stage baseline and tool sizes. They do not establish tolerance extremes, switch trip/overtravel, conductor termination, strain-relief grip or safe rotor operation.
+The standalone reports are preserved at commit 69df446. Current adopted geometry is checked by [stage-validation.json](../cad/rev_d/stage-validation.json) and [cartridge-service-validation.json](../cad/rev_d/cartridge-service-validation.json), with their own matching source and artifact hashes. The main stage has 5,778 nominal pairs; the cartridge service check again passes 196,561 comparisons against the adopted geometry. The reports also identify the main-stage baseline and tool sizes. They do not establish tolerance extremes, switch trip/overtravel, conductor termination, strain-relief grip or safe rotor operation.
 
 ## Purchased parts for this module
 
@@ -27,7 +27,7 @@ These results belong to the exact hashes in [cartridge-validation.json](../cad/r
 | ISO 7089 M2, A2 | 10 | Modelled 5 mm OD, 2.2 mm ID and 0.3 mm thickness; confirm the actual supplied washers |
 | Alpha Wire 5853 | 2 signal conductors | About 73.7 and 79.0 mm modelled terminal-to-exit lengths at the nominal adjustment, plus termination allowance and the still-undesigned main loom |
 
-The final project BOM must include these quantities when the cartridge is adopted. The wire tails and J12 connector length must be reconciled with the installed main board. Insulate the unused NC terminal.
+The module quantities below are now used by the main-stage cartridge. The final whole-project fastener BOM still requires reconciliation. The wire tails and J12 connector length must be reconciled with the installed main board. Insulate the unused NC terminal.
 
 The [ruthex primary product and CAD](https://www.ruthex.de/en/products/ruthex-gewindeeinsatz-m2-70-stuck-rx-m2x4-messing-gewindebuchsen) and [RX-series drawing](https://www.igo3d.com/mediafiles/Sonstiges/Ruthex/ruthex_Datenblatt_RX-Serie.pdf) specify the insert. The design uses a 3.2 mm printing bore, 5 mm blind depth and at least 1.4 mm radial plastic. The [Alpha Wire 5853 specification](https://www.alphawire.com/en/products/wire/hook-up-wire/premium/5853) governs the wire diameter and bend-radius check. Captured source files and download entries are retained in the project manifest.
 
@@ -43,4 +43,4 @@ The raceway has approximately 0.2 mm nominal clearance to the guard edge, and it
 
 ## Remaining work
 
-Adopt the cartridge into the main-stage sources, regenerate the whole-stage static/mesh/motion/exchange reports and publish a fresh Onshape assembly/checkpoint. Then finish the connected main loom and connector restraint. Verify actual switch trip, post-trip overtravel, release on grille removal, insert pullout, fastener retention, tolerance extremes and dexterity on hardware. The existing motion-inhibited firmware and unqualified printed-rotor status remain in force.
+The cartridge is adopted and whole-stage static/mesh/motion/service/exchange reports have been regenerated. Keep the online checkpoint matched to those sources. Finish the connected main loom and connector restraint. Verify actual switch trip, post-trip overtravel, release on grille removal, insert pullout, fastener retention, tolerance extremes and dexterity on hardware. The existing motion-inhibited firmware and unqualified printed-rotor status remain in force.

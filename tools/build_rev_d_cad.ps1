@@ -19,6 +19,8 @@ try {
     if($LASTEXITCODE -ne 0){throw 'Current fit-coupon source or mesh validation failed.'}
     & $taskPython 'cad/rev_d_motion.py'
     if($LASTEXITCODE -ne 0){throw 'Motion validation failed.'}
+    & $taskPython 'tools/verify_rev_d_cartridge.py' '--integrated'
+    if($LASTEXITCODE -ne 0){throw 'Integrated cartridge service, adjustment or tool clearance validation failed.'}
     & $taskPython 'cad/rev_d_export.py'
     if($LASTEXITCODE -ne 0){throw 'Assembly exchange validation failed.'}
 } finally {Pop-Location}
