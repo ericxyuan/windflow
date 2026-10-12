@@ -1,0 +1,242 @@
+{
+  "result": "INCOMPLETE BOARD; PD_RAW branch geometry and continuity checked",
+  "generated_utc": "2026-10-12T17:23:31.082762+00:00",
+  "physical_qualification": false,
+  "adopted_as_main_board": false,
+  "power_layout_approved": false,
+  "native_exit_code": 5,
+  "native_counts": {
+    "violations": 0,
+    "unconnected_items": 61,
+    "schematic_parity": 0
+  },
+  "missing_by_net": {
+    "RAW_FUSED": 10,
+    "EF1_IN": 2,
+    "GND": 7,
+    "TFT_CS_GPIO": 2,
+    "PICO_VSYS": 1,
+    "ESC_FUSED": 6,
+    "ESC_15V": 2,
+    "SERVO5_SWITCHED": 3,
+    "ENC_A": 3,
+    "ENC_B": 3,
+    "BUS_PROTECTED": 9,
+    "REG5_LOGIC": 8,
+    "EF1_PGTH": 2,
+    "PG_INPUT": 1,
+    "TFT_RST": 1,
+    "TFT_RST_BUF": 1
+  },
+  "signal_tracks_and_vias_removed_for_rerouting": {
+    "ENC_A": 32,
+    "ENC_B": 18,
+    "EF1_PGTH": 23,
+    "PG_INPUT": 13,
+    "TFT_RST": 16,
+    "TFT_RST_BUF": 3
+  },
+  "PD_RAW_missing_connections": 0,
+  "segments": [
+    {
+      "role": "fuse pad neck",
+      "width_mm": 1.4,
+      "length_mm": 1.55,
+      "layer": "B.Cu",
+      "start_mm": [
+        17.0,
+        19.95
+      ],
+      "end_mm": [
+        17.0,
+        21.5
+      ]
+    },
+    {
+      "role": "symmetric paired-via stem",
+      "width_mm": 1.0,
+      "length_mm": 1.200001,
+      "layer": "B.Cu",
+      "start_mm": [
+        16.399999,
+        21.5
+      ],
+      "end_mm": [
+        17.6,
+        21.5
+      ]
+    },
+    {
+      "role": "wide input bus",
+      "width_mm": 2.4,
+      "length_mm": 4.3,
+      "layer": "F.Cu",
+      "start_mm": [
+        8.0,
+        23.0
+      ],
+      "end_mm": [
+        8.0,
+        18.7
+      ]
+    },
+    {
+      "role": "wide input bus",
+      "width_mm": 2.4,
+      "length_mm": 9.0,
+      "layer": "F.Cu",
+      "start_mm": [
+        8.0,
+        18.7
+      ],
+      "end_mm": [
+        17.0,
+        18.7
+      ]
+    },
+    {
+      "role": "wide input bus",
+      "width_mm": 2.4,
+      "length_mm": 2.8,
+      "layer": "F.Cu",
+      "start_mm": [
+        17.0,
+        18.7
+      ],
+      "end_mm": [
+        17.0,
+        21.5
+      ]
+    }
+  ],
+  "via_centres_mm": [
+    [
+      16.399999,
+      21.5
+    ],
+    [
+      17.6,
+      21.5
+    ]
+  ],
+  "dc_calculation_assumptions": {
+    "scope": "PD_RAW branch development geometry; not a current rating",
+    "signal_nets_to_reroute": [
+      "ENC_A",
+      "ENC_B",
+      "TFT_RST",
+      "TFT_RST_BUF",
+      "EF1_PGTH",
+      "PG_INPUT"
+    ],
+    "continuous_design_current_a": 3.0,
+    "review_current_a": 6.0,
+    "bus_width_mm": 2.4,
+    "pad_neck_width_mm": 1.4,
+    "array_stem_width_mm": 1.0,
+    "via_count": 2,
+    "via_diameter_mm": 0.6,
+    "via_drill_mm": 0.3,
+    "array_half_spacing_mm": 0.6,
+    "clearance_margin_mm": 0.21,
+    "hole_clearance_mm": 0.26,
+    "smd_land_to_new_via_margin_mm": 0.15,
+    "via_arrays_to_try_mm": [
+      [
+        17.0,
+        21.5,
+        "x"
+      ],
+      [
+        17.0,
+        21.65,
+        "x"
+      ],
+      [
+        14.4,
+        19.95,
+        "y"
+      ],
+      [
+        19.15,
+        19.95,
+        "y"
+      ]
+    ],
+    "via_array_search_x_mm": [
+      14.0,
+      20.0
+    ],
+    "via_array_search_y_mm": [
+      17.0,
+      23.0
+    ],
+    "via_array_search_grid_mm": 0.1,
+    "maximum_pad_neck_length_mm": 3.0,
+    "bus_layers_to_try": [
+      "F.Cu",
+      "In2.Cu"
+    ],
+    "bus_jog_y_to_try_mm": [
+      18.7,
+      19.95,
+      18.0,
+      17.0,
+      20.0,
+      21.0
+    ],
+    "calculation_copper_thicknesses_mm": [
+      0.035,
+      0.07
+    ],
+    "calculation_via_barrel_thickness_mm": 0.025,
+    "calculation_board_thickness_mm": 1.6,
+    "calculation_copper_resistivity_ohm_mm2_per_m": 0.0172,
+    "limits": "Copper/plating assumptions and equal via sharing require review. No temperature rise, fuse/contact resistance, pulse or manufacturing approval."
+  },
+  "dc_resistance_estimates": [
+    {
+      "copper_thickness_mm": 0.035,
+      "current_a": 3.0,
+      "resistance_ohm_at_reference_temperature": 0.004572169531457303,
+      "drop_v": 0.013716508594371908,
+      "copper_loss_w": 0.041149525783115724
+    },
+    {
+      "copper_thickness_mm": 0.035,
+      "current_a": 6.0,
+      "resistance_ohm_at_reference_temperature": 0.004572169531457303,
+      "drop_v": 0.027433017188743816,
+      "copper_loss_w": 0.1645981031324629
+    },
+    {
+      "copper_thickness_mm": 0.07,
+      "current_a": 3.0,
+      "resistance_ohm_at_reference_temperature": 0.002578081034654582,
+      "drop_v": 0.007734243103963746,
+      "copper_loss_w": 0.023202729311891237
+    },
+    {
+      "copper_thickness_mm": 0.07,
+      "current_a": 6.0,
+      "resistance_ohm_at_reference_temperature": 0.002578081034654582,
+      "drop_v": 0.015468486207927491,
+      "copper_loss_w": 0.09281091724756495
+    }
+  ],
+  "input_sha256": {
+    "tools\\build_rev_c_input_copper_candidate.py": "cc66893f864155d6b149c55d97bc15aab40734b0d10345a24fdf7d013466a113",
+    "hardware\\pcb\\rev_c\\route-study\\input-copper-parameters.json": "591e03d9d109b4cd4da9f506df62378062d544932d58cc6bee6061a19e63ad7b",
+    "hardware\\pcb\\rev_c\\route-study\\ground-return-development.json": "28aa37aeb751263fcaa7879581e7a0a8f53f261224a160bc5b928986eaa47915",
+    "build\\rev-c-board\\ground-return-candidate\\windflow-rev-c.kicad_pcb": "a816eeb6ff9ce15f7888f58331935e78619686be8b886b1c8e8ff145ed86484c"
+  },
+  "artifact_sha256": {
+    "build\\rev-c-board\\input-copper-candidate\\windflow-rev-c.kicad_pcb": "876eb701e445302fe33fbd390d6dc90af2a595f6b00e510e25c4d6bdcf58aab0",
+    "build\\rev-c-board\\input-copper-candidate\\drc.json": "dff7fbcb47c06c33b2c43919b71e2c26154adcf7c6e3194613f3d3ed76d89433"
+  },
+  "limits": [
+    "Native exit 5 reflects remaining missing connections; the board is not manufacture-ready.",
+    "DC copper estimates omit fuse/connector resistance, pad spreading, thermal rise, plating variation and unequal via sharing.",
+    "No current rating, thermal/EMC or assembly qualification. The authoritative board is unchanged."
+  ]
+}
