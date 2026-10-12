@@ -1,0 +1,383 @@
+{
+  "result": "INCOMPLETE",
+  "scope": "Displaced signals rerouted around retained wide USB input copper",
+  "generated_utc": "2026-10-12T17:40:10.877792+00:00",
+  "native_exit_code": 5,
+  "native_counts": {
+    "violations": 0,
+    "unconnected_items": 50,
+    "schematic_parity": 0
+  },
+  "missing_by_net": {
+    "RAW_FUSED": 10,
+    "EF1_IN": 2,
+    "GND": 7,
+    "TFT_CS_GPIO": 2,
+    "PICO_VSYS": 1,
+    "ESC_FUSED": 6,
+    "ESC_15V": 2,
+    "SERVO5_SWITCHED": 3,
+    "BUS_PROTECTED": 9,
+    "REG5_LOGIC": 8
+  },
+  "selected_signal_tracks_and_vias_added": {
+    "ENC_A": 22,
+    "ENC_B": 38,
+    "EF1_PGTH": 20,
+    "PG_INPUT": 45,
+    "TFT_RST": 18,
+    "TFT_RST_BUF": 30
+  },
+  "signal_segments_raised_to_0p2mm_rule": {
+    "ENC_A": 2,
+    "ENC_B": 12,
+    "EF1_PGTH": 4,
+    "TFT_RST": 4
+  },
+  "corner_incident_endpoints_moved": 2,
+  "completed_signal_links": [
+    {
+      "ref": "EF1",
+      "pin": "16",
+      "net": "PG_INPUT",
+      "via_xy_mm": [
+        10.9057,
+        15.6936
+      ],
+      "layer": "F.Cu",
+      "path_xy_mm": [
+        [
+          25.9625,
+          24.35
+        ],
+        [
+          26.4625,
+          24.35
+        ],
+        [
+          26.6625,
+          24.15
+        ],
+        [
+          26.6625,
+          24.05
+        ],
+        [
+          26.7625,
+          23.95
+        ],
+        [
+          26.7625,
+          23.25
+        ],
+        [
+          26.6625,
+          23.15
+        ],
+        [
+          26.6625,
+          23.05
+        ],
+        [
+          26.5625,
+          22.95
+        ],
+        [
+          26.5625,
+          20.85
+        ],
+        [
+          25.1625,
+          19.45
+        ],
+        [
+          25.1625,
+          18.25
+        ],
+        [
+          25.0625,
+          18.15
+        ],
+        [
+          25.0625,
+          18.05
+        ],
+        [
+          24.9625,
+          17.95
+        ],
+        [
+          20.0625,
+          17.95
+        ],
+        [
+          19.9625,
+          17.85
+        ],
+        [
+          18.3625,
+          17.85
+        ],
+        [
+          17.9625,
+          17.45
+        ],
+        [
+          17.8625,
+          17.45
+        ],
+        [
+          17.6625,
+          17.25
+        ],
+        [
+          17.4625,
+          17.25
+        ],
+        [
+          16.6625,
+          16.45
+        ],
+        [
+          15.1625,
+          16.45
+        ],
+        [
+          15.0625,
+          16.35
+        ],
+        [
+          14.9625,
+          16.35
+        ],
+        [
+          14.8625,
+          16.25
+        ],
+        [
+          13.8625,
+          16.25
+        ],
+        [
+          13.2625,
+          16.85
+        ],
+        [
+          12.7625,
+          16.85
+        ],
+        [
+          12.6625,
+          16.75
+        ],
+        [
+          12.5625,
+          16.75
+        ],
+        [
+          11.9625,
+          16.15
+        ],
+        [
+          11.8625,
+          16.15
+        ],
+        [
+          11.7625,
+          16.05
+        ],
+        [
+          11.6625,
+          16.05
+        ],
+        [
+          11.5625,
+          15.95
+        ],
+        [
+          11.3625,
+          15.95
+        ],
+        [
+          11.2625,
+          15.85
+        ],
+        [
+          11.1625,
+          15.85
+        ],
+        [
+          11.0625,
+          15.75
+        ],
+        [
+          10.9625,
+          15.75
+        ],
+        [
+          10.9057,
+          15.6936
+        ]
+      ],
+      "length_mm": 23.258219580402887
+    },
+    {
+      "ref": "R54",
+      "pin": "1",
+      "net": "TFT_RST_BUF",
+      "via_xy_mm": [
+        21.46,
+        21.4549
+      ],
+      "layer": "B.Cu",
+      "remove_unnecessary_terminal_via": true,
+      "path_xy_mm": [
+        [
+          13.5,
+          21.325
+        ],
+        [
+          15.0,
+          21.325
+        ],
+        [
+          15.9,
+          22.225
+        ],
+        [
+          16.0,
+          22.225
+        ],
+        [
+          16.1,
+          22.325
+        ],
+        [
+          16.4,
+          22.325
+        ],
+        [
+          16.6,
+          22.525
+        ],
+        [
+          19.2,
+          22.525
+        ],
+        [
+          19.3,
+          22.425
+        ],
+        [
+          19.4,
+          22.425
+        ],
+        [
+          19.5,
+          22.325
+        ],
+        [
+          19.6,
+          22.325
+        ],
+        [
+          19.7,
+          22.225
+        ],
+        [
+          19.8,
+          22.225
+        ],
+        [
+          19.9,
+          22.125
+        ],
+        [
+          20.0,
+          22.125
+        ],
+        [
+          20.1,
+          22.025
+        ],
+        [
+          20.3,
+          22.025
+        ],
+        [
+          20.4,
+          21.925
+        ],
+        [
+          20.5,
+          21.925
+        ],
+        [
+          20.6,
+          21.825
+        ],
+        [
+          20.7,
+          21.825
+        ],
+        [
+          20.8,
+          21.725
+        ],
+        [
+          20.9,
+          21.725
+        ],
+        [
+          21.0,
+          21.625
+        ],
+        [
+          21.2,
+          21.625
+        ],
+        [
+          21.3,
+          21.525
+        ],
+        [
+          21.4,
+          21.525
+        ],
+        [
+          21.46,
+          21.4549
+        ]
+      ],
+      "length_mm": 8.903541230404175
+    }
+  ],
+  "PD_RAW_and_selected_signals_missing_connections": 0,
+  "parent_copper_geometry_unchanged": true,
+  "router_omitted_board_only_mounting_refs": [
+    "H1"
+  ],
+  "placement_and_pad_nets_unchanged": true,
+  "physical_qualification": false,
+  "adopted_as_main_board": false,
+  "power_layout_approved": false,
+  "input_sha256": {
+    "tools\\build_rev_c_signal_recovery_candidate.py": "b6602551d343fad59b6dc5ef46c7e00ea942adc423a254fe9496875fb8a21f74",
+    "tools\\import_rev_c_routing.py": "45ee33d741a409f2fc877eb9a02272e4a72ce845530ffaeb544f57a6a2c38960",
+    "tools\\repair_rev_c_route_widths.py": "49af85ba1e1e5ca2298a968f0f24e93e50339c788f9359fcd6b097fef1c0ad59",
+    "hardware\\pcb\\rev_c\\route-study\\input-copper-development.json": "12ccfddb27cee057f49fb99078be9e4a9c613c888d84088a983688d6a08e5eff",
+    "hardware\\pcb\\rev_c\\route-study\\signal-recovery-session-manifest.json": "f1433bb58d669bb43acc1c5834b82992cf5b2cf83431a199790af3fb0aa00eae",
+    "hardware\\pcb\\rev_c\\route-study\\signal-recovery.ses": "5626666211de753b9085326f25659394bb3a0c7eb7e3bddcdf68610987d31c03",
+    "hardware\\pcb\\rev_c\\route-study\\signal-recovery-corrections.json": "a89560fa8679f0bef472e5bda016327bcebfd67ac53daad9832bc56461aab507",
+    "build\\rev-c-board\\input-copper-candidate\\windflow-rev-c.kicad_pcb": "876eb701e445302fe33fbd390d6dc90af2a595f6b00e510e25c4d6bdcf58aab0"
+  },
+  "artifact_sha256": {
+    "build\\rev-c-board\\signal-recovery-candidate\\windflow-rev-c.kicad_pcb": "05d6f5af0741108263abcbf6f664f01f11b9f765dc907116bffde9859867d43a",
+    "build\\rev-c-board\\signal-recovery-candidate\\drc.json": "6277023d8912d23e5e62dd077e383d1c55efaad3ac5f51266dbc9f88ac1fe98a"
+  },
+  "limits": [
+    "Missing power/return connections still prevent manufacture; native exit 5 is recorded.",
+    "Existing copper, placement, circuit and fabrication rules are unchanged.",
+    "No current capacity, thermal, EMC or physical qualification."
+  ]
+}

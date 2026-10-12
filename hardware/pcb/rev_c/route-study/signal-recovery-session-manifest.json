@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "path": "hardware/pcb/rev_c/route-study/signal-recovery.ses",
+  "sha256": "5626666211de753b9085326f25659394bb3a0c7eb7e3bddcdf68610987d31c03",
+  "source_board_path": "build/rev-c-board/input-copper-candidate/windflow-rev-c.kicad_pcb",
+  "source_board_sha256": "876eb701e445302fe33fbd390d6dc90af2a595f6b00e510e25c4d6bdcf58aab0",
+  "dsn_sha256": "10601fb6beb403ab4d8789c38914a8e3fd52ba4e852323fdfb268db737100b30",
+  "generator": "Freerouting 2.5.0; protected seed; maximum 3 passes; In1.Cu inactive; postroute off",
+  "input_exporter": "tools/export_rev_c_signal_recovery_input.py",
+  "signal_nets_to_import": [
+    "ENC_A",
+    "ENC_B",
+    "TFT_RST",
+    "TFT_RST_BUF",
+    "EF1_PGTH",
+    "PG_INPUT"
+  ],
+  "scope": "Selected signal recovery only; all other router output is excluded; native review required",
+  "rules_sha256": "feaa250f27be72cf3cdee29e22ca1af5304a8d88f5debbd5a58d92bf53d45c7c"
+}

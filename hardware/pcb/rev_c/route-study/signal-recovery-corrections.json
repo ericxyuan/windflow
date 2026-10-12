@@ -1,0 +1,15 @@
+{
+  "scope": "Reviewed signal corner and missing signal links; independent native check required",
+  "corner": {"net":"ENC_A", "from_xy_mm":[[41.573,14.3653],[41.473,14.3653]], "shift_xy_mm":[0,-0.02]},
+  "missing_smd_escapes": [
+    {"ref":"EF1","pin":"16","net":"PG_INPUT","via_xy_mm":[10.9057,15.6936],"layer":"F.Cu",
+     "path_xy_mm":[[25.9625,24.35],[27.2,24.35],[27.2,28],[19,28],[19,15.5],[10.9057,15.5],[10.9057,15.6936]]},
+    {"ref":"R54","pin":"1","net":"TFT_RST_BUF","via_xy_mm":[21.46,21.4549],"layer":"B.Cu","remove_unnecessary_terminal_via":true,
+     "path_xy_mm":[[13.5,21.325],[13.5,22.4],[21.46,22.4],[21.46,21.4549]]}
+  ],
+  "track_width_mm":0.2,
+  "clearance_margin_mm":0.21,
+  "route_grid_mm":0.1,
+  "maximum_route_length_mm":40,
+  "search_margin_mm":4
+}

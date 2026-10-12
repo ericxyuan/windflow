@@ -32,6 +32,14 @@ At reference-temperature copper resistivity, a simple DC calculation gives appro
 
 Run this builder only after the current ground-return candidate and its source-matched report exist. It writes under `build/rev-c-board/input-copper-candidate`; the authoritative unrouted board and the independently connected minimum-width study remain unchanged.
 
+## Displaced signal recovery — 12 October 2026
+
+All six displaced signal nets are now reconnected around the retained input-power copper. The [protected-input exporter](../tools/export_rev_c_signal_recovery_input.py), [preserved routing session and manifest](../hardware/pcb/rev_c/route-study/signal-recovery-session-manifest.json), [reviewed corrections](../hardware/pcb/rev_c/route-study/signal-recovery-corrections.json) and [candidate builder](../tools/build_rev_c_signal_recovery_candidate.py) reproduce this separate candidate. In1.Cu is inactive for signal routing. The importer accepts only the six declared nets and keeps every existing power/return track, via, component position and pad net unchanged; it discards all other router output.
+
+Native review found a tight ENC_A corner after raising the router's narrow segments to the required 0.2 mm, plus two unfinished signal links. The corrected corner moves its incident endpoints by 0.02 mm. The two completed links use clearance-checked bounded paths around existing copper; an unnecessary single-layer via is removed. These corrections are included in the reproducible builder and independent native check, not waived as exceptions.
+
+The [current recovery record](../hardware/pcb/rev_c/route-study/signal-recovery-development.json) reports **zero clearance/fabrication violations, zero schematic-parity findings, zero missing PD_RAW or selected signal connections, and 50 other missing connections**, with **exit code 5**. Power/return connections still prevent manufacture. The earlier 51- and 61-finding reports remain evidence for their own stages. Neither successful signal recovery nor the calculated input resistance completes the power/thermal design review.
+
 The next PCB work is to redesign the power routes and returns, check regulator/eFuse/FET decoupling loops and heat spreading, finish the remaining connections, and rerun native checks at all severities. Record any deliberate short pad necks, their current allocation and their surrounding copper. Then review actual voltage drop, dissipation, stackup and component thermal limits before adopting the routed board and populated CAD. Physical voltage/inrush/load/thermal/EMC tests remain necessary after this design review.
 
 The encoder daughterboard's separate native route checks remain distinct from this main-board candidate. This milestone does not change firmware motion inhibition or qualify the printed rotor.
