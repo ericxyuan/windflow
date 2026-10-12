@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "path": "hardware/pcb/rev_c/route-study/power-candidate.ses",
+  "sha256": "3b98bdbc785b08d022f908e213f246bb200cbae5e66b74d1a89bcbbd7f1fe37a",
+  "generator": "Freerouting 2.5.0 wider-power-class session; preserved development input",
+  "source_board_path": "hardware/pcb/rev_c/windflow-rev-c.kicad_pcb",
+  "source_board_sha256": "72e58c282c052f89d46bd091fa56cdefaf4a0f3a643a719629be19ab06cb57fb",
+  "session_design_name": "power-candidate",
+  "scope": "Incomplete wider-class routing study; no current capacity or manufacture approval"
+}

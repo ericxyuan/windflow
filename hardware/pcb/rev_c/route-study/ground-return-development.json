@@ -1,0 +1,151 @@
+{
+  "result": "INCOMPLETE",
+  "scope": "Wider-power routing development with improved return connections",
+  "generated_utc": "2026-10-12T17:02:06.469505+00:00",
+  "physical_qualification": false,
+  "adopted_as_main_board": false,
+  "power_layout_approved": false,
+  "native_exit_code": 5,
+  "native_counts": {
+    "violations": 0,
+    "unconnected_items": 51,
+    "schematic_parity": 0
+  },
+  "missing_by_net": {
+    "RAW_FUSED": 10,
+    "EF1_IN": 2,
+    "GND": 7,
+    "TFT_CS_GPIO": 2,
+    "PICO_VSYS": 1,
+    "ESC_FUSED": 6,
+    "ESC_15V": 2,
+    "SERVO5_SWITCHED": 3,
+    "BUS_PROTECTED": 9,
+    "REG5_LOGIC": 8,
+    "PD_RAW": 1
+  },
+  "added_direct_ground_vias": 46,
+  "shared_ground_links": 24,
+  "added_bent_ground_vias": 6,
+  "remaining_ground_escape_pads": [
+    [
+      "BUF1",
+      "9",
+      [
+        41.475,
+        26.46
+      ]
+    ],
+    [
+      "C16",
+      "2",
+      [
+        45.775,
+        26.0
+      ]
+    ],
+    [
+      "C28",
+      "2",
+      [
+        43.0,
+        21.725
+      ]
+    ],
+    [
+      "C36",
+      "2",
+      [
+        16.775,
+        27.5
+      ]
+    ],
+    [
+      "ISO1",
+      "11",
+      [
+        39.3625,
+        39.0
+      ]
+    ],
+    [
+      "ISO1",
+      "12",
+      [
+        39.3625,
+        39.65
+      ]
+    ],
+    [
+      "ISO1",
+      "13",
+      [
+        39.3625,
+        40.3
+      ]
+    ]
+  ],
+  "dedicated_return_layer": "In1.Cu",
+  "fabrication_rules_unchanged": true,
+  "placement_and_pad_nets_unchanged": true,
+  "input_sha256": {
+    "tools\\build_rev_c_ground_return_candidate.py": "e6a6ec46b72da12432699d863d3988c501f0a92e9e29ebcdb37ed75ad2188ae6",
+    "tools\\import_rev_c_routing.py": "45ee33d741a409f2fc877eb9a02272e4a72ce845530ffaeb544f57a6a2c38960",
+    "tools\\repair_rev_c_route_widths.py": "49af85ba1e1e5ca2298a968f0f24e93e50339c788f9359fcd6b097fef1c0ad59",
+    "tools\\build_rev_c_board.py": "a39f8d4172f82b901d4359eec553c83a8187f9f9516de3ac43c7d8728bea73e9",
+    "hardware\\pcb\\rev_c\\route-study\\power-candidate.ses": "3b98bdbc785b08d022f908e213f246bb200cbae5e66b74d1a89bcbbd7f1fe37a",
+    "hardware\\pcb\\rev_c\\route-study\\power-session-manifest.json": "b87c40d36ef74cb858a189325e48ac461a69681bf3aba3c392322ffe6659382c",
+    "hardware\\pcb\\rev_c\\adc.kicad_sch": "51f0706fabb3d66398053b15d18cb5f3726e6baa3aa803001b409ae6829cf640",
+    "hardware\\pcb\\rev_c\\ambient.kicad_sch": "ec2e44d84f34bd5034b464dc0722fff0763a07a703d7566a7adeb1ed887daea7",
+    "hardware\\pcb\\rev_c\\esc.kicad_sch": "c8515c034f8a5fe45d386b56902dbb427bf3ac37df9a1ab861d1381f741c15d0",
+    "hardware\\pcb\\rev_c\\inputs.kicad_sch": "e5b700bb6cdddf7efac1143b1408ba2268e7d6ebafabeabaa706980ed17c6c7f",
+    "hardware\\pcb\\rev_c\\power.kicad_sch": "e290e766d9bbbbb3a55e06941d1f4796fc24286a50d9c25c420733caf15caae6",
+    "hardware\\pcb\\rev_c\\rails.kicad_sch": "ee7faa25b9fd577e335e72305756ccc7f96e51ccf232a90b7a6a889d99f703e0",
+    "hardware\\pcb\\rev_c\\screen.kicad_sch": "83112ccecf6f8b6f9ecb82007d74ed59f2b3736dd04b605a662aa785420f6043",
+    "hardware\\pcb\\rev_c\\servo.kicad_sch": "8fedc4acde89b02e14e15aa304beec917d8b97190a7530d935103b3b3c32aaa2",
+    "hardware\\pcb\\rev_c\\uart.kicad_sch": "3d30ad3ba61bca14d8e7c3f1ff701af6fc1b3f5cc7a2074d6954a84089f00d0e",
+    "hardware\\pcb\\rev_c\\windflow-rev-c.kicad_sch": "0eb2623eca982352c386d594e54e0741e48d00cd37b7b889b87fd3775e37f824",
+    "hardware\\pcb\\rev_c\\windflow-rev-c.kicad_pro": "664e4b66300546841ac17dc17d3e5562fa960c1d607eacd40f7dc5ad82716f05",
+    "hardware\\pcb\\rev_c\\windflow-rev-c.kicad_dru": "270e28c9999811eb31732a4e79ee9fea970255506dbced21bd0dc59961bca95c",
+    "hardware\\pcb\\rev_c\\windflow-rev-c.kicad_pcb": "72e58c282c052f89d46bd091fa56cdefaf4a0f3a643a719629be19ab06cb57fb",
+    "hardware\\pcb\\rev_c\\WindflowCarrier.pretty\\CP_Radial_D6.3mm_P2.50mm.kicad_mod": "e81a44655d3a9e86e6745c01be07bb025069d56a88e72074fba35f4b042e25e0",
+    "hardware\\pcb\\rev_c\\WindflowCarrier.pretty\\CP_Radial_D8.0mm_P3.50mm.kicad_mod": "e7256cc327aa5d1bc5410a487248fa9b5e3d25153b2315201d5da5108cb49580",
+    "hardware\\pcb\\rev_c\\WindflowCarrier.pretty\\C_0603_1608Metric.kicad_mod": "fe0dbfefbb181a0466f93a8de52d84ba7b00fcd9acdbb69575f4128a0af4e405",
+    "hardware\\pcb\\rev_c\\WindflowCarrier.pretty\\D_SMA.kicad_mod": "f7cba3b52ed8b34dce89170722de58324eac04e9e61a095e0eab37b9ca93cb7f",
+    "hardware\\pcb\\rev_c\\WindflowCarrier.pretty\\D_SMB.kicad_mod": "e25e9f4acef5b55585afebc48c685e151fd0d2f33a5c3c61f9fdf0389e19ae67",
+    "hardware\\pcb\\rev_c\\WindflowCarrier.pretty\\Fuse_2410_6125Metric.kicad_mod": "7520cbf3a3dbaf1ec47eda75f2231fb1fb189784889823dae777aac647111ec8",
+    "hardware\\pcb\\rev_c\\WindflowCarrier.pretty\\IDC-Header_2x10_P2.54mm_Vertical.kicad_mod": "a94a5060a458cd8f4991bc24a94f6ca4b68ef9ee21c41739c9b9b6890040d1bd",
+    "hardware\\pcb\\rev_c\\WindflowCarrier.pretty\\JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical.kicad_mod": "712477fd339c81789760f7b5b8649a986a9336f5fc8c2916fcfedc140b052d6c",
+    "hardware\\pcb\\rev_c\\WindflowCarrier.pretty\\JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical.kicad_mod": "e8603dd6c4d08fd8a1c2ff4ffb097ee573fb5a888488c0981b64b013e9f15d9d",
+    "hardware\\pcb\\rev_c\\WindflowCarrier.pretty\\JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical.kicad_mod": "fa93a9f49b03c4caad76b643da2473903ee645833aa1d0ae65afd97740431d86",
+    "hardware\\pcb\\rev_c\\WindflowCarrier.pretty\\JST_XH_B8B-XH-A_1x08_P2.50mm_Vertical.kicad_mod": "a766bce948da6d215573b8741a08d46c00842315a00e4fd5f18374bd6158a7e9",
+    "hardware\\pcb\\rev_c\\WindflowCarrier.pretty\\Molex_Micro-Fit_3.0_43045-0212_2x01_P3.00mm_Vertical.kicad_mod": "91607d8ee92771cf0535b5cf91a44a50b5fbebcfebd2ddf919ba682de33fe586",
+    "hardware\\pcb\\rev_c\\WindflowCarrier.pretty\\Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical.kicad_mod": "cf1c9c2d0c726b8381f084cdc9d1b09ef6b7bb116cc2690e03eb6f9535ea9dc8",
+    "hardware\\pcb\\rev_c\\WindflowCarrier.pretty\\Molex_Micro-Fit_3.0_43045-0812_2x04_P3.00mm_Vertical.kicad_mod": "1aaa5ed421b2f1c499e2f293531216e3eb6d548960cc7941d6669c8ce52ddc75",
+    "hardware\\pcb\\rev_c\\WindflowCarrier.pretty\\PinHeader_1x01_P2.54mm_Vertical.kicad_mod": "4fc60019e8f0bb2c220af4980349e0a9968f5bf9b8f068d769139c3939e7a86b",
+    "hardware\\pcb\\rev_c\\WindflowCarrier.pretty\\PinHeader_1x02_P2.54mm_Vertical.kicad_mod": "5301303268f72ba9cc94b7fdbac355951933e6854272ce8d300b679b86b5d45d",
+    "hardware\\pcb\\rev_c\\WindflowCarrier.pretty\\PinHeader_1x03_P2.54mm_Vertical.kicad_mod": "e5f24b6fea852f86171042806da48490229c9c8025b6d266b8cad6485b26e79f",
+    "hardware\\pcb\\rev_c\\WindflowCarrier.pretty\\R_0603_1608Metric.kicad_mod": "7190ac4a00125b807e54129ef0d87d87f2a658eeb74d025a7028203419b09f23",
+    "hardware\\pcb\\rev_c\\WindflowCarrier.pretty\\R_1206_3216Metric.kicad_mod": "c7320668dc81bbb954cb4f15e4e7a766c120059343d43551468c8f7ccc8fde37",
+    "hardware\\pcb\\rev_c\\WindflowCarrier.pretty\\SOIC-14_3.9x8.7mm_P1.27mm.kicad_mod": "a885b619b22880c9559522d2bf865b059d80453b95a98defc9e6ceef284da1fc",
+    "hardware\\pcb\\rev_c\\WindflowCarrier.pretty\\SOT-23-5.kicad_mod": "455a3f7c3e5eb5b8847eaa5df23e18651e78ab9f75afd09a0883758a0d901761",
+    "hardware\\pcb\\rev_c\\WindflowCarrier.pretty\\SOT-23-6.kicad_mod": "f341c73aac9dcb553456f68bf3fee3d26eb14acf6d8a1cae82b50418fe1d71ca",
+    "hardware\\pcb\\rev_c\\WindflowCarrier.pretty\\SOT-23.kicad_mod": "0d88c86c1b6d8c1aae4aa8c09386264c089d4451a128b6ccd63ed253f4300b15",
+    "hardware\\pcb\\rev_c\\WindflowCarrier.pretty\\SOT-353_SC-70-5.kicad_mod": "869e17094994ff787b769a2d69512455a2f20950d59dd5c4103026ec413bb88e",
+    "hardware\\pcb\\rev_c\\WindflowCarrier.pretty\\Texas_RGE0024H_VQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm_ThermalVias.kicad_mod": "55f27e66f4f4758866d99b3a20e65c3048595f48f66a91d0dae031812f210a99",
+    "hardware\\pcb\\rev_c\\WindflowCarrier.pretty\\TSSOP-14_4.4x5mm_P0.65mm.kicad_mod": "e4bf82cea6d3b3259ddf42469b1407628ad1181a28ae6f3f340190c0cca31ccd",
+    "hardware\\pcb\\rev_c\\WindflowCarrier.pretty\\TSSOP-8_3x3mm_P0.65mm.kicad_mod": "b77b3205490b3554a4d0d627fcc4223ec68dfd45d27d1544086c89ffeb9f34fa",
+    "hardware\\pcb\\rev_c\\WindflowCarrier.pretty\\VSON-8_3.3x3.3mm_P0.65mm_NexFET.kicad_mod": "ced4641229dcd83c7d0a3974d60c5d0fd2c64ce474bb6e67819a4663b0da5508"
+  },
+  "artifact_sha256": {
+    "build\\rev-c-board\\ground-return-candidate\\windflow-rev-c.kicad_pcb": "a816eeb6ff9ce15f7888f58331935e78619686be8b886b1c8e8ff145ed86484c",
+    "build\\rev-c-board\\ground-return-candidate\\ground-escape-record.json": "18e42c6350e93d3c0a6f9dbfa6025c8e1147c5fa788fdbdf662d7a2854a04513",
+    "build\\rev-c-board\\ground-return-candidate\\drc.json": "955fa3f5fc8c3e3b1f24462c7477668c09ef2eb49fe2582c902a8891581318e5"
+  },
+  "limits": [
+    "Missing connections prevent manufacture; native exit code 5 is recorded explicitly.",
+    "High-current pads, broad supply/return paths, pad-neck current allocation, decoupling loops and thermal spreading remain under review.",
+    "The authoritative board and the separately connected minimum-width study remain unchanged.",
+    "Neither current capacity, physical temperature/drop, EMC nor assembly is qualified."
+  ]
+}
