@@ -1,0 +1,128 @@
+{
+  "result": "INCOMPLETE",
+  "scope": "Remaining ground escape development with explicit unfinished pads",
+  "generated_utc": "2026-10-12T17:46:49.991838+00:00",
+  "native_counts": {
+    "violations": 0,
+    "unconnected_items": 48,
+    "schematic_parity": 0
+  },
+  "native_exit_code": 5,
+  "missing_by_net": {
+    "RAW_FUSED": 10,
+    "EF1_IN": 2,
+    "GND": 5,
+    "TFT_CS_GPIO": 2,
+    "PICO_VSYS": 1,
+    "ESC_FUSED": 6,
+    "ESC_15V": 2,
+    "SERVO5_SWITCHED": 3,
+    "BUS_PROTECTED": 9,
+    "REG5_LOGIC": 8
+  },
+  "added_returns": [
+    {
+      "ref": "BUF1",
+      "pin": "9",
+      "layer": "B.Cu",
+      "width_mm": 0.2,
+      "length_mm": 3.079898987322333,
+      "added_ground_via": true,
+      "path_xy_mm": [
+        [
+          41.475,
+          26.46
+        ],
+        [
+          41.875,
+          26.46
+        ],
+        [
+          42.775,
+          25.56
+        ],
+        [
+          42.775,
+          24.86
+        ],
+        [
+          42.275,
+          24.36
+        ]
+      ]
+    },
+    {
+      "ref": "C36",
+      "pin": "2",
+      "layer": "B.Cu",
+      "width_mm": 0.2,
+      "length_mm": 1.0,
+      "added_ground_via": true,
+      "path_xy_mm": [
+        [
+          16.775,
+          27.5
+        ],
+        [
+          16.775,
+          28.5
+        ]
+      ]
+    }
+  ],
+  "GND_missing_connections": 5,
+  "unfinished_ground_pads": [
+    {
+      "ref": "C16",
+      "pin": "2",
+      "reachable_grid_nodes": 286,
+      "reason": "Existing surface routes and through-via clearances close the local escape region; placement/routing redesign remains required."
+    },
+    {
+      "ref": "C28",
+      "pin": "2",
+      "reachable_grid_nodes": 255,
+      "reason": "Existing surface routes and through-via clearances close the local escape region; placement/routing redesign remains required."
+    },
+    {
+      "ref": "ISO1",
+      "pin": "11",
+      "reachable_grid_nodes": 281,
+      "reason": "Existing surface routes and through-via clearances close the local escape region; placement/routing redesign remains required."
+    },
+    {
+      "ref": "ISO1",
+      "pin": "12",
+      "reachable_grid_nodes": 269,
+      "reason": "Existing surface routes and through-via clearances close the local escape region; placement/routing redesign remains required."
+    },
+    {
+      "ref": "ISO1",
+      "pin": "13",
+      "reachable_grid_nodes": 281,
+      "reason": "Existing surface routes and through-via clearances close the local escape region; placement/routing redesign remains required."
+    }
+  ],
+  "existing_copper_unchanged": true,
+  "placement_and_pad_nets_unchanged": true,
+  "adopted_as_main_board": false,
+  "power_layout_approved": false,
+  "physical_qualification": false,
+  "input_sha256": {
+    "tools\\build_rev_c_remaining_ground_candidate.py": "34dceae8d0959fcf8e029f74fc7e5bfeab19ef7ce644536e9542ebdcb33f4480",
+    "tools\\build_rev_c_signal_recovery_candidate.py": "b6602551d343fad59b6dc5ef46c7e00ea942adc423a254fe9496875fb8a21f74",
+    "tools\\repair_rev_c_route_widths.py": "49af85ba1e1e5ca2298a968f0f24e93e50339c788f9359fcd6b097fef1c0ad59",
+    "hardware\\pcb\\rev_c\\route-study\\signal-recovery-development.json": "811e2b211a412a5cf14ee4f9c31b55ffd3914502934f4721f8b029e3ca9cbe63",
+    "hardware\\pcb\\rev_c\\route-study\\ground-return-development.json": "28aa37aeb751263fcaa7879581e7a0a8f53f261224a160bc5b928986eaa47915",
+    "build\\rev-c-board\\signal-recovery-candidate\\windflow-rev-c.kicad_pcb": "05d6f5af0741108263abcbf6f664f01f11b9f765dc907116bffde9859867d43a"
+  },
+  "artifact_sha256": {
+    "build\\rev-c-board\\remaining-ground-candidate\\windflow-rev-c.kicad_pcb": "7a67a04b0035826f5750e121bfe3837be44197994bf4f934cb5f243ca3b49a57",
+    "build\\rev-c-board\\remaining-ground-candidate\\drc.json": "1d875d35115b4f17a1012e925ffa8009e0d6a35d3be7951c2bc4cb7909422927"
+  },
+  "limits": [
+    "Remaining power connections prevent manufacture; native exit 5 is recorded explicitly.",
+    "Return continuity does not qualify load allocation, decoupling impedance, thermal paths or EMC.",
+    "The authoritative board and prior candidates remain unchanged."
+  ]
+}

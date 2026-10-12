@@ -40,6 +40,14 @@ Native review found a tight ENC_A corner after raising the router's narrow segme
 
 The [current recovery record](../hardware/pcb/rev_c/route-study/signal-recovery-development.json) reports **zero clearance/fabrication violations, zero schematic-parity findings, zero missing PD_RAW or selected signal connections, and 50 other missing connections**, with **exit code 5**. Power/return connections still prevent manufacture. The earlier 51- and 61-finding reports remain evidence for their own stages. Neither successful signal recovery nor the calculated input resistance completes the power/thermal design review.
 
+## Further ground escapes — 12 October 2026
+
+The [return-development builder](../tools/build_rev_c_remaining_ground_candidate.py) connects BUF1.9 and C36.2 through two new 0.6/0.3 mm vias to the dedicated return plane. The 0.2 mm surface paths are approximately 3.08 mm and 1.00 mm long. New holes and copper are checked across all four layers, and the vias avoid SMD solder lands. Existing copper and placement remain unchanged.
+
+The [latest ground-development record](../hardware/pcb/rev_c/route-study/remaining-ground-development.json) reports **zero clearance/fabrication violations, zero schematic-parity findings and 48 missing connections**, including **five missing ground connections**, with **exit code 5**. The incomplete ground pads are C16.2, C28.2 and ISO1.11/12/13. Their accessible surface pockets are enclosed by existing routes, and the reviewed through-via clearance cannot be achieved inside those pockets. They need another local routing/placement revision. This is unfinished design, not an uncertainty to defer solely to hardware testing.
+
+These two short returns are connectivity development. The power-device decoupling, actual current allocation, eFuse/FET drain plane and heat spreading still need review before routing adoption. No Gerbers are generated, and the authoritative board remains unchanged.
+
 The next PCB work is to redesign the power routes and returns, check regulator/eFuse/FET decoupling loops and heat spreading, finish the remaining connections, and rerun native checks at all severities. Record any deliberate short pad necks, their current allocation and their surrounding copper. Then review actual voltage drop, dissipation, stackup and component thermal limits before adopting the routed board and populated CAD. Physical voltage/inrush/load/thermal/EMC tests remain necessary after this design review.
 
 The encoder daughterboard's separate native route checks remain distinct from this main-board candidate. This milestone does not change firmware motion inhibition or qualify the printed rotor.
