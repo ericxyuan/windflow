@@ -1,0 +1,30 @@
+{
+  "result": "PASS preview generation",
+  "rendering_not_verification": true,
+  "physical_qualification": false,
+  "generated_utc": "2026-10-12T16:34:18.250709+00:00",
+  "input_sha256": {
+    "tools\\render_rev_d_print_split.py": "0925342e75dd147a3f158675fe11e55d357fb62836ab52a1a6a3d16c59cdb9a1",
+    "cad/rev_d/print-split/validation.json": "bef835bb4dee42bf58c77926d950e8989df439f4909160394d59e75d55c46f8f"
+  },
+  "geometry_sha256": {
+    "cad\\rev_d\\print-split\\P2-left-rear-PERMANENT-JOIN-CANDIDATE.step": "e7280e7ad19c4acccb56e6d1e40831b2e87e2d22ffe31eddb40a983b0c909501",
+    "cad\\rev_d\\print-split\\P2-left-rear-PERMANENT-JOIN-CANDIDATE-PRINT.stl": "7e89dce1e5abb2adb68d81a15197fa2f9bfc892cc755ca40263c82b00af42c1f",
+    "cad\\rev_d\\print-split\\P2-left-forward-INTEGRAL-OUTLET-PERMANENT-JOIN-CANDIDATE.step": "201f6441e726e6887ba78db5177496bcc15eb7fca66a8c738f7c5a6ef4678529",
+    "cad\\rev_d\\print-split\\P2-left-forward-INTEGRAL-OUTLET-PERMANENT-JOIN-CANDIDATE-PRINT.stl": "8dd5937dc56c375f673db4c570e1228c075e0f3d7fae0c6c8a0b9c69f78a4673",
+    "cad\\rev_d\\print-split\\P2-right-rear-PERMANENT-JOIN-CANDIDATE.step": "c00943d72c3e214c66a363b9b7616f43a38d7af16954012a11f30288f4f87189",
+    "cad\\rev_d\\print-split\\P2-right-rear-PERMANENT-JOIN-CANDIDATE-PRINT.stl": "ee8461b61d0f4dd0073a8f3f0e024fda89465764bd4e63a88768da554eb62a58",
+    "cad\\rev_d\\print-split\\P2-right-forward-INTEGRAL-OUTLET-PERMANENT-JOIN-CANDIDATE.step": "81049a64ac85896792a7f81b208feab0e17a1b6ea42d7c31d834e29b9e3f2f5c",
+    "cad\\rev_d\\print-split\\P2-right-forward-INTEGRAL-OUTLET-PERMANENT-JOIN-CANDIDATE-PRINT.stl": "3948fcbcefe529c8359091677f1a4ba30016d581e1afd5d22e9fc829dc7461e2"
+  },
+  "images": [
+    {
+      "path": "cad\\evidence\\rev-d-print-split-exploded-2026-10-12.png",
+      "sha256": "0a03a463945b447b4bfce39e4aa86208280bc6aced028abbdb42433f72997627"
+    },
+    {
+      "path": "cad\\evidence\\rev-d-print-split-beds-2026-10-12.png",
+      "sha256": "338040281192fabcff47968a9412695e3f107ac08c2145154c064ea95d04b254"
+    }
+  ]
+}

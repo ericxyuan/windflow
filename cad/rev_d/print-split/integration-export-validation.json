@@ -1,0 +1,26 @@
+{
+  "result": "PASS",
+  "scope": "Separate four-print manufacturing study for inspection",
+  "generated_utc": "2026-10-12T16:35:50.901049+00:00",
+  "main_stage_adopted": false,
+  "physical_qualification": false,
+  "named_groups": 4,
+  "round_trip_solids": 4,
+  "round_trip_volume_difference_mm3": 0.03002696728799492,
+  "input_sha256": {
+    "tools\\export_rev_d_print_split.py": "fe7910b118423cdb59d810cec83365877a240d39dd08bc48be6c9e0a528e30b7",
+    "cad\\rev_d\\print-split\\validation.json": "bef835bb4dee42bf58c77926d950e8989df439f4909160394d59e75d55c46f8f",
+    "cad\\rev_d\\print-split\\P2-left-rear-PERMANENT-JOIN-CANDIDATE.step": "e7280e7ad19c4acccb56e6d1e40831b2e87e2d22ffe31eddb40a983b0c909501",
+    "cad\\rev_d\\print-split\\P2-left-forward-INTEGRAL-OUTLET-PERMANENT-JOIN-CANDIDATE.step": "201f6441e726e6887ba78db5177496bcc15eb7fca66a8c738f7c5a6ef4678529",
+    "cad\\rev_d\\print-split\\P2-right-rear-PERMANENT-JOIN-CANDIDATE.step": "c00943d72c3e214c66a363b9b7616f43a38d7af16954012a11f30288f4f87189",
+    "cad\\rev_d\\print-split\\P2-right-forward-INTEGRAL-OUTLET-PERMANENT-JOIN-CANDIDATE.step": "81049a64ac85896792a7f81b208feab0e17a1b6ea42d7c31d834e29b9e3f2f5c"
+  },
+  "path": "cad\\rev_d\\print-split\\Windflow-Rev-D-permanent-print-join-CANDIDATE.step",
+  "sha256": "a538d6bb72f2751ed9ab71c139bd184b8e1139a9fd0e294922544597e8dd430e",
+  "bytes": 5053117,
+  "limits": [
+    "No adhesive volume, process or strength is modeled or qualified.",
+    "This study does not replace the complete 108-instance development assembly.",
+    "The final outlet is integral to each forward enclosure print; bond before hardware installation."
+  ]
+}

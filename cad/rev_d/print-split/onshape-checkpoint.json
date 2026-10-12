@@ -1,0 +1,34 @@
+{
+  "status": "Separate four-part manufacturing candidate imported and immutable version opened",
+  "physical_qualification": false,
+  "main_stage_adopted": false,
+  "verified_utc": "2026-10-12T16:46:23.408207+00:00",
+  "document_id": "5ca1b5b26cd9a4a93dde4737",
+  "workspace_id": "6d3d38529391b53ad011b362",
+  "part_studio_id": "fe781b063729fd0966288b7b",
+  "part_studio_name": "Rev D — permanent enclosure print join — CANDIDATE",
+  "version_id": "36ffd353b39e0aad30eccc72",
+  "version_name": "Rev D permanent enclosure print join — CANDIDATE — 2026-10-12",
+  "version_url": "https://cad.onshape.com/documents/5ca1b5b26cd9a4a93dde4737/v/36ffd353b39e0aad30eccc72/e/fe781b063729fd0966288b7b",
+  "observed_online_part_count": 4,
+  "integration_export_sha256": "a538d6bb72f2751ed9ab71c139bd184b8e1139a9fd0e294922544597e8dd430e",
+  "integration_export_bytes": 5053117,
+  "import_options": {
+    "import_to_this_document": true,
+    "import_appearances": true,
+    "y_axis_up": false,
+    "combine_to_single_part_studio": false,
+    "create_composite": false,
+    "join_adjacent_surfaces": false
+  },
+  "observed_import_result": "Onshape translated the small hierarchy into a single Part Studio with four named solid parts, rather than an Assembly tab.",
+  "evidence": [
+    "cad/evidence/onshape-rev-d-print-join-version-2026-10-12.jpg"
+  ],
+  "evidence_sha256": "27a212daf082dcaca9a9a4426b9a194e14f6bc5e70c9f858189dc8f7a533acbc",
+  "limits": [
+    "Main 108-instance assembly remains unchanged.",
+    "Imported parts are source-matched exchange geometry; the detailed parameters live in the checked local generator.",
+    "No adhesive/print/support/structural/airflow or operating qualification."
+  ]
+}
