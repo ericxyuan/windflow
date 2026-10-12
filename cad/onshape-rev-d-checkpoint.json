@@ -1,13 +1,13 @@
 {
-  "status": "Current detailed 150 mm cartridge integration; immutable version unconfirmed; not a manufacturing release",
+  "status": "Current detailed 150 mm cartridge integration; immutable development version verified; not a manufacturing release",
   "physical_qualification": false,
-  "verified_utc": "2026-10-12T15:51:42.718884+00:00",
+  "verified_utc": "2026-10-12T16:34:53.039158+00:00",
   "document_id": "5ca1b5b26cd9a4a93dde4737",
   "workspace_id": "6d3d38529391b53ad011b362",
   "integration_assembly_id": "9d5acab5f6e74049741d2d6b",
   "assembly_name": "Rev D — 150 mm integrated service cartridge — DEVELOPMENT",
-  "version_id": null,
-  "version_name": null,
+  "version_id": "9e7a4395c052a46ee1252c46",
+  "version_name": "Rev D 150 mm service cartridge — DEVELOPMENT — 2026-10-12",
   "geometry_commit": "490e61d5d556170cc9f5e24441dd916cae07fa5e",
   "integration_export": {
     "path": "cad\\rev_d\\Windflow-Rev-D-150mm-integration-2026-10-09.step",
@@ -63,7 +63,8 @@
   "evidence": [
     "cad/evidence/onshape-rev-d-cartridge-interference-2026-10-11.png",
     "cad/evidence/onshape-rev-d-cartridge-contact-rows-2026-10-11.json",
-    "cad/rev_d/preview-record.json"
+    "cad/rev_d/preview-record.json",
+    "cad/evidence/onshape-rev-d-cartridge-version-2026-10-12.jpg"
   ],
   "input_sha256": {
     "cad\\rev_d\\integration-export-validation.json": "60d93dfa9eb901c5559b2d20ef1947fba26c438b40b3b03be89ea81f1ec9c676",
@@ -75,12 +76,13 @@
   },
   "limits": [
     "Online 108-instance hierarchy was observed; 208 solids is the local STEP round-trip count, not an independently summed online body count.",
-    "The new immutable version is unconfirmed; the previous side-port version excludes this cartridge.",
     "Imported STEP has no native kinematic mates; local detailed parameters regenerate through checked scripts.",
     "Native rotor and seven-part airpath are separate profile studies, not identical detailed P2 geometry.",
     "Populated main PCB, connected main looms/hoses and remaining fastener/driver/assembly sequence remain engineering work.",
     "No physical switch trip, printed fit, insert retention, airflow/noise/throw, rotor strength/balance, motor compatibility or operating RPM approval."
   ],
-  "version_status": "Create-version action did not complete before browser detached and Onshape signed out",
-  "historical_side_port_checkpoint": "cad/onshape-rev-d-side-port-history-2026-10-10.json"
+  "version_status": "Saved through the browser and opened at its immutable URL; Instances (108) observed",
+  "historical_side_port_checkpoint": "cad/onshape-rev-d-side-port-history-2026-10-10.json",
+  "version_url": "https://cad.onshape.com/documents/5ca1b5b26cd9a4a93dde4737/v/9e7a4395c052a46ee1252c46/e/9d5acab5f6e74049741d2d6b",
+  "version_evidence_sha256": "834e707cef1517efbb3738d82fa320cfaf93e35f782917f4d918c83c04146047"
 }

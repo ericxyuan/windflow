@@ -43,7 +43,7 @@ An implemented design is an inspectable artifact. It does not establish physical
 
 ## Authorized unfinished design queue
 
-1. Keep geometry changes matched to fresh complete exchange and Onshape evidence. The current 108-instance cartridge assembly is imported and inspected; its 56 native contact regions match declared insert/thread seats and internal vendor contacts. Save its new immutable version once browser access returns. Imported STEP has no native motion mates.
+1. Keep geometry changes matched to fresh complete exchange and Onshape evidence. The current 108-instance cartridge assembly is imported and inspected; its 56 native contact regions match declared insert/thread seats and internal vendor contacts. Its [immutable development version](https://cad.onshape.com/documents/5ca1b5b26cd9a4a93dde4737/v/9e7a4395c052a46ee1252c46/e/9d5acab5f6e74049741d2d6b) is saved and verified with 108 instances. Imported STEP has no native motion mates.
 2. Complete the real supplied USB cable-boot confirmation, installed power/I2C wiring and strain relief. The retained side port and current coupon are integrated; stage/mesh/motion/export records pass for the 108-group snapshot.
 3. Finish pressure taps/hoses and installed wiring with service slack and strain relief. The interlock cartridge is adopted and checked; its short terminal-to-raceway wires do not include the complete J12-to-board loom.
 4. Finish and review main PCB routing/thermal paths, keyed Pico transition and pressure daughterboard; integrate their populated geometry and retention.
