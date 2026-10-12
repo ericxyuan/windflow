@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>C:\Users\admin\iCloudDrive\Windflow\hardware\pcb\pressure\windflow-pressure.kicad_sch</source>
+    <date>2026-10-12T19:03:42</date>
+    <tool>Eeschema 10.0.6</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>Windflow SDP810 pressure daughterboard</title>
+        <company/>
+        <rev>P1 development</rev>
+        <date/>
+        <source>windflow-pressure.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C33">
+      <value>100nF / GRM188R71H104KA93D</value>
+      <footprint>WindflowPressure:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">WindflowPressure:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="WindflowPressure" part="C0603" description=""/>
+      <property name="Sheetname" value="windflow-pressure"/>
+      <property name="Sheetfile" value="windflow-pressure.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a5b15511-f961-5f32-825f-39e4d0dc4d68</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="DP1">
+      <value>SDP810-125Pa / 1-101597-01</value>
+      <footprint>WindflowPressure:SDP810_DirectPins</footprint>
+      <datasheet>https://sensirion.com/media/documents/90500156/6167E43B/Sensirion_Differential_Pressure_Datasheet_SDP8xx_Digital.pdf</datasheet>
+      <fields>
+        <field name="Footprint">WindflowPressure:SDP810_DirectPins</field>
+        <field name="Datasheet">https://sensirion.com/media/documents/90500156/6167E43B/Sensirion_Differential_Pressure_Datasheet_SDP8xx_Digital.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="WindflowPressure" part="SDP810_125Pa" description=""/>
+      <property name="Sheetname" value="windflow-pressure"/>
+      <property name="Sheetfile" value="windflow-pressure.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>be4241c0-8e91-5164-b7a8-6a205e080b5d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="H1">
+      <value>M2 NPTH 2.4mm</value>
+      <footprint>WindflowPressure:M2Mount</footprint>
+      <fields>
+        <field name="Footprint">WindflowPressure:M2Mount</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="WindflowPressure" part="M2Mount" description=""/>
+      <property name="Sheetname" value="windflow-pressure"/>
+      <property name="Sheetfile" value="windflow-pressure.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d12b36dd-0a66-5786-8015-b6c6741169b4</tstamps>
+      <units>
+        <unit name="A">
+          <pins/>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="H2">
+      <value>M2 NPTH 2.4mm</value>
+      <footprint>WindflowPressure:M2Mount</footprint>
+      <fields>
+        <field name="Footprint">WindflowPressure:M2Mount</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="WindflowPressure" part="M2Mount" description=""/>
+      <property name="Sheetname" value="windflow-pressure"/>
+      <property name="Sheetfile" value="windflow-pressure.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>70c44ee1-0d85-579d-a5f8-ef3962009e3a</tstamps>
+      <units>
+        <unit name="A">
+          <pins/>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J1">
+      <value>26AWG direct-solder pigtail</value>
+      <footprint>WindflowPressure:Pigtail4</footprint>
+      <fields>
+        <field name="Footprint">WindflowPressure:Pigtail4</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="WindflowPressure" part="Pigtail4" description=""/>
+      <property name="Sheetname" value="windflow-pressure"/>
+      <property name="Sheetfile" value="windflow-pressure.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>83313481-17bd-567f-b0d1-ad6c8c73e94a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="WindflowPressure" part="C0603">
+      <fields>
+        <field name="Reference">C33</field>
+        <field name="Value">100nF / GRM188R71H104KA93D</field>
+        <field name="Footprint">WindflowPressure:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="+3V3" type="passive"/>
+        <pin num="2" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="WindflowPressure" part="M2Mount">
+      <fields>
+        <field name="Reference">H2</field>
+        <field name="Value">M2 NPTH 2.4mm</field>
+        <field name="Footprint">WindflowPressure:M2Mount</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+    </libpart>
+    <libpart lib="WindflowPressure" part="Pigtail4">
+      <fields>
+        <field name="Reference">J1</field>
+        <field name="Value">26AWG direct-solder pigtail</field>
+        <field name="Footprint">WindflowPressure:Pigtail4</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_out"/>
+        <pin num="2" name="+3V3" type="power_out"/>
+        <pin num="3" name="I2C_SDA" type="passive"/>
+        <pin num="4" name="I2C_SCL" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="WindflowPressure" part="SDP810_125Pa">
+      <docs>https://sensirion.com/media/documents/90500156/6167E43B/Sensirion_Differential_Pressure_Datasheet_SDP8xx_Digital.pdf</docs>
+      <fields>
+        <field name="Reference">DP1</field>
+        <field name="Value">SDP810-125Pa / 1-101597-01</field>
+        <field name="Footprint">WindflowPressure:SDP810_DirectPins</field>
+        <field name="Datasheet">https://sensirion.com/media/documents/90500156/6167E43B/Sensirion_Differential_Pressure_Datasheet_SDP8xx_Digital.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="I2C_SCL" type="input"/>
+        <pin num="2" name="+3V3" type="power_in"/>
+        <pin num="3" name="GND" type="power_in"/>
+        <pin num="4" name="I2C_SDA" type="bidirectional"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="WindflowPressure">
+      <uri>${KIPRJMOD}/WindflowPressure.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/+3V3" class="Default">
+      <node ref="C33" pin="1" pinfunction="+3V3_1" pintype="passive"/>
+      <node ref="DP1" pin="2" pinfunction="+3V3_2" pintype="power_in"/>
+      <node ref="J1" pin="2" pinfunction="+3V3_2" pintype="power_out"/>
+    </net>
+    <net code="2" name="/GND" class="Default">
+      <node ref="C33" pin="2" pinfunction="GND_2" pintype="passive"/>
+      <node ref="DP1" pin="3" pinfunction="GND_3" pintype="power_in"/>
+      <node ref="J1" pin="1" pinfunction="GND_1" pintype="power_out"/>
+    </net>
+    <net code="3" name="/I2C_SCL" class="Default">
+      <node ref="DP1" pin="1" pinfunction="I2C_SCL_1" pintype="input"/>
+      <node ref="J1" pin="4" pinfunction="I2C_SCL_4" pintype="passive"/>
+    </net>
+    <net code="4" name="/I2C_SDA" class="Default">
+      <node ref="DP1" pin="4" pinfunction="I2C_SDA_4" pintype="bidirectional"/>
+      <node ref="J1" pin="3" pinfunction="I2C_SDA_3" pintype="passive"/>
+    </net>
+  </nets>
+</export>

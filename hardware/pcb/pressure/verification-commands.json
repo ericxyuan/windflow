@@ -1,0 +1,117 @@
+[
+  {
+    "arguments": [
+      "sch",
+      "export",
+      "netlist",
+      "--format",
+      "kicadxml",
+      "-o",
+      "C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\pressure\\windflow-pressure.net.xml",
+      "C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\pressure\\windflow-pressure.kicad_sch"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "arguments": [
+      "sch",
+      "erc",
+      "--format",
+      "json",
+      "--severity-all",
+      "--exit-code-violations",
+      "-o",
+      "C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\pressure\\erc.json",
+      "C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\pressure\\windflow-pressure.kicad_sch"
+    ],
+    "exit_code": 0,
+    "stdout": "Found 0 violations\nSaved ERC Report to C:/Users/admin/iCloudDrive/Windflow/hardware/pcb/pressure/erc.json",
+    "stderr": ""
+  },
+  {
+    "arguments": [
+      "pcb",
+      "drc",
+      "--format",
+      "json",
+      "--all-track-errors",
+      "--schematic-parity",
+      "--severity-all",
+      "--exit-code-violations",
+      "-o",
+      "C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\pressure\\drc.json",
+      "C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\pressure\\windflow-pressure.kicad_pcb"
+    ],
+    "exit_code": 0,
+    "stdout": "Found 0 violations\nFound 0 unconnected items\nFound 0 schematic parity issues\nSaved DRC Report to C:/Users/admin/iCloudDrive/Windflow/hardware/pcb/pressure/drc.json",
+    "stderr": ""
+  },
+  {
+    "arguments": [
+      "pcb",
+      "export",
+      "step",
+      "--board-only",
+      "--force",
+      "-o",
+      "C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\pressure\\windflow-pressure-board-only.step",
+      "C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\pressure\\windflow-pressure.kicad_pcb"
+    ],
+    "exit_code": 0,
+    "stdout": "STEP file 'C:/Users/admin/iCloudDrive/Windflow/hardware/pcb/pressure/windflow-pressure-board-only.step' created.\n\nExport time 0.048 s",
+    "stderr": ""
+  },
+  {
+    "arguments": [
+      "pcb",
+      "export",
+      "svg",
+      "--mode-single",
+      "--fit-page-to-board",
+      "--exclude-drawing-sheet",
+      "-l",
+      "F.Cu,Edge.Cuts",
+      "-o",
+      "C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\pressure\\front.svg",
+      "C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\pressure\\windflow-pressure.kicad_pcb"
+    ],
+    "exit_code": 0,
+    "stdout": "Plotted to 'C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\pressure\\front.svg'.\nDone.",
+    "stderr": ""
+  },
+  {
+    "arguments": [
+      "pcb",
+      "export",
+      "svg",
+      "--mode-single",
+      "--fit-page-to-board",
+      "--exclude-drawing-sheet",
+      "--mirror",
+      "-l",
+      "B.Cu,Edge.Cuts",
+      "-o",
+      "C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\pressure\\back.svg",
+      "C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\pressure\\windflow-pressure.kicad_pcb"
+    ],
+    "exit_code": 0,
+    "stdout": "Plotted to 'C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\pressure\\back.svg'.\nDone.",
+    "stderr": ""
+  },
+  {
+    "arguments": [
+      "sch",
+      "export",
+      "svg",
+      "--exclude-drawing-sheet",
+      "-o",
+      "C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\pressure\\schematic-svg",
+      "C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\pressure\\windflow-pressure.kicad_sch"
+    ],
+    "exit_code": 0,
+    "stdout": "Plotted to 'C:\\Users\\admin\\iCloudDrive\\Windflow\\hardware\\pcb\\pressure\\schematic-svg\\windflow-pressure.svg'.\nDone.",
+    "stderr": ""
+  }
+]

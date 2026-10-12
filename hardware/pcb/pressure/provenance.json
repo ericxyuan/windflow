@@ -1,0 +1,110 @@
+{
+  "result": "PASS native circuit/netlist/ERC/DRC",
+  "generated_utc": "2026-10-12T18:03:44.583645+00:00",
+  "kicad_version": "10.0.6",
+  "manufacturer_reference": {
+    "url": "https://sensirion.com/media/documents/90500156/6167E43B/Sensirion_Differential_Pressure_Datasheet_SDP8xx_Digital.pdf",
+    "sha256": "dbcbad9c96a414903676b160715a082126f0a5f6fe37441114965aebebbf9835",
+    "pages": [
+      4,
+      11,
+      12
+    ]
+  },
+  "functional_nets": {
+    "/+3V3": [
+      [
+        "C33",
+        "1"
+      ],
+      [
+        "DP1",
+        "2"
+      ],
+      [
+        "J1",
+        "2"
+      ]
+    ],
+    "/GND": [
+      [
+        "C33",
+        "2"
+      ],
+      [
+        "DP1",
+        "3"
+      ],
+      [
+        "J1",
+        "1"
+      ]
+    ],
+    "/I2C_SCL": [
+      [
+        "DP1",
+        "1"
+      ],
+      [
+        "J1",
+        "4"
+      ]
+    ],
+    "/I2C_SDA": [
+      [
+        "DP1",
+        "4"
+      ],
+      [
+        "J1",
+        "3"
+      ]
+    ]
+  },
+  "native_exit_codes": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "physical_qualification": false,
+  "adopted_into_fan_CAD": false,
+  "fabrication_release": false,
+  "input_sha256": {
+    "tools\\build_pressure_board.py": "8d83df07364bc4134ff7b0dd9550e79c24aabdec92882c7f67167fc112aeb218",
+    "tools\\build_encoder_board.py": "a45b51548ecd4c31e3b751ac9c1a34de78a5c4168dce837d0045f60143e600db",
+    "hardware\\datasheets\\SDP800.pdf": "dbcbad9c96a414903676b160715a082126f0a5f6fe37441114965aebebbf9835",
+    "hardware\\pcb\\rev_c\\circuit-population.json": "3ef3c76d66aabc5bd1ae334f1d7e952d5e305c23fc58a3a155674dde24875264"
+  },
+  "artifact_sha256": {
+    "hardware\\pcb\\pressure\\back.svg": "2398f932fe727288ccb632cae22f782f5ed16f5485ad6dbf655358d5279a09d1",
+    "hardware\\pcb\\pressure\\drc.json": "16b24555f7738807f9bc779f9d9b16a31a5f757bc26e26113726ac0441925b52",
+    "hardware\\pcb\\pressure\\erc.json": "21f299a477a41675ec15b2d129d6b0d903ef73f3c5d30e847df549f965e26916",
+    "hardware\\pcb\\pressure\\fp-lib-table": "d9262693dbf52593a20662a59bf3e3e9ad6d63de4c761e6daa4e11b589b8dfda",
+    "hardware\\pcb\\pressure\\front.svg": "ac5b26ca69f63e65dec43cde0a7eaab89b0f53e394013add537fd3c56fee445c",
+    "hardware\\pcb\\pressure\\mechanical-interface.json": "8d574baa9e32c12ddd87d7f977a34dd002ab14b9c43363baa955e032addcbcad",
+    "hardware\\pcb\\pressure\\sym-lib-table": "c2e1e36df54689a36943fb3f36b28967aabb1993691fb2680138b3f2f1674d6f",
+    "hardware\\pcb\\pressure\\verification-commands.json": "08166cc3e06fc7bafa7f5c603a73a631a80d2d4021570a8b1f9de0fdf55d3581",
+    "hardware\\pcb\\pressure\\windflow-pressure-board-only.step": "c6918fcd29bba1a44919346a75f2c869f4dbda770f7633ddd4e6dafe747f3b34",
+    "hardware\\pcb\\pressure\\windflow-pressure.kicad_dru": "66ea58c70cc389b0d3d211119a69dba9a2ed9ebaf81362cb07a3dbe827d78c50",
+    "hardware\\pcb\\pressure\\windflow-pressure.kicad_pcb": "24cf0dd4f389c575ce82d4dcddb596745e8cc68030670b1a5aead302d343a866",
+    "hardware\\pcb\\pressure\\windflow-pressure.kicad_pro": "2ee79696cea310d62639d0637c6fd3d07c7880198ec71af2810e43144d50a97b",
+    "hardware\\pcb\\pressure\\windflow-pressure.kicad_sch": "45e1fc25f4b3e89f827d82a83ebc88d76adc8168ca7227347294028189b664d2",
+    "hardware\\pcb\\pressure\\windflow-pressure.net.xml": "d9483fe127673830f1089679cb1a808d468f2f91c9236fef234448f88ff5ada6",
+    "hardware\\pcb\\pressure\\WindflowPressure.kicad_sym": "46ecf08b66133188c44a51b78942480137a691d6586f004aa88a6b7fa7212a6d",
+    "hardware\\pcb\\pressure\\schematic-svg\\windflow-pressure.svg": "ae172a6b811e2d5f10752c85bb00f8fd4653def342b9a8c8aea4cf9a64ad0658",
+    "hardware\\pcb\\pressure\\WindflowPressure.pretty\\C_0603_1608Metric.kicad_mod": "d45eebd5cb9faace255d4ec95a0f9484efde898359507b02e2ba9bbb3ef6d857",
+    "hardware\\pcb\\pressure\\WindflowPressure.pretty\\M2Mount.kicad_mod": "d4b2687a975be5e13e0ee1357302bed339a2b682dc2e502ab586adb374422186",
+    "hardware\\pcb\\pressure\\WindflowPressure.pretty\\Pigtail4.kicad_mod": "bb8f94c9b8f4431df76ff00f1906dec9d993e1cbf68559aee57f2cfcced84ecb",
+    "hardware\\pcb\\pressure\\WindflowPressure.pretty\\SDP810_DirectPins.kicad_mod": "c4286c463afc6a83e2deb887d7ccd2c1c8a58405ba61e84a11c40a416f0d61b4"
+  },
+  "limits": [
+    "Independent electrical prototype candidate; installed sensor/retainer/loom CAD remains required.",
+    "Pin order is viewed from sensor side; do not mirror it using a solder-side image.",
+    "Total 1.6mm mechanical datum must be checked separately from the native dielectric-only STEP.",
+    "No fabrication outputs or physical solder, I2C, mounting or pressure-system qualification."
+  ]
+}

@@ -1,0 +1,1 @@
+(footprint "M2Mount" (version 20250108) (generator "pcbnew") (layer "F.Cu") (attr through_hole) (property "Reference" "REF**" (at 0 0 0) (layer "F.Fab") (hide yes) (effects (font (size .8 .8)))) (property "Value" "M2Mount" (at 0 0 0) (layer "F.Fab") (hide yes) (effects (font (size .8 .8)))) (pad "" np_thru_hole circle (at 0 0) (size 2.4 2.4) (drill 2.4) (layers "*.Cu" "*.Mask")))
