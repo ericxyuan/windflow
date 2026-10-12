@@ -1,23 +1,23 @@
 {
-  "status": "Current detailed 150 mm development integration; not a manufacturing release",
+  "status": "Current detailed 150 mm cartridge integration; immutable version unconfirmed; not a manufacturing release",
   "physical_qualification": false,
-  "verified_utc": "2026-10-10T19:51:15.334785+00:00",
+  "verified_utc": "2026-10-12T15:51:42.718884+00:00",
   "document_id": "5ca1b5b26cd9a4a93dde4737",
   "workspace_id": "6d3d38529391b53ad011b362",
-  "integration_assembly_id": "57c900ab51f3a2c24ffaefca",
-  "assembly_name": "Rev D — 150 mm integrated hardware and USB port — DEVELOPMENT",
-  "version_id": "9e2e00efc42a6cb0a410eb64",
-  "version_name": "Rev D 150 mm integrated side port — DEVELOPMENT — 2026-10-10",
-  "geometry_commit": "a8e1bc21570c14a98a485ddb4ee20830d9cf8fcd",
+  "integration_assembly_id": "9d5acab5f6e74049741d2d6b",
+  "assembly_name": "Rev D — 150 mm integrated service cartridge — DEVELOPMENT",
+  "version_id": null,
+  "version_name": null,
+  "geometry_commit": "490e61d5d556170cc9f5e24441dd916cae07fa5e",
   "integration_export": {
     "path": "cad\\rev_d\\Windflow-Rev-D-150mm-integration-2026-10-09.step",
-    "sha256": "6588ad9535ca15f21603f41eece3883a7c7f2c10adb268b6d1580fb16a266254",
-    "bytes": 42813826,
-    "named_part_groups": 65,
-    "round_trip_solids": 165,
-    "round_trip_volume_difference_mm3": 0.04462585970759392
+    "sha256": "e3d8020f3c921add9e56e4b4b450ff954d9c1d92a5a67ffecdeaba989c3030fa",
+    "bytes": 50800031,
+    "named_part_groups": 108,
+    "round_trip_solids": 208,
+    "round_trip_volume_difference_mm3": 0.006847650744020939
   },
-  "observed_online_top_level_instances": 65,
+  "observed_online_top_level_instances": 108,
   "import_options": {
     "hierarchy": "Import to this document",
     "import_appearances": true,
@@ -28,17 +28,20 @@
   },
   "native_interference": {
     "scope": "Entire imported assembly; Show top level only unchecked; no standard-content instances",
-    "entries": 6,
-    "custom_part_findings": 0,
-    "findings": [
-      "HUSB238 body 34 / body 1",
-      "HUSB238 body 34 / body 1",
-      "HUSB238 body 34 / body 8",
-      "HUSB238 body 34 / body 8",
-      "HUSB238 body 34 / body 8",
-      "HUSB238 body 34 / body 8"
-    ],
-    "interpretation": "All six findings are internal to the downloaded HUSB238 vendor model; intact reference retained. No other interference rows were returned."
+    "entries": 56,
+    "intentional_insert_seat_regions": 48,
+    "ideal_screw_to_female_thread_regions": 2,
+    "vendor_internal_regions": 6,
+    "unexpected_part_findings": 0,
+    "pair_counts": {
+      "P2-flowing-head-left-INTEGRAL-OUTLET <1> and REF-cartridge-1-ruthex-RX-M2x4-vendor <1>": 24,
+      "REF-cartridge-1-ISO4762-M2x8 <1> and REF-cartridge-1-ruthex-RX-M2x4-vendor <1>": 1,
+      "Adafruit-HUSB238-5807-vendor <34> and Adafruit-HUSB238-5807-vendor <8>": 4,
+      "REF-cartridge-0-ruthex-RX-M2x4-vendor <1> and REF-cartridge-0-ISO4762-M2x8 <1>": 1,
+      "REF-cartridge-0-ruthex-RX-M2x4-vendor <1> and P2-flowing-head-left-INTEGRAL-OUTLET <1>": 24,
+      "Adafruit-HUSB238-5807-vendor <34> and Adafruit-HUSB238-5807-vendor <1>": 2
+    },
+    "interpretation": "24 disjoint knurl/printed-seat regions per insert, one ideal screw major-cylinder/female-thread contact per insert, and six inherited internal HUSB238 contacts. The local design declares bounded insert/screw-seat envelopes; printed fit and real thread engagement remain unqualified."
   },
   "native_studies": {
     "rotor_part_studio": "ac831cfb3e2f99f349f8306c",
@@ -49,30 +52,35 @@
     "airpath_input_count": 17
   },
   "local_validation": {
-    "nominal_pairs": 2080,
-    "motion_comparisons": 34833,
-    "stage_stl_files": 28,
+    "nominal_pairs": 5778,
+    "motion_comparisons": 59558,
+    "cartridge_service_comparisons": 196561,
+    "stage_stl_files": 34,
     "current_port_coupon_meshes": 1,
+    "current_insert_coupon_meshes": 1,
     "intended_complete_height_mm": 195
   },
   "evidence": [
-    "cad/evidence/onshape-rev-d-integrated-controls-and-port-2026-10-10.png",
-    "cad/evidence/onshape-rev-d-integrated-version-2026-10-10.png",
-    "cad/evidence/onshape-rev-d-integrated-interference-2026-10-10.png"
+    "cad/evidence/onshape-rev-d-cartridge-interference-2026-10-11.png",
+    "cad/evidence/onshape-rev-d-cartridge-contact-rows-2026-10-11.json",
+    "cad/rev_d/preview-record.json"
   ],
   "input_sha256": {
-    "cad\\rev_d\\integration-export-validation.json": "be19bcabb81de9257b9c7250e3df96477cb053f55ef8f5185aab4ff899898f8b",
-    "cad\\rev_d\\stage-validation.json": "85a29fadb2cc77f2c92179bed2acd1af8078d9e81e49bd3c5d17525ed8f44ae7",
-    "cad\\rev_d\\motion-validation.json": "f7b9c0b9bec91666a465c3d7c49a90c7c70e3c9e6af3e2c898df7a4724349c39",
-    "cad\\rev_d\\mesh-validation.json": "81d7d0100ce37db5f42da1c069b79bc1239faca336c3bf0016e293d9d141a402",
-    "cad\\rev_d\\testpieces\\testpiece-validation.json": "b8db5b7532c8d2579b7fc0dd146c483eabe5d6f3428df555483241ec73e853c9"
+    "cad\\rev_d\\integration-export-validation.json": "60d93dfa9eb901c5559b2d20ef1947fba26c438b40b3b03be89ea81f1ec9c676",
+    "cad\\rev_d\\stage-validation.json": "485c1ffc84beafc1a8a2288a7b5e52a0e93c6fa0f38479a63fc643c2bd68165c",
+    "cad\\rev_d\\motion-validation.json": "69f97f4a618dfc802640fa3d4c4ef4368ea13c81e6d176231846cde64cc0fb32",
+    "cad\\rev_d\\mesh-validation.json": "0d91183667d2207c841e7ef23c374f87a4c7a7d48ac03310afc99dc1e47bb88a",
+    "cad\\rev_d\\cartridge-service-validation.json": "1f896c903dd2c836d7f9184db26d8b48ab9456dace9acd9b52aff1a4ac48f1af",
+    "cad\\rev_d\\testpieces\\testpiece-validation.json": "362aa4bea3bb79f6d62d3e5d2db6e31f47856d87a2c746d95f391fa4901e4ed6"
   },
   "limits": [
-    "Online 65-instance hierarchy is observed; the 165-solid count is the local STEP round-trip count, not a summed independent online body audit.",
-    "Imported assembly has no native kinematic mates; detailed local parameters regenerate through the checked scripts.",
+    "Online 108-instance hierarchy was observed; 208 solids is the local STEP round-trip count, not an independently summed online body count.",
+    "The new immutable version is unconfirmed; the previous side-port version excludes this cartridge.",
+    "Imported STEP has no native kinematic mates; local detailed parameters regenerate through checked scripts.",
     "Native rotor and seven-part airpath are separate profile studies, not identical detailed P2 geometry.",
-    "Populated main PCB, connected looms/hoses, interlock and full fastener/driver/assembly sequence remain engineering work.",
-    "No physical fit, airflow/noise/throw, rotor strength/balance, motor compatibility or operating RPM approval.",
-    "An immutable version supports only its matching imported source; subsequent pilots or geometry changes are not included."
-  ]
+    "Populated main PCB, connected main looms/hoses and remaining fastener/driver/assembly sequence remain engineering work.",
+    "No physical switch trip, printed fit, insert retention, airflow/noise/throw, rotor strength/balance, motor compatibility or operating RPM approval."
+  ],
+  "version_status": "Create-version action did not complete before browser detached and Onshape signed out",
+  "historical_side_port_checkpoint": "cad/onshape-rev-d-side-port-history-2026-10-10.json"
 }
